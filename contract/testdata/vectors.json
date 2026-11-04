@@ -1,0 +1,34 @@
+[
+ {
+  "key": 1,
+  "address": "0x1a642f0e3c3af545e7acbd38b07251b3990914f1",
+  "outcome": "YES",
+  "request_hash": "f641cd2ff7db730673981da6395f080b0af8fe26b6a697258a131db205ea39fe",
+  "response_raw": "{\"id\": \"t\", \"choices\": [{\"message\": {\"role\": \"assistant\", \"content\": \"{\\\"outcome\\\": \\\"YES\\\", \\\"quotes\\\": [\\\"q\\\"], \\\"confidence\\\": 0.9}\"}}]}",
+  "signature": "0x8134e013b8cc8b19e49fba46551711c5cd6238a9ff135641567ff84bb74859485559f38a37c6b0c6ac5be5b07eab8a3ca5829c8e59989c0355642d3338ac113f1b"
+ },
+ {
+  "key": 2,
+  "address": "0x5050a4f4b3f9338c3472dcc01a87c76a144b3c9c",
+  "outcome": "YES",
+  "request_hash": "f641cd2ff7db730673981da6395f080b0af8fe26b6a697258a131db205ea39fe",
+  "response_raw": "{\"id\": \"t\", \"choices\": [{\"message\": {\"role\": \"assistant\", \"content\": \"{\\\"outcome\\\": \\\"YES\\\", \\\"quotes\\\": [\\\"q\\\"], \\\"confidence\\\": 0.9}\"}}]}",
+  "signature": "0x003fe5bcc580be4c80a8dbf7e52e342c5b8a07575c520c722d49d0e56438496049ea168d22efe0c6b34af0ee11fa41aa9e4d0917a571a49da0e682a1498e30a41c"
+ },
+ {
+  "key": 3,
+  "address": "0x3325a78425f17a7e487eb5666b2bfd93abb06c70",
+  "outcome": "NO",
+  "request_hash": "f641cd2ff7db730673981da6395f080b0af8fe26b6a697258a131db205ea39fe",
+  "response_raw": "{\"id\": \"t\", \"choices\": [{\"message\": {\"role\": \"assistant\", \"content\": \"{\\\"outcome\\\": \\\"NO\\\", \\\"quotes\\\": [\\\"q\\\"], \\\"confidence\\\": 0.9}\"}}]}",
+  "signature": "0xb239540fc13a418c1b382746ff905517c63d2b8177a592307144f6479138459b74ae361701d857346f06a594b4d0f668354d17259fc2c4605c44ab66c5dc59281c"
+ },
+ {
+  "key": 3,
+  "address": "0x3325a78425f17a7e487eb5666b2bfd93abb06c70",
+  "outcome": "YES",
+  "request_hash": "f641cd2ff7db730673981da6395f080b0af8fe26b6a697258a131db205ea39fe",
+  "response_raw": "{\"id\": \"t\", \"choices\": [{\"message\": {\"role\": \"assistant\", \"content\": \"{\\\"outcome\\\": \\\"YES\\\", \\\"quotes\\\": [\\\"q\\\"], \\\"confidence\\\": 0.9}\"}}]}",
+  "signature": "0xd4f82ef003b92b36a3cea2dd20a6c140efe155628a7799924468da4db42ac7de1b1ce928de1567594580eb169a2c5d46b91fdb7fff6aab826c1b793faf33f3f61b"
+ }
+]

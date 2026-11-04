@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Verdict attestation demo: resolve a market in a TEE model, verify signature + attestation, then tamper one byte."""
-import os, sys, json, hashlib, secrets, requests
+import os, sys, json, pathlib
+sys.path.insert(0, os.path.dirname(__file__))
+import hw_verify
+import json, hashlib, secrets, requests
 from eth_account import Account
 from eth_account.messages import encode_defunct
 
@@ -22,6 +25,7 @@ att_addrs = {m["signing_address"].lower() for m in ma}
 print(f"[attest] model={MODEL} nodes={len(ma)} nonce echoed OK, signers={sorted(att_addrs)}")
 g = att["gateway_attestation"]; rd = g["report_data"]
 assert rd[:40].lower() == g["signing_address"][2:].lower() and rd[64:128] == nonce, "gateway report_data binding failed"
+for m in ma: hw_verify.verify_node(m, nonce)
 print("[attest] gateway report_data = signing_address(padded) || nonce  OK")
 
 # 2. Resolution-style completion
@@ -49,6 +53,9 @@ def verify(raw_resp):
     return True, f"signer {rec} is attested"
 ok, why = verify(raw)
 print(f"[verify] signed text={sig.get('text','')[:40]}...  -> {'PASS' if ok else 'FAIL'} ({why})")
+
+pathlib.Path("out").mkdir(exist_ok=True)
+json.dump({"model": MODEL, "request_hash": sha(body), "response_raw": raw.decode(), "text": sig["text"], "signature": sig["signature"], "signing_address": sig["signing_address"], "content": resp["choices"][0]["message"]["content"]}, open("out/last_verdict.json", "w"), indent=1)
 
 # 4. Tamper one byte of the response
 t = bytearray(raw); i = raw.find(b'"content"') + 12; t[i] ^= 1
