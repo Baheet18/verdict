@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "purpose": "Fail-closed allowlist for NEAR AI Cloud model-node measurements. Values that are not independently published are tagged source=observed and must be treated as first-observation pins, not third-party proof.",
+    "os_image_hash_source": "Phala Cloud OS image registry for dstack-nvidia-0.5.12: https://cloud.phala.com/dstack/0.5.12 (also listed at https://cloud.phala.com/verification/os-images).",
+    "mr_td_rtmr_source": "observed from live NEAR AI Cloud TDX quotes on 2026-11-05 (Africa/Lagos). dstack does not publish a single MRTD/RTMR0-2 for a version: those registers also encode VM CPU/RAM/device config, so independent precomputation needs the exact VmConfig. Limitation documented in README.",
+    "compose_note": "app_compose measured here is the dstack host stack (compose-manager / otel / certbot), NOT the model-serving YAML from github.com/nearai/cvm-compose-files. compose_hash differs per node mainly by INSTANCE_LABEL.",
+    "rt_mr3": "NOT pinned: includes instance-id and runtime events. Verified by event-log replay only.",
+    "pinned_at": "2026-11-05T09:30:00+01:00"
+  },
+  "shared_host_images": {
+    "docker_image_digests": [
+      "sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+      "sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be",
+      "sha256:742dbd2e61c8709b930712c38958386c3cb3928e09eeb1f1e490600c127e2edb",
+      "sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
+    ],
+    "docker_images": [
+      "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+      "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be",
+      "certbot/dns-cloudflare@sha256:742dbd2e61c8709b930712c38958386c3cb3928e09eeb1f1e490600c127e2edb",
+      "otel/opentelemetry-collector-contrib@sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
+    ],
+    "os_image_hash": {
+      "value": "91fd5d69ccee3e5ea4f2aeb8c9b632c4358c4ecfc29ba1aa6fb1e402af209829",
+      "source": "published",
+      "published_as": "dstack-nvidia-0.5.12",
+      "url": "https://cloud.phala.com/dstack/0.5.12"
+    },
+    "mr_td": {
+      "value": "df4d77c857de652bd0fafa343a2026b51071ee03773d076d283abf1a7d36ff91ffa279ee4a617ac664f7e2a2c8d5891b",
+      "source": "observed"
+    },
+    "rt_mr0": {
+      "value": "bc122d143ab768565ba5c3774ff5f03a63c89a4df7c1f5ea38d3bd173409d14f8cbdcc36d40e703cccb996a9d9687590",
+      "source": "observed"
+    },
+    "rt_mr1": {
+      "value": "4ae609807c765916a31d724786ed74bcb97e168a9d937b04936aeef2015c907eba5ac352c6bcd749c246fd62ffb659ec",
+      "source": "observed"
+    },
+    "rt_mr2": {
+      "value": "bd67ab7554dc27ab03a077bc1447a1a67d0624ff547c4c809a8626f12d6a89712f8ec60e781e99b98208574065d21a71",
+      "source": "observed"
+    }
+  },
+  "models": {
+    "Qwen/Qwen3.8-27B": {
+      "compose_hash": "5e513dbd72e1c0f291f748ad06d4dbc1df55659869e649376213ac7b3c9d2e29",
+      "compose_name": "dstack-nvidia-0.5.12",
+      "instance_label_observed": "gpu13"
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "compose_hash": "ae66f844658a7aee331dcb9fb59bd40323d71d192d37719e022cc4af8389265b",
+      "compose_name": "dstack-nvidia-0.5.11",
+      "instance_label_observed": "gpu02",
+      "note": "compose manifest name says 0.5.11 but os_image_hash matches published dstack-nvidia-0.5.12"
+    },
+    "z-ai/glm-5.3-flash": {
+      "compose_hash": "a0e3c6f4f21a60ea3f5c96bc7ef319b03a184ca2049605399275fbcea74e8c5f",
+      "compose_name": "dstack-nvidia-0.5.11",
+      "instance_label_observed": "gpu03",
+      "note": "compose manifest name says 0.5.11 but os_image_hash matches published dstack-nvidia-0.5.12; previously RTMR3 replay failed on empty-digest top-level event_log — verifier now uses NEAR official digest-recompute for RTMR3"
+    }
+  }
+}

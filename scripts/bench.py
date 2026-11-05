@@ -62,14 +62,14 @@ def retry(fn, n=4):
 def attest(model):
     nonce = secrets.token_hex(32)
     att = requests.get(f"{API}/attestation/report", headers=H, params={"model": model, "signing_algo": "ecdsa", "nonce": nonce}, timeout=90).json()
-    verified, all_addr = set(), set()
+    verified, all_addr, by_addr = set(), set(), {}
     for m in att.get("model_attestations") or []:
         if not m.get("signing_address"): print(f"  [hw] {model}: 3rd-party attestation format (keys={list(m)[:8]}) - hardware check pending"); continue
-        all_addr.add(m["signing_address"].lower())
-        try: hw_verify.verify_node(m, nonce); verified.add(m["signing_address"].lower())
-        except Exception as e: print(f"  [hw] {model} node {m.get('signing_address')}: hardware check pending ({type(e).__name__}: {str(e)[:80]})")
+        addr = m["signing_address"].lower(); all_addr.add(addr); by_addr[addr] = m
+        try: hw_verify.verify_node(m, nonce, model=model); verified.add(addr)
+        except Exception as e: print(f"  [hw] {model} node {m.get('signing_address')}: hardware check pending ({type(e).__name__}: {str(e)[:120]})")
     rep_hash = sha(json.dumps(att, sort_keys=True).encode())
-    return {"verified": verified, "attested": all_addr, "report_sha256": rep_hash}
+    return {"verified": verified, "attested": all_addr, "by_addr": by_addr, "entries": att.get("model_attestations") or [], "report_sha256": rep_hash, "nonce": nonce}
 
 def run():
     att = {m: attest(m) for m in PANEL}
@@ -99,7 +99,15 @@ def run():
             text = f"{model}:{sha(body)}:{sha(raw)}"
             signer = Account.recover_message(encode_defunct(text=sig["text"]), signature=sig["signature"]).lower() if sig.get("signature") else None
             sig_ok = signer is not None and sig["text"] == text and signer == sig["signing_address"].lower() and signer in att[model]["attested"]
-            label = "Verified" if sig_ok and signer in att[model]["verified"] else ("Signature valid · hardware check pending" if sig_ok else "UNVERIFIED")
+            # Match this response's recovered signer to the attestation entry for THIS model, then require that entry was hw-verified.
+            matched = False
+            if sig_ok:
+                try:
+                    entry = hw_verify.match_attestation_for_signature(att[model]["entries"], signer, model)
+                    matched = entry["signing_address"].lower() in att[model]["verified"]
+                except Exception as e:
+                    print(f"  [match] {model} signer {signer}: {type(e).__name__}: {str(e)[:100]}")
+            label = "Verified" if sig_ok and matched else ("Signature valid · hardware check pending" if sig_ok else "UNVERIFIED")
             votes.append({"model": model, "outcome": str(v.get("outcome", "AMBIGUOUS")).upper(), "quotes": v.get("quotes", [])[:2],
                           "reasoning": v.get("reasoning", ""), "label": label, "signer": signer, "cost_usd": round(c, 5)})
             bundle = {"market_id": mid, "model": model, "request_raw": body.decode(), "request_sha256": sha(body),
