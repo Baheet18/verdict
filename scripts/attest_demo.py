@@ -82,13 +82,16 @@ print(f"[verify] signed text={sig.get('text','')[:40]}...  -> {'PASS' if ok else
 if not ok:
     sys.exit(1)
 
-# Critical: verify_node runs only on the attestation entry whose signing_address equals
-# the recovered signature address AND whose model_name equals the requested model.
-entry = hw_verify.match_attestation_for_signature(ma, recovered, MODEL)
-print(f"[match] signature→attestation entry {entry['signing_address']} model={entry.get('model_name')}")
-hw = hw_verify.verify_node(entry, nonce, model=MODEL)
+# Shared-key policy: EVERY observed attestation entry for this signer+model must pass.
+# A signature cannot prove which replica signed.
+rep = hw_verify.verify_signer_replicas(ma, recovered, MODEL, nonce)
+label = rep["label"]
+print(f"[match] signature→{len(rep['results'])+len(rep['failures'])} replica(s) for {recovered}")
+if not rep["results"]:
+    sys.exit(f"[hw] FAIL no replica passed: {rep['failures']}")
+hw = rep["results"][0]
 print(f"[hw] PASS tcb={hw['tdx']['tcb_status']} compose={hw['tdx']['compose_hash'][:16]}.. gpus={hw['gpu']['gpus']}")
-print(f"[label] Verified")
+print(f"[label] {label}")
 
 pathlib.Path("out").mkdir(exist_ok=True)
 json.dump(
@@ -102,7 +105,8 @@ json.dump(
         "content": content,
         "tcb_status": hw["tdx"]["tcb_status"],
         "compose_hash": hw["tdx"]["compose_hash"],
-        "label": "Verified",
+        "label": label,
+        "replicas_ok": f"{len(rep['results'])}/{len(rep['results'])+len(rep['failures'])}",
     },
     open("out/last_verdict.json", "w"),
     indent=1,

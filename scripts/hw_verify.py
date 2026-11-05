@@ -178,6 +178,14 @@ def verify_tdx(m, nonce, model: str | None = None):
     check(os_evs[0] == host["os_image_hash"]["value"].lower(),
           f"RTMR3 os-image-hash pinned to {host['os_image_hash']['source']} {host['os_image_hash']['published_as']}")
 
+    # Pin KMS / key-provider RTMR3 events (signing keys are issued by this service).
+    mr_kms = [e["event_payload"].lower() for e in el if e.get("imr") == 3 and e.get("event") == "mr-kms"]
+    check(len(mr_kms) == 1, "exactly one mr-kms event in RTMR3")
+    check(mr_kms[0] == host["mr_kms"]["value"].lower(), f"mr-kms pinned ({host['mr_kms']['source']})")
+    kp = [e["event_payload"].lower() for e in el if e.get("imr") == 3 and e.get("event") == "key-provider"]
+    check(len(kp) == 1, "exactly one key-provider event in RTMR3")
+    check(kp[0] == host["key_provider"]["value"].lower(), f"key-provider pinned ({host['key_provider']['source']})")
+
     # Pin MRTD + RTMR0-2 (observed pins — see allowlist _meta)
     for key, td_key in (("mr_td", "mr_td"), ("rt_mr0", "rt_mr0"), ("rt_mr1", "rt_mr1"), ("rt_mr2", "rt_mr2")):
         exps = [v.lower() for v in ([host[key]["value"]] + host[key].get("also_observed", []))]
@@ -189,7 +197,10 @@ def verify_tdx(m, nonce, model: str | None = None):
     for img in images:
         print(f"      {img}")
     exp_digests = set(host["docker_image_digests"])
-    check(set(digests) == exp_digests, f"docker image digests match allowlist ({len(digests)} digests)")
+    unknown = set(digests) - exp_digests
+    check(not unknown, f"all docker digests on allowlist (unknown={sorted(unknown)})")
+    for pref in host.get("required_image_name_prefixes", []):
+        check(any(img.startswith(pref) for img in images), f"required image present: {pref.split('@')[0]}")
 
     model_key = model or m.get("model_name")
     check(model_key in allow["models"], f"model {model_key} is on the measurement allowlist")
@@ -269,3 +280,38 @@ def match_attestation_for_signature(model_attestations, recovered_address: str, 
     ]
     check(len(matches) == 1, f"matched attestation entry for signer {want} model {requested_model} (count={len(matches)})")
     return matches[0]
+
+def verify_signer_replicas(model_attestations, signing_address: str, requested_model: str, nonce: str):
+    """Shared-key policy (round 4): a signing key is "Hardware + host stack verified" only if
+    EVERY observed attestation entry for that key (+ model) passes verify_node.
+
+    A signature cannot prove which replica signed. If any replica fails (e.g. unknown
+    compose-manager digest), ALL votes from this key are downgraded.
+    Returns {label, entries_checked, failures, results}.
+    """
+    want = signing_address.lower()
+    entries = [
+        e for e in (model_attestations or [])
+        if (e.get("signing_address") or "").lower() == want and e.get("model_name") == requested_model
+    ]
+    check(len(entries) >= 1, f"at least one attestation entry for signer {want} model {requested_model}")
+    results, failures = [], []
+    for i, e in enumerate(entries):
+        print(f"[hw] replica {i+1}/{len(entries)} for {want}")
+        try:
+            results.append(verify_node(e, nonce, model=requested_model))
+        except Exception as ex:
+            failures.append({"index": i, "error": str(ex)})
+            print(f"  !!  replica {i+1} FAILED: {ex}")
+    if failures:
+        label = "Signature valid · hardware check pending"
+    else:
+        label = "Hardware + host stack verified"
+    print(f"[label] {label} (replicas_ok={len(results)}/{len(entries)})")
+    return {
+        "label": label,
+        "entries_checked": len(entries),
+        "failures": failures,
+        "results": results,
+    }
+

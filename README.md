@@ -12,7 +12,7 @@ Replayed RTMR3 events (identical names on all 3 panel models, observed 2026-11-0
 - `os_image_hash` is taken from the **replayed `os-image-hash` RTMR3 event** and must equal the pin and the TCB info value.
 - `compose-hash` covers the dstack **host stack** compose (compose-manager, otel, certbot). The raw hash must equal MRCONFIGID and the RTMR3 event. Because each replica's compose differs only in `INSTANCE_LABEL=gpuN`, we pin a **normalized** hash (exactly one `- INSTANCE_LABEL=gpu\d+` line, removed) per model.
 - **Not covered**: the model-serving container (vLLM image + weights) is started by compose-manager at runtime from `github.com/nearai/cvm-compose-files`; compose-manager's action log is in the event log and checked to replay, but many compose files run concurrently on a node so it cannot be pinned to one model image. Model/weights provenance therefore rests on NEAR AI's image-provenance policy, not on our measurement check.
-- **Shared signing key across replicas**: Qwen's signing key `0x835ab53d…aa26` was observed on two VM shapes (64 vCPU / 8 GPU and 12 vCPU / 1 GPU) with different RTMR0; both RTMR0 values are pinned (`also_observed`), MRTD/RTMR1/RTMR2 are identical. A signature therefore proves "one of the attested replicas holding this key", not a specific VM.
+- **Shared signing key across replicas**: Qwen's signing key `0x835ab53d…aa26` was observed on two VM shapes (64 vCPU / 8 GPU and 12 vCPU / 1 GPU) with different RTMR0; both RTMR0 values are pinned (`also_observed`), MRTD/RTMR1/RTMR2 are identical. A signature therefore proves "one of the attested replicas holding this key", not a specific VM. Label **Hardware + host stack verified** only if EVERY observed attestation entry for that key+model passes; otherwise all its votes are downgraded.
 
 ## Request format (bound on-chain)
 Two messages only: system = the versioned prompt (`sha256` = `prompt_template_hash` stored in the market) and user = `VERDICT/1 market_id=.. round=.. rules_hash=.. prompt_template_hash=.. evidence_bundle_hash=..\n<evidence>`. The contract re-derives the header byte-for-byte, checks `sha256(evidence)`, `temperature == 0` and `seed == 1114`, and parses the outcome strictly (whole content must be the JSON object, or one fenced JSON block; no substring search). See `scripts/verdict_request.py` and `contract/src/lib.rs`.
@@ -24,6 +24,15 @@ Each signed text `model:sha256(req):sha256(resp)` is stored in `used_signed`; a 
 
 ## Evidence
 Sources are fetched OUTSIDE the TEE, snapshotted (url, fetched_at, sha256, text) and embedded in the request; integrity is the snapshot hash inside the signed request, not a TEE-side fetch. Sports statistics need 2+ independent sources; a single-source stat line (e.g. an all-zero ESPN line) is treated as missing data → AMBIGUOUS.
+
+## Evidence commit (round 4)
+`commit_evidence(market_id, round, evidence_bundle_hash)` is callable only by a registered relayer or the owner. `submit_verdict` requires the request's evidence hash to equal the committed hash for the current round. Bundles are published content-addressed under `fixtures/evidence/<sha256>.json` via `scripts/publish_evidence.py`.
+
+## Rule linter
+`scripts/rule_linter.py` — transparent regex/heuristic flags (no model). Reports which ambiguity patterns hit; does not predict UMA disputes.
+
+## Offline / screener mode
+See `docs/SETUP.md`. `python scripts/offline_demo.py` runs `cargo test`, verifies cached real signatures, rebuilds `scoreboard/index.html` from `fixtures/scoreboard_cache/` — no API key.
 
 ## Outcomes
 YES, NO, TOO_EARLY (votes cleared, next round), AMBIGUOUS (→ refunds if final).
@@ -48,14 +57,22 @@ Illia Polosukhin (NEAR) listed "AI benchmarking with private test sets. Submit h
 
 ## Limits
 - **GPU ↔ TDX binding** is only the shared client nonce; no cryptographic binding of GPU attestation to the TDX VM measurement.
-- **Owner trust**: the owner registers/removes signers and settles disputes; hardware verification is an off-chain precondition.
+- **Owner / relayer trust**: the owner registers/removes signers and settles disputes; a registered relayer (or owner) must `commit_evidence` before votes. Hardware verification is an off-chain precondition for registration.
+- **Key-management service (dstack KMS)**: RTMR3 `mr-kms` and `key-provider` events are pinned, but signing keys are issued by this KMS and may be shared across replicas. A signature proves "one of the attested replicas holding this key", not a specific VM. See shared-signer policy in `scripts/hw_verify.py::verify_signer_replicas`.
 - **MRTD / RTMR0-2 pins are observed**, not a published constant (they encode VM shape).
 - **Model container not measured** (see above).
 - **NRAS + Intel PCCS** need network access.
-- No deploy yet (build + unit tests only).
+- **Testnet deploy**: wasm builds (`contract/target/near/verdict.wasm`); on-chain deploy requires the user's own testnet wallet signature (no keys in this repo). See `deploy/TESTNET.md`.
 
 ## Demo
 ```bash
 source .venv/bin/activate
 python scripts/attest_demo.py Qwen/Qwen3.8-27B   # expect PASS then tamper FAIL
 ```
+
+
+## Testnet deploy
+Wasm builds locally (`cargo near build non-reproducible-wasm` → `contract/target/near/verdict.wasm`, ~246 KB).
+**On-chain deploy is blocked in this agent environment**: no NEAR wallet credentials are present (by design — private keys never enter the repo or chat).
+You sign the minimal flow yourself (register signers → create one market → commit_evidence → three submit_verdict → explorer links). Exact steps: `deploy/TESTNET.md`. Helper args (no signing): `python scripts/deploy_prepare.py`.
+After you send explorer tx URLs, they go under this heading.

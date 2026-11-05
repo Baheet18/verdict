@@ -25,10 +25,21 @@ fn setup() -> (Verdict, u32) {
     assert_eq!(id, 0);
     (c, id)
 }
+fn evidence_hash_of(x: &Value) -> String {
+    let req: Value = serde_json::from_str(&s(x, "request_raw")).unwrap();
+    let user = req["messages"][1]["content"].as_str().unwrap();
+    let header = user.split('\n').next().unwrap();
+    header.split(' ').find_map(|p| p.strip_prefix("evidence_bundle_hash=")).unwrap().to_string()
+}
+/// Owner commits the evidence hash from the first vote vector for this round (must be done before any submit_verdict).
+fn commit_for(c: &mut Verdict, id: u32, x: &Value) {
+    let m = c.get_market(id).unwrap();
+    c.commit_evidence(id, m.round, evidence_hash_of(x));
+}
 fn vote(c: &mut Verdict, id: u32, x: &Value) -> Outcome {
     c.submit_verdict(id, s(x, "request_raw"), s(x, "response_raw"), s(x, "signature"))
 }
-fn unanimous_yes(c: &mut Verdict, id: u32) { for i in 0..3 { vote(c, id, &v(&format!("yes_{i}"))); } }
+fn unanimous_yes(c: &mut Verdict, id: u32) { commit_for(c, id, &v("yes_0")); for i in 0..3 { vote(c, id, &v(&format!("yes_{i}"))); } }
 
 // ---------- REAL signatures from all three NEAR AI panel models ----------
 fn real_setup(model_override: Option<(usize, &str)>) -> (Verdict, u32, Value) {
@@ -64,6 +75,7 @@ fn real_signatures_from_all_three_models_recover_to_their_tee_keys() {
 #[test]
 fn real_three_model_panel_settles_market() {
     let (mut c, id, r) = real_setup(None);
+    commit_for(&mut c, id, &r["votes"][0]);
     for x in r["votes"].as_array().unwrap() { assert_eq!(vote(&mut c, id, x), Outcome::Yes); }
     let m = c.get_market(id).unwrap();
     assert!(matches!(m.status, Status::Proposed { outcome: Outcome::Yes, .. }));
@@ -113,9 +125,10 @@ fn wrong_rules_rejected() { let (mut c, id) = setup(); ctx(0, DAY, near(0)); vot
 fn wrong_template_rejected() { let (mut c, id) = setup(); ctx(0, DAY, near(0)); vote(&mut c, id, &v("wrong_template")); }
 
 #[test]
-#[should_panic(expected = "evidence bundle differs from this round's")]
+#[should_panic(expected = "evidence bundle differs from committed hash")]
 fn mismatched_evidence_in_round_rejected() {
     let (mut c, id) = setup(); ctx(0, DAY, near(0));
+    commit_for(&mut c, id, &v("yes_0"));
     vote(&mut c, id, &v("yes_0"));
     vote(&mut c, id, &v("other_evidence_1"));
 }
@@ -167,6 +180,7 @@ fn removed_signer_rejected() {
 #[should_panic(expected = "signed response already used")]
 fn same_signature_twice_rejected() {
     let (mut c, id) = setup(); ctx(0, DAY, near(0));
+    commit_for(&mut c, id, &v("yes_0"));
     vote(&mut c, id, &v("yes_0")); vote(&mut c, id, &v("yes_0"));
 }
 
@@ -174,10 +188,12 @@ fn same_signature_twice_rejected() {
 #[should_panic(expected = "signer already voted")]
 fn second_distinct_vote_by_same_signer_rejected() {
     let (mut c, id) = setup(); ctx(0, DAY, near(0));
+    commit_for(&mut c, id, &v("yes_0"));
     vote(&mut c, id, &v("yes_0")); vote(&mut c, id, &v("no_0"));
 }
 
 fn too_early_round(c: &mut Verdict, id: u32) {
+    commit_for(c, id, &v("too_early_r0_0"));
     for i in 0..3 { vote(c, id, &v(&format!("too_early_r0_{i}"))); }
     let m = c.get_market(id).unwrap();
     assert_eq!((m.round, m.votes.len(), m.status.clone(), m.round_evidence_hash.clone()), (1, 0, Status::Open, None));
@@ -203,6 +219,7 @@ fn too_early_vote_itself_cannot_be_replayed() {
 fn round_one_settles_after_too_early() {
     let (mut c, id) = setup(); ctx(0, DAY, near(0));
     too_early_round(&mut c, id);
+    commit_for(&mut c, id, &v("yes_r1_0"));
     for i in 0..3 { vote(&mut c, id, &v(&format!("yes_r1_{i}"))); }
     assert!(matches!(c.get_market(id).unwrap().status, Status::Proposed { outcome: Outcome::Yes, .. }));
 }
@@ -210,7 +227,7 @@ fn round_one_settles_after_too_early() {
 // ---------- strict outcome parsing (item 4) ----------
 #[test]
 #[should_panic(expected = "no valid outcome in response")]
-fn prose_wrapped_json_rejected_on_chain() { let (mut c, id) = setup(); ctx(0, DAY, near(0)); vote(&mut c, id, &v("prose_wrapped_0")); }
+fn prose_wrapped_json_rejected_on_chain() { let (mut c, id) = setup(); ctx(0, DAY, near(0)); commit_for(&mut c, id, &v("prose_wrapped_0")); vote(&mut c, id, &v("prose_wrapped_0")); }
 
 #[test]
 fn parse_outcome_is_structured_not_substring() {
@@ -254,6 +271,7 @@ fn no_verdict_before_deadline() { let (mut c, id) = setup(); ctx(0, 1, near(0));
 #[test]
 fn split_panel_escalates() {
     let (mut c, id) = setup(); ctx(0, DAY, near(0));
+    commit_for(&mut c, id, &v("yes_0"));
     vote(&mut c, id, &v("yes_0")); vote(&mut c, id, &v("yes_1"));
     assert_eq!(vote(&mut c, id, &v("no_2")), Outcome::No);
     assert_eq!(c.get_market(id).unwrap().status, Status::Escalated);
@@ -301,4 +319,60 @@ fn loser_cannot_claim() {
     ctx(0, DAY, near(0)); unanimous_yes(&mut c, id);
     ctx(0, 2 * DAY, near(0)); c.finalize(id);
     ctx(3, 2 * DAY, near(0)); let _ = c.claim(id);
+}
+
+// ---------- evidence commit lock (round 4) ----------
+#[test]
+#[should_panic(expected = "evidence not committed for this round")]
+fn vote_before_commit_rejected() {
+    let (mut c, id) = setup(); ctx(0, DAY, near(0));
+    vote(&mut c, id, &v("yes_0"));
+}
+
+#[test]
+#[should_panic(expected = "evidence bundle differs from committed hash")]
+fn vote_with_uncommitted_evidence_rejected() {
+    let (mut c, id) = setup(); ctx(0, DAY, near(0));
+    // Commit EV (yes_0), then try other_evidence_1 which hashes differently
+    commit_for(&mut c, id, &v("yes_0"));
+    vote(&mut c, id, &v("other_evidence_1"));
+}
+
+#[test]
+#[should_panic(expected = "relayer or owner only")]
+fn non_relayer_commit_rejected() {
+    let (mut c, id) = setup();
+    ctx(1, DAY, near(0)); // accounts(1) is not owner and not a relayer
+    c.commit_evidence(id, 0, evidence_hash_of(&v("yes_0")));
+}
+
+#[test]
+fn registered_relayer_can_commit() {
+    let (mut c, id) = setup();
+    ctx(0, 0, near(0));
+    c.register_relayer(accounts(2));
+    ctx(2, DAY, near(0));
+    c.commit_evidence(id, 0, evidence_hash_of(&v("yes_0")));
+    assert_eq!(c.get_committed_evidence(id), Some(evidence_hash_of(&v("yes_0"))));
+    // owner votes after relayer commit
+    ctx(0, DAY, near(0));
+    assert_eq!(vote(&mut c, id, &v("yes_0")), Outcome::Yes);
+}
+
+#[test]
+#[should_panic(expected = "evidence already committed this round")]
+fn double_commit_rejected() {
+    let (mut c, id) = setup(); ctx(0, DAY, near(0));
+    commit_for(&mut c, id, &v("yes_0"));
+    commit_for(&mut c, id, &v("yes_0"));
+}
+
+#[test]
+fn too_early_clears_committed_evidence() {
+    let (mut c, id) = setup(); ctx(0, DAY, near(0));
+    too_early_round(&mut c, id);
+    assert_eq!(c.get_committed_evidence(id), None);
+    // must re-commit for round 1
+    commit_for(&mut c, id, &v("yes_r1_0"));
+    assert!(c.get_committed_evidence(id).is_some());
 }

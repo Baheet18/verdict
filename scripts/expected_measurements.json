@@ -7,18 +7,22 @@
     "pinned_at": "2026-11-05T09:30:00+01:00",
     "compose_pin": "Pinned value is sha256(app_compose with the single 'INSTANCE_LABEL=gpuNN' replaced by 'INSTANCE_LABEL=<INSTANCE_LABEL>'). The verifier still checks the RAW sha256(app_compose) against MRCONFIGID and the RTMR3 compose-hash event; only the allowlist compare is normalized. DeepSeek and GLM nodes normalize to the same host compose (dstack-nvidia-0.5.11 name); Qwen's differs (0.5.12 name).",
     "os_image_hash_check": "os_image_hash is read from the replayed RTMR3 'os-image-hash' event (measured), cross-checked against tcb_info, then compared to this pin.",
-    "coverage": "Label 'Hardware + host stack verified'. RTMR3 events are: system-preparing, app-id, compose-hash, instance-id, boot-mr-done, mr-kms, os-image-hash, key-provider, storage-fs, system-ready (+ nearai-replica-report-key-v1 on some nodes). The model-serving container (nearai/cvm-compose-files YAML) is NOT measured in RTMR3. compose-manager publishes a separately-quoted action log (compose_up file_sha256 values) but each node runs several compose files concurrently, so which container served a given model cannot be pinned; the model container is NOT covered."
+    "coverage": "Label 'Hardware + host stack verified' only if EVERY observed attestation entry for that signing_address passes. RTMR3 events include mr-kms and key-provider (pinned). The model-serving container is NOT measured. Key-management service (dstack KMS) is trusted for key custody across replicas.",
+    "compose_manager_digests": "Accepted host compose-manager digests are published on Docker Hub under nearaidev/compose-manager. Pinned: sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be (tags include prod-20260702-8e07c35 / prod-rollback-20260925-\u2026 / staging-20260718-\u2026) and sha256:a320bb4882341c8e19ef1944436f6591ed73303732009ed5db9f6db6c9da756a (tags prod-20261029-be649f8, staging-20261029-be649f8, staging-20261021-754d65c; confirmed via https://hub.docker.com/v2/repositories/nearaidev/compose-manager/tags on 2026-11-05 WAT). Current Docker Hub `latest`/`prod` as of that fetch was a0c07308\u2026 (2026-11-04) and is NOT yet observed on panel nodes, so not pinned. Verifier accepts any allowlisted digest set; shared-signer policy still requires EVERY observed replica for a key to pass.",
+    "rtmr3_kms": "mr-kms and key-provider RTMR3 event payloads are pinned (observed identical across all 3 panel models on 2026-11-05). key-provider payload decodes to JSON {name:kms,id:<secp256r1 pubkey>}. Signing keys are issued by this KMS service; a signature cannot prove which replica held the key. See README Limits."
   },
   "shared_host_images": {
     "docker_image_digests": [
       "sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
       "sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be",
+      "sha256:a320bb4882341c8e19ef1944436f6591ed73303732009ed5db9f6db6c9da756a",
       "sha256:742dbd2e61c8709b930712c38958386c3cb3928e09eeb1f1e490600c127e2edb",
       "sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
     ],
     "docker_images": [
       "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
       "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be",
+      "nearaidev/compose-manager@sha256:a320bb4882341c8e19ef1944436f6591ed73303732009ed5db9f6db6c9da756a",
       "certbot/dns-cloudflare@sha256:742dbd2e61c8709b930712c38958386c3cb3928e09eeb1f1e490600c127e2edb",
       "otel/opentelemetry-collector-contrib@sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
     ],
@@ -47,6 +51,23 @@
     "rt_mr2": {
       "value": "bd67ab7554dc27ab03a077bc1447a1a67d0624ff547c4c809a8626f12d6a89712f8ec60e781e99b98208574065d21a71",
       "source": "observed"
+    },
+    "required_image_name_prefixes": [
+      "nearaidev/compose-manager-launcher@",
+      "nearaidev/compose-manager@",
+      "certbot/dns-cloudflare@",
+      "otel/opentelemetry-collector-contrib@"
+    ],
+    "mr_kms": {
+      "value": "6a64e679539b4cd3588fd7f9434974d95b176d607df6e43ddc432aeb3ca6009e",
+      "source": "observed",
+      "note": "Identical across Qwen/DeepSeek/GLM model-node RTMR3 events on 2026-11-05 WAT."
+    },
+    "key_provider": {
+      "value": "7b226e616d65223a226b6d73222c226964223a223330353933303133303630373261383634386365336430323031303630383261383634386365336430333031303730333432303030343339346161656432633734356536613435376362383335663766343734323366353766663365616437316239326162666636626463313464393035623331396632653133393631623432633530373430646165343439386439633531646437613265323237363630633965356335303430383363646130366236633131363832227d",
+      "decoded_preview": "{\"name\":\"kms\",\"id\":\"3059301306072a8648ce3d020106082a8648ce3d03010703420004394aaed2\u2026\"}",
+      "source": "observed",
+      "note": "Identical across panel models. Signing keys come from this KMS; replica identity is not in the signature."
     }
   },
   "models": {

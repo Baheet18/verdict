@@ -50,7 +50,8 @@ pub struct Market {
     pub no_pool: NearToken,
     /// Incremented when a unanimous TOO_EARLY clears the votes; requests must name the current round.
     pub round: u32,
-    /// evidence_bundle_hash fixed by the first accepted vote of this round; all later votes must match.
+    /// evidence_bundle_hash committed by a registered relayer (or owner) for this round BEFORE any vote.
+    /// Votes whose header evidence hash differs are rejected. Cleared when TooEarly advances the round.
     pub round_evidence_hash: Option<String>,
     pub votes: Vec<Vote>,
     pub status: Status,
@@ -58,7 +59,7 @@ pub struct Market {
 
 #[derive(BorshStorageKey, BorshSerialize)]
 #[borsh(crate = "near_sdk::borsh")]
-enum Key { Signers, Markets, Stakes, Attestations, UsedSigned }
+enum Key { Signers, Markets, Stakes, Attestations, UsedSigned, Relayers }
 
 #[near(contract_state)]
 #[derive(PanicOnDefault)]
@@ -68,6 +69,8 @@ pub struct Verdict {
     signers: IterableMap<String, String>,
     /// signer -> sha256 of the attestation report JSON the owner verified before registering
     attestations: LookupMap<String, String>,
+    /// accounts allowed to commit_evidence for a round (owner is always allowed even if not listed)
+    relayers: LookupSet<AccountId>,
     markets: Vector<Market>,
     stakes: LookupMap<(u32, AccountId), (NearToken, NearToken)>,
     /// sha256(signed text) of every accepted vote, forever: a signed response can be counted once.
@@ -172,6 +175,7 @@ impl Verdict {
     #[init]
     pub fn new(owner: AccountId) -> Self {
         Self { owner, signers: IterableMap::new(Key::Signers), attestations: LookupMap::new(Key::Attestations),
+               relayers: LookupSet::new(Key::Relayers),
                markets: Vector::new(Key::Markets), stakes: LookupMap::new(Key::Stakes), used_signed: LookupSet::new(Key::UsedSigned) }
     }
 
@@ -191,6 +195,39 @@ impl Verdict {
     pub fn get_signer_model(&self, address: String) -> Option<String> { self.signers.get(&hex20(&address)).cloned() }
     pub fn remove_signer(&mut self, address: String) { self.only_owner(); self.signers.remove(&hex20(&address)); }
     pub fn get_signers(&self) -> Vec<(String, String)> { self.signers.iter().map(|(a, m)| (a.clone(), m.clone())).collect() }
+
+    /// Owner registers an account that may call `commit_evidence` (owner can always commit without registering).
+    pub fn register_relayer(&mut self, account: AccountId) {
+        self.only_owner();
+        self.relayers.insert(account);
+    }
+    pub fn remove_relayer(&mut self, account: AccountId) {
+        self.only_owner();
+        self.relayers.remove(&account);
+    }
+    pub fn is_relayer(&self, account: AccountId) -> bool {
+        account == self.owner || self.relayers.contains(&account)
+    }
+    fn only_relayer(&self) {
+        require!(self.is_relayer(env::predecessor_account_id()), "relayer or owner only");
+    }
+
+    /// Lock the evidence bundle hash for the CURRENT round before any vote. Permissioned so a random
+    /// NEAR AI key holder cannot race-submit fabricated evidence and lock out honest votes.
+    /// The full evidence bundle MUST be published off-chain (same hash) so anyone can recompute.
+    pub fn commit_evidence(&mut self, market_id: u32, round: u32, evidence_bundle_hash: String) {
+        self.only_relayer();
+        let h = hex32(&evidence_bundle_hash, "evidence_bundle_hash");
+        let m = self.markets.get_mut(market_id).expect("no market");
+        require!(m.status == Status::Open, "market not open");
+        require!(round == m.round, "wrong round");
+        require!(m.votes.is_empty(), "votes already cast this round");
+        require!(m.round_evidence_hash.is_none(), "evidence already committed this round");
+        m.round_evidence_hash = Some(h);
+    }
+    pub fn get_committed_evidence(&self, market_id: u32) -> Option<String> {
+        self.markets.get(market_id).and_then(|m| m.round_evidence_hash.clone())
+    }
 
     /// Commits market_id (the returned index), sha256(rules) and the prompt template hash.
     /// Auto-verdict requires ALL resolvers to agree (threshold == resolver count).
@@ -227,9 +264,10 @@ impl Verdict {
         }
     }
 
-    /// Anyone relays a signed resolver output. The raw request bytes are hashed ON-CHAIN (not stored) and must
+    /// Anyone relays a signed resolver output. Evidence for this round MUST already be committed via
+    /// `commit_evidence` (relayer/owner). The raw request bytes are hashed ON-CHAIN (not stored) and must
     /// contain the canonical header binding market_id / round / rules_hash / prompt_template_hash /
-    /// evidence_bundle_hash. Signed text = "<signer's model>:<sha256(request_raw)>:<sha256(response_raw)>".
+    /// evidence_bundle_hash (== the committed hash). Signed text = "<signer's model>:<sha256(request_raw)>:<sha256(response_raw)>".
     pub fn submit_verdict(&mut self, market_id: u32, request_raw: String, response_raw: String, signature: String) -> Outcome {
         let m = self.markets.get(market_id).expect("no market");
         require!(env::block_timestamp() >= m.deadline_ns, "market not ended");
@@ -247,11 +285,11 @@ impl Verdict {
         let text_h = env::sha256(text.as_bytes());
         require!(!self.used_signed.contains(&text_h), "signed response already used");
         require!(!m.votes.iter().any(|v| v.signer == signer), "signer already voted");
-        if let Some(e) = &m.round_evidence_hash { require!(*e == evidence, "evidence bundle differs from this round's"); }
+        let committed = m.round_evidence_hash.as_ref().unwrap_or_else(|| env::panic_str("evidence not committed for this round"));
+        require!(*committed == evidence, "evidence bundle differs from committed hash");
         let outcome = parse_outcome(&response_raw).unwrap_or_else(|| env::panic_str("no valid outcome in response"));
         self.used_signed.insert(text_h);
         let m = self.markets.get_mut(market_id).unwrap();
-        m.round_evidence_hash = Some(evidence);
         m.votes.push(Vote { signer, model: req_model, outcome, request_sha256: req_h, response_sha256: resp_h });
         if m.votes.len() as u32 == m.threshold {
             let all_same = m.votes.iter().all(|v| v.outcome == outcome);
