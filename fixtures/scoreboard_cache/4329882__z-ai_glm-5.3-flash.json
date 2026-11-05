@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "market_id": 4329882,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x8e2dfc32c4bb2bee71ef3ba40c974f2dc98f5df7c60628cfd74e09c24362a09b10c4b9dd443f610c898760bf871c87be80d08e201bfb7fe5fbe72ce21e9114e31b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:0ca07d8d1fcd562cdbfdfd5d4efc34945ef77e60a3823a4630b58c2734374add:73b4e17acaf7c22b57b23a484274aeba6395a5360d7e977ec020e349b842ab9f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with Houston winning 34-31 over Jacksonville, so the market resolves to Texans.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 957,
+  "total_tokens": 1140,
+  "completion_tokens": 183,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 21,
+  "completion_tokens_details": {
+   "reasoning_tokens": 21
+  }
+ },
+ "cost_usd": 0.00016806,
+ "at": "2026-11-05T10:18:35",
+ "request_sha256": "0ca07d8d1fcd562cdbfdfd5d4efc34945ef77e60a3823a4630b58c2734374add",
+ "response_sha256": "73b4e17acaf7c22b57b23a484274aeba6395a5360d7e977ec020e349b842ab9f"
+}

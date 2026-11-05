@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4329886,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xc208277fc47b9f5d5b491870e08785639357274238ea0c4b90a281fca51bcf427d3a949894ee76378f6a9492ab601c88d6e3e764985820c60497ff233a4028591c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:a43b50fc304cba21611f8e8063972937dbc5416e978d301545533ea93b88b280:0381351ac57509bd4ce37de1adc386421e0590f2c88538a32d5f54679392ab54",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show the game final with Patriots 26, Jets 19, so the market resolves to Patriots (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 991,
+  "total_tokens": 1298,
+  "completion_tokens": 307,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 25
+  }
+ },
+ "cost_usd": 0.0006657,
+ "at": "2026-11-05T10:17:20",
+ "request_sha256": "a43b50fc304cba21611f8e8063972937dbc5416e978d301545533ea93b88b280",
+ "response_sha256": "0381351ac57509bd4ce37de1adc386421e0590f2c88538a32d5f54679392ab54"
+}

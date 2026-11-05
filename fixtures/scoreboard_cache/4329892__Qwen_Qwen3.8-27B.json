@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4329892,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x6e3c47d4d5c3ea93f4602123a9de418a8f8fdd877752e21b33de337af01593da7b746fb926a18fee26f7d5491613e8c11813cb4b744023e35e1823b0de8e0dbd1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:eb9d3a42eac87ece9323ab50f9ec2b64f8ac8c3b328f5062bcdd5ff0067ff2d5:3cba85b78ea4582ad48bd1849d7bc1c41f4dee9ae74ce1ccc6fff5fc8293d021",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Buffalo Bills 33, Las Vegas Raiders 30. Therefore the market resolves to Bills, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1124,
+  "total_tokens": 1650,
+  "completion_tokens": 526,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 359,
+  "completion_tokens_details": {
+   "reasoning_tokens": 359
+  }
+ },
+ "cost_usd": 0.00075506,
+ "at": "2026-11-05T10:17:23",
+ "request_sha256": "eb9d3a42eac87ece9323ab50f9ec2b64f8ac8c3b328f5062bcdd5ff0067ff2d5",
+ "response_sha256": "3cba85b78ea4582ad48bd1849d7bc1c41f4dee9ae74ce1ccc6fff5fc8293d021"
+}

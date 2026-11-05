@@ -1,0 +1,8 @@
+{
+ "evidence_bundle_hash": "9e9bc4f0715b3fc6220790a8bf107538b1de99e26d7795a34d6a499aca925555",
+ "question": "Did it rain (>=1mm) at Ikeja on 2026-11-03?",
+ "rules": "Resolves YES if the source snapshot reports >=1mm rainfall at Ikeja for 2026-11-03, NO if it reports <1mm. Otherwise AMBIGUOUS.",
+ "prompt_template_hash": "fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f",
+ "evidence": "{\"market_end\": \"2026-11-03T23:59:59Z\", \"question\": \"Did it rain (>=1mm) at Ikeja on 2026-11-03?\", \"rules\": \"Resolves YES if the source snapshot reports >=1mm rainfall at Ikeja for 2026-11-03, NO if it reports <1mm. Otherwise AMBIGUOUS.\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T10:00:00Z\", \"sha256\": \"cc552165952999bfcb75c35d4d35a01022ced35df2556ac01c91af55aa0b6415\", \"text\": \"Daily weather summary, Ikeja (Lagos), 2026-11-03: total precipitation 4.2 mm. Source A.\", \"url\": \"fixture://source-a\"}, {\"fetched_at\": \"2026-11-05T10:00:00Z\", \"sha256\": \"d6e0b0ccd1e6049066e338258febdbf52e362ac279a8f007096b5f135c282f4b\", \"text\": \"Ikeja station 2026-11-03 rainfall: 4.2mm (thunderstorms in the afternoon). Source B.\", \"url\": \"fixture://source-b\"}]}",
+ "note": "Published bundle matching real_panel.json vote 0. Content-addressed for commit_evidence demos."
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4329890,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xf1f6468be1559ba52ed09c2a1f3500428899c00a79276e923d513cc886b715d4456b876864db36284fc42facd17ecbdd141c316ce020fa1414e3f6261c58a4331c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:a184135d87abd6c4dbe49a1c868a25577da828398b46da2bb264dd8c009c59e0:64c1ec959015f9a629f3793d00b2bebe30a7056020e14d723fa9961d0cad046f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent snapshots show the game final with Arizona Cardinals winning 18-16 over the Rams, so the market resolves to Cardinals (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 980,
+  "total_tokens": 1284,
+  "completion_tokens": 304,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "created_cache_tokens": 960
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 20
+  }
+ },
+ "cost_usd": 0.0006588,
+ "at": "2026-11-05T10:17:27",
+ "request_sha256": "a184135d87abd6c4dbe49a1c868a25577da828398b46da2bb264dd8c009c59e0",
+ "response_sha256": "64c1ec959015f9a629f3793d00b2bebe30a7056020e14d723fa9961d0cad046f"
+}

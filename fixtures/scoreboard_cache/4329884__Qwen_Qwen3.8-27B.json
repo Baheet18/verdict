@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4329884,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xd753297e42bf97f483700b7b766dfdca9516c8c156a889a689e9fe0209adbbf6154eb7c180c0c579f918a9c902d925c55c71b15e6d8bfc18a2cd1ef8ba80a0471c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:eeecc92680b3325f6b5868d731a52f89917ffa33240b42527378308fa87887c9:e7ab359185858d8e4019b348c7733ccff46b0be45da3f6bded57e083cfe45ef0",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots report the final score as Cleveland Browns 13, Baltimore Ravens 10. Therefore the market resolves to Browns, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1125,
+  "total_tokens": 1754,
+  "completion_tokens": 629,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 376,
+  "completion_tokens_details": {
+   "reasoning_tokens": 376
+  }
+ },
+ "cost_usd": 0.00089415,
+ "at": "2026-11-05T10:18:22",
+ "request_sha256": "eeecc92680b3325f6b5868d731a52f89917ffa33240b42527378308fa87887c9",
+ "response_sha256": "e7ab359185858d8e4019b348c7733ccff46b0be45da3f6bded57e083cfe45ef0"
+}

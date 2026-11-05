@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4329884,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xdba3889d3f5647ab9b300598b6118f6b0ed181c4135af770930fd88df03ebb045afd4f6f34194f49c4cea2298889f19dcfc46f0943c02706c4f12c3be027af451c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:5f9dd793186c3d77bb453fcb561dc706fd2ad5600804739ecaa1a70b8d3052d0:453b9040395997c31c96112345255c0037bb4e142beb24303be9da127d521462",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with Browns 13, Ravens 10, so the Ravens lost and the market resolves to Browns (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 986,
+  "total_tokens": 1222,
+  "completion_tokens": 236,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 63
+  }
+ },
+ "cost_usd": 0.000579,
+ "at": "2026-11-05T10:18:23",
+ "request_sha256": "5f9dd793186c3d77bb453fcb561dc706fd2ad5600804739ecaa1a70b8d3052d0",
+ "response_sha256": "453b9040395997c31c96112345255c0037bb4e142beb24303be9da127d521462"
+}

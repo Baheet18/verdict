@@ -1,0 +1,6 @@
+{
+  "note": "Sanitized verified votes from out/bench2 (sports post-cutoff). No API keys. Raw bodies stripped.",
+  "label_required": "Hardware + host stack verified",
+  "count": 36,
+  "source": "out/bench2/runs"
+}

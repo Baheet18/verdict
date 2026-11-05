@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4329887,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xd17292eecf0a720a85537125d7d33df84cd4da706678f9d5190becccc2be33a770863f9c07002c6fa40e5b3bf76123f7330ea92159b00f2be31483812bc6247d1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:c18425fd2cabca88bfe53d35a68dfadcedf3c2434889b886f27e5413cb4641cd:929a43e1df26efe52cdc539603634ad30cfa9a63f90defab200d515f9cc4011f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Saints 34, Giants 27. Therefore the market resolves to Saints, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1113,
+  "total_tokens": 2267,
+  "completion_tokens": 1154,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 993,
+  "completion_tokens_details": {
+   "reasoning_tokens": 993
+  }
+ },
+ "cost_usd": 0.00160242,
+ "at": "2026-11-05T10:17:11",
+ "request_sha256": "c18425fd2cabca88bfe53d35a68dfadcedf3c2434889b886f27e5413cb4641cd",
+ "response_sha256": "929a43e1df26efe52cdc539603634ad30cfa9a63f90defab200d515f9cc4011f"
+}

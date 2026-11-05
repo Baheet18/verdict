@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4329882,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x3cac619163b81bc32c6ae70fb78defaab71ea0f9da6894836ff48760324a28163128fbcf219d81d97911d22ad79b8d64f58ded6265d1754473ec2d5ed60043f71b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:5a6fd07892a5fd52d41e3c60fd58c84e6a9bbfcfd2953ec4bf1cee2aa4afa69a:50dd9aa33db67e0308b320f1035c15a16cb55859613e8cf43f9dab84f238df1e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with Houston beating Jacksonville 34-31, so the market resolves to Texans.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 993,
+  "total_tokens": 1178,
+  "completion_tokens": 185,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 49
+  }
+ },
+ "cost_usd": 0.0005199,
+ "at": "2026-11-05T10:18:32",
+ "request_sha256": "5a6fd07892a5fd52d41e3c60fd58c84e6a9bbfcfd2953ec4bf1cee2aa4afa69a",
+ "response_sha256": "50dd9aa33db67e0308b320f1035c15a16cb55859613e8cf43f9dab84f238df1e"
+}

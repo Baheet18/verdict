@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4329889,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x678e1055f155f6f50eccd6c863ed6a2be663488b1d1059dd8304a954d3724f7e5e2f16070136af65798840d909142624d40bd78b10c83b6f2bdf398101ba1ce91c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:9d726a50876885b7183b052e7a1f3030bc12eefe0eca7082701ab026198fa156:e295b1772226e8a2e4f01bd9d224015314663f251493b8b4975aac5e4c8bde80",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent snapshots report the game as final with Pittsburgh Steelers scoring 26 and Tampa Bay Buccaneers scoring 19. Therefore the market resolves to Steelers, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1126,
+  "total_tokens": 1869,
+  "completion_tokens": 743,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 478,
+  "completion_tokens_details": {
+   "reasoning_tokens": 478
+  }
+ },
+ "cost_usd": 0.00104809,
+ "at": "2026-11-05T10:17:55",
+ "request_sha256": "9d726a50876885b7183b052e7a1f3030bc12eefe0eca7082701ab026198fa156",
+ "response_sha256": "e295b1772226e8a2e4f01bd9d224015314663f251493b8b4975aac5e4c8bde80"
+}

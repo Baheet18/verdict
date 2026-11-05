@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4362230,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xa918e584feb3232537e8ec03dec73e793265682624f18fda5878c9e7788c3d7b12a42ebda4699bdb50ac9eb9977905509f10fcccab0b3ff5ef0b699ddefd51ac1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:137ba7db1f7b83d922f3028a3aca6183e33830562a705407b907f563c7e1acb8:265ae906e3a968eb08a40b61b5aaf36aadead0e9e0c03e81b204fac633dde0cb",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots report the final score as San Francisco 49ers 23, Washington Commanders 17. Therefore the market resolves to 49ers, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1134,
+  "total_tokens": 1732,
+  "completion_tokens": 598,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 328,
+  "completion_tokens_details": {
+   "reasoning_tokens": 328
+  }
+ },
+ "cost_usd": 0.0008526600000000001,
+ "at": "2026-11-05T10:18:53",
+ "request_sha256": "137ba7db1f7b83d922f3028a3aca6183e33830562a705407b907f563c7e1acb8",
+ "response_sha256": "265ae906e3a968eb08a40b61b5aaf36aadead0e9e0c03e81b204fac633dde0cb"
+}

@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "market_id": 4362230,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x03321f11a2d1f18b6ed4624c72b62075fc0a0c45714178da1d5e5cdc6241f5ef32e2b9737fc8d7fdcb05ee98dde0a066fc92d73caedc4279aa76e0f4b2909d991b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:184bd3c27d743a5c24e29a707e8551521660c171316dfc8f9d400916828457ab:fa7f9b646714a095f6f1b0baf507c97680e723628bf9ce6daf1be19d83a9223e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both ESPN and nflverse independently report the game as final with the 49ers winning 23-17 over the Commanders, so the market resolves to \"49ers\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 969,
+  "total_tokens": 1161,
+  "completion_tokens": 192,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 33,
+  "completion_tokens_details": {
+   "reasoning_tokens": 33
+  }
+ },
+ "cost_usd": 0.00017352,
+ "at": "2026-11-05T10:18:42",
+ "request_sha256": "184bd3c27d743a5c24e29a707e8551521660c171316dfc8f9d400916828457ab",
+ "response_sha256": "fa7f9b646714a095f6f1b0baf507c97680e723628bf9ce6daf1be19d83a9223e"
+}

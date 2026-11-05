@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "market_id": 4329886,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x0224a3ac815d1632b6423e3d0f586ff6586f26893144b537f4b4bf84a0fca134020f0b76392e098200f83289c18140ecbbb197bb2a67b794ef98e555b4cc28ad1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:e53dab6fa1494576e823ef173217d0152613faa459059cd355233c1bab88fca6:794fd8702b01e38d321511ccb867d7bc03dcd1f8dacb955e61c5e2fa5ce1b979",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Patriots beat the Jets 26-19 in the October 18 game, so the market resolves to \"Patriots\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 957,
+  "total_tokens": 1154,
+  "completion_tokens": 197,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 25,
+  "completion_tokens_details": {
+   "reasoning_tokens": 25
+  }
+ },
+ "cost_usd": 0.00017506,
+ "at": "2026-11-05T10:17:21",
+ "request_sha256": "e53dab6fa1494576e823ef173217d0152613faa459059cd355233c1bab88fca6",
+ "response_sha256": "794fd8702b01e38d321511ccb867d7bc03dcd1f8dacb955e61c5e2fa5ce1b979"
+}

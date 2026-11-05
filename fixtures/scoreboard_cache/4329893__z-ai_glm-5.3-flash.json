@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "market_id": 4329893,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xb588ad7b410f052b24d42ffe1f69d656bb4a6006c1687fff146577cf09eaa9b11dbb20cb5391d7001888f21077fc7eed1950606607f88a31848e457cb8f76d591c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:4dcf4317e37afd3ec0a92d01232ce502a5c8c4f74dfcf4f0afef23ff4a987ddb:b4be82a96f1f3d642e129e7ed4fed90df25ddf23f2e91c522f3ebdb3fc5fa397",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both ESPN and nflverse independently report the game as final with Green Bay defeating Dallas 23-13, so the market resolves to \"Packers\", mapping to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 958,
+  "total_tokens": 1142,
+  "completion_tokens": 184,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 24,
+  "completion_tokens_details": {
+   "reasoning_tokens": 24
+  }
+ },
+ "cost_usd": 0.00016864,
+ "at": "2026-11-05T10:17:26",
+ "request_sha256": "4dcf4317e37afd3ec0a92d01232ce502a5c8c4f74dfcf4f0afef23ff4a987ddb",
+ "response_sha256": "b4be82a96f1f3d642e129e7ed4fed90df25ddf23f2e91c522f3ebdb3fc5fa397"
+}

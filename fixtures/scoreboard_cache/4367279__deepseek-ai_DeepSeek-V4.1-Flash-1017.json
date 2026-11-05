@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4367279,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xe21934d2ac59e7f21acc2112dcb263dfd3330cc12a4b3f26c95b239f4c5736456be3d005fe0adf34942d13f0e9ec55f42e88795fe30b71ae7a2b5ab167dd25c11c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:5808c424fc95977ed62952f512edb0a77488856743461daaea65659213089629:50933c9461c85a1469f4a918f2c122f8927ac19b38faec13315f93dc1c083a72",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show a final score of Chiefs 22, Chargers 6, for a combined total of 28 points. Since 28 is less than 39, the market resolves to Under (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 981,
+  "total_tokens": 1244,
+  "completion_tokens": 263,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 89
+  }
+ },
+ "cost_usd": 0.0006099,
+ "at": "2026-11-05T10:20:58",
+ "request_sha256": "5808c424fc95977ed62952f512edb0a77488856743461daaea65659213089629",
+ "response_sha256": "50933c9461c85a1469f4a918f2c122f8927ac19b38faec13315f93dc1c083a72"
+}

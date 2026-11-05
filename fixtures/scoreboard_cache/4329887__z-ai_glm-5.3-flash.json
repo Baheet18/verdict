@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "market_id": 4329887,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xb911ff0b92d9df42347cf94a360c534162a54419bbc36592912b7d1ac1af42fe781fd020e925844f9115f41c531b75cb9afbf2d3b7cbb2c4715fe5c5fb9563fc1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:ab0133ac606f8ada9ac0c7a7621708a44eaf28205ea134334a7cdf22dc5ba87b:8f5849a0828b55327d5aff9a099b9d857b6f9efa6b4930789978a5a62f9ac162",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with Saints winning 34-27 over the Giants, so the market resolves to \"Saints\" and the verdict is YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 958,
+  "total_tokens": 1149,
+  "completion_tokens": 191,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 21,
+  "completion_tokens_details": {
+   "reasoning_tokens": 21
+  }
+ },
+ "cost_usd": 0.00017214,
+ "at": "2026-11-05T10:16:48",
+ "request_sha256": "ab0133ac606f8ada9ac0c7a7621708a44eaf28205ea134334a7cdf22dc5ba87b",
+ "response_sha256": "8f5849a0828b55327d5aff9a099b9d857b6f9efa6b4930789978a5a62f9ac162"
+}

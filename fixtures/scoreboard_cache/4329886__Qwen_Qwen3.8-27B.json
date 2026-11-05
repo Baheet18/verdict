@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4329886,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xcf1848d8564f957b00d86594540ae51eaf667cfc8bc20ba09c06cb1aa50502be735807ea385e28b4d648cc8a1cb6b183ada9404afba14c6fd699d6f3bdf84a281b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:851db1bbf15c8189bd35fee3de868f90fc9dd29b3a6c4d8bebdae64075bee021:ac869ddf265ee6afb8b34aa0aed9661548b347094a4b5fe13ace420886f6b59c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots report the final score as Patriots 26, Jets 19. Therefore the market resolves to Patriots, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1113,
+  "total_tokens": 1964,
+  "completion_tokens": 851,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 596,
+  "completion_tokens_details": {
+   "reasoning_tokens": 596
+  }
+ },
+ "cost_usd": 0.00119337,
+ "at": "2026-11-05T10:17:35",
+ "request_sha256": "851db1bbf15c8189bd35fee3de868f90fc9dd29b3a6c4d8bebdae64075bee021",
+ "response_sha256": "ac869ddf265ee6afb8b34aa0aed9661548b347094a4b5fe13ace420886f6b59c"
+}

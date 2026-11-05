@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "market_id": 4329884,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xdae460abce5f1fc314f71f8bca5a62bc59cd510dad8afc463279ca38bbe5bc45365857ce7b90cde1b4fa5b52f393b533701ae5353531a75793040a783583ea661b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:efe08b57fe0d8a04b2affcb416e56a7afd4b8c3980f0d6248cd562a26b300629:ddbc1112d11949f30abb004de592b4dbbddeb4e1a2760e80f4551761121a97a5",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Browns beat the Ravens 13-10 in the October 18 game, so the market resolves to \"Browns\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 957,
+  "total_tokens": 1160,
+  "completion_tokens": 203,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 27,
+  "completion_tokens_details": {
+   "reasoning_tokens": 27
+  }
+ },
+ "cost_usd": 0.00017806,
+ "at": "2026-11-05T10:18:13",
+ "request_sha256": "efe08b57fe0d8a04b2affcb416e56a7afd4b8c3980f0d6248cd562a26b300629",
+ "response_sha256": "ddbc1112d11949f30abb004de592b4dbbddeb4e1a2760e80f4551761121a97a5"
+}
