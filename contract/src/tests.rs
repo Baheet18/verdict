@@ -34,7 +34,7 @@ fn evidence_hash_of(x: &Value) -> String {
 /// Owner commits the evidence hash from the first vote vector for this round (must be done before any submit_verdict).
 fn commit_for(c: &mut Verdict, id: u32, x: &Value) {
     let m = c.get_market(id).unwrap();
-    c.commit_evidence(id, m.round, evidence_hash_of(x));
+    c.commit_evidence(id, m.round, evidence_hash_of(x), format!("fixture://evidence/{}", evidence_hash_of(x)));
 }
 fn vote(c: &mut Verdict, id: u32, x: &Value) -> Outcome {
     c.submit_verdict(id, s(x, "request_raw"), s(x, "response_raw"), s(x, "signature"))
@@ -343,7 +343,7 @@ fn vote_with_uncommitted_evidence_rejected() {
 fn non_relayer_commit_rejected() {
     let (mut c, id) = setup();
     ctx(1, DAY, near(0)); // accounts(1) is not owner and not a relayer
-    c.commit_evidence(id, 0, evidence_hash_of(&v("yes_0")));
+    c.commit_evidence(id, 0, evidence_hash_of(&v("yes_0")), "fixture://evidence/yes_0".into());
 }
 
 #[test]
@@ -352,7 +352,7 @@ fn registered_relayer_can_commit() {
     ctx(0, 0, near(0));
     c.register_relayer(accounts(2));
     ctx(2, DAY, near(0));
-    c.commit_evidence(id, 0, evidence_hash_of(&v("yes_0")));
+    c.commit_evidence(id, 0, evidence_hash_of(&v("yes_0")), "fixture://evidence/yes_0".into());
     assert_eq!(c.get_committed_evidence(id), Some(evidence_hash_of(&v("yes_0"))));
     // owner votes after relayer commit
     ctx(0, DAY, near(0));
@@ -360,11 +360,43 @@ fn registered_relayer_can_commit() {
 }
 
 #[test]
-#[should_panic(expected = "evidence already committed this round")]
-fn double_commit_rejected() {
+fn owner_can_replace_evidence_while_votes_empty() {
     let (mut c, id) = setup(); ctx(0, DAY, near(0));
     commit_for(&mut c, id, &v("yes_0"));
+    // Owner replaces with a different hash (still before any vote).
+    let other = evidence_hash_of(&v("other_evidence_1"));
+    c.commit_evidence(id, 0, other.clone(), "fixture://evidence/other".into());
+    assert_eq!(c.get_committed_evidence(id), Some(other));
+    assert_eq!(c.get_committed_evidence_uri(id), Some("fixture://evidence/other".into()));
+}
+
+#[test]
+#[should_panic(expected = "owner only to replace evidence")]
+fn non_owner_relayer_cannot_replace_evidence() {
+    let (mut c, id) = setup();
+    ctx(0, 0, near(0));
+    c.register_relayer(accounts(2));
+    ctx(2, DAY, near(0));
+    c.commit_evidence(id, 0, evidence_hash_of(&v("yes_0")), "fixture://a".into());
+    // Same relayer tries to replace → rejected (owner only).
+    c.commit_evidence(id, 0, evidence_hash_of(&v("other_evidence_1")), "fixture://b".into());
+}
+
+#[test]
+#[should_panic(expected = "votes already cast this round")]
+fn owner_cannot_replace_evidence_after_votes() {
+    let (mut c, id) = setup(); ctx(0, DAY, near(0));
     commit_for(&mut c, id, &v("yes_0"));
+    vote(&mut c, id, &v("yes_0"));
+    c.commit_evidence(id, 0, evidence_hash_of(&v("other_evidence_1")), "fixture://b".into());
+}
+
+#[test]
+#[should_panic(expected = "market not ended")]
+fn commit_evidence_before_deadline_rejected() {
+    let (mut c, id) = setup();
+    ctx(0, DAY - 1, near(0)); // before deadline
+    c.commit_evidence(id, 0, evidence_hash_of(&v("yes_0")), "fixture://a".into());
 }
 
 #[test]
@@ -375,4 +407,75 @@ fn too_early_clears_committed_evidence() {
     // must re-commit for round 1
     commit_for(&mut c, id, &v("yes_r1_0"));
     assert!(c.get_committed_evidence(id).is_some());
+}
+
+// ---------- request-parameter steering (round 5) ----------
+fn forbidden(name: &str) {
+    let (mut c, id) = setup(); ctx(0, DAY, near(0));
+    commit_for(&mut c, id, &v("yes_0"));
+    vote(&mut c, id, &v(name));
+}
+
+#[test]
+#[should_panic(expected = "forbidden request key: logit_bias")]
+fn forbidden_logit_bias_rejected() { forbidden("forbidden_logit_bias"); }
+
+#[test]
+#[should_panic(expected = "forbidden request key: guided_choice")]
+fn forbidden_guided_choice_rejected() { forbidden("forbidden_guided_choice"); }
+
+#[test]
+#[should_panic(expected = "forbidden request key: guided_regex")]
+fn forbidden_guided_regex_rejected() { forbidden("forbidden_guided_regex"); }
+
+#[test]
+#[should_panic(expected = "forbidden request key: response_format")]
+fn forbidden_response_format_rejected() { forbidden("forbidden_response_format"); }
+
+#[test]
+#[should_panic(expected = "forbidden request key: structured_outputs")]
+fn forbidden_structured_outputs_rejected() { forbidden("forbidden_structured_outputs"); }
+
+#[test]
+#[should_panic(expected = "forbidden request key: tools")]
+fn forbidden_tools_rejected() { forbidden("forbidden_tools"); }
+
+#[test]
+#[should_panic(expected = "forbidden request key: tool_choice")]
+fn forbidden_tool_choice_rejected() { forbidden("forbidden_tool_choice"); }
+
+#[test]
+#[should_panic(expected = "forbidden request key: stop")]
+fn forbidden_stop_rejected() { forbidden("forbidden_stop"); }
+
+#[test]
+#[should_panic(expected = "forbidden request key: n")]
+fn forbidden_n_rejected() { forbidden("forbidden_n"); }
+
+#[test]
+#[should_panic(expected = "forbidden request key: top_p")]
+fn forbidden_top_p_rejected() { forbidden("forbidden_top_p"); }
+
+#[test]
+#[should_panic(expected = "forbidden message key: name")]
+fn forbidden_message_name_rejected() { forbidden("forbidden_message_name"); }
+
+#[test]
+#[should_panic(expected = "relayer or owner only")]
+fn non_relayer_submit_verdict_rejected() {
+    let (mut c, id) = setup();
+    ctx(0, DAY, near(0));
+    commit_for(&mut c, id, &v("yes_0"));
+    ctx(1, DAY, near(0)); // accounts(1) is neither owner nor relayer
+    vote(&mut c, id, &v("yes_0"));
+}
+
+#[test]
+fn registered_relayer_can_submit_verdict() {
+    let (mut c, id) = setup();
+    ctx(0, 0, near(0));
+    c.register_relayer(accounts(2));
+    ctx(2, DAY, near(0));
+    c.commit_evidence(id, 0, evidence_hash_of(&v("yes_0")), "fixture://yes_0".into());
+    assert_eq!(vote(&mut c, id, &v("yes_0")), Outcome::Yes);
 }

@@ -35,10 +35,13 @@ def evidence_bundle(question, rules, market_end, snapshots):
                       ensure_ascii=False, sort_keys=True)
 
 
-def build_request(model, market_id, rnd, rules, evidence, max_tokens=12000, system=SYSTEM_PROMPT):
+def build_request(model, market_id, rnd, rules, evidence, system=SYSTEM_PROMPT):
+    """Exact top-level keys: model, messages, temperature, seed. max_tokens intentionally OMITTED
+    (round 5): the contract rejects any extra key so sampling/steering params cannot be smuggled in.
+    """
     ev_h = sha(evidence)
     user = header(market_id, rnd, sha(rules), sha(system), ev_h) + "\n" + evidence
-    body = {"model": model, "temperature": 0, "seed": REQUIRED_SEED, "max_tokens": max_tokens,
+    body = {"model": model, "temperature": 0, "seed": REQUIRED_SEED,
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
     return json.dumps(body, ensure_ascii=False).encode()
 

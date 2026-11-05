@@ -53,6 +53,8 @@ pub struct Market {
     /// evidence_bundle_hash committed by a registered relayer (or owner) for this round BEFORE any vote.
     /// Votes whose header evidence hash differs are rejected. Cleared when TooEarly advances the round.
     pub round_evidence_hash: Option<String>,
+    /// Off-chain URI where the full evidence bundle is published (same hash). Stored for auditors.
+    pub round_evidence_uri: Option<String>,
     pub votes: Vec<Vote>,
     pub status: Status,
 }
@@ -112,14 +114,41 @@ pub fn canonical_header(market_id: u32, round: u32, rules_hash: &str, prompt_tem
 }
 
 /// Validate the raw chat-completions request body against the market. Returns (model, evidence_bundle_hash).
+/// Exact key allowlist (round 5): top-level keys MUST be exactly {model, messages, temperature, seed}.
+/// Each message MUST be exactly {role, content}. User content MUST be canonical header + "\n" + evidence.
+/// Extra keys (logit_bias, tools, response_format, …) are rejected so an attacker cannot steer a
+/// committed evidence+header into a forced YES via sampling / guided decoding params.
 /// Panics with a specific reason on any mismatch.
 pub fn check_request(request_raw: &str, market_id: u32, m: &Market) -> (String, String) {
     let v: serde_json::Value = serde_json::from_str(request_raw).unwrap_or_else(|_| env::panic_str("request_raw is not JSON"));
-    let model = v["model"].as_str().unwrap_or_else(|| env::panic_str("request has no model")).to_string();
-    require!(v["temperature"].as_f64() == Some(0.0), "request temperature must be 0");
-    require!(v["seed"].as_u64() == Some(REQUIRED_SEED), "request seed must be the fixed seed");
-    let msgs = v["messages"].as_array().unwrap_or_else(|| env::panic_str("request has no messages"));
+    let obj = v.as_object().unwrap_or_else(|| env::panic_str("request_raw is not a JSON object"));
+    const ALLOWED_TOP: &[&str] = &["model", "messages", "temperature", "seed"];
+    for k in obj.keys() {
+        if !ALLOWED_TOP.contains(&k.as_str()) {
+            env::panic_str(&format!("forbidden request key: {k}"));
+        }
+    }
+    for k in ALLOWED_TOP {
+        if !obj.contains_key(*k) {
+            env::panic_str(&format!("request missing key: {k}"));
+        }
+    }
+    require!(obj.len() == ALLOWED_TOP.len(), "request has unexpected keys");
+    let model = obj.get("model").and_then(|x| x.as_str()).unwrap_or_else(|| env::panic_str("request has no model")).to_string();
+    require!(obj.get("temperature").and_then(|x| x.as_f64()) == Some(0.0), "request temperature must be 0");
+    require!(obj.get("seed").and_then(|x| x.as_u64()) == Some(REQUIRED_SEED), "request seed must be the fixed seed");
+    let msgs = obj.get("messages").and_then(|x| x.as_array()).unwrap_or_else(|| env::panic_str("request has no messages"));
     require!(msgs.len() == 2, "request must have exactly [system, user] messages");
+    for (i, msg) in msgs.iter().enumerate() {
+        let mo = msg.as_object().unwrap_or_else(|| env::panic_str("message must be object"));
+        for k in mo.keys() {
+            if k != "role" && k != "content" {
+                env::panic_str(&format!("forbidden message key: {k}"));
+            }
+        }
+        require!(mo.contains_key("role") && mo.contains_key("content") && mo.len() == 2, "message must be exactly role+content");
+        let _ = i;
+    }
     require!(msgs[0]["role"] == "system" && msgs[1]["role"] == "user", "request must have exactly [system, user] messages");
     let system = msgs[0]["content"].as_str().unwrap_or_else(|| env::panic_str("system content must be a string"));
     require!(sha_hex(system.as_bytes()) == m.prompt_template_hash, "wrong prompt template");
@@ -212,21 +241,32 @@ impl Verdict {
         require!(self.is_relayer(env::predecessor_account_id()), "relayer or owner only");
     }
 
-    /// Lock the evidence bundle hash for the CURRENT round before any vote. Permissioned so a random
-    /// NEAR AI key holder cannot race-submit fabricated evidence and lock out honest votes.
-    /// The full evidence bundle MUST be published off-chain (same hash) so anyone can recompute.
-    pub fn commit_evidence(&mut self, market_id: u32, round: u32, evidence_bundle_hash: String) {
+    /// Lock the evidence bundle hash (+ publish URI) for the CURRENT round before any vote.
+    /// Permissioned so a random NEAR AI key holder cannot race-submit fabricated evidence.
+    /// Requires `block_timestamp >= deadline_ns` (betting closed). Owner may replace the commit while
+    /// votes are still empty; once any vote is cast the commit is frozen. The full evidence bundle
+    /// MUST be published at `evidence_uri` with the same hash so anyone can recompute.
+    pub fn commit_evidence(&mut self, market_id: u32, round: u32, evidence_bundle_hash: String, evidence_uri: String) {
         self.only_relayer();
+        require!(!evidence_uri.is_empty(), "evidence_uri required");
         let h = hex32(&evidence_bundle_hash, "evidence_bundle_hash");
         let m = self.markets.get_mut(market_id).expect("no market");
         require!(m.status == Status::Open, "market not open");
+        require!(env::block_timestamp() >= m.deadline_ns, "market not ended");
         require!(round == m.round, "wrong round");
         require!(m.votes.is_empty(), "votes already cast this round");
-        require!(m.round_evidence_hash.is_none(), "evidence already committed this round");
+        if m.round_evidence_hash.is_some() {
+            // Replacement is owner-only (defense in depth vs a compromised relayer flipping evidence).
+            require!(env::predecessor_account_id() == self.owner, "owner only to replace evidence");
+        }
         m.round_evidence_hash = Some(h);
+        m.round_evidence_uri = Some(evidence_uri);
     }
     pub fn get_committed_evidence(&self, market_id: u32) -> Option<String> {
         self.markets.get(market_id).and_then(|m| m.round_evidence_hash.clone())
+    }
+    pub fn get_committed_evidence_uri(&self, market_id: u32) -> Option<String> {
+        self.markets.get(market_id).and_then(|m| m.round_evidence_uri.clone())
     }
 
     /// Commits market_id (the returned index), sha256(rules) and the prompt template hash.
@@ -245,7 +285,7 @@ impl Verdict {
         let threshold = rs.len() as u32;
         self.markets.push(Market { question, rules, rules_hash, prompt_template_hash: pth, sources, resolvers: rs, threshold,
             deadline_ns, dispute_window_ns, dispute_bond, yes_pool: NearToken::from_yoctonear(0), no_pool: NearToken::from_yoctonear(0),
-            round: 0, round_evidence_hash: None, votes: vec![], status: Status::Open });
+            round: 0, round_evidence_hash: None, round_evidence_uri: None, votes: vec![], status: Status::Open });
         self.markets.len() - 1
     }
 
@@ -264,11 +304,16 @@ impl Verdict {
         }
     }
 
-    /// Anyone relays a signed resolver output. Evidence for this round MUST already be committed via
-    /// `commit_evidence` (relayer/owner). The raw request bytes are hashed ON-CHAIN (not stored) and must
-    /// contain the canonical header binding market_id / round / rules_hash / prompt_template_hash /
-    /// evidence_bundle_hash (== the committed hash). Signed text = "<signer's model>:<sha256(request_raw)>:<sha256(response_raw)>".
+    /// Relayer/owner submits a signed resolver output. Restricted to registered relayers (owner always
+    /// counts) as defense in depth: the same party already chooses evidence via `commit_evidence`, so
+    /// this adds no new trust surface, but blocks a random account from racing a steered request that
+    /// somehow obtained three attested signatures. Evidence for this round MUST already be committed.
+    /// The raw request bytes are hashed ON-CHAIN (not stored) and must contain the canonical header
+    /// binding market_id / round / rules_hash / prompt_template_hash / evidence_bundle_hash
+    /// (== the committed hash), with an exact request-key allowlist (see `check_request`).
+    /// Signed text = "<signer's model>:<sha256(request_raw)>:<sha256(response_raw)>".
     pub fn submit_verdict(&mut self, market_id: u32, request_raw: String, response_raw: String, signature: String) -> Outcome {
+        self.only_relayer();
         let m = self.markets.get(market_id).expect("no market");
         require!(env::block_timestamp() >= m.deadline_ns, "market not ended");
         require!(m.status == Status::Open, "not accepting verdicts");
@@ -296,7 +341,7 @@ impl Verdict {
             m.status = match (all_same, outcome) {
                 (true, Outcome::Yes | Outcome::No) => Status::Proposed { outcome, at_ns: env::block_timestamp() },
                 (true, Outcome::TooEarly) => { // re-run panel later in a NEW round; old signatures can't be replayed
-                    m.votes.clear(); m.round += 1; m.round_evidence_hash = None; Status::Open }
+                    m.votes.clear(); m.round += 1; m.round_evidence_hash = None; m.round_evidence_uri = None; Status::Open }
                 _ => Status::Escalated, // split panel or unanimous AMBIGUOUS
             };
         }

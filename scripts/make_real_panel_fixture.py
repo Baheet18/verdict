@@ -21,7 +21,7 @@ EV = evidence_bundle(QUESTION, RULES, "2026-11-03T23:59:59Z", [
 
 out = {"question": QUESTION, "rules": RULES, "prompt_template_hash": PROMPT_TEMPLATE_HASH, "votes": []}
 for model in MODELS:
-    body = build_request(model, 0, 0, RULES, EV, max_tokens=4000)
+    body = build_request(model, 0, 0, RULES, EV)
     r = requests.post(f"{API}/chat/completions", headers=H, data=body, timeout=600); r.raise_for_status()
     raw = r.content; resp = r.json()
     sig = requests.get(f"{API}/signature/{resp['id']}", headers=H, params={"model": model, "signing_algo": "ecdsa"}, timeout=120).json()

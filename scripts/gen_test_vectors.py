@@ -51,6 +51,32 @@ v["substring_trap_0"] = sign(0, req(0), resp("NO", content='{"outcome":"NO","rea
 v["truncated_0"] = sign(0, req(0), resp("YES", finish="length"))
 v["fenced_yes_2"] = sign(2, req(2), resp("YES", content='\n```json\n{"outcome":"YES","quotes":[]}\n```\n'))
 v["lowercase_0"] = sign(0, req(0), resp("YES", content='{"outcome":"yes"}'))
+
+# Round 5: one rejection vector per forbidden top-level request key (steering / sampling params).
+FORBIDDEN_KEYS = {
+    "logit_bias": {"0": 100},
+    "guided_choice": ["YES", "NO"],
+    "guided_regex": "YES|NO",
+    "response_format": {"type": "json_object"},
+    "structured_outputs": {"schema": {}},
+    "tools": [{"type": "function", "function": {"name": "x"}}],
+    "tool_choice": "auto",
+    "stop": ["\n"],
+    "n": 2,
+    "top_p": 0.9,
+}
+def with_extra(raw: bytes, key, val) -> bytes:
+    obj = json.loads(raw)
+    obj[key] = val
+    return json.dumps(obj, ensure_ascii=False).encode()
+for fk, fv in FORBIDDEN_KEYS.items():
+    v[f"forbidden_{fk}"] = sign(0, with_extra(req(0), fk, fv), resp("YES", tag=f"fk_{fk}"))
+# Extra message key (name) must also be rejected.
+def with_msg_extra(raw: bytes) -> bytes:
+    obj = json.loads(raw)
+    obj["messages"][1]["name"] = "attacker"
+    return json.dumps(obj, ensure_ascii=False).encode()
+v["forbidden_message_name"] = sign(0, with_msg_extra(req(0)), resp("YES", tag="fmn"))
 out = os.path.join(os.path.dirname(__file__), "..", "contract", "testdata", "vectors.json")
 open(out, "w").write(json.dumps(V, indent=1))
 print("wrote", out, len(v), "vectors")
