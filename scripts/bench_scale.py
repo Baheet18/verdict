@@ -212,7 +212,7 @@ def call(m, model, prices):
         r = json.loads(p.read_text())
         if r.get("ok"): return r, 0.0
     ev = build_evidence(m)
-    body = build_request(model, ev["market_id"], 0, ev["rules"], ev["evidence"], max_tokens=6000)
+    body = build_request(model, ev["market_id"], 0, ev["rules"], ev["evidence"])
     err = None
     for i in range(4):
         try:

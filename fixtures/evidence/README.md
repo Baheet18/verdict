@@ -1,5 +1,7 @@
 # Published evidence bundles
 
-Files are named `<sha256(evidence)>.json` where `evidence` is the exact
-string embedded in the VERDICT/1 request (after the header line).
-`commit_evidence` on-chain stores this hash; anyone can recompute it from these files.
+Content-addressed: `fixtures/evidence/<sha256(evidence)>.json`.
+See `MANIFEST.json` for the index (source URLs + hashes).
+
+Fetched **outside the TEE**. The contract binds `evidence_bundle_hash` via `commit_evidence`.
+Curated disputed subset (round 5) aims for 1 official + 2 reputable reports per market; markets that could not meet that bar were skipped, not fabricated.

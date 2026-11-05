@@ -194,7 +194,7 @@ def call(m, model, prices):
     if p.exists() and json.loads(p.read_text()).get("ok"):
         return json.loads(p.read_text()), 0.0
     ev = json.loads((OUT / "evidence" / f"{m['id']}.json").read_text())
-    body = build_request(model, ev["market_id"], 0, ev["rules"], ev["evidence"], max_tokens=6000)
+    body = build_request(model, ev["market_id"], 0, ev["rules"], ev["evidence"])
     err = None
     for i in range(4):
         try:

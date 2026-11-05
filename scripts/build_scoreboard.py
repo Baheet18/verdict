@@ -12,6 +12,9 @@ CACHE = ROOT / "fixtures" / "scoreboard_cache"
 OUT_HTML = ROOT / "scoreboard" / "index.html"
 BENCH2 = ROOT / "out" / "bench2" / "summary.json"
 DISPUTED = ROOT / "out" / "bench_disputed" / "summary.json"
+CURATED = ROOT / "out" / "bench_disputed_curated" / "summary.json"
+LINT_CTRL = ROOT / "out" / "lint_control" / "summary.json"
+CURATED_DOC = ROOT / "docs" / "BENCHMARK_DISPUTED_CURATED.md"
 DOCS_BENCH = ROOT / "docs" / "BENCHMARK.md"
 
 def load_cache_runs():
@@ -73,8 +76,30 @@ def main():
   <p>Markets: {dj.get('markets')} · Settled: {dj.get('panel_settled')} ·
      Agree UMA: {dj.get('panel_settled_agree_uma')} · Disagree: {dj.get('panel_settled_disagree_uma')} ·
      Escalated: {dj.get('escalated')} · Cost USD: {dj.get('cost_usd')}</p>
-  <p>Rule linter flagged {lint.get('flagged','?')}/{lint.get('markets','?')} of these markets before launch (heuristics v1.0).</p>
+  <p>Rule linter flagged 27/34 disputed (matched non-disputed control 26/34 — gap not marketed; see base-rate section).</p>
 </section>"""
+
+    curated_html = ""
+    if CURATED.exists():
+        cj = json.loads(CURATED.read_text())
+        curated_html = f"""<section>
+  <h2>Curated multi-source disputed subset</h2>
+  <p>Markets curated: {cj.get('n_curated')} · Settles with evidence: {cj.get('settles_with_evidence')} ·
+     Abstains with evidence: {cj.get('abstains_with_evidence')} · Invented answers: {cj.get('invented_answers')} ·
+     Cost USD: {cj.get('cost_usd')}</p>
+  <p class="note">Official + 2 reputable reports required; skips if fetch bar not met. Source: docs/BENCHMARK_DISPUTED_CURATED.md.</p>
+</section>"""
+    ctrl_html = ""
+    if LINT_CTRL.exists():
+        lj = json.loads(LINT_CTRL.read_text())
+        ctrl_html = f"""<section>
+  <h2>Rule linter base rate</h2>
+  <p>Disputed flagged: {lj.get('disputed_flagged')}/{lj.get('disputed_n')} ·
+     Matched non-disputed control: {lj.get('control_flagged')}/{lj.get('control_n')} ·
+     Gap: {lj.get('gap'):.3f} · Use as headline: {lj.get('use_in_readme')}</p>
+  <p class="note">Selection fixed before lint outcomes (`out/lint_control/selection.json`). Gap &lt; 0.10 → not marketed.</p>
+</section>"""
+    
     page = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,6 +118,8 @@ code{{font-size:.85rem}} section{{margin:1.5rem 0;padding:1rem;background:#fafaf
 <p class="meta">Rebuilt from <code>fixtures/scoreboard_cache/</code> at {html.escape(now)}. Offline — no API key required. Only votes labeled <strong>Hardware + host stack verified</strong> are listed.</p>
 {b2_html}
 {dj_html}
+{curated_html}
+{ctrl_html}
 <section>
   <h2>Cached verified votes ({len(runs)})</h2>
   <table>

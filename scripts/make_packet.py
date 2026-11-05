@@ -62,8 +62,10 @@ def rust_fn(name):
     return "(unclosed)"
 
 def py_fn(path, name):
+    """Extract a top-level def. Lookahead accepts next top-level OR end-of-file
+    (EOF used to print '(missing)' when the function was the last def in the file)."""
     src = rd(path)
-    m = re.search(rf"^def {name}\(.*?(?=^\S)", src, re.S | re.M)
+    m = re.search(rf"^def {name}\(.*?(?=^\S|\Z)", src, re.S | re.M)
     return m.group(0).rstrip() if m else "(missing)"
 
 tests = rd("contract/src/tests.rs")
