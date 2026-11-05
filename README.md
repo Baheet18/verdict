@@ -1,10 +1,13 @@
 # Verdict — TEE-attested prediction-market resolution on NEAR
 
+## Why this exists
+Bloomberg (2026-05-26) reported that about nine wallets accounted for roughly half of UMA dispute votes on Polymarket; the Wall Street Journal (May 2026) reported that in about one in five disputes at least one voter had a stake in the outcome. Polymarket Protocol V2 (announced 2026-10-05) lets each market choose its oracle path. Verdict is a hardware-attested, multi-model option for that slot — not a claim that any whale is corrupt.
+
 ## Pitch headline
 **Clear markets:** auto-settled at ~$0.002/market, **107/107** agreed with UMA (post-cutoff sports), hardware-attested. Request parameters are allowlisted on-chain (no `logit_bias` / guided decoding); a registered relayer still chooses and commits evidence — that remaining trust is listed under Limits, so “unsteerable” here means *request-parameter* steering is blocked, not that the relayer is trustless.
 **Unclear markets:** escalated to humans, **0 invented answers**.
 **TOO_EARLY** is first-class (Bitquery: **243 of 470** Polymarket/UMA disputes in 9 Sep–7 Oct 2026 ended “too early” — https://bitquery.io/investigations/who-decides-polymarket-disputes).
-**Hand-curated disputed (answer-bearing sources):** 8 markets · settled 8 · agree UMA 7 · disagree UMA 1 (Visa growth band; panel+human NO vs UMA YES) · escalated 0 · invented 0. Same IDs with thin rules-only evidence: 8/8 escalated. See `docs/BENCHMARK_DISPUTED_HAND.md`.
+**Hand-curated disputed (answer-bearing sources):** 8 markets · settled 8 · agree UMA 7 · disagree UMA 1 (Visa growth band; panel + curator (AI) NO vs UMA YES; see docs/VISA_CASE.md) · escalated 0 · invented 0. Same IDs with thin rules-only evidence: 8/8 escalated. See `docs/BENCHMARK_DISPUTED_HAND.md`.
 
 
 ## Trust labels
@@ -33,14 +36,14 @@ Each signed text `model:sha256(req):sha256(resp)` is stored in `used_signed`; a 
 Sources are fetched OUTSIDE the TEE, snapshotted (url, fetched_at, sha256, text) and embedded in the request; integrity is the snapshot hash inside the signed request, not a TEE-side fetch. Sports statistics need 2+ independent sources; a single-source stat line (e.g. an all-zero ESPN line) is treated as missing data → AMBIGUOUS.
 
 ## Evidence commit
-`commit_evidence(market_id, round, evidence_bundle_hash, evidence_uri)` is callable only by a registered relayer or the owner, and only after `block_timestamp >= deadline_ns`. Owner may replace the commit while votes are empty; once any vote is cast the commit is frozen. `submit_verdict` is also relayer/owner-only (defense in depth — same trust surface as evidence choice) and requires the request's evidence hash to equal the committed hash. Bundles are published content-addressed under `fixtures/evidence/<sha256>.json` (see `MANIFEST.json`).
+`commit_evidence(market_id, round, evidence_bundle_hash, evidence_uri)` is callable only by a registered relayer or the owner, and only after `block_timestamp >= deadline_ns`. Owner may replace the commit while votes are empty; once any vote is cast the commit is frozen. `submit_verdict` is also relayer/owner-only (defense in depth — same trust surface as evidence choice) and requires the request's evidence hash to equal the committed hash. Bundles are published content-addressed under `fixtures/evidence/<sha256>.json` (see `MANIFEST.json`). **`evidence_uri` must be a commit-SHA permalink** (`python scripts/evidence_uri.py <path> --sha <commit>` after a human-approved push that includes the file) — never `/master/` / `/main/`, and never a fabricated SHA. Until that push, URIs stay `PENDING_COMMIT_SHA://…` (origin/master tip `f96954b` lacks these evidence files).
 
 ## Request-key allowlist (round 5)
-`check_request` accepts **exactly** top-level keys `{model, messages, temperature, seed}` and each message `{role, content}`. Extra keys (`logit_bias`, `guided_choice`, `guided_regex`, `response_format`, `structured_outputs`, `tools`, `tool_choice`, `stop`, `n`, `top_p`, …) are rejected so a committed evidence+header cannot be steered into a forced YES via sampling / guided-decoding params. `max_tokens` is intentionally omitted.
+`check_request` accepts **exactly** top-level keys `{model, messages, temperature, seed}` and each message `{role, content}`. Extra keys (`logit_bias`, `guided_choice`, `guided_regex`, `response_format`, `structured_outputs`, `tools`, `tool_choice`, `stop`, `n`, `top_p`, …) are rejected so a committed evidence+header cannot be steered into a forced YES via sampling / guided-decoding params. `max_tokens` is intentionally omitted. Duplicate JSON object keys are rejected; **any backslash inside an object key** is also rejected (blocks `\u0074emperature`-style escapes that serde would normalize onto an allowlisted key).
 
 ## Disputed-market evidence
 - **Thin / JS-shell fetches** (34 markets, and an earlier “curated” attempt): panel abstained — expected when snapshots lack the resolution fact. See `docs/BENCHMARK_DISPUTED.md` / `docs/BENCHMARK_DISPUTED_CURATED.md`.
-- **Hand-curated answer-bearing set (round 6):** 8 markets with human-extracted official/Wikipedia + 2 report texts, `answer_present:true` checked **before** the panel, archive.org noted only when reachable. Panel: **8 settled / 7 agree UMA / 1 disagree UMA / 0 escalate / 0 invented**. Same IDs on thin evidence: 8/8 escalate. Column name: **answer-bearing sources**. Details: `docs/BENCHMARK_DISPUTED_HAND.md` + `fixtures/evidence_hand/`.
+- **Hand-curated answer-bearing set (round 6):** 8 markets with curator-(AI)-extracted official/Wikipedia + 2 report texts, `answer_present:true` checked by curator (AI) **before** the panel (Baheet has not personally verified each row), archive.org noted only when reachable. Panel: **8 settled / 7 agree UMA / 1 disagree UMA / 0 escalate / 0 invented**. Same IDs on thin evidence: 8/8 escalate. Column name: **answer-bearing sources**. Details: `docs/BENCHMARK_DISPUTED_HAND.md` + `fixtures/evidence_hand/`. Visa disagreement: `docs/VISA_CASE.md`. Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
 
 ## Rule authoring checklist (optional)
 `scripts/rule_linter.py` is an **optional rule-authoring checklist** (regex/heuristics, no model). It surfaces vague wording, missing sources, and deadline gaps while drafting rules.

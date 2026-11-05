@@ -60,6 +60,7 @@ def main():
             f"<td>{html.escape(str(r.get('answer_bearing_sources')))}</td>"
             f"<td><code>{html.escape(r['panel'])}</code></td>"
             f"<td><code>{html.escape(r['uma'])}</code></td>"
+            f"<td><code>{html.escape(str(r.get('curator_ai') or r.get('expected_human') or ''))}</code></td>"
             f"<td><code>{html.escape(r.get('panel_thin_rules_only') or '')}</code></td>"
             f"<td><a href='../fixtures/evidence_hand/{html.escape(r['evidence_sha256'])}.json'>bundle</a></td></tr>"
             for r in hand.get("rows", [])
@@ -69,8 +70,8 @@ def main():
   <p>Settled {hand.get('settled')}/{hand.get('n')} · Agree UMA {hand.get('agree_uma')} · Disagree UMA {hand.get('disagree_uma')} ·
      Escalated {hand.get('escalated')} · Invented answers {hand.get('invented_answers')} ·
      Same IDs thin-evidence escalated {hand.get('thin_same_ids_escalated')}/{hand.get('n')}</p>
-  <p class="note">Human-checked <code>answer_present:true</code> BEFORE the panel. Column = answer-bearing sources (not JS shells).</p>
-  <table><thead><tr><th>ID</th><th>Question</th><th>Answer-bearing sources</th><th>Panel</th><th>UMA</th><th>Thin</th><th>Evidence</th></tr></thead>
+  <p class="note">Curator (AI)-checked <code>answer_present:true</code> BEFORE the panel (Baheet has not personally verified each row). Column = answer-bearing sources (not JS shells). Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.</p>
+  <table><thead><tr><th>ID</th><th>Question</th><th>Answer-bearing sources</th><th>Panel</th><th>UMA</th><th>curator (AI)</th><th>Thin</th><th>Evidence</th></tr></thead>
   <tbody>{rows_h}</tbody></table>
 </section>"""
 
@@ -120,12 +121,14 @@ code {{ font-size: .9em; }}
 
 <section>
   <h2>Headline</h2>
+  <p class="note">Why: Bloomberg 2026-05-26 — ~9 wallets ~half of UMA dispute votes; WSJ May 2026 — ~1 in 5 disputes had a voter with a stake; Polymarket Protocol V2 2026-10-05 — each market can choose its oracle. No corruption claim.</p>
   <p class="headline"><strong>Clear markets:</strong> auto-settled at ~${avg}/market, <strong>107/107</strong> agreed with UMA (post-cutoff sports), hardware-attested.
   Request params are allowlisted (no logit_bias / guided decoding); a registered relayer still chooses and commits evidence — see README Limits.
   <strong>Unclear markets:</strong> escalated to humans, <strong>0 invented answers</strong>.
   <strong>TOO_EARLY</strong> is first-class
   (Bitquery: 243 of 470 Polymarket/UMA disputes in 9 Sep–7 Oct 2026 ended “too early” —
-  <a href="https://bitquery.io/investigations/who-decides-polymarket-disputes">source</a>).</p>
+  <a href="https://bitquery.io/investigations/who-decides-polymarket-disputes">source</a>).
+  Visa disagreement: <a href="../docs/VISA_CASE.md">docs/VISA_CASE.md</a> (neutral).</p>
 </section>
 
 <section>

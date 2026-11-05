@@ -1,94 +1,94 @@
 {
-  "polymarket_id": "5969230",
-  "market_id": 5969230,
-  "question": "Fukuoka SoftBank Hawks vs. Yokohama BayStars",
-  "rules": "In the upcoming NPB game, scheduled for October 27 at 5:00AM ET:\nIf the Fukuoka SoftBank Hawks win, the market will resolve to \"Fukuoka SoftBank Hawks\".\nIf the Yokohama BayStars win, the market will resolve to \"Yokohama BayStars\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, or ends in a tie, this market will resolve 50-50.\n\nThe primary resolution source will be official information from the NPB. A consensus of credible reporting may also be used.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Fukuoka SoftBank Hawks\"; answer NO if it resolves to \"Yokohama BayStars\".",
-  "market_end": "2026-11-03T09:00:00Z",
-  "outcomes": [
-    "Fukuoka SoftBank Hawks",
-    "Yokohama BayStars"
-  ],
-  "uma": "YES",
-  "expected_panel_from_human_read": "YES",
-  "evidence": "{\"market_end\": \"2026-11-03T09:00:00Z\", \"question\": \"Fukuoka SoftBank Hawks vs. Yokohama BayStars\", \"rules\": \"In the upcoming NPB game, scheduled for October 27 at 5:00AM ET:\\nIf the Fukuoka SoftBank Hawks win, the market will resolve to \\\"Fukuoka SoftBank Hawks\\\".\\nIf the Yokohama BayStars win, the market will resolve to \\\"Yokohama BayStars\\\".\\nIf the game is postponed, this market will remain open until the game has been completed.\\nIf the game is canceled entirely, with no make-up game, or ends in a tie, this market will resolve 50-50.\\n\\nThe primary resolution source will be official information from the NPB. A consensus of credible reporting may also be used.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Fukuoka SoftBank Hawks\\\"; answer NO if it resolves to \\\"Yokohama BayStars\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"3697020067bd4f8875def9ca78cb46f7e47aa373f94841c5959ca02d4e89756b\", \"text\": \"In the upcoming NPB game, scheduled for October 27 at 5:00AM ET:\\nIf the Fukuoka SoftBank Hawks win, the market will resolve to \\\"Fukuoka SoftBank Hawks\\\".\\nIf the Yokohama BayStars win, the market will resolve to \\\"Yokohama BayStars\\\".\\nIf the game is postponed, this market will remain open until the game has been completed.\\nIf the game is canceled entirely, with no make-up game, or ends in a tie, this market will resolve 50-50.\\n\\nThe primary resolution source will be official information from the NPB. A consensus of credible reporting may also be used.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Fukuoka SoftBank Hawks\\\"; answer NO if it resolves to \\\"Yokohama BayStars\\\".\", \"url\": \"polymarket:market:5969230:description\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"5a4564e48839fa5ec1f03f2ed868470bfa967714452b71036054b6a747484796\", \"text\": \"2026 SMBC Japan Series results. Game 3: October 27 (Tue) at Mizuho PayPay. Yokohama DeNA 1, Fukuoka SoftBank 2 (extra innings 10). Winning pitcher Sugiyama; walk-off home run Masaki. SoftBank leads series.\", \"url\": \"https://npb.jp/bis/scores/nipponseries/linescore2026.html\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"9e66b18e46d5208130d1ca9224d720d6bd9c1202361b5cd9e3f32d98038d9859\", \"text\": \"The Fukuoka SoftBank Hawks received their toughest test of the year in the Japan Series and, as usual, passed with flying colors. The Hawks rallied from two runs down to beat the Yokohama DeNA BayStars 4-2 in Game 4 on Wednesday night to complete a four-game sweep and secure their second straight title. Earlier SoftBank also won Game 3 in Fukuoka.\", \"url\": \"https://www.japantimes.co.jp/sports/2026/10/29/baseball/hawks-sweep-japan-series/\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"ebf282bf4dd83cd102df44acce7b63944c3986dee9d37442fa2e3a0691a3ae09\", \"text\": \"プロ野球のSMBC日本シリーズ2026は28日、福岡市のみずほペイペイドームで第4戦があり、福岡ソフトバンクホークスが横浜DeNAベイスターズを4―2で下し、4連勝で2年連続13度目の日本一に輝いた。\", \"url\": \"https://insight.asahi.com/sp/article/ASVBX3PXDVBXUTQP00TM.php\"}]}",
-  "evidence_sha256": "bd3e5e98d5a04c1c18817d96525308c7996741c94a40dcc420dcf78f8672dff7",
-  "answer_bearing_sources": 3,
-  "answer_present_all": true,
-  "human_checked_before_panel": true,
-  "snapshots": [
-    {
-      "url": "polymarket:market:5969230:description",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "3697020067bd4f8875def9ca78cb46f7e47aa373f94841c5959ca02d4e89756b",
-      "text": "In the upcoming NPB game, scheduled for October 27 at 5:00AM ET:\nIf the Fukuoka SoftBank Hawks win, the market will resolve to \"Fukuoka SoftBank Hawks\".\nIf the Yokohama BayStars win, the market will resolve to \"Yokohama BayStars\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, or ends in a tie, this market will resolve 50-50.\n\nThe primary resolution source will be official information from the NPB. A consensus of credible reporting may also be used.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Fukuoka SoftBank Hawks\"; answer NO if it resolves to \"Yokohama BayStars\".",
-      "role": "rules",
-      "note": "Market rules + YES/NO mapping; NOT an answer-bearing fact source.",
-      "answer_present": false
-    },
-    {
-      "url": "https://npb.jp/bis/scores/nipponseries/linescore2026.html",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "5a4564e48839fa5ec1f03f2ed868470bfa967714452b71036054b6a747484796",
-      "text": "2026 SMBC Japan Series results. Game 3: October 27 (Tue) at Mizuho PayPay. Yokohama DeNA 1, Fukuoka SoftBank 2 (extra innings 10). Winning pitcher Sugiyama; walk-off home run Masaki. SoftBank leads series.",
-      "role": "official",
-      "note": "NPB Japan Series 2026 linescores",
-      "answer_present": true,
-      "answer_note": "Official NPB: SoftBank beat BayStars/DeNA 2-1 on Oct 27.",
-      "archive_url": null,
-      "archive_available": false,
-      "archive_note": "no closest snapshot from wayback available API"
-    },
-    {
-      "url": "https://www.japantimes.co.jp/sports/2026/10/29/baseball/hawks-sweep-japan-series/",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "9e66b18e46d5208130d1ca9224d720d6bd9c1202361b5cd9e3f32d98038d9859",
-      "text": "The Fukuoka SoftBank Hawks received their toughest test of the year in the Japan Series and, as usual, passed with flying colors. The Hawks rallied from two runs down to beat the Yokohama DeNA BayStars 4-2 in Game 4 on Wednesday night to complete a four-game sweep and secure their second straight title. Earlier SoftBank also won Game 3 in Fukuoka.",
-      "role": "report",
-      "note": "Japan Times: Hawks complete sweep against BayStars",
-      "answer_present": true,
-      "answer_note": "Confirms SoftBank beat BayStars including Fukuoka Game 3.",
-      "archive_url": null,
-      "archive_available": false,
-      "archive_note": "no closest snapshot from wayback available API"
-    },
-    {
-      "url": "https://insight.asahi.com/sp/article/ASVBX3PXDVBXUTQP00TM.php",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "ebf282bf4dd83cd102df44acce7b63944c3986dee9d37442fa2e3a0691a3ae09",
-      "text": "プロ野球のSMBC日本シリーズ2026は28日、福岡市のみずほペイペイドームで第4戦があり、福岡ソフトバンクホークスが横浜DeNAベイスターズを4―2で下し、4連勝で2年連続13度目の日本一に輝いた。",
-      "role": "report",
-      "note": "Asahi: SoftBank consecutive Japan Series champions",
-      "answer_present": true,
-      "answer_note": "Asahi: SoftBank swept DeNA BayStars in 2026 Japan Series.",
-      "archive_url": null,
-      "archive_available": false,
-      "archive_note": "no closest snapshot from wayback available API"
-    }
-  ],
-  "archives": [
-    {
-      "url": "https://npb.jp/bis/scores/nipponseries/linescore2026.html",
-      "archive_available": false,
-      "archive_url": null,
-      "note": "no closest snapshot from wayback available API",
-      "checked_at": "2026-11-05T11:54:40Z"
-    },
-    {
-      "url": "https://www.japantimes.co.jp/sports/2026/10/29/baseball/hawks-sweep-japan-series/",
-      "archive_available": false,
-      "archive_url": null,
-      "note": "no closest snapshot from wayback available API",
-      "checked_at": "2026-11-05T11:54:40Z"
-    },
-    {
-      "url": "https://insight.asahi.com/sp/article/ASVBX3PXDVBXUTQP00TM.php",
-      "archive_available": false,
-      "archive_url": null,
-      "note": "no closest snapshot from wayback available API",
-      "checked_at": "2026-11-05T11:54:40Z"
-    }
-  ],
-  "curation": "hand_round6",
-  "curated_at": "2026-11-05T11:54:40Z",
-  "disclaimer": "Answer-bearing texts were hand-extracted from the cited pages for reproducibility. Archive.org links are only included when the availability API returned a snapshot; otherwise marked unavailable. Fetched/compiled outside the TEE."
+ "polymarket_id": "5969230",
+ "market_id": 5969230,
+ "question": "Fukuoka SoftBank Hawks vs. Yokohama BayStars",
+ "rules": "In the upcoming NPB game, scheduled for October 27 at 5:00AM ET:\nIf the Fukuoka SoftBank Hawks win, the market will resolve to \"Fukuoka SoftBank Hawks\".\nIf the Yokohama BayStars win, the market will resolve to \"Yokohama BayStars\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, or ends in a tie, this market will resolve 50-50.\n\nThe primary resolution source will be official information from the NPB. A consensus of credible reporting may also be used.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Fukuoka SoftBank Hawks\"; answer NO if it resolves to \"Yokohama BayStars\".",
+ "market_end": "2026-11-03T09:00:00Z",
+ "outcomes": [
+  "Fukuoka SoftBank Hawks",
+  "Yokohama BayStars"
+ ],
+ "uma": "YES",
+ "evidence": "{\"market_end\": \"2026-11-03T09:00:00Z\", \"question\": \"Fukuoka SoftBank Hawks vs. Yokohama BayStars\", \"rules\": \"In the upcoming NPB game, scheduled for October 27 at 5:00AM ET:\\nIf the Fukuoka SoftBank Hawks win, the market will resolve to \\\"Fukuoka SoftBank Hawks\\\".\\nIf the Yokohama BayStars win, the market will resolve to \\\"Yokohama BayStars\\\".\\nIf the game is postponed, this market will remain open until the game has been completed.\\nIf the game is canceled entirely, with no make-up game, or ends in a tie, this market will resolve 50-50.\\n\\nThe primary resolution source will be official information from the NPB. A consensus of credible reporting may also be used.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Fukuoka SoftBank Hawks\\\"; answer NO if it resolves to \\\"Yokohama BayStars\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"3697020067bd4f8875def9ca78cb46f7e47aa373f94841c5959ca02d4e89756b\", \"text\": \"In the upcoming NPB game, scheduled for October 27 at 5:00AM ET:\\nIf the Fukuoka SoftBank Hawks win, the market will resolve to \\\"Fukuoka SoftBank Hawks\\\".\\nIf the Yokohama BayStars win, the market will resolve to \\\"Yokohama BayStars\\\".\\nIf the game is postponed, this market will remain open until the game has been completed.\\nIf the game is canceled entirely, with no make-up game, or ends in a tie, this market will resolve 50-50.\\n\\nThe primary resolution source will be official information from the NPB. A consensus of credible reporting may also be used.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Fukuoka SoftBank Hawks\\\"; answer NO if it resolves to \\\"Yokohama BayStars\\\".\", \"url\": \"polymarket:market:5969230:description\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"5a4564e48839fa5ec1f03f2ed868470bfa967714452b71036054b6a747484796\", \"text\": \"2026 SMBC Japan Series results. Game 3: October 27 (Tue) at Mizuho PayPay. Yokohama DeNA 1, Fukuoka SoftBank 2 (extra innings 10). Winning pitcher Sugiyama; walk-off home run Masaki. SoftBank leads series.\", \"url\": \"https://npb.jp/bis/scores/nipponseries/linescore2026.html\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"9e66b18e46d5208130d1ca9224d720d6bd9c1202361b5cd9e3f32d98038d9859\", \"text\": \"The Fukuoka SoftBank Hawks received their toughest test of the year in the Japan Series and, as usual, passed with flying colors. The Hawks rallied from two runs down to beat the Yokohama DeNA BayStars 4-2 in Game 4 on Wednesday night to complete a four-game sweep and secure their second straight title. Earlier SoftBank also won Game 3 in Fukuoka.\", \"url\": \"https://www.japantimes.co.jp/sports/2026/10/29/baseball/hawks-sweep-japan-series/\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"ebf282bf4dd83cd102df44acce7b63944c3986dee9d37442fa2e3a0691a3ae09\", \"text\": \"\u30d7\u30ed\u91ce\u7403\u306eSMBC\u65e5\u672c\u30b7\u30ea\u30fc\u30ba2026\u306f28\u65e5\u3001\u798f\u5ca1\u5e02\u306e\u307f\u305a\u307b\u30da\u30a4\u30da\u30a4\u30c9\u30fc\u30e0\u3067\u7b2c4\u6226\u304c\u3042\u308a\u3001\u798f\u5ca1\u30bd\u30d5\u30c8\u30d0\u30f3\u30af\u30db\u30fc\u30af\u30b9\u304c\u6a2a\u6d5cDeNA\u30d9\u30a4\u30b9\u30bf\u30fc\u30ba\u30924\u20152\u3067\u4e0b\u3057\u30014\u9023\u52dd\u30672\u5e74\u9023\u7d9a13\u5ea6\u76ee\u306e\u65e5\u672c\u4e00\u306b\u8f1d\u3044\u305f\u3002\", \"url\": \"https://insight.asahi.com/sp/article/ASVBX3PXDVBXUTQP00TM.php\"}]}",
+ "evidence_sha256": "bd3e5e98d5a04c1c18817d96525308c7996741c94a40dcc420dcf78f8672dff7",
+ "answer_bearing_sources": 3,
+ "answer_present_all": true,
+ "snapshots": [
+  {
+   "url": "polymarket:market:5969230:description",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "3697020067bd4f8875def9ca78cb46f7e47aa373f94841c5959ca02d4e89756b",
+   "text": "In the upcoming NPB game, scheduled for October 27 at 5:00AM ET:\nIf the Fukuoka SoftBank Hawks win, the market will resolve to \"Fukuoka SoftBank Hawks\".\nIf the Yokohama BayStars win, the market will resolve to \"Yokohama BayStars\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, or ends in a tie, this market will resolve 50-50.\n\nThe primary resolution source will be official information from the NPB. A consensus of credible reporting may also be used.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Fukuoka SoftBank Hawks\"; answer NO if it resolves to \"Yokohama BayStars\".",
+   "role": "rules",
+   "note": "Market rules + YES/NO mapping; NOT an answer-bearing fact source.",
+   "answer_present": false
+  },
+  {
+   "url": "https://npb.jp/bis/scores/nipponseries/linescore2026.html",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "5a4564e48839fa5ec1f03f2ed868470bfa967714452b71036054b6a747484796",
+   "text": "2026 SMBC Japan Series results. Game 3: October 27 (Tue) at Mizuho PayPay. Yokohama DeNA 1, Fukuoka SoftBank 2 (extra innings 10). Winning pitcher Sugiyama; walk-off home run Masaki. SoftBank leads series.",
+   "role": "official",
+   "note": "NPB Japan Series 2026 linescores",
+   "answer_present": true,
+   "answer_note": "Official NPB: SoftBank beat BayStars/DeNA 2-1 on Oct 27.",
+   "archive_url": null,
+   "archive_available": false,
+   "archive_note": "no closest snapshot from wayback available API"
+  },
+  {
+   "url": "https://www.japantimes.co.jp/sports/2026/10/29/baseball/hawks-sweep-japan-series/",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "9e66b18e46d5208130d1ca9224d720d6bd9c1202361b5cd9e3f32d98038d9859",
+   "text": "The Fukuoka SoftBank Hawks received their toughest test of the year in the Japan Series and, as usual, passed with flying colors. The Hawks rallied from two runs down to beat the Yokohama DeNA BayStars 4-2 in Game 4 on Wednesday night to complete a four-game sweep and secure their second straight title. Earlier SoftBank also won Game 3 in Fukuoka.",
+   "role": "report",
+   "note": "Japan Times: Hawks complete sweep against BayStars",
+   "answer_present": true,
+   "answer_note": "Confirms SoftBank beat BayStars including Fukuoka Game 3.",
+   "archive_url": null,
+   "archive_available": false,
+   "archive_note": "no closest snapshot from wayback available API"
+  },
+  {
+   "url": "https://insight.asahi.com/sp/article/ASVBX3PXDVBXUTQP00TM.php",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "ebf282bf4dd83cd102df44acce7b63944c3986dee9d37442fa2e3a0691a3ae09",
+   "text": "\u30d7\u30ed\u91ce\u7403\u306eSMBC\u65e5\u672c\u30b7\u30ea\u30fc\u30ba2026\u306f28\u65e5\u3001\u798f\u5ca1\u5e02\u306e\u307f\u305a\u307b\u30da\u30a4\u30da\u30a4\u30c9\u30fc\u30e0\u3067\u7b2c4\u6226\u304c\u3042\u308a\u3001\u798f\u5ca1\u30bd\u30d5\u30c8\u30d0\u30f3\u30af\u30db\u30fc\u30af\u30b9\u304c\u6a2a\u6d5cDeNA\u30d9\u30a4\u30b9\u30bf\u30fc\u30ba\u30924\u20152\u3067\u4e0b\u3057\u30014\u9023\u52dd\u30672\u5e74\u9023\u7d9a13\u5ea6\u76ee\u306e\u65e5\u672c\u4e00\u306b\u8f1d\u3044\u305f\u3002",
+   "role": "report",
+   "note": "Asahi: SoftBank consecutive Japan Series champions",
+   "answer_present": true,
+   "answer_note": "Asahi: SoftBank swept DeNA BayStars in 2026 Japan Series.",
+   "archive_url": null,
+   "archive_available": false,
+   "archive_note": "no closest snapshot from wayback available API"
+  }
+ ],
+ "archives": [
+  {
+   "url": "https://npb.jp/bis/scores/nipponseries/linescore2026.html",
+   "archive_available": false,
+   "archive_url": null,
+   "note": "no closest snapshot from wayback available API",
+   "checked_at": "2026-11-05T11:54:40Z"
+  },
+  {
+   "url": "https://www.japantimes.co.jp/sports/2026/10/29/baseball/hawks-sweep-japan-series/",
+   "archive_available": false,
+   "archive_url": null,
+   "note": "no closest snapshot from wayback available API",
+   "checked_at": "2026-11-05T11:54:40Z"
+  },
+  {
+   "url": "https://insight.asahi.com/sp/article/ASVBX3PXDVBXUTQP00TM.php",
+   "archive_available": false,
+   "archive_url": null,
+   "note": "no closest snapshot from wayback available API",
+   "checked_at": "2026-11-05T11:54:40Z"
+  }
+ ],
+ "curation": "hand_round6",
+ "curated_at": "2026-11-05T11:54:40Z",
+ "disclaimer": "Answer-bearing texts were hand-extracted from the cited pages for reproducibility. Archive.org links are only included when the availability API returned a snapshot; otherwise marked unavailable. Fetched/compiled outside the TEE.",
+ "curator_ai_checked_before_panel": true,
+ "expected_panel_from_curator_ai_read": "YES"
 }

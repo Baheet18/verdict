@@ -20,16 +20,18 @@ code { font-size: .9em; }
 </head>
 <body>
 <h1>Verdict scoreboard</h1>
-<p class="note">Rebuilt 2026-11-05 13:08 WAT from <code>fixtures/scoreboard_cache/</code> (549 sanitized votes). No API calls.</p>
+<p class="note">Rebuilt 2026-11-05 13:51 WAT from <code>fixtures/scoreboard_cache/</code> (549 sanitized votes). No API calls.</p>
 
 <section>
   <h2>Headline</h2>
+  <p class="note">Why: Bloomberg 2026-05-26 — ~9 wallets ~half of UMA dispute votes; WSJ May 2026 — ~1 in 5 disputes had a voter with a stake; Polymarket Protocol V2 2026-10-05 — each market can choose its oracle. No corruption claim.</p>
   <p class="headline"><strong>Clear markets:</strong> auto-settled at ~$0.0022/market, <strong>107/107</strong> agreed with UMA (post-cutoff sports), hardware-attested.
   Request params are allowlisted (no logit_bias / guided decoding); a registered relayer still chooses and commits evidence — see README Limits.
   <strong>Unclear markets:</strong> escalated to humans, <strong>0 invented answers</strong>.
   <strong>TOO_EARLY</strong> is first-class
   (Bitquery: 243 of 470 Polymarket/UMA disputes in 9 Sep–7 Oct 2026 ended “too early” —
-  <a href="https://bitquery.io/investigations/who-decides-polymarket-disputes">source</a>).</p>
+  <a href="https://bitquery.io/investigations/who-decides-polymarket-disputes">source</a>).
+  Visa disagreement: <a href="../docs/VISA_CASE.md">docs/VISA_CASE.md</a> (neutral).</p>
 </section>
 
 <section>
@@ -57,9 +59,9 @@ code { font-size: .9em; }
   <p>Settled 8/8 · Agree UMA 7 · Disagree UMA 1 ·
      Escalated 0 · Invented answers 0 ·
      Same IDs thin-evidence escalated 8/8</p>
-  <p class="note">Human-checked <code>answer_present:true</code> BEFORE the panel. Column = answer-bearing sources (not JS shells).</p>
-  <table><thead><tr><th>ID</th><th>Question</th><th>Answer-bearing sources</th><th>Panel</th><th>UMA</th><th>Thin</th><th>Evidence</th></tr></thead>
-  <tbody><tr><td>1235552</td><td>Will the Cleveland Guardians win the 2026 World Series?</td><td>3</td><td><code>NO</code></td><td><code>NO</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/42ef56dc2623c15c2c20fcf061579f206a14663a1e7e151f4cbb928bb5f3929c.json'>bundle</a></td></tr><tr><td>5969230</td><td>Fukuoka SoftBank Hawks vs. Yokohama BayStars</td><td>3</td><td><code>YES</code></td><td><code>YES</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/bd3e5e98d5a04c1c18817d96525308c7996741c94a40dcc420dcf78f8672dff7.json'>bundle</a></td></tr><tr><td>5285913</td><td>Blues vs. Red Wings: O/U 4.5</td><td>3</td><td><code>YES</code></td><td><code>YES</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/3ec7117940c1e7aee44b4a7fe6296dbdee0965cfa5b057a1dfc6e059da3a4a9a.json'>bundle</a></td></tr><tr><td>4588336</td><td>3Q Spread: Broncos (-3.5)</td><td>3</td><td><code>YES</code></td><td><code>YES</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/793698f3800c864b8f0e0dde8e44d2112212e557085df395295a836da42ec742.json'>bundle</a></td></tr><tr><td>1281165</td><td>Will the Democratic Party win the CA-34 House seat?</td><td>3</td><td><code>YES</code></td><td><code>YES</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/91e9a339c5f04466a57016206a6ef5aab34c54b26e54921d34b0051bc459d11b.json'>bundle</a></td></tr><tr><td>1284815</td><td>Will the Republican Party win the TX-02 House seat?</td><td>3</td><td><code>YES</code></td><td><code>YES</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/df36ca9bbeb5957600a22337733fabf310032b0287f4eb071a87e91de21f35f5.json'>bundle</a></td></tr><tr><td>5648379</td><td>Visa (V) Q4 payments volume growth (constant dollars) 9.5% to 10.5%?</td><td>3</td><td><code>NO</code></td><td><code>YES</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/7f4d2d3172e91c520650d58e752443de5764f5f690d38c832c672bd5f573dcdc.json'>bundle</a></td></tr><tr><td>5936743</td><td>Spread: FC Andorra (-2.5)</td><td>3</td><td><code>NO</code></td><td><code>NO</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/2771218d608952e05315bfc8746b25ee4e903514353f8139a0acc53c050a73ba.json'>bundle</a></td></tr></tbody></table>
+  <p class="note">Curator (AI)-checked <code>answer_present:true</code> BEFORE the panel (Baheet has not personally verified each row). Column = answer-bearing sources (not JS shells). Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.</p>
+  <table><thead><tr><th>ID</th><th>Question</th><th>Answer-bearing sources</th><th>Panel</th><th>UMA</th><th>curator (AI)</th><th>Thin</th><th>Evidence</th></tr></thead>
+  <tbody><tr><td>1235552</td><td>Will the Cleveland Guardians win the 2026 World Series?</td><td>3</td><td><code>NO</code></td><td><code>NO</code></td><td><code>NO</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/42ef56dc2623c15c2c20fcf061579f206a14663a1e7e151f4cbb928bb5f3929c.json'>bundle</a></td></tr><tr><td>5969230</td><td>Fukuoka SoftBank Hawks vs. Yokohama BayStars</td><td>3</td><td><code>YES</code></td><td><code>YES</code></td><td><code>YES</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/bd3e5e98d5a04c1c18817d96525308c7996741c94a40dcc420dcf78f8672dff7.json'>bundle</a></td></tr><tr><td>5285913</td><td>Blues vs. Red Wings: O/U 4.5</td><td>3</td><td><code>YES</code></td><td><code>YES</code></td><td><code>YES</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/3ec7117940c1e7aee44b4a7fe6296dbdee0965cfa5b057a1dfc6e059da3a4a9a.json'>bundle</a></td></tr><tr><td>4588336</td><td>3Q Spread: Broncos (-3.5)</td><td>3</td><td><code>YES</code></td><td><code>YES</code></td><td><code>YES</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/793698f3800c864b8f0e0dde8e44d2112212e557085df395295a836da42ec742.json'>bundle</a></td></tr><tr><td>1281165</td><td>Will the Democratic Party win the CA-34 House seat?</td><td>3</td><td><code>YES</code></td><td><code>YES</code></td><td><code>YES</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/91e9a339c5f04466a57016206a6ef5aab34c54b26e54921d34b0051bc459d11b.json'>bundle</a></td></tr><tr><td>1284815</td><td>Will the Republican Party win the TX-02 House seat?</td><td>3</td><td><code>YES</code></td><td><code>YES</code></td><td><code>YES</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/df36ca9bbeb5957600a22337733fabf310032b0287f4eb071a87e91de21f35f5.json'>bundle</a></td></tr><tr><td>5648379</td><td>Visa (V) Q4 payments volume growth (constant dollars) 9.5% to 10.5%?</td><td>3</td><td><code>NO</code></td><td><code>YES</code></td><td><code>NO</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/7f4d2d3172e91c520650d58e752443de5764f5f690d38c832c672bd5f573dcdc.json'>bundle</a></td></tr><tr><td>5936743</td><td>Spread: FC Andorra (-2.5)</td><td>3</td><td><code>NO</code></td><td><code>NO</code></td><td><code>NO</code></td><td><code>ESCALATE</code></td><td><a href='../fixtures/evidence_hand/2771218d608952e05315bfc8746b25ee4e903514353f8139a0acc53c050a73ba.json'>bundle</a></td></tr></tbody></table>
 </section>
 
 <section>
@@ -74,7 +76,7 @@ code { font-size: .9em; }
 </section>
 
 <section>
-  <h2>All cached votes (549)</h2>
+  <h2>All cached votes (550)</h2>
   <div class="filters">
     <strong>Filter set:</strong>
     <label><input type="checkbox" class="fset" value="sports_postcutoff_124" checked> sports 124</label>
@@ -123,6 +125,7 @@ code { font-size: .9em; }
 <tr data-set='disputed_curated_js_shells' data-label='Hardware + host stack verified'><td>disputed_curated_js_shells</td><td>608564</td><td>Qwen3.8-27B</td><td><code>TOO_EARLY</code></td><td class='ok'>Hardware + host stack verified</td><td>—</td><td><code>7193041697…</code></td></tr>
 <tr data-set='disputed_curated_js_shells' data-label='Hardware + host stack verified'><td>disputed_curated_js_shells</td><td>608564</td><td>DeepSeek-V4.1-Flash-1017</td><td><code>AMBIGUOUS</code></td><td class='ok'>Hardware + host stack verified</td><td>—</td><td><code>7193041697…</code></td></tr>
 <tr data-set='disputed_curated_js_shells' data-label='Hardware + host stack verified'><td>disputed_curated_js_shells</td><td>608564</td><td>glm-5.3-flash</td><td><code>TOO_EARLY</code></td><td class='ok'>Hardware + host stack verified</td><td>—</td><td><code>7193041697…</code></td></tr>
+<tr data-set='unknown' data-label='UNVERIFIED'><td>unknown</td><td>None</td><td></td><td><code></code></td><td class='warn'>UNVERIFIED</td><td>—</td><td>—</td></tr>
 <tr data-set='disputed_hand_answer_bearing' data-label='Hardware + host stack verified'><td>disputed_hand_answer_bearing</td><td>1235552</td><td>Qwen3.8-27B</td><td><code>NO</code></td><td class='ok'>Hardware + host stack verified</td><td>3</td><td><a href="../fixtures/evidence_hand/42ef56dc2623c15c2c20fcf061579f206a14663a1e7e151f4cbb928bb5f3929c.json">hand</a></td></tr>
 <tr data-set='disputed_hand_answer_bearing' data-label='Hardware + host stack verified'><td>disputed_hand_answer_bearing</td><td>1235552</td><td>DeepSeek-V4.1-Flash-1017</td><td><code>NO</code></td><td class='ok'>Hardware + host stack verified</td><td>3</td><td><a href="../fixtures/evidence_hand/42ef56dc2623c15c2c20fcf061579f206a14663a1e7e151f4cbb928bb5f3929c.json">hand</a></td></tr>
 <tr data-set='disputed_hand_answer_bearing' data-label='Hardware + host stack verified'><td>disputed_hand_answer_bearing</td><td>1235552</td><td>glm-5.3-flash</td><td><code>NO</code></td><td class='ok'>Hardware + host stack verified</td><td>3</td><td><a href="../fixtures/evidence_hand/42ef56dc2623c15c2c20fcf061579f206a14663a1e7e151f4cbb928bb5f3929c.json">hand</a></td></tr>

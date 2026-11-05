@@ -5,7 +5,7 @@
  "polymarket_id": "4329887",
  "evidence_sha256": "ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7",
  "evidence_path": "fixtures/evidence/ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7.json",
- "proposed_evidence_uri_after_push": "https://raw.githubusercontent.com/Baheet18/verdict/master/fixtures/evidence/ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7.json",
+ "proposed_evidence_uri_after_push": "PENDING_COMMIT_SHA://fixtures/evidence/ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7.json",
  "votes": [
   {
    "model": "Qwen/Qwen3.8-27B",
@@ -84,5 +84,6 @@
    ],
    "normalized_compose_hash": "cac94e2102327a4ca43554915e916c53a9d18fa15e6692e109a85e88ebe2abff"
   }
- ]
+ ],
+ "evidence_uri_note": "Do not use /master/. After a human-approved push that includes this evidence file, set proposed_evidence_uri_after_push via: python scripts/evidence_uri.py fixtures/evidence/ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7.json --sha <that_commit_sha>. Do not invent a SHA; origin/master tip f96954b lacks fixtures/evidence/."
 }

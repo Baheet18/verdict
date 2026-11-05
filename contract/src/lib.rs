@@ -193,6 +193,12 @@ fn reject_duplicate_json_keys(raw: &str) {
         loop {
             i = skip_ws(b, i);
             let (key, ni) = parse_string(b, i).map_err(|e| e.to_string())?;
+            // Reject any backslash in object keys. Escapes like \u0074emperature decode to
+            // "temperature" in serde_json while our raw key-set would treat them as distinct,
+            // letting an attacker smuggle a second copy of an allowlisted key.
+            if key.as_bytes().contains(&b'\\') {
+                return Err("JSON object key contains backslash".into());
+            }
             if !seen.insert(key.clone()) {
                 return Err(format!("duplicate JSON key: {key}"));
             }
@@ -217,7 +223,7 @@ fn reject_duplicate_json_keys(raw: &str) {
             }
         }
         Err(e) => {
-            if e.starts_with("duplicate JSON key:") {
+            if e.starts_with("duplicate JSON key:") || e == "JSON object key contains backslash" {
                 env::panic_str(&e);
             }
             env::panic_str("request_raw is not JSON");

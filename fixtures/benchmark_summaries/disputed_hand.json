@@ -35,7 +35,8 @@
           "reasoning": "The Guardians were eliminated in the ALCS (Rays defeated them 4-2), making it impossible for them to win the 2026 World Series, which the Brewers won over the Rays per MLB.com and ESPN. Per the rules, elimination resolves this market to No."
         }
       },
-      "archives_available": 2
+      "archives_available": 2,
+      "curator_ai": "NO"
     },
     {
       "id": "5969230",
@@ -63,7 +64,8 @@
           "reasoning": "The October 27 game (Japan Series Game 3) was won by Fukuoka SoftBank 2-1 in extra innings per the official NPB snapshot, corroborated by Japan Times and Asahi reporting a SoftBank sweep. The market therefore resolves to \"Fukuoka SoftBank Hawks\" (YES)."
         }
       },
-      "archives_available": 0
+      "archives_available": 0,
+      "curator_ai": "YES"
     },
     {
       "id": "5285913",
@@ -91,7 +93,8 @@
           "reasoning": "Two independent sources (NHL gamecenter and MLive recap) agree the final was STL 5, DET 4, a combined 9 goals, which is 5 or more, so the market resolves Over per the rules."
         }
       },
-      "archives_available": 1
+      "archives_available": 1,
+      "curator_ai": "YES"
     },
     {
       "id": "4588336",
@@ -119,7 +122,8 @@
           "reasoning": "Two independent sources (NFL gamecenter PDF and uponreview) agree the Broncos scored 14 vs the Cardinals' 7 in Q3, a 7-point margin that meets the 4+ point threshold, and the recap is consistent. Therefore the market resolves to \"Broncos\" (YES)."
         }
       },
-      "archives_available": 1
+      "archives_available": 1,
+      "curator_ai": "YES"
     },
     {
       "id": "1281165",
@@ -147,7 +151,8 @@
           "reasoning": "Three independent sources (polling-desk.com, LAist, Ballotpedia) consistently report that Democratic candidate Angela Gonzales-Torres won CA-34 in the November 3, 2026 general election, satisfying the market's consensus-of-credible-reporting standard. The election window is complete per the snapshots, so the market resolves Yes."
         }
       },
-      "archives_available": 1
+      "archives_available": 1,
+      "curator_ai": "YES"
     },
     {
       "id": "1284815",
@@ -175,7 +180,8 @@
           "reasoning": "Multiple independent sources (Texas SOS official results, Ballotpedia, Texas Tribune) agree that Republican Steve Toth won the TX-02 seat in the November 3, 2026 election, satisfying the two-source rule and resolving the market to Yes."
         }
       },
-      "archives_available": 3
+      "archives_available": 3,
+      "curator_ai": "YES"
     },
     {
       "id": "5648379",
@@ -203,7 +209,8 @@
           "reasoning": "Visa's official earnings materials and two independent corroborating sources report Q4 FY2026 payments volume growth (constant dollars) of 9% for the three months ended September 30, 2026, which falls below the 9.5%\u201310.5% bracket, so the market resolves No."
         }
       },
-      "archives_available": 1
+      "archives_available": 1,
+      "curator_ai": "NO"
     },
     {
       "id": "5936743",
@@ -231,8 +238,11 @@
           "reasoning": "Two independent sources (laliga.com and ESPN) agree the match ended 2-2, so FC Andorra did not win by 3 or more goals. Per the rules, the market resolves to CD Tenerife."
         }
       },
-      "archives_available": 1
+      "archives_available": 1,
+      "curator_ai": "NO"
     }
   ],
-  "note": "Hand-curated answer-bearing text with answer_present:true BEFORE panel. Thin rules-only run on same ids escalated; this measures settle vs escalate with real facts."
+  "note": "Curator-(AI)-checked answer-bearing text with answer_present:true BEFORE panel. Thin rules-only run on same ids escalated; this measures settle vs escalate with real facts. Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.",
+  "curator_column": "curator (AI)",
+  "curator_note": "Grok Bot pre-panel check; Baheet has not personally verified each row."
 }

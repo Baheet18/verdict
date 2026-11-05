@@ -1,94 +1,94 @@
 {
-  "polymarket_id": "1284815",
-  "market_id": 1284815,
-  "question": "Will the Republican Party win the TX-02 House seat?",
-  "rules": "This market will resolve according to the party of the candidate who wins the TX-02 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n​A candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\n\nVERDICT MAPPING: answer YES if this market resolves to \"Yes\"; answer NO if it resolves to \"No\".",
-  "market_end": "2026-11-04T04:59:00Z",
-  "outcomes": [
-    "Yes",
-    "No"
-  ],
-  "uma": "YES",
-  "expected_panel_from_human_read": "YES",
-  "evidence": "{\"market_end\": \"2026-11-04T04:59:00Z\", \"question\": \"Will the Republican Party win the TX-02 House seat?\", \"rules\": \"This market will resolve according to the party of the candidate who wins the TX-02 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\\n\\n​A candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\\n\\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Yes\\\"; answer NO if it resolves to \\\"No\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"66832a70ec57dc228899abd3a50e739e8e217011372ca80320bbb1ee194a2c0c\", \"text\": \"This market will resolve according to the party of the candidate who wins the TX-02 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\\n\\n​A candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\\n\\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Yes\\\"; answer NO if it resolves to \\\"No\\\".\", \"url\": \"polymarket:market:1284815:description\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"00fbbda6182fec7415204aac5824fefe087059e2a0c1614f943f7c96b98f30c7\", \"text\": \"Election Results - Tuesday, November 3, 2026. U.S. Representative District 2: Steve Toth (REP) 144,748; Shaun Finnie (DEM) 139,167. Republican Steve Toth elected.\", \"url\": \"https://electionresults.sos.state.tx.us/results.html\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"7e94961f83e5f80f1c26dac77f1a839f65749bc64855beb5946324a1e1ea1b1c\", \"text\": \"Texas' 2nd Congressional District. In the 2026 general election, Republican Steve Toth defeated Democrat Shaun Finnie.\", \"url\": \"https://ballotpedia.org/Texas%27_2nd_Congressional_District\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"d5b190b78188c7286de3a75867f64af66ea6964b460de161248829619c8dd2a2\", \"text\": \"Steve Toth unseats Dan Crenshaw in GOP primary. Toth went on to win the November 2026 general election for Texas' 2nd Congressional District as the Republican nominee.\", \"url\": \"https://www.texastribune.org/2026/03/03/texas-dan-crenshaw-steve-toth-republican-primary/\"}]}",
-  "evidence_sha256": "df36ca9bbeb5957600a22337733fabf310032b0287f4eb071a87e91de21f35f5",
-  "answer_bearing_sources": 3,
-  "answer_present_all": true,
-  "human_checked_before_panel": true,
-  "snapshots": [
-    {
-      "url": "polymarket:market:1284815:description",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "66832a70ec57dc228899abd3a50e739e8e217011372ca80320bbb1ee194a2c0c",
-      "text": "This market will resolve according to the party of the candidate who wins the TX-02 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n​A candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\n\nVERDICT MAPPING: answer YES if this market resolves to \"Yes\"; answer NO if it resolves to \"No\".",
-      "role": "rules",
-      "note": "Market rules + YES/NO mapping; NOT an answer-bearing fact source.",
-      "answer_present": false
-    },
-    {
-      "url": "https://electionresults.sos.state.tx.us/results.html",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "00fbbda6182fec7415204aac5824fefe087059e2a0c1614f943f7c96b98f30c7",
-      "text": "Election Results - Tuesday, November 3, 2026. U.S. Representative District 2: Steve Toth (REP) 144,748; Shaun Finnie (DEM) 139,167. Republican Steve Toth elected.",
-      "role": "official",
-      "note": "Texas SOS Election Results Nov 3 2026",
-      "answer_present": true,
-      "answer_note": "Texas SOS: Republican Steve Toth won TX-02.",
-      "archive_url": "http://web.archive.org/web/20261104151351/https://electionresults.sos.state.tx.us/results.html",
-      "archive_available": true,
-      "archive_note": null
-    },
-    {
-      "url": "https://ballotpedia.org/Texas%27_2nd_Congressional_District",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "7e94961f83e5f80f1c26dac77f1a839f65749bc64855beb5946324a1e1ea1b1c",
-      "text": "Texas' 2nd Congressional District. In the 2026 general election, Republican Steve Toth defeated Democrat Shaun Finnie.",
-      "role": "report",
-      "note": "Ballotpedia TX-02",
-      "answer_present": true,
-      "answer_note": "Ballotpedia confirms Republican win.",
-      "archive_url": "http://web.archive.org/web/20260411193725/https://ballotpedia.org/Texas%27_2nd_Congressional_District",
-      "archive_available": true,
-      "archive_note": null
-    },
-    {
-      "url": "https://www.texastribune.org/2026/03/03/texas-dan-crenshaw-steve-toth-republican-primary/",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "d5b190b78188c7286de3a75867f64af66ea6964b460de161248829619c8dd2a2",
-      "text": "Steve Toth unseats Dan Crenshaw in GOP primary. Toth went on to win the November 2026 general election for Texas' 2nd Congressional District as the Republican nominee.",
-      "role": "report",
-      "note": "Texas Tribune: Toth unseats Crenshaw in primary",
-      "answer_present": true,
-      "answer_note": "Republican nominee victory in general election.",
-      "archive_url": "http://web.archive.org/web/20260709024759/https://www.texastribune.org/2026/03/03/texas-dan-crenshaw-steve-toth-republican-primary/",
-      "archive_available": true,
-      "archive_note": null
-    }
-  ],
-  "archives": [
-    {
-      "url": "https://electionresults.sos.state.tx.us/results.html",
-      "archive_available": true,
-      "archive_url": "http://web.archive.org/web/20261104151351/https://electionresults.sos.state.tx.us/results.html",
-      "archive_timestamp": "20261104151351",
-      "checked_at": "2026-11-05T11:54:40Z"
-    },
-    {
-      "url": "https://ballotpedia.org/Texas%27_2nd_Congressional_District",
-      "archive_available": true,
-      "archive_url": "http://web.archive.org/web/20260411193725/https://ballotpedia.org/Texas%27_2nd_Congressional_District",
-      "archive_timestamp": "20260411193725",
-      "checked_at": "2026-11-05T11:54:40Z"
-    },
-    {
-      "url": "https://www.texastribune.org/2026/03/03/texas-dan-crenshaw-steve-toth-republican-primary/",
-      "archive_available": true,
-      "archive_url": "http://web.archive.org/web/20260709024759/https://www.texastribune.org/2026/03/03/texas-dan-crenshaw-steve-toth-republican-primary/",
-      "archive_timestamp": "20260709024759",
-      "checked_at": "2026-11-05T11:54:40Z"
-    }
-  ],
-  "curation": "hand_round6",
-  "curated_at": "2026-11-05T11:54:40Z",
-  "disclaimer": "Answer-bearing texts were hand-extracted from the cited pages for reproducibility. Archive.org links are only included when the availability API returned a snapshot; otherwise marked unavailable. Fetched/compiled outside the TEE."
+ "polymarket_id": "1284815",
+ "market_id": 1284815,
+ "question": "Will the Republican Party win the TX-02 House seat?",
+ "rules": "This market will resolve according to the party of the candidate who wins the TX-02 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n\u200bA candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\n\nVERDICT MAPPING: answer YES if this market resolves to \"Yes\"; answer NO if it resolves to \"No\".",
+ "market_end": "2026-11-04T04:59:00Z",
+ "outcomes": [
+  "Yes",
+  "No"
+ ],
+ "uma": "YES",
+ "evidence": "{\"market_end\": \"2026-11-04T04:59:00Z\", \"question\": \"Will the Republican Party win the TX-02 House seat?\", \"rules\": \"This market will resolve according to the party of the candidate who wins the TX-02 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\\n\\n\u200bA candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\\n\\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Yes\\\"; answer NO if it resolves to \\\"No\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"66832a70ec57dc228899abd3a50e739e8e217011372ca80320bbb1ee194a2c0c\", \"text\": \"This market will resolve according to the party of the candidate who wins the TX-02 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\\n\\n\u200bA candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\\n\\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Yes\\\"; answer NO if it resolves to \\\"No\\\".\", \"url\": \"polymarket:market:1284815:description\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"00fbbda6182fec7415204aac5824fefe087059e2a0c1614f943f7c96b98f30c7\", \"text\": \"Election Results - Tuesday, November 3, 2026. U.S. Representative District 2: Steve Toth (REP) 144,748; Shaun Finnie (DEM) 139,167. Republican Steve Toth elected.\", \"url\": \"https://electionresults.sos.state.tx.us/results.html\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"7e94961f83e5f80f1c26dac77f1a839f65749bc64855beb5946324a1e1ea1b1c\", \"text\": \"Texas' 2nd Congressional District. In the 2026 general election, Republican Steve Toth defeated Democrat Shaun Finnie.\", \"url\": \"https://ballotpedia.org/Texas%27_2nd_Congressional_District\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"d5b190b78188c7286de3a75867f64af66ea6964b460de161248829619c8dd2a2\", \"text\": \"Steve Toth unseats Dan Crenshaw in GOP primary. Toth went on to win the November 2026 general election for Texas' 2nd Congressional District as the Republican nominee.\", \"url\": \"https://www.texastribune.org/2026/03/03/texas-dan-crenshaw-steve-toth-republican-primary/\"}]}",
+ "evidence_sha256": "df36ca9bbeb5957600a22337733fabf310032b0287f4eb071a87e91de21f35f5",
+ "answer_bearing_sources": 3,
+ "answer_present_all": true,
+ "snapshots": [
+  {
+   "url": "polymarket:market:1284815:description",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "66832a70ec57dc228899abd3a50e739e8e217011372ca80320bbb1ee194a2c0c",
+   "text": "This market will resolve according to the party of the candidate who wins the TX-02 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n\u200bA candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\n\nVERDICT MAPPING: answer YES if this market resolves to \"Yes\"; answer NO if it resolves to \"No\".",
+   "role": "rules",
+   "note": "Market rules + YES/NO mapping; NOT an answer-bearing fact source.",
+   "answer_present": false
+  },
+  {
+   "url": "https://electionresults.sos.state.tx.us/results.html",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "00fbbda6182fec7415204aac5824fefe087059e2a0c1614f943f7c96b98f30c7",
+   "text": "Election Results - Tuesday, November 3, 2026. U.S. Representative District 2: Steve Toth (REP) 144,748; Shaun Finnie (DEM) 139,167. Republican Steve Toth elected.",
+   "role": "official",
+   "note": "Texas SOS Election Results Nov 3 2026",
+   "answer_present": true,
+   "answer_note": "Texas SOS: Republican Steve Toth won TX-02.",
+   "archive_url": "http://web.archive.org/web/20261104151351/https://electionresults.sos.state.tx.us/results.html",
+   "archive_available": true,
+   "archive_note": null
+  },
+  {
+   "url": "https://ballotpedia.org/Texas%27_2nd_Congressional_District",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "7e94961f83e5f80f1c26dac77f1a839f65749bc64855beb5946324a1e1ea1b1c",
+   "text": "Texas' 2nd Congressional District. In the 2026 general election, Republican Steve Toth defeated Democrat Shaun Finnie.",
+   "role": "report",
+   "note": "Ballotpedia TX-02",
+   "answer_present": true,
+   "answer_note": "Ballotpedia confirms Republican win.",
+   "archive_url": "http://web.archive.org/web/20260411193725/https://ballotpedia.org/Texas%27_2nd_Congressional_District",
+   "archive_available": true,
+   "archive_note": null
+  },
+  {
+   "url": "https://www.texastribune.org/2026/03/03/texas-dan-crenshaw-steve-toth-republican-primary/",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "d5b190b78188c7286de3a75867f64af66ea6964b460de161248829619c8dd2a2",
+   "text": "Steve Toth unseats Dan Crenshaw in GOP primary. Toth went on to win the November 2026 general election for Texas' 2nd Congressional District as the Republican nominee.",
+   "role": "report",
+   "note": "Texas Tribune: Toth unseats Crenshaw in primary",
+   "answer_present": true,
+   "answer_note": "Republican nominee victory in general election.",
+   "archive_url": "http://web.archive.org/web/20260709024759/https://www.texastribune.org/2026/03/03/texas-dan-crenshaw-steve-toth-republican-primary/",
+   "archive_available": true,
+   "archive_note": null
+  }
+ ],
+ "archives": [
+  {
+   "url": "https://electionresults.sos.state.tx.us/results.html",
+   "archive_available": true,
+   "archive_url": "http://web.archive.org/web/20261104151351/https://electionresults.sos.state.tx.us/results.html",
+   "archive_timestamp": "20261104151351",
+   "checked_at": "2026-11-05T11:54:40Z"
+  },
+  {
+   "url": "https://ballotpedia.org/Texas%27_2nd_Congressional_District",
+   "archive_available": true,
+   "archive_url": "http://web.archive.org/web/20260411193725/https://ballotpedia.org/Texas%27_2nd_Congressional_District",
+   "archive_timestamp": "20260411193725",
+   "checked_at": "2026-11-05T11:54:40Z"
+  },
+  {
+   "url": "https://www.texastribune.org/2026/03/03/texas-dan-crenshaw-steve-toth-republican-primary/",
+   "archive_available": true,
+   "archive_url": "http://web.archive.org/web/20260709024759/https://www.texastribune.org/2026/03/03/texas-dan-crenshaw-steve-toth-republican-primary/",
+   "archive_timestamp": "20260709024759",
+   "checked_at": "2026-11-05T11:54:40Z"
+  }
+ ],
+ "curation": "hand_round6",
+ "curated_at": "2026-11-05T11:54:40Z",
+ "disclaimer": "Answer-bearing texts were hand-extracted from the cited pages for reproducibility. Archive.org links are only included when the availability API returned a snapshot; otherwise marked unavailable. Fetched/compiled outside the TEE.",
+ "curator_ai_checked_before_panel": true,
+ "expected_panel_from_curator_ai_read": "YES"
 }

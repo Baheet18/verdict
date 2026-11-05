@@ -483,3 +483,11 @@ fn registered_relayer_can_submit_verdict() {
 #[test]
 #[should_panic(expected = "duplicate JSON key: temperature")]
 fn duplicate_json_key_rejected() { forbidden("duplicate_json_key"); }
+
+#[test]
+#[should_panic(expected = "JSON object key contains backslash")]
+fn escaped_json_object_key_rejected() {
+    // "\u0074emperature" decodes to "temperature" in serde_json; raw walk must reject
+    // the backslash so an attacker cannot smuggle a second allowlisted key.
+    forbidden("escaped_json_key_temperature");
+}

@@ -88,6 +88,15 @@ def with_dup_top(raw: bytes) -> bytes:
     s = s.rstrip()[:-1] + ', "temperature": 0}'
     return s.encode()
 v["duplicate_json_key"] = sign(0, with_dup_top(req(0)), resp("YES", tag="dupk"))
+# Round 7: unicode-escaped object key (\u0074emperature) must be rejected — serde would
+# normalize it to "temperature", bypassing raw-key allowlist/dup checks.
+def with_escaped_temp_key(raw: bytes) -> bytes:
+    s = raw.decode()
+    if '"temperature"' not in s:
+        raise SystemExit("temperature key missing")
+    # Produce the JSON key "\u0074emperature" (backslash-u escape in the raw bytes).
+    return s.replace('"temperature"', '"\\u0074emperature"', 1).encode()
+v["escaped_json_key_temperature"] = sign(0, with_escaped_temp_key(req(0)), resp("YES", tag="escik"))
 out = os.path.join(os.path.dirname(__file__), "..", "contract", "testdata", "vectors.json")
 open(out, "w").write(json.dumps(V, indent=1))
 print("wrote", out, len(v), "vectors")

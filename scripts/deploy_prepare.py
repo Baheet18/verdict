@@ -46,7 +46,13 @@ rules = panel.get("rules") or ""
 question = panel.get("question") or "demo market"
 # 1 NEAR = 10^24 yoctoNEAR
 ONE_NEAR = "1000000000000000000000000"
-uri = panel.get("proposed_evidence_uri_after_push") or f"PENDING_PUSH://fixtures/evidence/{ev_h}.json"
+# Commit-SHA permalink only after human-approved push (never /master/, never invent SHA).
+try:
+    from evidence_uri import github_raw_permalink, pending_uri
+    rel = panel.get("evidence_path") or f"fixtures/evidence/{ev_h}.json"
+    uri = panel.get("proposed_evidence_uri_after_push") or pending_uri(rel)
+except Exception:
+    uri = panel.get("proposed_evidence_uri_after_push") or f"PENDING_COMMIT_SHA://fixtures/evidence/{ev_h}.json"
 
 P("=== 3) create_market args (owner or anyone) ===")
 P(json.dumps({

@@ -1,94 +1,94 @@
 {
-  "polymarket_id": "4588336",
-  "market_id": 4588336,
-  "question": "3Q Spread: Broncos (-3.5)",
-  "rules": "In the third quarter of the NFL game between Broncos and Cardinals, scheduled for October 25 at 4:05 PM ET:\n\nThis market will resolve to \"Broncos\" if the Broncos outscore the Cardinals by 4 or more points in the third quarter.\n\nOtherwise, this market will resolve to \"Cardinals\".\n\nOnly points scored during that period count; overtime is not included.\n\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Broncos\"; answer NO if it resolves to \"Cardinals\".",
-  "market_end": "2026-10-25T20:05:00Z",
-  "outcomes": [
-    "Broncos",
-    "Cardinals"
-  ],
-  "uma": "YES",
-  "expected_panel_from_human_read": "YES",
-  "evidence": "{\"market_end\": \"2026-10-25T20:05:00Z\", \"question\": \"3Q Spread: Broncos (-3.5)\", \"rules\": \"In the third quarter of the NFL game between Broncos and Cardinals, scheduled for October 25 at 4:05 PM ET:\\n\\nThis market will resolve to \\\"Broncos\\\" if the Broncos outscore the Cardinals by 4 or more points in the third quarter.\\n\\nOtherwise, this market will resolve to \\\"Cardinals\\\".\\n\\nOnly points scored during that period count; overtime is not included.\\n\\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Broncos\\\"; answer NO if it resolves to \\\"Cardinals\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"9601a9c4530876da5d7f3ba8a82b44cd08606f145c31892293be9a81f1c9bb04\", \"text\": \"In the third quarter of the NFL game between Broncos and Cardinals, scheduled for October 25 at 4:05 PM ET:\\n\\nThis market will resolve to \\\"Broncos\\\" if the Broncos outscore the Cardinals by 4 or more points in the third quarter.\\n\\nOtherwise, this market will resolve to \\\"Cardinals\\\".\\n\\nOnly points scored during that period count; overtime is not included.\\n\\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Broncos\\\"; answer NO if it resolves to \\\"Cardinals\\\".\", \"url\": \"polymarket:market:4588336:description\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"6935b62a374af7995dbe035f4fc6400c368e7acda83927fec777c2999200295b\", \"text\": \"Date: Sunday, 10/25/2026 Denver Broncos at Arizona Cardinals. Scoring by quarter: VISITOR Denver Broncos: Q1 6, Q2 7, Q3 14, Q4 3, Total 30. HOME Arizona Cardinals: Q1 0, Q2 6, Q3 7, Q4 3, Total 16. Third quarter scoring plays: Broncos R.Harvey 52 yd. pass from B.Nix (20-6); Cardinals T.McBride 7 yd. pass from J.Brissett (20-13); Broncos J.Dobbins 1 yd. run (27-13). Broncos scored 14 points in Q3; Cardinals scored 7.\", \"url\": \"https://static.www.nfl.com/image/upload/v1793014729/gamecenter/aaf6fa3b-4feb-11f1-abca-2c54536568a9.pdf\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"5c6f5bc49724f9ddb58bef7bf7f249c525b9e0a3c743f65a18246c51e4679ced\", \"text\": \"Broncos 20, Cardinals 6. Cardinals touchdown. Broncos 20, Cardinals 13. J.K. Dobbins would punch it in from there to end the quarter. Broncos 27, Cardinals 13.\", \"url\": \"https://www.milehighreport.com/denver-broncos-news/189887/broncos-vs-cardinals-third-quarter-recap\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"a7cc4872d6bb80f54e8071608065355b4ea360e6dc67aeb259cea5c3b865f293\", \"text\": \"Team | Q1 | Q2 | Q3 | Q4 | OT | T\\nDEN | 6 | 7 | 14 | 3 | — | 30\\nARI | 0 | 6 | 7 | 3 | — | 16\\nBroncos 30, Cardinals 16. Denver outscored Arizona 14-7 in the third quarter.\", \"url\": \"https://www.uponreview.com/nfl/2026-10-25-denver-broncos-arizona-cardinals\"}]}",
-  "evidence_sha256": "793698f3800c864b8f0e0dde8e44d2112212e557085df395295a836da42ec742",
-  "answer_bearing_sources": 3,
-  "answer_present_all": true,
-  "human_checked_before_panel": true,
-  "snapshots": [
-    {
-      "url": "polymarket:market:4588336:description",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "9601a9c4530876da5d7f3ba8a82b44cd08606f145c31892293be9a81f1c9bb04",
-      "text": "In the third quarter of the NFL game between Broncos and Cardinals, scheduled for October 25 at 4:05 PM ET:\n\nThis market will resolve to \"Broncos\" if the Broncos outscore the Cardinals by 4 or more points in the third quarter.\n\nOtherwise, this market will resolve to \"Cardinals\".\n\nOnly points scored during that period count; overtime is not included.\n\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Broncos\"; answer NO if it resolves to \"Cardinals\".",
-      "role": "rules",
-      "note": "Market rules + YES/NO mapping; NOT an answer-bearing fact source.",
-      "answer_present": false
-    },
-    {
-      "url": "https://static.www.nfl.com/image/upload/v1793014729/gamecenter/aaf6fa3b-4feb-11f1-abca-2c54536568a9.pdf",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "6935b62a374af7995dbe035f4fc6400c368e7acda83927fec777c2999200295b",
-      "text": "Date: Sunday, 10/25/2026 Denver Broncos at Arizona Cardinals. Scoring by quarter: VISITOR Denver Broncos: Q1 6, Q2 7, Q3 14, Q4 3, Total 30. HOME Arizona Cardinals: Q1 0, Q2 6, Q3 7, Q4 3, Total 16. Third quarter scoring plays: Broncos R.Harvey 52 yd. pass from B.Nix (20-6); Cardinals T.McBride 7 yd. pass from J.Brissett (20-13); Broncos J.Dobbins 1 yd. run (27-13). Broncos scored 14 points in Q3; Cardinals scored 7.",
-      "role": "official",
-      "note": "NFL Game Summary Broncos at Cardinals 2026-10-25",
-      "answer_present": true,
-      "answer_note": "Official NFL: Broncos Q3=14, Cardinals Q3=7; margin +7 >= 4.",
-      "archive_url": null,
-      "archive_available": false,
-      "archive_note": "no closest snapshot from wayback available API"
-    },
-    {
-      "url": "https://www.milehighreport.com/denver-broncos-news/189887/broncos-vs-cardinals-third-quarter-recap",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "5c6f5bc49724f9ddb58bef7bf7f249c525b9e0a3c743f65a18246c51e4679ced",
-      "text": "Broncos 20, Cardinals 6. Cardinals touchdown. Broncos 20, Cardinals 13. J.K. Dobbins would punch it in from there to end the quarter. Broncos 27, Cardinals 13.",
-      "role": "report",
-      "note": "Mile High Report Q3 recap",
-      "answer_present": true,
-      "answer_note": "Q3 ended Broncos 27, Cardinals 13 after half 13-6; Broncos +14 vs Cards +7 in Q3.",
-      "archive_url": "http://web.archive.org/web/20261027073946/https://www.milehighreport.com/denver-broncos-news/189887/broncos-vs-cardinals-third-quarter-recap",
-      "archive_available": true,
-      "archive_note": null
-    },
-    {
-      "url": "https://www.uponreview.com/nfl/2026-10-25-denver-broncos-arizona-cardinals",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "a7cc4872d6bb80f54e8071608065355b4ea360e6dc67aeb259cea5c3b865f293",
-      "text": "Team | Q1 | Q2 | Q3 | Q4 | OT | T\nDEN | 6 | 7 | 14 | 3 | — | 30\nARI | 0 | 6 | 7 | 3 | — | 16\nBroncos 30, Cardinals 16. Denver outscored Arizona 14-7 in the third quarter.",
-      "role": "report",
-      "note": "Upon Review box score table",
-      "answer_present": true,
-      "answer_note": "Box score Q3 DEN 14 ARI 7.",
-      "archive_url": null,
-      "archive_available": false,
-      "archive_note": "no closest snapshot from wayback available API"
-    }
-  ],
-  "archives": [
-    {
-      "url": "https://static.www.nfl.com/image/upload/v1793014729/gamecenter/aaf6fa3b-4feb-11f1-abca-2c54536568a9.pdf",
-      "archive_available": false,
-      "archive_url": null,
-      "note": "no closest snapshot from wayback available API",
-      "checked_at": "2026-11-05T11:54:40Z"
-    },
-    {
-      "url": "https://www.milehighreport.com/denver-broncos-news/189887/broncos-vs-cardinals-third-quarter-recap",
-      "archive_available": true,
-      "archive_url": "http://web.archive.org/web/20261027073946/https://www.milehighreport.com/denver-broncos-news/189887/broncos-vs-cardinals-third-quarter-recap",
-      "archive_timestamp": "20261027073946",
-      "checked_at": "2026-11-05T11:54:40Z"
-    },
-    {
-      "url": "https://www.uponreview.com/nfl/2026-10-25-denver-broncos-arizona-cardinals",
-      "archive_available": false,
-      "archive_url": null,
-      "note": "no closest snapshot from wayback available API",
-      "checked_at": "2026-11-05T11:54:40Z"
-    }
-  ],
-  "curation": "hand_round6",
-  "curated_at": "2026-11-05T11:54:40Z",
-  "disclaimer": "Answer-bearing texts were hand-extracted from the cited pages for reproducibility. Archive.org links are only included when the availability API returned a snapshot; otherwise marked unavailable. Fetched/compiled outside the TEE."
+ "polymarket_id": "4588336",
+ "market_id": 4588336,
+ "question": "3Q Spread: Broncos (-3.5)",
+ "rules": "In the third quarter of the NFL game between Broncos and Cardinals, scheduled for October 25 at 4:05 PM ET:\n\nThis market will resolve to \"Broncos\" if the Broncos outscore the Cardinals by 4 or more points in the third quarter.\n\nOtherwise, this market will resolve to \"Cardinals\".\n\nOnly points scored during that period count; overtime is not included.\n\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Broncos\"; answer NO if it resolves to \"Cardinals\".",
+ "market_end": "2026-10-25T20:05:00Z",
+ "outcomes": [
+  "Broncos",
+  "Cardinals"
+ ],
+ "uma": "YES",
+ "evidence": "{\"market_end\": \"2026-10-25T20:05:00Z\", \"question\": \"3Q Spread: Broncos (-3.5)\", \"rules\": \"In the third quarter of the NFL game between Broncos and Cardinals, scheduled for October 25 at 4:05 PM ET:\\n\\nThis market will resolve to \\\"Broncos\\\" if the Broncos outscore the Cardinals by 4 or more points in the third quarter.\\n\\nOtherwise, this market will resolve to \\\"Cardinals\\\".\\n\\nOnly points scored during that period count; overtime is not included.\\n\\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Broncos\\\"; answer NO if it resolves to \\\"Cardinals\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"9601a9c4530876da5d7f3ba8a82b44cd08606f145c31892293be9a81f1c9bb04\", \"text\": \"In the third quarter of the NFL game between Broncos and Cardinals, scheduled for October 25 at 4:05 PM ET:\\n\\nThis market will resolve to \\\"Broncos\\\" if the Broncos outscore the Cardinals by 4 or more points in the third quarter.\\n\\nOtherwise, this market will resolve to \\\"Cardinals\\\".\\n\\nOnly points scored during that period count; overtime is not included.\\n\\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Broncos\\\"; answer NO if it resolves to \\\"Cardinals\\\".\", \"url\": \"polymarket:market:4588336:description\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"6935b62a374af7995dbe035f4fc6400c368e7acda83927fec777c2999200295b\", \"text\": \"Date: Sunday, 10/25/2026 Denver Broncos at Arizona Cardinals. Scoring by quarter: VISITOR Denver Broncos: Q1 6, Q2 7, Q3 14, Q4 3, Total 30. HOME Arizona Cardinals: Q1 0, Q2 6, Q3 7, Q4 3, Total 16. Third quarter scoring plays: Broncos R.Harvey 52 yd. pass from B.Nix (20-6); Cardinals T.McBride 7 yd. pass from J.Brissett (20-13); Broncos J.Dobbins 1 yd. run (27-13). Broncos scored 14 points in Q3; Cardinals scored 7.\", \"url\": \"https://static.www.nfl.com/image/upload/v1793014729/gamecenter/aaf6fa3b-4feb-11f1-abca-2c54536568a9.pdf\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"5c6f5bc49724f9ddb58bef7bf7f249c525b9e0a3c743f65a18246c51e4679ced\", \"text\": \"Broncos 20, Cardinals 6. Cardinals touchdown. Broncos 20, Cardinals 13. J.K. Dobbins would punch it in from there to end the quarter. Broncos 27, Cardinals 13.\", \"url\": \"https://www.milehighreport.com/denver-broncos-news/189887/broncos-vs-cardinals-third-quarter-recap\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"a7cc4872d6bb80f54e8071608065355b4ea360e6dc67aeb259cea5c3b865f293\", \"text\": \"Team | Q1 | Q2 | Q3 | Q4 | OT | T\\nDEN | 6 | 7 | 14 | 3 | \u2014 | 30\\nARI | 0 | 6 | 7 | 3 | \u2014 | 16\\nBroncos 30, Cardinals 16. Denver outscored Arizona 14-7 in the third quarter.\", \"url\": \"https://www.uponreview.com/nfl/2026-10-25-denver-broncos-arizona-cardinals\"}]}",
+ "evidence_sha256": "793698f3800c864b8f0e0dde8e44d2112212e557085df395295a836da42ec742",
+ "answer_bearing_sources": 3,
+ "answer_present_all": true,
+ "snapshots": [
+  {
+   "url": "polymarket:market:4588336:description",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "9601a9c4530876da5d7f3ba8a82b44cd08606f145c31892293be9a81f1c9bb04",
+   "text": "In the third quarter of the NFL game between Broncos and Cardinals, scheduled for October 25 at 4:05 PM ET:\n\nThis market will resolve to \"Broncos\" if the Broncos outscore the Cardinals by 4 or more points in the third quarter.\n\nOtherwise, this market will resolve to \"Cardinals\".\n\nOnly points scored during that period count; overtime is not included.\n\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Broncos\"; answer NO if it resolves to \"Cardinals\".",
+   "role": "rules",
+   "note": "Market rules + YES/NO mapping; NOT an answer-bearing fact source.",
+   "answer_present": false
+  },
+  {
+   "url": "https://static.www.nfl.com/image/upload/v1793014729/gamecenter/aaf6fa3b-4feb-11f1-abca-2c54536568a9.pdf",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "6935b62a374af7995dbe035f4fc6400c368e7acda83927fec777c2999200295b",
+   "text": "Date: Sunday, 10/25/2026 Denver Broncos at Arizona Cardinals. Scoring by quarter: VISITOR Denver Broncos: Q1 6, Q2 7, Q3 14, Q4 3, Total 30. HOME Arizona Cardinals: Q1 0, Q2 6, Q3 7, Q4 3, Total 16. Third quarter scoring plays: Broncos R.Harvey 52 yd. pass from B.Nix (20-6); Cardinals T.McBride 7 yd. pass from J.Brissett (20-13); Broncos J.Dobbins 1 yd. run (27-13). Broncos scored 14 points in Q3; Cardinals scored 7.",
+   "role": "official",
+   "note": "NFL Game Summary Broncos at Cardinals 2026-10-25",
+   "answer_present": true,
+   "answer_note": "Official NFL: Broncos Q3=14, Cardinals Q3=7; margin +7 >= 4.",
+   "archive_url": null,
+   "archive_available": false,
+   "archive_note": "no closest snapshot from wayback available API"
+  },
+  {
+   "url": "https://www.milehighreport.com/denver-broncos-news/189887/broncos-vs-cardinals-third-quarter-recap",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "5c6f5bc49724f9ddb58bef7bf7f249c525b9e0a3c743f65a18246c51e4679ced",
+   "text": "Broncos 20, Cardinals 6. Cardinals touchdown. Broncos 20, Cardinals 13. J.K. Dobbins would punch it in from there to end the quarter. Broncos 27, Cardinals 13.",
+   "role": "report",
+   "note": "Mile High Report Q3 recap",
+   "answer_present": true,
+   "answer_note": "Q3 ended Broncos 27, Cardinals 13 after half 13-6; Broncos +14 vs Cards +7 in Q3.",
+   "archive_url": "http://web.archive.org/web/20261027073946/https://www.milehighreport.com/denver-broncos-news/189887/broncos-vs-cardinals-third-quarter-recap",
+   "archive_available": true,
+   "archive_note": null
+  },
+  {
+   "url": "https://www.uponreview.com/nfl/2026-10-25-denver-broncos-arizona-cardinals",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "a7cc4872d6bb80f54e8071608065355b4ea360e6dc67aeb259cea5c3b865f293",
+   "text": "Team | Q1 | Q2 | Q3 | Q4 | OT | T\nDEN | 6 | 7 | 14 | 3 | \u2014 | 30\nARI | 0 | 6 | 7 | 3 | \u2014 | 16\nBroncos 30, Cardinals 16. Denver outscored Arizona 14-7 in the third quarter.",
+   "role": "report",
+   "note": "Upon Review box score table",
+   "answer_present": true,
+   "answer_note": "Box score Q3 DEN 14 ARI 7.",
+   "archive_url": null,
+   "archive_available": false,
+   "archive_note": "no closest snapshot from wayback available API"
+  }
+ ],
+ "archives": [
+  {
+   "url": "https://static.www.nfl.com/image/upload/v1793014729/gamecenter/aaf6fa3b-4feb-11f1-abca-2c54536568a9.pdf",
+   "archive_available": false,
+   "archive_url": null,
+   "note": "no closest snapshot from wayback available API",
+   "checked_at": "2026-11-05T11:54:40Z"
+  },
+  {
+   "url": "https://www.milehighreport.com/denver-broncos-news/189887/broncos-vs-cardinals-third-quarter-recap",
+   "archive_available": true,
+   "archive_url": "http://web.archive.org/web/20261027073946/https://www.milehighreport.com/denver-broncos-news/189887/broncos-vs-cardinals-third-quarter-recap",
+   "archive_timestamp": "20261027073946",
+   "checked_at": "2026-11-05T11:54:40Z"
+  },
+  {
+   "url": "https://www.uponreview.com/nfl/2026-10-25-denver-broncos-arizona-cardinals",
+   "archive_available": false,
+   "archive_url": null,
+   "note": "no closest snapshot from wayback available API",
+   "checked_at": "2026-11-05T11:54:40Z"
+  }
+ ],
+ "curation": "hand_round6",
+ "curated_at": "2026-11-05T11:54:40Z",
+ "disclaimer": "Answer-bearing texts were hand-extracted from the cited pages for reproducibility. Archive.org links are only included when the availability API returned a snapshot; otherwise marked unavailable. Fetched/compiled outside the TEE.",
+ "curator_ai_checked_before_panel": true,
+ "expected_panel_from_curator_ai_read": "YES"
 }

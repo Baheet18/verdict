@@ -1,94 +1,94 @@
 {
-  "polymarket_id": "1235552",
-  "market_id": 1235552,
-  "question": "Will the Cleveland Guardians win the 2026 World Series?",
-  "rules": "This market will resolve according to the team that wins the 2026 MLB World Series. \n\nIf at any point it becomes impossible for a listed team to win the 2026 MLB World Series per the rules of MLB (e.g., they are eliminated in the playoffs), the corresponding market will resolve to “No”.\n\nIf the 2026 MLB season is cancelled, postponed after December 31, 2026 ET, or there is otherwise no winner declared within that timeframe, this market will resolve to “Other”.\n\nThe primary resolution source will be official information from MLB (https://www.mlb.com/); however, a consensus of credible reporting may also be used.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Yes\"; answer NO if it resolves to \"No\".",
-  "market_end": "2026-10-31T23:55:00Z",
-  "outcomes": [
-    "Yes",
-    "No"
-  ],
-  "uma": "NO",
-  "expected_panel_from_human_read": "NO",
-  "evidence": "{\"market_end\": \"2026-10-31T23:55:00Z\", \"question\": \"Will the Cleveland Guardians win the 2026 World Series?\", \"rules\": \"This market will resolve according to the team that wins the 2026 MLB World Series. \\n\\nIf at any point it becomes impossible for a listed team to win the 2026 MLB World Series per the rules of MLB (e.g., they are eliminated in the playoffs), the corresponding market will resolve to “No”.\\n\\nIf the 2026 MLB season is cancelled, postponed after December 31, 2026 ET, or there is otherwise no winner declared within that timeframe, this market will resolve to “Other”.\\n\\nThe primary resolution source will be official information from MLB (https://www.mlb.com/); however, a consensus of credible reporting may also be used.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Yes\\\"; answer NO if it resolves to \\\"No\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"d6dc70fd07797e749878cf5f638de5016f352c2858b6e6b42c8bbad280c2e9ad\", \"text\": \"This market will resolve according to the team that wins the 2026 MLB World Series. \\n\\nIf at any point it becomes impossible for a listed team to win the 2026 MLB World Series per the rules of MLB (e.g., they are eliminated in the playoffs), the corresponding market will resolve to “No”.\\n\\nIf the 2026 MLB season is cancelled, postponed after December 31, 2026 ET, or there is otherwise no winner declared within that timeframe, this market will resolve to “Other”.\\n\\nThe primary resolution source will be official information from MLB (https://www.mlb.com/); however, a consensus of credible reporting may also be used.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Yes\\\"; answer NO if it resolves to \\\"No\\\".\", \"url\": \"polymarket:market:1235552:description\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"4af4dee0670f71e72ea158287c77607b0485f68f8094a10d01fa315c55e6d13d\", \"text\": \"That's the team that won the 2026 World Series. And the Brewers team that just delivered the franchise's first title and Milwaukee its first baseball champion since the 1957 Braves was a true team in every sense. The Milwaukee Brewers were nobody's preseason pick and hardly anybody's October favorite. But not this year. Not for a Brewers team that won Game 5 of the Fall Classic, 4-1, over the Tampa Bay Rays on Wednesday night at Tropicana Field.\", \"url\": \"https://www.mlb.com/news/brewers-win-world-series-2026\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"6b43500a7a15b7761f651dbff988d688d801b944c3cc5a1714bebe6c8a6f282d\", \"text\": \"World Series 2026: Brewers defeat Rays 4-1. World Series Game 5 | Brewers 4, Rays 1. American League Championship Series: Rays defeat Guardians 4-2. Game 6 | Rays 7, Guardians 3.\", \"url\": \"https://www.mlb.com/postseason/history/2026\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"da1b1641d5a53fe847947152ae01a374a237a4fd8514940f2e39b46ae12a048f\", \"text\": \"MLB World Series Winners\\nSEASON | WINNER | LOSER | SERIES\\n2026 | Milwaukee Brewers | Tampa Bay Rays | 4-1\\n2025 | Los Angeles Dodgers | Toronto Blue Jays | 4-3\", \"url\": \"https://www.espn.com/mlb/worldseries/history/winners\"}]}",
-  "evidence_sha256": "42ef56dc2623c15c2c20fcf061579f206a14663a1e7e151f4cbb928bb5f3929c",
-  "answer_bearing_sources": 3,
-  "answer_present_all": true,
-  "human_checked_before_panel": true,
-  "snapshots": [
-    {
-      "url": "polymarket:market:1235552:description",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "d6dc70fd07797e749878cf5f638de5016f352c2858b6e6b42c8bbad280c2e9ad",
-      "text": "This market will resolve according to the team that wins the 2026 MLB World Series. \n\nIf at any point it becomes impossible for a listed team to win the 2026 MLB World Series per the rules of MLB (e.g., they are eliminated in the playoffs), the corresponding market will resolve to “No”.\n\nIf the 2026 MLB season is cancelled, postponed after December 31, 2026 ET, or there is otherwise no winner declared within that timeframe, this market will resolve to “Other”.\n\nThe primary resolution source will be official information from MLB (https://www.mlb.com/); however, a consensus of credible reporting may also be used.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Yes\"; answer NO if it resolves to \"No\".",
-      "role": "rules",
-      "note": "Market rules + YES/NO mapping; NOT an answer-bearing fact source.",
-      "answer_present": false
-    },
-    {
-      "url": "https://www.mlb.com/news/brewers-win-world-series-2026",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "4af4dee0670f71e72ea158287c77607b0485f68f8094a10d01fa315c55e6d13d",
-      "text": "That's the team that won the 2026 World Series. And the Brewers team that just delivered the franchise's first title and Milwaukee its first baseball champion since the 1957 Braves was a true team in every sense. The Milwaukee Brewers were nobody's preseason pick and hardly anybody's October favorite. But not this year. Not for a Brewers team that won Game 5 of the Fall Classic, 4-1, over the Tampa Bay Rays on Wednesday night at Tropicana Field.",
-      "role": "official",
-      "note": "MLB.com: Brewers win World Series 2026",
-      "answer_present": true,
-      "answer_note": "Brewers won 2026 WS over Rays; Guardians are not the winner.",
-      "archive_url": null,
-      "archive_available": false,
-      "archive_note": "no closest snapshot from wayback available API"
-    },
-    {
-      "url": "https://www.mlb.com/postseason/history/2026",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "6b43500a7a15b7761f651dbff988d688d801b944c3cc5a1714bebe6c8a6f282d",
-      "text": "World Series 2026: Brewers defeat Rays 4-1. World Series Game 5 | Brewers 4, Rays 1. American League Championship Series: Rays defeat Guardians 4-2. Game 6 | Rays 7, Guardians 3.",
-      "role": "report",
-      "note": "MLB.com 2026 Postseason History",
-      "answer_present": true,
-      "answer_note": "Official history: Brewers won WS; Guardians lost ALCS.",
-      "archive_url": "http://web.archive.org/web/20261025041705/https://www.mlb.com/postseason/history/2026",
-      "archive_available": true,
-      "archive_note": null
-    },
-    {
-      "url": "https://www.espn.com/mlb/worldseries/history/winners",
-      "fetched_at": "2026-11-05T11:54:40Z",
-      "sha256": "da1b1641d5a53fe847947152ae01a374a237a4fd8514940f2e39b46ae12a048f",
-      "text": "MLB World Series Winners\nSEASON | WINNER | LOSER | SERIES\n2026 | Milwaukee Brewers | Tampa Bay Rays | 4-1\n2025 | Los Angeles Dodgers | Toronto Blue Jays | 4-3",
-      "role": "report",
-      "note": "ESPN World Series Winners by Year",
-      "answer_present": true,
-      "answer_note": "2026 winner listed as Milwaukee Brewers, not Cleveland Guardians.",
-      "archive_url": "http://web.archive.org/web/20260603173638/https://www.espn.com/mlb/worldseries/history/winners",
-      "archive_available": true,
-      "archive_note": null
-    }
-  ],
-  "archives": [
-    {
-      "url": "https://www.mlb.com/news/brewers-win-world-series-2026",
-      "archive_available": false,
-      "archive_url": null,
-      "note": "no closest snapshot from wayback available API",
-      "checked_at": "2026-11-05T11:54:40Z"
-    },
-    {
-      "url": "https://www.mlb.com/postseason/history/2026",
-      "archive_available": true,
-      "archive_url": "http://web.archive.org/web/20261025041705/https://www.mlb.com/postseason/history/2026",
-      "archive_timestamp": "20261025041705",
-      "checked_at": "2026-11-05T11:54:40Z"
-    },
-    {
-      "url": "https://www.espn.com/mlb/worldseries/history/winners",
-      "archive_available": true,
-      "archive_url": "http://web.archive.org/web/20260603173638/https://www.espn.com/mlb/worldseries/history/winners",
-      "archive_timestamp": "20260603173638",
-      "checked_at": "2026-11-05T11:54:40Z"
-    }
-  ],
-  "curation": "hand_round6",
-  "curated_at": "2026-11-05T11:54:40Z",
-  "disclaimer": "Answer-bearing texts were hand-extracted from the cited pages for reproducibility. Archive.org links are only included when the availability API returned a snapshot; otherwise marked unavailable. Fetched/compiled outside the TEE."
+ "polymarket_id": "1235552",
+ "market_id": 1235552,
+ "question": "Will the Cleveland Guardians win the 2026 World Series?",
+ "rules": "This market will resolve according to the team that wins the 2026 MLB World Series. \n\nIf at any point it becomes impossible for a listed team to win the 2026 MLB World Series per the rules of MLB (e.g., they are eliminated in the playoffs), the corresponding market will resolve to \u201cNo\u201d.\n\nIf the 2026 MLB season is cancelled, postponed after December 31, 2026 ET, or there is otherwise no winner declared within that timeframe, this market will resolve to \u201cOther\u201d.\n\nThe primary resolution source will be official information from MLB (https://www.mlb.com/); however, a consensus of credible reporting may also be used.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Yes\"; answer NO if it resolves to \"No\".",
+ "market_end": "2026-10-31T23:55:00Z",
+ "outcomes": [
+  "Yes",
+  "No"
+ ],
+ "uma": "NO",
+ "evidence": "{\"market_end\": \"2026-10-31T23:55:00Z\", \"question\": \"Will the Cleveland Guardians win the 2026 World Series?\", \"rules\": \"This market will resolve according to the team that wins the 2026 MLB World Series. \\n\\nIf at any point it becomes impossible for a listed team to win the 2026 MLB World Series per the rules of MLB (e.g., they are eliminated in the playoffs), the corresponding market will resolve to \u201cNo\u201d.\\n\\nIf the 2026 MLB season is cancelled, postponed after December 31, 2026 ET, or there is otherwise no winner declared within that timeframe, this market will resolve to \u201cOther\u201d.\\n\\nThe primary resolution source will be official information from MLB (https://www.mlb.com/); however, a consensus of credible reporting may also be used.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Yes\\\"; answer NO if it resolves to \\\"No\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"d6dc70fd07797e749878cf5f638de5016f352c2858b6e6b42c8bbad280c2e9ad\", \"text\": \"This market will resolve according to the team that wins the 2026 MLB World Series. \\n\\nIf at any point it becomes impossible for a listed team to win the 2026 MLB World Series per the rules of MLB (e.g., they are eliminated in the playoffs), the corresponding market will resolve to \u201cNo\u201d.\\n\\nIf the 2026 MLB season is cancelled, postponed after December 31, 2026 ET, or there is otherwise no winner declared within that timeframe, this market will resolve to \u201cOther\u201d.\\n\\nThe primary resolution source will be official information from MLB (https://www.mlb.com/); however, a consensus of credible reporting may also be used.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Yes\\\"; answer NO if it resolves to \\\"No\\\".\", \"url\": \"polymarket:market:1235552:description\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"4af4dee0670f71e72ea158287c77607b0485f68f8094a10d01fa315c55e6d13d\", \"text\": \"That's the team that won the 2026 World Series. And the Brewers team that just delivered the franchise's first title and Milwaukee its first baseball champion since the 1957 Braves was a true team in every sense. The Milwaukee Brewers were nobody's preseason pick and hardly anybody's October favorite. But not this year. Not for a Brewers team that won Game 5 of the Fall Classic, 4-1, over the Tampa Bay Rays on Wednesday night at Tropicana Field.\", \"url\": \"https://www.mlb.com/news/brewers-win-world-series-2026\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"6b43500a7a15b7761f651dbff988d688d801b944c3cc5a1714bebe6c8a6f282d\", \"text\": \"World Series 2026: Brewers defeat Rays 4-1. World Series Game 5 | Brewers 4, Rays 1. American League Championship Series: Rays defeat Guardians 4-2. Game 6 | Rays 7, Guardians 3.\", \"url\": \"https://www.mlb.com/postseason/history/2026\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"da1b1641d5a53fe847947152ae01a374a237a4fd8514940f2e39b46ae12a048f\", \"text\": \"MLB World Series Winners\\nSEASON | WINNER | LOSER | SERIES\\n2026 | Milwaukee Brewers | Tampa Bay Rays | 4-1\\n2025 | Los Angeles Dodgers | Toronto Blue Jays | 4-3\", \"url\": \"https://www.espn.com/mlb/worldseries/history/winners\"}]}",
+ "evidence_sha256": "42ef56dc2623c15c2c20fcf061579f206a14663a1e7e151f4cbb928bb5f3929c",
+ "answer_bearing_sources": 3,
+ "answer_present_all": true,
+ "snapshots": [
+  {
+   "url": "polymarket:market:1235552:description",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "d6dc70fd07797e749878cf5f638de5016f352c2858b6e6b42c8bbad280c2e9ad",
+   "text": "This market will resolve according to the team that wins the 2026 MLB World Series. \n\nIf at any point it becomes impossible for a listed team to win the 2026 MLB World Series per the rules of MLB (e.g., they are eliminated in the playoffs), the corresponding market will resolve to \u201cNo\u201d.\n\nIf the 2026 MLB season is cancelled, postponed after December 31, 2026 ET, or there is otherwise no winner declared within that timeframe, this market will resolve to \u201cOther\u201d.\n\nThe primary resolution source will be official information from MLB (https://www.mlb.com/); however, a consensus of credible reporting may also be used.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Yes\"; answer NO if it resolves to \"No\".",
+   "role": "rules",
+   "note": "Market rules + YES/NO mapping; NOT an answer-bearing fact source.",
+   "answer_present": false
+  },
+  {
+   "url": "https://www.mlb.com/news/brewers-win-world-series-2026",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "4af4dee0670f71e72ea158287c77607b0485f68f8094a10d01fa315c55e6d13d",
+   "text": "That's the team that won the 2026 World Series. And the Brewers team that just delivered the franchise's first title and Milwaukee its first baseball champion since the 1957 Braves was a true team in every sense. The Milwaukee Brewers were nobody's preseason pick and hardly anybody's October favorite. But not this year. Not for a Brewers team that won Game 5 of the Fall Classic, 4-1, over the Tampa Bay Rays on Wednesday night at Tropicana Field.",
+   "role": "official",
+   "note": "MLB.com: Brewers win World Series 2026",
+   "answer_present": true,
+   "answer_note": "Brewers won 2026 WS over Rays; Guardians are not the winner.",
+   "archive_url": null,
+   "archive_available": false,
+   "archive_note": "no closest snapshot from wayback available API"
+  },
+  {
+   "url": "https://www.mlb.com/postseason/history/2026",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "6b43500a7a15b7761f651dbff988d688d801b944c3cc5a1714bebe6c8a6f282d",
+   "text": "World Series 2026: Brewers defeat Rays 4-1. World Series Game 5 | Brewers 4, Rays 1. American League Championship Series: Rays defeat Guardians 4-2. Game 6 | Rays 7, Guardians 3.",
+   "role": "report",
+   "note": "MLB.com 2026 Postseason History",
+   "answer_present": true,
+   "answer_note": "Official history: Brewers won WS; Guardians lost ALCS.",
+   "archive_url": "http://web.archive.org/web/20261025041705/https://www.mlb.com/postseason/history/2026",
+   "archive_available": true,
+   "archive_note": null
+  },
+  {
+   "url": "https://www.espn.com/mlb/worldseries/history/winners",
+   "fetched_at": "2026-11-05T11:54:40Z",
+   "sha256": "da1b1641d5a53fe847947152ae01a374a237a4fd8514940f2e39b46ae12a048f",
+   "text": "MLB World Series Winners\nSEASON | WINNER | LOSER | SERIES\n2026 | Milwaukee Brewers | Tampa Bay Rays | 4-1\n2025 | Los Angeles Dodgers | Toronto Blue Jays | 4-3",
+   "role": "report",
+   "note": "ESPN World Series Winners by Year",
+   "answer_present": true,
+   "answer_note": "2026 winner listed as Milwaukee Brewers, not Cleveland Guardians.",
+   "archive_url": "http://web.archive.org/web/20260603173638/https://www.espn.com/mlb/worldseries/history/winners",
+   "archive_available": true,
+   "archive_note": null
+  }
+ ],
+ "archives": [
+  {
+   "url": "https://www.mlb.com/news/brewers-win-world-series-2026",
+   "archive_available": false,
+   "archive_url": null,
+   "note": "no closest snapshot from wayback available API",
+   "checked_at": "2026-11-05T11:54:40Z"
+  },
+  {
+   "url": "https://www.mlb.com/postseason/history/2026",
+   "archive_available": true,
+   "archive_url": "http://web.archive.org/web/20261025041705/https://www.mlb.com/postseason/history/2026",
+   "archive_timestamp": "20261025041705",
+   "checked_at": "2026-11-05T11:54:40Z"
+  },
+  {
+   "url": "https://www.espn.com/mlb/worldseries/history/winners",
+   "archive_available": true,
+   "archive_url": "http://web.archive.org/web/20260603173638/https://www.espn.com/mlb/worldseries/history/winners",
+   "archive_timestamp": "20260603173638",
+   "checked_at": "2026-11-05T11:54:40Z"
+  }
+ ],
+ "curation": "hand_round6",
+ "curated_at": "2026-11-05T11:54:40Z",
+ "disclaimer": "Answer-bearing texts were hand-extracted from the cited pages for reproducibility. Archive.org links are only included when the availability API returned a snapshot; otherwise marked unavailable. Fetched/compiled outside the TEE.",
+ "curator_ai_checked_before_panel": true,
+ "expected_panel_from_curator_ai_read": "NO"
 }
