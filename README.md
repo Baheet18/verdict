@@ -73,19 +73,19 @@ All 3 panel models: **Hardware + host stack verified**. Observed compose-manager
 Owner-only `register_signer(address, model, attestation_report_sha256)`, only after `scripts/hw_verify.py` passes for that node. The contract requires the signer's registered model to equal the request's `model`. Owner can `remove_signer`.
 
 ## Post-dispute policy
-Disputes (bonded, inside window) and escalations are resolved by owner after re-running a larger attested panel off-chain on the same evidence bundle; overturned → bond refunded to disputer, upheld → bond added to winning pool.
+Each market sets an immutable `escalation_owner` (`AccountId`) at `create_market` — the integrating app’s team, multisig, DAO, or jury contract. Only that account may call `resolve_dispute` for Escalated / Disputed status on **that** market. The protocol `owner` keeps signer/relayer administration but **cannot decide outcomes unless explicitly selected** as that market’s `escalation_owner`. One market’s escalation owner has no authority over another. Typical flow: escalation owner re-runs a larger attested panel off-chain on the same evidence bundle, then posts the result; overturned → bond refunded to disputer, upheld → bond added to winning pool.
 
 ## Motivation
 Illia Polosukhin (NEAR) listed "AI benchmarking with private test sets. Submit harness (or new model in hosted privately in @near_ai) and evaluate on private tests sets and see results that are certified for given model and given hash of test set, without revealing any data." among build ideas on X, 2026-10-03 (https://x.com/ilblackdragon/status/2106269343881519444; full text read via the X API on 2026-11-05). Verdict applies the same pattern (certified result for a given model + given hash of inputs) to market resolution; it is not an endorsement by Illia or NEAR.
 
 ## Limits
 - **GPU ↔ TDX binding** is only the shared client nonce; no cryptographic binding of GPU attestation to the TDX VM measurement.
-- **Owner / relayer trust**: the owner registers/removes signers and settles disputes; a registered relayer (or owner) must `commit_evidence` before votes. Hardware verification is an off-chain precondition for registration.
+- **Owner / relayer / escalation trust**: the protocol owner registers/removes signers and relayers; a registered relayer (or owner) must `commit_evidence` before votes; each market’s `escalation_owner` (chosen at creation) settles that market’s disputes/escalations. Hardware verification is an off-chain precondition for registration.
 - **Key-management service (dstack KMS)**: RTMR3 `mr-kms` and `key-provider` events are pinned, but signing keys are issued by this KMS and may be shared across replicas. A signature proves "one of the attested replicas holding this key", not a specific VM. See shared-signer policy in `scripts/hw_verify.py::verify_signer_replicas`.
 - **MRTD / RTMR0-2 pins are observed**, not a published constant (they encode VM shape).
 - **Model container not measured** (see above).
 - **NRAS + Intel PCCS** need network access.
-- **Testnet deploy**: deployed and initialized on `baheet.testnet`; the owner controls signers and dispute settlement (no keys in this repo). See `deploy/TESTNET.md`.
+- **Testnet deploy**: `baheet.testnet` is the **old prototype** (universal protocol-owner dispute fallback). The per-market `escalation_owner` API is a breaking change — deploy to a **fresh** contract account after review; do not expect in-place upgrade of the prototype. No keys in this repo. See `deploy/TESTNET.md`.
 
 ## Demo
 ```bash
@@ -97,7 +97,8 @@ python scripts/attest_demo.py Qwen/Qwen3.8-27B   # expect PASS then tamper FAIL
 ## Testnet deploy
 Wasm builds locally (`cargo near build non-reproducible-wasm` → `contract/target/near/verdict.wasm`, ~246 KB).
 **Demo market (round 6):** post-cutoff NFL *Saints vs. Giants* (Polymarket 4329887) with live panel votes in `contract/testdata/real_panel.json` (unanimous YES, hardware-verified). `dispute_bond` = **1 NEAR**. Evidence file prepared at `fixtures/evidence/<sha>.json`; `evidence_uri` is the GitHub raw URL and **404s until a human-approved push**.
-**Deployed:** `baheet.testnet`, initialized with owner `baheet.testnet` on 2026-11-05.
+**Old prototype (do not treat as current trust model):** `baheet.testnet`, initialized with owner `baheet.testnet` on 2026-11-05 (universal owner dispute fallback).
 [Deploy + init transaction](https://explorer.testnet.near.org/transactions/4koasWRtwm9F3ZTh9dN86qSu2oTgA8iDHg5rs7uVRLFT)
 
-Next signed steps: register signers → create market → commit_evidence → three submit_verdict → optional dispute. Steps: `deploy/TESTNET.md`. Args: `python scripts/deploy_prepare.py`.
+**Next deploy:** use a **fresh** contract account for the per-market `escalation_owner` API (storage/ABI break vs the prototype). Pass `escalation_owner` in `create_market`. No redeploy until after review.
+Next signed steps: register signers → create market (with `escalation_owner`) → commit_evidence → three submit_verdict → optional dispute resolved by that market’s escalation owner. Steps: `deploy/TESTNET.md`. Args: `python scripts/deploy_prepare.py`.

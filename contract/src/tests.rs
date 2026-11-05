@@ -21,7 +21,7 @@ fn setup() -> (Verdict, u32) {
     let sg = f["signers"].as_array().unwrap();
     for x in &sg[..3] { c.register_signer(s(x, "address"), s(x, "model"), "ab".repeat(32)); }
     let rs = sg[..3].iter().map(|x| s(x, "address")).collect();
-    let id = c.create_market(s(&f, "question"), s(&f, "rules"), vec!["NiMet bulletin".into()], s(&f, "prompt_template_hash"), rs, DAY, DAY, near(1));
+    let id = c.create_market(s(&f, "question"), s(&f, "rules"), vec!["NiMet bulletin".into()], s(&f, "prompt_template_hash"), rs, DAY, DAY, near(1), accounts(0));
     assert_eq!(id, 0);
     (c, id)
 }
@@ -41,6 +41,18 @@ fn vote(c: &mut Verdict, id: u32, x: &Value) -> Outcome {
 }
 fn unanimous_yes(c: &mut Verdict, id: u32) { commit_for(c, id, &v("yes_0")); for i in 0..3 { vote(c, id, &v(&format!("yes_{i}"))); } }
 
+/// Like `setup`, but `escalation_owner` is chosen explicitly (for trust-isolation tests).
+fn setup_with_escalation(escalation_owner: AccountId) -> (Verdict, u32) {
+    let f = vec_file();
+    ctx(0, 0, near(0));
+    let mut c = Verdict::new(accounts(0));
+    let sg = f["signers"].as_array().unwrap();
+    for x in &sg[..3] { c.register_signer(s(x, "address"), s(x, "model"), "ab".repeat(32)); }
+    let rs = sg[..3].iter().map(|x| s(x, "address")).collect();
+    let id = c.create_market(s(&f, "question"), s(&f, "rules"), vec!["NiMet bulletin".into()], s(&f, "prompt_template_hash"), rs, DAY, DAY, near(1), escalation_owner);
+    (c, id)
+}
+
 // ---------- REAL signatures from all three NEAR AI panel models ----------
 fn real_setup(model_override: Option<(usize, &str)>) -> (Verdict, u32, Value) {
     let r = real();
@@ -52,7 +64,7 @@ fn real_setup(model_override: Option<(usize, &str)>) -> (Verdict, u32, Value) {
         c.register_signer(s(x, "signing_address"), model, s(x, "attestation_report_sha256"));
     }
     let rs = votes.iter().map(|x| s(x, "signing_address")).collect();
-    let id = c.create_market(s(&r, "question"), s(&r, "rules"), vec!["fixture".into()], s(&r, "prompt_template_hash"), rs, DAY, DAY, near(1));
+    let id = c.create_market(s(&r, "question"), s(&r, "rules"), vec!["fixture".into()], s(&r, "prompt_template_hash"), rs, DAY, DAY, near(1), accounts(0));
     ctx(0, DAY, near(0));
     (c, id, r)
 }
@@ -106,7 +118,7 @@ fn real_signature_cannot_be_replayed_on_another_market() {
     let (mut c, _id, r) = real_setup(None);
     ctx(0, 0, near(0));
     let rs = r["votes"].as_array().unwrap().iter().map(|x| s(x, "signing_address")).collect();
-    let id2 = c.create_market(s(&r, "question"), s(&r, "rules"), vec!["fixture".into()], s(&r, "prompt_template_hash"), rs, DAY, DAY, near(1));
+    let id2 = c.create_market(s(&r, "question"), s(&r, "rules"), vec!["fixture".into()], s(&r, "prompt_template_hash"), rs, DAY, DAY, near(1), accounts(0));
     ctx(0, DAY, near(0));
     vote(&mut c, id2, &r["votes"][0]);
 }
@@ -295,12 +307,103 @@ fn unanimous_panel_finalize_claim() {
 fn cannot_finalize_during_window() { let (mut c, id) = setup(); ctx(0, DAY, near(0)); unanimous_yes(&mut c, id); c.finalize(id); }
 
 #[test]
-fn dispute_with_bond_overturned_by_owner() {
+fn dispute_with_bond_overturned_by_selected_escalation_owner() {
+    // setup() selects accounts(0) (== protocol owner) as escalation_owner — allowed when explicit.
     let (mut c, id) = setup(); ctx(0, DAY, near(0)); unanimous_yes(&mut c, id);
     ctx(4, DAY + 10, near(1)); c.dispute(id);
     assert!(matches!(c.get_market(id).unwrap().status, Status::Disputed { .. }));
     ctx(0, DAY + 20, near(0)); assert!(c.resolve_dispute(id, Outcome::No).is_some());
     assert_eq!(c.get_market(id).unwrap().status, Status::Final { outcome: Outcome::No });
+}
+
+#[test]
+fn selected_escalation_owner_resolves_escalation() {
+    let (mut c, id) = setup_with_escalation(accounts(5));
+    ctx(0, DAY, near(0));
+    commit_for(&mut c, id, &v("yes_0"));
+    vote(&mut c, id, &v("yes_0")); vote(&mut c, id, &v("yes_1"));
+    assert_eq!(vote(&mut c, id, &v("no_2")), Outcome::No);
+    assert_eq!(c.get_market(id).unwrap().status, Status::Escalated);
+    assert_eq!(c.get_market(id).unwrap().escalation_owner, accounts(5));
+    ctx(5, DAY + 1, near(0));
+    assert!(c.resolve_dispute(id, Outcome::Yes).is_none());
+    assert_eq!(c.get_market(id).unwrap().status, Status::Final { outcome: Outcome::Yes });
+}
+
+#[test]
+#[should_panic(expected = "escalation owner only")]
+fn protocol_owner_rejected_when_not_selected_as_escalation_owner() {
+    let (mut c, id) = setup_with_escalation(accounts(5));
+    ctx(0, DAY, near(0));
+    commit_for(&mut c, id, &v("yes_0"));
+    vote(&mut c, id, &v("yes_0")); vote(&mut c, id, &v("yes_1"));
+    vote(&mut c, id, &v("no_2"));
+    assert_eq!(c.get_market(id).unwrap().status, Status::Escalated);
+    // accounts(0) is protocol owner but NOT escalation_owner
+    ctx(0, DAY + 1, near(0));
+    let _ = c.resolve_dispute(id, Outcome::Yes);
+}
+
+#[test]
+#[should_panic(expected = "escalation owner only")]
+fn unrelated_account_cannot_resolve_dispute() {
+    let (mut c, id) = setup_with_escalation(accounts(5));
+    ctx(0, DAY, near(0)); unanimous_yes(&mut c, id);
+    ctx(4, DAY + 10, near(1)); c.dispute(id);
+    // accounts(3) is neither owner nor escalation_owner
+    ctx(3, DAY + 20, near(0));
+    let _ = c.resolve_dispute(id, Outcome::No);
+}
+
+#[test]
+fn distinct_per_market_escalation_owners_are_isolated() {
+    // Vote fixtures are bound to market_id=0, so escalate only market A; market B proves
+    // independent storage and that B's escalation_owner cannot resolve A.
+    let f = vec_file();
+    ctx(0, 0, near(0));
+    let mut c = Verdict::new(accounts(0));
+    let sg = f["signers"].as_array().unwrap();
+    for x in &sg[..3] { c.register_signer(s(x, "address"), s(x, "model"), "ab".repeat(32)); }
+    let rs: Vec<String> = sg[..3].iter().map(|x| s(x, "address")).collect();
+    let id_a = c.create_market(s(&f, "question"), s(&f, "rules"), vec!["NiMet bulletin".into()], s(&f, "prompt_template_hash"), rs.clone(), DAY, DAY, near(1), accounts(5));
+    let id_b = c.create_market("other q".into(), s(&f, "rules"), vec!["NiMet bulletin".into()], s(&f, "prompt_template_hash"), rs, DAY, DAY, near(1), accounts(4));
+    assert_eq!((id_a, id_b), (0, 1));
+    assert_eq!(c.get_market(id_a).unwrap().escalation_owner, accounts(5));
+    assert_eq!(c.get_market(id_b).unwrap().escalation_owner, accounts(4));
+
+    ctx(0, DAY, near(0));
+    commit_for(&mut c, id_a, &v("yes_0"));
+    vote(&mut c, id_a, &v("yes_0")); vote(&mut c, id_a, &v("yes_1")); vote(&mut c, id_a, &v("no_2"));
+    assert_eq!(c.get_market(id_a).unwrap().status, Status::Escalated);
+    assert_eq!(c.get_market(id_b).unwrap().status, Status::Open); // untouched
+
+    // Market A's selected owner finalizes A; B stays Open with its own escalation_owner.
+    ctx(5, DAY + 1, near(0));
+    assert!(c.resolve_dispute(id_a, Outcome::Yes).is_none());
+    assert_eq!(c.get_market(id_a).unwrap().status, Status::Final { outcome: Outcome::Yes });
+    let b = c.get_market(id_b).unwrap();
+    assert_eq!(b.status, Status::Open);
+    assert_eq!(b.escalation_owner, accounts(4));
+}
+
+#[test]
+#[should_panic(expected = "escalation owner only")]
+fn other_market_escalation_owner_cannot_resolve_this_market() {
+    // Market B's escalation_owner (accounts(4)) must not resolve market A's escalation.
+    let f = vec_file();
+    ctx(0, 0, near(0));
+    let mut c = Verdict::new(accounts(0));
+    let sg = f["signers"].as_array().unwrap();
+    for x in &sg[..3] { c.register_signer(s(x, "address"), s(x, "model"), "ab".repeat(32)); }
+    let rs: Vec<String> = sg[..3].iter().map(|x| s(x, "address")).collect();
+    let id_a = c.create_market(s(&f, "question"), s(&f, "rules"), vec!["NiMet bulletin".into()], s(&f, "prompt_template_hash"), rs.clone(), DAY, DAY, near(1), accounts(5));
+    let _id_b = c.create_market("other q".into(), s(&f, "rules"), vec!["NiMet bulletin".into()], s(&f, "prompt_template_hash"), rs, DAY, DAY, near(1), accounts(4));
+    ctx(0, DAY, near(0));
+    commit_for(&mut c, id_a, &v("yes_0"));
+    vote(&mut c, id_a, &v("yes_0")); vote(&mut c, id_a, &v("yes_1")); vote(&mut c, id_a, &v("no_2"));
+    assert_eq!(c.get_market(id_a).unwrap().status, Status::Escalated);
+    ctx(4, DAY + 1, near(0)); // market B's escalation_owner — wrong market
+    let _ = c.resolve_dispute(id_a, Outcome::Yes);
 }
 
 #[test]

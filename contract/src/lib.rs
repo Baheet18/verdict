@@ -46,6 +46,10 @@ pub struct Market {
     pub deadline_ns: u64,
     pub dispute_window_ns: u64,
     pub dispute_bond: NearToken,
+    /// Account authorized to resolve Escalated/Disputed status for THIS market only.
+    /// Set at creation by the integrating app (team, multisig, DAO, or jury). Immutable.
+    /// The protocol `owner` has no outcome authority unless explicitly selected here.
+    pub escalation_owner: AccountId,
     pub yes_pool: NearToken,
     pub no_pool: NearToken,
     /// Incremented when a unanimous TOO_EARLY clears the votes; requests must name the current round.
@@ -390,9 +394,12 @@ impl Verdict {
 
     /// Commits market_id (the returned index), sha256(rules) and the prompt template hash.
     /// Auto-verdict requires ALL resolvers to agree (threshold == resolver count).
+    /// `escalation_owner` is the ONLY account that may call `resolve_dispute` for this market
+    /// (app team / multisig / DAO / jury). Protocol owner has no outcome authority unless selected.
     #[allow(clippy::too_many_arguments)]
     pub fn create_market(&mut self, question: String, rules: String, sources: Vec<String>, prompt_template_hash: String,
-                         resolvers: Vec<String>, deadline_ns: u64, dispute_window_ns: u64, dispute_bond: NearToken) -> u32 {
+                         resolvers: Vec<String>, deadline_ns: u64, dispute_window_ns: u64, dispute_bond: NearToken,
+                         escalation_owner: AccountId) -> u32 {
         let mut rs: Vec<String> = resolvers.iter().map(|a| hex20(a)).collect();
         rs.sort(); rs.dedup();
         require!(!rs.is_empty(), "bad resolver set");
@@ -403,7 +410,8 @@ impl Verdict {
         let pth = hex32(&prompt_template_hash, "prompt_template_hash");
         let threshold = rs.len() as u32;
         self.markets.push(Market { question, rules, rules_hash, prompt_template_hash: pth, sources, resolvers: rs, threshold,
-            deadline_ns, dispute_window_ns, dispute_bond, yes_pool: NearToken::from_yoctonear(0), no_pool: NearToken::from_yoctonear(0),
+            deadline_ns, dispute_window_ns, dispute_bond, escalation_owner,
+            yes_pool: NearToken::from_yoctonear(0), no_pool: NearToken::from_yoctonear(0),
             round: 0, round_evidence_hash: None, round_evidence_uri: None, votes: vec![], status: Status::Open });
         self.markets.len() - 1
     }
@@ -476,12 +484,14 @@ impl Verdict {
         m.status = Status::Disputed { proposed: outcome, disputer: env::predecessor_account_id(), bond: env::attached_deposit() };
     }
 
-    /// Post-dispute / escalation policy: owner re-runs a bigger attested panel off-chain (e.g. 5 models,
-    /// evidence bundle published), then posts the result here. AMBIGUOUS => everyone is refunded.
-    /// Human fallback. Disputer gets bond back if right; else bond goes to the winning pool.
+    /// Post-dispute / escalation policy: the market's `escalation_owner` re-runs a bigger attested
+    /// panel off-chain (e.g. 5 models, evidence bundle published), then posts the result here.
+    /// AMBIGUOUS => everyone is refunded. Disputer gets bond back if right; else bond goes to the
+    /// winning pool. Protocol `owner` cannot call this unless it was selected as escalation_owner
+    /// for this specific market.
     pub fn resolve_dispute(&mut self, market_id: u32, outcome: Outcome) -> Option<Promise> {
-        self.only_owner();
         let m = self.markets.get_mut(market_id).expect("no market");
+        require!(env::predecessor_account_id() == m.escalation_owner, "escalation owner only");
         if m.status == Status::Escalated { m.status = Status::Final { outcome }; return None; }
         let Status::Disputed { proposed, disputer, bond } = m.status.clone() else { env::panic_str("not disputed/escalated") };
         m.status = Status::Final { outcome };

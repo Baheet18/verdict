@@ -67,7 +67,9 @@ P(json.dumps({
     "deadline_ns": "<set to ~now_ns, then WAIT until block_timestamp >= deadline before commit_evidence>",
     "dispute_window_ns": 3_600_000_000_000,
     "dispute_bond": ONE_NEAR,
+    "escalation_owner": "<APP_ESCALATION_ACCOUNT.testnet — NOT the protocol owner unless you explicitly choose them>",
 }, indent=2))
+P("NOTE: only escalation_owner may resolve_dispute for this market; protocol owner cannot unless selected.")
 P(f"prompt_template_hash: {panel.get('prompt_template_hash')}")
 P(f"evidence_bundle_hash: {ev_h}")
 P(f"polymarket_id (off-chain reference): {panel.get('polymarket_id')}")
@@ -115,6 +117,7 @@ args = {
     "evidence_uri": uri,
     "dispute_bond_yocto": ONE_NEAR,
     "dispute_bond_near": 1,
+    "escalation_owner": "<APP_ESCALATION_ACCOUNT.testnet>",
     "market_id": 0,
     "polymarket_id": panel.get("polymarket_id"),
     "signers": [{"address": v["signing_address"], "model": v["model"],
