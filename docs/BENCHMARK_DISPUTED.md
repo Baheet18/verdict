@@ -48,3 +48,15 @@ Shared-signer replica policy applied (`verify_signer_replicas`). See run artifac
 - YES: 0
 
 Only 1 market had any YES/NO vote at all; never unanimous. Independent fact sources: 23 markets with 0, 11 with 1 (Wikipedia or resolutionSource). All 102 votes labelled `Hardware + host stack verified` under the shared-signer replica policy.
+
+
+## Matched non-disputed control (round 5)
+Selection method (written to `out/lint_control/selection.json` **before** lint outcomes): same endDate window (>2026-10-17), resolved binary, history without `"disputed"`, 1:1 match to the 34 disputed markets by keyword-bucket + closest log10(volume).
+
+| Set | Flagged |
+|---|---|
+| Disputed | **27 / 34** |
+| Non-disputed control | **26 / 34** |
+| Gap | ≈ 0.029 |
+
+**Not used as a headline.** The gap is below the 0.10 threshold in `scripts/lint_control_set.py`; the linter flags ambiguity patterns that appear in both disputed and clean markets (especially sports boilerplate). Script: `python scripts/lint_control_set.py`.

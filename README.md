@@ -25,11 +25,19 @@ Each signed text `model:sha256(req):sha256(resp)` is stored in `used_signed`; a 
 ## Evidence
 Sources are fetched OUTSIDE the TEE, snapshotted (url, fetched_at, sha256, text) and embedded in the request; integrity is the snapshot hash inside the signed request, not a TEE-side fetch. Sports statistics need 2+ independent sources; a single-source stat line (e.g. an all-zero ESPN line) is treated as missing data → AMBIGUOUS.
 
-## Evidence commit (round 4)
-`commit_evidence(market_id, round, evidence_bundle_hash)` is callable only by a registered relayer or the owner. `submit_verdict` requires the request's evidence hash to equal the committed hash for the current round. Bundles are published content-addressed under `fixtures/evidence/<sha256>.json` via `scripts/publish_evidence.py`.
+## Evidence commit
+`commit_evidence(market_id, round, evidence_bundle_hash, evidence_uri)` is callable only by a registered relayer or the owner, and only after `block_timestamp >= deadline_ns`. Owner may replace the commit while votes are empty; once any vote is cast the commit is frozen. `submit_verdict` is also relayer/owner-only (defense in depth — same trust surface as evidence choice) and requires the request's evidence hash to equal the committed hash. Bundles are published content-addressed under `fixtures/evidence/<sha256>.json` (see `MANIFEST.json`).
+
+## Request-key allowlist (round 5)
+`check_request` accepts **exactly** top-level keys `{model, messages, temperature, seed}` and each message `{role, content}`. Extra keys (`logit_bias`, `guided_choice`, `guided_regex`, `response_format`, `structured_outputs`, `tools`, `tool_choice`, `stop`, `n`, `top_p`, …) are rejected so a committed evidence+header cannot be steered into a forced YES via sampling / guided-decoding params. `max_tokens` is intentionally omitted.
+
+## Curated disputed multi-source subset
+12 of 34 UMA-disputed post-cutoff markets met the real-fetch bar (≥1 official + ≥2 reports). Panel: **0 settles / 12 abstain / 0 invented answers** (same IDs also abstained on thin rules-only evidence). One market had 2 YES + 1 AMBIGUOUS → escalate. See `docs/BENCHMARK_DISPUTED_CURATED.md` + `fixtures/evidence/MANIFEST.json`.
 
 ## Rule linter
 `scripts/rule_linter.py` — transparent regex/heuristic flags (no model). Reports which ambiguity patterns hit; does not predict UMA disputes.
+Matched non-disputed control (same endDate window, keyword-bucket + volume match, selection fixed before lint): **27/34 disputed vs 26/34 non-disputed** flagged — gap ≈ 0.03, **not** used as a marketing claim. See `out/lint_control/summary.json` + `docs/BENCHMARK_DISPUTED.md`.
+Digest drift watch: `python scripts/check_new_digest.py` prints Docker Hub allowlist DIFF only (never auto-pins).
 
 ## Offline / screener mode
 See `docs/SETUP.md`. `python scripts/offline_demo.py` runs `cargo test`, verifies cached real signatures, rebuilds `scoreboard/index.html` from `fixtures/scoreboard_cache/` — no API key.

@@ -13,7 +13,7 @@ code{font-size:.85rem} section{margin:1.5rem 0;padding:1rem;background:#fafafa;b
 </head>
 <body>
 <h1>Verdict scoreboard</h1>
-<p class="meta">Rebuilt from <code>fixtures/scoreboard_cache/</code> at 2026-11-05 12:02 WAT. Offline — no API key required. Only votes labeled <strong>Hardware + host stack verified</strong> are listed.</p>
+<p class="meta">Rebuilt from <code>fixtures/scoreboard_cache/</code> at 2026-11-05 12:45 WAT. Offline — no API key required. Only votes labeled <strong>Hardware + host stack verified</strong> are listed.</p>
 <section>
   <h2>Post-cutoff sports benchmark (cached summary)</h2>
   <p>Markets: 124 · Panel settled: 107 ·
@@ -27,7 +27,21 @@ code{font-size:.85rem} section{margin:1.5rem 0;padding:1rem;background:#fafafa;b
   <p>Markets: 34 · Settled: 0 ·
      Agree UMA: 0 · Disagree: 0 ·
      Escalated: 34 · Cost USD: 0.1008</p>
-  <p>Rule linter flagged 27/34 of these markets before launch (heuristics v1.0).</p>
+  <p>Rule linter flagged 27/34 disputed (matched non-disputed control 26/34 — gap not marketed; see base-rate section).</p>
+</section>
+<section>
+  <h2>Curated multi-source disputed subset</h2>
+  <p>Markets curated: 12 · Settles with evidence: 0 ·
+     Abstains with evidence: 12 · Invented answers: 0 ·
+     Cost USD: 0.1055</p>
+  <p class="note">Official + 2 reputable reports required; skips if fetch bar not met. Source: docs/BENCHMARK_DISPUTED_CURATED.md.</p>
+</section>
+<section>
+  <h2>Rule linter base rate</h2>
+  <p>Disputed flagged: 27/34 ·
+     Matched non-disputed control: 26/34 ·
+     Gap: 0.029 · Use as headline: False</p>
+  <p class="note">Selection fixed before lint outcomes (`out/lint_control/selection.json`). Gap &lt; 0.10 → not marketed.</p>
 </section>
 <section>
   <h2>Cached verified votes (36)</h2>
