@@ -7,7 +7,7 @@ from eth_account import Account; from eth_account.messages import encode_defunct
 
 API = "https://cloud-api.near.ai/v1"; H = {"Authorization": f"Bearer {os.environ['NEARAI_API_KEY']}", "Content-Type": "application/json"}
 UA = {"User-Agent": "VerdictBench/0.1 (hackathon research)"}
-sha = lambda b: hashlib.sha256(b).hexdigest()
+sha = lambda b: hashlib.sha256(b if isinstance(b, bytes) else b.encode()).hexdigest()
 OUT = pathlib.Path("out/bench"); OUT.mkdir(parents=True, exist_ok=True)
 
 # Training cutoffs: none of these vendors publish an exact cutoff; the release/snapshot date is an upper bound.
@@ -23,7 +23,7 @@ def wiki(title):
         "explaintext": 1, "titles": title, "format": "json", "redirects": 1}, timeout=30)
     return r.url, next(iter(r.json()["query"]["pages"].values()))["extract"][:12000]
 def binance_lows(sym, start, end):
-    r = requests.get("https://api.binance.com/api/v3/klines", params={"symbol": sym, "interval": "1d",
+    r = requests.get("https://data-api.binance.vision/api/v3/klines", params={"symbol": sym, "interval": "1d",
         "startTime": start, "endTime": end, "limit": 1000}, timeout=30)
     rows = [f"{datetime.datetime.utcfromtimestamp(k[0]/1000):%Y-%m-%d} low={k[3]} high={k[2]}" for k in r.json()]
     return r.url, "Binance BTCUSDT daily candles (UTC)\n" + "\n".join(rows)
@@ -43,10 +43,8 @@ MARKETS = [  # (polymarket id, disputed?, sources)
   ("515554", False, [lambda: binance_lows("BTCUSDT", 1735689600000, 1743465599000)]),
   ("514267", False, [lambda: wiki("Fall of the Assad regime")]),
 ]
-SYS = ("You resolve prediction markets strictly from the SOURCE SNAPSHOTS provided, applying the market RULES literally. "
-       "Do not use outside knowledge. Reply ONLY with JSON: {\"outcome\":\"YES|NO|TOO_EARLY|AMBIGUOUS\","
-       "\"quotes\":[exact quotes from snapshots],\"reasoning\":\"<=2 sentences\",\"confidence\":0-1}. "
-       "TOO_EARLY = event window not over per snapshots; AMBIGUOUS = snapshots insufficient or rules unclear.")
+# Prompt, header, seed, temperature and strict parsing all come from verdict_request.py (same bytes the contract checks).
+from verdict_request import build_request, evidence_bundle, parse_vote
 
 def retry(fn, n=4):
     import time
@@ -80,22 +78,28 @@ def run():
         pm = requests.get(f"https://gamma-api.polymarket.com/markets/{mid}", timeout=30).json()
         uma = "YES" if json.loads(pm["outcomePrices"])[0] == "1" else "NO"
         snaps = []
+        prev = OUT / f"{mid}__{next(iter(PANEL)).replace('/', '_')}.json"
+        if prev.exists() and json.loads(prev.read_text()).get("label", "").startswith("Hardware"):  # resume: reuse this round's snapshots
+            u = json.loads(json.loads(prev.read_text())["request_raw"])["messages"][1]["content"]
+            snaps = json.loads(u.split("\n", 1)[1])["source_snapshots"]; srcs = []
         for f in srcs:
             url, txt = f(); snaps.append({"url": url, "fetched_at": datetime.datetime.utcnow().isoformat() + "Z", "sha256": sha(txt.encode()), "text": txt})
-        user = json.dumps({"question": pm["question"], "rules": pm["description"], "market_end": pm["endDate"],
-                           "source_snapshots": [{k: s[k] for k in ("url", "fetched_at", "sha256", "text")} for s in snaps]})
+        rules = pm["description"]
+        ev = evidence_bundle(pm["question"], rules, pm["endDate"], snaps)
         votes = []
         for model, meta in PANEL.items():
-            body = json.dumps({"model": model, "temperature": 0, "max_tokens": 12000,
-                               "messages": [{"role": "system", "content": SYS}, {"role": "user", "content": user}]}).encode()
-            r = retry(lambda: requests.post(f"{API}/chat/completions", headers=H, data=body, timeout=900)); raw = r.content; resp = r.json()
-            content = (resp["choices"][0]["message"].get("content") or "").strip()
-            try: v = json.loads(content[content.index("{"): content.rindex("}") + 1])
-            except Exception: v = {"outcome": "AMBIGUOUS", "reasoning": "unparseable output"}
+            body = build_request(model, int(mid), 0, rules, ev)
+            bp = OUT / f"{mid}__{model.replace('/', '_')}.json"; cached = json.loads(bp.read_text()) if bp.exists() else None
+            if cached and cached["request_sha256"] == sha(body):  # resume: identical request already answered + signed
+                raw = cached["response_raw"].encode(); resp = json.loads(raw); r = None
+            else:
+                r = retry(lambda: requests.post(f"{API}/chat/completions", headers=H, data=body, timeout=900)); raw = r.content; resp = r.json()
+            outcome, inner = parse_vote(raw)
+            v = {"outcome": outcome or "INVALID", "quotes": inner.get("quotes", []) if isinstance(inner.get("quotes"), list) else [], "reasoning": str(inner.get("reasoning", ""))}
             u = resp.get("usage", {}); p = prices[model]
             c = u.get("prompt_tokens", 0) * p["inputCostPerToken"]["amount"] / 1e9 + u.get("completion_tokens", 0) * p["outputCostPerToken"]["amount"] / 1e9
-            cost += c
-            sig = retry(lambda: requests.get(f"{API}/signature/{resp['id']}", headers=H, params={"model": model, "signing_algo": "ecdsa"}, timeout=120)).json()
+            c = 0.0 if r is None else c; cost += c
+            sig = cached["signature"] if r is None else retry(lambda: requests.get(f"{API}/signature/{resp['id']}", headers=H, params={"model": model, "signing_algo": "ecdsa"}, timeout=120)).json()
             text = f"{model}:{sha(body)}:{sha(raw)}"
             signer = Account.recover_message(encode_defunct(text=sig["text"]), signature=sig["signature"]).lower() if sig.get("signature") else None
             sig_ok = signer is not None and sig["text"] == text and signer == sig["signing_address"].lower() and signer in att[model]["attested"]
@@ -107,8 +111,8 @@ def run():
                     matched = entry["signing_address"].lower() in att[model]["verified"]
                 except Exception as e:
                     print(f"  [match] {model} signer {signer}: {type(e).__name__}: {str(e)[:100]}")
-            label = "Verified" if sig_ok and matched else ("Signature valid · hardware check pending" if sig_ok else "UNVERIFIED")
-            votes.append({"model": model, "outcome": str(v.get("outcome", "AMBIGUOUS")).upper(), "quotes": v.get("quotes", [])[:2],
+            label = "Hardware + host stack verified" if sig_ok and matched else ("Signature valid · hardware check pending" if sig_ok else "UNVERIFIED")
+            votes.append({"model": model, "outcome": v["outcome"], "quotes": v.get("quotes", [])[:2],
                           "reasoning": v.get("reasoning", ""), "label": label, "signer": signer, "cost_usd": round(c, 5)})
             bundle = {"market_id": mid, "model": model, "request_raw": body.decode(), "request_sha256": sha(body),
                       "response_raw": raw.decode(), "response_sha256": sha(raw), "signature": sig, "attestation_report_sha256": att[model]["report_sha256"],
