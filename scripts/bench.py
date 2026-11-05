@@ -14,7 +14,7 @@ OUT = pathlib.Path("out/bench"); OUT.mkdir(parents=True, exist_ok=True)
 PANEL = {
   "Qwen/Qwen3.8-27B":                    {"family": "Qwen",     "cutoff": "unpublished; <= 2026 release"},
   "deepseek-ai/DeepSeek-V4.1-Flash-1017":{"family": "DeepSeek", "cutoff": "unpublished; snapshot 2026-10-17 is upper bound"},
-  "moonshotai/kimi-k2.6":                {"family": "Kimi",     "cutoff": "unpublished; <= 2026 release"},
+  "z-ai/glm-5.3-flash":                {"family": "GLM",     "cutoff": "unpublished; <= 2026 release"},
 }
 CUTOFF_SPLIT = "2026-10-17"  # markets resolving after this are post-cutoff for every panel model
 
@@ -48,6 +48,17 @@ SYS = ("You resolve prediction markets strictly from the SOURCE SNAPSHOTS provid
        "\"quotes\":[exact quotes from snapshots],\"reasoning\":\"<=2 sentences\",\"confidence\":0-1}. "
        "TOO_EARLY = event window not over per snapshots; AMBIGUOUS = snapshots insufficient or rules unclear.")
 
+def retry(fn, n=4):
+    import time
+    for i in range(n):
+        try:
+            r = fn()
+            if r.status_code < 500 and r.status_code != 429: return r
+            print(f"  [retry] HTTP {r.status_code}")
+        except requests.exceptions.RequestException as e: print(f"  [retry] {type(e).__name__}")
+        if i == n - 1: raise RuntimeError("retries exhausted")
+        time.sleep(10 * 2 ** i)
+
 def attest(model):
     nonce = secrets.token_hex(32)
     att = requests.get(f"{API}/attestation/report", headers=H, params={"model": model, "signing_algo": "ecdsa", "nonce": nonce}, timeout=90).json()
@@ -77,14 +88,14 @@ def run():
         for model, meta in PANEL.items():
             body = json.dumps({"model": model, "temperature": 0, "max_tokens": 12000,
                                "messages": [{"role": "system", "content": SYS}, {"role": "user", "content": user}]}).encode()
-            r = requests.post(f"{API}/chat/completions", headers=H, data=body, timeout=300); raw = r.content; resp = r.json()
+            r = retry(lambda: requests.post(f"{API}/chat/completions", headers=H, data=body, timeout=900)); raw = r.content; resp = r.json()
             content = (resp["choices"][0]["message"].get("content") or "").strip()
             try: v = json.loads(content[content.index("{"): content.rindex("}") + 1])
             except Exception: v = {"outcome": "AMBIGUOUS", "reasoning": "unparseable output"}
             u = resp.get("usage", {}); p = prices[model]
             c = u.get("prompt_tokens", 0) * p["inputCostPerToken"]["amount"] / 1e9 + u.get("completion_tokens", 0) * p["outputCostPerToken"]["amount"] / 1e9
             cost += c
-            sig = requests.get(f"{API}/signature/{resp['id']}", headers=H, params={"model": model, "signing_algo": "ecdsa"}, timeout=60).json()
+            sig = retry(lambda: requests.get(f"{API}/signature/{resp['id']}", headers=H, params={"model": model, "signing_algo": "ecdsa"}, timeout=120)).json()
             text = f"{model}:{sha(body)}:{sha(raw)}"
             signer = Account.recover_message(encode_defunct(text=sig["text"]), signature=sig["signature"]).lower() if sig.get("signature") else None
             sig_ok = signer is not None and sig["text"] == text and signer == sig["signing_address"].lower() and signer in att[model]["attested"]

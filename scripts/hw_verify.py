@@ -22,13 +22,18 @@ def verify_tdx(m, nonce):
     pk = bytes.fromhex(m["signing_public_key"])[-64:]
     check(keccak(pk)[-20:].hex() == addr, "signing_public_key hashes to signing_address")
     # Replay event log -> RTMR0-3 must match quote; ties compose (docker images) to hardware
-    tcb = m["info"]["tcb_info"]; el = tcb["event_log"]
-    el = json.loads(el) if isinstance(el, str) else el
-    for i in range(4):
+    # Any candidate log is acceptable iff it replays to the quote's RTMRs (the quote is the root of trust).
+    # NEAR-native Qwen/DeepSeek: tcb_info.event_log replays; GLM: top-level event_log (has extra RTMR3 events).
+    tcb = m["info"]["tcb_info"]
+    def _rep(el, i):
         r = b"\0" * 48
         for e in el:
             if e["imr"] == i: r = hashlib.sha384(r + bytes.fromhex(e["digest"])).digest()
-        check(r.hex() == td[f"rt_mr{i}"].lower(), f"event log replays to RTMR{i}")
+        return r.hex()
+    cands = [x for x in (tcb.get("event_log"), m.get("event_log")) if x]
+    cands = [json.loads(x) if isinstance(x, str) else x for x in cands]
+    el = next((c for c in cands if all(_rep(c, i) == td[f"rt_mr{i}"].lower() for i in range(4))), None)
+    check(el is not None, "event log replays to RTMR0-3")
     ch = next(e["event_payload"] for e in el if e["imr"] == 3 and e["event"] == "compose-hash")
     check(ch == tcb["compose_hash"] == hashlib.sha256(tcb["app_compose"].encode()).hexdigest(),
           f"compose_hash {ch[:16]}.. = sha256(app_compose) and is measured in RTMR3")
