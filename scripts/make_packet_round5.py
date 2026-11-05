@@ -59,11 +59,12 @@ digest_diff = rd("out/check_new_digest/diff.json")
 cr = rust_fn("check_request")
 ce = rust_fn("commit_evidence")
 sv = rust_fn("submit_verdict")
+olr = rust_fn("only_relayer")
 po = rust_fn("parse_outcome")
 vsr = py_fn("scripts/hw_verify.py", "verify_signer_replicas")
 assert "forbidden request key" in cr
 assert "evidence_uri" in ce
-assert "relayer or owner only" in sv
+assert "only_relayer" in sv
 assert vsr != "(missing)" and "def verify_signer_replicas" in vsr
 
 out = f"""# Verdict — review packet for Claude (round 5)
@@ -79,6 +80,9 @@ Top-level keys MUST be exactly `{{model, messages, temperature, seed}}` (max_tok
 Each message MUST be exactly `{{role, content}}`. User content = canonical header + `\\n` + evidence.
 Forbidden-key rejection tests (one each): logit_bias, guided_choice, guided_regex, response_format, structured_outputs, tools, tool_choice, stop, n, top_p (+ forbidden message key name).
 Defense in depth: `submit_verdict` is relayer/owner only (same trust as `commit_evidence`).
+```rust
+{olr}
+```
 
 ## 2. commit_evidence — deadline + owner replace + evidence_uri
 ```rust
