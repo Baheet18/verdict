@@ -78,6 +78,33 @@ def replay_rtmr3_near(event_log) -> str:
         r = hashlib.sha384(r + digest).digest()
     return r.hex()
 
+INSTANCE_LABEL_RE = re.compile(r"^(\s*- INSTANCE_LABEL=)(gpu\d+)$", re.M)
+
+def normalize_app_compose(app_compose: str):
+    """Replace the single per-node INSTANCE_LABEL value with a placeholder so one pin covers every node.
+
+    Fail closed unless the docker_compose_file contains EXACTLY one `- INSTANCE_LABEL=gpuNN` line and the
+    raw app_compose has no other `INSTANCE_LABEL=` assignment (a comment mentions the name). Returns (normalized_string, label).
+    """
+    obj = json.loads(app_compose)
+    yml = obj.get("docker_compose_file") or ""
+    if app_compose.count("INSTANCE_LABEL=") != 1:
+        raise AssertionError(f"INSTANCE_LABEL= must appear exactly once in app_compose (got {app_compose.count('INSTANCE_LABEL=')})")
+    ms = list(INSTANCE_LABEL_RE.finditer(yml))
+    if len(ms) != 1:
+        raise AssertionError("INSTANCE_LABEL line not of form '- INSTANCE_LABEL=gpu<digits>'")
+    label = ms[0].group(2)
+    needle = f"INSTANCE_LABEL={label}"
+    norm = app_compose.replace(needle, "INSTANCE_LABEL=<INSTANCE_LABEL>")
+    return norm, label
+
+def normalized_compose_hash(app_compose: str):
+    norm, label = normalize_app_compose(app_compose)
+    return hashlib.sha256(norm.encode("utf-8")).hexdigest(), label
+
+def rtmr3_event_names(event_log):
+    return [e["event"] for e in _json(event_log) if e.get("imr") == 3]
+
 def find_replaying_event_log(m, td):
     """Pick an event log that replays to the quote's RTMR0-3 (quote is root of trust).
 
@@ -143,14 +170,19 @@ def verify_tdx(m, nonce, model: str | None = None):
         f"compose_hash {ch[:16]}.. = sha256(app_compose) and is measured in RTMR3",
     )
     check(td["mr_td"].lower() == tcb["mrtd"].lower(), "MRTD matches tcb_info")
-    check(tcb["os_image_hash"].lower() == host["os_image_hash"]["value"].lower(),
-          f"os_image_hash pinned to published {host['os_image_hash']['published_as']}")
+    names = rtmr3_event_names(el)
+    print(f"  --  RTMR3 events (replayed): {', '.join(names)}")
+    os_evs = [e["event_payload"].lower() for e in el if e["imr"] == 3 and e["event"] == "os-image-hash"]
+    check(len(os_evs) == 1, "exactly one os-image-hash event measured in RTMR3")
+    check(os_evs[0] == tcb["os_image_hash"].lower(), "tcb_info.os_image_hash equals the RTMR3-measured os-image-hash event")
+    check(os_evs[0] == host["os_image_hash"]["value"].lower(),
+          f"RTMR3 os-image-hash pinned to {host['os_image_hash']['source']} {host['os_image_hash']['published_as']}")
 
     # Pin MRTD + RTMR0-2 (observed pins — see allowlist _meta)
     for key, td_key in (("mr_td", "mr_td"), ("rt_mr0", "rt_mr0"), ("rt_mr1", "rt_mr1"), ("rt_mr2", "rt_mr2")):
-        exp = host[key]["value"].lower()
+        exps = [v.lower() for v in ([host[key]["value"]] + host[key].get("also_observed", []))]
         got = td[td_key].lower()
-        check(got == exp, f"{key} matches allowlist ({host[key]['source']}) {exp[:16]}..")
+        check(got in exps, f"{key} {got[:16]}.. matches allowlist ({host[key]['source']}, {len(exps)} value(s))")
 
     compose_name, images, digests = parse_docker_images(app_compose)
     print("  --  docker image digests (compare to published NEAR AI / dstack images):")
@@ -162,9 +194,10 @@ def verify_tdx(m, nonce, model: str | None = None):
     model_key = model or m.get("model_name")
     check(model_key in allow["models"], f"model {model_key} is on the measurement allowlist")
     exp_model = allow["models"][model_key]
+    norm_hash, label = normalized_compose_hash(app_compose)
     check(
-        compose_hash == exp_model["compose_hash"],
-        f"compose_hash pinned for {model_key} ({compose_hash[:16]}..)",
+        norm_hash in exp_model["normalized_compose_hashes"],
+        f"normalized compose hash (INSTANCE_LABEL={label} removed) pinned for {model_key} ({norm_hash[:16]}..); raw hash still bound to MRCONFIGID above",
     )
     check(
         compose_name == exp_model["compose_name"],
@@ -174,8 +207,12 @@ def verify_tdx(m, nonce, model: str | None = None):
     return {
         "tcb_status": tcb_status,
         "compose_hash": ch,
+        "normalized_compose_hash": norm_hash,
+        "instance_label": label,
+        "rtmr3_events": names,
+        "label": "Hardware + host stack verified",
         "compose_name": compose_name,
-        "os_image_hash": tcb["os_image_hash"],
+        "os_image_hash": os_evs[0],
         "mr_td": td["mr_td"],
         "docker_image_digests": digests,
         "docker_images": images,

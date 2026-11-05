@@ -22,7 +22,7 @@ expect_fail(lambda: hw_verify.normalize_nonce("a" * 63), "64 lowercase hex")
 al = hw_verify.load_allowlist()
 for m in ("Qwen/Qwen3.8-27B", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "z-ai/glm-5.3-flash"):
     assert m in al["models"], m
-    assert len(al["models"][m]["compose_hash"]) == 64
+    assert all(len(h) == 64 for h in al["models"][m]["normalized_compose_hashes"])
 print("  ok  allowlist has 3 panel models")
 assert al["shared_host_images"]["os_image_hash"]["source"] == "published"
 assert al["shared_host_images"]["mr_td"]["source"] == "observed"
@@ -60,5 +60,31 @@ el = [{
 h = hw_verify.replay_rtmr3_near(el)
 assert len(h) == 96
 print("  ok  RTMR3 NEAR replay on empty digest")
+
+# normalized compose hash on the real saved samples (out/attest_samples, gitignored; skipped if absent)
+samples = sorted((pathlib.Path(__file__).resolve().parent.parent / "out" / "attest_samples").glob("*.json"))
+for f in samples:
+    d = json.loads(f.read_text())
+    for m in d["att"].get("model_attestations") or []:
+        tcb = hw_verify._json(m["info"]["tcb_info"])
+        ac = tcb["app_compose"]
+        nh, label = hw_verify.normalized_compose_hash(ac)
+        assert nh in al["models"][m["model_name"]]["normalized_compose_hashes"], (f, nh)
+        names = hw_verify.rtmr3_event_names(tcb.get("event_log") or m.get("event_log"))
+        assert "os-image-hash" in names and "compose-hash" in names
+        osv = [e["event_payload"] for e in hw_verify._json(tcb.get("event_log") or m["event_log"]) if e.get("imr") == 3 and e["event"] == "os-image-hash"]
+        assert osv == [tcb["os_image_hash"]], "os-image-hash event != tcb_info"
+        # any other edit still changes the normalized hash
+        tampered = ac.replace("compose-manager", "compose-manageR", 1)
+        assert hw_verify.normalized_compose_hash(tampered)[0] != nh
+        # a second INSTANCE_LABEL= assignment is rejected
+        two = ac.replace(f"INSTANCE_LABEL={label}", f"INSTANCE_LABEL={label}\\n      - INSTANCE_LABEL=gpu99")
+        expect_fail(lambda: hw_verify.normalize_app_compose(two), "exactly once")
+        # label must look like gpuNN
+        bad = ac.replace(f"INSTANCE_LABEL={label}", "INSTANCE_LABEL=evil")
+        expect_fail(lambda: hw_verify.normalize_app_compose(bad), "INSTANCE_LABEL line not of form")
+        print(f"  ok  {m['model_name']}: normalized compose {nh[:16]}.. pinned (label {label}); RTMR3 events: {', '.join(names)}")
+if not samples:
+    print("  --  (no out/attest_samples; sample-based checks skipped)")
 
 print("ALL UNIT CHECKS PASSED")

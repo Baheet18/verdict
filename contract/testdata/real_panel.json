@@ -1,0 +1,81 @@
+{
+ "question": "Did it rain (>=1mm) at Ikeja on 2026-11-03?",
+ "rules": "Resolves YES if the source snapshot reports >=1mm rainfall at Ikeja for 2026-11-03, NO if it reports <1mm. Otherwise AMBIGUOUS.",
+ "prompt_template_hash": "fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f",
+ "votes": [
+  {
+   "model": "Qwen/Qwen3.8-27B",
+   "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+   "request_raw": "{\"model\": \"Qwen/Qwen3.8-27B\", \"temperature\": 0, \"seed\": 1114, \"max_tokens\": 4000, \"messages\": [{\"role\": \"system\", \"content\": \"You resolve prediction markets strictly from the SOURCE SNAPSHOTS in the evidence bundle, applying the market RULES literally. Do not use outside knowledge. Reply ONLY with one JSON object, no prose and no code fence: {\\\"outcome\\\":\\\"YES|NO|TOO_EARLY|AMBIGUOUS\\\",\\\"quotes\\\":[exact quotes from snapshots],\\\"reasoning\\\":\\\"<=2 sentences\\\",\\\"confidence\\\":0-1}. TOO_EARLY = event window not over per snapshots. AMBIGUOUS = snapshots insufficient, contradictory, or rules unclear. Data-quality rules: (1) a stat line that is all zeros from a single source is MISSING DATA, not a real zero. (2) For sports statistics (player/team stats, scores) you need at least two independent sources that agree; if fewer than two independent sources report the needed number, or they disagree, answer AMBIGUOUS.\"}, {\"role\": \"user\", \"content\": \"VERDICT/1 market_id=0 round=0 rules_hash=b32b1c0f08cf0739b4d493353cd0dede703d2d599f076e3d66852097a2b83ff2 prompt_template_hash=fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f evidence_bundle_hash=9e9bc4f0715b3fc6220790a8bf107538b1de99e26d7795a34d6a499aca925555\\n{\\\"market_end\\\": \\\"2026-11-03T23:59:59Z\\\", \\\"question\\\": \\\"Did it rain (>=1mm) at Ikeja on 2026-11-03?\\\", \\\"rules\\\": \\\"Resolves YES if the source snapshot reports >=1mm rainfall at Ikeja for 2026-11-03, NO if it reports <1mm. Otherwise AMBIGUOUS.\\\", \\\"source_snapshots\\\": [{\\\"fetched_at\\\": \\\"2026-11-05T10:00:00Z\\\", \\\"sha256\\\": \\\"cc552165952999bfcb75c35d4d35a01022ced35df2556ac01c91af55aa0b6415\\\", \\\"text\\\": \\\"Daily weather summary, Ikeja (Lagos), 2026-11-03: total precipitation 4.2 mm. Source A.\\\", \\\"url\\\": \\\"fixture://source-a\\\"}, {\\\"fetched_at\\\": \\\"2026-11-05T10:00:00Z\\\", \\\"sha256\\\": \\\"d6e0b0ccd1e6049066e338258febdbf52e362ac279a8f007096b5f135c282f4b\\\", \\\"text\\\": \\\"Ikeja station 2026-11-03 rainfall: 4.2mm (thunderstorms in the afternoon). Source B.\\\", \\\"url\\\": \\\"fixture://source-b\\\"}]}\"}]}",
+   "response_raw": "{\"id\":\"ee32c1470f9b4b1b8c9a37c7bf94f94d\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\n{\\\"outcome\\\":\\\"YES\\\",\\\"quotes\\\":[\\\"total precipitation 4.2 mm.\\\",\\\"Ikeja station 2026-11-03 rainfall: 4.2mm\\\"],\\\"reasoning\\\":\\\"Two independent source snapshots report 4.2 mm rainfall at Ikeja on 2026-11-03, which is >=1 mm. Therefore the market resolves YES.\\\",\\\"confidence\\\":1}\",\"reasoning_content\":\"We need answer user's request. Need produce JSON only. Need analyze. Market question: Did it rain (>=1mm) at Ikeja on 2026-11-03? Rules: YES if source snapshot reports >=1mm rainfall at Ikeja for date, NO if <1mm, otherwise AMBIGUOUS. Source snapshots: two independent sources both report 4.2 mm. Need outcome YES. Quotes exact from snapshots. Reasoning <=2 sentences. Confidence maybe 1. Need ensure JSON only no code fence. Need maybe include quotes array with exact text? Could quote relevant parts. Exact quotes from snapshots: \\\"total precipitation 4.2 mm.\\\" and \\\"Ikeja station 2026-11-03 rainfall: 4.2mm\\\". Need ensure exact. The first text: \\\"Daily weather summary, Ikeja (Lagos), 2026-11-03: total precipitation 4.2 mm. Source A.\\\" Could quote \\\"total precipitation 4.2 mm.\\\" second \\\"Ikeja station 2026-11-03 rainfall: 4.2mm\\\". Both agree >=1. Outcome YES. Confidence 1.\\n\"},\"finish_reason\":\"stop\",\"logprobs\":null,\"matched_stop\":248046}],\"model\":\"Qwen/Qwen3.8-27B\",\"created\":1793869625,\"usage\":{\"prompt_tokens\":807,\"total_tokens\":1151,\"completion_tokens\":344,\"prompt_tokens_details\":{\"cached_tokens\":768},\"reasoning_tokens\":258,\"completion_tokens_details\":{\"reasoning_tokens\":258}}}",
+   "signature": "981c0a60eedd13660b255aca37dcf1d8af99aa6a960feab1d077bb41c170dfe347297e6f1f139cc223c136fc2d97a47f9c3cac6ddc7ab4dc2ab7ec49af08c19a1b",
+   "text": "Qwen/Qwen3.8-27B:3b60a804584f85237573bd9079c8bea08d8e15e5e9500a29bb23ee1096ba6659:c6ef6a50b14a58a20c29662d01827bb8a8dae601b19799e79af7c6288a212b9c",
+   "parsed_outcome": "YES",
+   "attestation_report_sha256": "98cb567133df7d0fcdbd66c163c4a73280ed8d59114da9a257aaaeb33f8a83a6",
+   "hw_label": "Hardware + host stack verified",
+   "rtmr3_events": [
+    "system-preparing",
+    "app-id",
+    "compose-hash",
+    "instance-id",
+    "boot-mr-done",
+    "mr-kms",
+    "os-image-hash",
+    "key-provider",
+    "storage-fs",
+    "system-ready"
+   ],
+   "normalized_compose_hash": "e3a78905d7f4a08c88210867c897fc22b0c1fd9a67230815fba74d6e8c705322"
+  },
+  {
+   "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+   "request_raw": "{\"model\": \"deepseek-ai/DeepSeek-V4.1-Flash-1017\", \"temperature\": 0, \"seed\": 1114, \"max_tokens\": 4000, \"messages\": [{\"role\": \"system\", \"content\": \"You resolve prediction markets strictly from the SOURCE SNAPSHOTS in the evidence bundle, applying the market RULES literally. Do not use outside knowledge. Reply ONLY with one JSON object, no prose and no code fence: {\\\"outcome\\\":\\\"YES|NO|TOO_EARLY|AMBIGUOUS\\\",\\\"quotes\\\":[exact quotes from snapshots],\\\"reasoning\\\":\\\"<=2 sentences\\\",\\\"confidence\\\":0-1}. TOO_EARLY = event window not over per snapshots. AMBIGUOUS = snapshots insufficient, contradictory, or rules unclear. Data-quality rules: (1) a stat line that is all zeros from a single source is MISSING DATA, not a real zero. (2) For sports statistics (player/team stats, scores) you need at least two independent sources that agree; if fewer than two independent sources report the needed number, or they disagree, answer AMBIGUOUS.\"}, {\"role\": \"user\", \"content\": \"VERDICT/1 market_id=0 round=0 rules_hash=b32b1c0f08cf0739b4d493353cd0dede703d2d599f076e3d66852097a2b83ff2 prompt_template_hash=fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f evidence_bundle_hash=9e9bc4f0715b3fc6220790a8bf107538b1de99e26d7795a34d6a499aca925555\\n{\\\"market_end\\\": \\\"2026-11-03T23:59:59Z\\\", \\\"question\\\": \\\"Did it rain (>=1mm) at Ikeja on 2026-11-03?\\\", \\\"rules\\\": \\\"Resolves YES if the source snapshot reports >=1mm rainfall at Ikeja for 2026-11-03, NO if it reports <1mm. Otherwise AMBIGUOUS.\\\", \\\"source_snapshots\\\": [{\\\"fetched_at\\\": \\\"2026-11-05T10:00:00Z\\\", \\\"sha256\\\": \\\"cc552165952999bfcb75c35d4d35a01022ced35df2556ac01c91af55aa0b6415\\\", \\\"text\\\": \\\"Daily weather summary, Ikeja (Lagos), 2026-11-03: total precipitation 4.2 mm. Source A.\\\", \\\"url\\\": \\\"fixture://source-a\\\"}, {\\\"fetched_at\\\": \\\"2026-11-05T10:00:00Z\\\", \\\"sha256\\\": \\\"d6e0b0ccd1e6049066e338258febdbf52e362ac279a8f007096b5f135c282f4b\\\", \\\"text\\\": \\\"Ikeja station 2026-11-03 rainfall: 4.2mm (thunderstorms in the afternoon). Source B.\\\", \\\"url\\\": \\\"fixture://source-b\\\"}]}\"}]}",
+   "response_raw": "{\"id\":\"chatcmpl-78069550-cd83-4b13-9c20-3784e5b9c6da\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"outcome\\\":\\\"YES\\\",\\\"quotes\\\":[\\\"Daily weather summary, Ikeja (Lagos), 2026-11-03: total precipitation 4.2 mm. Source A.\\\",\\\"Ikeja station 2026-11-03 rainfall: 4.2mm (thunderstorms in the afternoon). Source B.\\\"],\\\"reasoning\\\":\\\"Two independent snapshots both report 4.2 mm rainfall at Ikeja for 2026-11-03, which is >=1mm, and the event window has passed.\\\",\\\"confidence\\\":0.98}\",\"reasoning_content\":\"The market end is 2026-11-03, snapshots fetched 2026-11-05, so window is over. Two independent sources agree 4.2mm >= 1mm. YES.\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"model\":\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"created\":1793869638,\"usage\":{\"prompt_tokens\":669,\"total_tokens\":832,\"completion_tokens\":163,\"prompt_tokens_details\":{\"cached_tokens\":0,\"created_cache_tokens\":640},\"completion_tokens_details\":{\"reasoning_tokens\":44}},\"system_fingerprint\":\"vllm-0.32.0-dp4-ep-94283194\"}",
+   "signature": "ff0939804fd51e5fd458bd7740e226a2679e00bf75570e2ac74bdf3fba90714d60e7e8a1304b9dff6315d0a6693edcbe5b3fc3841dc9c1ba8ae4ce098fca64ec1b",
+   "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:a356abeacd7203460a9e083997621befa783f0aa6b06e89a6d9c9dd635e6a968:217140ef764dc1f93aaf703b0ca25d34285c97cda1c191b4dbc1656239615ae2",
+   "parsed_outcome": "YES",
+   "attestation_report_sha256": "8c88b1b0f5230707062b5a12661832e2747b4860231dba83dab2ae398a318f58",
+   "hw_label": "Hardware + host stack verified",
+   "rtmr3_events": [
+    "system-preparing",
+    "app-id",
+    "compose-hash",
+    "instance-id",
+    "boot-mr-done",
+    "mr-kms",
+    "os-image-hash",
+    "key-provider",
+    "storage-fs",
+    "system-ready"
+   ],
+   "normalized_compose_hash": "cac94e2102327a4ca43554915e916c53a9d18fa15e6692e109a85e88ebe2abff"
+  },
+  {
+   "model": "z-ai/glm-5.3-flash",
+   "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+   "request_raw": "{\"model\": \"z-ai/glm-5.3-flash\", \"temperature\": 0, \"seed\": 1114, \"max_tokens\": 4000, \"messages\": [{\"role\": \"system\", \"content\": \"You resolve prediction markets strictly from the SOURCE SNAPSHOTS in the evidence bundle, applying the market RULES literally. Do not use outside knowledge. Reply ONLY with one JSON object, no prose and no code fence: {\\\"outcome\\\":\\\"YES|NO|TOO_EARLY|AMBIGUOUS\\\",\\\"quotes\\\":[exact quotes from snapshots],\\\"reasoning\\\":\\\"<=2 sentences\\\",\\\"confidence\\\":0-1}. TOO_EARLY = event window not over per snapshots. AMBIGUOUS = snapshots insufficient, contradictory, or rules unclear. Data-quality rules: (1) a stat line that is all zeros from a single source is MISSING DATA, not a real zero. (2) For sports statistics (player/team stats, scores) you need at least two independent sources that agree; if fewer than two independent sources report the needed number, or they disagree, answer AMBIGUOUS.\"}, {\"role\": \"user\", \"content\": \"VERDICT/1 market_id=0 round=0 rules_hash=b32b1c0f08cf0739b4d493353cd0dede703d2d599f076e3d66852097a2b83ff2 prompt_template_hash=fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f evidence_bundle_hash=9e9bc4f0715b3fc6220790a8bf107538b1de99e26d7795a34d6a499aca925555\\n{\\\"market_end\\\": \\\"2026-11-03T23:59:59Z\\\", \\\"question\\\": \\\"Did it rain (>=1mm) at Ikeja on 2026-11-03?\\\", \\\"rules\\\": \\\"Resolves YES if the source snapshot reports >=1mm rainfall at Ikeja for 2026-11-03, NO if it reports <1mm. Otherwise AMBIGUOUS.\\\", \\\"source_snapshots\\\": [{\\\"fetched_at\\\": \\\"2026-11-05T10:00:00Z\\\", \\\"sha256\\\": \\\"cc552165952999bfcb75c35d4d35a01022ced35df2556ac01c91af55aa0b6415\\\", \\\"text\\\": \\\"Daily weather summary, Ikeja (Lagos), 2026-11-03: total precipitation 4.2 mm. Source A.\\\", \\\"url\\\": \\\"fixture://source-a\\\"}, {\\\"fetched_at\\\": \\\"2026-11-05T10:00:00Z\\\", \\\"sha256\\\": \\\"d6e0b0ccd1e6049066e338258febdbf52e362ac279a8f007096b5f135c282f4b\\\", \\\"text\\\": \\\"Ikeja station 2026-11-03 rainfall: 4.2mm (thunderstorms in the afternoon). Source B.\\\", \\\"url\\\": \\\"fixture://source-b\\\"}]}\"}]}",
+   "response_raw": "{\"id\":\"dc01cf2d38c047ee91fac54369abef8e\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"outcome\\\":\\\"YES\\\",\\\"quotes\\\":[\\\"Daily weather summary, Ikeja (Lagos), 2026-11-03: total precipitation 4.2 mm. Source A.\\\",\\\"Ikeja station 2026-11-03 rainfall: 4.2mm (thunderstorms in the afternoon). Source B.\\\"],\\\"reasoning\\\":\\\"Two independent source snapshots agree that Ikeja recorded 4.2mm of rainfall on 2026-11-03, which meets the >=1mm threshold in the rules.\\\",\\\"confidence\\\":0.97}\",\"reasoning_content\":\"Two independent sources agree: 4.2mm rainfall at Ikeja on 2026-11-03, which is >=1mm. Rules: YES if >=1mm. Both sources agree. Answer YES.\"},\"finish_reason\":\"stop\",\"logprobs\":null,\"matched_stop\":154827}],\"model\":\"z-ai/glm-5.3-flash\",\"created\":1793869643,\"usage\":{\"prompt_tokens\":657,\"total_tokens\":814,\"completion_tokens\":157,\"prompt_tokens_details\":null,\"reasoning_tokens\":45,\"completion_tokens_details\":{\"reasoning_tokens\":45}}}",
+   "signature": "cd54d474e6dc64fce4c838bb00b65d42f85702d815256eb34b4bd69fe7ed6eaa5e9f27964a1a1840ef6c95d82aa46fec8bbe1e49d7e60e46849e7d3fc9c5e6011b",
+   "text": "z-ai/glm-5.3-flash:aad87300bb58e772512d4d0e71e750bb91e90894f496468b386f5311649f5208:96ab4dac24a96931416e8952d6ef595d814e6a616782fe56d5b87273501a9bb9",
+   "parsed_outcome": "YES",
+   "attestation_report_sha256": "3cb028fa5054e6b210b2eaffca98b340852a6bdde9626edbc37519ffaf65c75d",
+   "hw_label": "Hardware + host stack verified",
+   "rtmr3_events": [
+    "system-preparing",
+    "app-id",
+    "compose-hash",
+    "instance-id",
+    "boot-mr-done",
+    "mr-kms",
+    "os-image-hash",
+    "key-provider",
+    "storage-fs",
+    "system-ready",
+    "nearai-replica-report-key-v1",
+    "nearai-replica-report-key-v1"
+   ],
+   "normalized_compose_hash": "cac94e2102327a4ca43554915e916c53a9d18fa15e6692e109a85e88ebe2abff"
+  }
+ ]
+}

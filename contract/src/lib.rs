@@ -1,10 +1,9 @@
 //! Verdict: prediction markets settled by TEE-attested AI resolvers.
 //! A verdict is accepted only if its ECDSA signature (EIP-191 over
-//! "<model>:<sha256(request)>:<sha256(response)>") recovers to a registered,
-//! hardware-attested signer, and a supermajority of distinct signers agree.
-use near_sdk::borsh::{BorshDeserialize, BorshSerialize};
-use near_sdk::serde::{Deserialize, Serialize};
-use near_sdk::store::{IterableSet, LookupMap, Vector};
+//! "<model>:<sha256(request_raw)>:<sha256(response_raw)>") recovers to a registered,
+//! hardware-attested signer registered for that model, and ALL resolvers agree.
+use near_sdk::borsh::BorshSerialize;
+use near_sdk::store::{IterableMap, LookupMap, LookupSet, Vector};
 use near_sdk::{env, near, require, AccountId, BorshStorageKey, NearToken, PanicOnDefault, Promise};
 
 #[near(serializers=[borsh, json])]
@@ -23,43 +22,73 @@ pub enum Status {
 }
 
 #[near(serializers=[borsh, json])]
+#[derive(Clone, Debug, PartialEq)]
+pub struct Vote {
+    pub signer: String,
+    pub model: String,
+    pub outcome: Outcome,
+    pub request_sha256: String,
+    pub response_sha256: String,
+}
+
+#[near(serializers=[borsh, json])]
 #[derive(Clone, Debug)]
 pub struct Market {
     pub question: String,
     pub rules: String,
+    /// sha256(rules), computed on-chain at creation. Every signed request must carry it in its header.
+    pub rules_hash: String,
+    /// sha256 of the exact system prompt (resolver instructions), committed at creation.
+    pub prompt_template_hash: String,
     pub sources: Vec<String>,
-    pub model: String,
-    pub resolvers: Vec<String>, // lowercase 0x-addresses
+    pub resolvers: Vec<String>, // lowercase 0x-addresses; each maps to exactly one model in `signers`
     pub threshold: u32,
     pub deadline_ns: u64,
     pub dispute_window_ns: u64,
     pub dispute_bond: NearToken,
     pub yes_pool: NearToken,
     pub no_pool: NearToken,
-    pub votes: Vec<(String, Outcome, String)>, // (signer, outcome, signed text)
+    /// Incremented when a unanimous TOO_EARLY clears the votes; requests must name the current round.
+    pub round: u32,
+    /// evidence_bundle_hash fixed by the first accepted vote of this round; all later votes must match.
+    pub round_evidence_hash: Option<String>,
+    pub votes: Vec<Vote>,
     pub status: Status,
 }
 
 #[derive(BorshStorageKey, BorshSerialize)]
 #[borsh(crate = "near_sdk::borsh")]
-enum Key { Signers, Markets, Stakes, Attestations }
+enum Key { Signers, Markets, Stakes, Attestations, UsedSigned }
 
 #[near(contract_state)]
 #[derive(PanicOnDefault)]
 pub struct Verdict {
     owner: AccountId,
-    signers: IterableSet<String>,
+    /// signer address -> the ONE model name that TEE key serves (from its attestation entry)
+    signers: IterableMap<String, String>,
     /// signer -> sha256 of the attestation report JSON the owner verified before registering
     attestations: LookupMap<String, String>,
     markets: Vector<Market>,
     stakes: LookupMap<(u32, AccountId), (NearToken, NearToken)>,
+    /// sha256(signed text) of every accepted vote, forever: a signed response can be counted once.
+    used_signed: LookupSet<Vec<u8>>,
 }
+
+/// Fixed sampling seed every resolver request must carry (with temperature 0).
+pub const REQUIRED_SEED: u64 = 1_114;
+pub const HEADER_PREFIX: &str = "VERDICT/1";
 
 fn hex20(a: &str) -> String {
     let a = a.trim_start_matches("0x").to_lowercase();
     require!(a.len() == 40 && hex::decode(&a).is_ok(), "bad address");
     format!("0x{a}")
 }
+fn hex32(h: &str, what: &str) -> String {
+    let h = h.to_lowercase();
+    if !(h.len() == 64 && hex::decode(&h).is_ok()) { env::panic_str(&format!("bad {what}")); }
+    h
+}
+fn sha_hex(b: &[u8]) -> String { hex::encode(env::sha256_array(b)) }
 
 /// EIP-191 personal_sign recovery -> lowercase 0x address, or None.
 pub fn recover_signer(text: &str, sig_hex: &str) -> Option<String> {
@@ -73,13 +102,66 @@ pub fn recover_signer(text: &str, sig_hex: &str) -> Option<String> {
     Some(format!("0x{}", hex::encode(&env::keccak256_array(&pk)[12..])))
 }
 
-/// Pull outcome out of an OpenAI-style chat completion body.
+/// The canonical first line of the user message. Everything after the first '\n' is the evidence
+/// bundle, and evidence_bundle_hash = sha256(those bytes).
+pub fn canonical_header(market_id: u32, round: u32, rules_hash: &str, prompt_template_hash: &str, evidence_bundle_hash: &str) -> String {
+    format!("{HEADER_PREFIX} market_id={market_id} round={round} rules_hash={rules_hash} prompt_template_hash={prompt_template_hash} evidence_bundle_hash={evidence_bundle_hash}")
+}
+
+/// Validate the raw chat-completions request body against the market. Returns (model, evidence_bundle_hash).
+/// Panics with a specific reason on any mismatch.
+pub fn check_request(request_raw: &str, market_id: u32, m: &Market) -> (String, String) {
+    let v: serde_json::Value = serde_json::from_str(request_raw).unwrap_or_else(|_| env::panic_str("request_raw is not JSON"));
+    let model = v["model"].as_str().unwrap_or_else(|| env::panic_str("request has no model")).to_string();
+    require!(v["temperature"].as_f64() == Some(0.0), "request temperature must be 0");
+    require!(v["seed"].as_u64() == Some(REQUIRED_SEED), "request seed must be the fixed seed");
+    let msgs = v["messages"].as_array().unwrap_or_else(|| env::panic_str("request has no messages"));
+    require!(msgs.len() == 2, "request must have exactly [system, user] messages");
+    require!(msgs[0]["role"] == "system" && msgs[1]["role"] == "user", "request must have exactly [system, user] messages");
+    let system = msgs[0]["content"].as_str().unwrap_or_else(|| env::panic_str("system content must be a string"));
+    require!(sha_hex(system.as_bytes()) == m.prompt_template_hash, "wrong prompt template");
+    let user = msgs[1]["content"].as_str().unwrap_or_else(|| env::panic_str("user content must be a string"));
+    let (header, evidence) = user.split_once('\n').unwrap_or_else(|| env::panic_str("missing canonical header"));
+    let mut f = std::collections::BTreeMap::new();
+    let mut parts = header.split(' ');
+    require!(parts.next() == Some(HEADER_PREFIX), "missing canonical header");
+    for p in parts {
+        let (k, val) = p.split_once('=').unwrap_or_else(|| env::panic_str("malformed header"));
+        require!(f.insert(k, val).is_none(), "duplicate header field");
+    }
+    require!(f.len() == 5, "malformed header");
+    let get = |k: &str| *f.get(k).unwrap_or_else(|| env::panic_str(&format!("header missing {k}")));
+    require!(get("market_id") == market_id.to_string(), "wrong market_id");
+    require!(get("round") == m.round.to_string(), "wrong round");
+    require!(get("rules_hash") == m.rules_hash, "wrong rules_hash");
+    require!(get("prompt_template_hash") == m.prompt_template_hash, "wrong prompt_template_hash");
+    let ev = get("evidence_bundle_hash");
+    require!(ev.len() == 64 && hex::decode(ev).is_ok() && ev == ev.to_lowercase(), "bad evidence_bundle_hash");
+    require!(sha_hex(evidence.as_bytes()) == ev, "evidence bundle does not hash to header");
+    // Byte-exact canonical form (no extra spaces / reordered fields).
+    require!(header == canonical_header(market_id, m.round, &m.rules_hash, &m.prompt_template_hash, ev), "header not canonical");
+    (model, ev.to_string())
+}
+
+/// Read the outcome from the STRUCTURED assistant message, never by substring search:
+/// exactly one choice, role=assistant, finish_reason=stop, and the whole content (whitespace trimmed,
+/// optionally wrapped in ONE ```json fence) must parse as a JSON object whose "outcome" is exactly
+/// one of YES | NO | TOO_EARLY | AMBIGUOUS. Prose around the JSON => None.
 pub fn parse_outcome(response_raw: &str) -> Option<Outcome> {
     let v: serde_json::Value = serde_json::from_str(response_raw).ok()?;
-    let content = v["choices"][0]["message"]["content"].as_str()?.trim();
-    let start = content.find('{')?; let end = content.rfind('}')?;
-    let inner: serde_json::Value = serde_json::from_str(&content[start..=end]).ok()?;
-    match inner["outcome"].as_str()?.to_uppercase().as_str() {
+    let choices = v["choices"].as_array()?;
+    if choices.len() != 1 { return None; }
+    let c = &choices[0];
+    if c["finish_reason"].as_str()? != "stop" { return None; }
+    let msg = &c["message"];
+    if msg["role"].as_str()? != "assistant" { return None; }
+    let mut content = msg["content"].as_str()?.trim();
+    if let Some(rest) = content.strip_prefix("```json") {
+        content = rest.strip_suffix("```")?.trim();
+    }
+    if !content.starts_with('{') { return None; }
+    let inner: serde_json::Value = serde_json::from_str(content).ok()?;
+    match inner.as_object()?.get("outcome")?.as_str()? {
         "YES" => Some(Outcome::Yes), "NO" => Some(Outcome::No),
         "TOO_EARLY" => Some(Outcome::TooEarly), "AMBIGUOUS" => Some(Outcome::Ambiguous), _ => None,
     }
@@ -89,39 +171,44 @@ pub fn parse_outcome(response_raw: &str) -> Option<Outcome> {
 impl Verdict {
     #[init]
     pub fn new(owner: AccountId) -> Self {
-        Self { owner, signers: IterableSet::new(Key::Signers), attestations: LookupMap::new(Key::Attestations), markets: Vector::new(Key::Markets), stakes: LookupMap::new(Key::Stakes) }
+        Self { owner, signers: IterableMap::new(Key::Signers), attestations: LookupMap::new(Key::Attestations),
+               markets: Vector::new(Key::Markets), stakes: LookupMap::new(Key::Stakes), used_signed: LookupSet::new(Key::UsedSigned) }
     }
 
     fn only_owner(&self) { require!(env::predecessor_account_id() == self.owner, "owner only"); }
 
-    /// Owner registers a signer address after verifying its TDX+GPU attestation off-chain.
-    /// Only the contract owner can register. Policy: run scripts/attest_demo.py (TDX quote + NVIDIA NRAS +
-    /// report_data = address||nonce) first, then register with sha256 of that attestation report JSON.
-    pub fn register_signer(&mut self, address: String, attestation_report_sha256: String) {
+    /// Owner registers a signer address FOR ONE MODEL after verifying its TDX+GPU attestation off-chain
+    /// (scripts/hw_verify.py: the attestation entry with this signing_address must have model_name == model).
+    pub fn register_signer(&mut self, address: String, model: String, attestation_report_sha256: String) {
         self.only_owner();
-        require!(attestation_report_sha256.len() == 64 && hex::decode(&attestation_report_sha256).is_ok(), "bad report hash");
+        require!(!model.is_empty(), "model required");
+        let h = hex32(&attestation_report_sha256, "report hash");
         let a = hex20(&address);
-        self.signers.insert(a.clone());
-        self.attestations.insert(a, attestation_report_sha256.to_lowercase());
+        self.signers.insert(a.clone(), model);
+        self.attestations.insert(a, h);
     }
     pub fn get_signer_attestation(&self, address: String) -> Option<String> { self.attestations.get(&hex20(&address)).cloned() }
+    pub fn get_signer_model(&self, address: String) -> Option<String> { self.signers.get(&hex20(&address)).cloned() }
     pub fn remove_signer(&mut self, address: String) { self.only_owner(); self.signers.remove(&hex20(&address)); }
-    pub fn get_signers(&self) -> Vec<String> { self.signers.iter().cloned().collect() }
+    pub fn get_signers(&self) -> Vec<(String, String)> { self.signers.iter().map(|(a, m)| (a.clone(), m.clone())).collect() }
 
+    /// Commits market_id (the returned index), sha256(rules) and the prompt template hash.
+    /// Auto-verdict requires ALL resolvers to agree (threshold == resolver count).
     #[allow(clippy::too_many_arguments)]
-    pub fn create_market(&mut self, question: String, rules: String, sources: Vec<String>, model: String,
-                         resolvers: Vec<String>, threshold: u32, deadline_ns: u64,
-                         dispute_window_ns: u64, dispute_bond: NearToken) -> u32 {
+    pub fn create_market(&mut self, question: String, rules: String, sources: Vec<String>, prompt_template_hash: String,
+                         resolvers: Vec<String>, deadline_ns: u64, dispute_window_ns: u64, dispute_bond: NearToken) -> u32 {
         let mut rs: Vec<String> = resolvers.iter().map(|a| hex20(a)).collect();
         rs.sort(); rs.dedup();
-        let n = rs.len() as u32;
-        require!(n >= 1 && threshold >= 1 && threshold <= n, "bad resolver set");
-        require!(threshold == n, "auto-verdict requires all resolvers to agree (threshold == resolver count)");
+        require!(!rs.is_empty(), "bad resolver set");
+        for r in &rs { require!(self.signers.contains_key(r), "resolver not registered"); }
         require!(deadline_ns > env::block_timestamp(), "deadline in the past");
         require!(!sources.is_empty(), "lock at least one source");
-        self.markets.push(Market { question, rules, sources, model, resolvers: rs, threshold, deadline_ns,
-            dispute_window_ns, dispute_bond, yes_pool: NearToken::from_yoctonear(0), no_pool: NearToken::from_yoctonear(0),
-            votes: vec![], status: Status::Open });
+        let rules_hash = sha_hex(rules.as_bytes());
+        let pth = hex32(&prompt_template_hash, "prompt_template_hash");
+        let threshold = rs.len() as u32;
+        self.markets.push(Market { question, rules, rules_hash, prompt_template_hash: pth, sources, resolvers: rs, threshold,
+            deadline_ns, dispute_window_ns, dispute_bond, yes_pool: NearToken::from_yoctonear(0), no_pool: NearToken::from_yoctonear(0),
+            round: 0, round_evidence_hash: None, votes: vec![], status: Status::Open });
         self.markets.len() - 1
     }
 
@@ -140,26 +227,38 @@ impl Verdict {
         }
     }
 
-    /// Anyone relays a signed resolver output. Returns the outcome it counted.
-    pub fn submit_verdict(&mut self, market_id: u32, request_hash: String, response_raw: String, signature: String) -> Outcome {
-        let in_set = |s: &String| self.signers.contains(s);
+    /// Anyone relays a signed resolver output. The raw request bytes are hashed ON-CHAIN (not stored) and must
+    /// contain the canonical header binding market_id / round / rules_hash / prompt_template_hash /
+    /// evidence_bundle_hash. Signed text = "<signer's model>:<sha256(request_raw)>:<sha256(response_raw)>".
+    pub fn submit_verdict(&mut self, market_id: u32, request_raw: String, response_raw: String, signature: String) -> Outcome {
         let m = self.markets.get(market_id).expect("no market");
         require!(env::block_timestamp() >= m.deadline_ns, "market not ended");
         require!(m.status == Status::Open, "not accepting verdicts");
-        require!(request_hash.len() == 64 && hex::decode(&request_hash).is_ok(), "bad request hash");
-        let text = format!("{}:{}:{}", m.model, request_hash.to_lowercase(), hex::encode(env::sha256_array(response_raw.as_bytes())));
+        let (req_model, evidence) = check_request(&request_raw, market_id, m);
+        let req_h = sha_hex(request_raw.as_bytes());
+        let resp_h = sha_hex(response_raw.as_bytes());
+        // Build the text with the model named in the request, recover, then require that the
+        // recovered key is registered for exactly that model (signer -> model).
+        let text = format!("{req_model}:{req_h}:{resp_h}");
         let signer = recover_signer(&text, &signature).unwrap_or_else(|| env::panic_str("bad signature"));
-        require!(in_set(&signer), "signer not attested/registered");
+        let reg_model = self.signers.get(&signer).cloned().unwrap_or_else(|| env::panic_str("signer not attested/registered"));
+        require!(reg_model == req_model, "signer is registered for a different model");
         require!(m.resolvers.contains(&signer), "signer not in market resolver set");
-        require!(!m.votes.iter().any(|(s, _, _)| *s == signer), "signer already voted");
+        let text_h = env::sha256(text.as_bytes());
+        require!(!self.used_signed.contains(&text_h), "signed response already used");
+        require!(!m.votes.iter().any(|v| v.signer == signer), "signer already voted");
+        if let Some(e) = &m.round_evidence_hash { require!(*e == evidence, "evidence bundle differs from this round's"); }
         let outcome = parse_outcome(&response_raw).unwrap_or_else(|| env::panic_str("no valid outcome in response"));
+        self.used_signed.insert(text_h);
         let m = self.markets.get_mut(market_id).unwrap();
-        m.votes.push((signer, outcome, text));
+        m.round_evidence_hash = Some(evidence);
+        m.votes.push(Vote { signer, model: req_model, outcome, request_sha256: req_h, response_sha256: resp_h });
         if m.votes.len() as u32 == m.threshold {
-            let all_same = m.votes.iter().all(|(_, o, _)| *o == outcome);
+            let all_same = m.votes.iter().all(|v| v.outcome == outcome);
             m.status = match (all_same, outcome) {
                 (true, Outcome::Yes | Outcome::No) => Status::Proposed { outcome, at_ns: env::block_timestamp() },
-                (true, Outcome::TooEarly) => { m.votes.clear(); Status::Open } // re-run panel later
+                (true, Outcome::TooEarly) => { // re-run panel later in a NEW round; old signatures can't be replayed
+                    m.votes.clear(); m.round += 1; m.round_evidence_hash = None; Status::Open }
                 _ => Status::Escalated, // split panel or unanimous AMBIGUOUS
             };
         }

@@ -3,9 +3,11 @@
     "purpose": "Fail-closed allowlist for NEAR AI Cloud model-node measurements. Values that are not independently published are tagged source=observed and must be treated as first-observation pins, not third-party proof.",
     "os_image_hash_source": "Phala Cloud OS image registry for dstack-nvidia-0.5.12: https://cloud.phala.com/dstack/0.5.12 (also listed at https://cloud.phala.com/verification/os-images).",
     "mr_td_rtmr_source": "observed from live NEAR AI Cloud TDX quotes on 2026-11-05 (Africa/Lagos). dstack does not publish a single MRTD/RTMR0-2 for a version: those registers also encode VM CPU/RAM/device config, so independent precomputation needs the exact VmConfig. Limitation documented in README.",
-    "compose_note": "app_compose measured here is the dstack host stack (compose-manager / otel / certbot), NOT the model-serving YAML from github.com/nearai/cvm-compose-files. compose_hash differs per node mainly by INSTANCE_LABEL.",
     "rt_mr3": "NOT pinned: includes instance-id and runtime events. Verified by event-log replay only.",
-    "pinned_at": "2026-11-05T09:30:00+01:00"
+    "pinned_at": "2026-11-05T09:30:00+01:00",
+    "compose_pin": "Pinned value is sha256(app_compose with the single 'INSTANCE_LABEL=gpuNN' replaced by 'INSTANCE_LABEL=<INSTANCE_LABEL>'). The verifier still checks the RAW sha256(app_compose) against MRCONFIGID and the RTMR3 compose-hash event; only the allowlist compare is normalized. DeepSeek and GLM nodes normalize to the same host compose (dstack-nvidia-0.5.11 name); Qwen's differs (0.5.12 name).",
+    "os_image_hash_check": "os_image_hash is read from the replayed RTMR3 'os-image-hash' event (measured), cross-checked against tcb_info, then compared to this pin.",
+    "coverage": "Label 'Hardware + host stack verified'. RTMR3 events are: system-preparing, app-id, compose-hash, instance-id, boot-mr-done, mr-kms, os-image-hash, key-provider, storage-fs, system-ready (+ nearai-replica-report-key-v1 on some nodes). The model-serving container (nearai/cvm-compose-files YAML) is NOT measured in RTMR3. compose-manager publishes a separately-quoted action log (compose_up file_sha256 values) but each node runs several compose files concurrently, so which container served a given model cannot be pinned; the model container is NOT covered."
   },
   "shared_host_images": {
     "docker_image_digests": [
@@ -32,7 +34,11 @@
     },
     "rt_mr0": {
       "value": "bc122d143ab768565ba5c3774ff5f03a63c89a4df7c1f5ea38d3bd173409d14f8cbdcc36d40e703cccb996a9d9687590",
-      "source": "observed"
+      "source": "observed",
+      "also_observed": [
+        "f0f303d15fb7619b87ec60daf0db241e937b30a4e1f2c405b5420f14b27c6e301735094feea9693a33b868d00eeb07f9"
+      ],
+      "note": "RTMR0 encodes VM shape. Primary value = 64 vCPU / 8 GPU VMs (all 3 models). also_observed = a 12 vCPU / 1 GPU Qwen replica seen 2026-11-05 ~11:40 WAT that serves the SAME signing_address 0x835a..aa26 (signing key is shared across replicas); MRTD and RTMR1/2 identical."
     },
     "rt_mr1": {
       "value": "4ae609807c765916a31d724786ed74bcb97e168a9d937b04936aeef2015c907eba5ac352c6bcd749c246fd62ffb659ec",
@@ -45,21 +51,30 @@
   },
   "models": {
     "Qwen/Qwen3.8-27B": {
-      "compose_hash": "5e513dbd72e1c0f291f748ad06d4dbc1df55659869e649376213ac7b3c9d2e29",
       "compose_name": "dstack-nvidia-0.5.12",
-      "instance_label_observed": "gpu13"
+      "instance_label_observed": "gpu13",
+      "raw_compose_hash_observed": "5e513dbd72e1c0f291f748ad06d4dbc1df55659869e649376213ac7b3c9d2e29",
+      "normalized_compose_hashes": [
+        "e3a78905d7f4a08c88210867c897fc22b0c1fd9a67230815fba74d6e8c705322"
+      ]
     },
     "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
-      "compose_hash": "ae66f844658a7aee331dcb9fb59bd40323d71d192d37719e022cc4af8389265b",
       "compose_name": "dstack-nvidia-0.5.11",
       "instance_label_observed": "gpu02",
-      "note": "compose manifest name says 0.5.11 but os_image_hash matches published dstack-nvidia-0.5.12"
+      "note": "compose manifest name says 0.5.11 but os_image_hash matches published dstack-nvidia-0.5.12",
+      "raw_compose_hash_observed": "ae66f844658a7aee331dcb9fb59bd40323d71d192d37719e022cc4af8389265b",
+      "normalized_compose_hashes": [
+        "cac94e2102327a4ca43554915e916c53a9d18fa15e6692e109a85e88ebe2abff"
+      ]
     },
     "z-ai/glm-5.3-flash": {
-      "compose_hash": "a0e3c6f4f21a60ea3f5c96bc7ef319b03a184ca2049605399275fbcea74e8c5f",
       "compose_name": "dstack-nvidia-0.5.11",
       "instance_label_observed": "gpu03",
-      "note": "compose manifest name says 0.5.11 but os_image_hash matches published dstack-nvidia-0.5.12; previously RTMR3 replay failed on empty-digest top-level event_log — verifier now uses NEAR official digest-recompute for RTMR3"
+      "note": "compose manifest name says 0.5.11 but os_image_hash matches published dstack-nvidia-0.5.12; previously RTMR3 replay failed on empty-digest top-level event_log \u2014 verifier now uses NEAR official digest-recompute for RTMR3",
+      "raw_compose_hash_observed": "a0e3c6f4f21a60ea3f5c96bc7ef319b03a184ca2049605399275fbcea74e8c5f",
+      "normalized_compose_hashes": [
+        "cac94e2102327a4ca43554915e916c53a9d18fa15e6692e109a85e88ebe2abff"
+      ]
     }
   }
 }
