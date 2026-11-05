@@ -85,7 +85,7 @@ Illia Polosukhin (NEAR) listed "AI benchmarking with private test sets. Submit h
 - **MRTD / RTMR0-2 pins are observed**, not a published constant (they encode VM shape).
 - **Model container not measured** (see above).
 - **NRAS + Intel PCCS** need network access.
-- **Testnet deploy**: wasm builds (`contract/target/near/verdict.wasm`); on-chain deploy requires the user's own testnet wallet signature (no keys in this repo). See `deploy/TESTNET.md`.
+- **Testnet deploy**: deployed and initialized on `baheet.testnet`; the owner controls signers and dispute settlement (no keys in this repo). See `deploy/TESTNET.md`.
 
 ## Demo
 ```bash
@@ -97,6 +97,7 @@ python scripts/attest_demo.py Qwen/Qwen3.8-27B   # expect PASS then tamper FAIL
 ## Testnet deploy
 Wasm builds locally (`cargo near build non-reproducible-wasm` → `contract/target/near/verdict.wasm`, ~246 KB).
 **Demo market (round 6):** post-cutoff NFL *Saints vs. Giants* (Polymarket 4329887) with live panel votes in `contract/testdata/real_panel.json` (unanimous YES, hardware-verified). `dispute_bond` = **1 NEAR**. Evidence file prepared at `fixtures/evidence/<sha>.json`; `evidence_uri` is the GitHub raw URL and **404s until a human-approved push**.
-**On-chain deploy is blocked here**: no NEAR wallet credentials (by design — private keys never enter the repo or chat). Deploy to a **fresh** contract so `market_id=0` matches the signed headers.
-You sign: register signers → create market → commit_evidence → three submit_verdict → optional dispute. Steps: `deploy/TESTNET.md`. Args: `python scripts/deploy_prepare.py`.
-After you send explorer tx URLs, they go under this heading.
+**Deployed:** `baheet.testnet`, initialized with owner `baheet.testnet` on 2026-11-05.
+[Deploy + init transaction](https://explorer.testnet.near.org/transactions/4koasWRtwm9F3ZTh9dN86qSu2oTgA8iDHg5rs7uVRLFT)
+
+Next signed steps: register signers → create market → commit_evidence → three submit_verdict → optional dispute. Steps: `deploy/TESTNET.md`. Args: `python scripts/deploy_prepare.py`.
