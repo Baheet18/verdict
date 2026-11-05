@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5406713,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x38a2ae897098ec5310b86364bffe7ffdc0e267a0342886ec06d1aac3744ba7cd60c1b1993b0d91aa4715bf4cea271a59d3fd43dc8dc3dc164b335d6e8641ff181c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:6f97919d623a8cbf67b4fdceaf37003ef7dc007b44e48004a79616dfec198864:9913037c6725e321d6f32d800d3f64158d0120103ecee68a86da19aeaec58678",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Kings defeated the Senators 6-5 in overtime, so the market resolves to \"Kings\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 969,
+  "total_tokens": 1165,
+  "completion_tokens": 196,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 22,
+  "completion_tokens_details": {
+   "reasoning_tokens": 22
+  }
+ },
+ "cost_usd": 0.00017552,
+ "at": "2026-11-05T10:16:02",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6f97919d623a8cbf67b4fdceaf37003ef7dc007b44e48004a79616dfec198864",
+ "response_sha256": "9913037c6725e321d6f32d800d3f64158d0120103ecee68a86da19aeaec58678"
+}

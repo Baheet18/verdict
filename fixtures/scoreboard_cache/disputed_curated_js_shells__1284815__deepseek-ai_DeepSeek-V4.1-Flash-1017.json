@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "market_id": 1284815,
+ "polymarket_id": "1284815",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xae6eacbc208a49cf73dd23fcad545743c890447043c4d48874a54f866794141d112b8af80feb20e5210908907fa83d4f9179978f8defac30623b95c141a7f1491c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:2f4144f00ef60bd536042a2822b84f33e41a328e11ff7bbe15be8efe15ee9d8a:c8d282988def299bd7cacab19f450220212bed86a04e3ca8bcc95997824b0822",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "INVALID",
+ "reasoning": "",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 9551,
+  "total_tokens": 10082,
+  "completion_tokens": 531,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 9344
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 303
+  }
+ },
+ "cost_usd": 0.0035025,
+ "at": "2026-11-05T12:37:18",
+ "evidence_sha256": "46438397c3506a47f2f8a916302d797672d46c54cc71cd4bcfc5642f84d95c13",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "2f4144f00ef60bd536042a2822b84f33e41a328e11ff7bbe15be8efe15ee9d8a",
+ "response_sha256": "c8d282988def299bd7cacab19f450220212bed86a04e3ca8bcc95997824b0822"
+}

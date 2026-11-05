@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5237585,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x78e4e32c94c13050507637cbfcf1df9d3e4795a5816d2885bcc8dacb57db6c742737c5141b42976da00344784c253e7cc8a1f27919d006b3611932b1bf5bc70e1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:bde3c2fa414a4574cc6d06aa7199fb01804f2550a5c61fb9b0f3b7e99f2f6688:fb4c11d9cac7d31fb542718d86521e84da4764a5f3613fc0d487237a27718c99",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Panthers defeated the Jets 5-2 in a completed final regulation game, so the market resolves to Panthers, mapping to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 954,
+  "total_tokens": 1157,
+  "completion_tokens": 203,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 24,
+  "completion_tokens_details": {
+   "reasoning_tokens": 24
+  }
+ },
+ "cost_usd": 0.00017782,
+ "at": "2026-11-05T10:14:18",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "bde3c2fa414a4574cc6d06aa7199fb01804f2550a5c61fb9b0f3b7e99f2f6688",
+ "response_sha256": "fb4c11d9cac7d31fb542718d86521e84da4764a5f3613fc0d487237a27718c99"
+}

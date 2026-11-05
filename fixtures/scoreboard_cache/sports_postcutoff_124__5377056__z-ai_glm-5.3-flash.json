@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5377056,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xc8c88d6d39f32d8cf1b997f6b8e3fe0c19b1824546365645091beb224fe1192228113205230057007fa687262e74ece07d091a6c2b1c342480dda00515419a071c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:86d9ffd0c5612c80477f0d3f1668943af39bc8977093cda925c92f2e8b39ff1c:b7accc8b59e2a62cb7dfe2480665e5c99a80f73510e8b372c8620fdc24cb8a30",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Detroit winning 5-3 in regulation, so the market resolves to \"Red Wings\" and the verdict is YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 967,
+  "total_tokens": 1214,
+  "completion_tokens": 247,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 64,
+  "completion_tokens_details": {
+   "reasoning_tokens": 64
+  }
+ },
+ "cost_usd": 0.00020086,
+ "at": "2026-11-05T10:15:12",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "86d9ffd0c5612c80477f0d3f1668943af39bc8977093cda925c92f2e8b39ff1c",
+ "response_sha256": "b7accc8b59e2a62cb7dfe2480665e5c99a80f73510e8b372c8620fdc24cb8a30"
+}

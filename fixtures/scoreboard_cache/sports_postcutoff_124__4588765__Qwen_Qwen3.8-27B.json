@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4588765,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x7a2dd3c6b095ec429f3a80322d5cdd23a3ca709916444f0ab1962987ccf96427443358ba1bf853b3411d056c91c67b064c6f8b35f211b150787b0d468320d12c1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:85f7a3fabe552d5f3494ab3faea5a899030575fb56043875a30173feea191085:c40cedcbf0a42b614b8a97e1922499d0ee7f9a122e0c00faf5a23db48bd35463",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the final score was Dolphins 28, Jets 25. The Dolphins won by only 3 points, not 5 or more, so the market resolves to Jets.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1117,
+  "total_tokens": 1553,
+  "completion_tokens": 436,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 168,
+  "completion_tokens_details": {
+   "reasoning_tokens": 168
+  }
+ },
+ "cost_usd": 0.00063328,
+ "at": "2026-11-05T10:19:44",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "85f7a3fabe552d5f3494ab3faea5a899030575fb56043875a30173feea191085",
+ "response_sha256": "c40cedcbf0a42b614b8a97e1922499d0ee7f9a122e0c00faf5a23db48bd35463"
+}

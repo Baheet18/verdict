@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4465810,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x9dcaaad72fcab46c003032488c47561df6524bb8089204f70fd2f36fb171590d65021a420ba9d178e93e30998e50f4395a440febc01a2fe09fe50a6730b8f1e41b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:18cd077532a614b6c5cb22a245f70a6697776d4d290c6fa49ee6adbddda02f67:60abf255f702c0568b76be3c56e3fe980aeb5051e8f8a18dacff5a2bec0aae80",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Bears beat the Patriots 30-24 in the final, so the market resolves to \"Bears\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 962,
+  "total_tokens": 1158,
+  "completion_tokens": 196,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 30,
+  "completion_tokens_details": {
+   "reasoning_tokens": 30
+  }
+ },
+ "cost_usd": 0.00017496,
+ "at": "2026-11-05T10:16:52",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "18cd077532a614b6c5cb22a245f70a6697776d4d290c6fa49ee6adbddda02f67",
+ "response_sha256": "60abf255f702c0568b76be3c56e3fe980aeb5051e8f8a18dacff5a2bec0aae80"
+}

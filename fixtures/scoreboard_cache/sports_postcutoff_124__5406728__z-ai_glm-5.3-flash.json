@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5406728,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x64857e7b14926ea3c812c46d5f76c036416b52675dafbddb31b81816df35e8d21d1f55be8e4ccf143b9d5973605502425b6228162be9e6afcdbb02ecf7cf7f581b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:8c1d08907cd86a698b23bf164c9b800122252deaa63a3606bcf4520d73e954ff:45cb7b9137e028d1691cfbbdf562360654cceb6b1dde84f5ca4d526e68abe8e4",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Dallas winning 6-5 in regulation, so the market resolves to \"Stars\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 954,
+  "total_tokens": 1150,
+  "completion_tokens": 196,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 21,
+  "completion_tokens_details": {
+   "reasoning_tokens": 21
+  }
+ },
+ "cost_usd": 0.00017432,
+ "at": "2026-11-05T10:14:13",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8c1d08907cd86a698b23bf164c9b800122252deaa63a3606bcf4520d73e954ff",
+ "response_sha256": "45cb7b9137e028d1691cfbbdf562360654cceb6b1dde84f5ca4d526e68abe8e4"
+}

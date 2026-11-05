@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551284,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xa0192bc2e676dc24a0556391bd2c19d82fbd26453344bd4d43d5c6024abfc3982b2b296a502bac748eec40c434f3d5d81cfdde1af4a9253d97bb94bc144cf3321c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:68a22c11d4d9f0d84b1425b3b26045a0c43fbe513bc7b14b37bda4598fddc705:59cdf48cc9f744681b08f36f662fe00d98418e41ac377ea2ee5e9e110ea23f40",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with Miami winning 28-25 over the Jets, so the market resolves to Dolphins, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 966,
+  "total_tokens": 1156,
+  "completion_tokens": 190,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 21,
+  "completion_tokens_details": {
+   "reasoning_tokens": 21
+  }
+ },
+ "cost_usd": 0.00017228000000000002,
+ "at": "2026-11-05T10:17:54",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "68a22c11d4d9f0d84b1425b3b26045a0c43fbe513bc7b14b37bda4598fddc705",
+ "response_sha256": "59cdf48cc9f744681b08f36f662fe00d98418e41ac377ea2ee5e9e110ea23f40"
+}

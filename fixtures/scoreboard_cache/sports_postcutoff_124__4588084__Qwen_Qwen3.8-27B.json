@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4588084,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x74322b1fbebe1802f681dd955d06b33e12e05c559e85ac349c77a092b39675b559cedb7b43df39487973b9dad4a9c38093d641e19f1d439002315f83060a611d1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:f9bc31e9c67f29ab8651d6c7fa1e32ee91954efa52d62b1a2d1ae1af7cadeeca:18a34a9df3dd4f041bff068d8199a3a1e085bfd156c4463a1aa1300b55bf2b99",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots report the final score as Detroit 20, Green Bay 17, a combined total of 37. Since 37 is less than 45, the market resolves Under, mapped to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1107,
+  "total_tokens": 2374,
+  "completion_tokens": 1267,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1081,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1081
+  }
+ },
+ "cost_usd": 0.0017547300000000001,
+ "at": "2026-11-05T10:21:17",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f9bc31e9c67f29ab8651d6c7fa1e32ee91954efa52d62b1a2d1ae1af7cadeeca",
+ "response_sha256": "18a34a9df3dd4f041bff068d8199a3a1e085bfd156c4463a1aa1300b55bf2b99"
+}

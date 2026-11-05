@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "market_id": 1281165,
+ "polymarket_id": "1281165",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x0f24d621c780b0a1baf758bffee1b69ba717207fcb89be2174be60ee05e788e141249980ae42bd9e3b0263bccd05a94c874c7c795b65123b173530bad210f36a1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:e2f6a9158fdc6795dd204eb01ef6464e1b63f4babdde4df34d61da195f3dcd72:e1dc998574da21f1bd66ccbf59b5636e4a68252bada0586316a0324ed9e6bb45",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Three independent sources (polling-desk.com, LAist, Ballotpedia) consistently report that Democratic candidate Angela Gonzales-Torres won CA-34 in the November 3, 2026 general election, satisfying the market's consensus-of-credible-reporting standard. The election window is complete per the snapshots, so the market resolves Yes.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1401,
+  "total_tokens": 1738,
+  "completion_tokens": 337,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 165,
+  "completion_tokens_details": {
+   "reasoning_tokens": 165
+  }
+ },
+ "cost_usd": 0.00028058,
+ "at": "2026-11-05T13:02:46+01:00",
+ "evidence_sha256": "91e9a339c5f04466a57016206a6ef5aab34c54b26e54921d34b0051bc459d11b",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "e2f6a9158fdc6795dd204eb01ef6464e1b63f4babdde4df34d61da195f3dcd72",
+ "response_sha256": "e1dc998574da21f1bd66ccbf59b5636e4a68252bada0586316a0324ed9e6bb45"
+}

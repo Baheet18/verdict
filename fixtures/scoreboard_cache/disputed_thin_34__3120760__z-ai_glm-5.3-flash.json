@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 3120760,
+ "polymarket_id": "3120760",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xacb321b1b1fd03dd88ae3563290e65516c7ec996937fb37f076dc8a26b269636425fe2ba3bb2de572d771a2382365365825d99c2c5b6b9134373acf4b318be0c1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:8cc938f65310a8434ac9fd582595817e78052d7fee167a57b09c2d3d9eb5b41f:a4aa229b2d054fc472a5d9074cd346214eb90ade613fe0270ce1bbdf2e3cded8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The event window has closed (snapshot fetched 2026-11-05, after Oct 31, 2026 11:59 PM ET), but the bundle contains only the market rules and no credible reporting on whether any qualifying NATO-Russia military encounter occurred, so the required factual basis is absent.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1192,
+  "total_tokens": 1789,
+  "completion_tokens": 597,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 433,
+  "completion_tokens_details": {
+   "reasoning_tokens": 433
+  }
+ },
+ "cost_usd": 0.00039386,
+ "at": "2026-11-05T11:33:13",
+ "set": "disputed_thin_34",
+ "request_sha256": "8cc938f65310a8434ac9fd582595817e78052d7fee167a57b09c2d3d9eb5b41f",
+ "response_sha256": "a4aa229b2d054fc472a5d9074cd346214eb90ade613fe0270ce1bbdf2e3cded8"
+}

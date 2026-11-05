@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5156493,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xe84b05cbb99abbdfff6e3a6c79d652d980dbe1543981bd6b8c53f265b880f4056d659e01804b8f0ed3c7ea0322a531cef4030804192ec17f8d45c8c776ca1ed51c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:8fbf715284638c0b230dc55e7c3b5f82f3b0df453876ea1ef0e84d6a01489ae8:2ce2ede9d478d2d07e9ddc268d155385d11f656489e1ff906e22a1d694f14621",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources agree the Blackhawks won 2-1 in regulation. Therefore the market resolves to \"Blackhawks\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1117,
+  "total_tokens": 1477,
+  "completion_tokens": 360,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 122,
+  "completion_tokens_details": {
+   "reasoning_tokens": 122
+  }
+ },
+ "cost_usd": 0.00053068,
+ "at": "2026-11-05T10:13:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8fbf715284638c0b230dc55e7c3b5f82f3b0df453876ea1ef0e84d6a01489ae8",
+ "response_sha256": "2ce2ede9d478d2d07e9ddc268d155385d11f656489e1ff906e22a1d694f14621"
+}

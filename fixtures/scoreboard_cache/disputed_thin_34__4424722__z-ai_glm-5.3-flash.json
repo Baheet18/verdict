@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4424722,
+ "polymarket_id": "4424722",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x0e0fa7d72f62b04a3f8710c51163f275540c0d00ac0993a349e3bc63183a855d34a308db3dc84b4507041dd4df84fa950b26c1ec34a83f0e2e89ab1a891990881b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:fbeb4d1729c93e28a2d6b0ea1d8f8ceaf35b2fc69c00a918b8eb19ca70135263:2ef611839de1348c9e4e3b1386f5afb7f2cd2927857f1b91648d28f3993aea1b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market rules snapshot with no reporting from any resolution source about whether Iran executed a qualifying strike on an Arab country; with the window elapsed (fetched 2026-11-05) but zero factual evidence of occurrence or non-occurrence, the snapshots are insufficient to resolve YES or NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1821,
+  "total_tokens": 2536,
+  "completion_tokens": 715,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 523,
+  "completion_tokens_details": {
+   "reasoning_tokens": 523
+  }
+ },
+ "cost_usd": 0.00050318,
+ "at": "2026-11-05T11:40:29",
+ "set": "disputed_thin_34",
+ "request_sha256": "fbeb4d1729c93e28a2d6b0ea1d8f8ceaf35b2fc69c00a918b8eb19ca70135263",
+ "response_sha256": "2ef611839de1348c9e4e3b1386f5afb7f2cd2927857f1b91648d28f3993aea1b"
+}

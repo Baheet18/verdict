@@ -28,14 +28,14 @@ Vote-level outcomes were overwhelmingly `AMBIGUOUS` (insufficient evidence), wit
 
 Caveat: this measures **abstention quality under thin evidence**, not accuracy on disputed markets with rich sources. A follow-up with curated multi-source bundles for a subset is future work.
 
-## Rule linter on the same 34
+## Rule authoring checklist on the same 34 (NOT a dispute predictor)
 `scripts/rule_linter.py` heuristics v1.0 (no model calls):
 
 **Linter flagged 27 / 34 disputed markets before launch.**
 
 Common hits: `missing_source`, `or_without_precedence`, `missing_timezone`, `subjective_qualifier`, `unofficial_ok`. The Polymarket boilerplate phrase "This market will resolve…" is **not** treated as circular self-reference; only community-vote / price-circular language is.
 
-A flag means the rule text matched a known ambiguity pattern. It is **not** a prediction that UMA will dispute, and the 27/34 rate is not manufactured to look good — several clean sports markets in the set were not flagged.
+A flag means the rule text matched a known ambiguity pattern. Round 6: this tool is repositioned as an **optional rule-authoring checklist** only. It is **not** a prediction that UMA will dispute; do not retune heuristics on this same set.
 
 ## Trust labels
 Shared-signer replica policy applied (`verify_signer_replicas`). See run artifacts under `out/bench_disputed/` (gitignored).

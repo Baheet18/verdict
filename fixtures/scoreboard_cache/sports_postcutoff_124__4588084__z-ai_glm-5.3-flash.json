@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4588084,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x29082423894afb9a9e81748d80fe5cc11d69c8911e85ad236f8007289b59c3851fbd6b484d066ce0d3b8e83fac17346901f36d23787bc4e35fa43007885265c91b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:f70fe04c7cabb4749ff7840a004b36bb0313629cdf507ea3fbb19063d16808c4:ce271bc22fd72268dd339037059e5fb6e588343f6d161592b9b9e862908e53f3",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with GB 17 and DET 20, a combined total of 37 points. Since 37 is less than 45, the market resolves to Under, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 946,
+  "total_tokens": 1171,
+  "completion_tokens": 225,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 53,
+  "completion_tokens_details": {
+   "reasoning_tokens": 53
+  }
+ },
+ "cost_usd": 0.00018817999999999998,
+ "at": "2026-11-05T10:20:56",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f70fe04c7cabb4749ff7840a004b36bb0313629cdf507ea3fbb19063d16808c4",
+ "response_sha256": "ce271bc22fd72268dd339037059e5fb6e588343f6d161592b9b9e862908e53f3"
+}

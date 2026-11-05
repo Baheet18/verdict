@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551275,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xa37e6a1201a6fdae18c5e4a3199d30d33898889e8f7f84b3d296a6969f5643ea3dc757a1680fa771c360da89c1837aa8cae3fb831659abf7243a5a33ef24fa501b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:94e93212338e38955d40e6133265ab54902ee737363d0b126a1e57b52761b9fc:9f0e1698b7985653325f977b7b86051563df569e046660d7b19e437d54911235",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots agree the game is final with Tampa Bay beating Carolina 43-13, so the market resolves to \"Buccaneers\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 996,
+  "total_tokens": 1184,
+  "completion_tokens": 188,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 49
+  }
+ },
+ "cost_usd": 0.0005244,
+ "at": "2026-11-05T10:17:09",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "94e93212338e38955d40e6133265ab54902ee737363d0b126a1e57b52761b9fc",
+ "response_sha256": "9f0e1698b7985653325f977b7b86051563df569e046660d7b19e437d54911235"
+}

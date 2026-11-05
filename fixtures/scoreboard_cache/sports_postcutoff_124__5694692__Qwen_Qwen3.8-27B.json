@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694692,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x7c727d2e48da94c0499b3441bd8bee65911abf6dde57defa726e3a9870c14b9d6bfd9cdda9ffc85bfd5c0445d5da0123141deb40084c3be260f22ac73d5118bb1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:2c9dd9d4facc91529e2c0f142dcd597d92aaa6ed61f3c45f48532905d0a1a3f6:31a9416e79f0191674520011d2e1ad8e9c5fdb5f610f13054dfc4f0f2eed941a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Only OpenLigaDB reports the first-half score, showing VfB Stuttgart at 0 at halftime. ESPN confirms the final score but does not provide an independent first-half statistic, so the required first-half number is not supported by two independent sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1446,
+  "total_tokens": 2364,
+  "completion_tokens": 918,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 610,
+  "completion_tokens_details": {
+   "reasoning_tokens": 610
+  }
+ },
+ "cost_usd": 0.00129714,
+ "at": "2026-11-05T10:26:52",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "2c9dd9d4facc91529e2c0f142dcd597d92aaa6ed61f3c45f48532905d0a1a3f6",
+ "response_sha256": "31a9416e79f0191674520011d2e1ad8e9c5fdb5f610f13054dfc4f0f2eed941a"
+}

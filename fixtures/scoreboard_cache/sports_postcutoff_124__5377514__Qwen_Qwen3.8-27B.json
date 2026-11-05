@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5377514,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xdbedb5d5c162afd29510f2176bf6b73b31aecc14b92dde2c95b885fce6ae8b87381d5e95dc122ee8124712db5a4a0013bf298d72997a5e9f23babbd091633b561b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:2d09b496ebe9719116a1a6e0baf89e35e48b1c87acf6ceac7410c66b84748ede:d26b2def814ffc6b42031a17598d57e7919de6047a04ffa5069fa47e8a9edee8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Bears 30, Patriots 24, for a combined total of 54. Since 54 is at least 29, the market resolves Over, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1114,
+  "total_tokens": 1595,
+  "completion_tokens": 481,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 215,
+  "completion_tokens_details": {
+   "reasoning_tokens": 215
+  }
+ },
+ "cost_usd": 0.0006939100000000001,
+ "at": "2026-11-05T10:21:26",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "2d09b496ebe9719116a1a6e0baf89e35e48b1c87acf6ceac7410c66b84748ede",
+ "response_sha256": "d26b2def814ffc6b42031a17598d57e7919de6047a04ffa5069fa47e8a9edee8"
+}

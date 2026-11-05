@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5658362,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x33c09389d4a0ab46f46e25e4e5d590e4b9a274661fd946ff615dc2dfff3f43f370ff7610e10ef068f4918295b19e4ced42d5269a239a0db29f6c0076f774651f1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:0b02356177777eec9921418ea7682d29be1b66986bda46835d19375f319063fa:0ce2a34f2319952b939945ffedf0b0a175157fb36d2d5246c62d63057e348805",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the final score was Bears 34, Seahawks 17. Since the Seahawks did not win by 9 or more points, the market resolves to Bears, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1105,
+  "total_tokens": 1532,
+  "completion_tokens": 427,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 163,
+  "completion_tokens_details": {
+   "reasoning_tokens": 163
+  }
+ },
+ "cost_usd": 0.00062065,
+ "at": "2026-11-05T10:19:37",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "0b02356177777eec9921418ea7682d29be1b66986bda46835d19375f319063fa",
+ "response_sha256": "0ce2a34f2319952b939945ffedf0b0a175157fb36d2d5246c62d63057e348805"
+}

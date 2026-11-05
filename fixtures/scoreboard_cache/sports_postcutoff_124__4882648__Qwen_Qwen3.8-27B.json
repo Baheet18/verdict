@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4882648,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xc20a2a2b7ec04e969e40e8214511738a617a4add7e8819a02d6c27b5dd9113f629dff6256ae0d25531d87bc1cd568357250281365127e0c740ac2b7a8baf7d021b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:0ecd95d009cc229094f698995ad381a46fda80729665573f66430b1164668fcf:38fcbfafff7d5e15b7ce2272390e05f0c75c0f71ee4e5216f9dc4ae7438e26d3",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources agree that the San Jose Sharks won 4-3 over the Montreal Canadiens. Therefore the market resolves to \"Sharks\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1130,
+  "total_tokens": 1866,
+  "completion_tokens": 736,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 484,
+  "completion_tokens_details": {
+   "reasoning_tokens": 484
+  }
+ },
+ "cost_usd": 0.0010388,
+ "at": "2026-11-05T10:16:41",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "0ecd95d009cc229094f698995ad381a46fda80729665573f66430b1164668fcf",
+ "response_sha256": "38fcbfafff7d5e15b7ce2272390e05f0c75c0f71ee4e5216f9dc4ae7438e26d3"
+}

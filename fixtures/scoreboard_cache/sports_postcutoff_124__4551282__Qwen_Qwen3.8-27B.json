@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551282,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x34723cc84610403705f42c795e6d570d0f27694680b3996ad78daf317472fc5a6b87c578cebeb7d83db4aead85db6709ca16bd421d32d5dd8068e659926c649a1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:c32cc3149a8a42f572ece1db5ea0b7fca5837a8e979d7a67092a7995f4947e30:9a181fee79f6d48af36367cd23b50d47787f9dfef94f833f909778363c3cb2d9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show the final score as Minnesota Vikings 16, Indianapolis Colts 10, so the market resolves to Vikings. Per the mapping, a Vikings resolution is NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1118,
+  "total_tokens": 2245,
+  "completion_tokens": 1127,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 944,
+  "completion_tokens_details": {
+   "reasoning_tokens": 944
+  }
+ },
+ "cost_usd": 0.00156617,
+ "at": "2026-11-05T10:18:00",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "c32cc3149a8a42f572ece1db5ea0b7fca5837a8e979d7a67092a7995f4947e30",
+ "response_sha256": "9a181fee79f6d48af36367cd23b50d47787f9dfef94f833f909778363c3cb2d9"
+}

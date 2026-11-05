@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4584357,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x407b9601b9c87043302ac49fc22ae98e4eb141fb1bcc776b1b8103baac58847707c88d4b81e339cf48e23534292d09ecad62f1879ea8a6e9afaac549cad3d8231c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:6281b677f20c712b286c4beab561eb90c685834d6fed980de3318789d4ede993:05753e2eb197292360f7e8e8dd1baaca7bdaab7b040089e5f248aa48595c260c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both the ESPN scoreboard and the nflverse dataset independently report a final score of Cowboys 38, Eagles 21, so Dallas won. Per the rules, the market resolves to \"Cowboys\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 993,
+  "total_tokens": 1164,
+  "completion_tokens": 171,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 24
+  }
+ },
+ "cost_usd": 0.0005031,
+ "at": "2026-11-05T10:18:09",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6281b677f20c712b286c4beab561eb90c685834d6fed980de3318789d4ede993",
+ "response_sha256": "05753e2eb197292360f7e8e8dd1baaca7bdaab7b040089e5f248aa48595c260c"
+}

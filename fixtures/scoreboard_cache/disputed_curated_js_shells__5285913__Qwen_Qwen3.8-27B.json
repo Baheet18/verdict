@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285913,
+ "polymarket_id": "5285913",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x0a6cd29dd5f180bf94e118bf3808fb9fc26584434e7be62aaa6397664f1ed1e42f076fc12bfb5cd2c951de659ac9f0b2eef4212b128945352b20d6aefa13f2f71b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:4a481a86800ff468e9b32bf67c557db2c25fecc76b74a3307db6436c55903851:0f09d0f91b599b3e5dae538a9877a7c68d8b1efac8c7e0fb3318c8f224974d72",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots contain only page headers and no final score for the October 31 Blues-Red Wings game. Therefore the combined goal total cannot be verified from at least two independent sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 12961,
+  "total_tokens": 13872,
+  "completion_tokens": 911,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 794,
+  "completion_tokens_details": {
+   "reasoning_tokens": 794
+  }
+ },
+ "cost_usd": 0.00174829,
+ "at": "2026-11-05T12:44:17",
+ "evidence_sha256": "4c60b06e491d67f7558216b3db0c6cc8dcc37ab6553a716a6ad5eda5dbb1d761",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "4a481a86800ff468e9b32bf67c557db2c25fecc76b74a3307db6436c55903851",
+ "response_sha256": "0f09d0f91b599b3e5dae538a9877a7c68d8b1efac8c7e0fb3318c8f224974d72"
+}

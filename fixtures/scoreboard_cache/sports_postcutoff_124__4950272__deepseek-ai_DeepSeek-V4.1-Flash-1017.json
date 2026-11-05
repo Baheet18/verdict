@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4950272,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x864625bbf24dfc37536aa9f7798d423d772b2b827f56ceb3c94a523f105bee0a2faa211a9f2f07a50e57ff384a71c2dcf3a4a49f994a1a98dabb9e936d4c42941b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:5f0861987b0b1b8fe5f8c8070c3ba2043caf4ac967ccbf8f148f943c525fb31c:65c8dcb68cbfc500b67a504d65a74b5abcdf208ada211c78de8e184eafe6b2ee",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources show the Devils winning 4-1 in a completed final, so the market resolves to \"Devils\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 992,
+  "total_tokens": 1307,
+  "completion_tokens": 315,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 41
+  }
+ },
+ "cost_usd": 0.0006756,
+ "at": "2026-11-05T10:16:19",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5f0861987b0b1b8fe5f8c8070c3ba2043caf4ac967ccbf8f148f943c525fb31c",
+ "response_sha256": "65c8dcb68cbfc500b67a504d65a74b5abcdf208ada211c78de8e184eafe6b2ee"
+}

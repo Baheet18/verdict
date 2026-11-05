@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 3120760,
+ "polymarket_id": "3120760",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xdcf9e995f86c835cd92961c5650c3118900d890ecc6352008751d7d932a5f462364e1a18620ab79be49a130a6aa1a608eae035302c9f8725c83c493363e469a71c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:22f2547a7e69420be9130d006b2ef7c7c507ce2191a6abf514e8dc2a89a8a435:92e0aa69b794776ac0933285d30f3340d0ffb3ba9e1affca5a6dbd28668551ff",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description, not external reporting about any NATO-Russia military encounter. The event window is over, but the evidence bundle is insufficient to determine the outcome.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1329,
+  "total_tokens": 1728,
+  "completion_tokens": 399,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 278,
+  "completion_tokens_details": {
+   "reasoning_tokens": 278
+  }
+ },
+ "cost_usd": 0.00059181,
+ "at": "2026-11-05T11:32:44",
+ "set": "disputed_thin_34",
+ "request_sha256": "22f2547a7e69420be9130d006b2ef7c7c507ce2191a6abf514e8dc2a89a8a435",
+ "response_sha256": "92e0aa69b794776ac0933285d30f3340d0ffb3ba9e1affca5a6dbd28668551ff"
+}

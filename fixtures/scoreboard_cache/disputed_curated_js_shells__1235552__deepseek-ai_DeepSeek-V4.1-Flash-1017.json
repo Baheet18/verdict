@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "market_id": 1235552,
+ "polymarket_id": "1235552",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x85cb8f85e0fc6f3b741896b47911db95009312e50885e013f501568790fa36e530c6ee79deb5aae9027f809092626cb1951efbe0678b54376095a5329422967c1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:ef90ef48a18ef06dc32f1043b522286db0445e98aaf6d83acc9cb9d0bcca3e41:ab5ac32d52054106ab6a0077547486a09ef7c44739406f4f7bfa71fe61166312",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots are generic MLB.com and ESPN landing/scoreboard pages containing no 2026 World Series winner or Guardians elimination information. With no substantive result reported by any source, the evidence is insufficient to resolve YES or NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 13768,
+  "total_tokens": 14053,
+  "completion_tokens": 285,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "created_cache_tokens": 13760
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 167
+  }
+ },
+ "cost_usd": 0.0044724000000000005,
+ "at": "2026-11-05T12:20:19",
+ "evidence_sha256": "27a62b4dda719e278acf6eca488def0139f1a1e73c16a1a27aa30b3d9fbdb926",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "ef90ef48a18ef06dc32f1043b522286db0445e98aaf6d83acc9cb9d0bcca3e41",
+ "response_sha256": "ab5ac32d52054106ab6a0077547486a09ef7c44739406f4f7bfa71fe61166312"
+}

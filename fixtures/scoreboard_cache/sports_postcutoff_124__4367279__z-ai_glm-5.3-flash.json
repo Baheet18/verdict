@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4367279,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x9a940265f4e581a132deaed1e46fa77c274724d4d905018b95f5b1c4e7f84cbb3de548a9a46ff25ad45fa42a471b710a63462c70b7769b691c0d04ca608e945c1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:ac8d9665d7a17bf0c90c78b7e5a761d1b1b44f5b682150ce063ffee0a8c9df21:b5f9c68f2b6bb9e80ebd2680393042c9599214409bee2d3d9e660ae7a412a551",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with Chargers 6 and Chiefs 22, a combined total of 28 points. Since 28 is less than 39, the market resolves to Under, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 947,
+  "total_tokens": 1151,
+  "completion_tokens": 204,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 51,
+  "completion_tokens_details": {
+   "reasoning_tokens": 51
+  }
+ },
+ "cost_usd": 0.00017776,
+ "at": "2026-11-05T10:21:01",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ac8d9665d7a17bf0c90c78b7e5a761d1b1b44f5b682150ce063ffee0a8c9df21",
+ "response_sha256": "b5f9c68f2b6bb9e80ebd2680393042c9599214409bee2d3d9e660ae7a412a551"
+}

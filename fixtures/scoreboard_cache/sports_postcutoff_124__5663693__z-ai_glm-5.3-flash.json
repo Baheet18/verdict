@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5663693,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x4f6be509d58c056a8fe0729298b5a3a7223d01d66b7d6ade6147c4311bb31b4c3251c9236b94b78dc2313ed04f385feda800439f690f4318c9be9562bc1044a91b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:09bb7aba4acdf51200e1fb76abb0543cfcfec504d2b6ba9c91cc3a2c07ce8a3f:ad67c14db177ed6a45c7cdf4b78e39dc15a6fa300a069a0e47241cdb6a071d31",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Only OpenLigaDB reports the needed first-half number (Halbzeit 1-0, i.e., 1 combined goal, which would be Under), while ESPN provides only the full-time 1-2 result with no half-time breakdown, so fewer than two independent sources agree on the first-half score.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1241,
+  "total_tokens": 2119,
+  "completion_tokens": 878,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 697,
+  "completion_tokens_details": {
+   "reasoning_tokens": 697
+  }
+ },
+ "cost_usd": 0.00053828,
+ "at": "2026-11-05T10:25:12",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "09bb7aba4acdf51200e1fb76abb0543cfcfec504d2b6ba9c91cc3a2c07ce8a3f",
+ "response_sha256": "ad67c14db177ed6a45c7cdf4b78e39dc15a6fa300a069a0e47241cdb6a071d31"
+}

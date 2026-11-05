@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4465810,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x3a89ce71ac47d75cbb867bfea7de6a3c3d17cfcaa34369a3d4ba80ea472844a672bd54f17702835452e12bae8c8e3822662a3dd8c93977989d1f5984d15630961b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:e07f7d046be587351a64821dd0e54efcb2b3cccd036b12fd73b0557599efcbdf:74a2b4cfe14e340c69d00c99094e2a328485e2e3a52aedf789666c4877ab190f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show the final score as Bears 30, Patriots 24, so the market resolves to Bears. Under the mapping, Bears resolution is NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1124,
+  "total_tokens": 2251,
+  "completion_tokens": 1127,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 906,
+  "completion_tokens_details": {
+   "reasoning_tokens": 906
+  }
+ },
+ "cost_usd": 0.0015664099999999999,
+ "at": "2026-11-05T10:17:14",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e07f7d046be587351a64821dd0e54efcb2b3cccd036b12fd73b0557599efcbdf",
+ "response_sha256": "74a2b4cfe14e340c69d00c99094e2a328485e2e3a52aedf789666c4877ab190f"
+}

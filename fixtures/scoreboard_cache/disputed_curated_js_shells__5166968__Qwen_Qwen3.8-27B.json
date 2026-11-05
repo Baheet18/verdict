@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5166968,
+ "polymarket_id": "5166968",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x7792004d9b4c662f385dfe610baaa604a629574968d621175edf8fd78abc81d431ae3f8a8641b40d499297a06376c1fcd0b00bcc3de1783834c511cf81da78931c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:6709a6d73c5cde969ba91c2fd191afd904dead66f8e3acf67a2a926dab92dc45:35014fd2651ddeeb96b008887b4bad84b972b89fe5aa9de4529aef993ba202af",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots do not provide Apple's market-cap rank on October 31, 2026. The Wikipedia extract is only current to June 30, 2026, and the other pages lack the needed ranking data.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 10027,
+  "total_tokens": 11063,
+  "completion_tokens": 1036,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 890,
+  "completion_tokens_details": {
+   "reasoning_tokens": 890
+  }
+ },
+ "cost_usd": 0.0017996800000000001,
+ "at": "2026-11-05T12:28:18",
+ "evidence_sha256": "5cb37c4f78c0b046c11fc6dff2976b71347eb4dbadaafa40ecdfca302f6a5e79",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "6709a6d73c5cde969ba91c2fd191afd904dead66f8e3acf67a2a926dab92dc45",
+ "response_sha256": "35014fd2651ddeeb96b008887b4bad84b972b89fe5aa9de4529aef993ba202af"
+}

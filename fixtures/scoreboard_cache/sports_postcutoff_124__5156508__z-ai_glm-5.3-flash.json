@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5156508,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xcda2f7d89f367374a5048179c2a97b0ea353d698f15c63add0370078c9fdad7e2b4b40758332ba48945ea0a7a41e9cd3daba5a2e843fd19a1077cc694d40ec481c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:90ce96747798c822b5377286c9ab303743ebd9ed59af37f185245726d92dbc7e:bf31529e1abff9ad06fe5cc16d6b83a94babed0d2faf071fc85ce8badf21f82a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and the official NHL API) agree the game is final with Vancouver winning 6-5 in overtime, so the market resolves to \"Canucks\". Per the verdict mapping, that resolves YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 971,
+  "total_tokens": 1319,
+  "completion_tokens": 348,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 136,
+  "completion_tokens_details": {
+   "reasoning_tokens": 136
+  }
+ },
+ "cost_usd": 0.00025168,
+ "at": "2026-11-05T10:14:42",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "90ce96747798c822b5377286c9ab303743ebd9ed59af37f185245726d92dbc7e",
+ "response_sha256": "bf31529e1abff9ad06fe5cc16d6b83a94babed0d2faf071fc85ce8badf21f82a"
+}

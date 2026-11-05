@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4882633,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xe627b68271665c226205829df739fe9c3efcc60db340b131896b5169accf0834168cb5a4c124346d0a308d8011475da1e3e4e2c360715a064d74fa04009f9d051c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:f1338595d23f73e527698a04f9f28410751d1ddd1b78437df1496120689fd913:d9c80473607b6a758a195499caff9b349b9296b2b8ff79e4eb25c1d3c018c993",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final sources agree the Kings won 5-2. Therefore the market resolves to Kings, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1123,
+  "total_tokens": 1800,
+  "completion_tokens": 677,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 444,
+  "completion_tokens_details": {
+   "reasoning_tokens": 444
+  }
+ },
+ "cost_usd": 0.0009588699999999999,
+ "at": "2026-11-05T10:16:33",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f1338595d23f73e527698a04f9f28410751d1ddd1b78437df1496120689fd913",
+ "response_sha256": "d9c80473607b6a758a195499caff9b349b9296b2b8ff79e4eb25c1d3c018c993"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5166966,
+ "polymarket_id": "5166966",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xf88595359ffdfe698bd005852e50bac464f6334ad5275156a5a406c4fbb099a26e6bb7f29305f8a6aaaa492741cce6f90aff6c43569c9a0e157ecf933f7491f61c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:9512235fe4e4f9c5c63d9041c3e91a1f5e283cb87266df21257db75251202c44:29c070bd7cfa576b56182089cdc584b468325d08666400b37f030e86fc6f6b65",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots do not provide NVIDIA's market-cap rank on October 31, 2026, and the Wikipedia list is only current to June 30, 2026. No consensus of credible reporting establishes the third-largest company on the required date.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 10034,
+  "total_tokens": 11015,
+  "completion_tokens": 981,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 843,
+  "completion_tokens_details": {
+   "reasoning_tokens": 843
+  }
+ },
+ "cost_usd": 0.00172571,
+ "at": "2026-11-05T12:27:13",
+ "evidence_sha256": "1427b3570acc081c9ea89d5bb232bf7312eb54b7e2ac508182848296fb7437fc",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "9512235fe4e4f9c5c63d9041c3e91a1f5e283cb87266df21257db75251202c44",
+ "response_sha256": "29c070bd7cfa576b56182089cdc584b468325d08666400b37f030e86fc6f6b65"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5694391,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xcb657dd6519750f2ca55d671f243aaca28a5b52ab270c6e37c38ab26e5d9ebd73a77cd8d82ea4f462550249cad4274b3fcaf17b59fac138d18023dc0146341351c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:1fd115e8423ba419edaeb4256b898a8b42b55c2bc4e995274675258c7b327766:3a07340cc6d390802b0c879c4c0ee95450afd76b4a309b64a93fcaca14b2f3e3",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources agree the finished match ended 0-2 (only 2 total goals), so first-half combined goals cannot reach 3; OpenLigaDB explicitly confirms a 0-0 halftime, making this an Under.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1264,
+  "total_tokens": 2285,
+  "completion_tokens": 1021,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 840,
+  "completion_tokens_details": {
+   "reasoning_tokens": 840
+  }
+ },
+ "cost_usd": 0.00061162,
+ "at": "2026-11-05T10:22:20",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "1fd115e8423ba419edaeb4256b898a8b42b55c2bc4e995274675258c7b327766",
+ "response_sha256": "3a07340cc6d390802b0c879c4c0ee95450afd76b4a309b64a93fcaca14b2f3e3"
+}

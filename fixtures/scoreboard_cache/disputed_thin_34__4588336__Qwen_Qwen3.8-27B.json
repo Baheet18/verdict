@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4588336,
+ "polymarket_id": "4588336",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x38f961af95a42914c0850a21a827a7bf93497dead18800314976a3a9ea63769921afb4f8e46d6f3ee71e0d947ad7d23346b4a08deb8ebe942dac74b037ce26821b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:3ad7fde6dde38193c0243e62a69d574e28b58ac73807c0f4c58db9e60a9fe5ad:2f2ed882c348b7abc99e0b8d749218f1e5d8fe762647c6a973a1707ea71a060b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only external snapshot is an NFL scores page shell with no third-quarter score data. No two independent sources report the needed quarter points.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4962,
+  "total_tokens": 5544,
+  "completion_tokens": 582,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 485,
+  "completion_tokens_details": {
+   "reasoning_tokens": 485
+  }
+ },
+ "cost_usd": 0.0009841799999999999,
+ "at": "2026-11-05T11:58:41",
+ "set": "disputed_thin_34",
+ "request_sha256": "3ad7fde6dde38193c0243e62a69d574e28b58ac73807c0f4c58db9e60a9fe5ad",
+ "response_sha256": "2f2ed882c348b7abc99e0b8d749218f1e5d8fe762647c6a973a1707ea71a060b"
+}

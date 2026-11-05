@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406786,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xc1697da00b685ccd4243be3360ee2e069835562547443b478db8b7c27147b10e198702304c822ad72074cfe1fc0c62347751960e5b1ec38f92fec3221b7019511c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:7ba2fba7b35eabd079cab4041d94341e278fc6c346de1c3fe630b6efe9d07ac3:5ab67cb5cc43b02ff3746c2b006303d387450c68f07b48bf936afdef2996fa1b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent final sources show Vegas Golden Knights 3, Pittsburgh Penguins 2. Therefore the market resolves to Golden Knights, mapped to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1113,
+  "total_tokens": 2738,
+  "completion_tokens": 1625,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1434,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1434
+  }
+ },
+ "cost_usd": 0.00223827,
+ "at": "2026-11-05T10:15:02",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "7ba2fba7b35eabd079cab4041d94341e278fc6c346de1c3fe630b6efe9d07ac3",
+ "response_sha256": "5ab67cb5cc43b02ff3746c2b006303d387450c68f07b48bf936afdef2996fa1b"
+}

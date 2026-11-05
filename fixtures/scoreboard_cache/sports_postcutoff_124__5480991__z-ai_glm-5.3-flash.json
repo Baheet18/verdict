@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5480991,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x6e13c9144a5be5820b2e2c8a1342ac2af811a47bfe2c40399be7afac450ff7590a6e567fbb21eac3a22e2ad4424f7c7562dae2db571b62b154f512a49d9d69351b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:0658ef7de22e2b28aede6ff7d67a569873b0fa47362b800e4ff0f1f0a8fb48aa:b6d9e391248b3be83d5e79343153f3f11d1e68466081d17a319ce5fe46a57eef",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Resolution requires VfB Stuttgart's first-half goal count, but only OpenLigaDB reports a halftime score (1-1); the ESPN snapshot provides only the full-time 2-3 result with no half-time breakdown, so fewer than two independent sources report the needed number.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1274,
+  "total_tokens": 2603,
+  "completion_tokens": 1329,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1105,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1105
+  }
+ },
+ "cost_usd": 0.0007664200000000001,
+ "at": "2026-11-05T10:22:17",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "0658ef7de22e2b28aede6ff7d67a569873b0fa47362b800e4ff0f1f0a8fb48aa",
+ "response_sha256": "b6d9e391248b3be83d5e79343153f3f11d1e68466081d17a319ce5fe46a57eef"
+}

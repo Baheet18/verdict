@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4588205,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xbba7fed317927703fed8cf9c3b5471401466f28c073dad2b2604979ebcc76f346404c3df37e85432c7d7987d98db3740e5aa243d43980ff32fb5c8d99d04b2801c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:62ee63042899dd983bc83c7418b30bbd0858ab06d85d31e420bc4d5d8d003a5e:01e0cfeb08e21b654db10e4c62a4fd5d9652c711ba8e42d12ecf7363d6875ef8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the Broncos won 30-16, a 14-point margin, which meets the rule of winning by 7 or more points. Therefore the market resolves to \"Broncos\", mapping to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 944,
+  "total_tokens": 1165,
+  "completion_tokens": 221,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 37,
+  "completion_tokens_details": {
+   "reasoning_tokens": 37
+  }
+ },
+ "cost_usd": 0.00018602,
+ "at": "2026-11-05T10:20:18",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "62ee63042899dd983bc83c7418b30bbd0858ab06d85d31e420bc4d5d8d003a5e",
+ "response_sha256": "01e0cfeb08e21b654db10e4c62a4fd5d9652c711ba8e42d12ecf7363d6875ef8"
+}

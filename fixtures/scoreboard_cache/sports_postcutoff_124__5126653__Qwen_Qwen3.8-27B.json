@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5126653,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xf2f8b5ba29dde55ccb272de988c1ba3a1e7e5d2aa7fa96dab1eeba381b88b46233af090f2545e40af1f07c09e02118a4057f15100291f1c717b29c39164de3ac1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:07487cba2bf691c55d0319f61925cd9ad3bba52f9598e6ffe7c607f81912571e:54000fb90a463d103e9c6eda4bbeceae62d5b9818b17ab0d20ba87500f19ec18",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources agree that the Los Angeles Kings defeated the New York Rangers 6-3. Therefore the market resolves to Kings, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1118,
+  "total_tokens": 1786,
+  "completion_tokens": 668,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 427,
+  "completion_tokens_details": {
+   "reasoning_tokens": 427
+  }
+ },
+ "cost_usd": 0.0009465200000000001,
+ "at": "2026-11-05T10:15:22",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "07487cba2bf691c55d0319f61925cd9ad3bba52f9598e6ffe7c607f81912571e",
+ "response_sha256": "54000fb90a463d103e9c6eda4bbeceae62d5b9818b17ab0d20ba87500f19ec18"
+}

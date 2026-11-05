@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4367262,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xc430d81c6082319340ee2cb14ee6c693e2745878c47793486f0787b19e1b5133573c323a1af00e66297f83bda4130e03b251618821a8db5ac3a8406acb77eccf1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:6cf9458191118a5151cb8306cc6885b852c600940e82335dcf20b5cdf1a245fb:af924dd03c16e5a886e3184ed91787d3c8947a286893193c2599db9c1750c106",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Bills 33, Raiders 30, for a combined total of 63. Since 63 is at least 59, the market resolves Over, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1116,
+  "total_tokens": 1669,
+  "completion_tokens": 553,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 282,
+  "completion_tokens_details": {
+   "reasoning_tokens": 282
+  }
+ },
+ "cost_usd": 0.00079119,
+ "at": "2026-11-05T10:21:33",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6cf9458191118a5151cb8306cc6885b852c600940e82335dcf20b5cdf1a245fb",
+ "response_sha256": "af924dd03c16e5a886e3184ed91787d3c8947a286893193c2599db9c1750c106"
+}

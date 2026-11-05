@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "market_id": 1235552,
+ "polymarket_id": "1235552",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x8e2cfcf6d9ef5b34c9aa04b5c963d5a61002288f939555aa0f14a921650b6e4d4079b4319cc5c20d2ca50c478f34f8b655116465e446318e918578430064a3b31c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:b798b9b74b3e2c5c3f81b4a7c6cd7c9dd663674c82a3889f561838b13473f7b1:509bf4827d1738dc23aa910f59e633c32c8175cd4c24108be66792aebc5c5466",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "The Guardians were eliminated in the ALCS (Rays defeated them 4-2), making it impossible for them to win the 2026 World Series, which the Brewers won over the Rays per MLB.com and ESPN. Per the rules, elimination resolves this market to No.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1307,
+  "total_tokens": 1596,
+  "completion_tokens": 289,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 134,
+  "completion_tokens_details": {
+   "reasoning_tokens": 134
+  }
+ },
+ "cost_usd": 0.00024906,
+ "at": "2026-11-05T12:58:35+01:00",
+ "evidence_sha256": "42ef56dc2623c15c2c20fcf061579f206a14663a1e7e151f4cbb928bb5f3929c",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "b798b9b74b3e2c5c3f81b4a7c6cd7c9dd663674c82a3889f561838b13473f7b1",
+ "response_sha256": "509bf4827d1738dc23aa910f59e633c32c8175cd4c24108be66792aebc5c5466"
+}

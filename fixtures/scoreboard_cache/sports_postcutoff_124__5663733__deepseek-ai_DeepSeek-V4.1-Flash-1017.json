@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663733,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xf45ea4109274ccdb8f75d53dcd091f8e667b27c8a6a4569210dfdf0cb7b6cece246ecee120ee1b9377d3bfaf3233c6551c7bfb6f0a2e9ae50a1e13f4fdda82fc1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:357df2891c6ac69764e93929b8da1173f85f841adcb4f93250b3b00707fac199:2b8a774deb55129f5fbd46cbf0b89d8dbece4b3b4891b8d24f572c3086bef423",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both snapshots report a final score of 2-4, for a combined total of 6 goals, which is over 2.5.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1239,
+  "total_tokens": 1521,
+  "completion_tokens": 282,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 91
+  }
+ },
+ "cost_usd": 0.0007101,
+ "at": "2026-11-05T10:21:32",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "357df2891c6ac69764e93929b8da1173f85f841adcb4f93250b3b00707fac199",
+ "response_sha256": "2b8a774deb55129f5fbd46cbf0b89d8dbece4b3b4891b8d24f572c3086bef423"
+}

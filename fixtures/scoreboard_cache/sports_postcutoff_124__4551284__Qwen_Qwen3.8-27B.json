@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551284,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xea22d083ed55357d7a3f018c2617c5c23be2cf4030673bc6ff23d42fc29192bc37dd98f440e81fc665c66e8d8f1f840dadd0a0b5974d959c29c5c6f266434a1d1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:dc0f91f3688cae30b6361dd909f0c6947fc62466d2279ba5bcb83e9a6bac16fc:d3fba0f52860d134e85e6ba15faf5a51ffed923ba65cd54e94bcdfcdc3a0c9c0",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Miami Dolphins 28, New York Jets 25. Therefore the market resolves to Dolphins, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1123,
+  "total_tokens": 1751,
+  "completion_tokens": 628,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 368,
+  "completion_tokens_details": {
+   "reasoning_tokens": 368
+  }
+ },
+ "cost_usd": 0.0008927200000000001,
+ "at": "2026-11-05T10:18:01",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "dc0f91f3688cae30b6361dd909f0c6947fc62466d2279ba5bcb83e9a6bac16fc",
+ "response_sha256": "d3fba0f52860d134e85e6ba15faf5a51ffed923ba65cd54e94bcdfcdc3a0c9c0"
+}

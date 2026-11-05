@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 608558,
+ "polymarket_id": "608558",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x994243940d28159433428f279af526dc810bf53f3e3c2ac6d731bcc8762afb677a88f646b3721cc04e85b16910633f058f5ca1b6e8e29fcb72528cdcc4f714281c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:148d8cd10079d726be91af83d1049e50233a1145065958471be03396b80f9cf9:21a045f258af0b4856a04e2086a2bcb749754b0fbed7bbff3773152e59c00dc4",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only external snapshot is the France Football homepage HTML, which contains boilerplate/CSS and no report of the 2026 Ballon d'Or winner or any mention of Raphinha. With no resolution data in the snapshots, the outcome cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4941,
+  "total_tokens": 5197,
+  "completion_tokens": 256,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 4736
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 126
+  }
+ },
+ "cost_usd": 0.0017894999999999999,
+ "at": "2026-11-05T11:36:45",
+ "set": "disputed_thin_34",
+ "request_sha256": "148d8cd10079d726be91af83d1049e50233a1145065958471be03396b80f9cf9",
+ "response_sha256": "21a045f258af0b4856a04e2086a2bcb749754b0fbed7bbff3773152e59c00dc4"
+}

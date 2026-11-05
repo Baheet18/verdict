@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5663791,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x0a6efe7b6021e0c6e21aaa1cd7092377debc89bbbf32f742b773a13238195556246b5c9bf34f3b9d71906e91c0d37ea9a9ccb71ed0a50807c3c82dd57fc6e3321c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:d212cfeafbc09f3bc80c57ca57e37e645fe6006f0140fe5d2ecd18b2b6c8a94b:28c8512c3dd6dc52af1099eaf4d3d738a9b4f3251459d9e039e862f6e3663666",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The needed number (first-half goals) is reported only by OpenLigaDB as a 0-0 halftime line, which is an all-zeros stat from a single source and thus MISSING DATA per the data-quality rules, while ESPN provides only the full-time 1-3 score with no half breakdown. With fewer than two independent sources agreeing on the first-half total, the snapshots are insufficient to definitively resolve Over/Und",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1238,
+  "total_tokens": 2560,
+  "completion_tokens": 1322,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1025,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1025
+  }
+ },
+ "cost_usd": 0.00076004,
+ "at": "2026-11-05T10:27:15",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "d212cfeafbc09f3bc80c57ca57e37e645fe6006f0140fe5d2ecd18b2b6c8a94b",
+ "response_sha256": "28c8512c3dd6dc52af1099eaf4d3d738a9b4f3251459d9e039e862f6e3663666"
+}

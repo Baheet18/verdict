@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5167227,
+ "polymarket_id": "5167227",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xb4a55e17d25ca2b915b0ce3f27736c50370d82848fd87bedd0e6628cce5988e105faa5f435add03005040da36432e12054988f00e5d3158bfc7b906b93f24bdc1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:a40f0be8a2d7dbb7a9081469c7d6e19e2fed29c14d103350a61f26fdb77f3925:5dcea7344668382aff99f7ce7b22463c1d26d45571cf7eed7d4664954f5ed332",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only source snapshot is the market rules, with no credible media reporting or official statements confirming a qualifying talk. Therefore the evidence is insufficient to determine whether the condition was met.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1262,
+  "total_tokens": 2592,
+  "completion_tokens": 1330,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1263,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1263
+  }
+ },
+ "cost_usd": 0.00184598,
+ "at": "2026-11-05T11:49:18",
+ "set": "disputed_thin_34",
+ "request_sha256": "a40f0be8a2d7dbb7a9081469c7d6e19e2fed29c14d103350a61f26fdb77f3925",
+ "response_sha256": "5dcea7344668382aff99f7ce7b22463c1d26d45571cf7eed7d4664954f5ed332"
+}

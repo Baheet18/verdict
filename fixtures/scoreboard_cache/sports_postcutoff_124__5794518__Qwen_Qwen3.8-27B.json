@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5794518,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xa35955239962f6b6b9ccf2aca9b44ece44fba5236fcd9ce692d9f076794ba24a59909943f91f85939295530129fdc07e48535f70882445705298790dedf3bf3b1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:14279c19ba9801c2b2e81b1b83312b8562b525b1e80bea533685174a14403023:1face2a683cffc17ef8d333981abf651e17ed218be8b7208e78f152b66cffd52",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots report the completed 2026-10-30 match ended 3-1 to Arminia Bielefeld, so Eintracht Braunschweig did not win.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1318,
+  "total_tokens": 2710,
+  "completion_tokens": 1392,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1186,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1186
+  }
+ },
+ "cost_usd": 0.00193192,
+ "at": "2026-11-05T10:24:42",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "14279c19ba9801c2b2e81b1b83312b8562b525b1e80bea533685174a14403023",
+ "response_sha256": "1face2a683cffc17ef8d333981abf651e17ed218be8b7208e78f152b66cffd52"
+}

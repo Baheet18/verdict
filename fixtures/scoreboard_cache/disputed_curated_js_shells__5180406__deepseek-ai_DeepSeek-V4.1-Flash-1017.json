@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "market_id": 5180406,
+ "polymarket_id": "5180406",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xdb4ee16de3f42a7dfbbbce7635f7a7f9fac27f053c87e543a82c255a5048ef471497ae4a983878678cf2fbeea5a797bcacf203beae2da84223830198ca19103e1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:db529f618f3d3eadd9e8878ff89ef0674c1b62e4bf70ab211df44dfdf2d1cd8c:86b033ec8303164e978c54d83ead48893aa5e883dfc68847c0f4b9ac6c5e5cbb",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots do not provide the market-cap ranking as of October 31, 2026; the Wikipedia list is only current through June 30, 2026, and the other pages contain no usable ranking data. Thus the evidence is insufficient to determine whether Apple was second-largest on the resolution date.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 10178,
+  "total_tokens": 10610,
+  "completion_tokens": 432,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 9984
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 314
+  }
+ },
+ "cost_usd": 0.0035718,
+ "at": "2026-11-05T12:26:06",
+ "evidence_sha256": "d2154c35114211029c2a80b72c5cc1960a4b39d45e7e9857a66bc086855f6677",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "db529f618f3d3eadd9e8878ff89ef0674c1b62e4bf70ab211df44dfdf2d1cd8c",
+ "response_sha256": "86b033ec8303164e978c54d83ead48893aa5e883dfc68847c0f4b9ac6c5e5cbb"
+}

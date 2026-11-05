@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4950302,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xd47de03581ae855667e96b70285a696d9cd217420f9732d565761f4f45a7e9b044a9b6aa62df216d79ab17f4686bf7233c51efb4038b2c16168e127295f6dbe61b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:8f8f991a7c4cd4f41f7e8a6b01aa8248cb203349b889e05ce2d5aa943b79f233:07a64e5cb3c270f6753c05295b3b7c8d77baa549d02716c7ed21747fe66b1312",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources agree the game is final with Flames 2, Wild 1, so the Flames won and the market resolves to \"Flames\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 986,
+  "total_tokens": 1299,
+  "completion_tokens": 313,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 31
+  }
+ },
+ "cost_usd": 0.0006714,
+ "at": "2026-11-05T10:13:06",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8f8f991a7c4cd4f41f7e8a6b01aa8248cb203349b889e05ce2d5aa943b79f233",
+ "response_sha256": "07a64e5cb3c270f6753c05295b3b7c8d77baa549d02716c7ed21747fe66b1312"
+}

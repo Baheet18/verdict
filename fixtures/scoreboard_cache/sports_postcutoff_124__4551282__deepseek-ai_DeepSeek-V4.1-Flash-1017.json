@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551282,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x3c9a63f1a163484c01084f8b9e583905ca1e43dc1372c55e5fd8be583d8786a01afad6ac77435b59b16b576a4fdfd063c6e2a4b261966eac5bd44d288d0bdfd11b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:dd5a1c13d4a6d56087058a973a3664255abfb575093f7db732437e6b5a66b7b4:0dd28749449136f66fb9a850a1a0f8e5eaefa48f29afaf9f57cf5eeac0caa9fe",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show the game final with Vikings 16 and Colts 10, so the Colts lost and the market resolves to Vikings (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 993,
+  "total_tokens": 1305,
+  "completion_tokens": 312,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 26
+  }
+ },
+ "cost_usd": 0.0006723,
+ "at": "2026-11-05T10:17:39",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "dd5a1c13d4a6d56087058a973a3664255abfb575093f7db732437e6b5a66b7b4",
+ "response_sha256": "0dd28749449136f66fb9a850a1a0f8e5eaefa48f29afaf9f57cf5eeac0caa9fe"
+}

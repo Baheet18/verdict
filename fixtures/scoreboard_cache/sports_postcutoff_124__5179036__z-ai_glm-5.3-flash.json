@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5179036,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xc8eb99a2713447b676b8e423411aee6468303519dc3ceee2cdb2e52d709e384a0a4be7d9222a25ebb3f3a5dc148b581f954c416c4aea1e86a553dda40082f6201b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:bb9667d20a04d3a220b16ce405a1be565c9d06735a564acf66b76c736f450610:6d29787d965626576eed9365f115dfe8df27fd4bcb82ad7cf24991925a785ebf",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Capitals defeated the Flyers 5-2 in regulation, so the market resolves to \"Capitals\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 968,
+  "total_tokens": 1171,
+  "completion_tokens": 203,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 26,
+  "completion_tokens_details": {
+   "reasoning_tokens": 26
+  }
+ },
+ "cost_usd": 0.00017894,
+ "at": "2026-11-05T10:13:48",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "bb9667d20a04d3a220b16ce405a1be565c9d06735a564acf66b76c736f450610",
+ "response_sha256": "6d29787d965626576eed9365f115dfe8df27fd4bcb82ad7cf24991925a785ebf"
+}

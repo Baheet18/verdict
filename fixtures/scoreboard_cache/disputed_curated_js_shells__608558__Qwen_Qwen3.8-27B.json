@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 608558,
+ "polymarket_id": "608558",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xc88e8d85d27f26eb08dc32992339442a000a7cc68e41942ff1afaf0f7daa5692664cf753e9268952ca3b2817e22392e4389a1d2f9dc60e59daa6c15e367877211b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:c2c80656067db1dc53db6825b8b342c4259e38e1d3eb9e1c41d1a1909bf61c10:d38c39095189b1b38387c44cf3ce618780fe8fa54dd134bce5b8db59befffff8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "TOO_EARLY",
+ "reasoning": "The snapshots were fetched on 2026-11-05, before the rules' December 31, 2026 declaration deadline, and do not show a 2026 Ballon d'Or winner.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 13031,
+  "total_tokens": 14767,
+  "completion_tokens": 1736,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1616,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1616
+  }
+ },
+ "cost_usd": 0.00286484,
+ "at": "2026-11-05T12:22:42",
+ "evidence_sha256": "0fe8605858ae32064ba4d202b1c5f64f5569f29e1af82fd1f51ddf016cb98011",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "c2c80656067db1dc53db6825b8b342c4259e38e1d3eb9e1c41d1a1909bf61c10",
+ "response_sha256": "d38c39095189b1b38387c44cf3ce618780fe8fa54dd134bce5b8db59befffff8"
+}

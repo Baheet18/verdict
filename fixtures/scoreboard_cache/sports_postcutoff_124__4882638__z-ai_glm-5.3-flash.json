@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4882638,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x8ec1aa68c24f86ccebe1157457291c94b91f1b8079efd2fa31d53558f09ac6d6311efef75cf5f905c3a68af895949f4d4c02dc4e405510e497c2b56aaab42c071b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:e053f076583ad02cd6b6dc3f0cbccc3e7b4c7d1c691db39ce151912872702f76:ea21190f2c64855062c3126ee451cc9d068ac2bd331c05ad3960118b5e20191c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Islanders winning 3-2 in regulation, so the market resolves to \"Islanders\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 966,
+  "total_tokens": 1171,
+  "completion_tokens": 205,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 27,
+  "completion_tokens_details": {
+   "reasoning_tokens": 27
+  }
+ },
+ "cost_usd": 0.00017978,
+ "at": "2026-11-05T10:15:34",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e053f076583ad02cd6b6dc3f0cbccc3e7b4c7d1c691db39ce151912872702f76",
+ "response_sha256": "ea21190f2c64855062c3126ee451cc9d068ac2bd331c05ad3960118b5e20191c"
+}

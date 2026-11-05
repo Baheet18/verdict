@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4587812,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x8a14e4c591f671198c08dbf08fb0ef86d3cd1173c79219ab630e55c688a813ce0682b87c3702d33deaae4c238f7e6a11239afc92ddac6fed114e221b98870a881c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:79c861527ef43c7817a32d5f4bf89fa33e8c1435b3073d54c8865c4bf5e1b4c8:dcd037e88986326758ebc64ec5f6c277fe5cb81e14f72ba3d2d98565bc230360",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both ESPN and nflverse independently report the final score as Rams 35, Raiders 21, a combined total of 56 points. Since 56 is less than 59, the market resolves to Under, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 947,
+  "total_tokens": 1177,
+  "completion_tokens": 230,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 74,
+  "completion_tokens_details": {
+   "reasoning_tokens": 74
+  }
+ },
+ "cost_usd": 0.00019076,
+ "at": "2026-11-05T10:20:40",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "79c861527ef43c7817a32d5f4bf89fa33e8c1435b3073d54c8865c4bf5e1b4c8",
+ "response_sha256": "dcd037e88986326758ebc64ec5f6c277fe5cb81e14f72ba3d2d98565bc230360"
+}

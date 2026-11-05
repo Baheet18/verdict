@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4882638,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x493b1b004389c83bbe4d65637c135bb5ebc90a4522937daaf9b94e8e5c1b11c95af52335ef1328ee30d5c5a93bd104f987266bd7fbbade335dce551f97b91bf11c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:41e60847ad51d054954222efb3590e59d2be0aa94c265d36bb889813094846e2:586b37a09ecb47025309556a5e853cc0d990df7d96dea0698c2259124c14c283",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Islanders 3, Ducks 2, so the Ducks did not win and the market resolves to Islanders (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1005,
+  "total_tokens": 1326,
+  "completion_tokens": 321,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 37
+  }
+ },
+ "cost_usd": 0.0006866999999999999,
+ "at": "2026-11-05T10:15:33",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "41e60847ad51d054954222efb3590e59d2be0aa94c265d36bb889813094846e2",
+ "response_sha256": "586b37a09ecb47025309556a5e853cc0d990df7d96dea0698c2259124c14c283"
+}

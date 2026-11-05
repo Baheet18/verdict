@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5480414,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x305e855afda8ce173ae0a285aa4621715912957e30888411527e70429021f6d6556443f3244bf93edd7597d851dc9a0406d8fffe3bb9a14ec731ce9437d511fd1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:ea6cd94019f2c39f81af1e6347473901e5bc4791ec6328624b5bcdf5f842698d:6c9040add40d9c8923cab24ed9346f88c64c7a002684924427e9d3e67cf33e2b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Both snapshots confirm the match is finished (2-3 final), but neither ESPN nor OpenLigaDB reports any corner statistics, so the total corner count needed for the O/U 7.5 resolution cannot be verified by two independent sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1207,
+  "total_tokens": 1817,
+  "completion_tokens": 610,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 285,
+  "completion_tokens_details": {
+   "reasoning_tokens": 285
+  }
+ },
+ "cost_usd": 0.00040155999999999997,
+ "at": "2026-11-05T10:22:52",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ea6cd94019f2c39f81af1e6347473901e5bc4791ec6328624b5bcdf5f842698d",
+ "response_sha256": "6c9040add40d9c8923cab24ed9346f88c64c7a002684924427e9d3e67cf33e2b"
+}

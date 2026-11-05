@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 1235552,
+ "polymarket_id": "1235552",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x724a04203f952df738c83a3d5a884abd27c8c4ee57abefd4802293a01b1ad0cf0e7cd602ac161ab78bebb6603f696460d49dfe60d958281270e09c37a4c5970a1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:94c9845d2d35d33368646e3d577802b2f95687a40e28c2cc28dccdd23a88bb86:9d55a2f3ad7521206c250e4cfa559915218630f17bb55721b9ac02053597c9db",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The MLB.com and ESPN snapshots (fetched 2026-11-05, after the 2026-10-31 market end) contain only page boilerplate/meta tags with no World Series result, champion, or Guardians elimination information, so fewer than two independent sources report the needed outcome. Without any snapshot stating whether Cleveland won or was eliminated, the market cannot be resolved YES or NO from the evidence.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 12568,
+  "total_tokens": 13925,
+  "completion_tokens": 1357,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1118,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1118
+  }
+ },
+ "cost_usd": 0.00168394,
+ "at": "2026-11-05T12:21:03",
+ "evidence_sha256": "27a62b4dda719e278acf6eca488def0139f1a1e73c16a1a27aa30b3d9fbdb926",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "94c9845d2d35d33368646e3d577802b2f95687a40e28c2cc28dccdd23a88bb86",
+ "response_sha256": "9d55a2f3ad7521206c250e4cfa559915218630f17bb55721b9ac02053597c9db"
+}

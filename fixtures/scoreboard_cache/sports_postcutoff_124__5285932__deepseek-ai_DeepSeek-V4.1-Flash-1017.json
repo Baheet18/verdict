@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285932,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xb4757dd37b0d6991297c3b656430838a234674d7a5fc74a4f4caa8a4125450f465b6a83cc8b999ba949d6daebdd1d5a2b32a908c7ff298a592098c759faf9ec41b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:e01b0ba6eee2f9d36ca36ff96d0ca30aa6944141f6079fd478b94346661bc270:5b5afe73daba633f5676108c71c5823f760d31a910322d7464de27856a2e904d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL API) agree the game is final with the Senators winning 5-1, so the market resolves to \"Senators\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 994,
+  "total_tokens": 1358,
+  "completion_tokens": 364,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 83
+  }
+ },
+ "cost_usd": 0.000735,
+ "at": "2026-11-05T10:13:27",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e01b0ba6eee2f9d36ca36ff96d0ca30aa6944141f6079fd478b94346661bc270",
+ "response_sha256": "5b5afe73daba633f5676108c71c5823f760d31a910322d7464de27856a2e904d"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4367393,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x9c8f6295bd74650c5c52269e31838e4b9a8dd37757ea3e6274e91e6df289cafa5f6d43c23c7b3bb8584c117f1ebc83bdc8150ba48d476b30e79e14562cecb5681c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:a5dfc63e2fdbaaac0e2a372695726af9c368d73ad7519bc41c7b79d53f7e38d4:922979b74b23916206f703362137ccf1e906ec9b6c5256f2b845f52b24eda18f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Saints 34, Giants 27, for a combined total of 61. Since 61 is at least 57, the market resolves Over, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1105,
+  "total_tokens": 1532,
+  "completion_tokens": 427,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 153,
+  "completion_tokens_details": {
+   "reasoning_tokens": 153
+  }
+ },
+ "cost_usd": 0.00062065,
+ "at": "2026-11-05T10:21:13",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "a5dfc63e2fdbaaac0e2a372695726af9c368d73ad7519bc41c7b79d53f7e38d4",
+ "response_sha256": "922979b74b23916206f703362137ccf1e906ec9b6c5256f2b845f52b24eda18f"
+}

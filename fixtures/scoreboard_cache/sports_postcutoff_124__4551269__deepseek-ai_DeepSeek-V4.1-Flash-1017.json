@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551269,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xbfdfff06bfb8a2144c07842195b0c3abec8ccf5d219b9cb89fc5d880fbb0b4116abf90dc838047718eeb244dfdaec0c7365d04de9110692744cf28800cfbebf11c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:bb3aee56ee18bf00e217302f8175bf9f9ce07fb755e45bd7ec7056c43183830e:550f109c4ca83d3a67a49c4b581e8a763a6b7d26f85ec60838ee36bf16b2d099",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both snapshots show the game final with Pittsburgh Steelers scoring 16 and New Orleans Saints scoring 10, so the Steelers won. The market therefore resolves to Steelers, i.e. YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 993,
+  "total_tokens": 1423,
+  "completion_tokens": 430,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 135
+  }
+ },
+ "cost_usd": 0.0008139,
+ "at": "2026-11-05T10:18:34",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "bb3aee56ee18bf00e217302f8175bf9f9ce07fb755e45bd7ec7056c43183830e",
+ "response_sha256": "550f109c4ca83d3a67a49c4b581e8a763a6b7d26f85ec60838ee36bf16b2d099"
+}

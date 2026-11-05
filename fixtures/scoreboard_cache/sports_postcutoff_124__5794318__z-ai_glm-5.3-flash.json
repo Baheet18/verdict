@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5794318,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xc3bceb30621e3e245d85961bcf60ac0bca9bbb2e7db8b39d73f6ec19654c964104f1d93550aa488ad058c44688c5db7991fc8c4cbb02f89029849016ca10df121b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:a19d2d1ac233cf3a1cd3b4b92cd71f6c855c1730fc320e36df878010ddd0120e:23858f8d505b9ff3b66741b7f14e0ec4f0c723a4454549cb1f780a87459ce8d2",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the match finished with Energie Cottbus 1, VfL Bochum 2, with ESPN explicitly marking Bochum as winner and OpenLigaDB's Endergebnis confirming the 1-2 final result. Bochum won within regular play, so the market resolves to Yes.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1145,
+  "total_tokens": 1533,
+  "completion_tokens": 388,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 84,
+  "completion_tokens_details": {
+   "reasoning_tokens": 84
+  }
+ },
+ "cost_usd": 0.0002856,
+ "at": "2026-11-05T10:26:14",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "a19d2d1ac233cf3a1cd3b4b92cd71f6c855c1730fc320e36df878010ddd0120e",
+ "response_sha256": "23858f8d505b9ff3b66741b7f14e0ec4f0c723a4454549cb1f780a87459ce8d2"
+}

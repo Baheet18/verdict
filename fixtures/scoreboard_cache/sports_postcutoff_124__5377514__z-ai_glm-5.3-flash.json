@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5377514,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xaf7acdfe327b0d950ebf7b4b9cb17ce4bb544879879ecb0cfae4a1fc8442883b059a81541a7cb4237b1713d5fd13b3b7a946c028eb300f9ec47ffda8320b9e001c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:b4621c880be98359808cb8b44d1c907f351daa3fe278378515cc6244f4872ea2:4cbec64c0d92a9bc5b0986693fd7e88246f1e65a3e39a1bb919c2ecd5259a3e2",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent sources agree the game is final with NE 24 and CHI 30, a combined total of 54 points, which is 29 or more. Per the rules, this resolves to \"Over\", mapping to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 949,
+  "total_tokens": 1135,
+  "completion_tokens": 186,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 48,
+  "completion_tokens_details": {
+   "reasoning_tokens": 48
+  }
+ },
+ "cost_usd": 0.00016892,
+ "at": "2026-11-05T10:21:24",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "b4621c880be98359808cb8b44d1c907f351daa3fe278378515cc6244f4872ea2",
+ "response_sha256": "4cbec64c0d92a9bc5b0986693fd7e88246f1e65a3e39a1bb919c2ecd5259a3e2"
+}

@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 608558,
+ "polymarket_id": "608558",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x4da2af79f7c4f5212776d8170e716037e5b9432abc56003ce42b414932d679d559f50fafd9dfb1d4777f7cf9a10df6cb0e170cf85ee576278761db87433c59b61c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:31a0f74251347b227450c7fa279337a399b8725d7a0a2ef98e0eb0149db2ee8d:54754686b49745bce80293fd28097c86f4f566d76bcb56a150cc3a2d66ef97a9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "TOO_EARLY",
+ "reasoning": "The France Football snapshot is only the homepage and does not declare a 2026 Ballon d\u2019Or winner. The rules\u2019 declaration deadline of December 31, 2026 had not passed at the snapshot time.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 5012,
+  "total_tokens": 6866,
+  "completion_tokens": 1854,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1706,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1706
+  }
+ },
+ "cost_usd": 0.00270338,
+ "at": "2026-11-05T11:36:37",
+ "set": "disputed_thin_34",
+ "request_sha256": "31a0f74251347b227450c7fa279337a399b8725d7a0a2ef98e0eb0149db2ee8d",
+ "response_sha256": "54754686b49745bce80293fd28097c86f4f566d76bcb56a150cc3a2d66ef97a9"
+}

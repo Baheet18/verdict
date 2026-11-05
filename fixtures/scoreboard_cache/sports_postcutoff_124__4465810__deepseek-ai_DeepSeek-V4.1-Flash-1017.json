@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4465810,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xb6d870f7b9144c6e73e49836abb8371495cf4464b0575c32e96cfcd15cdc30441fb20040d9d1fc40de245e76f13d861606991dfd62ad3611179c9f54ea9b3ba01c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:8d6adeda09138422614a1a3feb7b41b38cf83578604528f0e78722ec9c018bc5:2790321eefe51f4c9cecd5b617197a35c4f8576d5e56c3838a5c6a679173f9cc",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show the game final with Bears 30, Patriots 24, so the market resolves to \"Bears\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 987,
+  "total_tokens": 1191,
+  "completion_tokens": 204,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 25
+  }
+ },
+ "cost_usd": 0.0005409,
+ "at": "2026-11-05T10:16:52",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8d6adeda09138422614a1a3feb7b41b38cf83578604528f0e78722ec9c018bc5",
+ "response_sha256": "2790321eefe51f4c9cecd5b617197a35c4f8576d5e56c3838a5c6a679173f9cc"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 2645473,
+ "polymarket_id": "2645473",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x2b0152e7b391f07fdd49236196a616bb5bdba20ac8c01f37e471704a1195312d3ba03ae30ed5d92a8d9c5a781416c69259759a043cc24c619736f1bfa43525c61c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:5c271e840c0b806c7d607c2a787efcaddeab18491869b15f4758da83600708b4:c457b166dd84079a4e960c2ca7cfed13d5da0e6ce9d52d42303ba49b0ced673e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description, with no official announcement or credible reporting about Zach LaVine's team. The evidence is insufficient to determine whether he joined the Sacramento Kings.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1061,
+  "total_tokens": 1487,
+  "completion_tokens": 426,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 297,
+  "completion_tokens_details": {
+   "reasoning_tokens": 297
+  }
+ },
+ "cost_usd": 0.0006175400000000001,
+ "at": "2026-11-05T11:45:17",
+ "set": "disputed_thin_34",
+ "request_sha256": "5c271e840c0b806c7d607c2a787efcaddeab18491869b15f4758da83600708b4",
+ "response_sha256": "c457b166dd84079a4e960c2ca7cfed13d5da0e6ce9d52d42303ba49b0ced673e"
+}

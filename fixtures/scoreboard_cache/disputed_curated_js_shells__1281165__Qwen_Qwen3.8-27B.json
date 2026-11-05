@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 1281165,
+ "polymarket_id": "1281165",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x49d76e9640f107673709dd4cd5b2db533b7b487f9fccfbc4aa4c5c8d435c506f7309a6525ec9f94ad4547a6de7148164860c6cb7c6a05df3d8a0c8feaaf08ac81c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:69d8a8f13e18cc655ad326cecd7dde49539ca4c964f7bb739b847a4a549c39a5:bab34c7531551c1de999b5626b179f5ae4bc898d7c47444a51caac3700d3e1cb",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots confirm the 2026 California House election occurred but provide no CA-34 winner, party, or official result. Therefore the market cannot be resolved from the provided sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 7137,
+  "total_tokens": 8535,
+  "completion_tokens": 1398,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1256,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1256
+  }
+ },
+ "cost_usd": 0.00217278,
+ "at": "2026-11-05T12:35:14",
+ "evidence_sha256": "eb4ce6d0c1da2f7f644011bcb7c10608a0bc5ef2ac66459f084847f8849bb9e4",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "69d8a8f13e18cc655ad326cecd7dde49539ca4c964f7bb739b847a4a549c39a5",
+ "response_sha256": "bab34c7531551c1de999b5626b179f5ae4bc898d7c47444a51caac3700d3e1cb"
+}

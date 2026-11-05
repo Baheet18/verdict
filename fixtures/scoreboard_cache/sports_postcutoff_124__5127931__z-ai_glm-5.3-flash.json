@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5127931,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xebb298baf86d7a08a1fc4af5f1fa0a94c5ed8560693c814e94bccc8824a8872e2f0f1efb91766cd59a39123dad671fa1ce0204024e058e660e90d3cc89c92ba21b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:5e760dfec12312e0b9e21968a290b643715aae7b0930c7704e6f1b139d9a056d:e508cb50a80e9ad9315a23aad7ae57eec0aee66d8ddbd6c836598d7d35811773",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the final combined score was 25+14=39, which is under 59, so the market resolves to Under.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 941,
+  "total_tokens": 1098,
+  "completion_tokens": 157,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 50,
+  "completion_tokens_details": {
+   "reasoning_tokens": 50
+  }
+ },
+ "cost_usd": 0.00015378,
+ "at": "2026-11-05T10:21:28",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5e760dfec12312e0b9e21968a290b643715aae7b0930c7704e6f1b139d9a056d",
+ "response_sha256": "e508cb50a80e9ad9315a23aad7ae57eec0aee66d8ddbd6c836598d7d35811773"
+}

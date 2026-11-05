@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285942,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xf1a157f5801f5c4606e7f6c70eadae0c5fde4ee4fe04aa0c3d60491690a0bdff243581ee69eb4420af831efef3538e6c2442e81787aa02e814950eda41edc9201c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:206394e539b3ad3b52890b9c60aecdf5ba9bd2b0f20849147dc084bed6c0402b:a19e7ed932e5e2645e7737e08d2e0538e716f84dd4bb526207f5dd2954029f2b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Maple Leafs 4, Canucks 2, so the Maple Leafs won.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 999,
+  "total_tokens": 1327,
+  "completion_tokens": 328,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 43
+  }
+ },
+ "cost_usd": 0.0006933,
+ "at": "2026-11-05T10:16:38",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "206394e539b3ad3b52890b9c60aecdf5ba9bd2b0f20849147dc084bed6c0402b",
+ "response_sha256": "a19e7ed932e5e2645e7737e08d2e0538e716f84dd4bb526207f5dd2954029f2b"
+}

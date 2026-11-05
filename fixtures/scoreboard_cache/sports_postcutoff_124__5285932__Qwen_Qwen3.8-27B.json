@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285932,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x2620cccb32de241a0e202c6efd4ef210cee2a8ac66070399a2c4a7d6c058c20c43701a670b72fb04f21fb4cb83a8ae30bd2a55a2e59aecf223a141bfc56b711d1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:bb56485467569aae95e39761aa489d2c8900f7bf3a8efb47f6037012fbedc766:b55db3619846413c163e36393b510e549cd728bdfd0041e33df6f7ab049027b1",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources agree that the Ottawa Senators won 5-1 over the San Jose Sharks. Under the rules, a Senators win resolves the market to \"Senators\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1121,
+  "total_tokens": 1721,
+  "completion_tokens": 600,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 348,
+  "completion_tokens_details": {
+   "reasoning_tokens": 348
+  }
+ },
+ "cost_usd": 0.0008548399999999999,
+ "at": "2026-11-05T10:13:34",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "bb56485467569aae95e39761aa489d2c8900f7bf3a8efb47f6037012fbedc766",
+ "response_sha256": "b55db3619846413c163e36393b510e549cd728bdfd0041e33df6f7ab049027b1"
+}

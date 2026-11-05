@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5126653,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xe8b5558c20a1fd8d6714e3b396d6835808613a4a2c75bffe9dd005d6845caef37f2383dd7598eb72b2b3a01e3a1952000860831ef57c11f894938e53ba07647c1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:bad01e7dd38bd7efb0d1675e4e02a6802809b7f62b5c22c5cc97419ddb127960:41b7030b096f3732c7c72b3ce630d7c5675446afd63e4c2ad5917eb230b5553d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent sources report a final score of Kings 6, Rangers 3, so the Kings won and the market resolves to \"Kings\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 990,
+  "total_tokens": 1293,
+  "completion_tokens": 303,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 26
+  }
+ },
+ "cost_usd": 0.0006606,
+ "at": "2026-11-05T10:15:13",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "bad01e7dd38bd7efb0d1675e4e02a6802809b7f62b5c22c5cc97419ddb127960",
+ "response_sha256": "41b7030b096f3732c7c72b3ce630d7c5675446afd63e4c2ad5917eb230b5553d"
+}

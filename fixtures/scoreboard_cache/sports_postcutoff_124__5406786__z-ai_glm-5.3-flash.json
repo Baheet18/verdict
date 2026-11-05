@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5406786,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x9be3c5d5a74109e5dde3dddc24806a7c853a89fcfae04440b33555eb90d406251ab90128404ab94086c7f80a7e5bec7f9756e881df87542456ce798dc721c4481c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:94dbc9857209669a5bc8b34774d28897e3f9a78d7f2b43bb8adbd8c058a32cf7:82c9cb071a5fc9f02040b597cc08c32be49ad81ff1836df48f467a07083161f0",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Vegas winning 3-2 in regulation, so the market resolves to \"Golden Knights\". No shootout adjustment applies since lastPeriodType is REG.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 964,
+  "total_tokens": 1156,
+  "completion_tokens": 192,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 23,
+  "completion_tokens_details": {
+   "reasoning_tokens": 23
+  }
+ },
+ "cost_usd": 0.00017312,
+ "at": "2026-11-05T10:14:31",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "94dbc9857209669a5bc8b34774d28897e3f9a78d7f2b43bb8adbd8c058a32cf7",
+ "response_sha256": "82c9cb071a5fc9f02040b597cc08c32be49ad81ff1836df48f467a07083161f0"
+}

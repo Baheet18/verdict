@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663755,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xe41a4716b23d5df5d523b6650891b0d42c716d27feb6bf4248f50232bbc2ee1d5de801ab2f1beb4b1ff00793bdc75c173cc85ae3981ed0c389c09d06d0804d291b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:ecea2bd4eabe4b16f2f878cc9ee71ab9ab085f953bce8f97fab50777471522e6:85b3f4ec77918855319946c79da7be8bfa15d526aa406e35e9d1cfdbf04a8d40",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent snapshots show FC Augsburg scored 4 goals in a completed match, which is over 2.5. The final score was not a draw, so the match did not require extra time.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1260,
+  "total_tokens": 1597,
+  "completion_tokens": 337,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 193
+  }
+ },
+ "cost_usd": 0.0007824,
+ "at": "2026-11-05T10:21:39",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ecea2bd4eabe4b16f2f878cc9ee71ab9ab085f953bce8f97fab50777471522e6",
+ "response_sha256": "85b3f4ec77918855319946c79da7be8bfa15d526aa406e35e9d1cfdbf04a8d40"
+}

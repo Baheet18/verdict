@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 4376691,
+ "polymarket_id": "4376691",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x30876fd0da74d45822c9ae7937858e41b38708b04462ff80103d22089def7928568da46ffe270ef3e4e2608249354ad5a12e2b026cd3ae80be266bb8dbd19caf1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:289e1977ca8bf175e74b199b52559a6aeaf98a7074a5fd8317c26dfeba0427f7:8b89bdacba3ef12817942ace00ff06e1da25e5c463d7d1f488283ec4798c17e6",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market's own rules text, explicitly flagged as not an external fact source, so there is no reporting on whether any qualifying Iranian strike on Iraq occurred. With zero factual evidence, the outcome cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1669,
+  "total_tokens": 2025,
+  "completion_tokens": 356,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1472
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 228
+  }
+ },
+ "cost_usd": 0.0009279,
+ "at": "2026-11-05T11:39:17",
+ "set": "disputed_thin_34",
+ "request_sha256": "289e1977ca8bf175e74b199b52559a6aeaf98a7074a5fd8317c26dfeba0427f7",
+ "response_sha256": "8b89bdacba3ef12817942ace00ff06e1da25e5c463d7d1f488283ec4798c17e6"
+}

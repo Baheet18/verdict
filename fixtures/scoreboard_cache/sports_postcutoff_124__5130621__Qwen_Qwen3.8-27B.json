@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5130621,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x43e7577b0a966c68ae4d3f002a9da834de4090eb3a41220f4b39d04c5c7b5f4f76771dc94b9f7ffd4ea4861dfc497ae008b7a0d012adeb2d6a481ea22a684eee1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:e66bc49b7c40b9008d5e29b92fe59f1ff492ad3f715c52fb1164dba557137b85:73453ebf90ff6467fa8d61fd5732a7e94de2115f6cbec35d5518bbe6af4c3189",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources report the final combined score as 40 points. Since 40 is less than 53, the market resolves Under, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1120,
+  "total_tokens": 1952,
+  "completion_tokens": 832,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 534,
+  "completion_tokens_details": {
+   "reasoning_tokens": 534
+  }
+ },
+ "cost_usd": 0.001168,
+ "at": "2026-11-05T10:20:56",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e66bc49b7c40b9008d5e29b92fe59f1ff492ad3f715c52fb1164dba557137b85",
+ "response_sha256": "73453ebf90ff6467fa8d61fd5732a7e94de2115f6cbec35d5518bbe6af4c3189"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5285932,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xd94bb543d5bb025091127765491aa751e80930949b22bcc0d2049a997c38b30f7bc9a22ab807162f6999189922dd09e5219dcbb0aaadf0836e97db9248d7a3fe1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:5e0de4cfeb4ab3551b6cc7cbd1cfff0ca84f616dd7157b563ca7a0b5722a77b9:c6e7632a8c5ae980e3d16235055b29c6b88be397fb2bf4cbbba490841e6234c1",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Ottawa winning 5-1 in regulation, so the market resolves to \"Senators\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 966,
+  "total_tokens": 1173,
+  "completion_tokens": 207,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 29,
+  "completion_tokens_details": {
+   "reasoning_tokens": 29
+  }
+ },
+ "cost_usd": 0.00018078000000000001,
+ "at": "2026-11-05T10:13:34",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5e0de4cfeb4ab3551b6cc7cbd1cfff0ca84f616dd7157b563ca7a0b5722a77b9",
+ "response_sha256": "c6e7632a8c5ae980e3d16235055b29c6b88be397fb2bf4cbbba490841e6234c1"
+}

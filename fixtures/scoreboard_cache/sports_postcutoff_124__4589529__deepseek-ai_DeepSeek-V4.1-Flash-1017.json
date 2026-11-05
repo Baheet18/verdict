@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4589529,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x51decb2955f14f7193da1ca68a663e03fb2c62d6cf0b562714c649bba3226f6765c35eb83a7a29d277c6797d6bcf1d8d6b169d6ac07bc5860a90e405e6b62fea1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:e86f04d2753acbc69e9ce28e80da874d7b75444091c9b5001c7237be1754f44a:cb106f5fce7d7ff2fca5a736fd704150524c4e7251076f257c5cc15fc21aa529",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both snapshots show Giants 27 and Texans 21, a combined total of 48 points, which is over 44.5. The market therefore resolves to Over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 987,
+  "total_tokens": 1239,
+  "completion_tokens": 252,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 77
+  }
+ },
+ "cost_usd": 0.0005985,
+ "at": "2026-11-05T10:20:45",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e86f04d2753acbc69e9ce28e80da874d7b75444091c9b5001c7237be1754f44a",
+ "response_sha256": "cb106f5fce7d7ff2fca5a736fd704150524c4e7251076f257c5cc15fc21aa529"
+}

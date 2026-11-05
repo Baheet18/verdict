@@ -1,6 +1,18 @@
 {
-  "note": "Sanitized verified votes from out/bench2 (sports post-cutoff). No API keys. Raw bodies stripped.",
-  "label_required": "Hardware + host stack verified",
-  "count": 36,
-  "source": "out/bench2/runs"
+  "note": "Sanitized votes from all benchmark runs. No API keys. Raw request/response stripped.",
+  "counts": {
+    "sports_postcutoff_124": 372,
+    "disputed_thin_34": 102,
+    "disputed_curated_js_shells": 36,
+    "disputed_hand_answer_bearing": 24,
+    "legacy_5": 15
+  },
+  "total": 549,
+  "summaries": [
+    "sports_postcutoff_124.json",
+    "disputed_thin_34.json",
+    "disputed_curated.json",
+    "disputed_hand.json",
+    "reattest_today.json"
+  ]
 }

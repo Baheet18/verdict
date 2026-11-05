@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4367304,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x951b4e707bb2f90822b029170dc3241fca0d6c06ecbe9ef379c19b15cfa2ec930e7f1e228a065b1801eff174c8b7c22fcfd5238638b79b65c37a3825d0af8ef11c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:ba2c8a18e08a82a8d56e2d571519cef05c48e9421477909e3f9faeebdf75509c:f883e20fff83c6cfbb6eb3803b9661474f6a694e9c08b8da1ae14e24e0be369a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Cardinals 18, Rams 16, for a combined total of 34 points, which is less than 38, so the market resolves Under.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 974,
+  "total_tokens": 1292,
+  "completion_tokens": 318,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 25
+  }
+ },
+ "cost_usd": 0.0006738,
+ "at": "2026-11-05T10:21:15",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ba2c8a18e08a82a8d56e2d571519cef05c48e9421477909e3f9faeebdf75509c",
+ "response_sha256": "f883e20fff83c6cfbb6eb3803b9661474f6a694e9c08b8da1ae14e24e0be369a"
+}

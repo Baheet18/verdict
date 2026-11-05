@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4424722,
+ "polymarket_id": "4424722",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xc1c7d8e99fea32ec75dd7d17d37326632f6e82da4dac574a47ae7935fbb2d46c5e756ba32c30530ee755d86bed4e5c24654b42ae6a0b947d43df8ab4a692a1b31b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:10d4954d94bdd80679d6f51f3ab304722c8571a87979b8d7331166b9c5d428f0:6a719706e238ae7f94f3f4a4bb6e5e303161d79d2d0b6ca581c09383fd2d1b6d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description, with no credible reporting or official confirmation of any qualifying Iranian military action. The evidence bundle is insufficient to establish whether the event occurred.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1941,
+  "total_tokens": 3026,
+  "completion_tokens": 1085,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 954,
+  "completion_tokens_details": {
+   "reasoning_tokens": 954
+  }
+ },
+ "cost_usd": 0.0015423899999999998,
+ "at": "2026-11-05T11:40:07",
+ "set": "disputed_thin_34",
+ "request_sha256": "10d4954d94bdd80679d6f51f3ab304722c8571a87979b8d7331166b9c5d428f0",
+ "response_sha256": "6a719706e238ae7f94f3f4a4bb6e5e303161d79d2d0b6ca581c09383fd2d1b6d"
+}

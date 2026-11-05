@@ -1,0 +1,899 @@
+{
+  "classification": "Gamma umaResolutionStatuses contains 'disputed'; final status resolved; endDate > 2026-10-17",
+  "markets": 34,
+  "panel_settled": 0,
+  "panel_settled_agree_uma": 0,
+  "panel_settled_disagree_uma": 0,
+  "escalated": 34,
+  "cost_usd": 0.1008,
+  "linter": {
+    "flagged": 27,
+    "markets": 34
+  },
+  "rows": [
+    {
+      "id": "3120760",
+      "question": "NATO x Russia military clash by October 31, 2026?",
+      "event_day": "2026-11-01",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description, not external reporting about any NATO-Russia military encounter. The event window is over, but the evidence bundle is insufficient to determine the outcome."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules text, explicitly flagged as not an external fact source; no reporting on any NATO-Russia military encounter is provided. With zero independent sources on the underlying event, the snapshots are insufficient to resolve YES or NO."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has closed (snapshot fetched 2026-11-05, after Oct 31, 2026 11:59 PM ET), but the bundle contains only the market rules and no credible reporting on whether any qualifying NATO-Russia military encounter occurred, so the required factual basis is absent."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\"]"
+    },
+    {
+      "id": "2413572",
+      "question": "US x Iran permanent peace deal by October 31, 2026?",
+      "event_day": "2026-10-31",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description, with no official confirmation or credible reporting that a qualifying permanent peace deal was established by the deadline. The event window is over, but the evidence is insufficient to resolve the outcome."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The bundle contains only the market rules/description snapshot and no external factual evidence about whether a qualifying permanent peace deal was signed or confirmed by October 31, 2026. With no reporting on the underlying event, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has closed (snapshot fetched 2026-11-05, after the 2026-10-31 deadline), but the bundle contains only the market's own rules text\u2014which is explicitly not an external fact source\u2014and no snapshots reporting whether a qualifying agreement was or was not reached. With no independent evidence of either a signed/confirmed permanent peace deal or its absence, the snapshots are insufficient to resolve YES or NO."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"disputed\", \"proposed\", \"disputed\"]"
+    },
+    {
+      "id": "3741671",
+      "question": "Will Russia and Ukraine hold any diplomatic meeting by October 31, 2026?",
+      "event_day": "2026-11-01",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description, not an external fact source. There is no snapshot evidence confirming or denying a qualifying diplomatic meeting by the deadline."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The bundle contains only the market rules/description snapshot and no external factual reporting on whether any Russia-Ukraine diplomatic meeting occurred by the deadline. With no evidence of the underlying event, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market rules snapshot and no factual reporting or government statements about whether any Russia-Ukraine diplomatic meeting occurred by October 31, 2026, so the required resolution sources are absent. With no evidence of the event's occurrence or non-occurrence, the snapshots are insufficient to resolve."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"disputed\"]"
+    },
+    {
+      "id": "1235552",
+      "question": "Will the Cleveland Guardians win the 2026 World Series?",
+      "event_day": "2026-10-31",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 1,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is the MLB.com homepage and contains no 2026 World Series result or elimination information. The snapshots are insufficient to determine whether the Cleveland Guardians won."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is a generic MLB.com homepage with no 2026 World Series winner or Guardians elimination information, and no second independent source is provided. The event window has passed but the snapshots do not establish the outcome."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is the generic MLB.com homepage, which contains no information about the 2026 World Series result, the Guardians, or whether the series has concluded. With zero sources reporting the outcome (fewer than the two independent agreeing sources required), the market cannot be resolved from the evidence."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"proposed\", \"resolved\"]"
+    },
+    {
+      "id": "2645614",
+      "question": "Will Fred VanVleet play for the Houston Rockets in 2026-27?",
+      "event_day": "2026-11-01",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description and contains no evidence about Fred VanVleet's team status. The snapshots are insufficient to determine whether he officially joined the Houston Rockets by the resolution deadline."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules text, which explicitly states it is not an external fact source; no evidence about VanVleet's team status is provided."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market's own rules text (explicitly flagged as not an external fact source) and no snapshots reporting VanVleet's contract or team status as of the October 31, 2026 deadline, so whether he joined/remained with Houston cannot be determined. The window has passed (snapshot fetched 2026-11-05 vs. market_end 2026-11-01), but the factual evidence needed to resolve YES or NO is absent."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "608558",
+      "question": "Will Raphinha win the 2026 Ballon d'Or?",
+      "event_day": "2026-10-27",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 1,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The France Football snapshot is only the homepage and does not declare a 2026 Ballon d\u2019Or winner. The rules\u2019 declaration deadline of December 31, 2026 had not passed at the snapshot time."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is the France Football homepage HTML, which contains boilerplate/CSS and no report of the 2026 Ballon d'Or winner or any mention of Raphinha. With no resolution data in the snapshots, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots (fetched 2026-11-05) contain no declaration of a 2026 Ballon d'Or winner \u2014 the France Football snapshot is only homepage boilerplate with no winner announcement \u2014 and the resolution window runs until December 31, 2026, so the event window is not yet closed per the snapshots."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\", \"resolved\"]"
+    },
+    {
+      "id": "4118937",
+      "question": "Russia-Ukraine peace talks by October 31, 2026?",
+      "event_day": "2026-10-31",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description, with no official government statement or credible reporting confirming a qualifying in-person diplomatic meeting by the deadline. The evidence bundle is therefore insufficient to resolve the market."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules text, explicitly flagged as not an external fact source; no reporting or official statement about any Russia-Ukraine diplomatic meeting is provided. With the window closed but zero factual evidence either way, the bundle is insufficient to resolve."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has closed (snapshot fetched 2026-11-05, after the 2026-10-31 deadline), but the bundle contains only the market rules\u2014which explicitly state they are not an external fact source\u2014and no reporting on whether a qualifying meeting occurred, so the snapshots are insufficient to determine YES or NO."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\"]"
+    },
+    {
+      "id": "608564",
+      "question": "Will Cristiano Ronaldo win the 2026 Ballon d'Or?",
+      "event_day": "2026-10-27",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 1,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshot is dated 2026-11-05, before the rules\u2019 December 31, 2026 declaration deadline. The France Football snapshot does not declare a 2026 Ballon d\u2019Or winner."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is the France Football homepage, which contains no announcement of the 2026 Ballon d'Or winner and never mentions Ronaldo. With no source reporting the winner, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots (fetched 2026-11-05) predate the rules' resolution deadline of December 31, 2026, and the France Football homepage snapshot contains no declaration of a 2026 Ballon d'Or winner, so the event window is not yet resolved."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\", \"resolved\"]"
+    },
+    {
+      "id": "4376691",
+      "question": "Will Iran target Iraq by September 30, 2026?",
+      "event_day": "2026-10-31",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description and explicitly is not an external fact source. No snapshot reports a qualifying Iranian military action against Iraq, so the evidence is insufficient to resolve Yes or No."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules text, explicitly flagged as not an external fact source, so there is no reporting on whether any qualifying Iranian strike on Iraq occurred. With zero factual evidence, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has closed (snapshot fetched 2026-11-05, after the September 30, 2026 deadline), but the bundle contains only the market rules and no external reporting on whether Iran executed a qualifying strike against Iraq, so the outcome cannot be determined from the snapshots."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"disputed\"]"
+    },
+    {
+      "id": "4424722",
+      "question": "Will Iran target an Arab country by September 30, 2026?",
+      "event_day": "2026-10-31",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description, with no credible reporting or official confirmation of any qualifying Iranian military action. The evidence bundle is insufficient to establish whether the event occurred."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules text, explicitly flagged as not an external fact source, so there is no reporting on whether any qualifying Iranian strike occurred before September 30, 2026. Without at least two independent sources on the underlying event, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market rules snapshot with no reporting from any resolution source about whether Iran executed a qualifying strike on an Arab country; with the window elapsed (fetched 2026-11-05) but zero factual evidence of occurrence or non-occurrence, the snapshots are insufficient to resolve YES or NO."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"disputed\"]"
+    },
+    {
+      "id": "5330802",
+      "question": "U.S. anti-cartel operation outside of the U.S. by October 31?",
+      "event_day": "2026-11-01",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description and explicitly is not an external fact source. It contains no official statement or credible reporting establishing whether a qualifying U.S. anti-cartel action occurred."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules text, explicitly flagged as not an external fact source; the bundle contains no official statement or credible reporting on any potential anti-cartel operation. With the window closed but zero factual evidence either way, the snapshots are insufficient to resolve YES or NO."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "NO",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshot was fetched 2026-11-05, after the market end (2026-11-01T03:59Z \u2248 11:59 PM ET Oct 31) and after any three-day confirmation window, and no snapshot establishes a qualifying U.S. anti-cartel operation or kinetic action on foreign soil. Per the rules' explicit default, the market resolves \"No\" absent such establishment."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5144144",
+      "question": "Will Trump say \"Burger\" in October?",
+      "event_day": "2026-11-01",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market rules, with no evidence of whether Trump said \u201cBurger\u201d in the required window. The event window is over, but the snapshots are insufficient to resolve."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules/description, which provides no evidence of whether Trump uttered \"Burger\" during the October 2026 window. With no transcript or reporting evidence in the bundle, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market rules snapshot and no source reporting whether Trump said \"Burger\" (spoken, not written) during October 2026, so the decisive fact is entirely unverified. The window has closed (fetched 2026-11-05, after market_end 2026-11-01), but with zero event evidence a YES or NO resolution cannot be supported."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"disputed\"]"
+    },
+    {
+      "id": "4890264",
+      "question": "Will Iliana Iotova win the 2026 Bulgarian presidential first round by 20%-30%?",
+      "event_day": "2026-10-25",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description and contains no official election results or credible reporting of the first-round vote percentages. Therefore the required margin cannot be determined from the provided source snapshots."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules/description; it contains no vote totals or official results for the 2026 Bulgarian presidential first round, so the margin cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market's own rules/description (explicitly noted as not an external fact source) and no election results, vote counts, or CEC data, so Iotova's margin of victory cannot be determined from the snapshots."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "4890263",
+      "question": "Will Iliana Iotova win the 2026 Bulgarian presidential first round by 30%-40%?",
+      "event_day": "2026-10-25",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description and contains no official first-round vote totals or credible reporting of results. Therefore the required margin cannot be determined from the provided evidence."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules text; it contains no vote counts, margin figures, or official CEC results, so the 30%-40% bracket cannot be evaluated. The snapshot timestamp is after the scheduled election date, so the window is not premature, but the evidence is insufficient to resolve."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market's own rules text (explicitly flagged as not an external fact source) and no snapshots with vote counts, candidate percentages, or even confirmation that the first round occurred. With zero independent sources reporting the needed results, the margin cannot be determined."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5180406",
+      "question": "Will Apple be the second-largest company in the world by market cap on October 31, 2026?",
+      "event_day": "2026-11-01",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description, not credible reporting about Apple's market-cap rank on October 31, 2026. The snapshots are insufficient to determine whether Apple was the second-largest company."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules/description, explicitly noted as 'not an external fact source'; no market-cap rankings as of October 31, 2026 are provided. With no reporting on the actual standings, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has passed (market_end 2026-11-01T03:59:00Z, snapshot fetched 2026-11-05), but the bundle contains no external reporting on market-cap rankings\u2014only the market's own description, which is explicitly noted as not an external fact source\u2014so the required consensus of credible reporting cannot be established."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "2645473",
+      "question": "Will Zach LaVine play for the Sacramento Kings in 2026-27?",
+      "event_day": "2026-11-01",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description, with no official announcement or credible reporting about Zach LaVine's team. The evidence is insufficient to determine whether he joined the Sacramento Kings."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules/description, which explicitly states it is not an external fact source; no evidence about LaVine's team status is provided."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has closed (market_end 2026-11-01T03:59:00Z, snapshot fetched 2026-11-05), but the bundle contains only the market rules and no external evidence about whether LaVine joined a team, remained with Sacramento, or was under contract by the deadline, so the outcome cannot be determined."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "1281165",
+      "question": "Will the Democratic Party win the CA-34 House seat?",
+      "event_day": "2026-11-04",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 1,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots contain only the market rules and the FEC homepage, with no report of the CA-34 winner or a conclusive call. The evidence is therefore insufficient to determine whether a Democrat won."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is the generic FEC homepage, which contains no CA-34 election results or candidate party data. No snapshot reports the winner, so the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Although the election date (Nov 3, 2026) has passed per the timestamps, no snapshot contains any CA-34 result, candidate, or vote count; the resolutionSource snapshot is only the FEC.gov homepage with no election data. With zero reporting of the outcome in the evidence, the winner's party cannot be determined."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"disputed\", \"proposed\", \"proposed\", \"resolved\"]"
+    },
+    {
+      "id": "1284815",
+      "question": "Will the Republican Party win the TX-02 House seat?",
+      "event_day": "2026-11-04",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 1,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshots are the market rules and the FEC homepage, with no reported winner or official result for TX-02. Therefore the evidence is insufficient to resolve the market."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is the generic FEC homepage, which contains no TX-02 election result or candidate party data, and no other source reports the outcome. With the election window closed but zero result evidence, the snapshots are insufficient to resolve YES or NO."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The election date (Nov 3, 2026) has passed per the fetch timestamps, but the only resolution-source snapshot is the FEC.gov homepage, which contains no TX-02 results, candidate names, or vote counts, and no other snapshot reports the winner's party. With no result data in the evidence bundle, the snapshots are insufficient to determine the outcome."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\", \"resolved\"]"
+    },
+    {
+      "id": "5969230",
+      "question": "Fukuoka SoftBank Hawks vs. Yokohama BayStars",
+      "event_day": "2026-11-03",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 1,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is the NPB homepage and contains no game result or winner. No independent source in the bundle reports the outcome, so the market cannot be resolved from the provided evidence."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is the NPB homepage HTML, which contains no game score or result for the Hawks-BayStars game. With no reported final score from any source, the outcome cannot be determined from the snapshots."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is the npb.jp homepage shell, whose game-score (\u8a66\u5408\u901f\u5831) include section is empty and which contains no result for the October 27 Hawks\u2013BayStars game. With zero sources reporting the game outcome (fewer than the two independent agreeing sources required for scores), the result cannot be determined."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5166968",
+      "question": "Will Apple be the third-largest company in the world by market cap on October 31?",
+      "event_day": "2026-11-01",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description and contains no market-cap data or credible reporting for October 31, 2026. Therefore the snapshots are insufficient to determine whether Apple was the third-largest company."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot contains the market rules and no market-cap ranking data or credible reporting for October 31, 2026. Therefore the evidence is insufficient to determine whether Apple was third-largest."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market's own rules/description (explicitly noted as not an external fact source) and no market-cap data from any credible reporting source, so Apple's rank on October 31, 2026 cannot be determined. The event window has passed (snapshot fetched 2026-11-05 after market_end), but with zero independent sources reporting the needed ranking, the required two-source consensus is unavailable."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5167227",
+      "question": "Will Trump speak to Friedrich Merz by October 31?",
+      "event_day": "2026-11-01",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only source snapshot is the market rules, with no credible media reporting or official statements confirming a qualifying talk. Therefore the evidence is insufficient to determine whether the condition was met."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The bundle contains only the market rules/description snapshot and no media reporting or statements about any Trump-Merz conversation, so the qualifying interaction cannot be verified. With no factual evidence either way, the snapshots are insufficient to resolve."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "INVALID",
+          "label": "Hardware + host stack verified",
+          "reasoning": ""
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5167224",
+      "question": "Will Trump speak to Ursula von der Leyen by October 31?",
+      "event_day": "2026-11-01",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market rules, with no credible media or official statement confirming a qualifying verbal interaction. The evidence bundle is therefore insufficient to determine whether the talk occurred by the deadline."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The bundle contains only the market rules/description (explicitly 'not an external fact source') and no media reporting or statements about any Trump\u2013von der Leyen interaction. With zero independent sources on the underlying fact, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market's own rules text, which is explicitly noted as 'not an external fact source,' and includes no media reporting or statements from either party about a Trump\u2013von der Leyen verbal interaction. With no factual snapshots to confirm or deny a qualifying talk by October 31, 2026, the snapshots are insufficient to resolve."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5237633",
+      "question": "Will Ukraine target Moscow on October 19, 2026?",
+      "event_day": "2026-10-20",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only source snapshot is the market rules, not an external fact source. There is no snapshot evidence confirming or denying a qualifying Ukrainian military action against Moscow on October 19, 2026."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The bundle contains only the market rules/description snapshot and no reporting or official statements about any strike on Moscow on October 19, 2026, so the occurrence, attribution, timing, and target cannot be established."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market rules/description and no resolution-source reporting (official Ukrainian/Russian statements or credible news) about any qualifying military action directed at Moscow on October 19, 2026, so the occurrence cannot be determined from the snapshots. The event window has passed (fetched 2026-11-05 vs. market_end 2026-10-20), but with zero factual snapshots the outcome is insufficiently evidenced rather than resolvable as NO."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5166966",
+      "question": "Will NVIDIA be the third-largest company in the world by market cap on October 31?",
+      "event_day": "2026-11-01",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description, with no credible reporting of NVIDIA's market-cap rank on October 31, 2026."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules text, explicitly flagged as not an external fact source; it contains no market-cap rankings for October 31, 2026. With no credible reporting data in the bundle, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market's own rules/description (explicitly not an external fact source) and no credible reporting of market cap rankings on October 31, 2026, so NVIDIA's rank cannot be determined from the snapshots."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5936743",
+      "question": "Spread: FC Andorra (-2.5)",
+      "event_day": "2026-11-02",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 1,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The provided snapshots do not include the official final score for the FC Andorra vs CD Tenerife match. Without a verified score, the required 3-goal margin cannot be determined."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots provide the market rules and a later La Liga fixture list, but no final score for the scheduled Nov 1 FC Andorra vs CD Tenerife match. Therefore the required 3-goal margin cannot be verified from the evidence."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has passed (market_end 2026-11-02, snapshots fetched 2026-11-05), but no snapshot reports the final score of the November 1 FC Andorra vs CD Tenerife match; the laliga.com snapshot lists only upcoming matchday 13 fixtures (Nov 6\u20138). With fewer than two independent sources reporting the needed score, the required two-source agreement is absent, so the verdict is AMBIGUOUS."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5648379",
+      "question": "Visa (V) Q4 payments volume growth (constant dollars) 9.5% to 10.5%?",
+      "event_day": "2026-10-27",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market rules, with no official Visa earnings materials reporting the Q4 constant-dollar payments volume growth. The rules set a release deadline of November 30, 2026, and the snapshot was fetched November 5, 2026, so the resolution window is not over."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules/description; it contains no reported value for Visa's Q4 payments volume growth. With no earnings data in the evidence bundle, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "INVALID",
+          "label": "Hardware + host stack verified",
+          "reasoning": ""
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5648378",
+      "question": "Visa (V) Q4 payments volume growth (constant dollars) 8.5% to 9.5%?",
+      "event_day": "2026-10-27",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market rules and contains no Visa earnings release or reported Q4 constant-dollar payments volume growth. The Nov 5 fetch is also before the Nov 30 release deadline, so the snapshots are insufficient to resolve."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules/description, explicitly noted as 'not an external fact source'; no Visa Q4 earnings materials or payments volume growth figure is provided. With no reported value in evidence, the bracket cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market rules and no snapshot of Visa's Q4 earnings materials or the reported constant-dollar payments volume growth figure. The snapshot fetch date (2026-11-05) precedes the November 30, 2026 release deadline, so the event window is not yet closed per the snapshots."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5285913",
+      "question": "Blues vs. Red Wings: O/U 4.5",
+      "event_day": "2026-10-31",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 1,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is an NHL scores page with no Blues-Red Wings final score. Sports statistics require at least two independent agreeing sources, so the result cannot be determined."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is an NHL scores page dated Nov 4, 2026 that contains no final score for the October 31 Blues-Red Wings game, and there is no second independent source reporting the total."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has passed (snapshots fetched 2026-11-05, after the Oct 31 game), but the resolutionSource snapshot is an NHL.com scores page containing only HTML/JS boilerplate with no Blues\u2013Red Wings final score, and no other source in the bundle reports the goals. With fewer than two independent sources agreeing on the combined total, the market cannot be resolved."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5332476",
+      "question": "Will Noam win the second-most seats in the 2026 Israeli legislative election?",
+      "event_day": "2026-10-28",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only source snapshot is the market description and contains no election results or seat counts. Therefore the snapshots are insufficient to determine whether Noam won the second-most seats."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules/description; it contains no election results or seat counts, so the outcome cannot be determined from the evidence."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market's own rules/description, which explicitly states it is 'not an external fact source,' and no snapshot reports actual election results or seat counts for Noam or any party. With no independent sources on the outcome, the snapshots are insufficient to determine whether Noam won the second-most seats."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5180504",
+      "question": "Will Drake release a new album by October 31?",
+      "event_day": "2026-11-01",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market description, with no official streaming/download evidence showing whether Drake released a new album by the deadline. The snapshots are insufficient to determine the outcome."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules text, which explicitly notes it is 'not an external fact source'; no streaming/download evidence about any Drake album release is provided. With the window closed but zero factual evidence on release, the snapshots are insufficient to resolve."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has closed (fetched 2026-11-05, after the 2026-11-01 end), but the bundle contains only the market's own rules snapshot\u2014explicitly not a fact source\u2014and no streaming-site snapshots showing whether Drake released a qualifying album by the deadline."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"disputed\"]"
+    },
+    {
+      "id": "4588336",
+      "question": "3Q Spread: Broncos (-3.5)",
+      "event_day": "2026-10-25",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 1,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only external snapshot is an NFL scores page shell with no third-quarter score data. No two independent sources report the needed quarter points."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only non-rules snapshot is a generic NFL scores page shell containing no Broncos-Cardinals third-quarter score, and no second independent source is provided. With no usable scoring data, the 3Q spread cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has passed (game date 2026-10-25, snapshots fetched 2026-11-05), but the only external snapshot is a generic NFL.com scores page shell containing no third-quarter scoring data for the Broncos\u2013Cardinals game. With zero sources reporting the needed quarter scores (fewer than the two independent agreeing sources required), the outcome cannot be determined."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "4588338",
+      "question": "3Q Spread: Broncos (-6.5)",
+      "event_day": "2026-10-25",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 1,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The external snapshot is only an NFL scores page shell and does not provide the third-quarter score for Broncos vs Cardinals. Therefore the required 3Q margin cannot be verified from the source snapshots."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots provide the market rules and a generic NFL scores page, but no third-quarter score or game result for Broncos vs. Cardinals. Therefore the required stat cannot be verified from the evidence."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has passed (snapshots fetched 2026-11-05 for a 2026-10-25 game), but the only external snapshot is a generic NFL.com scores-page HTML shell containing no Broncos\u2013Cardinals quarter-by-quarter scoring data. With fewer than two independent sources reporting the third-quarter scores, resolution is impossible per the data-quality rules."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "5332475",
+      "question": "Will Amcha Yisrael win the second-most seats in the 2026 Israeli legislative election?",
+      "event_day": "2026-10-28",
+      "uma": "NO",
+      "panel": "ESCALATE",
+      "fact_sources": 0,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only source snapshot is the market description and contains no election results or seat counts. Therefore the snapshots are insufficient to determine whether Amcha Yisrael won the second-most seats."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only snapshot is the market's own rules text, explicitly flagged as not an external fact source; it contains no seat counts or election results for Amcha Yisrael or any party. With no reporting on the 2026 election outcome, the snapshots are insufficient to resolve."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The evidence bundle contains only the market's own rules snapshot, which is explicitly not an external fact source, and no snapshot reports any election results or seat counts for Amcha Yisrael or any other party. With zero independent sources on the outcome, the second-place finisher cannot be determined from the snapshots."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"proposed\"]"
+    },
+    {
+      "id": "4588337",
+      "question": "3Q Spread: Broncos (-4.5)",
+      "event_day": "2026-10-25",
+      "uma": "YES",
+      "panel": "ESCALATE",
+      "fact_sources": 1,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only non-rules snapshot is an NFL.com scores page shell that does not include the third-quarter score or any game result. There are not two independent sources reporting the needed third-quarter points."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only non-rules snapshot is a generic NFL scores page containing no Broncos-Cardinals third-quarter scoring data, and no second independent source is provided. Therefore the needed stat is unreported and the market cannot be resolved from the snapshots."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has passed (fetched 2026-11-05 vs. game on 2026-10-25), but the only external snapshot is a generic NFL.com scores page shell containing no Broncos\u2013Cardinals third-quarter scoring data, and no snapshot reports the needed statistics. With fewer than two independent sources agreeing on the 3Q scores, the market cannot be resolved."
+        }
+      },
+      "umaResolutionStatuses": "[\"proposed\", \"disputed\", \"proposed\", \"proposed\", \"disputed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"disputed\", \"proposed\", \"proposed\"]"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285927,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x9f3f52023ab2935bcee1aabbc3027b85d3ae80ad25947560b2d872628db7d53936189622f48f161fddabdc282cf20d60b589202e9640b8d0cabb16126f0498041c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:6cdafc2f7bad348544d30345dc59e78da71e4aa307bdff21aa67d9347fe9c0fe:25f6764d2ce261553adae6729bce1bfab5ac876cbe711ee727e807930fb29023",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Oilers winning 4-0, so the market resolves to \"Oilers\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1000,
+  "total_tokens": 1429,
+  "completion_tokens": 429,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 141
+  }
+ },
+ "cost_usd": 0.0008148000000000001,
+ "at": "2026-11-05T10:16:26",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6cdafc2f7bad348544d30345dc59e78da71e4aa307bdff21aa67d9347fe9c0fe",
+ "response_sha256": "25f6764d2ce261553adae6729bce1bfab5ac876cbe711ee727e807930fb29023"
+}

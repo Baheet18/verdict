@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4367393,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x38521caf3c1edffa5009958bd586097ca7f886c48dc3cb2544d4aef480d057aa1806fc553a5d66154b388b3e9085b79f452861d3a14013dddf025b749f97f5b61c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:2683a968558f746baec571ef940e74faf9d000128dd07a9412f2caaad38c33e6:b79caa3434db45cf71dccec2edbdfd90d9938e17438b26d573c77123768c3d12",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both ESPN and nflverse independently report the Saints winning 34-27, a combined total of 61 points, which meets or exceeds the 57-point threshold for the Over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 945,
+  "total_tokens": 1127,
+  "completion_tokens": 182,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 50,
+  "completion_tokens_details": {
+   "reasoning_tokens": 50
+  }
+ },
+ "cost_usd": 0.00016659999999999998,
+ "at": "2026-11-05T10:21:10",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "2683a968558f746baec571ef940e74faf9d000128dd07a9412f2caaad38c33e6",
+ "response_sha256": "b79caa3434db45cf71dccec2edbdfd90d9938e17438b26d573c77123768c3d12"
+}

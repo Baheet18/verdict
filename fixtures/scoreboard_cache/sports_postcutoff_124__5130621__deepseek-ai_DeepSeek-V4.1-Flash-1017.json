@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5130621,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xaca46f27854e63d5c78e40054288b8842405cbd836cd380e18692dd2d8ea8ebe3f7681ced247bc4275384a32f2d47741af9fe387bcea6835a96efd4671da77671c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:592496904f0ad274d916220117d2d9e1498a63f9f139ead1cb42fe2e9de218f6:bbe01bdf413aa46ec29ab1eea4d4e2a22f3bb06c54171cc7ba4f0bdb7abd9f81",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show the final combined score was 23 + 17 = 40, which is below 53. Therefore the market resolves to Under, i.e. NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 988,
+  "total_tokens": 1258,
+  "completion_tokens": 270,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 95
+  }
+ },
+ "cost_usd": 0.0006204,
+ "at": "2026-11-05T10:20:40",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "592496904f0ad274d916220117d2d9e1498a63f9f139ead1cb42fe2e9de218f6",
+ "response_sha256": "bbe01bdf413aa46ec29ab1eea4d4e2a22f3bb06c54171cc7ba4f0bdb7abd9f81"
+}

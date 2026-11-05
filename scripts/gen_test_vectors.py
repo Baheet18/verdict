@@ -77,6 +77,17 @@ def with_msg_extra(raw: bytes) -> bytes:
     obj["messages"][1]["name"] = "attacker"
     return json.dumps(obj, ensure_ascii=False).encode()
 v["forbidden_message_name"] = sign(0, with_msg_extra(req(0)), resp("YES", tag="fmn"))
+
+# Round 6: duplicate JSON keys must be rejected (serde_json Value keeps last by default).
+def with_dup_top(raw: bytes) -> bytes:
+    # Insert a second "temperature" key after the first object begins.
+    s = raw.decode()
+    # After canonical dump there is one "temperature"; append a duplicate before the closing brace.
+    if not s.rstrip().endswith("}"):
+        raise SystemExit("unexpected request shape")
+    s = s.rstrip()[:-1] + ', "temperature": 0}'
+    return s.encode()
+v["duplicate_json_key"] = sign(0, with_dup_top(req(0)), resp("YES", tag="dupk"))
 out = os.path.join(os.path.dirname(__file__), "..", "contract", "testdata", "vectors.json")
 open(out, "w").write(json.dumps(V, indent=1))
 print("wrote", out, len(v), "vectors")

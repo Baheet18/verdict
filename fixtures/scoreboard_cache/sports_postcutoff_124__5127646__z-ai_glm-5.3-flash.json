@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5127646,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x136fa88290582788006d89a802ae21fa9c7238eef3c4dc0e919b5360d31eea7d6e02a09620ddcf6c57d8904ee69883ed5d409dc34613c8b26e32abf7eaecbb9a1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:d501bfa1cc9e6221009aaabf9569ae78fa985ba93fad89e99999154d72f3091a:02eba3a72359367e3e80795d6914710a52dc3a8ccd3050c16bf5acd96406f6a1",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both ESPN and nflverse independently report the final score as Pittsburgh 26, Tampa Bay 19, a combined total of 45 points. Since 45 \u2265 37, the market resolves to Over, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 956,
+  "total_tokens": 1149,
+  "completion_tokens": 193,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 49,
+  "completion_tokens_details": {
+   "reasoning_tokens": 49
+  }
+ },
+ "cost_usd": 0.00017298,
+ "at": "2026-11-05T10:21:07",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "d501bfa1cc9e6221009aaabf9569ae78fa985ba93fad89e99999154d72f3091a",
+ "response_sha256": "02eba3a72359367e3e80795d6914710a52dc3a8ccd3050c16bf5acd96406f6a1"
+}

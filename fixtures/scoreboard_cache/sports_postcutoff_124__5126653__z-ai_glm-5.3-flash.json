@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5126653,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xc950c346ed4888f3aebee030f7b34a6466778098cbf12a0b0a7e0d934674ff4c56f0cc85a41de82c5b903bebbd86002e346b66facb5b70af7031c9a10d5215f91c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:a89ac8ac61be98b9672cb3d9c27e83071fd4054f30890378c72ba1fe607e77b7:ec435bf13daa01e4039d6b9713f02c4ce85176ca0e9d633c3ec747b1aaaabc65",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Kings defeated the Rangers 6-3 in a final regulation game, so the market resolves to \"Kings\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 964,
+  "total_tokens": 1169,
+  "completion_tokens": 205,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 27,
+  "completion_tokens_details": {
+   "reasoning_tokens": 27
+  }
+ },
+ "cost_usd": 0.00017962,
+ "at": "2026-11-05T10:15:15",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "a89ac8ac61be98b9672cb3d9c27e83071fd4054f30890378c72ba1fe607e77b7",
+ "response_sha256": "ec435bf13daa01e4039d6b9713f02c4ce85176ca0e9d633c3ec747b1aaaabc65"
+}

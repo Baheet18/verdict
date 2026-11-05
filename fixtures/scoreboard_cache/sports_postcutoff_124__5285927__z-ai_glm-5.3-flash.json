@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5285927,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x658247658ab9e2783af0b64e29761884edf51343ad09e40e0099ff23db84abe5163f5cc9662e08850a10816f4511dbc46d6587b360850dfb9d2d130af3bcd4a21c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:b73d37ef3a0bd1c03070892b17f03562134d088231defa0e38d0fbd57a49a1db:de51d87ebe747b32d69db8ee53d5434404c38f04d12fd387e3de5fd32bf8d126",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Edmonton winning 4-0 in regulation, so the market resolves to \"Oilers\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 962,
+  "total_tokens": 1167,
+  "completion_tokens": 205,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 26,
+  "completion_tokens_details": {
+   "reasoning_tokens": 26
+  }
+ },
+ "cost_usd": 0.00017946,
+ "at": "2026-11-05T10:16:28",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "b73d37ef3a0bd1c03070892b17f03562134d088231defa0e38d0fbd57a49a1db",
+ "response_sha256": "de51d87ebe747b32d69db8ee53d5434404c38f04d12fd387e3de5fd32bf8d126"
+}

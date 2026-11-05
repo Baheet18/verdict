@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4950272,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x94eec8af78cebbfb93160604fa05ad53515416e09d855ac1e0f8b4362832d37d58e0303c19d75d66911f4328067779f4600202a146c14f523d0f83f44af3cafb1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:aa21fb35770c2929e83388ea23af8380b0dcfb1930eb2e26549b1ac9e1aad998:d370a5906d5e3ea1ba88994cb4ae9b622314d5c43dfca3181690b84962f22c02",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources agree the Devils won 4-1. Therefore the market resolves to Devils, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1120,
+  "total_tokens": 1490,
+  "completion_tokens": 370,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 134,
+  "completion_tokens_details": {
+   "reasoning_tokens": 134
+  }
+ },
+ "cost_usd": 0.0005443000000000001,
+ "at": "2026-11-05T10:16:15",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "aa21fb35770c2929e83388ea23af8380b0dcfb1930eb2e26549b1ac9e1aad998",
+ "response_sha256": "d370a5906d5e3ea1ba88994cb4ae9b622314d5c43dfca3181690b84962f22c02"
+}

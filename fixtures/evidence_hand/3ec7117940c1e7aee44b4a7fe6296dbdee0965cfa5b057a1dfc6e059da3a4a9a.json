@@ -1,0 +1,94 @@
+{
+  "polymarket_id": "5285913",
+  "market_id": 5285913,
+  "question": "Blues vs. Red Wings: O/U 4.5",
+  "rules": "In the upcoming NHL game, scheduled for October 31 at 1:00 PM ET:\n\nThis market will resolve to \"Over\" if the Blues and Red Wings combine to score 5 or more goals in this game.\n\nIf the combined total is less than 5, this market will resolve to \"Under\".\n\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Over\"; answer NO if it resolves to \"Under\".",
+  "market_end": "2026-10-31T17:00:00Z",
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "uma": "YES",
+  "expected_panel_from_human_read": "YES",
+  "evidence": "{\"market_end\": \"2026-10-31T17:00:00Z\", \"question\": \"Blues vs. Red Wings: O/U 4.5\", \"rules\": \"In the upcoming NHL game, scheduled for October 31 at 1:00 PM ET:\\n\\nThis market will resolve to \\\"Over\\\" if the Blues and Red Wings combine to score 5 or more goals in this game.\\n\\nIf the combined total is less than 5, this market will resolve to \\\"Under\\\".\\n\\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Over\\\"; answer NO if it resolves to \\\"Under\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"7423e0fad00ed1ecc15fc1abe42abf07abcfee2a3c679f625f9b4c5d5916372b\", \"text\": \"In the upcoming NHL game, scheduled for October 31 at 1:00 PM ET:\\n\\nThis market will resolve to \\\"Over\\\" if the Blues and Red Wings combine to score 5 or more goals in this game.\\n\\nIf the combined total is less than 5, this market will resolve to \\\"Under\\\".\\n\\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Over\\\"; answer NO if it resolves to \\\"Under\\\".\", \"url\": \"polymarket:market:5285913:description\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"407c1b9543bda27e0f67bdb7eff20ce303753d267aca1f3c62d7e97c9b1d6f16\", \"text\": \"St. Louis Blues 5 Final Detroit Red Wings 4. Date 10/31/2026. Blues get three goals in third period to rally past Red Wings. Final score: STL 5, DET 4. Combined goals: 9.\", \"url\": \"https://www.nhl.com/gamecenter/stl-vs-det/2026/10/31/2026020218\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"c4efe3d169b929edc11ddc6af985d5dc1b5aee8df4b0e3440abe81b114d616f7\", \"text\": \"DETROIT -- The St. Louis Blues rallied with three straight goals in the third period, including from Justin Barron and Aleksanteri Kaskimaki 18 seconds apart, for a 5-4 win against the Detroit Red Wings at Little Caesars Arena on Saturday.\", \"url\": \"https://www.nhl.com/blues/news/st-louis-blues-detroit-red-wings-game-recap-october-31-2026-x0624\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"b5bcf3cb2d602b55a71bc70dac70d826296107e52785ca3d847321fa2d1b53f3\", \"text\": \"a disastrous stretch in the third period cost the Detroit Red Wings in a 5-4 loss at Little Caesars Arena. The Blues scored three goals in a span of 4:38. The Red Wings dropped to 6-5-3. The Blues improved to 7-6-1. St. Louis scored five times on 15 shots against John Gibson.\", \"url\": \"https://www.mlive.com/redwings/2026/10/red-wings-collapse-in-third-period-in-tough-loss-to-blues.html\"}]}",
+  "evidence_sha256": "3ec7117940c1e7aee44b4a7fe6296dbdee0965cfa5b057a1dfc6e059da3a4a9a",
+  "answer_bearing_sources": 3,
+  "answer_present_all": true,
+  "human_checked_before_panel": true,
+  "snapshots": [
+    {
+      "url": "polymarket:market:5285913:description",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "7423e0fad00ed1ecc15fc1abe42abf07abcfee2a3c679f625f9b4c5d5916372b",
+      "text": "In the upcoming NHL game, scheduled for October 31 at 1:00 PM ET:\n\nThis market will resolve to \"Over\" if the Blues and Red Wings combine to score 5 or more goals in this game.\n\nIf the combined total is less than 5, this market will resolve to \"Under\".\n\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Over\"; answer NO if it resolves to \"Under\".",
+      "role": "rules",
+      "note": "Market rules + YES/NO mapping; NOT an answer-bearing fact source.",
+      "answer_present": false
+    },
+    {
+      "url": "https://www.nhl.com/gamecenter/stl-vs-det/2026/10/31/2026020218",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "407c1b9543bda27e0f67bdb7eff20ce303753d267aca1f3c62d7e97c9b1d6f16",
+      "text": "St. Louis Blues 5 Final Detroit Red Wings 4. Date 10/31/2026. Blues get three goals in third period to rally past Red Wings. Final score: STL 5, DET 4. Combined goals: 9.",
+      "role": "official",
+      "note": "NHL.com gamecenter STL vs DET Oct 31 2026",
+      "answer_present": true,
+      "answer_note": "Official NHL final 5-4; total goals 9 > 4.5.",
+      "archive_url": "http://web.archive.org/web/20261027070203/https://www.nhl.com/gamecenter/stl-vs-det/2026/10/31/2026020218",
+      "archive_available": true,
+      "archive_note": null
+    },
+    {
+      "url": "https://www.nhl.com/blues/news/st-louis-blues-detroit-red-wings-game-recap-october-31-2026-x0624",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "c4efe3d169b929edc11ddc6af985d5dc1b5aee8df4b0e3440abe81b114d616f7",
+      "text": "DETROIT -- The St. Louis Blues rallied with three straight goals in the third period, including from Justin Barron and Aleksanteri Kaskimaki 18 seconds apart, for a 5-4 win against the Detroit Red Wings at Little Caesars Arena on Saturday.",
+      "role": "report",
+      "note": "NHL.com Blues recap Oct 31 2026",
+      "answer_present": true,
+      "answer_note": "Recap confirms 5-4 final.",
+      "archive_url": null,
+      "archive_available": false,
+      "archive_note": "no closest snapshot from wayback available API"
+    },
+    {
+      "url": "https://www.mlive.com/redwings/2026/10/red-wings-collapse-in-third-period-in-tough-loss-to-blues.html",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "b5bcf3cb2d602b55a71bc70dac70d826296107e52785ca3d847321fa2d1b53f3",
+      "text": "a disastrous stretch in the third period cost the Detroit Red Wings in a 5-4 loss at Little Caesars Arena. The Blues scored three goals in a span of 4:38. The Red Wings dropped to 6-5-3. The Blues improved to 7-6-1. St. Louis scored five times on 15 shots against John Gibson.",
+      "role": "report",
+      "note": "MLive: Red Wings collapse vs Blues",
+      "answer_present": true,
+      "answer_note": "Independent report: Blues 5, Red Wings 4.",
+      "archive_url": null,
+      "archive_available": false,
+      "archive_note": "no closest snapshot from wayback available API"
+    }
+  ],
+  "archives": [
+    {
+      "url": "https://www.nhl.com/gamecenter/stl-vs-det/2026/10/31/2026020218",
+      "archive_available": true,
+      "archive_url": "http://web.archive.org/web/20261027070203/https://www.nhl.com/gamecenter/stl-vs-det/2026/10/31/2026020218",
+      "archive_timestamp": "20261027070203",
+      "checked_at": "2026-11-05T11:54:40Z"
+    },
+    {
+      "url": "https://www.nhl.com/blues/news/st-louis-blues-detroit-red-wings-game-recap-october-31-2026-x0624",
+      "archive_available": false,
+      "archive_url": null,
+      "note": "no closest snapshot from wayback available API",
+      "checked_at": "2026-11-05T11:54:40Z"
+    },
+    {
+      "url": "https://www.mlive.com/redwings/2026/10/red-wings-collapse-in-third-period-in-tough-loss-to-blues.html",
+      "archive_available": false,
+      "archive_url": null,
+      "note": "no closest snapshot from wayback available API",
+      "checked_at": "2026-11-05T11:54:40Z"
+    }
+  ],
+  "curation": "hand_round6",
+  "curated_at": "2026-11-05T11:54:40Z",
+  "disclaimer": "Answer-bearing texts were hand-extracted from the cited pages for reproducibility. Archive.org links are only included when the availability API returned a snapshot; otherwise marked unavailable. Fetched/compiled outside the TEE."
+}

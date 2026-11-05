@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551272,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x3cc4f6a212ed7c3803740bbcd78cd1fab4cc518e4f9f63d58e9eec1a82a82c50766f8805fb7b752bb18f4fc99964584d92b69f8446f583bc5376bd99a5d9760d1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:370ad73fdf15db9264e14c4c799e671624414c1e0f8b1a6525bf3a10f388fa51:eb776f75bd3529430d7edc7d911c81b03abac2b55b387f7e0a242410080089c8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both ESPN and nflverse independently confirm the Falcons defeated the 49ers 29-20 in the October 25 game, so the market resolves to \"Falcons\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 961,
+  "total_tokens": 1144,
+  "completion_tokens": 183,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 24,
+  "completion_tokens_details": {
+   "reasoning_tokens": 24
+  }
+ },
+ "cost_usd": 0.00016837999999999998,
+ "at": "2026-11-05T10:17:59",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "370ad73fdf15db9264e14c4c799e671624414c1e0f8b1a6525bf3a10f388fa51",
+ "response_sha256": "eb776f75bd3529430d7edc7d911c81b03abac2b55b387f7e0a242410080089c8"
+}

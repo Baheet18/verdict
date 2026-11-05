@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "market_id": 1284815,
+ "polymarket_id": "1284815",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xeb2d736d952755008ad93952aa88e3c84aa54f4d19baa17d10314fd107f4daa0591223545d4a2a23f6f4d4afa89216ffa264de27ce8222b63dbef201aecf41271c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:ddc5c4c14a7739b1916bbb8f30c8e4e217933dff9f47ce19d9125e64a4d04d16:7553aa9277a8aefa9cf6d937f0963b60d166a96d43ba774fdbefeae181d89221",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Multiple independent sources (Texas SOS official results, Ballotpedia, Texas Tribune) agree that Republican Steve Toth won the TX-02 seat in the November 3, 2026 election, satisfying the two-source rule and resolving the market to Yes.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1368,
+  "total_tokens": 1635,
+  "completion_tokens": 267,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 118,
+  "completion_tokens_details": {
+   "reasoning_tokens": 118
+  }
+ },
+ "cost_usd": 0.00024293999999999997,
+ "at": "2026-11-05T13:03:23+01:00",
+ "evidence_sha256": "df36ca9bbeb5957600a22337733fabf310032b0287f4eb071a87e91de21f35f5",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "ddc5c4c14a7739b1916bbb8f30c8e4e217933dff9f47ce19d9125e64a4d04d16",
+ "response_sha256": "7553aa9277a8aefa9cf6d937f0963b60d166a96d43ba774fdbefeae181d89221"
+}

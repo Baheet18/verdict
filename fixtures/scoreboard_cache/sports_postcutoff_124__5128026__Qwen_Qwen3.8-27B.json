@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5128026,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x132309e08ff492f1efd1b5310f0078ff84cedaff60b767c7ecd07ef81f6b01b56ccab7102b92a1a3396b18dafbb6472085edf5f4bc011786b095c81e4127e45a1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:e38e65bcbd9407725d73d7c713fa050685b58d81b42ba0dcf18fa96524a233f1:710b32ab45a0c90fb4f60166e72605a312a01fbb69df351829858b705a7db5b9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources report the final score as Saints 34, Giants 27. The Saints won by 7 points, which is 5 or more, so the market resolves to Saints/YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1110,
+  "total_tokens": 2165,
+  "completion_tokens": 1055,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 873,
+  "completion_tokens_details": {
+   "reasoning_tokens": 873
+  }
+ },
+ "cost_usd": 0.00146865,
+ "at": "2026-11-05T10:20:13",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e38e65bcbd9407725d73d7c713fa050685b58d81b42ba0dcf18fa96524a233f1",
+ "response_sha256": "710b32ab45a0c90fb4f60166e72605a312a01fbb69df351829858b705a7db5b9"
+}

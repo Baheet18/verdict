@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 4588337,
+ "polymarket_id": "4588337",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x27abd9c946b7b005053267aa39ebe01ade5fb3f2895cd37a81207bcfbbceccbb1e3c1e39c6e01f630552a42fa452fbc7bdeee0acde8c35e8806a119e730450b11b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:28a96df95b481eb37d1d0aea77bc35347515f845b372f2b9d38f3d669edc5160:14f719eaf8ffd492f00eabdc36bdd83e6dfaec5c045ad5ac84789502ce36ded6",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only non-rules snapshot is an NFL.com scores page shell that does not include the third-quarter score or any game result. There are not two independent sources reporting the needed third-quarter points.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4969,
+  "total_tokens": 5357,
+  "completion_tokens": 388,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 285,
+  "completion_tokens_details": {
+   "reasoning_tokens": 285
+  }
+ },
+ "cost_usd": 0.00072256,
+ "at": "2026-11-05T12:00:38",
+ "set": "disputed_thin_34",
+ "request_sha256": "28a96df95b481eb37d1d0aea77bc35347515f845b372f2b9d38f3d669edc5160",
+ "response_sha256": "14f719eaf8ffd492f00eabdc36bdd83e6dfaec5c045ad5ac84789502ce36ded6"
+}

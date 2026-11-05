@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 2413572,
+ "polymarket_id": "2413572",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xaa8126019fe752675c05b0575dd869f6c33d406c60dcebe4b13f24deba3c302a5cb78b7d4b1c1ee03e2df559e0c785112a3804e7d98881b1f89ac989ad8692f61b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:fe77fd62b10679c16c5ff002a0f05c0d4f3f21ca8a5b33393548c13f169147c6:dba25a1c169e88f6f8477afe4b4644d5da5247e4bbcfd9f0673d108cbf57dff5",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description, with no official confirmation or credible reporting that a qualifying permanent peace deal was established by the deadline. The event window is over, but the evidence is insufficient to resolve the outcome.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1221,
+  "total_tokens": 1686,
+  "completion_tokens": 465,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 321,
+  "completion_tokens_details": {
+   "reasoning_tokens": 321
+  }
+ },
+ "cost_usd": 0.00067659,
+ "at": "2026-11-05T11:33:23",
+ "set": "disputed_thin_34",
+ "request_sha256": "fe77fd62b10679c16c5ff002a0f05c0d4f3f21ca8a5b33393548c13f169147c6",
+ "response_sha256": "dba25a1c169e88f6f8477afe4b4644d5da5247e4bbcfd9f0673d108cbf57dff5"
+}

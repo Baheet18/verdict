@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4587812,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x8f002f60755393abc9d2b03092cb2d2cc43cef293765a08288125ad7b1d4fc66732717db94f10ed55a525086722a0bfd1bf8f89bd008270dde24194b6e09762b1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:6aaad699116bb05132731837b38d8e7a779eda6f70b8ba59de8afcb22423e637:c313d240445cb9f0ab22c6671ea971ec150a41a3ac39cb43cfaa4d2e5d8f8bc6",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots report the final score as Rams 35, Raiders 21, for a combined total of 56. Since 56 is less than 59, the market resolves Under, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1108,
+  "total_tokens": 1522,
+  "completion_tokens": 414,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 141,
+  "completion_tokens_details": {
+   "reasoning_tokens": 141
+  }
+ },
+ "cost_usd": 0.00060322,
+ "at": "2026-11-05T10:20:45",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6aaad699116bb05132731837b38d8e7a779eda6f70b8ba59de8afcb22423e637",
+ "response_sha256": "c313d240445cb9f0ab22c6671ea971ec150a41a3ac39cb43cfaa4d2e5d8f8bc6"
+}

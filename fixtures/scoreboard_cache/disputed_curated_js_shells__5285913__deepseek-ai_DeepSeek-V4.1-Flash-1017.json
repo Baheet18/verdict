@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "market_id": 5285913,
+ "polymarket_id": "5285913",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xdebbebb396734983a957a80914e1553646050ac6849aa1486a019024b54ec3954cf5266bb94a6c5d37ee48ed3075e609874302dd7dd5ae2ca1e331bc8845e2191c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:af6444cc3188b9e6655719ad8ba78d63bebc70f4a5f81f1d6d3e3a96d63bc885:99bfa5f65113f35ee5a9842a3e1256f54c891ba2074b2e72aa7c9981a976bd7c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots do not contain the Blues-Red Wings final score or combined goal total, and the NHL page shown is for Nov 4, 2026 rather than the Oct 31 game. With no two independent sources reporting the needed score, the market cannot be resolved from the evidence.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 13102,
+  "total_tokens": 13637,
+  "completion_tokens": 535,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 12864
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 399
+  }
+ },
+ "cost_usd": 0.0045726000000000004,
+ "at": "2026-11-05T12:44:47",
+ "evidence_sha256": "4c60b06e491d67f7558216b3db0c6cc8dcc37ab6553a716a6ad5eda5dbb1d761",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "af6444cc3188b9e6655719ad8ba78d63bebc70f4a5f81f1d6d3e3a96d63bc885",
+ "response_sha256": "99bfa5f65113f35ee5a9842a3e1256f54c891ba2074b2e72aa7c9981a976bd7c"
+}

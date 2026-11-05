@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4882663,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xb27a746e47958653395d1f6e0d3ba5a0c9dcc0ef8c33d51ca8387fb71e5ac53f47379974a571e2c58acc18915ab774196b81757097f4a265c946204ec63e0eb31b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:0156333083e7b7e1857b2d5fe7225ca24ece02221ea2f1d98b962aaccfd0937f:774cbcbf17544f26e4976e3b8123b741f6b34f2a3d976c98e23d2b2d41312bee",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Oilers defeated the Wild 4-3 in overtime, so the market resolves to \"Oilers\" and the verdict maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 956,
+  "total_tokens": 1157,
+  "completion_tokens": 201,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 22,
+  "completion_tokens_details": {
+   "reasoning_tokens": 22
+  }
+ },
+ "cost_usd": 0.00017698,
+ "at": "2026-11-05T10:15:40",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "0156333083e7b7e1857b2d5fe7225ca24ece02221ea2f1d98b962aaccfd0937f",
+ "response_sha256": "774cbcbf17544f26e4976e3b8123b741f6b34f2a3d976c98e23d2b2d41312bee"
+}

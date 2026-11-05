@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5663755,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x36996d1742aa9b856a8e5fd3520ddd29e98c127518e3376891e056f9306b7f53290a8d988d6880a2792ea55fc990982711eda4d2f46e795e1ea683db1e5162981b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:920a4b4e84ae16138addf30999962f0dffd236f7409d45be6f49d0cdf0993420:a1b636a26c9fa53dd2b11d97a81f8923daab0abc319f6a62ecf3f06c11840e90",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree that FC Augsburg scored 4 goals in the completed 90-minute result, exceeding the 2.5 threshold, so the market resolves to Over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1234,
+  "total_tokens": 1529,
+  "completion_tokens": 295,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 117,
+  "completion_tokens_details": {
+   "reasoning_tokens": 117
+  }
+ },
+ "cost_usd": 0.00024622,
+ "at": "2026-11-05T10:21:40",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "920a4b4e84ae16138addf30999962f0dffd236f7409d45be6f49d0cdf0993420",
+ "response_sha256": "a1b636a26c9fa53dd2b11d97a81f8923daab0abc319f6a62ecf3f06c11840e90"
+}

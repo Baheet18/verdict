@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4950302,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x271a91f48d43a7e70d2674b8de4363e778d4831bb907f8c94869a541238270741ecb7ebd1fa23908abcd7a45951d06189f158a738ff1a3a08bb550a4a6b4d1c51b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:ebcee97c90eca20f36d16df0347d0f7dac4dc114b2a2999f9cc1b01548e005b2:5ab7bf69de8086ab8cf071677caae3abc58313777b3acb5559ca8e0517324f69",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Flames defeated the Wild 2-1 in regulation, so the market resolves to \"Flames\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 952,
+  "total_tokens": 1170,
+  "completion_tokens": 218,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 25,
+  "completion_tokens_details": {
+   "reasoning_tokens": 25
+  }
+ },
+ "cost_usd": 0.00018516000000000002,
+ "at": "2026-11-05T10:13:09",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ebcee97c90eca20f36d16df0347d0f7dac4dc114b2a2999f9cc1b01548e005b2",
+ "response_sha256": "5ab7bf69de8086ab8cf071677caae3abc58313777b3acb5559ca8e0517324f69"
+}

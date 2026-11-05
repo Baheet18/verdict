@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5936743,
+ "polymarket_id": "5936743",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x4f32bd565a57a70b7cc1de38ba12763e4eb66f9a4538337f6358d361991fa7886768495486f641591ca13fa8401aeec34cc318d06137f2be016ce9cc581566771b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:d5d2159ba769c98b5ce98489f047ae998db4b8b3a878cb05081aaf9c0c6f6faf:e4683cbdc01ce500c001d32a7324f590c44dc703bbe2b7c156eda8f24409f2b3",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The provided snapshots do not include the official final score for the FC Andorra vs CD Tenerife match. Without a verified score, the required 3-goal margin cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 6011,
+  "total_tokens": 6911,
+  "completion_tokens": 900,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 806,
+  "completion_tokens_details": {
+   "reasoning_tokens": 806
+  }
+ },
+ "cost_usd": 0.00145544,
+ "at": "2026-11-05T11:52:37",
+ "set": "disputed_thin_34",
+ "request_sha256": "d5d2159ba769c98b5ce98489f047ae998db4b8b3a878cb05081aaf9c0c6f6faf",
+ "response_sha256": "e4683cbdc01ce500c001d32a7324f590c44dc703bbe2b7c156eda8f24409f2b3"
+}

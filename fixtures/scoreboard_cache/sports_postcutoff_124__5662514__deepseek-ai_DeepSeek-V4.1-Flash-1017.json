@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5662514,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x58d3f0e8ef5eb2ec1e9634fbe94c775e01f9b860edf9eb1dba1132af3dd3069b7891f64a4790e3915d5bed29b9c410521c1b4077f0f94eb19675fedd488c76131b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:af06864305e0eeee0ee75cce058e8daf116138cb2f2407876fe3ad2117424f3d:7f836db4444aea44db0764fec0542724cf87b4d1dc32ef4184758f4507f2101a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "OpenLigaDB's halftime line shows Rot-Weiss Essen led 1-0, which would mean RB Leipzig did not score first, but only OpenLigaDB reports halftime/first scorer; ESPN only confirms the final 1-2. Under the two-independent-source rule for sports stats, the first scorer is not sufficiently corroborated.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1238,
+  "total_tokens": 2666,
+  "completion_tokens": 1428,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1204
+  }
+ },
+ "cost_usd": 0.002085,
+ "at": "2026-11-05T10:24:08",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "af06864305e0eeee0ee75cce058e8daf116138cb2f2407876fe3ad2117424f3d",
+ "response_sha256": "7f836db4444aea44db0764fec0542724cf87b4d1dc32ef4184758f4507f2101a"
+}

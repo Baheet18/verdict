@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694588,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x756f1368f52b83dbf4d67da4f39fbc14fe230d824709f881d260b43926620c190db92d556bfda7c24005e0d321af75e2b40a0666b91022d8fc1315d2f7fd6af21c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:c1c1f87f334a787014458db51e41ccde299c2eec3ac134c7bf1788fa1270cb7f:928c175df9911ab8688b26bb4f785e39e6fd497142dbd2758a22d67dcf4968fc",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots report the final score as SC Freiburg 3, VfL Wolfsburg 2, so Wolfsburg scored fewer than 4 goals. Therefore the market resolves Under, mapped to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1380,
+  "total_tokens": 2035,
+  "completion_tokens": 655,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 539,
+  "completion_tokens_details": {
+   "reasoning_tokens": 539
+  }
+ },
+ "cost_usd": 0.0009394500000000001,
+ "at": "2026-11-05T10:24:46",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "c1c1f87f334a787014458db51e41ccde299c2eec3ac134c7bf1788fa1270cb7f",
+ "response_sha256": "928c175df9911ab8688b26bb4f785e39e6fd497142dbd2758a22d67dcf4968fc"
+}

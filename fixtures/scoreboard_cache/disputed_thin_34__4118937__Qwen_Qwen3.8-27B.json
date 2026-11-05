@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4118937,
+ "polymarket_id": "4118937",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x2f21dc3d8d35e2bcd0bee706e9883fb5c35080fa74f8292d48eacea863296b6044bd4d511077b894b5bf2e5b94f3b1322daeb1c90d1f69d0fc98107ff40886c51b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:0ce0dfc18b9d7bcaef4244678733dd0e7b70274711fecc518fe3a2adabc550cc:b78fccd4011f076c4aaac6bfe478ef3d075582a91465f80dcf42db904ceb4c88",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description, with no official government statement or credible reporting confirming a qualifying in-person diplomatic meeting by the deadline. The evidence bundle is therefore insufficient to resolve the market.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1189,
+  "total_tokens": 1644,
+  "completion_tokens": 455,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 315,
+  "completion_tokens_details": {
+   "reasoning_tokens": 315
+  }
+ },
+ "cost_usd": 0.00066181,
+ "at": "2026-11-05T11:37:24",
+ "set": "disputed_thin_34",
+ "request_sha256": "0ce0dfc18b9d7bcaef4244678733dd0e7b70274711fecc518fe3a2adabc550cc",
+ "response_sha256": "b78fccd4011f076c4aaac6bfe478ef3d075582a91465f80dcf42db904ceb4c88"
+}

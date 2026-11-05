@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5127218,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xba06eb6499b9ba889eac19552bee0e5ccfe070c4e102e68deb1d13bb8d7a02b403ee2954f92bccaccff269b3037022291daecc33df13b6f95f1bc3e8f39e71031b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:0e2efbe2e465a390f69b8e47eebe1c98ffe35daed49c44331374028e2531eed9:fd14017c1268306626ef53aef060872c6db0361db4cf169eac170421e46da5ac",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Texans won 34-31, a 3-point margin, which is less than the 17 points required for the Texans side. The market therefore resolves to Jaguars.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 945,
+  "total_tokens": 1132,
+  "completion_tokens": 187,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 31,
+  "completion_tokens_details": {
+   "reasoning_tokens": 31
+  }
+ },
+ "cost_usd": 0.0001691,
+ "at": "2026-11-05T10:19:43",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "0e2efbe2e465a390f69b8e47eebe1c98ffe35daed49c44331374028e2531eed9",
+ "response_sha256": "fd14017c1268306626ef53aef060872c6db0361db4cf169eac170421e46da5ac"
+}

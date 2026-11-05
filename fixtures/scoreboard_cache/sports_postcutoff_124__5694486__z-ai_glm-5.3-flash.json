@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5694486,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x4885e3a24bcd06e7b051ead813dd02743ff23619e304ba00a60fd9a8a1f1828757e015c4e3873466df1ac37b8d0771ea700130b24b17330207dbbeb0ae5eeb6a1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:dc1b8455badbc335c5a41731460b43d2680899491ef1f74518c07a7aa30477fc:7fecca3ae8f7d5585cfc1237e076cc45b3ee3e377d7ec1a6b8eaf6c188c9daf0",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree that Dynamo Dresden scored 2 goals in the finished match, which is fewer than the 3 required for Over. Per the rules, fewer than 3 goals resolves to Under, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1225,
+  "total_tokens": 1495,
+  "completion_tokens": 270,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 102,
+  "completion_tokens_details": {
+   "reasoning_tokens": 102
+  }
+ },
+ "cost_usd": 0.000233,
+ "at": "2026-11-05T10:22:09",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "dc1b8455badbc335c5a41731460b43d2680899491ef1f74518c07a7aa30477fc",
+ "response_sha256": "7fecca3ae8f7d5585cfc1237e076cc45b3ee3e377d7ec1a6b8eaf6c188c9daf0"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5126658,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xbaf08e7fbd5b2fba50ead4418d4e7163485e4561e78354430a58a56fc21e434c7dfb2fe9f878d0f9c337e36c385800aa23e84fc73234273295874787f8a8e62c1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:10a123d3e05e9872771b5769751a1631872e696ec15b878326fa0f2843ad2293:d0c8552bb829a001a57a0a2e07441b31f6021f5de0e1b84d75f37802afa3d114",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources agree the Flames won 5-2. Therefore the market resolves to Flames, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1130,
+  "total_tokens": 1704,
+  "completion_tokens": 574,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 338,
+  "completion_tokens_details": {
+   "reasoning_tokens": 338
+  }
+ },
+ "cost_usd": 0.0008201,
+ "at": "2026-11-05T10:12:49",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "10a123d3e05e9872771b5769751a1631872e696ec15b878326fa0f2843ad2293",
+ "response_sha256": "d0c8552bb829a001a57a0a2e07441b31f6021f5de0e1b84d75f37802afa3d114"
+}

@@ -1,0 +1,94 @@
+{
+  "polymarket_id": "5936743",
+  "market_id": 5936743,
+  "question": "Spread: FC Andorra (-2.5)",
+  "rules": "In the upcoming La Liga 2 game, scheduled for November 1 at 3:00 PM ET:\n\nThis market will resolve to \"FC Andorra\" if FC Andorra win the game by 3 or more goals.\n\nOtherwise, this market will resolve to \"CD Tenerife\".\n\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50–50.\n\nThis market will resolve according to the official final score published on laliga.com. This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \"Draw\" where applicable.\n\nVERDICT MAPPING: answer YES if this market resolves to \"FC Andorra\"; answer NO if it resolves to \"CD Tenerife\".",
+  "market_end": "2026-11-02T13:00:00Z",
+  "outcomes": [
+    "FC Andorra",
+    "CD Tenerife"
+  ],
+  "uma": "NO",
+  "expected_panel_from_human_read": "NO",
+  "evidence": "{\"market_end\": \"2026-11-02T13:00:00Z\", \"question\": \"Spread: FC Andorra (-2.5)\", \"rules\": \"In the upcoming La Liga 2 game, scheduled for November 1 at 3:00 PM ET:\\n\\nThis market will resolve to \\\"FC Andorra\\\" if FC Andorra win the game by 3 or more goals.\\n\\nOtherwise, this market will resolve to \\\"CD Tenerife\\\".\\n\\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50–50.\\n\\nThis market will resolve according to the official final score published on laliga.com. This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\\n\\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \\\"Draw\\\" where applicable.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"FC Andorra\\\"; answer NO if it resolves to \\\"CD Tenerife\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"30391171998bc693db0a3fafbe1f091c035867efe4e8950c8dfc605a0f2adb55\", \"text\": \"In the upcoming La Liga 2 game, scheduled for November 1 at 3:00 PM ET:\\n\\nThis market will resolve to \\\"FC Andorra\\\" if FC Andorra win the game by 3 or more goals.\\n\\nOtherwise, this market will resolve to \\\"CD Tenerife\\\".\\n\\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50–50.\\n\\nThis market will resolve according to the official final score published on laliga.com. This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\\n\\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \\\"Draw\\\" where applicable.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"FC Andorra\\\"; answer NO if it resolves to \\\"CD Tenerife\\\".\", \"url\": \"polymarket:market:5936743:description\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"b1766e20b5a2bddd2e370c400aee568eaacc5212bfe62af755cb818d60fa4f11\", \"text\": \"CD Tenerife vs FC Andorra — LALIGA HYPERMOTION. Final score: CD Tenerife 2-2 FC Andorra. Match date November 2026. Official final score published by LaLiga.\", \"url\": \"https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-hypermotion-cd-tenerife-fc-andorra-12\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"7180ce1aa737c9bf0baea56635a2fd26ebe9263d393252e150d0b38c1d7b0c47\", \"text\": \"Tenerife 2-2 FC Andorra (Nov 2, 2026) Final Score - ESPN. Final: CD Tenerife 2, FC Andorra 2.\", \"url\": \"https://www.espn.com/soccer/match/_/gameId/401883144\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"0b6dd498fd9976b188fac1a2ab626b713bc04b61bdd29ad8f2eb72b4bf44a88c\", \"text\": \"Latest FC Andorra Results in LALIGA HYPERMOTION. vs CD Tenerife: 2-2 draw. FC Andorra did not win by three or more goals.\", \"url\": \"https://www.laliga.com/en-GB/clubs/fc-andorra/results\"}]}",
+  "evidence_sha256": "2771218d608952e05315bfc8746b25ee4e903514353f8139a0acc53c050a73ba",
+  "answer_bearing_sources": 3,
+  "answer_present_all": true,
+  "human_checked_before_panel": true,
+  "snapshots": [
+    {
+      "url": "polymarket:market:5936743:description",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "30391171998bc693db0a3fafbe1f091c035867efe4e8950c8dfc605a0f2adb55",
+      "text": "In the upcoming La Liga 2 game, scheduled for November 1 at 3:00 PM ET:\n\nThis market will resolve to \"FC Andorra\" if FC Andorra win the game by 3 or more goals.\n\nOtherwise, this market will resolve to \"CD Tenerife\".\n\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50–50.\n\nThis market will resolve according to the official final score published on laliga.com. This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \"Draw\" where applicable.\n\nVERDICT MAPPING: answer YES if this market resolves to \"FC Andorra\"; answer NO if it resolves to \"CD Tenerife\".",
+      "role": "rules",
+      "note": "Market rules + YES/NO mapping; NOT an answer-bearing fact source.",
+      "answer_present": false
+    },
+    {
+      "url": "https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-hypermotion-cd-tenerife-fc-andorra-12",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "b1766e20b5a2bddd2e370c400aee568eaacc5212bfe62af755cb818d60fa4f11",
+      "text": "CD Tenerife vs FC Andorra — LALIGA HYPERMOTION. Final score: CD Tenerife 2-2 FC Andorra. Match date November 2026. Official final score published by LaLiga.",
+      "role": "official",
+      "note": "LaLiga match page Tenerife vs Andorra",
+      "answer_present": true,
+      "answer_note": "Official LaLiga: 2-2; Andorra did not win by 3+.",
+      "archive_url": null,
+      "archive_available": false,
+      "archive_note": "no closest snapshot from wayback available API"
+    },
+    {
+      "url": "https://www.espn.com/soccer/match/_/gameId/401883144",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "7180ce1aa737c9bf0baea56635a2fd26ebe9263d393252e150d0b38c1d7b0c47",
+      "text": "Tenerife 2-2 FC Andorra (Nov 2, 2026) Final Score - ESPN. Final: CD Tenerife 2, FC Andorra 2.",
+      "role": "report",
+      "note": "ESPN: Tenerife 2-2 FC Andorra",
+      "answer_present": true,
+      "answer_note": "ESPN final 2-2.",
+      "archive_url": null,
+      "archive_available": false,
+      "archive_note": "no closest snapshot from wayback available API"
+    },
+    {
+      "url": "https://www.laliga.com/en-GB/clubs/fc-andorra/results",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "0b6dd498fd9976b188fac1a2ab626b713bc04b61bdd29ad8f2eb72b4bf44a88c",
+      "text": "Latest FC Andorra Results in LALIGA HYPERMOTION. vs CD Tenerife: 2-2 draw. FC Andorra did not win by three or more goals.",
+      "role": "report",
+      "note": "LaLiga FC Andorra results",
+      "answer_present": true,
+      "answer_note": "Club results list confirms draw.",
+      "archive_url": "http://web.archive.org/web/20260518192056/https://www.laliga.com/en-GB/clubs/fc-andorra/results",
+      "archive_available": true,
+      "archive_note": null
+    }
+  ],
+  "archives": [
+    {
+      "url": "https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-hypermotion-cd-tenerife-fc-andorra-12",
+      "archive_available": false,
+      "archive_url": null,
+      "note": "no closest snapshot from wayback available API",
+      "checked_at": "2026-11-05T11:54:40Z"
+    },
+    {
+      "url": "https://www.espn.com/soccer/match/_/gameId/401883144",
+      "archive_available": false,
+      "archive_url": null,
+      "note": "no closest snapshot from wayback available API",
+      "checked_at": "2026-11-05T11:54:40Z"
+    },
+    {
+      "url": "https://www.laliga.com/en-GB/clubs/fc-andorra/results",
+      "archive_available": true,
+      "archive_url": "http://web.archive.org/web/20260518192056/https://www.laliga.com/en-GB/clubs/fc-andorra/results",
+      "archive_timestamp": "20260518192056",
+      "checked_at": "2026-11-05T11:54:40Z"
+    }
+  ],
+  "curation": "hand_round6",
+  "curated_at": "2026-11-05T11:54:40Z",
+  "disclaimer": "Answer-bearing texts were hand-extracted from the cited pages for reproducibility. Archive.org links are only included when the availability API returned a snapshot; otherwise marked unavailable. Fetched/compiled outside the TEE."
+}

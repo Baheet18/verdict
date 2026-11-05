@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5693461,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x8ca9f34802c2a915f5951833eed6f44f3961b90f7f54901d063a0137e39cbe313c29764d0c4c2b499f11dbd995e42c489d41068f1400ef5b7f28ba97bc2144671c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:19faf1e71725abf1cb3f17513dc7a7efeb8fe1b732ba815dceb7cd5df19fb444:278f2b513de29e013832df1cc5fb7445c9cb9a8ab57c4a2b2ca0d771cdbc3a25",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots agree the match ended 0-1 to VfB Stuttgart, with halftime 0-0. Since Paderborn scored no goals, Stuttgart's only goal was the first goal.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1414,
+  "total_tokens": 2726,
+  "completion_tokens": 1312,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1124,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1124
+  }
+ },
+ "cost_usd": 0.0018277599999999999,
+ "at": "2026-11-05T10:25:54",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "19faf1e71725abf1cb3f17513dc7a7efeb8fe1b732ba815dceb7cd5df19fb444",
+ "response_sha256": "278f2b513de29e013832df1cc5fb7445c9cb9a8ab57c4a2b2ca0d771cdbc3a25"
+}

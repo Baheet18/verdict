@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694416,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xabb68a063458a2ddad449fa7f3565a6d3d948c77305ce9a792e0da611066423b2b69b22c4f0a774c7d867ec6dab1ec9fdf73d6623e328402c2fe94e5b99a4c761b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:2c398fae5926a9195c1b63862b98aaa33b334ae605ce9ddb38fd3388fb873b3e:95e7a3247367b2d7e8ce07149cb9d585be0ddf3c0f6e9ed5d9521eca35e135a9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots show SSV Jeddeloh II's final score was 0, so its first-half score was necessarily 0. That is less than 3, resolving Under/NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1449,
+  "total_tokens": 5778,
+  "completion_tokens": 4329,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 4210,
+  "completion_tokens_details": {
+   "reasoning_tokens": 4210
+  }
+ },
+ "cost_usd": 0.00590211,
+ "at": "2026-11-05T10:25:15",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "2c398fae5926a9195c1b63862b98aaa33b334ae605ce9ddb38fd3388fb873b3e",
+ "response_sha256": "95e7a3247367b2d7e8ce07149cb9d585be0ddf3c0f6e9ed5d9521eca35e135a9"
+}

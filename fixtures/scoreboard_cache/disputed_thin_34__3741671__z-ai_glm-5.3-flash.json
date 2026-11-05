@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 3741671,
+ "polymarket_id": "3741671",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x44aac9f4ba9740014beb9e3c2eaa8904840ab3dbb2a9d67a995bbfff0562fb3046a1bf9e6c02534c8b54405d605e35f73e24917264cf7b2573676195fa9db88b1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:aaaf1f0e5220678cee45ed98bdc60ec55ca5c95b7ac7b381c2a40ee96d605df8:8029c025dac6d848b4d07fcfd5946e67429ea5530acdadb395229ddc0734550d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market rules snapshot and no factual reporting or government statements about whether any Russia-Ukraine diplomatic meeting occurred by October 31, 2026, so the required resolution sources are absent. With no evidence of the event's occurrence or non-occurrence, the snapshots are insufficient to resolve.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 954,
+  "total_tokens": 1503,
+  "completion_tokens": 549,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 397,
+  "completion_tokens_details": {
+   "reasoning_tokens": 397
+  }
+ },
+ "cost_usd": 0.00035082,
+ "at": "2026-11-05T11:34:28",
+ "set": "disputed_thin_34",
+ "request_sha256": "aaaf1f0e5220678cee45ed98bdc60ec55ca5c95b7ac7b381c2a40ee96d605df8",
+ "response_sha256": "8029c025dac6d848b4d07fcfd5946e67429ea5530acdadb395229ddc0734550d"
+}

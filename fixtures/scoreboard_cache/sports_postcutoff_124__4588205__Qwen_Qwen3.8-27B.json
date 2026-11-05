@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4588205,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x1deb675aa47c56e33b0075fb1fdee0bd80f1afb49832df609ef282316b7b26f343b17603ceb42400fd0ae8e60ac1faedb973bd887c064c4dc74e343a10d4e8bf1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:bd1d93e7e510c03e77fb3bbabc30533dc146e97fb715e5226d1e7c8bf6fc52b8:1a80dc0478c5efdf446e633cf4244a65781b60453415771db99892cde904ac75",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources report the final score as Denver 30, Arizona 16. The Broncos won by 14 points, which is 7 or more, so the market resolves to Broncos/YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1103,
+  "total_tokens": 1521,
+  "completion_tokens": 418,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 155,
+  "completion_tokens_details": {
+   "reasoning_tokens": 155
+  }
+ },
+ "cost_usd": 0.00060842,
+ "at": "2026-11-05T10:20:21",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "bd1d93e7e510c03e77fb3bbabc30533dc146e97fb715e5226d1e7c8bf6fc52b8",
+ "response_sha256": "1a80dc0478c5efdf446e633cf4244a65781b60453415771db99892cde904ac75"
+}

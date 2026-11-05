@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 608558,
+ "polymarket_id": "608558",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xbe388a969c8b8a98b0d2aec241ee36de56bd3f1f81154ae6871694900c3a54cd5c83e815ad09b015ee856845d7c15e423fa5d2b4a67aaabee1311175791356ac1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:2194e5dcd2a1091bc1ccade4bd7469c17850e7a67ba8b99f2cb9cee562f9d471:0dcf24022cdce66a9ed61ebc1ca66bb859251777f56085029a28dfef61cf0c4b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "TOO_EARLY",
+ "reasoning": "No snapshot declares a 2026 Ballon d'Or winner, and the snapshots (fetched 2026-11-05) predate the rules' declaration deadline of December 31, 2026, so the event window is not yet over. The France Football homepage snapshot shows no winner announcement, so YES/NO cannot be determined at this time.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 12106,
+  "total_tokens": 14701,
+  "completion_tokens": 2595,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 2422,
+  "completion_tokens_details": {
+   "reasoning_tokens": 2422
+  }
+ },
+ "cost_usd": 0.00226598,
+ "at": "2026-11-05T12:23:46",
+ "evidence_sha256": "0fe8605858ae32064ba4d202b1c5f64f5569f29e1af82fd1f51ddf016cb98011",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "2194e5dcd2a1091bc1ccade4bd7469c17850e7a67ba8b99f2cb9cee562f9d471",
+ "response_sha256": "0dcf24022cdce66a9ed61ebc1ca66bb859251777f56085029a28dfef61cf0c4b"
+}

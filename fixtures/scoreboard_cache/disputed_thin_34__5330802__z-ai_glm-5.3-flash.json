@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5330802,
+ "polymarket_id": "5330802",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x7aaa06a1470f35d5e778893458ace4e243a240ec65201adf92db4b982f5732960a91274afdb003d71d135bda7d585a8f75be6620f10bde2ac51dc317126baeff1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:bfb71bae44d9d7d55282bb55c9474e033a58b04881294b0c2e6a423aeddabc5b:1f451660fc59ae672e98e7e9e57dca6618c308bb45f98c3d7a1e8fd130f788ee",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "The snapshot was fetched 2026-11-05, after the market end (2026-11-01T03:59Z \u2248 11:59 PM ET Oct 31) and after any three-day confirmation window, and no snapshot establishes a qualifying U.S. anti-cartel operation or kinetic action on foreign soil. Per the rules' explicit default, the market resolves \"No\" absent such establishment.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 2470,
+  "total_tokens": 3956,
+  "completion_tokens": 1486,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1269,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1269
+  }
+ },
+ "cost_usd": 0.0009406,
+ "at": "2026-11-05T11:42:00",
+ "set": "disputed_thin_34",
+ "request_sha256": "bfb71bae44d9d7d55282bb55c9474e033a58b04881294b0c2e6a423aeddabc5b",
+ "response_sha256": "1f451660fc59ae672e98e7e9e57dca6618c308bb45f98c3d7a1e8fd130f788ee"
+}

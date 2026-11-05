@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4118937,
+ "polymarket_id": "4118937",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x659eac77e30655ac7288081b0c86d71c7dc9a32668c175626e8085abd59d777146ca46a74238fd2fba5713ae8644f9d5959c99fa37ab329630f495cbbdd94c681b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:42f0808fe644624e5dca580458b655f952121a5e0fbc98f7ab432e266f0063dc:01edb4b7420ef6be912083b0a6e3562ad6ea47bdb0c484af1da7f1869d6168f0",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The event window has closed (snapshot fetched 2026-11-05, after the 2026-10-31 deadline), but the bundle contains only the market rules\u2014which explicitly state they are not an external fact source\u2014and no reporting on whether a qualifying meeting occurred, so the snapshots are insufficient to determine YES or NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1068,
+  "total_tokens": 1783,
+  "completion_tokens": 715,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 538,
+  "completion_tokens_details": {
+   "reasoning_tokens": 538
+  }
+ },
+ "cost_usd": 0.00044294,
+ "at": "2026-11-05T11:37:44",
+ "set": "disputed_thin_34",
+ "request_sha256": "42f0808fe644624e5dca580458b655f952121a5e0fbc98f7ab432e266f0063dc",
+ "response_sha256": "01edb4b7420ef6be912083b0a6e3562ad6ea47bdb0c484af1da7f1869d6168f0"
+}

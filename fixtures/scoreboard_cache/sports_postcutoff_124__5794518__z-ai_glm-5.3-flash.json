@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5794518,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xa3ea45e6682fe602f8f9f7b7b325e8327f6b4d735f96b7483734fe1dbfccfebf4120f78cae67975ee6c252758122cadfdf4dd504c705a7492ee306a7fe74b3001c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:823f50f14abcb7e0b58ae2a3e1ed2426a462b9318e035197251713606ad7856a:bb874d5c5cc65a3c846473615b312d12a9a4d97e2931f214013d59aba4021bb9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the match finished with Arminia Bielefeld beating Eintracht Braunschweig 3-1, so Braunschweig did not win and the market resolves to \"No\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1161,
+  "total_tokens": 1431,
+  "completion_tokens": 270,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 81,
+  "completion_tokens_details": {
+   "reasoning_tokens": 81
+  }
+ },
+ "cost_usd": 0.00022788000000000002,
+ "at": "2026-11-05T10:24:27",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "823f50f14abcb7e0b58ae2a3e1ed2426a462b9318e035197251713606ad7856a",
+ "response_sha256": "bb874d5c5cc65a3c846473615b312d12a9a4d97e2931f214013d59aba4021bb9"
+}

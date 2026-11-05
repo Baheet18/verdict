@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 1284815,
+ "polymarket_id": "1284815",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x30ff66fc21e1f2ff59821beea655edd38b7a3d8a51908680f945a9de1ec62d9139a37ae4c52ced5c3d14f8f0ea9b6ffb9ae7680d7bd4ec4f25aa3dc24c1680c11b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:d8e121a071eed33c539e95c93d5b6059a4dbb295a89ae53b518a7a1b0406ca0e:d3971031a79bd62fe3b8a63b99e2f23ee0aad2b229a9a9760d0e93668e6046d3",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The election date (Nov 3, 2026) has passed per the fetch timestamps, but the only resolution-source snapshot is the FEC.gov homepage, which contains no TX-02 results, candidate names, or vote counts, and no other snapshot reports the winner's party. With no result data in the evidence bundle, the snapshots are insufficient to determine the outcome.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4618,
+  "total_tokens": 5685,
+  "completion_tokens": 1067,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 873,
+  "completion_tokens_details": {
+   "reasoning_tokens": 873
+  }
+ },
+ "cost_usd": 0.0009029400000000001,
+ "at": "2026-11-05T11:47:35",
+ "set": "disputed_thin_34",
+ "request_sha256": "d8e121a071eed33c539e95c93d5b6059a4dbb295a89ae53b518a7a1b0406ca0e",
+ "response_sha256": "d3971031a79bd62fe3b8a63b99e2f23ee0aad2b229a9a9760d0e93668e6046d3"
+}

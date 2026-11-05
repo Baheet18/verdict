@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5658362,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x4f10e1bdaa94f77b93d52a4e3a8efd8e161755efa9fb64475e4d3b6e2db5c541695b7eb1d4f0fc283582a090748e969abf1671cb996f5c8a7ecc98bb0948db061c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:97a29391f51dcbb6951b36d36072b87ba13c251ecae4ed9f53c7fb66b29ec6cb:a8b0133b5d0014c05ffc5327af95acb88df70a06813a9f40cfa423c7c344bf74",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show the game final with Seahawks losing 17-34 to the Bears, so Seattle did not win by 9+ points. The market therefore resolves to \"Bears\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 980,
+  "total_tokens": 1210,
+  "completion_tokens": 230,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 41
+  }
+ },
+ "cost_usd": 0.00057,
+ "at": "2026-11-05T10:19:37",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "97a29391f51dcbb6951b36d36072b87ba13c251ecae4ed9f53c7fb66b29ec6cb",
+ "response_sha256": "a8b0133b5d0014c05ffc5327af95acb88df70a06813a9f40cfa423c7c344bf74"
+}

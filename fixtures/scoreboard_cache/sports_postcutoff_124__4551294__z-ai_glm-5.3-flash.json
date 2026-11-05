@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551294,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xeea2c1250028345a84328e2874aaff880fcb3a81de4b1440d8747cf64da87b29336f425af7655b732e0816309146b13cd62307fdac338c8dd87d56953897d0001c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:9886bac680509db5e11115ae4c9fd0a104cfccf09b225d32faa0be25199db586:f3af67772561e61ddacce4de513f7e97a7555027d7ecd67b2ad22fdbd6642909",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with the Rams winning 35-21 over the Raiders, so the market resolves to \"Rams\" and the verdict maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 951,
+  "total_tokens": 1143,
+  "completion_tokens": 192,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 21,
+  "completion_tokens_details": {
+   "reasoning_tokens": 21
+  }
+ },
+ "cost_usd": 0.00017208000000000002,
+ "at": "2026-11-05T10:17:36",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9886bac680509db5e11115ae4c9fd0a104cfccf09b225d32faa0be25199db586",
+ "response_sha256": "f3af67772561e61ddacce4de513f7e97a7555027d7ecd67b2ad22fdbd6642909"
+}

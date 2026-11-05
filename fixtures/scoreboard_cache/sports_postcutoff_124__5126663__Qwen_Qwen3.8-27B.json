@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5126663,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x0627d5f15980e02cd934af89cd19a152747138ca7d6d2880ec1373f79f662f092ba3e829f957b6ab360035b9893fd828327e6485bcf431b53076d4abb2508fd81c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:fa03a0eeb11d9153de3b3fa59103d50035af79c5f99995dc2cefa4da3eb7459b:f2f88c18e5bc626962213813d11179195f15bca50d00c5a1f612eccdf63ec09e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources agree the Detroit Red Wings won 4-3, with the NHL feed indicating a shootout. Therefore the market resolves to Red Wings, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1122,
+  "total_tokens": 1800,
+  "completion_tokens": 678,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 431,
+  "completion_tokens_details": {
+   "reasoning_tokens": 431
+  }
+ },
+ "cost_usd": 0.0009601799999999999,
+ "at": "2026-11-05T10:14:19",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "fa03a0eeb11d9153de3b3fa59103d50035af79c5f99995dc2cefa4da3eb7459b",
+ "response_sha256": "f2f88c18e5bc626962213813d11179195f15bca50d00c5a1f612eccdf63ec09e"
+}

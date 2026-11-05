@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 608564,
+ "polymarket_id": "608564",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x31ebb646ec933574fc76d3bb041fb3b98300f7cf5ffe26cca2bb838c93392c464afeaa100e0082c45eb099da460c1a94a400e115bae9909fbda29d49c3d928551c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:1cd2db2248c249418e06c367ec51e36f5f2ae21a324331f8b852cd6d73e5b9a0:864a750ce8a3136ce723e3f881c4dcf43684fbcd265975b9f8acd63984ac59b1",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only external snapshot is the France Football homepage, which contains no announcement of the 2026 Ballon d'Or winner and never mentions Ronaldo. With no source reporting the winner, the outcome cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4941,
+  "total_tokens": 5306,
+  "completion_tokens": 365,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 4736
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 204
+  }
+ },
+ "cost_usd": 0.0019203,
+ "at": "2026-11-05T11:38:27",
+ "set": "disputed_thin_34",
+ "request_sha256": "1cd2db2248c249418e06c367ec51e36f5f2ae21a324331f8b852cd6d73e5b9a0",
+ "response_sha256": "864a750ce8a3136ce723e3f881c4dcf43684fbcd265975b9f8acd63984ac59b1"
+}

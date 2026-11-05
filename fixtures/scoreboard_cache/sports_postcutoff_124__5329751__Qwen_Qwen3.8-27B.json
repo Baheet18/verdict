@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5329751,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xa6797df8dc6199be570c7007c9fbd6af93cfe93e3a94d078a1ef56b70a6b570c40e6a12fcff8053711ec833fc0ffb7bdb0c35ff85be5e3bcc40c7e081f80c2ff1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:58435b4db5e61e5ec536588eca972569bb182cbd5ebc7902f101926f861b747c:8c38c1d36c3f25cbbf7882ad314eb6897cdca5efac39993752701d93680e1394",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources agree that the Minnesota Wild won 5-1 over the Washington Capitals. Therefore the market resolves to \"Wild\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1108,
+  "total_tokens": 1622,
+  "completion_tokens": 514,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 279,
+  "completion_tokens_details": {
+   "reasoning_tokens": 279
+  }
+ },
+ "cost_usd": 0.00073822,
+ "at": "2026-11-05T10:16:52",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "58435b4db5e61e5ec536588eca972569bb182cbd5ebc7902f101926f861b747c",
+ "response_sha256": "8c38c1d36c3f25cbbf7882ad314eb6897cdca5efac39993752701d93680e1394"
+}

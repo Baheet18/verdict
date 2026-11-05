@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5332475,
+ "polymarket_id": "5332475",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xd3a03f4e95a92d3e7355c1a14c0937ad66c404e0d6b6cc0eba527830e44dce170f614e403bed560fcb4b827a7cea273bef133176707a70ad85e14f3a9f77f6471b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:9370dd91c8efdd226fca8d87a2f586ab6aa0275be8b1c638473d62c69bf7ebc9:f81caa3f48925118b3d4fdbdd42b0220de9efd21a2a025021aaa4f85607deca0",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market's own rules snapshot, which is explicitly not an external fact source, and no snapshot reports any election results or seat counts for Amcha Yisrael or any other party. With zero independent sources on the outcome, the second-place finisher cannot be determined from the snapshots.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1136,
+  "total_tokens": 1961,
+  "completion_tokens": 825,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 677,
+  "completion_tokens_details": {
+   "reasoning_tokens": 677
+  }
+ },
+ "cost_usd": 0.00050338,
+ "at": "2026-11-05T12:00:28",
+ "set": "disputed_thin_34",
+ "request_sha256": "9370dd91c8efdd226fca8d87a2f586ab6aa0275be8b1c638473d62c69bf7ebc9",
+ "response_sha256": "f81caa3f48925118b3d4fdbdd42b0220de9efd21a2a025021aaa4f85607deca0"
+}

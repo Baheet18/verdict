@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5663824,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x2694c5bf4f657cbbffeb1de15e3bb5d31ed0bd844d43baa8c958703cdf0b434d060ec6d7f783fbea740b022eb6026821782dd762d318f330475ff323509115931c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:2ff420c28e0c65b35205101acf36f801cbb1fed988719edb5316f91696ea80ef:594820a29deb95ea0e79e158150c20903a26925595ffddf873f27fb385b96142",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the final score was VfL Bochum 2, 1. FSV Mainz 05 0, a combined total of 2 goals, meeting the 'Over' threshold of 2 or more.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1243,
+  "total_tokens": 1476,
+  "completion_tokens": 233,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 60,
+  "completion_tokens_details": {
+   "reasoning_tokens": 60
+  }
+ },
+ "cost_usd": 0.00021594,
+ "at": "2026-11-05T10:23:32",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "2ff420c28e0c65b35205101acf36f801cbb1fed988719edb5316f91696ea80ef",
+ "response_sha256": "594820a29deb95ea0e79e158150c20903a26925595ffddf873f27fb385b96142"
+}

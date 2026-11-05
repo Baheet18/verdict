@@ -1,0 +1,94 @@
+{
+  "polymarket_id": "1281165",
+  "market_id": 1281165,
+  "question": "Will the Democratic Party win the CA-34 House seat?",
+  "rules": "This market will resolve according to the party of the candidate who wins the CA-34 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n​A candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\n\nVERDICT MAPPING: answer YES if this market resolves to \"Yes\"; answer NO if it resolves to \"No\".",
+  "market_end": "2026-11-04T04:59:00Z",
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "uma": "YES",
+  "expected_panel_from_human_read": "YES",
+  "evidence": "{\"market_end\": \"2026-11-04T04:59:00Z\", \"question\": \"Will the Democratic Party win the CA-34 House seat?\", \"rules\": \"This market will resolve according to the party of the candidate who wins the CA-34 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\\n\\n​A candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\\n\\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Yes\\\"; answer NO if it resolves to \\\"No\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"e8a76c3df740f73afd38f2975db144158c1e3f4f42566a5ba603e5881d4ae614\", \"text\": \"This market will resolve according to the party of the candidate who wins the CA-34 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\\n\\n​A candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\\n\\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Yes\\\"; answer NO if it resolves to \\\"No\\\".\", \"url\": \"polymarket:market:1281165:description\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"0b8e1adcd8eba9a8de93612688fa75dc1c119a47fec9c0886b44d805d55ce863\", \"text\": \"Angela Gonzales-Torres wins CA-34: 2026 Results. Angela Gonzales-Torres (Democratic Party) defeated Jimmy Gomez in California's 34th Congressional District in the November 3, 2026 general election.\", \"url\": \"https://polling-desk.com/races/2026/house/ca-34\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"4fe0d73665d603162a884bb3b424f3b1d6035520dc20b6dfbe0b20504a0f1d40\", \"text\": \"Newcomer Gonzales-Torres defeats incumbent in California's 34th Congressional District race. Angela Gonzales-Torres, a Democrat, won the CA-34 House seat in the 2026 midterm election.\", \"url\": \"https://laist.com/news/politics/voter-guides/2026-election-california-general-congress-34-district-gomes-gonzales-torres-la-live-results\"}, {\"fetched_at\": \"2026-11-05T11:54:40Z\", \"sha256\": \"9a08ab440d3618c2fdfcd895cc67a6f090f2261b95c315a01b3feb4404ee5d59\", \"text\": \"California's 34th Congressional District election, 2026. The Democratic Party nominee Angela Gonzales-Torres won the general election on November 3, 2026.\", \"url\": \"https://ballotpedia.org/California%27s_34th_Congressional_District\"}]}",
+  "evidence_sha256": "91e9a339c5f04466a57016206a6ef5aab34c54b26e54921d34b0051bc459d11b",
+  "answer_bearing_sources": 3,
+  "answer_present_all": true,
+  "human_checked_before_panel": true,
+  "snapshots": [
+    {
+      "url": "polymarket:market:1281165:description",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "e8a76c3df740f73afd38f2975db144158c1e3f4f42566a5ba603e5881d4ae614",
+      "text": "This market will resolve according to the party of the candidate who wins the CA-34 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n​A candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).\n\nVERDICT MAPPING: answer YES if this market resolves to \"Yes\"; answer NO if it resolves to \"No\".",
+      "role": "rules",
+      "note": "Market rules + YES/NO mapping; NOT an answer-bearing fact source.",
+      "answer_present": false
+    },
+    {
+      "url": "https://polling-desk.com/races/2026/house/ca-34",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "0b8e1adcd8eba9a8de93612688fa75dc1c119a47fec9c0886b44d805d55ce863",
+      "text": "Angela Gonzales-Torres wins CA-34: 2026 Results. Angela Gonzales-Torres (Democratic Party) defeated Jimmy Gomez in California's 34th Congressional District in the November 3, 2026 general election.",
+      "role": "official",
+      "note": "Polling Desk CA-34 2026 results",
+      "answer_present": true,
+      "answer_note": "Democrat Angela Gonzales-Torres won CA-34.",
+      "archive_url": null,
+      "archive_available": false,
+      "archive_note": "no closest snapshot from wayback available API"
+    },
+    {
+      "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-congress-34-district-gomes-gonzales-torres-la-live-results",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "4fe0d73665d603162a884bb3b424f3b1d6035520dc20b6dfbe0b20504a0f1d40",
+      "text": "Newcomer Gonzales-Torres defeats incumbent in California's 34th Congressional District race. Angela Gonzales-Torres, a Democrat, won the CA-34 House seat in the 2026 midterm election.",
+      "role": "report",
+      "note": "LAist: Gonzales-Torres wins CA-34",
+      "answer_present": true,
+      "answer_note": "LAist reports Democrat won CA-34.",
+      "archive_url": null,
+      "archive_available": false,
+      "archive_note": "no closest snapshot from wayback available API"
+    },
+    {
+      "url": "https://ballotpedia.org/California%27s_34th_Congressional_District",
+      "fetched_at": "2026-11-05T11:54:40Z",
+      "sha256": "9a08ab440d3618c2fdfcd895cc67a6f090f2261b95c315a01b3feb4404ee5d59",
+      "text": "California's 34th Congressional District election, 2026. The Democratic Party nominee Angela Gonzales-Torres won the general election on November 3, 2026.",
+      "role": "report",
+      "note": "Ballotpedia CA-34",
+      "answer_present": true,
+      "answer_note": "Ballotpedia: Democratic nominee won.",
+      "archive_url": "http://web.archive.org/web/20260528051451/https://ballotpedia.org/California%27s_34th_Congressional_District",
+      "archive_available": true,
+      "archive_note": null
+    }
+  ],
+  "archives": [
+    {
+      "url": "https://polling-desk.com/races/2026/house/ca-34",
+      "archive_available": false,
+      "archive_url": null,
+      "note": "no closest snapshot from wayback available API",
+      "checked_at": "2026-11-05T11:54:40Z"
+    },
+    {
+      "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-congress-34-district-gomes-gonzales-torres-la-live-results",
+      "archive_available": false,
+      "archive_url": null,
+      "note": "no closest snapshot from wayback available API",
+      "checked_at": "2026-11-05T11:54:40Z"
+    },
+    {
+      "url": "https://ballotpedia.org/California%27s_34th_Congressional_District",
+      "archive_available": true,
+      "archive_url": "http://web.archive.org/web/20260528051451/https://ballotpedia.org/California%27s_34th_Congressional_District",
+      "archive_timestamp": "20260528051451",
+      "checked_at": "2026-11-05T11:54:40Z"
+    }
+  ],
+  "curation": "hand_round6",
+  "curated_at": "2026-11-05T11:54:40Z",
+  "disclaimer": "Answer-bearing texts were hand-extracted from the cited pages for reproducibility. Archive.org links are only included when the availability API returned a snapshot; otherwise marked unavailable. Fetched/compiled outside the TEE."
+}

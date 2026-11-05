@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694595,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x36c18e7f37d7c51965cee3c58573aa57c255f83535eeb953115ca398f78aefcd463385d7d4c94133c6f1acdb89f5be2bd86067904c5ae3daea45741fcafab1251b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:6bda4f2bfbe3e491aec867cad76df913c3cb5555a7ac5ef6f88961cc70885639:67ba1a3c97fce97aae62171429ad286029ec99d1f621f3b3369c65ee17a2adda",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Only OpenLigaDB reports the first-half score (SC Freiburg 1), while ESPN reports only the full-time score; the needed first-half figure is not confirmed by two independent sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1286,
+  "total_tokens": 1757,
+  "completion_tokens": 471,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1088
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 343
+  }
+ },
+ "cost_usd": 0.000951,
+ "at": "2026-11-05T10:26:29",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6bda4f2bfbe3e491aec867cad76df913c3cb5555a7ac5ef6f88961cc70885639",
+ "response_sha256": "67ba1a3c97fce97aae62171429ad286029ec99d1f621f3b3369c65ee17a2adda"
+}

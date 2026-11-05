@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5694416,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x2a0cdfc95e9a356e4c8ffbee8b2a04fed3b7957ffb59803a4ca78a754330c55c57c187a5141d481105f8618b4bebf544345f0e3fc56fe5616c96c5acae6029c81b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:88ec765444840bfb144d71a5367a8fadc4f2bc1d7fbb0ef1f505089f1c1e2afc:20218c63c0064c0b10a33d8924334e933f5fc425fdd6cadcedf877e606d17d26",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree: OpenLigaDB shows a 0-0 halftime score and ESPN confirms SSV Jeddeloh II finished with 0 total goals, so SSV Jeddeloh II scored 0 first-half goals, under 2.5.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1288,
+  "total_tokens": 1817,
+  "completion_tokens": 529,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 329,
+  "completion_tokens_details": {
+   "reasoning_tokens": 329
+  }
+ },
+ "cost_usd": 0.00036753999999999997,
+ "at": "2026-11-05T10:23:52",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "88ec765444840bfb144d71a5367a8fadc4f2bc1d7fbb0ef1f505089f1c1e2afc",
+ "response_sha256": "20218c63c0064c0b10a33d8924334e933f5fc425fdd6cadcedf877e606d17d26"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4841699,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xa4bfc8ee4229a36e0033518e95672800ccc1ae6044c3d86f43f7d1fc9834d4ac50a2a201d4bb61bee3f84ffc5a6b197f33da82dfc7cfde5a73e2b8cb4e1ccec21c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:5f0f2b56774f45cf9502d4f4208dda2a86099185314cde062a79256fe641286e:4eabc3d4e1593aa04bf9c5ce96ce1b7074699da6c1da3f826a2af10454d9c32b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Utah Mammoth winning 5-4 over the Penguins in regulation. Per the rules, Utah winning resolves the market to \"Utah\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 973,
+  "total_tokens": 1192,
+  "completion_tokens": 219,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 25,
+  "completion_tokens_details": {
+   "reasoning_tokens": 25
+  }
+ },
+ "cost_usd": 0.00018734,
+ "at": "2026-11-05T10:13:31",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5f0f2b56774f45cf9502d4f4208dda2a86099185314cde062a79256fe641286e",
+ "response_sha256": "4eabc3d4e1593aa04bf9c5ce96ce1b7074699da6c1da3f826a2af10454d9c32b"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5481040,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x915bfbe20b032242d3e043f14dbae8c594c571d768dfacc611a55481ace9502a5df21b91f1964ccb1ccffda232898b49bff6dea9af537935e233cfae9578c8b21c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:f9eecc8586d7db62a3ba813178a3db798c98fa2310eb4ac44e21c519712feb47:54c3c8d26e436c3f83d034c873b9a22a1630a5e660942d73c6cb79a029a18a83",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Final score 2-3 and halftime 1-1 imply 3 second-half goals, which would be Under 4.5, but only OpenLigaDB reports the halftime split; ESPN gives only the final score, so fewer than two independent sources report the needed second-half total.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1273,
+  "total_tokens": 2363,
+  "completion_tokens": 1090,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 854
+  }
+ },
+ "cost_usd": 0.0016898999999999998,
+ "at": "2026-11-05T10:22:29",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f9eecc8586d7db62a3ba813178a3db798c98fa2310eb4ac44e21c519712feb47",
+ "response_sha256": "54c3c8d26e436c3f83d034c873b9a22a1630a5e660942d73c6cb79a029a18a83"
+}

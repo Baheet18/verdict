@@ -113,6 +113,118 @@ pub fn canonical_header(market_id: u32, round: u32, rules_hash: &str, prompt_tem
     format!("{HEADER_PREFIX} market_id={market_id} round={round} rules_hash={rules_hash} prompt_template_hash={prompt_template_hash} evidence_bundle_hash={evidence_bundle_hash}")
 }
 
+
+
+/// Reject duplicate object keys anywhere in `request_raw`.
+/// `serde_json::Value` keeps the last duplicate by default, which would let an attacker
+/// smuggle a second copy of an allowed key. We count keys via a raw structural walk.
+fn reject_duplicate_json_keys(raw: &str) {
+    fn skip_ws(b: &[u8], mut i: usize) -> usize {
+        while i < b.len() && matches!(b[i], b' ' | b'\n' | b'\r' | b'\t') { i += 1; }
+        i
+    }
+    fn parse_string(b: &[u8], mut i: usize) -> Result<(String, usize), &'static str> {
+        if i >= b.len() || b[i] != b'"' { return Err("string"); }
+        i += 1;
+        let mut out = Vec::new();
+        while i < b.len() {
+            match b[i] {
+                b'\\' => {
+                    if i + 1 >= b.len() { return Err("escape"); }
+                    out.push(b[i]); out.push(b[i + 1]);
+                    // handle \uXXXX roughly by copying 4 hex if present
+                    if b[i + 1] == b'u' {
+                        if i + 5 >= b.len() { return Err("unicode"); }
+                        out.extend_from_slice(&b[i + 2..i + 6]);
+                        i += 6;
+                    } else {
+                        i += 2;
+                    }
+                }
+                b'"' => {
+                    i += 1;
+                    return Ok((String::from_utf8_lossy(&out).into_owned(), i));
+                }
+                c => { out.push(c); i += 1; }
+            }
+        }
+        Err("unterminated string")
+    }
+    fn parse_value(b: &[u8], mut i: usize) -> Result<usize, String> {
+        i = skip_ws(b, i);
+        if i >= b.len() { return Err("eof".into()); }
+        match b[i] {
+            b'"' => Ok(parse_string(b, i).map_err(|e| e.to_string())?.1),
+            b'{' => parse_object(b, i),
+            b'[' => {
+                i += 1;
+                i = skip_ws(b, i);
+                if i < b.len() && b[i] == b']' { return Ok(i + 1); }
+                loop {
+                    i = parse_value(b, i)?;
+                    i = skip_ws(b, i);
+                    if i >= b.len() { return Err("unclosed array".into()); }
+                    match b[i] {
+                        b',' => { i += 1; continue; }
+                        b']' => return Ok(i + 1),
+                        _ => return Err("array".into()),
+                    }
+                }
+            }
+            b't' | b'f' | b'n' => {
+                // true/false/null
+                while i < b.len() && b[i].is_ascii_alphabetic() { i += 1; }
+                Ok(i)
+            }
+            b'-' | b'0'..=b'9' => {
+                i += 1;
+                while i < b.len() && (b[i].is_ascii_alphanumeric() || matches!(b[i], b'+' | b'-' | b'.' | b'e' | b'E')) { i += 1; }
+                Ok(i)
+            }
+            _ => Err(format!("unexpected byte {}", b[i])),
+        }
+    }
+    fn parse_object(b: &[u8], mut i: usize) -> Result<usize, String> {
+        if i >= b.len() || b[i] != b'{' { return Err("object".into()); }
+        i += 1;
+        i = skip_ws(b, i);
+        if i < b.len() && b[i] == b'}' { return Ok(i + 1); }
+        let mut seen = std::collections::BTreeSet::<String>::new();
+        loop {
+            i = skip_ws(b, i);
+            let (key, ni) = parse_string(b, i).map_err(|e| e.to_string())?;
+            if !seen.insert(key.clone()) {
+                return Err(format!("duplicate JSON key: {key}"));
+            }
+            i = skip_ws(b, ni);
+            if i >= b.len() || b[i] != b':' { return Err("colon".into()); }
+            i = parse_value(b, i + 1)?;
+            i = skip_ws(b, i);
+            if i >= b.len() { return Err("unclosed object".into()); }
+            match b[i] {
+                b',' => { i += 1; continue; }
+                b'}' => return Ok(i + 1),
+                _ => return Err("object sep".into()),
+            }
+        }
+    }
+    let b = raw.as_bytes();
+    match parse_value(b, 0) {
+        Ok(end) => {
+            let end = skip_ws(b, end);
+            if end != b.len() {
+                env::panic_str("request_raw has trailing data");
+            }
+        }
+        Err(e) => {
+            if e.starts_with("duplicate JSON key:") {
+                env::panic_str(&e);
+            }
+            env::panic_str("request_raw is not JSON");
+        }
+    }
+}
+
 /// Validate the raw chat-completions request body against the market. Returns (model, evidence_bundle_hash).
 /// Exact key allowlist (round 5): top-level keys MUST be exactly {model, messages, temperature, seed}.
 /// Each message MUST be exactly {role, content}. User content MUST be canonical header + "\n" + evidence.
@@ -120,6 +232,7 @@ pub fn canonical_header(market_id: u32, round: u32, rules_hash: &str, prompt_tem
 /// committed evidence+header into a forced YES via sampling / guided decoding params.
 /// Panics with a specific reason on any mismatch.
 pub fn check_request(request_raw: &str, market_id: u32, m: &Market) -> (String, String) {
+    reject_duplicate_json_keys(request_raw);
     let v: serde_json::Value = serde_json::from_str(request_raw).unwrap_or_else(|_| env::panic_str("request_raw is not JSON"));
     let obj = v.as_object().unwrap_or_else(|| env::panic_str("request_raw is not a JSON object"));
     const ALLOWED_TOP: &[&str] = &["model", "messages", "temperature", "seed"];

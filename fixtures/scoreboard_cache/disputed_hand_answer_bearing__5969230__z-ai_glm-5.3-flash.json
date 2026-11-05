@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "market_id": 5969230,
+ "polymarket_id": "5969230",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xd27acbe14d1a3b04aff7d6a1a2fb32b1b596fb85869053ed6731b8869a9dbdb423f49652e72c25e3be5775210712871730d55eebc3840a34ffec171bba3412401b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:7f37132d9ceff4eab5eba219ae7332bd40b880d1b65104744070bacf1d5bc4c1:4fa4569880572522728dfe28ab8d2e91cc491c4de9ef8a38f7de44637ba7f851",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "The October 27 game (Japan Series Game 3) was won by Fukuoka SoftBank 2-1 in extra innings per the official NPB snapshot, corroborated by Japan Times and Asahi reporting a SoftBank sweep. The market therefore resolves to \"Fukuoka SoftBank Hawks\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1374,
+  "total_tokens": 1905,
+  "completion_tokens": 531,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 339,
+  "completion_tokens_details": {
+   "reasoning_tokens": 339
+  }
+ },
+ "cost_usd": 0.00037542,
+ "at": "2026-11-05T13:00:46+01:00",
+ "evidence_sha256": "bd3e5e98d5a04c1c18817d96525308c7996741c94a40dcc420dcf78f8672dff7",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "7f37132d9ceff4eab5eba219ae7332bd40b880d1b65104744070bacf1d5bc4c1",
+ "response_sha256": "4fa4569880572522728dfe28ab8d2e91cc491c4de9ef8a38f7de44637ba7f851"
+}

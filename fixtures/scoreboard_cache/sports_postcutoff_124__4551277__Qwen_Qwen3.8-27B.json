@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551277,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xac63c263bb0c29dbd3f9a75d7198a0471d866e92651baa335806b5bde66f712d6eaed054c3ae90b22ea87c3512e7217149e50d0505de96669a22d91bd26c55db1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:b777b8483392602334b7cafc7c8255128f30a66cd58bf797484c8e3ed5b9c69a:bbff1eeee1b72a9f4984a0509d2fcadb016e530c340741d3c51e0d4261cd65bc",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent snapshots report the final score as NYG 27, HOU 21, with ESPN marking NYG as the winner. Therefore the market resolves to Giants, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1115,
+  "total_tokens": 2461,
+  "completion_tokens": 1346,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1145,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1145
+  }
+ },
+ "cost_usd": 0.0018617,
+ "at": "2026-11-05T10:18:34",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "b777b8483392602334b7cafc7c8255128f30a66cd58bf797484c8e3ed5b9c69a",
+ "response_sha256": "bbff1eeee1b72a9f4984a0509d2fcadb016e530c340741d3c51e0d4261cd65bc"
+}

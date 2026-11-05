@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5035399,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x085b48be9f4b1b855060859408616c6378295829e08318084d8fb145c1c85ad70614364e29cf3183deea9d4ded6212e41c79cb4cf61dcd071370ef9009ebe8a91c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:0e3c1012e2522a8045190bfa944141d3aed90c76b2dd142055b3b78cec9f6c1a:008af1b73aecc040684bcd7e89545d52d600fee0169da733836eebc716e38d83",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL API) agree the game is final with Carolina Hurricanes winning 4-0 over the Blues, so the market resolves to \"Hurricanes\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1004,
+  "total_tokens": 1261,
+  "completion_tokens": 257,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 46
+  }
+ },
+ "cost_usd": 0.0006096000000000001,
+ "at": "2026-11-05T10:14:53",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "0e3c1012e2522a8045190bfa944141d3aed90c76b2dd142055b3b78cec9f6c1a",
+ "response_sha256": "008af1b73aecc040684bcd7e89545d52d600fee0169da733836eebc716e38d83"
+}

@@ -1,0 +1,17 @@
+{
+ "market_id": "514267",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xdd74c316eaf16fb2766e68e3818c59b3a7c4193d66e58229250e5d16193b262549ce290271bb2ced820c3591fe29c62266fb39acf7bf8bea6a541f61738a3fdd1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:28798136c9ed5378c675c5c38e6bd462b1e46c327434a23f33a8323263fa34e4:4675e25e5082b6f1d4e412d35f479459c3d36376ffa0444ecae3a88904c780f1",
+  "signing_algo": "ecdsa"
+ },
+ "label": "Hardware + host stack verified",
+ "request_sha256": "28798136c9ed5378c675c5c38e6bd462b1e46c327434a23f33a8323263fa34e4",
+ "response_sha256": "4675e25e5082b6f1d4e412d35f479459c3d36376ffa0444ecae3a88904c780f1",
+ "set": "legacy_5",
+ "ok": true,
+ "outcome": "YES",
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e"
+}

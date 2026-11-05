@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5663682,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x90f0e5d3499efbe941c0060342524fff18da9889502c0d46491432513a4ff74270760ced3d965790d51bce2ed3a5aae68cad9123927c0627dc4e7b912100dd5d1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:4ceb0848ddc8cab8d27e511a1e6552bcf5a326f0c103d54cd570f3f3871bd57b:02272fda2719a586320c722221dac855220b59a100a56bdeab818c76a0692991",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the final score was Rot-Weiss Essen 1, RB Leipzig 2, a combined total of 3 goals, which meets the Over threshold of 3 or more.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1204,
+  "total_tokens": 1438,
+  "completion_tokens": 234,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 79,
+  "completion_tokens_details": {
+   "reasoning_tokens": 79
+  }
+ },
+ "cost_usd": 0.00021332,
+ "at": "2026-11-05T10:21:55",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4ceb0848ddc8cab8d27e511a1e6552bcf5a326f0c103d54cd570f3f3871bd57b",
+ "response_sha256": "02272fda2719a586320c722221dac855220b59a100a56bdeab818c76a0692991"
+}

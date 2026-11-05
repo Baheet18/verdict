@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5127218,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xd4df6a3587117f6d3daff0a753a7fd83470532a54ab9ce4c4c5689413eb62a2b65d7afc27f7e6b45e5ec4cdc0afcd6e1968f3a076210ca2ce6338d831868a1231b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:f4e4105d6cf19c49eed297828e386b9e713e16d465450d02939a9b2b3c9bacf8:3aafdd9d1c2129c9099e031f4e3585cb9b79bd7d76e0e89dc4e7333109b21d4e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show the Texans won 34-31, a 3-point margin, not the 17+ points required for Texans (-16.5). Therefore the market resolves to Jaguars.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 986,
+  "total_tokens": 1231,
+  "completion_tokens": 245,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 75
+  }
+ },
+ "cost_usd": 0.0005897999999999999,
+ "at": "2026-11-05T10:19:43",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f4e4105d6cf19c49eed297828e386b9e713e16d465450d02939a9b2b3c9bacf8",
+ "response_sha256": "3aafdd9d1c2129c9099e031f4e3585cb9b79bd7d76e0e89dc4e7333109b21d4e"
+}

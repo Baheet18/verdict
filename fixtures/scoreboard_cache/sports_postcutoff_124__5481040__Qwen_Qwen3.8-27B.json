@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5481040,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xe601b19c7a2b778d1b171ba726f4960cb6167b30f9596d22b7e2ac60b647520d28eb315c69b5125cbadaf9ce5264f767b75aa9c943e96b701c2e3144285bc4711b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:aa311b4a7faca1f3ba0540cd0b98f723421f8301d6bed80fe90744b04246bb51:54006471875ef26332f2cc408f4b8688894ac4eb156c4deeece8f76747380e84",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The final score is corroborated by two sources, but only one source reports the halftime score needed to calculate the second-half total. Therefore the required second-half goal total is not reported by two independent sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1407,
+  "total_tokens": 4333,
+  "completion_tokens": 2926,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 2851,
+  "completion_tokens_details": {
+   "reasoning_tokens": 2851
+  }
+ },
+ "cost_usd": 0.0040063799999999995,
+ "at": "2026-11-05T10:23:18",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "aa311b4a7faca1f3ba0540cd0b98f723421f8301d6bed80fe90744b04246bb51",
+ "response_sha256": "54006471875ef26332f2cc408f4b8688894ac4eb156c4deeece8f76747380e84"
+}

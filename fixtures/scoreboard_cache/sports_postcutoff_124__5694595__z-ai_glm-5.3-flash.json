@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5694595,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x7884ba255e79b960c263e2fafac813d9254b505d8a364ed82103a36f2ecf9d7c731965c94db4ee26dc4726ce99e2b7804737c7d41f14d1308094f873060fdd761b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:8b55b461c08e89a355006898892de7c6a7186b6489c863634974815b1564e1be:4a79fa1b70b645d81fda03addb97e005d9ed6fa3637aef7c04607d77bf539860",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Only OpenLigaDB reports the needed first-half statistic (Freiburg 1 at halftime, implying Under), while ESPN confirms only the 3-2 full-time score with no halftime breakdown. Since fewer than two independent sources report Freiburg's first-half goal count, the two-source rule for sports statistics requires AMBIGUOUS.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1275,
+  "total_tokens": 3769,
+  "completion_tokens": 2494,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 2273,
+  "completion_tokens_details": {
+   "reasoning_tokens": 2273
+  }
+ },
+ "cost_usd": 0.0013490000000000002,
+ "at": "2026-11-05T10:28:24",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8b55b461c08e89a355006898892de7c6a7186b6489c863634974815b1564e1be",
+ "response_sha256": "4a79fa1b70b645d81fda03addb97e005d9ed6fa3637aef7c04607d77bf539860"
+}

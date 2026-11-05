@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5329746,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x44f2c6676ac4eed378a1256d13bcb5bc4db6e6b6ee0cd0365acc24ae24fc32cf61328d77ebe8a340cea5df69356aea1f7bd15ead8c5261c4ea8986b835d526401c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:819d580f026d830c7188004f4aaedabe0d406d2e9fed04a460675a28dc6ccfe3:7150f2dd0507e3afa0ae03ff6d06172d1731b637a8bd6e1dcd7c3d58dcc5bcf6",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources agree the Hurricanes won 7-0. Therefore the market resolves to Hurricanes, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1115,
+  "total_tokens": 1639,
+  "completion_tokens": 524,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 338,
+  "completion_tokens_details": {
+   "reasoning_tokens": 338
+  }
+ },
+ "cost_usd": 0.000752,
+ "at": "2026-11-05T10:13:30",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "819d580f026d830c7188004f4aaedabe0d406d2e9fed04a460675a28dc6ccfe3",
+ "response_sha256": "7150f2dd0507e3afa0ae03ff6d06172d1731b637a8bd6e1dcd7c3d58dcc5bcf6"
+}

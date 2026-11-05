@@ -49,7 +49,9 @@ near contract call-function as-transaction <contract> new \
 ```
 
 Exact helper args are printed by `python scripts/deploy_prepare.py` (reads
-`contract/testdata/real_panel.json` + a published evidence hash; does NOT sign).
+`contract/testdata/real_panel.json` — round 6: Saints vs. Giants sports market,
+`dispute_bond` = 1 NEAR, evidence_uri = GitHub raw after push; does NOT sign).
+Deploy to a **fresh** contract so market_id=0 matches the signed headers.
 
 ## 5. Put explorer links in README
 After each successful tx, paste the NearBlocks / Near Explorer URL into README

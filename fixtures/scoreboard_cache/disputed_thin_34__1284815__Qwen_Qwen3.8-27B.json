@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 1284815,
+ "polymarket_id": "1284815",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x44e57edd61852255333549b9f109c371fb4ca2218c0dc5eecc4dd4fd5367e39b52b76443e6200e251f6797369e106f1e098a635a0e4d393e541f6ccc65c41d301c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:8932a7617ac861a8ba00562ac19b2e5b9ad8bb1a96b71614967eee5266f3a5e1:573a58ab6d3136ff4cd07e72acbd37d5aea316f2888be6c928d1dc41b87c9b8f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshots are the market rules and the FEC homepage, with no reported winner or official result for TX-02. Therefore the evidence is insufficient to resolve the market.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4890,
+  "total_tokens": 5705,
+  "completion_tokens": 815,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 714,
+  "completion_tokens_details": {
+   "reasoning_tokens": 714
+  }
+ },
+ "cost_usd": 0.00129585,
+ "at": "2026-11-05T11:47:07",
+ "set": "disputed_thin_34",
+ "request_sha256": "8932a7617ac861a8ba00562ac19b2e5b9ad8bb1a96b71614967eee5266f3a5e1",
+ "response_sha256": "573a58ab6d3136ff4cd07e72acbd37d5aea316f2888be6c928d1dc41b87c9b8f"
+}

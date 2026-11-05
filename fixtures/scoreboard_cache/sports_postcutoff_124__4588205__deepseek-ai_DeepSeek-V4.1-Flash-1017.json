@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4588205,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xcf2af156747645adab5d0d29c64b108b0d7a7a5186c3ab7e48e073c09f13658d7385fa9e94dbadaaa707bb59650aeb9f955152c3817a02872c273431695dfbb81c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:81adcde8f7caa2e93154182c6ce9ed69cda35d97ea606de7a90eb6a945016420:8913a37b56af2a9579293221d099822360ba78a5f386db04ca5253e3330b5a0b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both snapshots show Denver beat Arizona 30-16, a 14-point margin, which is 7 or more points. Therefore the Broncos (-6.5) spread resolves YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 980,
+  "total_tokens": 1223,
+  "completion_tokens": 243,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 76
+  }
+ },
+ "cost_usd": 0.0005855999999999999,
+ "at": "2026-11-05T10:20:19",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "81adcde8f7caa2e93154182c6ce9ed69cda35d97ea606de7a90eb6a945016420",
+ "response_sha256": "8913a37b56af2a9579293221d099822360ba78a5f386db04ca5253e3330b5a0b"
+}

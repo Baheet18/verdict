@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "market_id": 5166966,
+ "polymarket_id": "5166966",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x7490328a1f3e14c322597d3125a030c5a032db42b89959fab60de4b68d6bfff13de5225d384dcf7e3064814721bf247c897083a0631a75ea417a3c4318549b541c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:de7151c67f42de5b1d5c40981ad7cb0c6cfbf82397b961da79747f8627589a65:2e91d26cf4eccf98abf88f0dbce2c0a4a400254c1ae2d318124c0569dab744ae",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "No snapshot provides a market-cap ranking as of October 31, 2026; the Wikipedia extract is only current as of June 30, 2026, and the other pages do not show the needed ranking. Therefore the evidence is insufficient to determine whether NVIDIA was third-largest.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 10171,
+  "total_tokens": 10681,
+  "completion_tokens": 510,
+  "prompt_tokens_details": {
+   "cached_tokens": 320,
+   "created_cache_tokens": 9792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 370
+  }
+ },
+ "cost_usd": 0.0036633,
+ "at": "2026-11-05T12:27:24",
+ "evidence_sha256": "1427b3570acc081c9ea89d5bb232bf7312eb54b7e2ac508182848296fb7437fc",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "de7151c67f42de5b1d5c40981ad7cb0c6cfbf82397b961da79747f8627589a65",
+ "response_sha256": "2e91d26cf4eccf98abf88f0dbce2c0a4a400254c1ae2d318124c0569dab744ae"
+}

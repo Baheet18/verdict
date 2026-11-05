@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 3741671,
+ "polymarket_id": "3741671",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x59b1e8e4cec2324775dbc4c1f55c2c53c91dc093ad0eb26ba60de440f658f9127108cbd57593bb469bd4336b9478aeb2b295ce2e2d0a037d879743cfe38d41641b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:5027964a78e40d1315d631a38af6be14000f6e0aa4cf5cd3504086a6fc575985:5075850d4ee817d2536f1890f5b16658904dd777b22ae4e7eb9a2cca559bcec0",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description, not an external fact source. There is no snapshot evidence confirming or denying a qualifying diplomatic meeting by the deadline.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1071,
+  "total_tokens": 1526,
+  "completion_tokens": 455,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 344,
+  "completion_tokens_details": {
+   "reasoning_tokens": 344
+  }
+ },
+ "cost_usd": 0.00065709,
+ "at": "2026-11-05T11:34:07",
+ "set": "disputed_thin_34",
+ "request_sha256": "5027964a78e40d1315d631a38af6be14000f6e0aa4cf5cd3504086a6fc575985",
+ "response_sha256": "5075850d4ee817d2536f1890f5b16658904dd777b22ae4e7eb9a2cca559bcec0"
+}

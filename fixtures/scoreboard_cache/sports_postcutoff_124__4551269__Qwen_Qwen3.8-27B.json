@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551269,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x06f7dbf5a5a42d4a9d542b7e87315299176c85a272fa93cd20441ed74c35e4582fd6c61a8428089dc228756c43a9c37fcd50fda1daf181a8b556b496bd1b65eb1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:9eed6654e4b36e83b3416ffd30f6b7a6aaecbc2760495f2b1eeb39ac663307e4:3283474307199e624897f92ccb52452404b2df526f9b2733018882bb4f7590c8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Pittsburgh Steelers 16, New Orleans Saints 10. Therefore the market resolves to Steelers, mapped to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1124,
+  "total_tokens": 3190,
+  "completion_tokens": 2066,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1969,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1969
+  }
+ },
+ "cost_usd": 0.0028340600000000002,
+ "at": "2026-11-05T10:19:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9eed6654e4b36e83b3416ffd30f6b7a6aaecbc2760495f2b1eeb39ac663307e4",
+ "response_sha256": "3283474307199e624897f92ccb52452404b2df526f9b2733018882bb4f7590c8"
+}

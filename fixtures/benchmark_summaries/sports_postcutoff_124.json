@@ -1,0 +1,4336 @@
+{
+ "summary": {
+  "cutoff_upper_bound": "2026-10-17",
+  "post_cutoff": {
+   "markets": 124,
+   "panel_settled": 107,
+   "panel_settled_agree_uma": 107,
+   "panel_settled_disagree_uma": 0,
+   "escalated": 17,
+   "per_model": {
+    "Qwen/Qwen3.8-27B": {
+     "agree": 108,
+     "disagree": 0,
+     "abstain_or_invalid": 16
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "agree": 110,
+     "disagree": 0,
+     "abstain_or_invalid": 14
+    },
+    "z-ai/glm-5.3-flash": {
+     "agree": 114,
+     "disagree": 0,
+     "abstain_or_invalid": 10
+    }
+   }
+  },
+  "all": {
+   "markets": 124,
+   "panel_settled": 107,
+   "panel_settled_agree_uma": 107,
+   "panel_settled_disagree_uma": 0,
+   "escalated": 17,
+   "per_model": {
+    "Qwen/Qwen3.8-27B": {
+     "agree": 108,
+     "disagree": 0,
+     "abstain_or_invalid": 16
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "agree": 110,
+     "disagree": 0,
+     "abstain_or_invalid": 14
+    },
+    "z-ai/glm-5.3-flash": {
+     "agree": 114,
+     "disagree": 0,
+     "abstain_or_invalid": 10
+    }
+   }
+  },
+  "by_series_kind": {
+   "bundesliga-2/moneyline": {
+    "markets": 1,
+    "panel_settled": 0,
+    "panel_settled_agree_uma": 0,
+    "panel_settled_disagree_uma": 0,
+    "escalated": 1,
+    "per_model": {
+     "Qwen/Qwen3.8-27B": {
+      "agree": 0,
+      "disagree": 0,
+      "abstain_or_invalid": 1
+     },
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "agree": 0,
+      "disagree": 0,
+      "abstain_or_invalid": 1
+     },
+     "z-ai/glm-5.3-flash": {
+      "agree": 0,
+      "disagree": 0,
+      "abstain_or_invalid": 1
+     }
+    }
+   },
+   "bundesliga-2/win": {
+    "markets": 4,
+    "panel_settled": 3,
+    "panel_settled_agree_uma": 3,
+    "panel_settled_disagree_uma": 0,
+    "escalated": 1,
+    "per_model": {
+     "Qwen/Qwen3.8-27B": {
+      "agree": 3,
+      "disagree": 0,
+      "abstain_or_invalid": 1
+     },
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "agree": 4,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     },
+     "z-ai/glm-5.3-flash": {
+      "agree": 4,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     }
+    }
+   },
+   "bundesliga-2025/moneyline": {
+    "markets": 1,
+    "panel_settled": 0,
+    "panel_settled_agree_uma": 0,
+    "panel_settled_disagree_uma": 0,
+    "escalated": 1,
+    "per_model": {
+     "Qwen/Qwen3.8-27B": {
+      "agree": 0,
+      "disagree": 0,
+      "abstain_or_invalid": 1
+     },
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "agree": 0,
+      "disagree": 0,
+      "abstain_or_invalid": 1
+     },
+     "z-ai/glm-5.3-flash": {
+      "agree": 1,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     }
+    }
+   },
+   "bundesliga-2025/ou": {
+    "markets": 6,
+    "panel_settled": 0,
+    "panel_settled_agree_uma": 0,
+    "panel_settled_disagree_uma": 0,
+    "escalated": 6,
+    "per_model": {
+     "Qwen/Qwen3.8-27B": {
+      "agree": 0,
+      "disagree": 0,
+      "abstain_or_invalid": 6
+     },
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "agree": 0,
+      "disagree": 0,
+      "abstain_or_invalid": 6
+     },
+     "z-ai/glm-5.3-flash": {
+      "agree": 1,
+      "disagree": 0,
+      "abstain_or_invalid": 5
+     }
+    }
+   },
+   "dfb-pokal/moneyline": {
+    "markets": 3,
+    "panel_settled": 1,
+    "panel_settled_agree_uma": 1,
+    "panel_settled_disagree_uma": 0,
+    "escalated": 2,
+    "per_model": {
+     "Qwen/Qwen3.8-27B": {
+      "agree": 1,
+      "disagree": 0,
+      "abstain_or_invalid": 2
+     },
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "agree": 2,
+      "disagree": 0,
+      "abstain_or_invalid": 1
+     },
+     "z-ai/glm-5.3-flash": {
+      "agree": 3,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     }
+    }
+   },
+   "dfb-pokal/ou": {
+    "markets": 15,
+    "panel_settled": 10,
+    "panel_settled_agree_uma": 10,
+    "panel_settled_disagree_uma": 0,
+    "escalated": 5,
+    "per_model": {
+     "Qwen/Qwen3.8-27B": {
+      "agree": 11,
+      "disagree": 0,
+      "abstain_or_invalid": 4
+     },
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "agree": 10,
+      "disagree": 0,
+      "abstain_or_invalid": 5
+     },
+     "z-ai/glm-5.3-flash": {
+      "agree": 11,
+      "disagree": 0,
+      "abstain_or_invalid": 4
+     }
+    }
+   },
+   "nfl-2026/moneyline": {
+    "markets": 25,
+    "panel_settled": 25,
+    "panel_settled_agree_uma": 25,
+    "panel_settled_disagree_uma": 0,
+    "escalated": 0,
+    "per_model": {
+     "Qwen/Qwen3.8-27B": {
+      "agree": 25,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     },
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "agree": 25,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     },
+     "z-ai/glm-5.3-flash": {
+      "agree": 25,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     }
+    }
+   },
+   "nfl-2026/ou": {
+    "markets": 12,
+    "panel_settled": 12,
+    "panel_settled_agree_uma": 12,
+    "panel_settled_disagree_uma": 0,
+    "escalated": 0,
+    "per_model": {
+     "Qwen/Qwen3.8-27B": {
+      "agree": 12,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     },
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "agree": 12,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     },
+     "z-ai/glm-5.3-flash": {
+      "agree": 12,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     }
+    }
+   },
+   "nfl-2026/spread": {
+    "markets": 12,
+    "panel_settled": 12,
+    "panel_settled_agree_uma": 12,
+    "panel_settled_disagree_uma": 0,
+    "escalated": 0,
+    "per_model": {
+     "Qwen/Qwen3.8-27B": {
+      "agree": 12,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     },
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "agree": 12,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     },
+     "z-ai/glm-5.3-flash": {
+      "agree": 12,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     }
+    }
+   },
+   "nhl-2026/moneyline": {
+    "markets": 45,
+    "panel_settled": 44,
+    "panel_settled_agree_uma": 44,
+    "panel_settled_disagree_uma": 0,
+    "escalated": 1,
+    "per_model": {
+     "Qwen/Qwen3.8-27B": {
+      "agree": 44,
+      "disagree": 0,
+      "abstain_or_invalid": 1
+     },
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "agree": 45,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     },
+     "z-ai/glm-5.3-flash": {
+      "agree": 45,
+      "disagree": 0,
+      "abstain_or_invalid": 0
+     }
+    }
+   }
+  },
+  "two_sources_found": 124,
+  "labels": {
+   "Hardware + host stack verified": 372
+  },
+  "cost_usd": 0.274,
+  "disagreements": [],
+  "escalations": [
+   {
+    "id": "5035399",
+    "question": "Hurricanes vs. Blues",
+    "uma": "YES",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "INVALID",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+     "z-ai/glm-5.3-flash": "YES"
+    }
+   },
+   {
+    "id": "5480991",
+    "question": "VfB Stuttgart vs. Borussia M\u00f6nchengladbach: VfB Stuttgart 1st Half O/U 0.5",
+    "uma": "YES",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "AMBIGUOUS"
+    }
+   },
+   {
+    "id": "5694391",
+    "question": "SSV Jeddeloh II vs. Hertha BSC: 1st Half O/U 2.5",
+    "uma": "NO",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "NO",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "NO"
+    }
+   },
+   {
+    "id": "5481040",
+    "question": "VfB Stuttgart vs. Borussia M\u00f6nchengladbach: 2nd Half O/U 4.5",
+    "uma": "NO",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "NO"
+    }
+   },
+   {
+    "id": "5795502",
+    "question": "SV 07 Elversberg vs. 1. FSV Mainz 05: O/U 13.5 Total Corners",
+    "uma": "YES",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "AMBIGUOUS"
+    }
+   },
+   {
+    "id": "5480414",
+    "question": "VfB Stuttgart vs. Borussia M\u00f6nchengladbach: O/U 7.5 Total Corners",
+    "uma": "YES",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "AMBIGUOUS"
+    }
+   },
+   {
+    "id": "5693601",
+    "question": "Hertha BSC to score first vs. SSV Jeddeloh II?",
+    "uma": "YES",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+     "z-ai/glm-5.3-flash": "YES"
+    }
+   },
+   {
+    "id": "5479595",
+    "question": "Will FC St. Pauli 1910 win on 2026-10-23?",
+    "uma": "NO",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "INVALID",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+     "z-ai/glm-5.3-flash": "NO"
+    }
+   },
+   {
+    "id": "5480415",
+    "question": "VfB Stuttgart vs. Borussia M\u00f6nchengladbach: O/U 8.5 Total Corners",
+    "uma": "YES",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "AMBIGUOUS"
+    }
+   },
+   {
+    "id": "5662514",
+    "question": "RB Leipzig to score first vs. Rot-Weiss Essen?",
+    "uma": "NO",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "NO"
+    }
+   },
+   {
+    "id": "5794549",
+    "question": "1. FSV Mainz 05 to score first vs. SV 07 Elversberg?",
+    "uma": "NO",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "NO"
+    }
+   },
+   {
+    "id": "5663693",
+    "question": "Rot-Weiss Essen vs. RB Leipzig: 1st Half O/U 1.5",
+    "uma": "NO",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "AMBIGUOUS"
+    }
+   },
+   {
+    "id": "5795494",
+    "question": "SV 07 Elversberg vs. 1. FSV Mainz 05: O/U 9.5 Total Corners",
+    "uma": "YES",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "AMBIGUOUS"
+    }
+   },
+   {
+    "id": "5479540",
+    "question": "VfL Wolfsburg to score first vs. VfL Bochum?",
+    "uma": "YES",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "AMBIGUOUS"
+    }
+   },
+   {
+    "id": "5663791",
+    "question": "Hamburger SV vs. Eintracht Frankfurt: 1st Half O/U 3.5",
+    "uma": "NO",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "AMBIGUOUS"
+    }
+   },
+   {
+    "id": "5694595",
+    "question": "SC Freiburg vs. VfL Wolfsburg: SC Freiburg 1st Half O/U 1.5",
+    "uma": "NO",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "AMBIGUOUS"
+    }
+   },
+   {
+    "id": "5694692",
+    "question": "SC Paderborn 07 vs. VfB Stuttgart: VfB Stuttgart 1st Half O/U 0.5",
+    "uma": "NO",
+    "sources_found": 2,
+    "votes": {
+     "Qwen/Qwen3.8-27B": "AMBIGUOUS",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017": "AMBIGUOUS",
+     "z-ai/glm-5.3-flash": "AMBIGUOUS"
+    }
+   }
+  ]
+ },
+ "rows": [
+  {
+   "id": "5285912",
+   "question": "Blues vs. Red Wings",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-31",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both ESPN and NHL official final snapshots show the St. Louis Blues winning 5-4 in regulation. Therefore the market resolves to Blues, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report the game as final with the Blues winning 5-4 over the Red Wings, so the market resolves to \"Blues\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN scoreboard and NHL official API) agree the Blues defeated the Red Wings 5-4 in a completed final, so the market resolves to \"Blues\" and the verdict maps to YES."
+    }
+   }
+  },
+  {
+   "id": "5126658",
+   "question": "Maple Leafs vs. Flames",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-26",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree the Flames won 5-2. Therefore the market resolves to Flames, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources show the game final with Flames winning 5-2 over the Maple Leafs, so the market resolves to \"Flames\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Calgary winning 5-2 in regulation, so the market resolves to \"Flames\"."
+    }
+   }
+  },
+  {
+   "id": "5035431",
+   "question": "Wild vs. Kraken",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-24",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final sources agree the Minnesota Wild won 5-1 over the Seattle Kraken. Therefore the market resolves to \"Wild\", which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with the Wild beating the Kraken 5-1. The market therefore resolves to \"Wild\", which maps to YES."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Wild winning 5-1 in regulation, so the market resolves to \"Wild\"."
+    }
+   }
+  },
+  {
+   "id": "4950302",
+   "question": "Wild vs. Flames",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-22",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree the Calgary Flames won 2-1 in regulation. Therefore the market resolves to Flames, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources agree the game is final with Flames 2, Wild 1, so the Flames won and the market resolves to \"Flames\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Flames defeated the Wild 2-1 in regulation, so the market resolves to \"Flames\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "5156493",
+   "question": "Kings vs. Blackhawks",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree the Blackhawks won 2-1 in regulation. Therefore the market resolves to \"Blackhawks\", which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Blackhawks 2, Kings 1, so the Blackhawks won and the market resolves to \"Blackhawks\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with the Blackhawks winning 2-1 over the Kings in regulation, so the market resolves to \"Blackhawks\"."
+    }
+   }
+  },
+  {
+   "id": "5377061",
+   "question": "Golden Knights vs. Bruins",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-11-02",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree the Bruins won 3-2, with the NHL feed indicating a shootout. Therefore the market resolves to Bruins, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Bruins 3, Golden Knights 2 (decided in a shootout), so the Bruins won and the market resolves to \"Bruins\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Bruins won 3-2 in a shootout, so the market resolves to \"Bruins\" (NO per the verdict mapping). The shootout goal adjustment does not change the outcome since the Bruins already lead 3-2."
+    }
+   }
+  },
+  {
+   "id": "5329746",
+   "question": "Jets vs. Hurricanes",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-11-01",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree the Hurricanes won 7-0. Therefore the market resolves to Hurricanes, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Hurricanes 7, Jets 0, so the Hurricanes won and the market resolves to \"Hurricanes\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Hurricanes winning 7-0 in regulation, so the market resolves to \"Hurricanes\"."
+    }
+   }
+  },
+  {
+   "id": "5285932",
+   "question": "Senators vs. Sharks",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-31",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the Ottawa Senators won 5-1 over the San Jose Sharks. Under the rules, a Senators win resolves the market to \"Senators\", which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources (ESPN and NHL API) agree the game is final with the Senators winning 5-1, so the market resolves to \"Senators\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Ottawa winning 5-1 in regulation, so the market resolves to \"Senators\"."
+    }
+   }
+  },
+  {
+   "id": "4841699",
+   "question": "Penguins vs. Utah",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-19",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources show Utah Mammoth winning 5-4 over Pittsburgh Penguins. Therefore the market resolves to Utah, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Utah winning 5-4 over Pittsburgh, so the market resolves to Utah (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Utah Mammoth winning 5-4 over the Penguins in regulation. Per the rules, Utah winning resolves the market to \"Utah\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "5406757",
+   "question": "Red Wings vs. Lightning",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-11-03",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources show the Lightning winning 4-2. Therefore the market resolves to Lightning, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with the Lightning winning 4-2, so the market resolves to \"Lightning\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Lightning winning 4-2 in regulation, so the market resolves to \"Lightning\". Per the verdict mapping, that means NO."
+    }
+   }
+  },
+  {
+   "id": "5156478",
+   "question": "Canadiens vs. Blues",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources report the Canadiens winning 2-0 in regulation. Therefore the market resolves to \"Canadiens\", which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent final-score snapshots show the Canadiens beat the Blues 2-0. Under the rules, the market resolves to \"Canadiens\", which maps to YES."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Montreal winning 2-0 over St. Louis in regulation, so the market resolves to Canadiens."
+    }
+   }
+  },
+  {
+   "id": "5179036",
+   "question": "Flyers vs. Capitals",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-28",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the Capitals won 5-2. Therefore the market resolves to Capitals, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Capitals 5, Flyers 2, so the Capitals won and the market resolves to \"Capitals\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Capitals defeated the Flyers 5-2 in regulation, so the market resolves to \"Capitals\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "5285937",
+   "question": "Sabres vs. Kings",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-31",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources show the Sabres won 3-2 in regulation. Therefore the market resolves to Sabres, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources (ESPN and NHL API) agree the game is final with the Sabres winning 3-2, so the market resolves to \"Sabres\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Buffalo winning 3-2 in regulation, so the market resolves to \"Sabres\" = YES."
+    }
+   }
+  },
+  {
+   "id": "4950282",
+   "question": "Kings vs. Islanders",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-22",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree the Los Angeles Kings won 3-2 in overtime. Therefore the market resolves to Kings, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with the Kings winning 3-2 (in overtime), so the market resolves to \"Kings\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Kings winning 3-2 in overtime, so the market resolves to \"Kings\" and the verdict is YES."
+    }
+   }
+  },
+  {
+   "id": "5406659",
+   "question": "Bruins vs. Blues",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-29",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the St. Louis Blues won 4-1 over the Boston Bruins. Therefore the market resolves to \"Blues\", which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Blues 4, Bruins 1, so the Bruins did not win and the market resolves to \"Blues\"."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Blues won 4-1 in regulation, so the market resolves to \"Blues\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "5126663",
+   "question": "Red Wings vs. Oilers",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-26",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree the Detroit Red Wings won 4-3, with the NHL feed indicating a shootout. Therefore the market resolves to Red Wings, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent final-score snapshots show the Red Wings beating the Oilers 4-3, so the market resolves to Red Wings."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both ESPN and the NHL official feed agree the game is final with Detroit winning 4-3 (shootout), so the market resolves to \"Red Wings\". Per the verdict mapping, this answers YES."
+    }
+   }
+  },
+  {
+   "id": "5406728",
+   "question": "Stars vs. Capitals",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-11-03",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the Dallas Stars won 6-5. Therefore the market resolves to \"Stars\", which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots report a final score of Stars 6, Capitals 5, so the Stars won and the market resolves to \"Stars\"."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Dallas winning 6-5 in regulation, so the market resolves to \"Stars\"."
+    }
+   }
+  },
+  {
+   "id": "5237585",
+   "question": "Jets vs. Panthers",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-30",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources show the Panthers won 5-2. Therefore the market resolves to Panthers, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Panthers 5, Jets 2, so the Jets lost and the market resolves to Panthers (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Panthers defeated the Jets 5-2 in a completed final regulation game, so the market resolves to Panthers, mapping to NO."
+    }
+   }
+  },
+  {
+   "id": "4984345",
+   "question": "Canadiens vs. Blackhawks",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-23",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the Canadiens won 4-1. Therefore the market resolves to \"Canadiens\", which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources (ESPN and NHL API) agree the game is final with Canadiens winning 4-1, so the market resolves to Canadiens."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Canadiens defeated the Blackhawks 4-1 in regulation, so the market resolves to Canadiens."
+    }
+   }
+  },
+  {
+   "id": "5406786",
+   "question": "Golden Knights vs. Penguins",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-11-03",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both independent final sources show Vegas Golden Knights 3, Pittsburgh Penguins 2. Therefore the market resolves to Golden Knights, mapped to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources (ESPN and NHL API) agree the game is final with Golden Knights 3, Penguins 2, so the Golden Knights won."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Vegas winning 3-2 in regulation, so the market resolves to \"Golden Knights\". No shootout adjustment applies since lastPeriodType is REG."
+    }
+   }
+  },
+  {
+   "id": "5156508",
+   "question": "Canucks vs. Ducks",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final sources agree the Canucks won 6-5 in overtime. Therefore the market resolves to Canucks, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game went final with the Canucks winning 6-5 in overtime, so the market resolves to \"Canucks\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and the official NHL API) agree the game is final with Vancouver winning 6-5 in overtime, so the market resolves to \"Canucks\". Per the verdict mapping, that resolves YES."
+    }
+   }
+  },
+  {
+   "id": "5156503",
+   "question": "Senators vs. Golden Knights",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the Golden Knights won 4-1. Therefore the market resolves to \"Golden Knights\", which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources agree the game is final with Golden Knights 4, Senators 1, so the market resolves to \"Golden Knights\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Golden Knights winning 4-1 in regulation, so the market resolves to \"Golden Knights\"."
+    }
+   }
+  },
+  {
+   "id": "4882643",
+   "question": "Avalanche vs. Devils",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-20",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources show the Devils won 4-3. Therefore the market resolves to Devils, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Devils 4, Avalanche 3, so the Avalanche did not win and the market resolves to Devils (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Devils defeated the Avalanche 4-3 in a completed final, so the market resolves to \"Devils\". Per the verdict mapping, that resolves to NO."
+    }
+   }
+  },
+  {
+   "id": "5035399",
+   "question": "Hurricanes vs. Blues",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-24",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "INVALID",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": ""
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources (ESPN and NHL API) agree the game is final with Carolina Hurricanes winning 4-0 over the Blues, so the market resolves to \"Hurricanes\"."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN scoreboard and NHL official API) agree the game is final with Carolina winning 4-0 over St. Louis in regulation, so the market resolves to \"Hurricanes\" and the verdict is YES."
+    }
+   }
+  },
+  {
+   "id": "5285922",
+   "question": "Lightning vs. Predators",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-31",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both independent snapshots show the final score as Predators 5, Lightning 4, with the Predators marked as the winner. Therefore the market resolves to Predators, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with the Predators winning 5-4 (after a shootout), so the market resolves to \"Predators\" and the verdict is NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Nashville winning 5-4 in a shootout; per the rules the shootout winner (Predators) gets the added goal, so the market resolves to \"Predators\"."
+    }
+   }
+  },
+  {
+   "id": "5377056",
+   "question": "Red Wings vs. Panthers",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-11-02",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the Detroit Red Wings won 5-3 over the Florida Panthers. Therefore the market resolves to Red Wings, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with the Red Wings winning 5-3 over the Panthers, so the market resolves to \"Red Wings\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Detroit winning 5-3 in regulation, so the market resolves to \"Red Wings\" and the verdict is YES."
+    }
+   }
+  },
+  {
+   "id": "5126653",
+   "question": "Kings vs. Rangers",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-26",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the Los Angeles Kings defeated the New York Rangers 6-3. Therefore the market resolves to Kings, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Kings 6, Rangers 3, so the Kings won and the market resolves to \"Kings\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Kings defeated the Rangers 6-3 in a final regulation game, so the market resolves to \"Kings\"."
+    }
+   }
+  },
+  {
+   "id": "5406820",
+   "question": "Oilers vs. Devils",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-11-03",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources show the Devils won 4-3, including the shootout period. Therefore the market resolves to Devils, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with Devils 4 and Oilers 3 (decided in a shootout), so the Devils won and the market resolves to \"Devils\"."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Devils won 4-3 in a shootout (final, including shootout goal per rules), so the market resolves to \"Devils\", mapping to NO."
+    }
+   }
+  },
+  {
+   "id": "4882653",
+   "question": "Jets vs. Blues",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-20",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources show the St. Louis Blues won 2-1 over the Winnipeg Jets. Therefore the market resolves to Blues, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Blues 2, Jets 1, so the Blues won and the market resolves to \"Blues\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Blues winning 2-1 in regulation, so the market resolves to \"Blues\", mapping to NO."
+    }
+   }
+  },
+  {
+   "id": "4950257",
+   "question": "Rangers vs. Maple Leafs",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-22",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report the final score as Maple Leafs 5, Rangers 4. Therefore the market resolves to Maple Leafs, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Maple Leafs 5, Rangers 4, so the market resolves to \"Maple Leafs\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Maple Leafs defeated the Rangers 5-4 in regulation on 2026-10-22, so the market resolves to Maple Leafs."
+    }
+   }
+  },
+  {
+   "id": "4882638",
+   "question": "Ducks vs. Islanders",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-20",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources show the Islanders won 3-2. Therefore the market resolves to Islanders, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Islanders 3, Ducks 2, so the Ducks did not win and the market resolves to Islanders (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Islanders winning 3-2 in regulation, so the market resolves to \"Islanders\"."
+    }
+   }
+  },
+  {
+   "id": "4882663",
+   "question": "Wild vs. Oilers",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-20",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the Edmonton Oilers won 4-3 over the Minnesota Wild. Therefore the market resolves to \"Oilers\", which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Oilers 4, Wild 3 (in overtime), so the Oilers won and the market resolves to \"Oilers\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Oilers defeated the Wild 4-3 in overtime, so the market resolves to \"Oilers\" and the verdict maps to NO."
+    }
+   }
+  },
+  {
+   "id": "5285917",
+   "question": "Blackhawks vs. Bruins",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-31",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree the Bruins won 5-4 in overtime. Therefore the market resolves to Bruins, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Bruins 5, Blackhawks 4 (overtime), so the Bruins won and the market resolves to \"Bruins\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Bruins won 5-4 in overtime, so the market resolves to \"Bruins\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "4882673",
+   "question": "Hurricanes vs. Canucks",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-20",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources show the Hurricanes won 6-3. Therefore the market resolves to Hurricanes, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Hurricanes 6, Canucks 3, so Carolina won and the market resolves to \"Hurricanes\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Hurricanes winning 6-3 in regulation, so the market resolves to Hurricanes, mapping to YES."
+    }
+   }
+  },
+  {
+   "id": "4950277",
+   "question": "Predators vs. Bruins",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-22",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final sources report the Bruins won 6-0. Therefore the market resolves to Bruins, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources show the Bruins winning 6-0 in a final game, so the market resolves to Bruins (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Boston winning 6-0 in regulation, so the market resolves to \"Bruins\"."
+    }
+   }
+  },
+  {
+   "id": "4950267",
+   "question": "Sharks vs. Senators",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-22",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final sources report the Sharks winning 6-2 over the Senators. Therefore the market resolves to \"Sharks\", which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources (ESPN and NHL API) agree the game was final with the Sharks winning 6-2 over the Senators, so the market resolves to \"Sharks\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Sharks winning 6-2 in regulation, so the market resolves to \"Sharks\"."
+    }
+   }
+  },
+  {
+   "id": "5406713",
+   "question": "Senators vs. Kings",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-29",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both ESPN and NHL official final scores show the Kings winning 6-5 in overtime. Therefore the market resolves to Kings, mapped to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Kings 6, Senators 5 (including OT), so the Kings won and the market resolves to \"Kings\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Kings defeated the Senators 6-5 in overtime, so the market resolves to \"Kings\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "5035404",
+   "question": "Predators vs. Penguins",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-24",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources show the Pittsburgh Penguins won 3-2 over the Nashville Predators. Therefore the market resolves to Penguins, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Penguins 3, Predators 2 (after OT), so the Penguins won and the market resolves to \"Penguins\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with the Penguins winning 3-2 over the Predators in overtime, so the market resolves to \"Penguins\" (NO)."
+    }
+   }
+  },
+  {
+   "id": "4950272",
+   "question": "Ducks vs. Devils",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-22",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree the Devils won 4-1. Therefore the market resolves to Devils, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources show the Devils winning 4-1 in a completed final, so the market resolves to \"Devils\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Devils defeated the Ducks 4-1 in regulation, so the market resolves to \"Devils\" per the rules, mapping to NO."
+    }
+   }
+  },
+  {
+   "id": "4882633",
+   "question": "Kings vs. Capitals",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-20",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final sources agree the Kings won 5-2. Therefore the market resolves to Kings, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report the game as final with the Kings winning 5-2 over the Capitals, so the market resolves to \"Kings\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Kings defeated the Capitals 5-2 in a final regulation game, so the market resolves to \"Kings\"."
+    }
+   }
+  },
+  {
+   "id": "5285927",
+   "question": "Oilers vs. Islanders",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-31",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the Edmonton Oilers won 4-0 over the New York Islanders. Therefore the market resolves to \"Oilers\", which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Oilers winning 4-0, so the market resolves to \"Oilers\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Edmonton winning 4-0 in regulation, so the market resolves to \"Oilers\"."
+    }
+   }
+  },
+  {
+   "id": "4882648",
+   "question": "Sharks vs. Canadiens",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-20",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the San Jose Sharks won 4-3 over the Montreal Canadiens. Therefore the market resolves to \"Sharks\", which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources (ESPN and NHL API) agree the game was final with the Sharks winning 4-3 in overtime, so the market resolves to \"Sharks\"."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Sharks winning 4-3 in overtime, so the market resolves to Sharks."
+    }
+   }
+  },
+  {
+   "id": "5406799",
+   "question": "Wild vs. Flyers",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-11-03",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources show the Minnesota Wild won 4-2 over the Philadelphia Flyers. Therefore the market resolves to \"Wild\", which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Wild 4, Flyers 2, so the Wild won and the market resolves to \"Wild\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Wild defeated the Flyers 4-2 in regulation on Nov 3, so the market resolves to \"Wild\" (YES)."
+    }
+   }
+  },
+  {
+   "id": "5285942",
+   "question": "Maple Leafs vs. Canucks",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-31",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the Maple Leafs won 4-2. Therefore the market resolves to \"Maple Leafs\", which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Maple Leafs 4, Canucks 2, so the Maple Leafs won."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Toronto winning 4-2 in regulation, so the market resolves to \"Maple Leafs\"."
+    }
+   }
+  },
+  {
+   "id": "5329751",
+   "question": "Wild vs. Capitals",
+   "series": "nhl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-11-01",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent final-score sources agree that the Minnesota Wild won 5-1 over the Washington Capitals. Therefore the market resolves to \"Wild\", which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Wild 5, Capitals 1, so the Wild won and the market resolves to \"Wild\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and NHL official API) agree the Wild defeated the Capitals 5-1 in regulation, and the game is final. Per the rules, the market resolves to \"Wild\", which maps to YES."
+    }
+   }
+  },
+  {
+   "id": "4329887",
+   "question": "Saints vs. Giants",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Saints 34, Giants 27. Therefore the market resolves to Saints, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the Saints defeated the Giants 34-27 in a completed final game. Under the rules, the market resolves to \"Saints\", so the verdict is YES."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Saints winning 34-27 over the Giants, so the market resolves to \"Saints\" and the verdict is YES."
+    }
+   }
+  },
+  {
+   "id": "4465810",
+   "question": "Patriots vs. Bears",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-22",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both independent snapshots show the final score as Bears 30, Patriots 24, so the market resolves to Bears. Under the mapping, Bears resolution is NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with Bears 30, Patriots 24, so the market resolves to \"Bears\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Bears beat the Patriots 30-24 in the final, so the market resolves to \"Bears\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "4551296",
+   "question": "Chiefs vs. Seahawks",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Seattle Seahawks 20, Kansas City Chiefs 3. Therefore the market resolves to Seahawks, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with Seahawks 20, Chiefs 3, so the Seahawks won and the market resolves to \"Seahawks\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Seahawks defeated the Chiefs 20-3 in the final game, so the market resolves to \"Seahawks\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "5455706",
+   "question": "Panthers vs. Packers",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-29",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Green Bay 27, Carolina 19, so the market resolves to Packers. The verdict mapping says answer NO when it resolves to Packers."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources agree the game is final with Packers 27, Panthers 19, so the market resolves to Packers (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Green Bay winning 27-19 over Carolina, so the market resolves to \"Packers\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "4551275",
+   "question": "Buccaneers vs. Panthers",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Tampa Bay Buccaneers 43, Carolina Panthers 13. Therefore the market resolves to Buccaneers, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent snapshots agree the game is final with Tampa Bay beating Carolina 43-13, so the market resolves to \"Buccaneers\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Buccaneers defeated the Panthers 43-13 in the October 25 game, which is Final/completed, so the market resolves to Buccaneers."
+    }
+   }
+  },
+  {
+   "id": "4329892",
+   "question": "Bills vs. Raiders",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Buffalo Bills 33, Las Vegas Raiders 30. Therefore the market resolves to Bills, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots report a final score of Bills 33, Raiders 30, so Buffalo won."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Buffalo winning 33-30 over Las Vegas, so the market resolves to \"Bills\"."
+    }
+   }
+  },
+  {
+   "id": "4329886",
+   "question": "Jets vs. Patriots",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Patriots 26, Jets 19. Therefore the market resolves to Patriots, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with Patriots 26, Jets 19, so the market resolves to Patriots (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Patriots beat the Jets 26-19 in the October 18 game, so the market resolves to \"Patriots\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "4329893",
+   "question": "Cowboys vs. Packers",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Green Bay Packers 23, Dallas Cowboys 13. Therefore the market resolves to Packers, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with Packers beating Cowboys 23-13, so the market resolves to Packers (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both ESPN and nflverse independently report the game as final with Green Bay defeating Dallas 23-13, so the market resolves to \"Packers\", mapping to NO."
+    }
+   }
+  },
+  {
+   "id": "4329890",
+   "question": "Cardinals vs. Rams",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Arizona Cardinals 18, Los Angeles Rams 16. Therefore the market resolves to Cardinals, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with Arizona Cardinals winning 18-16 over the Rams, so the market resolves to Cardinals (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN scoreboard and nflverse games.csv) agree the Cardinals beat the Rams 18-16 in the final game, so the market resolves to Cardinals."
+    }
+   }
+  },
+  {
+   "id": "4551294",
+   "question": "Rams vs. Raiders",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Los Angeles Rams 35, Las Vegas Raiders 21. Therefore the market resolves to Rams, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with the Rams winning 35-21 over the Raiders."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with the Rams winning 35-21 over the Raiders, so the market resolves to \"Rams\" and the verdict maps to YES."
+    }
+   }
+  },
+  {
+   "id": "4551282",
+   "question": "Colts vs. Vikings",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both independent snapshots show the final score as Minnesota Vikings 16, Indianapolis Colts 10, so the market resolves to Vikings. Per the mapping, a Vikings resolution is NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with Vikings 16 and Colts 10, so the Colts lost and the market resolves to Vikings (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Vikings beat the Colts 16-10 in the final, so the market resolves to \"Vikings\", mapping to NO."
+    }
+   }
+  },
+  {
+   "id": "4329889",
+   "question": "Steelers vs. Buccaneers",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both independent snapshots report the game as final with Pittsburgh Steelers scoring 26 and Tampa Bay Buccaneers scoring 19. Therefore the market resolves to Steelers, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the game final with Steelers beating Buccaneers 26-19, so the market resolves to Steelers (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Pittsburgh winning 26-19 over Tampa Bay, so the market resolves to Steelers."
+    }
+   }
+  },
+  {
+   "id": "4551284",
+   "question": "Dolphins vs. Jets",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Miami Dolphins 28, New York Jets 25. Therefore the market resolves to Dolphins, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Dolphins 28, Jets 25, so Miami won. Market resolves to Dolphins (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Miami winning 28-25 over the Jets, so the market resolves to Dolphins, which maps to YES."
+    }
+   }
+  },
+  {
+   "id": "4551272",
+   "question": "49ers vs. Falcons",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Atlanta Falcons 29, San Francisco 49ers 20. Therefore the market resolves to Falcons, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Falcons beating the 49ers 29-20, so the market resolves to \"Falcons\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both ESPN and nflverse independently confirm the Falcons defeated the 49ers 29-20 in the October 25 game, so the market resolves to \"Falcons\"."
+    }
+   }
+  },
+  {
+   "id": "4551277",
+   "question": "Giants vs. Texans",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both independent snapshots report the final score as NYG 27, HOU 21, with ESPN marking NYG as the winner. Therefore the market resolves to Giants, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Giants 27, Texans 21, so Giants won."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with the Giants winning 27-21 over the Texans, so the market resolves to \"Giants\" (YES)."
+    }
+   }
+  },
+  {
+   "id": "4584357",
+   "question": "Cowboys vs. Eagles",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-26",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Dallas 38, Philadelphia 21, so the market resolves to Cowboys."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both the ESPN scoreboard and the nflverse dataset independently report a final score of Cowboys 38, Eagles 21, so Dallas won. Per the rules, the market resolves to \"Cowboys\" (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Cowboys defeated the Eagles 38-21 in the final game, so the market resolves to \"Cowboys\" and the verdict maps to YES."
+    }
+   }
+  },
+  {
+   "id": "4329884",
+   "question": "Ravens vs. Browns",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Cleveland Browns 13, Baltimore Ravens 10. Therefore the market resolves to Browns, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Browns 13, Ravens 10, so the Ravens lost and the market resolves to Browns (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Browns beat the Ravens 13-10 in the October 18 game, so the market resolves to \"Browns\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "4551293",
+   "question": "Packers vs. Lions",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Detroit Lions 20, Green Bay Packers 17. Therefore the market resolves to Lions, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Lions 20, Packers 17, so the Lions won and the market resolves NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Lions beat the Packers 20-17 in the final, so the market resolves to \"Lions\", which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "4551269",
+   "question": "Steelers vs. Saints",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Pittsburgh Steelers 16, New Orleans Saints 10. Therefore the market resolves to Steelers, mapped to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the game final with Pittsburgh Steelers scoring 16 and New Orleans Saints scoring 10, so the Steelers won. The market therefore resolves to Steelers, i.e. YES."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Pittsburgh winning 16-10 over New Orleans, so the market resolves to Steelers."
+    }
+   }
+  },
+  {
+   "id": "4329882",
+   "question": "Texans vs. Jaguars",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the game as final with Houston Texans winning 34-31. Therefore the market resolves to Texans, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Houston beating Jacksonville 34-31, so the market resolves to Texans."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Houston winning 34-31 over Jacksonville, so the market resolves to Texans."
+    }
+   }
+  },
+  {
+   "id": "4362230",
+   "question": "Commanders vs. 49ers",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-19",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as San Francisco 49ers 23, Washington Commanders 17. Therefore the market resolves to 49ers, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with 49ers 23 and Commanders 17, so the 49ers won and the market resolves NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both ESPN and nflverse independently report the game as final with the 49ers winning 23-17 over the Commanders, so the market resolves to \"49ers\"."
+    }
+   }
+  },
+  {
+   "id": "4551273",
+   "question": "Bengals vs. Ravens",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Cincinnati Bengals 35, Baltimore Ravens 13. Therefore the market resolves to Bengals, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Bengals beating Ravens 35-13, so the market resolves to Bengals (YES)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Bengals defeated the Ravens 35-13 in the final game, so the market resolves to \"Bengals\" and the verdict maps to YES."
+    }
+   }
+  },
+  {
+   "id": "4551285",
+   "question": "Browns vs. Titans",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Cleveland Browns 27, Tennessee Titans 24. Therefore the market resolves to Browns, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Browns 27, Titans 24, so Browns won."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Cleveland winning 27-24 over Tennessee, so the market resolves to Browns, which maps to YES."
+    }
+   }
+  },
+  {
+   "id": "4329885",
+   "question": "Titans vs. Colts",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both independent snapshots report the final score as Tennessee 26 and Indianapolis 20, with ESPN explicitly marking Tennessee as winner. Therefore the market resolves to Titans, mapped to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the game final with Titans scoring 26 and Colts 20, so Titans won. The market resolves YES for Titans."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Titans winning 26-20 over the Colts, so the market resolves to \"Titans\" and the verdict maps to YES."
+    }
+   }
+  },
+  {
+   "id": "4551290",
+   "question": "Broncos vs. Cardinals",
+   "series": "nfl-2026",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both independent snapshots report the final score as Denver 30, Arizona 16, so the market resolves to Broncos."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the game is final with Broncos 30, Cardinals 16, so Broncos won and the market resolves YES."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Broncos defeated the Cardinals 30-16 in the final game, so the market resolves to \"Broncos\" per the rules mapping to YES."
+    }
+   }
+  },
+  {
+   "id": "5658362",
+   "question": "Spread: Seahawks (-8.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-11-02",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources agree the final score was Bears 34, Seahawks 17. Since the Seahawks did not win by 9 or more points, the market resolves to Bears, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show the game final with Seahawks losing 17-34 to the Bears, so Seattle did not win by 9+ points. The market therefore resolves to \"Bears\" (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both ESPN and nflverse agree the Bears beat the Seahawks 34-17, so the Seahawks did not win by 9 or more points and the market resolves to Bears."
+    }
+   }
+  },
+  {
+   "id": "4588765",
+   "question": "Spread: Dolphins (-4.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources agree the final score was Dolphins 28, Jets 25. The Dolphins won by only 3 points, not 5 or more, so the market resolves to Jets."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "The Dolphins won 28-25, a 3-point margin, which is less than the required 5 points for Dolphins (-4.5). Therefore the market resolves to Jets, so the answer is NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both independent sources agree the Dolphins won 28-25, a 3-point margin. Since the Dolphins needed to win by 5 or more points, the market resolves to \"Jets\"."
+    }
+   }
+  },
+  {
+   "id": "5127218",
+   "question": "Spread: Texans (-16.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report the final score as Texans 34, Jaguars 31. The Texans won by only 3 points, not 17 or more, so the market resolves to Jaguars."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the Texans won 34-31, a 3-point margin, not the 17+ points required for Texans (-16.5). Therefore the market resolves to Jaguars."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Texans won 34-31, a 3-point margin, which is less than the 17 points required for the Texans side. The market therefore resolves to Jaguars."
+    }
+   }
+  },
+  {
+   "id": "5127769",
+   "question": "Spread: Eagles (-8.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources agree the final score was Panthers 25, Eagles 14. The Eagles did not win by 9 or more, so the market resolves to Panthers, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the Eagles scored 14 while the Panthers scored 25, so the Eagles did not win by 9 or more. The market therefore resolves to Panthers, i.e. NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Panthers beat the Eagles 25-14, so the Eagles did not win by 9 or more and the market resolves to \"Panthers\"."
+    }
+   }
+  },
+  {
+   "id": "4587914",
+   "question": "Spread: Packers (-13.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources agree the final score was Lions 20, Packers 17. The Packers did not win by 14 or more points, so the market resolves to Lions, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the Packers lost 17-20 to the Lions, so they did not win by 14 or more points. The market therefore resolves to Lions, i.e. NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN scoreboard and nflverse games.csv) agree the Lions beat the Packers 20-17, so the Packers did not win by 14 or more and the market resolves to Lions."
+    }
+   }
+  },
+  {
+   "id": "5128026",
+   "question": "Spread: Saints (-4.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report the final score as Saints 34, Giants 27. The Saints won by 7 points, which is 5 or more, so the market resolves to Saints/YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the Saints won 34-27, a 7-point margin, which is 5 or more points. Therefore the Saints (-4.5) spread resolves YES."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the final score was Saints 34, Giants 27, so the Saints won by 7, meeting the 5-or-more-point margin required to resolve to 'Saints' (YES)."
+    }
+   }
+  },
+  {
+   "id": "5377321",
+   "question": "Spread: Bears (-10.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-10-22",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources agree the final score was Bears 30, Patriots 24. The Bears won by 6 points, not 11 or more, so the market resolves to Patriots."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the Bears won 30-24, a 6-point margin, which is not 11 or more. Therefore the market resolves to Patriots, so the answer is NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the final score was Bears 30, Patriots 24, a Bears win margin of 6 points. Since 6 is less than the required 11-point margin, the market resolves to \"Patriots\"."
+    }
+   }
+  },
+  {
+   "id": "5658092",
+   "question": "Spread: Commanders (-21.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-11-01",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots agree the final score was Commanders 27, Eagles 10, a 17-point margin. The Commanders did not win by 22 or more, so the market resolves to Eagles."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "The Commanders won 27-10, a 17-point margin, which is less than the required 22 points. Therefore the market resolves to Eagles, so the answer is NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Commanders won 27-10, a margin of 17 points, which is less than the required 22-point margin for the -21.5 spread. Therefore the market resolves to Eagles, mapping to NO."
+    }
+   }
+  },
+  {
+   "id": "4587645",
+   "question": "Spread: Raiders (-4.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots agree the final score was Rams 35, Raiders 21. Since the Raiders did not win by 5 or more, the market resolves to Rams, mapped to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the Rams beat the Raiders 35-21, so the Raiders did not win by 5 or more points. The market therefore resolves to Rams, i.e. NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Rams beat the Raiders 35-21, so the Raiders did not win by 5+ points and the market resolves to \"Rams\"."
+    }
+   }
+  },
+  {
+   "id": "4588205",
+   "question": "Spread: Broncos (-6.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report the final score as Denver 30, Arizona 16. The Broncos won by 14 points, which is 7 or more, so the market resolves to Broncos/YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show Denver beat Arizona 30-16, a 14-point margin, which is 7 or more points. Therefore the Broncos (-6.5) spread resolves YES."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Broncos won 30-16, a 14-point margin, which meets the rule of winning by 7 or more points. Therefore the market resolves to \"Broncos\", mapping to YES."
+    }
+   }
+  },
+  {
+   "id": "4367295",
+   "question": "Spread: Rams (-13.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots agree the final score was Cardinals 18, Rams 16. The Rams did not win by 14 or more points, so the market resolves to Cardinals, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources show the Rams lost 16-18 to the Cardinals, so they did not win by 14 or more. The market therefore resolves to Cardinals (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Cardinals beat the Rams 18-16, so the Rams did not win by 14+ and the market resolves to Cardinals."
+    }
+   }
+  },
+  {
+   "id": "4589091",
+   "question": "Spread: Vikings (-5.5)",
+   "series": "nfl-2026",
+   "kind": "spread",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Minnesota 16, Indianapolis 10. The Vikings won by 6 points, so the market resolves to Vikings and the verdict is YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the Vikings won 16-10, a 6-point margin, which satisfies Vikings -5.5."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the final score was Vikings 16, Colts 10, a 6-point Minnesota win, which meets the rule of winning by 6 or more (covering -5.5). Therefore the market resolves to \"Vikings\", mapping to YES."
+    }
+   }
+  },
+  {
+   "id": "4588384",
+   "question": "Broncos vs. Cardinals: O/U 50.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both sources report final scores of Denver 30 and Arizona 16, for a combined total of 46. Since 46 is less than 51, the market resolves Under, mapped to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the game final with Denver 30 and Arizona 16, for a combined total of 46. Since 46 is less than 51, the market resolves Under, so the answer is NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the final combined score was 46 (DEN 30 + ARI 16), which is under 51, so the market resolves to Under."
+    }
+   }
+  },
+  {
+   "id": "4587812",
+   "question": "Rams vs. Raiders: O/U 58.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Rams 35, Raiders 21, for a combined total of 56. Since 56 is less than 59, the market resolves Under, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the Rams scored 35 and the Raiders 21, for a combined total of 56 points. Since 56 is less than 59, the market resolves to Under, so the answer is NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both ESPN and nflverse independently report the final score as Rams 35, Raiders 21, a combined total of 56 points. Since 56 is less than 59, the market resolves to Under, which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "5130621",
+   "question": "Commanders vs. 49ers: O/U 52.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-19",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report the final combined score as 40 points. Since 40 is less than 53, the market resolves Under, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the final combined score was 23 + 17 = 40, which is below 53. Therefore the market resolves to Under, i.e. NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the final score was SF 23, WAS 17, a combined total of 40 points, which is below 53. Per the rules, the market resolves to \"Under\", mapping to NO."
+    }
+   }
+  },
+  {
+   "id": "4589529",
+   "question": "Giants vs. Texans: O/U 44.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as NYG 27, HOU 21, a combined total of 48. Since 48 is at least 45, the market resolves Over, mapped to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show Giants 27 and Texans 21, a combined total of 48 points, which is over 44.5. The market therefore resolves to Over."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the Giants (27) and Texans (21) combined for 48 points, which is 45 or more, so the market resolves to Over."
+    }
+   }
+  },
+  {
+   "id": "4588084",
+   "question": "Packers vs. Lions: O/U 44.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-25",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both independent snapshots report the final score as Detroit 20, Green Bay 17, a combined total of 37. Since 37 is less than 45, the market resolves Under, mapped to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the game final with Lions 20 and Packers 17, totaling 37 points. Since 37 is less than 45, the market resolves Under, so the answer is NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with GB 17 and DET 20, a combined total of 37 points. Since 37 is less than 45, the market resolves to Under, which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "4367279",
+   "question": "Chargers vs. Chiefs: O/U 38.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report the final score as Chiefs 22, Chargers 6, for a combined total of 28. Since 28 is less than 39, the market resolves Under, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show a final score of Chiefs 22, Chargers 6, for a combined total of 28 points. Since 28 is less than 39, the market resolves to Under (NO)."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Chargers 6 and Chiefs 22, a combined total of 28 points. Since 28 is less than 39, the market resolves to Under, which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "5127646",
+   "question": "Steelers vs. Buccaneers: O/U 36.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both independent snapshots report final scores of Pittsburgh 26 and Tampa Bay 19, totaling 45. The total is at least 37, so the market resolves Over/YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show Pittsburgh scored 26 and Tampa Bay scored 19, for a combined total of 45 points. Since 45 is greater than 36.5, the market resolves to Over."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both ESPN and nflverse independently report the final score as Pittsburgh 26, Tampa Bay 19, a combined total of 45 points. Since 45 \u2265 37, the market resolves to Over, which maps to YES."
+    }
+   }
+  },
+  {
+   "id": "4367393",
+   "question": "Saints vs. Giants: O/U 56.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Saints 34, Giants 27, for a combined total of 61. Since 61 is at least 57, the market resolves Over, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "The two snapshots agree the game was final with Saints 34 and Giants 27, for a combined 61 points. Since 61 is at least 57, the market resolves Over."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both ESPN and nflverse independently report the Saints winning 34-27, a combined total of 61 points, which meets or exceeds the 57-point threshold for the Over."
+    }
+   }
+  },
+  {
+   "id": "4367304",
+   "question": "Cardinals vs. Rams: O/U 37.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Cardinals 18, Rams 16, for a combined total of 34. Since 34 is less than 38, the market resolves Under, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Cardinals 18, Rams 16, for a combined total of 34 points, which is less than 38, so the market resolves Under."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Arizona 18 and Los Angeles 16, a combined total of 34 points. Since 34 is less than 38, the market resolves to Under, which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "5377514",
+   "question": "Patriots vs. Bears: O/U 28.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-22",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Bears 30, Patriots 24, for a combined total of 54. Since 54 is at least 29, the market resolves Over, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the Patriots scored 24 and the Bears scored 30, for a combined total of 54 points. Since 54 is at least 29, the market resolves to Over."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both independent sources agree the game is final with NE 24 and CHI 30, a combined total of 54 points, which is 29 or more. Per the rules, this resolves to \"Over\", mapping to YES."
+    }
+   }
+  },
+  {
+   "id": "4367262",
+   "question": "Bills vs. Raiders: O/U 58.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as Bills 33, Raiders 30, for a combined total of 63. Since 63 is at least 59, the market resolves Over, which maps to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources report a final score of Bills 33, Raiders 30, for a combined total of 63 points, which is 59 or more, so the market resolves Over."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the game is final with Bills 33 and Raiders 30, a combined total of 63 points. Since 63 \u2265 59, the market resolves to Over, which maps to YES."
+    }
+   }
+  },
+  {
+   "id": "5127931",
+   "question": "Panthers vs. Eagles: O/U 58.5",
+   "series": "nfl-2026",
+   "kind": "ou",
+   "event_day_et": "2026-10-18",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report the final score as Panthers 25, Eagles 14, for a combined total of 39. Since 39 is less than 59, the market resolves Under, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the game final with Panthers 25 and Eagles 14, totaling 39 points, which is under 58.5. Therefore the market resolves to Under, so the answer is NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the final combined score was 25+14=39, which is under 59, so the market resolves to Under."
+    }
+   }
+  },
+  {
+   "id": "5663733",
+   "question": "SG Sonnenhof Gro\u00dfaspach vs. FC Augsburg: O/U 2.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the finished score as 2-4, for a combined total of 6 goals. Since 6 is at least 3, the market resolves Over/YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots report a final score of 2-4, for a combined total of 6 goals, which is over 2.5."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree the final score was 2-4, a combined total of 6 goals, which is 3 or more, so the market resolves to Over."
+    }
+   }
+  },
+  {
+   "id": "5663755",
+   "question": "SG Sonnenhof Gro\u00dfaspach vs. FC Augsburg: FC Augsburg O/U 2.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report FC Augsburg scored 4 goals in the completed match. Since 4 is at least 3, the market resolves Over."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show FC Augsburg scored 4 goals in a completed match, which is over 2.5. The final score was not a draw, so the match did not require extra time."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree that FC Augsburg scored 4 goals in the completed 90-minute result, exceeding the 2.5 threshold, so the market resolves to Over."
+    }
+   }
+  },
+  {
+   "id": "5480991",
+   "question": "VfB Stuttgart vs. Borussia M\u00f6nchengladbach: VfB Stuttgart 1st Half O/U 0.5",
+   "series": "bundesliga-2025",
+   "kind": "ou",
+   "event_day_et": "2026-10-23",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Only OpenLigaDB reports the first-half score, while ESPN reports only the full-time score. The required first-half statistic therefore lacks two independent agreeing sources."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "OpenLigaDB reports a 1-1 halftime score, implying VfB Stuttgart scored once in the first half, but ESPN only reports the final 2-3 score and does not confirm the halftime stat. Because fewer than two independent sources report the needed first-half goals number, the data-quality rule requires AMBIGUOUS."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Resolution requires VfB Stuttgart's first-half goal count, but only OpenLigaDB reports a halftime score (1-1); the ESPN snapshot provides only the full-time 2-3 result with no half-time breakdown, so fewer than two independent sources report the needed number."
+    }
+   }
+  },
+  {
+   "id": "5663682",
+   "question": "Rot-Weiss Essen vs. RB Leipzig: O/U 2.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Both ESPN and OpenLigaDB report the final score as Rot-Weiss Essen 1, RB Leipzig 2, for a combined total of 3 goals. Therefore the market resolves Over, mapped to YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots report a final score of Rot-Weiss Essen 1, RB Leipzig 2, for a combined total of 3 goals. Since 3 is over the 2.5 line, the market resolves to Over."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the final score was Rot-Weiss Essen 1, RB Leipzig 2, a combined total of 3 goals, which meets the Over threshold of 3 or more."
+    }
+   }
+  },
+  {
+   "id": "5663802",
+   "question": "Hamburger SV vs. Eintracht Frankfurt: Eintracht Frankfurt O/U 3.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources agree that Eintracht Frankfurt scored 3 goals in the completed match. Since 3 is less than 4, the market resolves Under, which maps to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree Eintracht Frankfurt scored 3 goals in the completed match, below the 3.5 threshold, so the market resolves Under."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree Eintracht Frankfurt scored 3 goals in the completed match, which is less than 4, so the market resolves to \"Under\" per the rules."
+    }
+   }
+  },
+  {
+   "id": "5694391",
+   "question": "SSV Jeddeloh II vs. Hertha BSC: 1st Half O/U 2.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-28",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots agree the final score was 0-2, so the combined first-half total could not have reached 3. OpenLigaDB also reports the half-time score as 0-0, confirming Under."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Only OpenLigaDB reports the first-half score (0-0); ESPN provides only the full-time score and no first-half total. Because fewer than two independent sources report the needed first-half goals, the market is ambiguous under the data-quality rules."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both independent sources agree the finished match ended 0-2 (only 2 total goals), so first-half combined goals cannot reach 3; OpenLigaDB explicitly confirms a 0-0 halftime, making this an Under."
+    }
+   }
+  },
+  {
+   "id": "5694486",
+   "question": "SG Dynamo Dresden vs. FC Schalke 04: SG Dynamo Dresden O/U 2.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-28",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report the final score as Dynamo Dresden 2, Schalke 04 0. Dynamo Dresden scored fewer than 3 goals, so the market resolves Under/NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show SG Dynamo Dresden scored 2 goals in the completed match, which is under 2.5. Therefore the market resolves to Under, i.e. NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree that Dynamo Dresden scored 2 goals in the finished match, which is fewer than the 3 required for Over. Per the rules, fewer than 3 goals resolves to Under, which maps to NO."
+    }
+   }
+  },
+  {
+   "id": "5481040",
+   "question": "VfB Stuttgart vs. Borussia M\u00f6nchengladbach: 2nd Half O/U 4.5",
+   "series": "bundesliga-2025",
+   "kind": "ou",
+   "event_day_et": "2026-10-23",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "The final score is corroborated by two sources, but only one source reports the halftime score needed to calculate the second-half total. Therefore the required second-half goal total is not reported by two independent sources."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Final score 2-3 and halftime 1-1 imply 3 second-half goals, which would be Under 4.5, but only OpenLigaDB reports the halftime split; ESPN gives only the final score, so fewer than two independent sources report the needed second-half total."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both ESPN and OpenLigaDB agree the final score was 2-3 (5 total) with a 1-1 halftime score, so second-half goals = (2-1)+(3-1) = 3, which is under 4.5. Therefore the market resolves to \"Under\"."
+    }
+   }
+  },
+  {
+   "id": "5663848",
+   "question": "VfL Bochum vs. 1. FSV Mainz 05: 1. FSV Mainz 05 O/U 3.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report the final score as VfL Bochum 2, 1. FSV Mainz 05 0. Mainz scored fewer than 4 goals, so the market resolves Under/NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show Mainz scored 0 goals in the completed match, which is under 3.5."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree that Mainz scored 0 goals in the completed match, which is fewer than 4, so the market resolves to \"Under\". The zero is corroborated by both sources, so it is not missing data."
+    }
+   }
+  },
+  {
+   "id": "5795502",
+   "question": "SV 07 Elversberg vs. 1. FSV Mainz 05: O/U 13.5 Total Corners",
+   "series": "bundesliga-2025",
+   "kind": "ou",
+   "event_day_et": "2026-10-30",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "The snapshots confirm the match was completed but do not report total corners. With no acceptable corner statistic from any source, the market cannot be resolved."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "The snapshots confirm the match was completed but contain no corner counts, so the O/U 13.5 total corners cannot be determined. No independent source in the bundle reports the needed corner statistic."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "The match is completed (final score 4-1 confirmed by two sources), but neither snapshot reports any corner statistics, so the 13.5 total corners line cannot be evaluated per the two-source requirement."
+    }
+   }
+  },
+  {
+   "id": "5480414",
+   "question": "VfB Stuttgart vs. Borussia M\u00f6nchengladbach: O/U 7.5 Total Corners",
+   "series": "bundesliga-2025",
+   "kind": "ou",
+   "event_day_et": "2026-10-23",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "The snapshots confirm the match was completed but provide no corner counts from any acceptable source. Therefore the required total corners cannot be determined."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots confirm the match is complete but neither reports any corner count, so the required total-corners statistic is absent from all sources. With no corner data (let alone two independent agreeing sources), the market cannot be resolved."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both snapshots confirm the match is finished (2-3 final), but neither ESPN nor OpenLigaDB reports any corner statistics, so the total corner count needed for the O/U 7.5 resolution cannot be verified by two independent sources."
+    }
+   }
+  },
+  {
+   "id": "5693601",
+   "question": "Hertha BSC to score first vs. SSV Jeddeloh II?",
+   "series": "dfb-pokal",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-28",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "The snapshots confirm a 0-2 Hertha BSC final score but do not provide goal times or identify the first scorer within the first 90 minutes plus stoppage time. Therefore the required first-to-score outcome cannot be determined from the provided sources."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show SSV Jeddeloh II scored 0 and Hertha BSC scored 2, so Hertha must have been the first team to score."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree the match finished 0-2 with SSV Jeddeloh II scoring nothing, so Hertha BSC scored the first (and all) goals within regular play. The market therefore resolves to Hertha BSC, mapping to YES."
+    }
+   }
+  },
+  {
+   "id": "5479595",
+   "question": "Will FC St. Pauli 1910 win on 2026-10-23?",
+   "series": "bundesliga-2",
+   "kind": "win",
+   "event_day_et": "2026-10-23",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "INVALID",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": ""
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources both report the match finished 0-0, so FC St. Pauli did not win."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree the match ended 0-0, a draw, so St. Pauli did not win within regular play. Per the rules, a non-win resolves the market to \"No\"."
+    }
+   }
+  },
+  {
+   "id": "5663824",
+   "question": "VfL Bochum vs. 1. FSV Mainz 05: O/U 1.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as VfL Bochum 2, Mainz 0. The combined total is 2, so the market resolves Over/YES."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show the completed match ended VfL Bochum 2\u20130 Mainz, for a combined total of 2 goals. Since 2 is over the 1.5 line, the market resolves to Over."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the final score was VfL Bochum 2, 1. FSV Mainz 05 0, a combined total of 2 goals, meeting the 'Over' threshold of 2 or more."
+    }
+   }
+  },
+  {
+   "id": "5480415",
+   "question": "VfB Stuttgart vs. Borussia M\u00f6nchengladbach: O/U 8.5 Total Corners",
+   "series": "bundesliga-2025",
+   "kind": "ou",
+   "event_day_et": "2026-10-23",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "The snapshots confirm the match was completed but provide no corner counts. No acceptable source in the evidence reports the total corners needed to resolve the market."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "The game is completed, but neither snapshot reports total corners, and the rules require corner counts to resolve Over/Under 8.5. With no corner data from any source, the snapshots are insufficient."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both snapshots confirm the match is finished (ESPN Full Time, OpenLigaDB matchIsFinished) but neither reports any corner statistics, so the required corner total cannot be verified by two independent sources."
+    }
+   }
+  },
+  {
+   "id": "5694416",
+   "question": "SSV Jeddeloh II vs. Hertha BSC: SSV Jeddeloh II 1st Half O/U 2.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-28",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots show SSV Jeddeloh II's final score was 0, so its first-half score was necessarily 0. That is less than 3, resolving Under/NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "OpenLigaDB reports the halftime score as SSV Jeddeloh II 0, and ESPN's full-time SSV score of 0 corroborates that they scored fewer than 3 first-half goals. Therefore the market resolves Under."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree: OpenLigaDB shows a 0-0 halftime score and ESPN confirms SSV Jeddeloh II finished with 0 total goals, so SSV Jeddeloh II scored 0 first-half goals, under 2.5."
+    }
+   }
+  },
+  {
+   "id": "5662514",
+   "question": "RB Leipzig to score first vs. Rot-Weiss Essen?",
+   "series": "dfb-pokal",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Only OpenLigaDB reports the halftime 1-0 that identifies the first scorer; ESPN provides only the final score, so the needed first-scoring fact lacks two agreeing independent sources."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "OpenLigaDB's halftime line shows Rot-Weiss Essen led 1-0, which would mean RB Leipzig did not score first, but only OpenLigaDB reports halftime/first scorer; ESPN only confirms the final 1-2. Under the two-independent-source rule for sports stats, the first scorer is not sufficiently corroborated."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "OpenLigaDB's halftime result of Rot-Weiss Essen 1, RB Leipzig 0 shows Essen scored first, and ESPN's independent final score of 1-2 agrees with OpenLigaDB's final. Since RB Leipzig did not score first, the market resolves to Rot-Weiss Essen, mapping to NO."
+    }
+   }
+  },
+  {
+   "id": "5794549",
+   "question": "1. FSV Mainz 05 to score first vs. SV 07 Elversberg?",
+   "series": "bundesliga-2025",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-30",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "The snapshots confirm the final and halftime scores but do not report the time or scorer of the first goal. Therefore the first-to-score outcome cannot be determined from the provided sources."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Final scores agree Elversberg won 4-1, but only OpenLigaDB reports the halftime 3-0 score and no snapshot explicitly identifies the first scorer. The needed first-scorer fact is not corroborated by two independent sources, so the snapshots are insufficient under the data-quality rules."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree Elversberg won 4-1, with OpenLigaDB showing a 3-0 halftime lead, meaning Elversberg scored first and Mainz did not. Therefore the market does not resolve in Mainz's favor."
+    }
+   }
+  },
+  {
+   "id": "5794518",
+   "question": "Will Eintracht Braunschweig win on 2026-10-30?",
+   "series": "bundesliga-2",
+   "kind": "win",
+   "event_day_et": "2026-10-30",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the completed 2026-10-30 match ended 3-1 to Arminia Bielefeld, so Eintracht Braunschweig did not win."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the match finished 3-1 to Arminia Bielefeld, so Eintracht Braunschweig did not win."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the match finished with Arminia Bielefeld beating Eintracht Braunschweig 3-1, so Braunschweig did not win and the market resolves to \"No\"."
+    }
+   }
+  },
+  {
+   "id": "5663693",
+   "question": "Rot-Weiss Essen vs. RB Leipzig: 1st Half O/U 1.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Only OpenLigaDB reports the first-half score (1-0), while ESPN reports only the final score. The required first-half total is not confirmed by two independent sources."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Only OpenLigaDB reports the first-half score (1-0, total 1 goal); ESPN reports only the full-time 1-2 result. Because the needed first-half stat is not confirmed by two independent sources, the data-quality rule requires AMBIGUOUS."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Only OpenLigaDB reports the needed first-half number (Halbzeit 1-0, i.e., 1 combined goal, which would be Under), while ESPN provides only the full-time 1-2 result with no half-time breakdown, so fewer than two independent sources agree on the first-half score."
+    }
+   }
+  },
+  {
+   "id": "5694588",
+   "question": "SC Freiburg vs. VfL Wolfsburg: VfL Wolfsburg O/U 3.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-28",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the final score as SC Freiburg 3, VfL Wolfsburg 2, so Wolfsburg scored fewer than 4 goals. Therefore the market resolves Under, mapped to NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both snapshots show VfL Wolfsburg scored 2 goals in the completed match, which is under 3.5. Therefore the market resolves to Under, i.e. NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree that VfL Wolfsburg scored 2 goals in the 90 minutes plus stoppage time, which is under 4. Therefore the market resolves to \"Under\", mapping to NO."
+    }
+   }
+  },
+  {
+   "id": "5795494",
+   "question": "SV 07 Elversberg vs. 1. FSV Mainz 05: O/U 9.5 Total Corners",
+   "series": "bundesliga-2025",
+   "kind": "ou",
+   "event_day_et": "2026-10-30",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "The snapshots confirm the match was completed, but they do not provide total corner counts from any acceptable source. Sports statistics require at least two independent agreeing sources, so the corner total cannot be resolved."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "The game is completed, but neither snapshot reports total corners, and the rules require corner count to resolve Over/Under 9.5. With no corner data from any source, the snapshots are insufficient."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both snapshots confirm the match is finished (ESPN: Full Time/completed; OpenLigaDB: matchIsFinished with 4-1 final), but neither source reports any corner counts, so the required statistic lacks two independent agreeing sources. Per the data-quality rules, the corner total cannot be verified and the market cannot be resolved Over or Under."
+    }
+   }
+  },
+  {
+   "id": "5479578",
+   "question": "Will SV Darmstadt 98 win on 2026-10-23?",
+   "series": "bundesliga-2",
+   "kind": "win",
+   "event_day_et": "2026-10-23",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report the completed match as a 0-0 draw, so SV Darmstadt 98 did not win. Therefore the market resolves No."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the match finished 0-0, so SV Darmstadt 98 did not win."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree the match ended 0-0 with Darmstadt not the winner, confirming a real draw rather than missing data. Since SV Darmstadt 98 did not win within regular play, the market resolves to \"No\"."
+    }
+   }
+  },
+  {
+   "id": "5693461",
+   "question": "VfB Stuttgart to score first vs. SC Paderborn 07?",
+   "series": "dfb-pokal",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-28",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots agree the match ended 0-1 to VfB Stuttgart, with halftime 0-0. Since Paderborn scored no goals, Stuttgart's only goal was the first goal."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent sources show the match finished 0-1 to VfB Stuttgart, so Stuttgart scored the only goal and therefore scored first."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the match finished 0-1 with a 0-0 halftime, meaning Stuttgart scored the only (and therefore first) goal within regular play, so the market resolves to VfB Stuttgart, mapping to YES."
+    }
+   }
+  },
+  {
+   "id": "5479540",
+   "question": "VfL Wolfsburg to score first vs. VfL Bochum?",
+   "series": "bundesliga-2",
+   "kind": "moneyline",
+   "event_day_et": "2026-10-23",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "The match is finished 1-1, but only OpenLigaDB provides a halftime score showing Wolfsburg led 1-0; ESPN does not report the first scorer. Under the two-source rule, the first-to-score statistic is not independently confirmed."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "OpenLigaDB's halftime 0-1 implies Wolfsburg scored first, but only one source reports scoring progression; ESPN only confirms the final 1-1. Under the two-independent-source rule for sports stats, the needed first-scorer fact is insufficiently corroborated."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both sources agree the match finished 1-1, but the only datum that identifies the first scorer \u2014 OpenLigaDB's halftime score of Bochum 0, Wolfsburg 1 \u2014 is reported by a single independent source, with ESPN providing no goal timing. Since the decisive score has fewer than two agreeing independent sources, the evidence is insufficient to confirm Wolfsburg scored first."
+    }
+   }
+  },
+  {
+   "id": "5694461",
+   "question": "SG Dynamo Dresden vs. FC Schalke 04: O/U 5.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-28",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "NO",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent sources report the final score as Dynamo Dresden 2, FC Schalke 04 0. The combined total is 2, which is less than 6, so the market resolves Under/NO."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Both independent snapshots show a final score of Dynamo Dresden 2\u20130 Schalke 04, for 2 combined goals. Since 2 is less than 6, the market resolves to Under/NO."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "NO",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree the match finished 2-0, a combined total of 2 goals, which is less than 6. Per the rules, the market resolves to \"Under\", mapping to NO."
+    }
+   }
+  },
+  {
+   "id": "5794318",
+   "question": "Will VfL Bochum win on 2026-10-30?",
+   "series": "bundesliga-2",
+   "kind": "win",
+   "event_day_et": "2026-10-30",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "YES",
+   "panel": "YES",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Two independent snapshots report the completed match as Energie Cottbus 1, VfL Bochum 2. Therefore VfL Bochum won within the first 90 minutes plus stoppage time."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Two independent sources agree the match finished with VfL Bochum winning 2-1 away at Energie Cottbus, so the market resolves Yes."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "YES",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Two independent sources agree the match finished with Energie Cottbus 1, VfL Bochum 2, with ESPN explicitly marking Bochum as winner and OpenLigaDB's Endergebnis confirming the 1-2 final result. Bochum won within regular play, so the market resolves to Yes."
+    }
+   }
+  },
+  {
+   "id": "5663791",
+   "question": "Hamburger SV vs. Eintracht Frankfurt: 1st Half O/U 3.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-27",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Only one snapshot reports the first-half score (0-0), while the other reports only the final score. The required first-half total therefore lacks two independent agreeing sources."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Only OpenLigaDB reports the first-half score (0-0), while ESPN only reports the full-time score (1-3). Because fewer than two independent sources report the needed first-half total, the data-quality rule requires AMBIGUOUS."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "The needed number (first-half goals) is reported only by OpenLigaDB as a 0-0 halftime line, which is an all-zeros stat from a single source and thus MISSING DATA per the data-quality rules, while ESPN provides only the full-time 1-3 score with no half breakdown. With fewer than two independent sources agreeing on the first-half total, the snapshots are insufficient to definitively resolve Over/Und"
+    }
+   }
+  },
+  {
+   "id": "5694595",
+   "question": "SC Freiburg vs. VfL Wolfsburg: SC Freiburg 1st Half O/U 1.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-28",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Only OpenLigaDB reports SC Freiburg's first-half score as 1, while ESPN reports only the final score. The required first-half statistic lacks two independent agreeing sources."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "Only OpenLigaDB reports the first-half score (SC Freiburg 1), while ESPN reports only the full-time score; the needed first-half figure is not confirmed by two independent sources."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Only OpenLigaDB reports the needed first-half statistic (Freiburg 1 at halftime, implying Under), while ESPN confirms only the 3-2 full-time score with no halftime breakdown. Since fewer than two independent sources report Freiburg's first-half goal count, the two-source rule for sports statistics requires AMBIGUOUS."
+    }
+   }
+  },
+  {
+   "id": "5694692",
+   "question": "SC Paderborn 07 vs. VfB Stuttgart: VfB Stuttgart 1st Half O/U 0.5",
+   "series": "dfb-pokal",
+   "kind": "ou",
+   "event_day_et": "2026-10-28",
+   "post_cutoff": true,
+   "sources_found": 2,
+   "uma": "NO",
+   "panel": "ESCALATE",
+   "votes": {
+    "Qwen/Qwen3.8-27B": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+     "reasoning": "Only OpenLigaDB reports the first-half score, showing VfB Stuttgart at 0 at halftime. ESPN confirms the final score but does not provide an independent first-half statistic, so the required first-half number is not supported by two independent sources."
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+     "reasoning": "OpenLigaDB reports the halftime score as 0-0, implying VfB Stuttgart scored no first-half goals, but ESPN only provides the full-time 0-1 score and no first-half figure. Thus only one independent source reports the needed first-half statistic, so the data-quality rule requires AMBIGUOUS."
+    },
+    "z-ai/glm-5.3-flash": {
+     "outcome": "AMBIGUOUS",
+     "label": "Hardware + host stack verified",
+     "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+     "reasoning": "Both sources agree on the 0-1 final score, but only OpenLigaDB reports a halftime line, and that 0-0 line is all zeros from a single source (missing data, not a real zero), while ESPN provides no first-half breakdown. With fewer than two independent sources reporting Stuttgart's first-half score, it cannot be definitively determined whether their lone goal came in the first half."
+    }
+   }
+  }
+ ]
+}

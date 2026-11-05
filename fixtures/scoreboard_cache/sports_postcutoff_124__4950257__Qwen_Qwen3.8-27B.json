@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4950257,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x260139b081cc0aafa14b98d8bfe01f7821f6062bbb9c90c88a056a11acacc936795cd0b6cd6fba7ff1616608a293a7c37c53420944be6547f325de8ad00d323e1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:83f39e95a0fa613903272504525584f301d367161d5c6bfb48a02ddcf5dbff3d:33193eaf3f0455e6ab46058fed94bb5da793aff7898291074502d97c498f747b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources report the final score as Maple Leafs 5, Rangers 4. Therefore the market resolves to Maple Leafs, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1125,
+  "total_tokens": 1684,
+  "completion_tokens": 559,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 368,
+  "completion_tokens_details": {
+   "reasoning_tokens": 368
+  }
+ },
+ "cost_usd": 0.0007996500000000001,
+ "at": "2026-11-05T10:15:38",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "83f39e95a0fa613903272504525584f301d367161d5c6bfb48a02ddcf5dbff3d",
+ "response_sha256": "33193eaf3f0455e6ab46058fed94bb5da793aff7898291074502d97c498f747b"
+}

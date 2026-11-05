@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "market_id": 5648379,
+ "polymarket_id": "5648379",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xe813f2c254dbd406d8ed48f53dccf68bc661644e576c256b8c8eeef6a6ddd5af09deaa794bf26964205b694d94f4e06a19b35b2cfd48281b533724fad9663df61b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:eccb2a6517fcafd288b415e9c2bdcd1bb8bf11e741cc179689027cc0d7f42b10:cbadca806c3fa288df2b2a4014437b7caab550f4702dfb95ff12b01a11b8e8dc",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots contain only HTML boilerplate/navigation from investor.visa.com and Yahoo Finance, with no reported figure for Visa's Q4 payments volume growth (constant dollars). No usable metric value is present, so the market cannot be resolved from the evidence.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 13037,
+  "total_tokens": 13340,
+  "completion_tokens": 303,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "created_cache_tokens": 12992
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 174
+  }
+ },
+ "cost_usd": 0.0042747,
+ "at": "2026-11-05T12:30:50",
+ "evidence_sha256": "f9c59762cb8b9ca1a0b02f4bd0f6a68086326f82ef0a93f323a283282e1f36f8",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "eccb2a6517fcafd288b415e9c2bdcd1bb8bf11e741cc179689027cc0d7f42b10",
+ "response_sha256": "cbadca806c3fa288df2b2a4014437b7caab550f4702dfb95ff12b01a11b8e8dc"
+}

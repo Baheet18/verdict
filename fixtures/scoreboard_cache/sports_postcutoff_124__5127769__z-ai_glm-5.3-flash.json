@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5127769,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x306d55a0926d9396d8906863b506f2b8b168160d718e1e9bd8a53e7a30f00e6904517f0adc78adf033cccbc37558ba9eda77774c62bde9be076105e952a46d541b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:2753c6b81cffade63255a4b9fe88eb06006717a18407f87c1f0964f17546f65f:e360c53b7c59edc8e34c0f1a6975616f44d43848bc2513fb81666226224f4097",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Panthers beat the Eagles 25-14, so the Eagles did not win by 9 or more and the market resolves to \"Panthers\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 950,
+  "total_tokens": 1144,
+  "completion_tokens": 194,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 36,
+  "completion_tokens_details": {
+   "reasoning_tokens": 36
+  }
+ },
+ "cost_usd": 0.000173,
+ "at": "2026-11-05T10:19:48",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "2753c6b81cffade63255a4b9fe88eb06006717a18407f87c1f0964f17546f65f",
+ "response_sha256": "e360c53b7c59edc8e34c0f1a6975616f44d43848bc2513fb81666226224f4097"
+}

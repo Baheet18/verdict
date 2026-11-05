@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5035404,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xe03aba71ea227da738aa89ff161c4425d1508ff4954e51ddec0fde1dc5d504224af9c782387577a39aca1f11efeadfd8073e0422805825b9af8aa5bacacfceea1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:e1bc96fcd13952936582666cd01f72c6ec169953a239de6d419de434dfb4fe09:74d515cde875753a112b868147614a0c186757433cf50650bfa59f3d40174ba0",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Penguins 3, Predators 2 (after OT), so the Penguins won and the market resolves to \"Penguins\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1009,
+  "total_tokens": 1334,
+  "completion_tokens": 325,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 28
+  }
+ },
+ "cost_usd": 0.0006927,
+ "at": "2026-11-05T10:16:05",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e1bc96fcd13952936582666cd01f72c6ec169953a239de6d419de434dfb4fe09",
+ "response_sha256": "74d515cde875753a112b868147614a0c186757433cf50650bfa59f3d40174ba0"
+}

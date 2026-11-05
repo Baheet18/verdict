@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5167224,
+ "polymarket_id": "5167224",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x41845ba5a6a00e82fb7b084960b168619dec592ced3ae10f8e7a928a3586d1a6041d8b9f2257332c23e33230e675309d7724c871f9305b0bf39b2f3d5a8aca041c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:2dd95ef738dd0270ac14e40c5a6d971d6029ae1a1f0f589afcd53fd4cb174ed2:a18ebf364086f6aaff99e697636222cc583f43850ff595e53bb598cf4c3c1a67",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market rules, with no credible media or official statement confirming a qualifying verbal interaction. The evidence bundle is therefore insufficient to determine whether the talk occurred by the deadline.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1262,
+  "total_tokens": 2721,
+  "completion_tokens": 1459,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1390,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1390
+  }
+ },
+ "cost_usd": 0.0020201299999999998,
+ "at": "2026-11-05T11:50:29",
+ "set": "disputed_thin_34",
+ "request_sha256": "2dd95ef738dd0270ac14e40c5a6d971d6029ae1a1f0f589afcd53fd4cb174ed2",
+ "response_sha256": "a18ebf364086f6aaff99e697636222cc583f43850ff595e53bb598cf4c3c1a67"
+}

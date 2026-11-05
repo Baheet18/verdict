@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5180406,
+ "polymarket_id": "5180406",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xaeea2f15fbd5421d91a31254becb5aab4b3e22a3cd1852d9a71481f103a7e63c13fdd4b067dadb4aeaaab20f27bacab33dd518b9a366efedcaf26f400276ee171b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:505942e02727b2068f62d3dea0ae322643fce2d1266bd11ffa6664a9f75571a1:6d9c986a62a8017fbe6a6948c23a53ff4a9547fe5a87fff3e25bae9d8a7148c2",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Although fetched after October 31, 2026, none of the snapshots contain an actual market-cap ranking: the CompaniesMarketCap.com HTML is truncated before any ranking table, the Yahoo Finance AAPL page contains only page boilerplate with no market-cap figure, and Wikipedia's list is only current to 30 June 2026. With fewer than two independent sources reporting Apple's rank on the resolution date, t\u2026",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 9285,
+  "total_tokens": 10201,
+  "completion_tokens": 916,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 744,
+  "completion_tokens_details": {
+   "reasoning_tokens": 744
+  }
+ },
+ "cost_usd": 0.0012008,
+ "at": "2026-11-05T12:26:34",
+ "evidence_sha256": "d2154c35114211029c2a80b72c5cc1960a4b39d45e7e9857a66bc086855f6677",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "505942e02727b2068f62d3dea0ae322643fce2d1266bd11ffa6664a9f75571a1",
+ "response_sha256": "6d9c986a62a8017fbe6a6948c23a53ff4a9547fe5a87fff3e25bae9d8a7148c2"
+}

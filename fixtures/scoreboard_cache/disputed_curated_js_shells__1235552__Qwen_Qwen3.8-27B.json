@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 1235552,
+ "polymarket_id": "1235552",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x937e5e0c4d59c91603c7236fbc51797b4c10182fa59c556de9b035b069347cff180b998f3761f0960977847965ca95af9b09808cf9b4138f520c1613da3ea6d01b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:6b2f8dac3aaed7340c21863e1301dc70a7b3f767b839eef5e38f54c71dfbc503:e8595645920591e31a914bc569e1d8b2bbf87117af66f9f5e3326e59218dd5f5",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots contain only generic MLB/ESPN pages and no report of the 2026 World Series winner or Guardians elimination. Therefore the outcome cannot be determined from the provided evidence.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 13145,
+  "total_tokens": 14659,
+  "completion_tokens": 1514,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1404,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1404
+  }
+ },
+ "cost_usd": 0.0025697,
+ "at": "2026-11-05T12:20:01",
+ "evidence_sha256": "27a62b4dda719e278acf6eca488def0139f1a1e73c16a1a27aa30b3d9fbdb926",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "6b2f8dac3aaed7340c21863e1301dc70a7b3f767b839eef5e38f54c71dfbc503",
+ "response_sha256": "e8595645920591e31a914bc569e1d8b2bbf87117af66f9f5e3326e59218dd5f5"
+}

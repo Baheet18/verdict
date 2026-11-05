@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4587645,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x39023d71eb17776480bf33a87fd5dfc98c38b93948c1a069a33fda2cda0f7f3051446666d883378610fb18f8a8b4416697bd59c099d275b59879d8ade0408a901b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:21066578deb62437cf32d524dc1296bac2ca69791d0ddb3bd13ab3664e4a1fcc:fc61671e57ad7cf7bb1054a9a2216b94c9a4c4be4697f7eddc28c6d93126f606",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots agree the final score was Rams 35, Raiders 21. Since the Raiders did not win by 5 or more, the market resolves to Rams, mapped to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1107,
+  "total_tokens": 2161,
+  "completion_tokens": 1054,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 883,
+  "completion_tokens_details": {
+   "reasoning_tokens": 883
+  }
+ },
+ "cost_usd": 0.00146718,
+ "at": "2026-11-05T10:20:31",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "21066578deb62437cf32d524dc1296bac2ca69791d0ddb3bd13ab3664e4a1fcc",
+ "response_sha256": "fc61671e57ad7cf7bb1054a9a2216b94c9a4c4be4697f7eddc28c6d93126f606"
+}

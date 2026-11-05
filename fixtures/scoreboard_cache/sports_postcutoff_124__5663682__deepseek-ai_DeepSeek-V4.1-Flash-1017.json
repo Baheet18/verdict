@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663682,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xdeebfeb3cb6ce0a53ea04e05e364e5cb978bc1c5e10e33a3cc3e48ff09346d0d7262ae7861562b11ef659ecd8b3daf51c26f74d9424ac0b475bfec0ccd4053471c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:9c02e09a76bc6a71c8b55d99cb4211eda56af858165225b2572882388f2721f6:620ff30893ea6a3547e09a5bd3ab706c44f8d8b1766fb988f86492ec90cb765e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent snapshots report a final score of Rot-Weiss Essen 1, RB Leipzig 2, for a combined total of 3 goals. Since 3 is over the 2.5 line, the market resolves to Over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1220,
+  "total_tokens": 1607,
+  "completion_tokens": 387,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 71
+  }
+ },
+ "cost_usd": 0.0008304,
+ "at": "2026-11-05T10:21:48",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9c02e09a76bc6a71c8b55d99cb4211eda56af858165225b2572882388f2721f6",
+ "response_sha256": "620ff30893ea6a3547e09a5bd3ab706c44f8d8b1766fb988f86492ec90cb765e"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5795502,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xc23e79ad5b4185d2c66daad692a686e9a12e41f9332d3d07e635cd1c5222e722701542c999d2f445a98d065c6b108fb603371e62e1e6001ded8733e810148b081b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:7bcb1fae26d57e14e250638367dc60691db099e78696ecc24c01f7045c3dc1a1:183c579ca782b9a41f6d92c66c310429a7e671e4b72e1c62f17b2511bd83dcef",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The match is completed (final score 4-1 confirmed by two sources), but neither snapshot reports any corner statistics, so the 13.5 total corners line cannot be evaluated per the two-source requirement.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1209,
+  "total_tokens": 1671,
+  "completion_tokens": 462,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 154,
+  "completion_tokens_details": {
+   "reasoning_tokens": 154
+  }
+ },
+ "cost_usd": 0.00032772,
+ "at": "2026-11-05T10:22:42",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "7bcb1fae26d57e14e250638367dc60691db099e78696ecc24c01f7045c3dc1a1",
+ "response_sha256": "183c579ca782b9a41f6d92c66c310429a7e671e4b72e1c62f17b2511bd83dcef"
+}

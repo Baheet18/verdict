@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5377514,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x896f5a04d53b2da7b71f3bbf5e8075a4d3e4c9d351fef9c2daf93e7ebb8bc603716bdca1ab3d49844c85646835611405a3960d7a2e9a9904f79fb7405bb1470b1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:5ded0a1de8dbb422d76d88bd08db6babfb49549754b3bc0a1dfc21b401b55e56:ff6b01fd421c51ca2ac674c3e9fb8dc8636db4d5c4091323406d599a6773704b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both snapshots show the Patriots scored 24 and the Bears scored 30, for a combined total of 54 points. Since 54 is at least 29, the market resolves to Over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 973,
+  "total_tokens": 1242,
+  "completion_tokens": 269,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 94
+  }
+ },
+ "cost_usd": 0.0006146999999999999,
+ "at": "2026-11-05T10:21:20",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5ded0a1de8dbb422d76d88bd08db6babfb49549754b3bc0a1dfc21b401b55e56",
+ "response_sha256": "ff6b01fd421c51ca2ac674c3e9fb8dc8636db4d5c4091323406d599a6773704b"
+}

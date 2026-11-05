@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4882643,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xac2d1ddb471c01b97e78ba295d3212253985d991b0299125426997613c45f95b4c77b6fb9d020d65a8bde8407d4cd55a79e8b57424d3d7b509c4715d802941621b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:fd116e9a6f1bf58bbcc0804786cc27caf3a47bc41e1029f6ba2eeb312d9b76c9:14c315b88538d965a6563666f584f95e154eeabd0266946fc721c27302eb2c39",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Devils defeated the Avalanche 4-3 in a completed final, so the market resolves to \"Devils\". Per the verdict mapping, that resolves to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 971,
+  "total_tokens": 1198,
+  "completion_tokens": 227,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 26,
+  "completion_tokens_details": {
+   "reasoning_tokens": 26
+  }
+ },
+ "cost_usd": 0.00019118,
+ "at": "2026-11-05T10:14:49",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "fd116e9a6f1bf58bbcc0804786cc27caf3a47bc41e1029f6ba2eeb312d9b76c9",
+ "response_sha256": "14c315b88538d965a6563666f584f95e154eeabd0266946fc721c27302eb2c39"
+}

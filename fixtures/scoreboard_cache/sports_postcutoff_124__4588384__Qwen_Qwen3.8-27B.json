@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4588384,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x64ca35ea387bc054d402b6fd98c2191fd6218c02a4b89308a5511f59bf811cb1625b136d76459a91acd4ddce47ac7189503471ecf783284c38d79a363a4fb6621b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:2c004c437909afc8d5d8cd54e0e41e6bfd23e68a0ed19832a0160f0e1a6304bb:57d6702f9d0b79ed819955ab859b31941db1aa5f2cd4fc9f70df9da49d001a03",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both sources report final scores of Denver 30 and Arizona 16, for a combined total of 46. Since 46 is less than 51, the market resolves Under, mapped to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1107,
+  "total_tokens": 1787,
+  "completion_tokens": 680,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 592,
+  "completion_tokens_details": {
+   "reasoning_tokens": 592
+  }
+ },
+ "cost_usd": 0.00096228,
+ "at": "2026-11-05T10:20:44",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "2c004c437909afc8d5d8cd54e0e41e6bfd23e68a0ed19832a0160f0e1a6304bb",
+ "response_sha256": "57d6702f9d0b79ed819955ab859b31941db1aa5f2cd4fc9f70df9da49d001a03"
+}

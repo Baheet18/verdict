@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5285913,
+ "polymarket_id": "5285913",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x267b0e19f77c6407dec74514c125a6c0f935d0a6dca01a7a388e613d8c2ac3df1c05fd665fa280cc0b56234525acbec4eae107e26078a68f91e5dffbf3d9dc2d1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:68a5e2002c0b6c9b87dd0c5cc35ad5db931c80723fbbc889af7ad1bdb22847db:78bef4ca3e3baeb16316d3a3b7177651f4c5c10f97a5405eb8eeb1055c0c43f8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The event window has passed (snapshots fetched 2026-11-05, after the Oct 31 game), but the resolutionSource snapshot is an NHL.com scores page containing only HTML/JS boilerplate with no Blues\u2013Red Wings final score, and no other source in the bundle reports the goals. With fewer than two independent sources agreeing on the combined total, the market cannot be resolved.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4309,
+  "total_tokens": 5025,
+  "completion_tokens": 716,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 551,
+  "completion_tokens_details": {
+   "reasoning_tokens": 551
+  }
+ },
+ "cost_usd": 0.00070272,
+ "at": "2026-11-05T11:57:04",
+ "set": "disputed_thin_34",
+ "request_sha256": "68a5e2002c0b6c9b87dd0c5cc35ad5db931c80723fbbc889af7ad1bdb22847db",
+ "response_sha256": "78bef4ca3e3baeb16316d3a3b7177651f4c5c10f97a5405eb8eeb1055c0c43f8"
+}

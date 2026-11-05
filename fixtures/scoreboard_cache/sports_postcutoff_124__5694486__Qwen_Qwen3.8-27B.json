@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694486,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x0ccba588fa1ddc56a30ae4d8a55da836c97d9129bd2f9675c054586cef3613ba09e6a0716e4c300cc73b9d7033899acc8fcdb73a942b97da9c2736a6e30c8ec01c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:1bf1ebfdbf831a210665a0f19baada6b406d77da3d6d4472ac18b769f385e07a:a188c36bdba77e5c41c64070d5d2521470fb9c4f149654f1e6dc37c9834d2f18",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources report the final score as Dynamo Dresden 2, Schalke 04 0. Dynamo Dresden scored fewer than 3 goals, so the market resolves Under/NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1392,
+  "total_tokens": 2135,
+  "completion_tokens": 743,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 456,
+  "completion_tokens_details": {
+   "reasoning_tokens": 456
+  }
+ },
+ "cost_usd": 0.00105873,
+ "at": "2026-11-05T10:22:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "1bf1ebfdbf831a210665a0f19baada6b406d77da3d6d4472ac18b769f385e07a",
+ "response_sha256": "a188c36bdba77e5c41c64070d5d2521470fb9c4f149654f1e6dc37c9834d2f18"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5035404,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xaffdf02d5c8a2e1d40daec3f36258238c3f0cfe003d6cc0a5a5c8c4a327927305062c3eef3108f3392506677a99648b9f407e64c5fe25ebc0e6938bc07ecd41a1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:48e26baa05e7d831ff400d4460744a7f18171407be301307f74a25cb0464ff45:6db928aadf6278cdfb43b2a37f3cfc9d08ea606378a9f1a3051c8464c60cb84b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources show the Pittsburgh Penguins won 3-2 over the Nashville Predators. Therefore the market resolves to Penguins, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1133,
+  "total_tokens": 1979,
+  "completion_tokens": 846,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 727,
+  "completion_tokens_details": {
+   "reasoning_tokens": 727
+  }
+ },
+ "cost_usd": 0.00118742,
+ "at": "2026-11-05T10:16:20",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "48e26baa05e7d831ff400d4460744a7f18171407be301307f74a25cb0464ff45",
+ "response_sha256": "6db928aadf6278cdfb43b2a37f3cfc9d08ea606378a9f1a3051c8464c60cb84b"
+}

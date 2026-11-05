@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4329890,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x5afd3544e8ae230148fd9db62877ccfabaccc1047232b4f55de9b2df2ac838d30eb5544af3115aea9bfe367831e6625dd540e1e2586bb7b31d49b1bd0f12032e1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:eb13fccff9562ee4c11dac708bb386122fd719e7dfb953041e5a0335b5ea30fa:a82f821390e08dab01223ae916cd7d0f6d58c7aa4b06c6a5f21eba927b16b367",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Arizona Cardinals 18, Los Angeles Rams 16. Therefore the market resolves to Cardinals, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1111,
+  "total_tokens": 2155,
+  "completion_tokens": 1044,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 767,
+  "completion_tokens_details": {
+   "reasoning_tokens": 767
+  }
+ },
+ "cost_usd": 0.00145384,
+ "at": "2026-11-05T10:17:47",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "eb13fccff9562ee4c11dac708bb386122fd719e7dfb953041e5a0335b5ea30fa",
+ "response_sha256": "a82f821390e08dab01223ae916cd7d0f6d58c7aa4b06c6a5f21eba927b16b367"
+}

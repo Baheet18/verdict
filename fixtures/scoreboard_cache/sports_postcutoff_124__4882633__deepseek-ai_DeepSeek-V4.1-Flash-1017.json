@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4882633,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xc5651ac368307e293add88439f48095fbf7a893563faac49b33c038bb2bb41c763291a49c4ada7eef85a28b82aeae41529f2f5d5214d88b7688d492e92f621af1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:856bd196311eca4ea72c1c08307423047775a0f60b5077cb78d02f5c2b81dc62:4499121ad96d5000ef09bcb9d87bcdc8b901c05285b31a3d9e35109b38014cb0",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent sources report the game as final with the Kings winning 5-2 over the Capitals, so the market resolves to \"Kings\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 982,
+  "total_tokens": 1295,
+  "completion_tokens": 313,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 35
+  }
+ },
+ "cost_usd": 0.0006702,
+ "at": "2026-11-05T10:16:22",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "856bd196311eca4ea72c1c08307423047775a0f60b5077cb78d02f5c2b81dc62",
+ "response_sha256": "4499121ad96d5000ef09bcb9d87bcdc8b901c05285b31a3d9e35109b38014cb0"
+}

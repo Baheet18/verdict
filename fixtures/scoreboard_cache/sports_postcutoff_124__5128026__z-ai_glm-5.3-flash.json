@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5128026,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x0bcc1286761b7fa44c1e425a25489fada1e39b5419f0099e4e8cbd8df61f9e8a714cf036f731e2d8b7c91c1ef743cccab6ef48067c1ff8cf589bf24a756771fb1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:8bec71a8206dd33c83090ef65ac8553d408f07a053d25c72d5798606d2744a02:59d222d958ae84a8e0dfb54b441f41d24309e00cda3821f72c71cc2fbcb4da0f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the final score was Saints 34, Giants 27, so the Saints won by 7, meeting the 5-or-more-point margin required to resolve to 'Saints' (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 951,
+  "total_tokens": 1218,
+  "completion_tokens": 267,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 86,
+  "completion_tokens_details": {
+   "reasoning_tokens": 86
+  }
+ },
+ "cost_usd": 0.00020958,
+ "at": "2026-11-05T10:20:02",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8bec71a8206dd33c83090ef65ac8553d408f07a053d25c72d5798606d2744a02",
+ "response_sha256": "59d222d958ae84a8e0dfb54b441f41d24309e00cda3821f72c71cc2fbcb4da0f"
+}

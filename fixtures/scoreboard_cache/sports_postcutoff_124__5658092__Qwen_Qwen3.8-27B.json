@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5658092,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xf72998118e21159acafb5f9fc58922f9cbf4933633d1574959766ffb6e325e2161a916739a656ad3d630ee969761a2b8cc25dc3ebc32bb89f866e82d4cd029691c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:0ba033f80d1656508b2e1ff6d2a3aee68b616282e6629b7b1b16177097dc7355:387dc77ffca880008f66dbdec64bc8cc060d3373bda168b58d018cd10c9e5744",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots agree the final score was Commanders 27, Eagles 10, a 17-point margin. The Commanders did not win by 22 or more, so the market resolves to Eagles.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1117,
+  "total_tokens": 2447,
+  "completion_tokens": 1330,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1199,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1199
+  }
+ },
+ "cost_usd": 0.00184018,
+ "at": "2026-11-05T10:20:29",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "0ba033f80d1656508b2e1ff6d2a3aee68b616282e6629b7b1b16177097dc7355",
+ "response_sha256": "387dc77ffca880008f66dbdec64bc8cc060d3373bda168b58d018cd10c9e5744"
+}

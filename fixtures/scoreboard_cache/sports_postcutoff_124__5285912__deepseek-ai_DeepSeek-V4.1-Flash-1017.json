@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285912,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x7dda76ffb3d66a1a32327ee9b73b107694f960ee109d209b72d7db66090b702926b334481a9636d6e9389f2b5033b7230e3c71131ea85429a8d1b7b0512399d01c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:614f634f4e7f42d369ff41ad9d14bc9ef94cb49bbb964169173ff75ea48376b3:57b54634a9496a7e6868f5030b3f58ca7cc69d1cfabf40ee47a2dfe0e69444cb",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent sources report the game as final with the Blues winning 5-4 over the Red Wings, so the market resolves to \"Blues\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 995,
+  "total_tokens": 1228,
+  "completion_tokens": 233,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 26
+  }
+ },
+ "cost_usd": 0.0005781,
+ "at": "2026-11-05T10:12:35",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "614f634f4e7f42d369ff41ad9d14bc9ef94cb49bbb964169173ff75ea48376b3",
+ "response_sha256": "57b54634a9496a7e6868f5030b3f58ca7cc69d1cfabf40ee47a2dfe0e69444cb"
+}

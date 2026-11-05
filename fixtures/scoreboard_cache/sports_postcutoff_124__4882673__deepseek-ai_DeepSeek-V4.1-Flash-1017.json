@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4882673,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x997e9e95838206f0df7451a01ceb850ce4658336e384a8ad6f618e4a4a7b8aca7b5d09032866dd0416b8da5c8ce32b612124c933af68a126ee6733d63743be211b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:9057c0a5055ff59c69723d21f47a2a0490d7423e4ccf9737033651d170eb2ff3:84199c2eba401dc0b97a4581b994dda7686011eee24ebdda85b53de4046d772a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent sources report a final score of Hurricanes 6, Canucks 3, so Carolina won and the market resolves to \"Hurricanes\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 998,
+  "total_tokens": 1325,
+  "completion_tokens": 327,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 46
+  }
+ },
+ "cost_usd": 0.0006918,
+ "at": "2026-11-05T10:15:47",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9057c0a5055ff59c69723d21f47a2a0490d7423e4ccf9737033651d170eb2ff3",
+ "response_sha256": "84199c2eba401dc0b97a4581b994dda7686011eee24ebdda85b53de4046d772a"
+}

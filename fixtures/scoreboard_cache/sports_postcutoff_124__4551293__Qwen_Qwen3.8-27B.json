@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551293,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xb49d7405cb5238e8b96374e25c5b2a72d1fd6c5ea78614ff8a3cca5667de181f664d7674c69c421a4448fb9e403faf8859765785932f6e2fc22fe880fae37a7a1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:5d924e88ce22863babdd508076e7d28ab35169aaded55148d23797c861d2b5e7:b32fc3231a3eb130a39324b79f94969c34ae39a178b78509a58c77e07d1fe20c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots report the final score as Detroit Lions 20, Green Bay Packers 17. Therefore the market resolves to Lions, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1112,
+  "total_tokens": 1743,
+  "completion_tokens": 631,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 379,
+  "completion_tokens_details": {
+   "reasoning_tokens": 379
+  }
+ },
+ "cost_usd": 0.00089633,
+ "at": "2026-11-05T10:18:27",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5d924e88ce22863babdd508076e7d28ab35169aaded55148d23797c861d2b5e7",
+ "response_sha256": "b32fc3231a3eb130a39324b79f94969c34ae39a178b78509a58c77e07d1fe20c"
+}

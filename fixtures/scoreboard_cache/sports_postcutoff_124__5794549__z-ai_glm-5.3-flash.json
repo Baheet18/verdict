@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5794549,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xb2e35eedae3b9dcd47d6de4caf2f07286b6bfd37431ae473b8eb41fa494bd5095d6937425a2106d8fa537f02264e65dc687bdc350816002dfaed50c251322d871c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:e696740917c343b68aee63754db28f82c219d5c86a9ed03a1736892e779fdd0e:05534828b4c312c17cacb940555ef11a23274ac735d9c7481d1122d7187b1c10",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree Elversberg won 4-1, with OpenLigaDB showing a 3-0 halftime lead, meaning Elversberg scored first and Mainz did not. Therefore the market does not resolve in Mainz's favor.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1254,
+  "total_tokens": 1798,
+  "completion_tokens": 544,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 230,
+  "completion_tokens_details": {
+   "reasoning_tokens": 230
+  }
+ },
+ "cost_usd": 0.00037232,
+ "at": "2026-11-05T10:24:14",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e696740917c343b68aee63754db28f82c219d5c86a9ed03a1736892e779fdd0e",
+ "response_sha256": "05534828b4c312c17cacb940555ef11a23274ac735d9c7481d1122d7187b1c10"
+}

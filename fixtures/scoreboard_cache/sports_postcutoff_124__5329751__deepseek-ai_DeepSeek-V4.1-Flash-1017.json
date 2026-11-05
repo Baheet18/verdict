@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5329751,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x2fc937921d5dbcc85b75bcb2e3cc38d7506c8e634843da3bac27f54aeb510e6725418279797322be38f1b6af9224c0137b68b3065d8c9c7a3ab202f11165ad471c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:3d3ca17dd7705e5cc4c73f7e03ff20cee7c14586b80cd5078b21c208d81f47f8:f0f4c980e32731195fab5105406675b6082e066246d6d4a9f60685d28bfb56c9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent sources report a final score of Wild 5, Capitals 1, so the Wild won and the market resolves to \"Wild\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 997,
+  "total_tokens": 1227,
+  "completion_tokens": 230,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 27
+  }
+ },
+ "cost_usd": 0.0005751,
+ "at": "2026-11-05T10:16:43",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "3d3ca17dd7705e5cc4c73f7e03ff20cee7c14586b80cd5078b21c208d81f47f8",
+ "response_sha256": "f0f4c980e32731195fab5105406675b6082e066246d6d4a9f60685d28bfb56c9"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406659,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x319a0848885614f96d57ffb072ce2019b923e65910ce34f9a3009ccd1b5ea0ed57372d6985f7226e1f6e967174e003ef0e1a13b3295429ec57c64b7d2d5cff1f1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:42ec557958a346d29375dd5c8e98dd04402a0e8e93bbf52df183bc6175d8d5f5:6f0132e096c1568a281c96bedaa81bf3c2ab5a6ad93c14d167c5b51a7ad819be",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources agree that the St. Louis Blues won 4-1 over the Boston Bruins. Therefore the market resolves to \"Blues\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1118,
+  "total_tokens": 1769,
+  "completion_tokens": 651,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 403,
+  "completion_tokens_details": {
+   "reasoning_tokens": 403
+  }
+ },
+ "cost_usd": 0.0009235700000000001,
+ "at": "2026-11-05T10:14:11",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "42ec557958a346d29375dd5c8e98dd04402a0e8e93bbf52df183bc6175d8d5f5",
+ "response_sha256": "6f0132e096c1568a281c96bedaa81bf3c2ab5a6ad93c14d167c5b51a7ad819be"
+}

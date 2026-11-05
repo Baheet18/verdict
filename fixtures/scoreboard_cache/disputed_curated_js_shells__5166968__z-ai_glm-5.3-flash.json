@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5166968,
+ "polymarket_id": "5166968",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x81972a62687ba0ad24c0e1ffd52f9e795e588b67f4f89f98aba6eea37ce188112af1c43f53f537ed07c17f79c2699556de8d8f4042911c106502422f733244b31b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:992bf803d0931f32dcaf00be09abc5cad6582b895f73f9379f4b76b72efff07a:176ac83c4399fbdd7c0f00f208abe2345cda9feec965b9d038b38e98c69f0a18",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Although the event window has closed, no snapshot reports a market-cap ranking as of October 31, 2026: the CompaniesMarketCap and Yahoo Finance snapshots contain no company rankings or market-cap figures, and Wikipedia's 2026 list is only as of 30 June 2026. With no source (let alone two agreeing) establishing Apple's rank on the resolution date, the evidence is insufficient.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 9284,
+  "total_tokens": 10691,
+  "completion_tokens": 1407,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1246,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1246
+  }
+ },
+ "cost_usd": 0.00144622,
+ "at": "2026-11-05T12:28:56",
+ "evidence_sha256": "5cb37c4f78c0b046c11fc6dff2976b71347eb4dbadaafa40ecdfca302f6a5e79",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "992bf803d0931f32dcaf00be09abc5cad6582b895f73f9379f4b76b72efff07a",
+ "response_sha256": "176ac83c4399fbdd7c0f00f208abe2345cda9feec965b9d038b38e98c69f0a18"
+}

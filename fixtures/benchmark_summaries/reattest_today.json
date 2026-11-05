@@ -1,0 +1,118 @@
+{
+  "at": "2026-11-05T12:57:02+01:00",
+  "models": {
+    "Qwen/Qwen3.8-27B": {
+      "nonce": "16a6b51bc73c269f88cd06764f36e03172f0a3f1873170f61eb4743266bcd56a",
+      "n_entries": 1,
+      "entries": [
+        {
+          "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+          "model_name": "Qwen/Qwen3.8-27B",
+          "ok": true,
+          "error": null,
+          "images": [
+            "certbot/dns-cloudflare@sha256:742dbd2e61c8709b930712c38958386c3cb3928e09eeb1f1e490600c127e2edb",
+            "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+            "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be",
+            "otel/opentelemetry-collector-contrib@sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
+          ],
+          "digests": [
+            "sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+            "sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be",
+            "sha256:742dbd2e61c8709b930712c38958386c3cb3928e09eeb1f1e490600c127e2edb",
+            "sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
+          ],
+          "compose_name": "dstack-nvidia-0.5.12"
+        }
+      ],
+      "compose_manager_images": [
+        "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+        "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+      ],
+      "labels_ok": true,
+      "signer_checks": [
+        {
+          "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+          "label": "Hardware + host stack verified",
+          "failures": []
+        }
+      ]
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "nonce": "c77616da2a8539409e93ed56063b88af5c6000bcc2766d5a6ee2901c8e4c1fe6",
+      "n_entries": 1,
+      "entries": [
+        {
+          "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+          "model_name": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "ok": true,
+          "error": null,
+          "images": [
+            "certbot/dns-cloudflare@sha256:742dbd2e61c8709b930712c38958386c3cb3928e09eeb1f1e490600c127e2edb",
+            "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+            "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be",
+            "otel/opentelemetry-collector-contrib@sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
+          ],
+          "digests": [
+            "sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+            "sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be",
+            "sha256:742dbd2e61c8709b930712c38958386c3cb3928e09eeb1f1e490600c127e2edb",
+            "sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
+          ],
+          "compose_name": "dstack-nvidia-0.5.11"
+        }
+      ],
+      "compose_manager_images": [
+        "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+        "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+      ],
+      "labels_ok": true,
+      "signer_checks": [
+        {
+          "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+          "label": "Hardware + host stack verified",
+          "failures": []
+        }
+      ]
+    },
+    "z-ai/glm-5.3-flash": {
+      "nonce": "952550b8d0a46502e07a9d3499110b3dc2823f806cf8ec189c14f39f4cc2c9db",
+      "n_entries": 1,
+      "entries": [
+        {
+          "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+          "model_name": "z-ai/glm-5.3-flash",
+          "ok": true,
+          "error": null,
+          "images": [
+            "certbot/dns-cloudflare@sha256:742dbd2e61c8709b930712c38958386c3cb3928e09eeb1f1e490600c127e2edb",
+            "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+            "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be",
+            "otel/opentelemetry-collector-contrib@sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
+          ],
+          "digests": [
+            "sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+            "sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be",
+            "sha256:742dbd2e61c8709b930712c38958386c3cb3928e09eeb1f1e490600c127e2edb",
+            "sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
+          ],
+          "compose_name": "dstack-nvidia-0.5.11"
+        }
+      ],
+      "compose_manager_images": [
+        "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+        "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+      ],
+      "labels_ok": true,
+      "signer_checks": [
+        {
+          "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+          "label": "Hardware + host stack verified",
+          "failures": []
+        }
+      ]
+    }
+  },
+  "saw_a0c07308": false,
+  "pin_blocked_pending_human_approval": false
+}

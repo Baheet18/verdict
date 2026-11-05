@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 2645473,
+ "polymarket_id": "2645473",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x04566d4bb5de62baad9f3eea1f8269567ac42b626e7b15cc81a91140ed85652461e0673372061e01265de8863f7c0e9f55df4d8dff5484e0b8ffa776afed61c61b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:4cb6fe8d05b8fc717f5416bf5d3b1c05f2a32087dbd0e7ad37e10e91d9f19dc6:5496a0bef4f38e45b5ba4c6af6a43f72a6efb1ab062301c917f096304ef88b54",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The event window has closed (market_end 2026-11-01T03:59:00Z, snapshot fetched 2026-11-05), but the bundle contains only the market rules and no external evidence about whether LaVine joined a team, remained with Sacramento, or was under contract by the deadline, so the outcome cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 906,
+  "total_tokens": 1635,
+  "completion_tokens": 729,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 565,
+  "completion_tokens_details": {
+   "reasoning_tokens": 565
+  }
+ },
+ "cost_usd": 0.00043698,
+ "at": "2026-11-05T11:45:39",
+ "set": "disputed_thin_34",
+ "request_sha256": "4cb6fe8d05b8fc717f5416bf5d3b1c05f2a32087dbd0e7ad37e10e91d9f19dc6",
+ "response_sha256": "5496a0bef4f38e45b5ba4c6af6a43f72a6efb1ab062301c917f096304ef88b54"
+}

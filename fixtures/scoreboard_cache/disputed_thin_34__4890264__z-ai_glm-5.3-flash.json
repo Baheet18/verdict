@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4890264,
+ "polymarket_id": "4890264",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x25e8359ab8156dc05b18cc957ba14998dda3a6823dc2441d6f73d7ae8105b33a1163f8a735bab5b2f64000162a44e30b45daed1f1c913077f2c68f211dc04c621b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:a32b938e4c776fb98b70655b032cfe97e09ae56f9c8fd2ce9885cbcf3b76a035:06fcb59a50db6c777cf0bfd79e8ffb6a1d024081826cc4b6739ed69644b20ef7",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market's own rules/description (explicitly noted as not an external fact source) and no election results, vote counts, or CEC data, so Iotova's margin of victory cannot be determined from the snapshots.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1378,
+  "total_tokens": 2343,
+  "completion_tokens": 965,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 836,
+  "completion_tokens_details": {
+   "reasoning_tokens": 836
+  }
+ },
+ "cost_usd": 0.00059274,
+ "at": "2026-11-05T11:43:27",
+ "set": "disputed_thin_34",
+ "request_sha256": "a32b938e4c776fb98b70655b032cfe97e09ae56f9c8fd2ce9885cbcf3b76a035",
+ "response_sha256": "06fcb59a50db6c777cf0bfd79e8ffb6a1d024081826cc4b6739ed69644b20ef7"
+}

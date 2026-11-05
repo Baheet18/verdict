@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5694588,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x83caa5e613d8dbfb2c1c2625241e9e7fd8d04e1433a50034fa85c69c2126347d45bfa44d92340dc9dcdc008d498a091debc8af9614f79004421c046989a634be1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:df91171d32fd8b136988dee08e9ffcbbfa2eae314d1b06104973a54120a33e26:6c5e2677b1ff115372e07c290dd1f051dc6159c1651434f71e2f1647a4044d97",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree that VfL Wolfsburg scored 2 goals in the 90 minutes plus stoppage time, which is under 4. Therefore the market resolves to \"Under\", mapping to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1246,
+  "total_tokens": 1477,
+  "completion_tokens": 231,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 65,
+  "completion_tokens_details": {
+   "reasoning_tokens": 65
+  }
+ },
+ "cost_usd": 0.00021517999999999998,
+ "at": "2026-11-05T10:24:45",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "df91171d32fd8b136988dee08e9ffcbbfa2eae314d1b06104973a54120a33e26",
+ "response_sha256": "6c5e2677b1ff115372e07c290dd1f051dc6159c1651434f71e2f1647a4044d97"
+}

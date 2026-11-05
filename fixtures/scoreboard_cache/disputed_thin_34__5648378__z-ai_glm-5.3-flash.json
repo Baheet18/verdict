@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5648378,
+ "polymarket_id": "5648378",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xa7d686400c3337a15d4f4d29af516aa31c78ee83e3131d6911e6326c73dd9e620343d359a97e5dbb7ab96f497da9a57fe6143623dbdedaddc6ca5ca09abd72621b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:9b4dee393483dbfc54a170f6e594264b99a7240f19a5cc7b30e8932c148d2451:ecd939b2c1c2ed6f7da2478b9dab73602ccc7c17b3357da4081ac4402bbcc754",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "TOO_EARLY",
+ "reasoning": "The evidence bundle contains only the market rules and no snapshot of Visa's Q4 earnings materials or the reported constant-dollar payments volume growth figure. The snapshot fetch date (2026-11-05) precedes the November 30, 2026 release deadline, so the event window is not yet closed per the snapshots.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1120,
+  "total_tokens": 2039,
+  "completion_tokens": 919,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 767,
+  "completion_tokens_details": {
+   "reasoning_tokens": 767
+  }
+ },
+ "cost_usd": 0.0005491,
+ "at": "2026-11-05T11:56:08",
+ "set": "disputed_thin_34",
+ "request_sha256": "9b4dee393483dbfc54a170f6e594264b99a7240f19a5cc7b30e8932c148d2451",
+ "response_sha256": "ecd939b2c1c2ed6f7da2478b9dab73602ccc7c17b3357da4081ac4402bbcc754"
+}

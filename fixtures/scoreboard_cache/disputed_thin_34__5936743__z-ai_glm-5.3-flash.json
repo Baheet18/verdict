@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5936743,
+ "polymarket_id": "5936743",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x594abcbe9012775b223d859055812c083fff1618bc601a0c6ae6a6d81c8181ce30f45eb3b475e9456e3abf4abc4804d05c22e97e47456380dff1fce806e8f8341c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:a5e9f08dbaa61f632c66b73edb11ef3b1995eae47f6437ea2a34499ed301c35b:0555d8f1b0880f2e283f326e21012f9c1cda065e704ba61661ec44ac3a301e5c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The event window has passed (market_end 2026-11-02, snapshots fetched 2026-11-05), but no snapshot reports the final score of the November 1 FC Andorra vs CD Tenerife match; the laliga.com snapshot lists only upcoming matchday 13 fixtures (Nov 6\u20138). With fewer than two independent sources reporting the needed score, the required two-source agreement is absent, so the verdict is AMBIGUOUS.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 5656,
+  "total_tokens": 6693,
+  "completion_tokens": 1037,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 823,
+  "completion_tokens_details": {
+   "reasoning_tokens": 823
+  }
+ },
+ "cost_usd": 0.00097098,
+ "at": "2026-11-05T11:53:32",
+ "set": "disputed_thin_34",
+ "request_sha256": "a5e9f08dbaa61f632c66b73edb11ef3b1995eae47f6437ea2a34499ed301c35b",
+ "response_sha256": "0555d8f1b0880f2e283f326e21012f9c1cda065e704ba61661ec44ac3a301e5c"
+}

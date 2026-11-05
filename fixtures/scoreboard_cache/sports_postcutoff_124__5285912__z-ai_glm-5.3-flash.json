@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5285912,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xd95d253330ebc494dbe80f3c7afa0e70f61261a395b015d7f08623d462d2ee707369aefcf29f48a86e2c0664bbec17d3337a5697244923484239552cf976b67d1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:f4bdbe6d6fe7c7552b530a6e16a260d5da4fd73647310313379ca2142dbd443a:75665a04cde616f3f7c32f97f15c5b20c6a6d133557b29cfa1480dce279ed0a4",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN scoreboard and NHL official API) agree the Blues defeated the Red Wings 5-4 in a completed final, so the market resolves to \"Blues\" and the verdict maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 971,
+  "total_tokens": 1237,
+  "completion_tokens": 266,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 61,
+  "completion_tokens_details": {
+   "reasoning_tokens": 61
+  }
+ },
+ "cost_usd": 0.00021068,
+ "at": "2026-11-05T10:12:36",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f4bdbe6d6fe7c7552b530a6e16a260d5da4fd73647310313379ca2142dbd443a",
+ "response_sha256": "75665a04cde616f3f7c32f97f15c5b20c6a6d133557b29cfa1480dce279ed0a4"
+}

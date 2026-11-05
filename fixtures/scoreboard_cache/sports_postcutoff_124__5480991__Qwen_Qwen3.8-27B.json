@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5480991,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xf82a69fe42d2148d25210797cad43fe93418e051d1623ad469482a83504809261397e0ddcb812e6f2ca734756d64b8f2ac62e9eb0818234df7bcbd989af7ff161b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:cc9230c33918802a16a3f5fa71f68de4d5adc9e114f0accbf570f36e9bc85eb7:eb8b2204c43574d9b73b9d1c1d9d921b45f578500a007587ddaaa1e301ebfa85",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Only OpenLigaDB reports the first-half score, while ESPN reports only the full-time score. The required first-half statistic therefore lacks two independent agreeing sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1430,
+  "total_tokens": 2021,
+  "completion_tokens": 591,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 298,
+  "completion_tokens_details": {
+   "reasoning_tokens": 298
+  }
+ },
+ "cost_usd": 0.00085505,
+ "at": "2026-11-05T10:21:47",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "cc9230c33918802a16a3f5fa71f68de4d5adc9e114f0accbf570f36e9bc85eb7",
+ "response_sha256": "eb8b2204c43574d9b73b9d1c1d9d921b45f578500a007587ddaaa1e301ebfa85"
+}

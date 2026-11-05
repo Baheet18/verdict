@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5167224,
+ "polymarket_id": "5167224",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xd93b510ab342cbdf8fbe165657b17f32b66244dbe79adcbf1b3d3155e842f58263e78ec8083e6c95d44e3072025523eb2df3e38fa9d2c82bd477e17b9433b2d71c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:3e9823646496c52e75ee96ad191a42a4bb77974d9d893f246d6da4b7fc539c71:1969d79e454976eecbcf7f69b7ed81e1bfb57fcfc94a08e1f35c82d8184abc63",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The bundle contains only the market rules/description (explicitly 'not an external fact source') and no media reporting or statements about any Trump\u2013von der Leyen interaction. With zero independent sources on the underlying fact, the outcome cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1146,
+  "total_tokens": 1480,
+  "completion_tokens": 334,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 896
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 143
+  }
+ },
+ "cost_usd": 0.0007446,
+ "at": "2026-11-05T11:50:39",
+ "set": "disputed_thin_34",
+ "request_sha256": "3e9823646496c52e75ee96ad191a42a4bb77974d9d893f246d6da4b7fc539c71",
+ "response_sha256": "1969d79e454976eecbcf7f69b7ed81e1bfb57fcfc94a08e1f35c82d8184abc63"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551275,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xfd9defb97924e1ad3b7c999f2a055625254fc047b448d4234abab5f8b573c6f74d1329f26e73518d781a07cbeafa7ceacdc19832fe7c574b88d2952621f67b481b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:b1c7040833f50d33cdcad626a0df5364be4ee786cdd6a9038052f725251855d8:de59405eaac4ac7c364bea718c6b932d535f5663480c2d571bf73e43714a987d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Tampa Bay Buccaneers 43, Carolina Panthers 13. Therefore the market resolves to Buccaneers, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1130,
+  "total_tokens": 1880,
+  "completion_tokens": 750,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 492,
+  "completion_tokens_details": {
+   "reasoning_tokens": 492
+  }
+ },
+ "cost_usd": 0.0010577,
+ "at": "2026-11-05T10:17:21",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "b1c7040833f50d33cdcad626a0df5364be4ee786cdd6a9038052f725251855d8",
+ "response_sha256": "de59405eaac4ac7c364bea718c6b932d535f5663480c2d571bf73e43714a987d"
+}

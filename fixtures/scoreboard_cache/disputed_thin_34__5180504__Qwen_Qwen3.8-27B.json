@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5180504,
+ "polymarket_id": "5180504",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xa80ccf34c14b85d19f1cfba89d57783c10cbe2cc87b2c766cea52e5b89a25ace0938675d3052c09b9152276a083ac79baec3c8e09f78eb1198e42a10b247315b1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:33d66c41ed3be28e1af80fad40a1e797501ce88ae430c7125794a91e0aac7b6d:af8fcaa68ebd9cc6110bbf655ecf89a595644030258aec70747453859cf2727e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description, with no official streaming/download evidence showing whether Drake released a new album by the deadline. The snapshots are insufficient to determine the outcome.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 897,
+  "total_tokens": 1421,
+  "completion_tokens": 524,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 410,
+  "completion_tokens_details": {
+   "reasoning_tokens": 410
+  }
+ },
+ "cost_usd": 0.0007432799999999999,
+ "at": "2026-11-05T11:58:03",
+ "set": "disputed_thin_34",
+ "request_sha256": "33d66c41ed3be28e1af80fad40a1e797501ce88ae430c7125794a91e0aac7b6d",
+ "response_sha256": "af8fcaa68ebd9cc6110bbf655ecf89a595644030258aec70747453859cf2727e"
+}

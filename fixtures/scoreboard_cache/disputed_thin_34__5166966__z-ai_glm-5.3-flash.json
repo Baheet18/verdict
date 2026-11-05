@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5166966,
+ "polymarket_id": "5166966",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x1c5e80905c00a5a5f0184fdd473582750115fa2755e24f8c4d46ddeb7e7db86015e33a3697dc812572647e5aa1d4fb7fd1d8bbfe6bed236b4a7e78a2e258973b1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:7f6dce72d111a9c33a3b8ebb36fd753bd552101fab2e1d49359dd325774c1615:f296676a667d0f25b155fb47af767bf4f8d345d461a945948933a1d9b46a4d72",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market's own rules/description (explicitly not an external fact source) and no credible reporting of market cap rankings on October 31, 2026, so NVIDIA's rank cannot be determined from the snapshots.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 603,
+  "total_tokens": 1210,
+  "completion_tokens": 607,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 481,
+  "completion_tokens_details": {
+   "reasoning_tokens": 481
+  }
+ },
+ "cost_usd": 0.00035174,
+ "at": "2026-11-05T11:52:20",
+ "set": "disputed_thin_34",
+ "request_sha256": "7f6dce72d111a9c33a3b8ebb36fd753bd552101fab2e1d49359dd325774c1615",
+ "response_sha256": "f296676a667d0f25b155fb47af767bf4f8d345d461a945948933a1d9b46a4d72"
+}

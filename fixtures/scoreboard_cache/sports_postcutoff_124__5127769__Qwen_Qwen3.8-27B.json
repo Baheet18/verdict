@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5127769,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xe6da4d38cddcae6907ff8586f1ff8e5a4b162f0d40fd05f4019d3c552433d4cb367d47892b536fb7c450b94d18994b1db4a8c58d301d95cadadfd379c298f1291b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:b7a35e0e4ba0e0bacaf159a4578a7dd20a646766225df6ab5018817c7faf9bf1:eebb6be4e4010331de3c57f9f888cbe9c5600f2e2e8efcf780aea12bed06a6d1",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the final score was Panthers 25, Eagles 14. The Eagles did not win by 9 or more, so the market resolves to Panthers, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1114,
+  "total_tokens": 1597,
+  "completion_tokens": 483,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 185,
+  "completion_tokens_details": {
+   "reasoning_tokens": 185
+  }
+ },
+ "cost_usd": 0.0006966100000000001,
+ "at": "2026-11-05T10:19:53",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "b7a35e0e4ba0e0bacaf159a4578a7dd20a646766225df6ab5018817c7faf9bf1",
+ "response_sha256": "eebb6be4e4010331de3c57f9f888cbe9c5600f2e2e8efcf780aea12bed06a6d1"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5285913,
+ "polymarket_id": "5285913",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xd1e01d166a198eda2a2a70de8dd6aff3c5e1e70fd5c1f72051eb8986d08451982b7a6302ed3ae7da36041e854f5943d334e879cc5f8f2e99a0e751bb1f4ea5c91b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:1609b003b43408c0d281fde10c3081eabf863f8a28dfa500905ae7f0d493cb27:d43de853cb76973a9db13a66722e0687b0e0967a08b8a0123ac5ed40da320150",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only external snapshot is an NHL scores page with no Blues-Red Wings final score. Sports statistics require at least two independent agreeing sources, so the result cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4662,
+  "total_tokens": 5723,
+  "completion_tokens": 1061,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 962,
+  "completion_tokens_details": {
+   "reasoning_tokens": 962
+  }
+ },
+ "cost_usd": 0.00161883,
+ "at": "2026-11-05T11:56:38",
+ "set": "disputed_thin_34",
+ "request_sha256": "1609b003b43408c0d281fde10c3081eabf863f8a28dfa500905ae7f0d493cb27",
+ "response_sha256": "d43de853cb76973a9db13a66722e0687b0e0967a08b8a0123ac5ed40da320150"
+}

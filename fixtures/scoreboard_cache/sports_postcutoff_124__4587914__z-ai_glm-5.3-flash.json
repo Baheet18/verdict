@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4587914,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x72594746cebccebc525ff8325618669364f799d4fb78006380c255fa59001a26340109d85bde6a8ffb17e525aa9ad275f52191be11c59e6d40c20f312b6ba7301b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:d9f1d5b419cdfad360871d068bd6fde36a786cb587aea891b0930c278fcc07a8:8889989ca512edb9854aba8355d0390391856b87369595fc592f34c4a23e71e2",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN scoreboard and nflverse games.csv) agree the Lions beat the Packers 20-17, so the Packers did not win by 14 or more and the market resolves to Lions.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 943,
+  "total_tokens": 1212,
+  "completion_tokens": 269,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 98,
+  "completion_tokens_details": {
+   "reasoning_tokens": 98
+  }
+ },
+ "cost_usd": 0.00020993999999999999,
+ "at": "2026-11-05T10:19:54",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "d9f1d5b419cdfad360871d068bd6fde36a786cb587aea891b0930c278fcc07a8",
+ "response_sha256": "8889989ca512edb9854aba8355d0390391856b87369595fc592f34c4a23e71e2"
+}

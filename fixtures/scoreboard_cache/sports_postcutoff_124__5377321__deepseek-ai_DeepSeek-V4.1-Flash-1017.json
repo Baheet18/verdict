@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5377321,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xd652fdb0dbd3f2208cf7a7a37b050079b471ed858cd03e88e513c1684edd347359305d0ab2ff2b17793186e60497e1ec59aa32539c56574b23cbace4468386661c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:ac4580acb7d02ab3797e5afb2d65dde2a9e0c83b737dd1451c4037cf3b5c72f3:74d0535995f45dd8342a29026a6fbddf8fb8ef72cbc9048f8df327403aba9cbf",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show the Bears won 30-24, a 6-point margin, which is not 11 or more. Therefore the market resolves to Patriots, so the answer is NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 974,
+  "total_tokens": 1363,
+  "completion_tokens": 389,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 97
+  }
+ },
+ "cost_usd": 0.000759,
+ "at": "2026-11-05T10:20:02",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ac4580acb7d02ab3797e5afb2d65dde2a9e0c83b737dd1451c4037cf3b5c72f3",
+ "response_sha256": "74d0535995f45dd8342a29026a6fbddf8fb8ef72cbc9048f8df327403aba9cbf"
+}

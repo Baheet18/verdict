@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5658092,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x69f9be3a871981a33d578e8c647bd8ed651107b69cfc862c15a08588dc927d1d4a1dbd542d5e776265fc9ce8706ca44c7e16fec0035725095373aae0e9ee08931c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:8c5be6db7ea456aaa0d16c74f190b0ac9474cc5505becab067578d321e9c15ce:7099c1ba1c926ee5d607f627964aec74becd62bdce4a66cac04381500192376d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "The Commanders won 27-10, a 17-point margin, which is less than the required 22 points. Therefore the market resolves to Eagles, so the answer is NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 986,
+  "total_tokens": 1230,
+  "completion_tokens": 244,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 73
+  }
+ },
+ "cost_usd": 0.0005886,
+ "at": "2026-11-05T10:20:06",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8c5be6db7ea456aaa0d16c74f190b0ac9474cc5505becab067578d321e9c15ce",
+ "response_sha256": "7099c1ba1c926ee5d607f627964aec74becd62bdce4a66cac04381500192376d"
+}

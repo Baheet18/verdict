@@ -479,3 +479,7 @@ fn registered_relayer_can_submit_verdict() {
     c.commit_evidence(id, 0, evidence_hash_of(&v("yes_0")), "fixture://yes_0".into());
     assert_eq!(vote(&mut c, id, &v("yes_0")), Outcome::Yes);
 }
+
+#[test]
+#[should_panic(expected = "duplicate JSON key: temperature")]
+fn duplicate_json_key_rejected() { forbidden("duplicate_json_key"); }

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4587914,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x006181c615986fde3cb385b0509d6bd9b9aada582e19a4414a3147c5389bb6723f576d475fafe22a3881a416748c5963470f79a43410bc40755bf921743e331b1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:05ba978b3ee2f9456d6a7aa62415598317206d3bcf9037ed01253e2422c1c7d1:7417d414395b7fdc0c2b0d22535496a9a9cce9b38f3bb52e0297c35279c746cd",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show the Packers lost 17-20 to the Lions, so they did not win by 14 or more points. The market therefore resolves to Lions, i.e. NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 978,
+  "total_tokens": 1303,
+  "completion_tokens": 325,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 108
+  }
+ },
+ "cost_usd": 0.0006834,
+ "at": "2026-11-05T10:19:51",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "05ba978b3ee2f9456d6a7aa62415598317206d3bcf9037ed01253e2422c1c7d1",
+ "response_sha256": "7417d414395b7fdc0c2b0d22535496a9a9cce9b38f3bb52e0297c35279c746cd"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406659,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x37f0c549fb087f9f0f488fa2c27771015caacad1f8de57ca30109afd0fce66c6469ff7adc66aeaae8e8f9dd5834fefa6f94c37efc991351e3fc5fa6753fa71fe1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:423057c2af256a28387484cff2cb728999198dd65c0ff1077808b199cc7a1175:a70d2889adcfc39785780fde018fe1274fa16e555c7c30c5b143eae66cca42c5",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Blues 4, Bruins 1, so the Bruins did not win and the market resolves to \"Blues\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 995,
+  "total_tokens": 1297,
+  "completion_tokens": 302,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 23
+  }
+ },
+ "cost_usd": 0.0006609000000000001,
+ "at": "2026-11-05T10:14:01",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "423057c2af256a28387484cff2cb728999198dd65c0ff1077808b199cc7a1175",
+ "response_sha256": "a70d2889adcfc39785780fde018fe1274fa16e555c7c30c5b143eae66cca42c5"
+}

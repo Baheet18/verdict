@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 4890263,
+ "polymarket_id": "4890263",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x2ef26cda1692684b7e8ff4b47a181c0c58639a35acf1e775a120f1635bb655d7319e70af60ec3af35302bae6ec3257de439e10bca48cfea6f93e19144ea4b14b1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:4958b2f9056c633a2f99b0d06150a5863676c5f501b527e0f436056daef15b9a:64e2960a02f89aeac3e8dd6e41d58461066957b4d05113be6a911cdd7a7e7da7",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market's own rules text; it contains no vote counts, margin figures, or official CEC results, so the 30%-40% bracket cannot be evaluated. The snapshot timestamp is after the scheduled election date, so the window is not premature, but the evidence is insufficient to resolve.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1393,
+  "total_tokens": 1720,
+  "completion_tokens": 327,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 156
+  }
+ },
+ "cost_usd": 0.0008103,
+ "at": "2026-11-05T11:44:05",
+ "set": "disputed_thin_34",
+ "request_sha256": "4958b2f9056c633a2f99b0d06150a5863676c5f501b527e0f436056daef15b9a",
+ "response_sha256": "64e2960a02f89aeac3e8dd6e41d58461066957b4d05113be6a911cdd7a7e7da7"
+}

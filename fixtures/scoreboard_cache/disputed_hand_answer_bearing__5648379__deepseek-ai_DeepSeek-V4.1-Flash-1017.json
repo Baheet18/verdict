@@ -1,0 +1,40 @@
+{
+ "ok": true,
+ "market_id": 5648379,
+ "polymarket_id": "5648379",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xb6cb3a427d4fffe0d7e61d1dbbba93ececeb0c65955919191348f4acef25c18d6a44855003a0feed92d7a2da9b47d3f4a4743ba67988493b5229a72e5f62f4f61c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:0c45788ee1872fcfdf15ec85907865919e610cc533e776573e62b95e4be25836:a22e6435c6731a69610e8dfb8ba7afa8055aaa70e22a328468c30a5a47eaeab2",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Visa's reported Q4 2026 payments volume growth in constant dollars was 9%, which is below the 9.5% to 10.5% range. Therefore the market resolves No.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1700,
+  "total_tokens": 2114,
+  "completion_tokens": 414,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1472
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 262
+  }
+ },
+ "cost_usd": 0.0010068,
+ "at": "2026-11-05T13:04:02+01:00",
+ "evidence_sha256": "7f4d2d3172e91c520650d58e752443de5764f5f690d38c832c672bd5f573dcdc",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "0c45788ee1872fcfdf15ec85907865919e610cc533e776573e62b95e4be25836",
+ "response_sha256": "a22e6435c6731a69610e8dfb8ba7afa8055aaa70e22a328468c30a5a47eaeab2"
+}

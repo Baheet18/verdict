@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285917,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xa7d46acf4d002c2df18f26edd53aef91124e53357d6dc36ded85165fc1ab38d63913d381ec93eae401d0ce34090f7a8ea006f43b3ab2ce9ebdc73ba788ee98671c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:819b7fbae3d6ce9e79867a4d7e58e8d0dd104d9d4f2e9d5fe2c5095395912222:c682eb9873aef5b3548f13a42487bdcf5582b17c1788a33f19ecbef52fae42b8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Bruins 5, Blackhawks 4 (overtime), so the Bruins won and the market resolves to \"Bruins\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1006,
+  "total_tokens": 1341,
+  "completion_tokens": 335,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 41
+  }
+ },
+ "cost_usd": 0.0007038000000000001,
+ "at": "2026-11-05T10:15:44",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "819b7fbae3d6ce9e79867a4d7e58e8d0dd104d9d4f2e9d5fe2c5095395912222",
+ "response_sha256": "c682eb9873aef5b3548f13a42487bdcf5582b17c1788a33f19ecbef52fae42b8"
+}

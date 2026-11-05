@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406728,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x759f4036abdddd5ae79dd1f820d97d854e66d1839ded5fda04d3ee2ebe5dbf9e589b89c59c61dc667b4d1264e3eb5b757c8c1ddd1e187fc94ae7dac6dce35b721c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:8ec6e967ae75217d27a6cd28c8d1545b61dfcf1618bedf1da6cdbea18e750ec0:2f0dcf96df99faac594587072869a6bf0b4cc877f23ab1d3e2d733dfbba4cc0d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent snapshots report a final score of Stars 6, Capitals 5, so the Stars won and the market resolves to \"Stars\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 989,
+  "total_tokens": 1145,
+  "completion_tokens": 156,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 31
+  }
+ },
+ "cost_usd": 0.0004839,
+ "at": "2026-11-05T10:14:10",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8ec6e967ae75217d27a6cd28c8d1545b61dfcf1618bedf1da6cdbea18e750ec0",
+ "response_sha256": "2f0dcf96df99faac594587072869a6bf0b4cc877f23ab1d3e2d733dfbba4cc0d"
+}

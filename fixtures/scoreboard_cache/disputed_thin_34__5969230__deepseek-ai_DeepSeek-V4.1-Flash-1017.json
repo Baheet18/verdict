@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5969230,
+ "polymarket_id": "5969230",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x34d42c16bccf352a65dcd686082023a6a9da76b4c38dab80930425a5e770765759339e6d6b3063c0547190f6cab97c1460de9abd28a1bdababb9e71c3971d69e1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:310a26f0ead85e6a93fe8324c838ad5f5b4177305d568268760376f9b4b09671:521e4c4c8f6fb5cc802f122b5e7c189584fc839352cd199ffffbd380473be39a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only external snapshot is the NPB homepage HTML, which contains no game score or result for the Hawks-BayStars game. With no reported final score from any source, the outcome cannot be determined from the snapshots.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 7554,
+  "total_tokens": 7835,
+  "completion_tokens": 281,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 7360
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 103
+  }
+ },
+ "cost_usd": 0.0026034,
+ "at": "2026-11-05T11:47:59",
+ "set": "disputed_thin_34",
+ "request_sha256": "310a26f0ead85e6a93fe8324c838ad5f5b4177305d568268760376f9b4b09671",
+ "response_sha256": "521e4c4c8f6fb5cc802f122b5e7c189584fc839352cd199ffffbd380473be39a"
+}

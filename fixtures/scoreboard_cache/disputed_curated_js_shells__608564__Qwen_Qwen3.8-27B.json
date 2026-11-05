@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 608564,
+ "polymarket_id": "608564",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x8e3719b6103db3a80c02c06af41fff71de166c954740d0e6eb806149fce06d8c6e692dec58e59bde6f4b31e248050f0e028ef18bcb71ffd0ffeff29512cb5fbf1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:9b25036c57feb3ce192642bc8f4a582f44515155f10a6c5ae367f47372f62774:46e6d34829e7a4ca85467443a3a8f5fd01f6c41bedd3601974cbe5801d13bb73",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "TOO_EARLY",
+ "reasoning": "The snapshots were fetched on 2026-11-05, before the rules\u2019 2026-12-31 declaration deadline, and do not identify a 2026 Ballon d\u2019Or winner. Therefore the event window is not over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 13031,
+  "total_tokens": 14429,
+  "completion_tokens": 1398,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1246,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1246
+  }
+ },
+ "cost_usd": 0.00240854,
+ "at": "2026-11-05T12:24:28",
+ "evidence_sha256": "7193041697aa1aa462184921cc8909481d7bb955db0fe0965dda481317f24871",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "9b25036c57feb3ce192642bc8f4a582f44515155f10a6c5ae367f47372f62774",
+ "response_sha256": "46e6d34829e7a4ca85467443a3a8f5fd01f6c41bedd3601974cbe5801d13bb73"
+}

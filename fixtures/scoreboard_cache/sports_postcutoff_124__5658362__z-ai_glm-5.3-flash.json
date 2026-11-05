@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5658362,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xaead5e02a2c65836c3e08944f956996e6c52ecc947ac4657706c41b1bb2c0259243c28d33a764f878d37393d4fe719e977c38b9d3da8b93211254a1f6fe479ba1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:3f7b958af4b4851499cd296829e7913340dd4bf806d83732f26bf7b58bcc6a8e:e0079575ab10ccb924305b5c81299164c755d78ea82a0a52012ddc499e9606c1",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both ESPN and nflverse agree the Bears beat the Seahawks 34-17, so the Seahawks did not win by 9 or more points and the market resolves to Bears.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 943,
+  "total_tokens": 1145,
+  "completion_tokens": 202,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 39,
+  "completion_tokens_details": {
+   "reasoning_tokens": 39
+  }
+ },
+ "cost_usd": 0.00017643999999999998,
+ "at": "2026-11-05T10:19:30",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "3f7b958af4b4851499cd296829e7913340dd4bf806d83732f26bf7b58bcc6a8e",
+ "response_sha256": "e0079575ab10ccb924305b5c81299164c755d78ea82a0a52012ddc499e9606c1"
+}

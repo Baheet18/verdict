@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551273,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x0d632019bf1abeddcf169fa2f367502d6217490b551a6ec04c12fa71e46421d96942fd7bdce000205264771c2037b7d1827ff1bb798a738dccef99dc72636c251c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:afabbe6979392b19d203e3546b184a6de50ba509f60185210228abae53cceecb:4090daf9cb700c5aa17c50ab729644f76620d9b18156cc0a5f487c429f7c310b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Cincinnati Bengals 35, Baltimore Ravens 13. Therefore the market resolves to Bengals, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1134,
+  "total_tokens": 1939,
+  "completion_tokens": 805,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 614,
+  "completion_tokens_details": {
+   "reasoning_tokens": 614
+  }
+ },
+ "cost_usd": 0.00113211,
+ "at": "2026-11-05T10:18:56",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "afabbe6979392b19d203e3546b184a6de50ba509f60185210228abae53cceecb",
+ "response_sha256": "4090daf9cb700c5aa17c50ab729644f76620d9b18156cc0a5f487c429f7c310b"
+}

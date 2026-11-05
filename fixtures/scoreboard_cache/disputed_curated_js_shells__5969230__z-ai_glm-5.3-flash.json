@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5969230,
+ "polymarket_id": "5969230",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xd77eefc250723ef3712d6191c111207f99eb3d24a85f3dade0bb8fa73ce93f07581e9310b80c9ffaddf2dc782d96003aa45ca940aea16bc6569182f3afb0cc4d1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:a87a7ceae3cb728594e8f84fbaf190f65d4d93f9f4e222cf1f747384b3bf708e:cd1ef9ba728f8c8605598a9250305002bd3aea2458c4cd3fdb53a917f30e23d0",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "The snapshots show the only Hawks\u2013BayStars matchup was the 2026 Japan Series, and two agreeing report sources state the Hawks swept it 4\u20130, so the October 27 game was completed and won by the Fukuoka SoftBank Hawks.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 13277,
+  "total_tokens": 17753,
+  "completion_tokens": 4476,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 4334,
+  "completion_tokens_details": {
+   "reasoning_tokens": 4334
+  }
+ },
+ "cost_usd": 0.00330016,
+ "at": "2026-11-05T12:43:57",
+ "evidence_sha256": "7a60c8c719b3904abf1acb57161c5ea2cdb4e15adb95e03ed898127d7ac0a24e",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "a87a7ceae3cb728594e8f84fbaf190f65d4d93f9f4e222cf1f747384b3bf708e",
+ "response_sha256": "cd1ef9ba728f8c8605598a9250305002bd3aea2458c4cd3fdb53a917f30e23d0"
+}

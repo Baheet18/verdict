@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663755,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xbb7314d9ec17a059b47155528ffd428aa8ff330c49d5dba1c762e83a8bb2887062f503a073cfc55bd39275dd8aca7dbe0f765a88617595072c6e60d5bfa7edcc1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:6c9bea7cc3aef1d2032fbea05dfcd95c17bc29f8fc849764fe5e0bfd195a6e0d:55bceac29b4b688141815d68f13661e06eff51a45b2d60764a5e1b812dbdf243",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources report FC Augsburg scored 4 goals in the completed match. Since 4 is at least 3, the market resolves Over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1380,
+  "total_tokens": 1867,
+  "completion_tokens": 487,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 382,
+  "completion_tokens_details": {
+   "reasoning_tokens": 382
+  }
+ },
+ "cost_usd": 0.00071265,
+ "at": "2026-11-05T10:21:41",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6c9bea7cc3aef1d2032fbea05dfcd95c17bc29f8fc849764fe5e0bfd195a6e0d",
+ "response_sha256": "55bceac29b4b688141815d68f13661e06eff51a45b2d60764a5e1b812dbdf243"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5663802,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xe68137f0c8310f56ba5d81adacdc1ac1fd82e2e152e54945b15c763bed666e9648160ce5953cd45a981b9fe0a459b6239ce27b194603cfbfd8734b42ef9a2caa1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:34b63b58883f97e94c18ecf792ee3607ffb4bf6adf2a469bd29aba13c9bd98f7:f06cae4aac4c021a8e8e5d9bba8aeb342e2efdee2c81538484ebac60d56a0a00",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree Eintracht Frankfurt scored 3 goals in the completed match, which is less than 4, so the market resolves to \"Under\" per the rules.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1218,
+  "total_tokens": 1506,
+  "completion_tokens": 288,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 151,
+  "completion_tokens_details": {
+   "reasoning_tokens": 151
+  }
+ },
+ "cost_usd": 0.00024144,
+ "at": "2026-11-05T10:22:01",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "34b63b58883f97e94c18ecf792ee3607ffb4bf6adf2a469bd29aba13c9bd98f7",
+ "response_sha256": "f06cae4aac4c021a8e8e5d9bba8aeb342e2efdee2c81538484ebac60d56a0a00"
+}

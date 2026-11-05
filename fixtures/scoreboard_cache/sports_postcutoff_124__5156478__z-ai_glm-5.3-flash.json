@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5156478,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xa6c5b0e0bb851584eabc10fca80f2ed2d393d418327a81bd3493c68586056ab46fd3e49ee6539b9555a2ddfd46a93924982c2bf7365b89ac6b9ae350aa7c63551b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:bf09cb1539771a2c32106e587f7a3b7f95c8effd4fe1bc111cf846411262b504:be1a72a44abbca329470dfe9e419f8ff2c7c4b2d1c76212557d8d06a4398351a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Montreal winning 2-0 over St. Louis in regulation, so the market resolves to Canadiens.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 972,
+  "total_tokens": 1253,
+  "completion_tokens": 281,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 102,
+  "completion_tokens_details": {
+   "reasoning_tokens": 102
+  }
+ },
+ "cost_usd": 0.00021826000000000001,
+ "at": "2026-11-05T10:13:41",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "bf09cb1539771a2c32106e587f7a3b7f95c8effd4fe1bc111cf846411262b504",
+ "response_sha256": "be1a72a44abbca329470dfe9e419f8ff2c7c4b2d1c76212557d8d06a4398351a"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5648378,
+ "polymarket_id": "5648378",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xecd13d27f38339fcecca503d8e0611d4e160770bc793110522ce24d0238ee31c2aa95b28311d7d2a636d652136bd00015a7248012408e0b25e2b8b294e6cacfb1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:0ae6b7c0c4570df70ba32adca360261ec8783e62a95aba4043813478edcbeed0:7f4c5b2421b6c995637d62500430eb8920052a34951ee33d79c7982b96a81c6e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "TOO_EARLY",
+ "reasoning": "The snapshots are dated 2026-11-05 and contain no official Visa Q4 earnings materials reporting payments volume growth (constant dollars). The rules' release deadline is November 30, 2026, so the resolution window is not over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 11397,
+  "total_tokens": 15566,
+  "completion_tokens": 4169,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 4039,
+  "completion_tokens_details": {
+   "reasoning_tokens": 4039
+  }
+ },
+ "cost_usd": 0.00608403,
+ "at": "2026-11-05T12:33:20",
+ "evidence_sha256": "f583808794695db0f40daff00b08ad2901ff9b4d33288a18d6da5457032ae42e",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "0ae6b7c0c4570df70ba32adca360261ec8783e62a95aba4043813478edcbeed0",
+ "response_sha256": "7f4c5b2421b6c995637d62500430eb8920052a34951ee33d79c7982b96a81c6e"
+}

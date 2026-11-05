@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 3120760,
+ "polymarket_id": "3120760",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xd7115705794902210ed36bc81d523b48cbd0337be3c64de8416e43c0435016c40067002863dab185ff5a3fa198e3e140f3568b38d1f32ef5cf00caa23fd821c91b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:639b5ae065ff6db7719ffc827a65510b5cd88ff503d8a9a4e2181e2c7efe73e5:388ba7c6db41645908a4eba8da495cccaf78d4a8ae5900ffac1682db3f5d8814",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market's own rules text, explicitly flagged as not an external fact source; no reporting on any NATO-Russia military encounter is provided. With zero independent sources on the underlying event, the snapshots are insufficient to resolve YES or NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1217,
+  "total_tokens": 1522,
+  "completion_tokens": 305,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 155
+  }
+ },
+ "cost_usd": 0.0007310999999999999,
+ "at": "2026-11-05T11:32:56",
+ "set": "disputed_thin_34",
+ "request_sha256": "639b5ae065ff6db7719ffc827a65510b5cd88ff503d8a9a4e2181e2c7efe73e5",
+ "response_sha256": "388ba7c6db41645908a4eba8da495cccaf78d4a8ae5900ffac1682db3f5d8814"
+}

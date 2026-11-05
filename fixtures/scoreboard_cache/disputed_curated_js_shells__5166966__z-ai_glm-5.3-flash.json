@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5166966,
+ "polymarket_id": "5166966",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x69a646114e70a9425458bcc89369fe1d15a71353c4d007a415f2d6e52a49b171305f81600c7176eafafbeae24e4218d54ada8b609767ff60a7e9b9aba425b81a1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:40419f5f40c39c2f065ce9f1dd3813ada799c374b843f7a8ca00cebfb7d984ba:9fbb3edeb102601e392a91798bbc352d8517abe60b1b03ed706478de8977b091",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The event window has closed (market_end 2026-11-01T03:59:00Z, snapshots fetched 2026-11-05), but no snapshot provides the October 31, 2026 market-cap ranking: the CompaniesMarketCap and Yahoo snapshots contain only page navigation/scripts with no company rankings or cap figures, and Wikipedia's list is only current to 30 June 2026. With no source reporting the needed October 31 ranking, resolution\u2026",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 9283,
+  "total_tokens": 10197,
+  "completion_tokens": 914,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 726,
+  "completion_tokens_details": {
+   "reasoning_tokens": 726
+  }
+ },
+ "cost_usd": 0.00119964,
+ "at": "2026-11-05T12:27:43",
+ "evidence_sha256": "1427b3570acc081c9ea89d5bb232bf7312eb54b7e2ac508182848296fb7437fc",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "40419f5f40c39c2f065ce9f1dd3813ada799c374b843f7a8ca00cebfb7d984ba",
+ "response_sha256": "9fbb3edeb102601e392a91798bbc352d8517abe60b1b03ed706478de8977b091"
+}

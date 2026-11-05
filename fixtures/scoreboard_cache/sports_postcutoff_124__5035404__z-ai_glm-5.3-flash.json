@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5035404,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xe621cdcb1fe565902ab11fd14dd556e6346be3c226f1a069995d5dac3c1afb4039260f7f8f17a220f2ddcfd50bff7be01d0af9587e3920d800e499431e4a36251c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:be77c018d9bd24f8ee4de01c9b7018f7d4d2b058a23b760bed621dd20039b40a:a162a1fa4f8459bc18da0ce774e234e3f75147c138c69cbebe409baae5b60832",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with the Penguins winning 3-2 over the Predators in overtime, so the market resolves to \"Penguins\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 981,
+  "total_tokens": 1191,
+  "completion_tokens": 210,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 22,
+  "completion_tokens_details": {
+   "reasoning_tokens": 22
+  }
+ },
+ "cost_usd": 0.00018348,
+ "at": "2026-11-05T10:16:11",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "be77c018d9bd24f8ee4de01c9b7018f7d4d2b058a23b760bed621dd20039b40a",
+ "response_sha256": "a162a1fa4f8459bc18da0ce774e234e3f75147c138c69cbebe409baae5b60832"
+}

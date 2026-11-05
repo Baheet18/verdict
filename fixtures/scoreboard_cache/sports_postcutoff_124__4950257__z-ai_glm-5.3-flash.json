@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4950257,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x9654f8ad14dd6ecfbeb55df9260993296120cbdc4d55ef795a613cfe3857f9bc6867862093b7000ba39d1dbfd34d935ccd9471f4591331684f05972c828d8f6e1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:bd410710963be8afde3df7ee47dc19d0f04b71abf686c79b19cf1564afccac4c:67005e08a7656f2da3b90197351a7edde11e82a50154126d8782036a889dff99",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Maple Leafs defeated the Rangers 5-4 in regulation on 2026-10-22, so the market resolves to Maple Leafs.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 970,
+  "total_tokens": 1177,
+  "completion_tokens": 207,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 24,
+  "completion_tokens_details": {
+   "reasoning_tokens": 24
+  }
+ },
+ "cost_usd": 0.0001811,
+ "at": "2026-11-05T10:15:28",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "bd410710963be8afde3df7ee47dc19d0f04b71abf686c79b19cf1564afccac4c",
+ "response_sha256": "67005e08a7656f2da3b90197351a7edde11e82a50154126d8782036a889dff99"
+}

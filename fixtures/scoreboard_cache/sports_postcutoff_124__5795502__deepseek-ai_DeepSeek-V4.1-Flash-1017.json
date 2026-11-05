@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5795502,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xa4d65079a249d04dc2c4a2259d309bcfa224bcd890f0cb81f8250fe9ef605bd60d5ad6d7ee6b224a1754fc89dbd788d47eca25a06f0378635a2ef5d543aed67f1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:fc59171480f75b984ff2683a1bf9c9b0f2e043574eb3ad32d45926a3b636707f:223484b28ea8d748932741bfd55fdf0a05164187fb3b9f33f13a1e247b56fede",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots confirm the match was completed but contain no corner counts, so the O/U 13.5 total corners cannot be determined. No independent source in the bundle reports the needed corner statistic.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1227,
+  "total_tokens": 1474,
+  "completion_tokens": 247,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 162
+  }
+ },
+ "cost_usd": 0.0006644999999999999,
+ "at": "2026-11-05T10:22:35",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "fc59171480f75b984ff2683a1bf9c9b0f2e043574eb3ad32d45926a3b636707f",
+ "response_sha256": "223484b28ea8d748932741bfd55fdf0a05164187fb3b9f33f13a1e247b56fede"
+}

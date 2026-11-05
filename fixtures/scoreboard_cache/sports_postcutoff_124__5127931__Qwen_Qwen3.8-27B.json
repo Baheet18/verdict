@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5127931,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x9743597be72dd93e2b1003e0f4dd7df964368ac191f07c5f3c79bbed0bdff33963280519f96ffdbddd94687a729e6d590ac0d0fba2d997bf2d78cfb359779c541c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:3570c4afc5a8c9a4e27f20c6d7712046a40f963277e831ab3aa112b3b111e228:4b4184848a52f7a039774b3fc643c2216b5069c882ccb0320d10aca9dfb3c62d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources report the final score as Panthers 25, Eagles 14, for a combined total of 39. Since 39 is less than 59, the market resolves Under, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1104,
+  "total_tokens": 1509,
+  "completion_tokens": 405,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 133,
+  "completion_tokens_details": {
+   "reasoning_tokens": 133
+  }
+ },
+ "cost_usd": 0.00059091,
+ "at": "2026-11-05T10:21:33",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "3570c4afc5a8c9a4e27f20c6d7712046a40f963277e831ab3aa112b3b111e228",
+ "response_sha256": "4b4184848a52f7a039774b3fc643c2216b5069c882ccb0320d10aca9dfb3c62d"
+}

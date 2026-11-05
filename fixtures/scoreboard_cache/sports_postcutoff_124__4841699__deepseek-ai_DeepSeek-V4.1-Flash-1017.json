@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4841699,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xf5a83d9da7603a6735f42e3e11f700970c67a678c294b671557aeb30e2925a141e1fab5302df9fcf167500c835f3499bccf3492dfe5d075fe0a157c36005d3091b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:6d4bd09a85109ec7dbcc64bd6a54175621e2abceecc96d9cdb88f1501d8feb00:8c5c29d30093762effead297ab7766d333d31c80dbf52a839f0437d512601bf5",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with Utah winning 5-4 over Pittsburgh, so the market resolves to Utah (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1013,
+  "total_tokens": 1357,
+  "completion_tokens": 344,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 65
+  }
+ },
+ "cost_usd": 0.0007167,
+ "at": "2026-11-05T10:13:33",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6d4bd09a85109ec7dbcc64bd6a54175621e2abceecc96d9cdb88f1501d8feb00",
+ "response_sha256": "8c5c29d30093762effead297ab7766d333d31c80dbf52a839f0437d512601bf5"
+}

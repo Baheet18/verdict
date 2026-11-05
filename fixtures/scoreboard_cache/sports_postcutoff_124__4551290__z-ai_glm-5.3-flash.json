@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551290,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xf7cd99ce3688c517176609d677f4e5178e5755c58016fa51a3aecef1b039fcbb50580d4cff1fbcd1d9b1ee11431446bb1da905eb6d5082183e4db22baf6c62791b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:56041ae08f22477aa8aab6dc31d18290b672f03ebf9df49f47816c5128a267b2:cd986dec5b686851d31e8965790e1728614534b957d65890a88aa8838cc43244",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the Broncos defeated the Cardinals 30-16 in the final game, so the market resolves to \"Broncos\" per the rules mapping to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 956,
+  "total_tokens": 1176,
+  "completion_tokens": 220,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 53,
+  "completion_tokens_details": {
+   "reasoning_tokens": 53
+  }
+ },
+ "cost_usd": 0.00018648,
+ "at": "2026-11-05T10:19:22",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "56041ae08f22477aa8aab6dc31d18290b672f03ebf9df49f47816c5128a267b2",
+ "response_sha256": "cd986dec5b686851d31e8965790e1728614534b957d65890a88aa8838cc43244"
+}

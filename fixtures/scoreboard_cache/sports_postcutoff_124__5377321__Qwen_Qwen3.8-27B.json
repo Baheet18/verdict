@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5377321,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x9aeda36bc0e4c07682ce0cf4bf2fafbe727192c9c36f780fe3ac550919ce6244018fa32a234418199889e7fb07da6797b507c0cca5d71bfcc1db5fc5a70d72d71b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:dfda60fcc35a0c2a81b1fff8dcbda374271b79c7dc82edea7bc033f0915f8a1f:0654aee10845d46e764399091ea667dc0f447bf29d5e8bf7d0298d405d3755ce",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the final score was Bears 30, Patriots 24. The Bears won by 6 points, not 11 or more, so the market resolves to Patriots.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1112,
+  "total_tokens": 1501,
+  "completion_tokens": 389,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 128,
+  "completion_tokens_details": {
+   "reasoning_tokens": 128
+  }
+ },
+ "cost_usd": 0.00056963,
+ "at": "2026-11-05T10:20:04",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "dfda60fcc35a0c2a81b1fff8dcbda374271b79c7dc82edea7bc033f0915f8a1f",
+ "response_sha256": "0654aee10845d46e764399091ea667dc0f447bf29d5e8bf7d0298d405d3755ce"
+}

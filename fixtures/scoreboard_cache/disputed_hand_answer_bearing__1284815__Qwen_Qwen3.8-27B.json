@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "market_id": 1284815,
+ "polymarket_id": "1284815",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xe7e577b96aed502829214c1797cefdd171af84f6f52472729330bf329687cd233cec8a2bec2fcae7e2df042e394030f7638d008be631f7f88ca87cba371ca3011c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:f1d2a6484511f17909affff3a753722f813f7713ff1159fc6e53a7ebdb396331:6f0753106f7483c180dc4b710b7d884c4ece86ed3b3f18c8f55f9ff50092c994",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Multiple credible snapshots report Republican Steve Toth won the TX-02 House seat in the November 3, 2026 election. Therefore the market resolves YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1592,
+  "total_tokens": 1937,
+  "completion_tokens": 345,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 202,
+  "completion_tokens_details": {
+   "reasoning_tokens": 202
+  }
+ },
+ "cost_usd": 0.00052943,
+ "at": "2026-11-05T13:03:05+01:00",
+ "evidence_sha256": "df36ca9bbeb5957600a22337733fabf310032b0287f4eb071a87e91de21f35f5",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "f1d2a6484511f17909affff3a753722f813f7713ff1159fc6e53a7ebdb396331",
+ "response_sha256": "6f0753106f7483c180dc4b710b7d884c4ece86ed3b3f18c8f55f9ff50092c994"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4984345,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x0c88c7d5edf7666d1c207903a274df542ea088900e9fdc291a94d8cbff7498021c814262b1349fbf8967622ebbd3554ead59b004e30b7864ce478e2babdf75861b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:247ee1e3f17afa4c7e407e61830f70f2cd7c862ebca908a8dc4bd18e7b882379:6ba14edd73a7374450d50af4f042f1a87ea39adb0c8fbae9661aac67a78d1206",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Canadiens defeated the Blackhawks 4-1 in regulation, so the market resolves to Canadiens.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 966,
+  "total_tokens": 1158,
+  "completion_tokens": 192,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 21,
+  "completion_tokens_details": {
+   "reasoning_tokens": 21
+  }
+ },
+ "cost_usd": 0.00017328,
+ "at": "2026-11-05T10:14:26",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "247ee1e3f17afa4c7e407e61830f70f2cd7c862ebca908a8dc4bd18e7b882379",
+ "response_sha256": "6ba14edd73a7374450d50af4f042f1a87ea39adb0c8fbae9661aac67a78d1206"
+}

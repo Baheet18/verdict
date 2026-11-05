@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694486,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xb602ad0354b7cc8fc1f0a43b6d05bd55bdfdee01388c88f1b9c9b21505f9ce0a6986544c4c6e8b958919a82efc419d30ba4b9e28ac8a45ae6d798e972ebb20d01c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:b14ab4bd3b8aa6aa863a476aa3bdef499bb3578444ccb4479d0af05ff6e8fda8:0ebad9f62bc1699f0f2c71c8c5495451a3b8fce4434a8b3c5e47dc3c2c6f9026",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show SG Dynamo Dresden scored 2 goals in the completed match, which is under 2.5. Therefore the market resolves to Under, i.e. NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1248,
+  "total_tokens": 1485,
+  "completion_tokens": 237,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 116
+  }
+ },
+ "cost_usd": 0.0006588,
+ "at": "2026-11-05T10:22:06",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "b14ab4bd3b8aa6aa863a476aa3bdef499bb3578444ccb4479d0af05ff6e8fda8",
+ "response_sha256": "0ebad9f62bc1699f0f2c71c8c5495451a3b8fce4434a8b3c5e47dc3c2c6f9026"
+}

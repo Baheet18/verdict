@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4882663,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x241a24a27dbded96bf1c9d81dee20f3dbe35de326d26bb379c2828fd13b93ce96ee94a585c535aca852d15f86943d49874b6bba1e0a29ceed5138724cc832bf71b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:5919c3e8f9c4f4baa6f05832a494f622df56133eaea4ecd599eabc40b15cffbc:23c7ed9b8ab7e98baf94fa87f8910eb53db1bd9e3eeab20ad5993d53a958a318",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources agree that the Edmonton Oilers won 4-3 over the Minnesota Wild. Therefore the market resolves to \"Oilers\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1111,
+  "total_tokens": 1590,
+  "completion_tokens": 479,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 322,
+  "completion_tokens_details": {
+   "reasoning_tokens": 322
+  }
+ },
+ "cost_usd": 0.00069109,
+ "at": "2026-11-05T10:15:43",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5919c3e8f9c4f4baa6f05832a494f622df56133eaea4ecd599eabc40b15cffbc",
+ "response_sha256": "23c7ed9b8ab7e98baf94fa87f8910eb53db1bd9e3eeab20ad5993d53a958a318"
+}

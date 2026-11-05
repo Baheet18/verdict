@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5479540,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xf27b667ffbc38489f475c92564ac456279deb579e70eb89006946c09c3e6aa7336c56f08584ede4f12b8f6e0f77d9d9bee956deeeb53bd63d513cb89d3ee41b01b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:a9adf94bd2aa703cbf9963276337ce9167aa0b60a33611bc82b58d2252fe670e:84eb3c119fdc078fa625ad575b87d6832a7c4434d967b09c48bcdbd0789d1135",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The match is finished 1-1, but only OpenLigaDB provides a halftime score showing Wolfsburg led 1-0; ESPN does not report the first scorer. Under the two-source rule, the first-to-score statistic is not independently confirmed.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1380,
+  "total_tokens": 4569,
+  "completion_tokens": 3189,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 3081,
+  "completion_tokens_details": {
+   "reasoning_tokens": 3081
+  }
+ },
+ "cost_usd": 0.00436035,
+ "at": "2026-11-05T10:26:58",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "a9adf94bd2aa703cbf9963276337ce9167aa0b60a33611bc82b58d2252fe670e",
+ "response_sha256": "84eb3c119fdc078fa625ad575b87d6832a7c4434d967b09c48bcdbd0789d1135"
+}

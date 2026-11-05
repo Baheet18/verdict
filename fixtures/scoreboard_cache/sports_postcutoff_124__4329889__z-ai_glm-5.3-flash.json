@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4329889,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x3f1546a59bd6a40c2a202db6315a9de5209892d599e3cb40559df3261bd8547b3e3a59e141f26fa43eda93c534a521f352044490539d247910ebcc21a08d482f1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:a3f13afac97748fd8358b095ca066092f08e27217d9b8d5017f1698e75460080:651bb4ec5b1bd2175d1cc4238368dbe0528f5ed905e15c483808b817e5937933",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with Pittsburgh winning 26-19 over Tampa Bay, so the market resolves to Steelers.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 972,
+  "total_tokens": 1157,
+  "completion_tokens": 185,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 21,
+  "completion_tokens_details": {
+   "reasoning_tokens": 21
+  }
+ },
+ "cost_usd": 0.00017025999999999999,
+ "at": "2026-11-05T10:17:48",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "a3f13afac97748fd8358b095ca066092f08e27217d9b8d5017f1698e75460080",
+ "response_sha256": "651bb4ec5b1bd2175d1cc4238368dbe0528f5ed905e15c483808b817e5937933"
+}

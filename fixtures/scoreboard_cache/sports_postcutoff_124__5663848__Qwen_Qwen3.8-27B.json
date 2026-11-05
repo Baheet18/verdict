@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663848,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x6d7f1faf497c9a21b7feff5a3574dba8b5eb7d3efa80d5e46be89b565561e5382b8a9dc8508a30455af4ace590e817af79111f80c764b55b2798bb0e01a5e62d1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:9906fed969160ee0303d517d380c3f51da823d1a363df8336f56de6d622a6959:250c7dfb173222e12f787c57c8a071ce94314a7b118c411758e0e9a0e6ff0bc4",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources report the final score as VfL Bochum 2, 1. FSV Mainz 05 0. Mainz scored fewer than 4 goals, so the market resolves Under/NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1426,
+  "total_tokens": 1879,
+  "completion_tokens": 453,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 162,
+  "completion_tokens_details": {
+   "reasoning_tokens": 162
+  }
+ },
+ "cost_usd": 0.0006685899999999999,
+ "at": "2026-11-05T10:22:29",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9906fed969160ee0303d517d380c3f51da823d1a363df8336f56de6d622a6959",
+ "response_sha256": "250c7dfb173222e12f787c57c8a071ce94314a7b118c411758e0e9a0e6ff0bc4"
+}

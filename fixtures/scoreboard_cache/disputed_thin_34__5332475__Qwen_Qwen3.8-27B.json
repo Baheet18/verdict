@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5332475,
+ "polymarket_id": "5332475",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x65799eb3d8f613e2fcff51edc01a8a662e590e0b70f1b393db36fee49b9baf534b747d888e659f55968417bea747c283f9726c03ec19028d9de356f8db7508021c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:f87cef72f1df519cfde3f0eb2ac7e7c2e5b5b47d26b97eadb2bec1283b6a36e0:85f56048b7ab48c98497669521d525134790cd07bf4d6762b0d218cd1382f3f3",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only source snapshot is the market description and contains no election results or seat counts. Therefore the snapshots are insufficient to determine whether Amcha Yisrael won the second-most seats.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1261,
+  "total_tokens": 1808,
+  "completion_tokens": 547,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 432,
+  "completion_tokens_details": {
+   "reasoning_tokens": 432
+  }
+ },
+ "cost_usd": 0.00078889,
+ "at": "2026-11-05T12:00:03",
+ "set": "disputed_thin_34",
+ "request_sha256": "f87cef72f1df519cfde3f0eb2ac7e7c2e5b5b47d26b97eadb2bec1283b6a36e0",
+ "response_sha256": "85f56048b7ab48c98497669521d525134790cd07bf4d6762b0d218cd1382f3f3"
+}

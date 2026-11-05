@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 1235552,
+ "polymarket_id": "1235552",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x6c2f1d5cf7e16ba58ec90162ee4df53e655981f4340420170722fc8dbdeda25940c76b9db6536a7b114b4616ba4a5e83655a746b1f94022d8a6aa18ea75a18cd1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:f575a2bdacbc9b7af07e2013401111f24df15e7553c7e56c3f40617d262f8659:5d11340ff39e8acc8602595d501e821ff861cba92e06abc35b42278fa9d9f14b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only external snapshot is the MLB.com homepage and contains no 2026 World Series result or elimination information. The snapshots are insufficient to determine whether the Cleveland Guardians won.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 5284,
+  "total_tokens": 5783,
+  "completion_tokens": 499,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 409,
+  "completion_tokens_details": {
+   "reasoning_tokens": 409
+  }
+ },
+ "cost_usd": 0.0008850100000000001,
+ "at": "2026-11-05T11:34:39",
+ "set": "disputed_thin_34",
+ "request_sha256": "f575a2bdacbc9b7af07e2013401111f24df15e7553c7e56c3f40617d262f8659",
+ "response_sha256": "5d11340ff39e8acc8602595d501e821ff861cba92e06abc35b42278fa9d9f14b"
+}

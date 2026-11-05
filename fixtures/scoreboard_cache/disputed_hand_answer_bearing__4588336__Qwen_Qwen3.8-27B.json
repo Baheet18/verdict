@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "market_id": 4588336,
+ "polymarket_id": "4588336",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x192d7af74da3461c56ea225975afecac0828cb86e9d78a09f8ffed1f30d080e92d0e9029e3bc9dc5503e2bcf5c17906b4e399a4fc9a9e2ee8ae8dab575b2132b1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:677d6315ba2c9e4a66ad8c57cacd2dbfac6807d2d2e216b02785a466ae1de7b0:ff7f8969dec60c1c1f9ec557fc730dca3ceba2eadac156a251fd8fe41d3a4568",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the third-quarter score as Broncos 14, Cardinals 7. The Broncos outscored the Cardinals by 7, which is at least 4, so the market resolves to Broncos/YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1642,
+  "total_tokens": 2643,
+  "completion_tokens": 1001,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 836,
+  "completion_tokens_details": {
+   "reasoning_tokens": 836
+  }
+ },
+ "cost_usd": 0.0014170300000000001,
+ "at": "2026-11-05T13:01:42+01:00",
+ "evidence_sha256": "793698f3800c864b8f0e0dde8e44d2112212e557085df395295a836da42ec742",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "677d6315ba2c9e4a66ad8c57cacd2dbfac6807d2d2e216b02785a466ae1de7b0",
+ "response_sha256": "ff7f8969dec60c1c1f9ec557fc730dca3ceba2eadac156a251fd8fe41d3a4568"
+}

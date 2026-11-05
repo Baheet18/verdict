@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4589091,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xfdb7ceffbeee7421ab14fa5e38b0e5e30e8a0a69b53bba9e67887bed3abe49d5365c852b3f4a2dc28666c60297beda7f263b90ef424f1f01e6815350690d44bc1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:9ae76b7986d96ee036d6169843d8fe5d77398e4b9d5598d4dbecc75bd7ed9eb7:fa0ebe6e2b9d982d635b2eeade700bb16c3957867d742688f9c4a1c8e8131127",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the final score was Vikings 16, Colts 10, a 6-point Minnesota win, which meets the rule of winning by 6 or more (covering -5.5). Therefore the market resolves to \"Vikings\", mapping to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 948,
+  "total_tokens": 1248,
+  "completion_tokens": 300,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 89,
+  "completion_tokens_details": {
+   "reasoning_tokens": 89
+  }
+ },
+ "cost_usd": 0.00022584,
+ "at": "2026-11-05T10:20:33",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9ae76b7986d96ee036d6169843d8fe5d77398e4b9d5598d4dbecc75bd7ed9eb7",
+ "response_sha256": "fa0ebe6e2b9d982d635b2eeade700bb16c3957867d742688f9c4a1c8e8131127"
+}

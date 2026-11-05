@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4882653,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xbd367ebb1ab37a6d4a7daab1e18c08faf786370f2fffbfefac0c7782772a948e4bad6e23b4fecd65de3ee7eb968202ea5be13af863c226400330fd366aacedb21b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:ca478ba07d73ac9df2204b89057692fff7ae5673b19b773c20983b9a23bd1bcf:54a974d9112f3664af1fa808af9e1c699d77987094c8e9081e043adffa7383e8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources show the St. Louis Blues won 2-1 over the Winnipeg Jets. Therefore the market resolves to Blues, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1122,
+  "total_tokens": 1966,
+  "completion_tokens": 844,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 725,
+  "completion_tokens_details": {
+   "reasoning_tokens": 725
+  }
+ },
+ "cost_usd": 0.00118428,
+ "at": "2026-11-05T10:15:38",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ca478ba07d73ac9df2204b89057692fff7ae5673b19b773c20983b9a23bd1bcf",
+ "response_sha256": "54a974d9112f3664af1fa808af9e1c699d77987094c8e9081e043adffa7383e8"
+}

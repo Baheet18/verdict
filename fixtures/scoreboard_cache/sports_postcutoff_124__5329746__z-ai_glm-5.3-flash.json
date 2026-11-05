@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5329746,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xc4d539691de1625893c08474f965b05cd10a798f8036526df8cbe12fb9ed953a208bde8a8ad2e02241276555c98bba9ccfba5c26393b613054e84ce8cbf2aeff1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:04b009647ec882f76010a67e9aafd125b4568251975c388f8e70d806de12be02:9c63997ac8b688c69549f423c55ddeda027ac3c8dff84a779a7dd83069628d3b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Hurricanes winning 7-0 in regulation, so the market resolves to \"Hurricanes\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 957,
+  "total_tokens": 1158,
+  "completion_tokens": 201,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 23,
+  "completion_tokens_details": {
+   "reasoning_tokens": 23
+  }
+ },
+ "cost_usd": 0.00017706,
+ "at": "2026-11-05T10:13:20",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "04b009647ec882f76010a67e9aafd125b4568251975c388f8e70d806de12be02",
+ "response_sha256": "9c63997ac8b688c69549f423c55ddeda027ac3c8dff84a779a7dd83069628d3b"
+}

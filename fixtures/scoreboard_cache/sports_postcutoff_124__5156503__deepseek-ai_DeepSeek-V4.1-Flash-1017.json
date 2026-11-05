@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5156503,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xeb8dfbafa562db581141e667356735526fb58a2d69843a4800dd04f0a94614c51f6ff37fdab3fb1594d40d991f4184113152462fab517c5baefd0e322d6b2fa61b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:023ea230303e607801d2ac13ca9ad4c4186eea41dfb736d72434c48947bd5cfe:ad266543baf36eec9d0d5f716f9f099629312bfea41d999e69a89009a149f3ce",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources agree the game is final with Golden Knights 4, Senators 1, so the market resolves to \"Golden Knights\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 990,
+  "total_tokens": 1231,
+  "completion_tokens": 241,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 38
+  }
+ },
+ "cost_usd": 0.0005862,
+ "at": "2026-11-05T10:14:37",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "023ea230303e607801d2ac13ca9ad4c4186eea41dfb736d72434c48947bd5cfe",
+ "response_sha256": "ad266543baf36eec9d0d5f716f9f099629312bfea41d999e69a89009a149f3ce"
+}

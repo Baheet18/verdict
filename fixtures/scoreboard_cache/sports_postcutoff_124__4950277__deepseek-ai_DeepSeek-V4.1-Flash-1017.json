@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4950277,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xf54985858b43795faa0161fae50c984c43583c3cd46bb658513e1399e8c51cbf5f8bf703833e59f969ac0be67921783214da0380c57a25003333c44bd1f3f70b1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:7e7dac418d3ffc91a8376cf67e43060fe394824e7b100ec80a1f6cf336072882:52bd280d61d881ac6ce7c78810f030f72e3ff682a5eff72f9b8e0053a9dd6c40",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources show the Bruins winning 6-0 in a final game, so the market resolves to Bruins (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1000,
+  "total_tokens": 1298,
+  "completion_tokens": 298,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 24
+  }
+ },
+ "cost_usd": 0.0006575999999999999,
+ "at": "2026-11-05T10:15:49",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "7e7dac418d3ffc91a8376cf67e43060fe394824e7b100ec80a1f6cf336072882",
+ "response_sha256": "52bd280d61d881ac6ce7c78810f030f72e3ff682a5eff72f9b8e0053a9dd6c40"
+}

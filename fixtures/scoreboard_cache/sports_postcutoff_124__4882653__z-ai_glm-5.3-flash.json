@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4882653,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xd055c38ff636266a39902fb73655aef894216af9a0a261b159754b859f3bfe2114ec485e0a07d95954fd8240ea1bd386ab80d1b3514086a8e6843cbd161b05d81c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:047c45af8b90c40d700cb3ab19125767534909b33b185f25fa7aa57ac0e2d7b1:cc8386e2f0be191d41959f39c9498e0581cd5c6b2a80282610843d4426b9b685",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Blues winning 2-1 in regulation, so the market resolves to \"Blues\", mapping to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 967,
+  "total_tokens": 1175,
+  "completion_tokens": 208,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 26,
+  "completion_tokens_details": {
+   "reasoning_tokens": 26
+  }
+ },
+ "cost_usd": 0.00018135999999999998,
+ "at": "2026-11-05T10:15:28",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "047c45af8b90c40d700cb3ab19125767534909b33b185f25fa7aa57ac0e2d7b1",
+ "response_sha256": "cc8386e2f0be191d41959f39c9498e0581cd5c6b2a80282610843d4426b9b685"
+}

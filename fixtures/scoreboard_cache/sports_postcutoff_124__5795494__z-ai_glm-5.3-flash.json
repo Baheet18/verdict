@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5795494,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x3f4413331a4874c8cbbabb99f795ba5f06cc23dbdad182abc3112ea76a8d5f4910eef686bc11f2525b89ad6fe31bbf84b57b183da5e59c64e85249c22d1262781c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:2f10c2a313f69a6bff49af19c94543691aaec5b8f1ef489908c3ccce86127b1e:9ba281a46fd47164dfd459ea559bec17633c8904be90b0ca4f6ec2441212d6c9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Both snapshots confirm the match is finished (ESPN: Full Time/completed; OpenLigaDB: matchIsFinished with 4-1 final), but neither source reports any corner counts, so the required statistic lacks two independent agreeing sources. Per the data-quality rules, the corner total cannot be verified and the market cannot be resolved Over or Under.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1216,
+  "total_tokens": 1593,
+  "completion_tokens": 377,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 242,
+  "completion_tokens_details": {
+   "reasoning_tokens": 242
+  }
+ },
+ "cost_usd": 0.00028578,
+ "at": "2026-11-05T10:25:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "2f10c2a313f69a6bff49af19c94543691aaec5b8f1ef489908c3ccce86127b1e",
+ "response_sha256": "9ba281a46fd47164dfd459ea559bec17633c8904be90b0ca4f6ec2441212d6c9"
+}

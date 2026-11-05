@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663802,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x43ceb5406c4e892fa24c8c3b9f066369887a9c68d8ecf6dbcbae8a3f4aa142e3111063e723aae1a1ff63d4e61b8015eaaae39826ee16a3a89fd60168c73ae6061b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:fb38e369f632dbf014cfe6744866355ae08fe1b580e917da64a2b148839f0233:deef342935cadd40ab9c1d9efb32ce83b4878695d76ab991f61019ce2e0c7d89",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree that Eintracht Frankfurt scored 3 goals in the completed match. Since 3 is less than 4, the market resolves Under, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1380,
+  "total_tokens": 1790,
+  "completion_tokens": 410,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 295,
+  "completion_tokens_details": {
+   "reasoning_tokens": 295
+  }
+ },
+ "cost_usd": 0.0006087,
+ "at": "2026-11-05T10:21:57",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "fb38e369f632dbf014cfe6744866355ae08fe1b580e917da64a2b148839f0233",
+ "response_sha256": "deef342935cadd40ab9c1d9efb32ce83b4878695d76ab991f61019ce2e0c7d89"
+}

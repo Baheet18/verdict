@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551277,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x57f38e4ed45e70f98fe7e37984fc4f944f881305e534e4c42be56237ae78890a0d38e7c2edc97163b42c8e3356852a90a5b9f3aa0ae76a02005e8bad4679f7191b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:4d4f4021048ceafd036b92f036b662e0f12fb6752aa1a88a14e8771269f50c5f:fa04cafd9a1f4ff079ebaddcc459ee3bfba794dfe267a9c035e89d7f2d2c081d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with Giants 27, Texans 21, so Giants won.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 997,
+  "total_tokens": 1335,
+  "completion_tokens": 338,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 60
+  }
+ },
+ "cost_usd": 0.0007046999999999999,
+ "at": "2026-11-05T10:18:05",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4d4f4021048ceafd036b92f036b662e0f12fb6752aa1a88a14e8771269f50c5f",
+ "response_sha256": "fa04cafd9a1f4ff079ebaddcc459ee3bfba794dfe267a9c035e89d7f2d2c081d"
+}

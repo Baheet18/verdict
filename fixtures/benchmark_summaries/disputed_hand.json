@@ -1,0 +1,238 @@
+{
+  "n": 8,
+  "settled": 8,
+  "agree_uma": 7,
+  "disagree_uma": 1,
+  "escalated": 0,
+  "invented_answers": 0,
+  "thin_same_ids_escalated": 8,
+  "cost_usd": 0.0195,
+  "column": "answer-bearing sources",
+  "rows": [
+    {
+      "id": "1235552",
+      "question": "Will the Cleveland Guardians win the 2026 World Series?",
+      "uma": "NO",
+      "expected_human": "NO",
+      "panel": "NO",
+      "panel_thin_rules_only": "ESCALATE",
+      "answer_bearing_sources": 3,
+      "evidence_sha256": "42ef56dc2623c15c2c20fcf061579f206a14663a1e7e151f4cbb928bb5f3929c",
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "NO",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The 2026 World Series was won by the Milwaukee Brewers, not the Cleveland Guardians. The Guardians were eliminated in the ALCS by the Rays, so this market resolves No."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "NO",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The Guardians were eliminated by the Rays in the ALCS (4-2), and the Brewers won the 2026 World Series, confirmed by both MLB.com and ESPN."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "NO",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The Guardians were eliminated in the ALCS (Rays defeated them 4-2), making it impossible for them to win the 2026 World Series, which the Brewers won over the Rays per MLB.com and ESPN. Per the rules, elimination resolves this market to No."
+        }
+      },
+      "archives_available": 2
+    },
+    {
+      "id": "5969230",
+      "question": "Fukuoka SoftBank Hawks vs. Yokohama BayStars",
+      "uma": "YES",
+      "expected_human": "YES",
+      "panel": "YES",
+      "panel_thin_rules_only": "ESCALATE",
+      "answer_bearing_sources": 3,
+      "evidence_sha256": "bd3e5e98d5a04c1c18817d96525308c7996741c94a40dcc420dcf78f8672dff7",
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The NPB snapshot reports the October 27 Japan Series Game 3 score as Yokohama DeNA 1, Fukuoka SoftBank 2. The Japan Times independently confirms SoftBank won Game 3 in Fukuoka, so the market resolves to Fukuoka."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The NPB snapshot records Game 3 on October 27 as Yokohama DeNA 1, Fukuoka SoftBank 2, and Japan Times independently states SoftBank won Game 3 in Fukuoka. Therefore the market resolves to Fukuoka SoftBank Hawks."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The October 27 game (Japan Series Game 3) was won by Fukuoka SoftBank 2-1 in extra innings per the official NPB snapshot, corroborated by Japan Times and Asahi reporting a SoftBank sweep. The market therefore resolves to \"Fukuoka SoftBank Hawks\" (YES)."
+        }
+      },
+      "archives_available": 0
+    },
+    {
+      "id": "5285913",
+      "question": "Blues vs. Red Wings: O/U 4.5",
+      "uma": "YES",
+      "expected_human": "YES",
+      "panel": "YES",
+      "panel_thin_rules_only": "ESCALATE",
+      "answer_bearing_sources": 3,
+      "evidence_sha256": "3ec7117940c1e7aee44b4a7fe6296dbdee0965cfa5b057a1dfc6e059da3a4a9a",
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Two independent snapshots report the final score as St. Louis 5, Detroit 4, for a combined total of 9 goals. That is at least 5, so the market resolves Over/YES."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The final score was Blues 5, Red Wings 4, for a combined 9 goals, which is over 4.5. Multiple snapshots agree on the 5-4 result."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Two independent sources (NHL gamecenter and MLive recap) agree the final was STL 5, DET 4, a combined 9 goals, which is 5 or more, so the market resolves Over per the rules."
+        }
+      },
+      "archives_available": 1
+    },
+    {
+      "id": "4588336",
+      "question": "3Q Spread: Broncos (-3.5)",
+      "uma": "YES",
+      "expected_human": "YES",
+      "panel": "YES",
+      "panel_thin_rules_only": "ESCALATE",
+      "answer_bearing_sources": 3,
+      "evidence_sha256": "793698f3800c864b8f0e0dde8e44d2112212e557085df395295a836da42ec742",
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Two independent snapshots report the third-quarter score as Broncos 14, Cardinals 7. The Broncos outscored the Cardinals by 7, which is at least 4, so the market resolves to Broncos/YES."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The Broncos outscored the Cardinals 14-7 in the third quarter, a 7-point margin, which is greater than the -3.5 spread. Multiple snapshots agree on the Q3 scoring."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Two independent sources (NFL gamecenter PDF and uponreview) agree the Broncos scored 14 vs the Cardinals' 7 in Q3, a 7-point margin that meets the 4+ point threshold, and the recap is consistent. Therefore the market resolves to \"Broncos\" (YES)."
+        }
+      },
+      "archives_available": 1
+    },
+    {
+      "id": "1281165",
+      "question": "Will the Democratic Party win the CA-34 House seat?",
+      "uma": "YES",
+      "expected_human": "YES",
+      "panel": "YES",
+      "panel_thin_rules_only": "ESCALATE",
+      "answer_bearing_sources": 3,
+      "evidence_sha256": "91e9a339c5f04466a57016206a6ef5aab34c54b26e54921d34b0051bc459d11b",
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Multiple credible snapshots report that Democrat Angela Gonzales-Torres won CA-34 in the November 3, 2026 general election. Therefore the market resolves YES."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Three independent snapshots agree the Democratic nominee Angela Gonzales-Torres won CA-34 in the November 3, 2026 election, and the event window has closed."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Three independent sources (polling-desk.com, LAist, Ballotpedia) consistently report that Democratic candidate Angela Gonzales-Torres won CA-34 in the November 3, 2026 general election, satisfying the market's consensus-of-credible-reporting standard. The election window is complete per the snapshots, so the market resolves Yes."
+        }
+      },
+      "archives_available": 1
+    },
+    {
+      "id": "1284815",
+      "question": "Will the Republican Party win the TX-02 House seat?",
+      "uma": "YES",
+      "expected_human": "YES",
+      "panel": "YES",
+      "panel_thin_rules_only": "ESCALATE",
+      "answer_bearing_sources": 3,
+      "evidence_sha256": "df36ca9bbeb5957600a22337733fabf310032b0287f4eb071a87e91de21f35f5",
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Multiple credible snapshots report Republican Steve Toth won the TX-02 House seat in the November 3, 2026 election. Therefore the market resolves YES."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Two independent sources (Texas Secretary of State results and Ballotpedia) agree that Republican Steve Toth won the TX-02 seat in the November 3, 2026 election."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Multiple independent sources (Texas SOS official results, Ballotpedia, Texas Tribune) agree that Republican Steve Toth won the TX-02 seat in the November 3, 2026 election, satisfying the two-source rule and resolving the market to Yes."
+        }
+      },
+      "archives_available": 3
+    },
+    {
+      "id": "5648379",
+      "question": "Visa (V) Q4 payments volume growth (constant dollars) 9.5% to 10.5%?",
+      "uma": "YES",
+      "expected_human": "NO",
+      "panel": "NO",
+      "panel_thin_rules_only": "ESCALATE",
+      "answer_bearing_sources": 3,
+      "evidence_sha256": "7f4d2d3172e91c520650d58e752443de5764f5f690d38c832c672bd5f573dcdc",
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "NO",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Visa\u2019s official Q4 2026 earnings materials report the specified Q4 payments volume growth in constant dollars as 9% for the quarter ended September 30, 2026. The 10% figure is for a different period (three months ended June 30, 2026) and is not the specified Q4 metric."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "NO",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Visa's reported Q4 2026 payments volume growth in constant dollars was 9%, which is below the 9.5% to 10.5% range. Therefore the market resolves No."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "NO",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Visa's official earnings materials and two independent corroborating sources report Q4 FY2026 payments volume growth (constant dollars) of 9% for the three months ended September 30, 2026, which falls below the 9.5%\u201310.5% bracket, so the market resolves No."
+        }
+      },
+      "archives_available": 1
+    },
+    {
+      "id": "5936743",
+      "question": "Spread: FC Andorra (-2.5)",
+      "uma": "NO",
+      "expected_human": "NO",
+      "panel": "NO",
+      "panel_thin_rules_only": "ESCALATE",
+      "answer_bearing_sources": 3,
+      "evidence_sha256": "2771218d608952e05315bfc8746b25ee4e903514353f8139a0acc53c050a73ba",
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "NO",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The official LaLiga snapshot and ESPN both report the final score as CD Tenerife 2-2 FC Andorra. FC Andorra did not win by 3 or more goals, so the market resolves to CD Tenerife."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "NO",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The match ended 2-2, so FC Andorra did not win by 3+ goals; the market resolves to CD Tenerife (NO). LaLiga and ESPN independently confirm the score."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "NO",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Two independent sources (laliga.com and ESPN) agree the match ended 2-2, so FC Andorra did not win by 3 or more goals. Per the rules, the market resolves to CD Tenerife."
+        }
+      },
+      "archives_available": 1
+    }
+  ],
+  "note": "Hand-curated answer-bearing text with answer_present:true BEFORE panel. Thin rules-only run on same ids escalated; this measures settle vs escalate with real facts."
+}

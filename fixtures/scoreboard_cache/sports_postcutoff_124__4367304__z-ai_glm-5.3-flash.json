@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4367304,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x6ee30072947849dc256e7163a0346101d197339ca825ce09342547823f5f002c50b82a17fd30ba6e75b60f02641dd9d6d2122bec887764c95ca57089c372a0191b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:4c5b759e9d80629bc9841248c95b2124fe22cc20001035e9e22faa85a94e2b24:9e88fc78158bade0f746175655ba37fbe15fb255d00642e754c2e7c206ed4756",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with Arizona 18 and Los Angeles 16, a combined total of 34 points. Since 34 is less than 38, the market resolves to Under, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 933,
+  "total_tokens": 1246,
+  "completion_tokens": 313,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 56,
+  "completion_tokens_details": {
+   "reasoning_tokens": 56
+  }
+ },
+ "cost_usd": 0.00023114,
+ "at": "2026-11-05T10:21:21",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4c5b759e9d80629bc9841248c95b2124fe22cc20001035e9e22faa85a94e2b24",
+ "response_sha256": "9e88fc78158bade0f746175655ba37fbe15fb255d00642e754c2e7c206ed4756"
+}

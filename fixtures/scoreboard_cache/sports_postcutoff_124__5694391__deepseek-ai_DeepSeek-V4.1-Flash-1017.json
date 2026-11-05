@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694391,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x1ff5c38c1149d1c53c4a8d481471d4a4d16dd935898dc0d26c03d45bbcadf4b5612590592b91a5c8b67aa7671f7c3de179e3b5a810f16b2f23a2a831f92177e71c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:649e90cfd0aa8468e22aea39ced38854fee1fc98b789554b76b46e8b05e0a1e3:4846e1fddd9b9854591170999f19feae6220a3fbf44ae257572438f3cfd015d1",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Only OpenLigaDB reports the first-half score (0-0); ESPN provides only the full-time score and no first-half total. Because fewer than two independent sources report the needed first-half goals, the market is ambiguous under the data-quality rules.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1275,
+  "total_tokens": 1618,
+  "completion_tokens": 343,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 176
+  }
+ },
+ "cost_usd": 0.0007941,
+ "at": "2026-11-05T10:22:01",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "649e90cfd0aa8468e22aea39ced38854fee1fc98b789554b76b46e8b05e0a1e3",
+ "response_sha256": "4846e1fddd9b9854591170999f19feae6220a3fbf44ae257572438f3cfd015d1"
+}

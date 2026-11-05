@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5479540,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xff8aad2b346a47b8f7b3c45846a022f0f614765c419285b0b77223bad7736f6279848d31c545155656e0ed99de8549a35d828b1026c2e3b70a6e036c70b1d8ff1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:1c504de7d3be4073e18d9b2529e7364a3a6390a860e417715362a59f37ccc5e1:27dddcfac1959b7c225d9cd7df1442b18b88c7aefceaf3c7d9513ea397d4c197",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "OpenLigaDB's halftime 0-1 implies Wolfsburg scored first, but only one source reports scoring progression; ESPN only confirms the final 1-1. Under the two-independent-source rule for sports stats, the needed first-scorer fact is insufficiently corroborated.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1275,
+  "total_tokens": 2266,
+  "completion_tokens": 991,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 645
+  }
+ },
+ "cost_usd": 0.0015717,
+ "at": "2026-11-05T10:25:49",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "1c504de7d3be4073e18d9b2529e7364a3a6390a860e417715362a59f37ccc5e1",
+ "response_sha256": "27dddcfac1959b7c225d9cd7df1442b18b88c7aefceaf3c7d9513ea397d4c197"
+}

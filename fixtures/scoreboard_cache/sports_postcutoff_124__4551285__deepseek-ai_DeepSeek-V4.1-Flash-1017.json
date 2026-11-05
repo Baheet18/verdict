@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551285,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x2536ad25b58d69fcc2e2f159fe587bc32b9f6518354b279f648459dc8afb7d140a150aaeb3bd5b53af57edaa409aad2ce4935f2c602156269d54c782420b1ac31b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:dd69f7288a7f1045ec31aa83036288086661844b6e4bc3c3da5f10d7ade6b861:a26856d7499c2313231d0c54a6a2981438fbafd41bd71b816839898f0b5c9a5f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with Browns 27, Titans 24, so Browns won.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 991,
+  "total_tokens": 1311,
+  "completion_tokens": 320,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 72
+  }
+ },
+ "cost_usd": 0.0006813,
+ "at": "2026-11-05T10:19:24",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "dd69f7288a7f1045ec31aa83036288086661844b6e4bc3c3da5f10d7ade6b861",
+ "response_sha256": "a26856d7499c2313231d0c54a6a2981438fbafd41bd71b816839898f0b5c9a5f"
+}

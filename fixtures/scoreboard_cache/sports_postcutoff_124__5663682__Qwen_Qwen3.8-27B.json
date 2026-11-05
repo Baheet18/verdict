@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663682,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x2d73385de57ae349c04eaca796b0b5d1b5c3b42f85323f14f3844aecb399a33e2d976610a8389055e05d812669092f5a95ae014522bdef183a624fa9cdd4c0571b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:6799cc13f3e3b46595ddce30b4cdaa231a14e33943862a4012b50dc7d8fc05c1:21c27e62bbc42a9aaa9e819f563597c324dccc2a1650346ab569c767f187f629",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both ESPN and OpenLigaDB report the final score as Rot-Weiss Essen 1, RB Leipzig 2, for a combined total of 3 goals. Therefore the market resolves Over, mapped to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1367,
+  "total_tokens": 2001,
+  "completion_tokens": 634,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 479,
+  "completion_tokens_details": {
+   "reasoning_tokens": 479
+  }
+ },
+ "cost_usd": 0.00091058,
+ "at": "2026-11-05T10:21:56",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6799cc13f3e3b46595ddce30b4cdaa231a14e33943862a4012b50dc7d8fc05c1",
+ "response_sha256": "21c27e62bbc42a9aaa9e819f563597c324dccc2a1650346ab569c767f187f629"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4950277,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x1fb1432493351d4593217b7319d19ac3c3f808d558381d0198af6516d7570dbf4e2b8dd52a2e26cacc3b4e042151dee74ac6a57c012a2d41c3c6e563f46c5b911b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:26bb966e5057351554230ae7df0eefc705e01ce749504aaab526c99f67c4bb50:ed2c58733d8efb734e83558790eb00eed6e6e29db6398e201b4b6fb05525f439",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final sources report the Bruins won 6-0. Therefore the market resolves to Bruins, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1121,
+  "total_tokens": 2225,
+  "completion_tokens": 1104,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 991,
+  "completion_tokens_details": {
+   "reasoning_tokens": 991
+  }
+ },
+ "cost_usd": 0.00153524,
+ "at": "2026-11-05T10:16:11",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "26bb966e5057351554230ae7df0eefc705e01ce749504aaab526c99f67c4bb50",
+ "response_sha256": "ed2c58733d8efb734e83558790eb00eed6e6e29db6398e201b4b6fb05525f439"
+}

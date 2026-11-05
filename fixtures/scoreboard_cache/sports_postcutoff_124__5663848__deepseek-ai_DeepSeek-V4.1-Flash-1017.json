@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663848,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xcdaeba6d24e1c02a4720b26de7eefae935b142125590f20ed836f1855ee7b0a10c993e13fb6204ef42fa3d65e0f0f9484dc3c6578be9ca8de44958330afa25b81b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:3390b836d4b07ca7fe702c0aa455e2a0178e5183912598637d53bea35d4afc08:d18f7737f9916a446891cc65ac962a54025f31ff64442adc4aef61ced2cf4ff9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show Mainz scored 0 goals in the completed match, which is under 3.5.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1290,
+  "total_tokens": 1606,
+  "completion_tokens": 316,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1088
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 101
+  }
+ },
+ "cost_usd": 0.0007662,
+ "at": "2026-11-05T10:22:25",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "3390b836d4b07ca7fe702c0aa455e2a0178e5183912598637d53bea35d4afc08",
+ "response_sha256": "d18f7737f9916a446891cc65ac962a54025f31ff64442adc4aef61ced2cf4ff9"
+}

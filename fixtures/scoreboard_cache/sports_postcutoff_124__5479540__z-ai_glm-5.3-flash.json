@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5479540,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x33d10b6055919c99a9d42dbaaf1e07ec492ccabf450be9fc256fcedd454dffdb6893214ec706d219ebe05ab2383d82eea8386135acd950ce6d8b7bae2ae6a3ec1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:8bf7452b82e07b975181bf4a17203ab7247c65750af7022e08bff49a5bb641ed:eb9e598923f75dd292eb5e2fb939c26c53dc9f35338f1fd40bfb31367896ea94",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Both sources agree the match finished 1-1, but the only datum that identifies the first scorer \u2014 OpenLigaDB's halftime score of Bochum 0, Wolfsburg 1 \u2014 is reported by a single independent source, with ESPN providing no goal timing. Since the decisive score has fewer than two agreeing independent sources, the evidence is insufficient to confirm Wolfsburg scored first.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1251,
+  "total_tokens": 6432,
+  "completion_tokens": 5181,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024
+  },
+  "reasoning_tokens": 4943,
+  "completion_tokens_details": {
+   "reasoning_tokens": 4943
+  }
+ },
+ "cost_usd": 0.0026905799999999997,
+ "at": "2026-11-05T10:33:21",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8bf7452b82e07b975181bf4a17203ab7247c65750af7022e08bff49a5bb641ed",
+ "response_sha256": "eb9e598923f75dd292eb5e2fb939c26c53dc9f35338f1fd40bfb31367896ea94"
+}

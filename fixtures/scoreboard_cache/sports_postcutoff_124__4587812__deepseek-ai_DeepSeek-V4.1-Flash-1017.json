@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4587812,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xcedd9dc6cdd2147cf5528a97d25d7fdf6f5fc0c5670ed8957e98ce69534944dc2001802bce809cb7f246874636dd01caad3c60a7126a55aae961bd588f40ceef1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:a297fcdc4d48b9de578c38eb5e11c8f72e989c6f02b78a3ab51a5bc5c485d65e:d7dec2e3f071cff39550285d28147b9258a8838f11a057b7682768f01fb87904",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show the Rams scored 35 and the Raiders 21, for a combined total of 56 points. Since 56 is less than 59, the market resolves to Under, so the answer is NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 976,
+  "total_tokens": 1249,
+  "completion_tokens": 273,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 90
+  }
+ },
+ "cost_usd": 0.0006204,
+ "at": "2026-11-05T10:20:39",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "a297fcdc4d48b9de578c38eb5e11c8f72e989c6f02b78a3ab51a5bc5c485d65e",
+ "response_sha256": "d7dec2e3f071cff39550285d28147b9258a8838f11a057b7682768f01fb87904"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4882638,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x5b14c85691ab9969aadfb0c84aa626938a1f0e8317b314848ace7943ba4fa71460cf3b02c28327834c9364506fa18a7b0254bce9c5cdb28125dd23286376f8c41b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:791276bf84bce32496ebdc309c65f0fb2a405e41fb2ffaa2c3a94e3fd8d5aa9f:645094a51be892fc25b81f789e9ac7703ac7356e06af8794f63e3b07a02c2b7b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources show the Islanders won 3-2. Therefore the market resolves to Islanders, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1117,
+  "total_tokens": 1489,
+  "completion_tokens": 372,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 135,
+  "completion_tokens_details": {
+   "reasoning_tokens": 135
+  }
+ },
+ "cost_usd": 0.0005468799999999999,
+ "at": "2026-11-05T10:15:35",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "791276bf84bce32496ebdc309c65f0fb2a405e41fb2ffaa2c3a94e3fd8d5aa9f",
+ "response_sha256": "645094a51be892fc25b81f789e9ac7703ac7356e06af8794f63e3b07a02c2b7b"
+}

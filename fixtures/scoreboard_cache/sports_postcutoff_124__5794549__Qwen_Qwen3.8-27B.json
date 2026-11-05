@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5794549,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x709aa30eaeca4ca814b32ece79ce91aaf0433c3457b073a36956c4866154ab8b1f0cb558f67b61f4a8375fc37b0ca2c644fa7d33ec1072d2095880dffac3acb31c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:5d9b379d46fd9199b15d589f379860825229d585b3d9f01f963d64c16090e57e:fda262496d4fa45a9ba8f3a582f38b74a2414e95b22a7e7dd0ae75ba62df6edd",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots confirm the final and halftime scores but do not report the time or scorer of the first goal. Therefore the first-to-score outcome cannot be determined from the provided sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1424,
+  "total_tokens": 2896,
+  "completion_tokens": 1472,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1348,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1348
+  }
+ },
+ "cost_usd": 0.00204416,
+ "at": "2026-11-05T10:24:23",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5d9b379d46fd9199b15d589f379860825229d585b3d9f01f963d64c16090e57e",
+ "response_sha256": "fda262496d4fa45a9ba8f3a582f38b74a2414e95b22a7e7dd0ae75ba62df6edd"
+}

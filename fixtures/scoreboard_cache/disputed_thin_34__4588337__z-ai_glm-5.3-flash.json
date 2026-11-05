@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4588337,
+ "polymarket_id": "4588337",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xfa39746fdfa7681184a16da57a6f56a7fa9a8e45359868bf3ce4fdc5236690f96859ae3ec27d34ccfe5ad002c99363823aa2fcd0045ba334cee1f84eb0269b2e1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:e5bbb778eb40837c5940f73b6deedc90d1938c72f9fe95276bc45293eec38591:f0782f9e9c699f52e81cdd041220535e51ff814347044c83994e9280b6cd0fd3",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The event window has passed (fetched 2026-11-05 vs. game on 2026-10-25), but the only external snapshot is a generic NFL.com scores page shell containing no Broncos\u2013Cardinals third-quarter scoring data, and no snapshot reports the needed statistics. With fewer than two independent sources agreeing on the 3Q scores, the market cannot be resolved.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4560,
+  "total_tokens": 5324,
+  "completion_tokens": 764,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 601,
+  "completion_tokens_details": {
+   "reasoning_tokens": 601
+  }
+ },
+ "cost_usd": 0.0007467999999999999,
+ "at": "2026-11-05T12:01:02",
+ "set": "disputed_thin_34",
+ "request_sha256": "e5bbb778eb40837c5940f73b6deedc90d1938c72f9fe95276bc45293eec38591",
+ "response_sha256": "f0782f9e9c699f52e81cdd041220535e51ff814347044c83994e9280b6cd0fd3"
+}

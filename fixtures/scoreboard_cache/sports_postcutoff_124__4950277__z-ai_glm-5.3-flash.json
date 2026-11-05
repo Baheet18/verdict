@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4950277,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x8880fe48fb386cf1be4514bae43acb116d91894d1f7728daf0013525baf29f5b5b8c59d408298e67682897d6d136de1b3a7d1e3a0b00ae924d0e395655a854fb1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:9c98cdf614996597d58295308d3f20390ca888e16cba7e81e7a1065bae93c9d7:65af007d4f4836cd49c96aa0dd5a3e259b0a99d39e9650993419df5eb361557d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Boston winning 6-0 in regulation, so the market resolves to \"Bruins\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 965,
+  "total_tokens": 1170,
+  "completion_tokens": 205,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 27,
+  "completion_tokens_details": {
+   "reasoning_tokens": 27
+  }
+ },
+ "cost_usd": 0.0001797,
+ "at": "2026-11-05T10:15:52",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9c98cdf614996597d58295308d3f20390ca888e16cba7e81e7a1065bae93c9d7",
+ "response_sha256": "65af007d4f4836cd49c96aa0dd5a3e259b0a99d39e9650993419df5eb361557d"
+}

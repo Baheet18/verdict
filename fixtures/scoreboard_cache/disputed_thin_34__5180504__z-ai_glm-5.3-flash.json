@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5180504,
+ "polymarket_id": "5180504",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x7988824069dd9c5470a7e4cca8f84a617fba73b8dafc552560be69e301e97de9558132265641dd7c232b71d4719b57f5a51b2ea7c9f3ba8de6847f00de101ca41b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:31ac6e92038e5480dc3166965267fc1e0c52b9d2a2bcdb8ea188d02f8e5d2ca5:97a94cc1fb5b25ebd8e74c8b50aa337f2b08cdeae214b83cdb601dd07e0c3286",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The event window has closed (fetched 2026-11-05, after the 2026-11-01 end), but the bundle contains only the market's own rules snapshot\u2014explicitly not a fact source\u2014and no streaming-site snapshots showing whether Drake released a qualifying album by the deadline.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 782,
+  "total_tokens": 1370,
+  "completion_tokens": 588,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 437,
+  "completion_tokens_details": {
+   "reasoning_tokens": 437
+  }
+ },
+ "cost_usd": 0.00035656,
+ "at": "2026-11-05T11:58:24",
+ "set": "disputed_thin_34",
+ "request_sha256": "31ac6e92038e5480dc3166965267fc1e0c52b9d2a2bcdb8ea188d02f8e5d2ca5",
+ "response_sha256": "97a94cc1fb5b25ebd8e74c8b50aa337f2b08cdeae214b83cdb601dd07e0c3286"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285922,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x7a3ca18fcffada0fd131d29791408693c4399b2b973c94e00c9140c74656adb437bd02b8b2bb547e2c9d59b620157c1ae6c0a7f1c14501c1bf84eb63b5935d361b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:f826d907da18e34c4733b90ca08957fb4736ac2775c5c906df6c5f5a2792679e:b2a9c4d9fdb421049b4a061548c3df04eab68e91a205c03424a1568a7c2f814b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show the game final with the Predators winning 5-4 (after a shootout), so the market resolves to \"Predators\" and the verdict is NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 991,
+  "total_tokens": 1248,
+  "completion_tokens": 257,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 45
+  }
+ },
+ "cost_usd": 0.0006057,
+ "at": "2026-11-05T10:14:59",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f826d907da18e34c4733b90ca08957fb4736ac2775c5c906df6c5f5a2792679e",
+ "response_sha256": "b2a9c4d9fdb421049b4a061548c3df04eab68e91a205c03424a1568a7c2f814b"
+}

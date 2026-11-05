@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5179036,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x106efdc102c1c81a23125018fd1de76f31782c261bedd1571314243d6af1afa605f4d5aa18db7eba636fc368ceb7ea1fb1f5cc147c4b8deb4a8ccd3c515261001c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:7616fc6251f488d42739ee8c9e9eb08810ef95e9599912a39605f2ef62da59fe:6bbbd8d07bbd59a3c9a91bcd106f5461c330c161a83d4809305d5f3d5d86a473",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Capitals 5, Flyers 2, so the Capitals won and the market resolves to \"Capitals\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1000,
+  "total_tokens": 1328,
+  "completion_tokens": 328,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 47
+  }
+ },
+ "cost_usd": 0.0006935999999999999,
+ "at": "2026-11-05T10:13:47",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "7616fc6251f488d42739ee8c9e9eb08810ef95e9599912a39605f2ef62da59fe",
+ "response_sha256": "6bbbd8d07bbd59a3c9a91bcd106f5461c330c161a83d4809305d5f3d5d86a473"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4841699,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x324bbc14a2a2037000ac2620029ec68656bb9027f60af4d95cc37f0eb91fa2c5515f6a7982790207ed7b22d3a05a829b7c484322a6f62e117c062affbf0cc1aa1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:840ba258d852194bd0b0d7407abe04731ac5cef14183b4609b2d295b2d0c0dc6:6451d42143f9960b25a07f258e8a5f63333f1305e5ae729361ce63b4f7aa77bd",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources show Utah Mammoth winning 5-4 over Pittsburgh Penguins. Therefore the market resolves to Utah, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1118,
+  "total_tokens": 1562,
+  "completion_tokens": 444,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 286,
+  "completion_tokens_details": {
+   "reasoning_tokens": 286
+  }
+ },
+ "cost_usd": 0.0006441200000000001,
+ "at": "2026-11-05T10:13:34",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "840ba258d852194bd0b0d7407abe04731ac5cef14183b4609b2d295b2d0c0dc6",
+ "response_sha256": "6451d42143f9960b25a07f258e8a5f63333f1305e5ae729361ce63b4f7aa77bd"
+}

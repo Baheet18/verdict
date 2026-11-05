@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285937,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x3d1a8628b25de233cc0c00050e1307d496c04b050ac1fdd96d4b28e1b718d6ea74029a49ab876401256501d8a7938e5ace2766464b104df17a108dd7dafe453e1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:bc71d616f0b30d748380e835c84e6c76d9054485eb2e33732b0a30b18d066a85:5fd0b049d8de2a30d9aa0d251a4dbf3dc5310dac18caa90a361ecc68d30b5b56",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources show the Sabres won 3-2 in regulation. Therefore the market resolves to Sabres, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1117,
+  "total_tokens": 1502,
+  "completion_tokens": 385,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 143,
+  "completion_tokens_details": {
+   "reasoning_tokens": 143
+  }
+ },
+ "cost_usd": 0.00056443,
+ "at": "2026-11-05T10:13:53",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "bc71d616f0b30d748380e835c84e6c76d9054485eb2e33732b0a30b18d066a85",
+ "response_sha256": "5fd0b049d8de2a30d9aa0d251a4dbf3dc5310dac18caa90a361ecc68d30b5b56"
+}

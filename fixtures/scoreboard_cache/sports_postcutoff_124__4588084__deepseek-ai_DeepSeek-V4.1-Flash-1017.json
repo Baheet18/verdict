@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4588084,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x99f3dc13b48826bac434778be348d35ae3c73961d65803056fb3801452e64c543218af02a0a79f20737eb4db1c6f4a1d8ac0c85366c36705d9c0a31bc62fbaec1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:ac264e389a5b1d5c203d717c0291819a88343067f2b4ff307204f4eec4b70725:5bd9fd2486fa09d747def44747542b2a5b914d89e524b61bfaf3d3ef4c56083c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show the game final with Lions 20 and Packers 17, totaling 37 points. Since 37 is less than 45, the market resolves Under, so the answer is NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 976,
+  "total_tokens": 1249,
+  "completion_tokens": 273,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 83
+  }
+ },
+ "cost_usd": 0.0006204,
+ "at": "2026-11-05T10:20:52",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ac264e389a5b1d5c203d717c0291819a88343067f2b4ff307204f4eec4b70725",
+ "response_sha256": "5bd9fd2486fa09d747def44747542b2a5b914d89e524b61bfaf3d3ef4c56083c"
+}

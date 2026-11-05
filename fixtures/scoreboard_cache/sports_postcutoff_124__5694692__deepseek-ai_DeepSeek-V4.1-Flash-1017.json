@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694692,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x9e21924f688d3d6fb76c1ab892163337e1b6f5c58534cf87a591f89e79307592361ca3bd8273025533b07184e401f4cf6d2bd6d3f7f1fe23d94d5196992eaab71b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:6919a88c321b2b58800c2eec9eb2838d7c3129d66e199f1c5858d2825cc57267:59a827e5b0b60494e8ecdb18e638c293e9fc5968f2927c2c4ff08aca54bc1b92",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "OpenLigaDB reports the halftime score as 0-0, implying VfB Stuttgart scored no first-half goals, but ESPN only provides the full-time 0-1 score and no first-half figure. Thus only one independent source reports the needed first-half statistic, so the data-quality rule requires AMBIGUOUS.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1293,
+  "total_tokens": 1863,
+  "completion_tokens": 570,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1088
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 434
+  }
+ },
+ "cost_usd": 0.0010719,
+ "at": "2026-11-05T10:26:39",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6919a88c321b2b58800c2eec9eb2838d7c3129d66e199f1c5858d2825cc57267",
+ "response_sha256": "59a827e5b0b60494e8ecdb18e638c293e9fc5968f2927c2c4ff08aca54bc1b92"
+}

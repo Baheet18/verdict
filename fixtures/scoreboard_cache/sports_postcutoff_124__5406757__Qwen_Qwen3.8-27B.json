@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406757,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x43e15611329f8ec33a85f32f31e6b94f1e69002010f2c507766b20bb8be4b3f22f63f8b1fb6e9f6dcb80d5a8217a941200bfab6d6b64f91e9c2f86147cb0c4671b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:3e8fc7458e9132e3b4c3cc145a6d20ec14f51bad0cf2fddd0f9c496ca0d572fb:f3952ddf90aef8ed812d9519ca804471e1a4234e42a43dd324f15661cec6541d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources show the Lightning winning 4-2. Therefore the market resolves to Lightning, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1112,
+  "total_tokens": 2226,
+  "completion_tokens": 1114,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 877,
+  "completion_tokens_details": {
+   "reasoning_tokens": 877
+  }
+ },
+ "cost_usd": 0.00154838,
+ "at": "2026-11-05T10:14:00",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "3e8fc7458e9132e3b4c3cc145a6d20ec14f51bad0cf2fddd0f9c496ca0d572fb",
+ "response_sha256": "f3952ddf90aef8ed812d9519ca804471e1a4234e42a43dd324f15661cec6541d"
+}

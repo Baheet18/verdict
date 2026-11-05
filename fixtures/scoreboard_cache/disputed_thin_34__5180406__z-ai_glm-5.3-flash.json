@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5180406,
+ "polymarket_id": "5180406",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x7f437d34795bf2c545946f2c75ed041ff668b9a74668d70f8fdbb604586a0b1e5db1526f0c8718f5edd23e4d703da8538568b24d12970096aa9c46f5636671d51b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:f469c8392d02a56f15df11148f11a7993089ea27caf03f889f4dc1c110dd2457:2a335c886f8e5fe3bb992e2fbd6ff4cf8a074329130dc47ce64e2424f23d8869",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The event window has passed (market_end 2026-11-01T03:59:00Z, snapshot fetched 2026-11-05), but the bundle contains no external reporting on market-cap rankings\u2014only the market's own description, which is explicitly noted as not an external fact source\u2014so the required consensus of credible reporting cannot be established.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 603,
+  "total_tokens": 1486,
+  "completion_tokens": 883,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 732,
+  "completion_tokens_details": {
+   "reasoning_tokens": 732
+  }
+ },
+ "cost_usd": 0.00048974,
+ "at": "2026-11-05T11:45:03",
+ "set": "disputed_thin_34",
+ "request_sha256": "f469c8392d02a56f15df11148f11a7993089ea27caf03f889f4dc1c110dd2457",
+ "response_sha256": "2a335c886f8e5fe3bb992e2fbd6ff4cf8a074329130dc47ce64e2424f23d8869"
+}

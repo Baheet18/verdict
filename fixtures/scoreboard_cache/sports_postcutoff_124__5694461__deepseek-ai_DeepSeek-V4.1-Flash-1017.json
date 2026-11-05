@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694461,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x3b89d9c8a0c92b5aa456bf13b3675e34358196302271cab9bb7249c697d113277858b6c562ab63efb480509d6ac58e701eb25fc50944c73a54443da9752197da1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:6eddc913d35c6962410bba64feecec925ce2b211227c1cdcd9bac0b240d098cd:0ecd374d82b8e70c62e8086728618f2a7c26eaf13e1bb4a5606629573367f4a9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show a final score of Dynamo Dresden 2\u20130 Schalke 04, for 2 combined goals. Since 2 is less than 6, the market resolves to Under/NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1234,
+  "total_tokens": 1634,
+  "completion_tokens": 400,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 78
+  }
+ },
+ "cost_usd": 0.0008502,
+ "at": "2026-11-05T10:25:49",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6eddc913d35c6962410bba64feecec925ce2b211227c1cdcd9bac0b240d098cd",
+ "response_sha256": "0ecd374d82b8e70c62e8086728618f2a7c26eaf13e1bb4a5606629573367f4a9"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663791,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x39f7040f843639f1bb9ee0771269323b3aafb6d436877d0967c50edff9256aab7c60ecaa6518b911fbc84927aca8eaa724862c88da14b7b70ba4cf6907c2c6b31b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:07432a8fd12e219a579a6c3766f70d73d5a5bdbddc8eea91ef4d31f8bc85b04f:f110e70dbb275549a6e824ecef9bcba06f5257557c20416a92238afb08a5ac1f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Only one snapshot reports the first-half score (0-0), while the other reports only the final score. The required first-half total therefore lacks two independent agreeing sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1399,
+  "total_tokens": 1837,
+  "completion_tokens": 438,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 359,
+  "completion_tokens_details": {
+   "reasoning_tokens": 359
+  }
+ },
+ "cost_usd": 0.00064726,
+ "at": "2026-11-05T10:26:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "07432a8fd12e219a579a6c3766f70d73d5a5bdbddc8eea91ef4d31f8bc85b04f",
+ "response_sha256": "f110e70dbb275549a6e824ecef9bcba06f5257557c20416a92238afb08a5ac1f"
+}

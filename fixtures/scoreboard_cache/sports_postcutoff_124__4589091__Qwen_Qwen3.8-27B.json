@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4589091,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x80541a640e724c1f2875a7742eb8337bac9270161a7d5a2e42358ad28c9c0196188df46086dbf2f2de05e83b5f8727647f46b93800643dc1fa849dca2d8cffc71b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:ae83cd8098f8dcdf3b084f1fda894d2af0599b85fde086cbcb09ad193160a645:61957ec3141b14ebec1228a21405db0fe62b1aa93581f0161f8dffb0ec0dce7f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Minnesota 16, Indianapolis 10. The Vikings won by 6 points, so the market resolves to Vikings and the verdict is YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1099,
+  "total_tokens": 1519,
+  "completion_tokens": 420,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 162,
+  "completion_tokens_details": {
+   "reasoning_tokens": 162
+  }
+ },
+ "cost_usd": 0.00061096,
+ "at": "2026-11-05T10:20:33",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ae83cd8098f8dcdf3b084f1fda894d2af0599b85fde086cbcb09ad193160a645",
+ "response_sha256": "61957ec3141b14ebec1228a21405db0fe62b1aa93581f0161f8dffb0ec0dce7f"
+}

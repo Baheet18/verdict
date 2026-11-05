@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5329751,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x35c7fe985f46f165873e6344f16b2e946a14866106fbc0d906b868b7e34e15cb0a8819d3833c041c81a8031980b492f221f2f7b463038a4d00d485c9634ad13e1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:4b7eabb952d2f799123c996994c290f3d3b3543a25b345ba57c2b796ce1589ac:f5a842f6dc175e540a43d01c039a28e0c762341a050d8bdc0776b651831be794",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Wild defeated the Capitals 5-1 in regulation, and the game is final. Per the rules, the market resolves to \"Wild\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 959,
+  "total_tokens": 1171,
+  "completion_tokens": 212,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 28,
+  "completion_tokens_details": {
+   "reasoning_tokens": 28
+  }
+ },
+ "cost_usd": 0.00018271999999999999,
+ "at": "2026-11-05T10:16:46",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4b7eabb952d2f799123c996994c290f3d3b3543a25b345ba57c2b796ce1589ac",
+ "response_sha256": "f5a842f6dc175e540a43d01c039a28e0c762341a050d8bdc0776b651831be794"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5127646,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x20b05c625bd3940dc546bb7b5b736b0846146821dcc34be57a3c1ed695d194880d27e851e90a6a002d98eab2b9ed65fa2486ab1ec4a0136395245caffc68a1131c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:315c8a5207ea7438237a7b18904c3f702cb4966013f29a0e5a85921cdc67e1a5:f6a9fbe4ca7b16f952474931bb6f4d5f9441af9bfcbf678d7f150f7c9e82e3a3",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent snapshots report final scores of Pittsburgh 26 and Tampa Bay 19, totaling 45. The total is at least 37, so the market resolves Over/YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1123,
+  "total_tokens": 1961,
+  "completion_tokens": 838,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 569,
+  "completion_tokens_details": {
+   "reasoning_tokens": 569
+  }
+ },
+ "cost_usd": 0.00117622,
+ "at": "2026-11-05T10:21:18",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "315c8a5207ea7438237a7b18904c3f702cb4966013f29a0e5a85921cdc67e1a5",
+ "response_sha256": "f6a9fbe4ca7b16f952474931bb6f4d5f9441af9bfcbf678d7f150f7c9e82e3a3"
+}

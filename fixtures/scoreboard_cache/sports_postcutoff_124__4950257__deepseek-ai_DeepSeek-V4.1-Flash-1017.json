@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4950257,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x4d41ab165c82bd6623e62f01a8684650e204e61f59e1892c7941e9c2858b7a0622394becd917a527a0532a91b812f5ef235fc47c6b0d113a6294996d9632c0fd1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:74b957e51926ad28c1b8aa1967a3a81b618bca4f0c8047f63eb586e653d7e7ff:d670931f3034a9974fed38a0449c25abbdf429273fc0ccc04b72547ca732d6be",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with Maple Leafs 5, Rangers 4, so the market resolves to \"Maple Leafs\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 998,
+  "total_tokens": 1358,
+  "completion_tokens": 360,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 78
+  }
+ },
+ "cost_usd": 0.0007314,
+ "at": "2026-11-05T10:15:28",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "74b957e51926ad28c1b8aa1967a3a81b618bca4f0c8047f63eb586e653d7e7ff",
+ "response_sha256": "d670931f3034a9974fed38a0449c25abbdf429273fc0ccc04b72547ca732d6be"
+}

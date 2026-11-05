@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4588384,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x9fac1fd647b5290061bca92dc45036d71a6ec2ef222c7578ede5788368b437dc758a5e18aa18e4537f77cb54f3afce1344a255659d57fd67f00402322a6188dd1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:5622c9e77dd73096e08dcba555e71338d8543db015f093fdfa06b395497c89be:e0faaf485d90ca2b53f421f640a5a03fe3cd922b619b96b2b7abb932eae81f51",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show the game final with Denver 30 and Arizona 16, for a combined total of 46. Since 46 is less than 51, the market resolves Under, so the answer is NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 979,
+  "total_tokens": 1227,
+  "completion_tokens": 248,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 72
+  }
+ },
+ "cost_usd": 0.0005913,
+ "at": "2026-11-05T10:20:34",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5622c9e77dd73096e08dcba555e71338d8543db015f093fdfa06b395497c89be",
+ "response_sha256": "e0faaf485d90ca2b53f421f640a5a03fe3cd922b619b96b2b7abb932eae81f51"
+}

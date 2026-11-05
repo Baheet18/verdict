@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4329882,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x478cb07138c2a416a5076786c205fd80a08c23680b97f184719e5036a30b0c9b69331dede50aa7fa88f8cc6cbd6d83927f972a46bbd7bbe1041480f92de3cb451b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:65fe2291af04061a351e41e86833e0819cd4787ec195180a2df5058d89b574c4:87a1c537684942eaaed14dd141e98803b35a3b556d455206ee31f70cf4bff766",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the game as final with Houston Texans winning 34-31. Therefore the market resolves to Texans, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1123,
+  "total_tokens": 2129,
+  "completion_tokens": 1006,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 717,
+  "completion_tokens_details": {
+   "reasoning_tokens": 717
+  }
+ },
+ "cost_usd": 0.00140302,
+ "at": "2026-11-05T10:18:54",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "65fe2291af04061a351e41e86833e0819cd4787ec195180a2df5058d89b574c4",
+ "response_sha256": "87a1c537684942eaaed14dd141e98803b35a3b556d455206ee31f70cf4bff766"
+}

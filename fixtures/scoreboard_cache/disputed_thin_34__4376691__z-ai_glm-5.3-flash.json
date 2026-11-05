@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4376691,
+ "polymarket_id": "4376691",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xa0691e6b90f03a61bd860a152b3f23ce1fefee3db30e9639eb0ed3bc81821aac44ade334ecccdc480a97cd3041efeb2671eb6a3e269e1fe89d324e2d9678be871b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:51db9689be2b8f6ac3dc226e9d60e9b44008e95d5d273bf0b99dc7ab3abd90e0:afd0a9b8dff29761329f1a20c92032a9a29a58043e4c1af4d53ab5440f6c2d5c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The event window has closed (snapshot fetched 2026-11-05, after the September 30, 2026 deadline), but the bundle contains only the market rules and no external reporting on whether Iran executed a qualifying strike against Iraq, so the outcome cannot be determined from the snapshots.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1678,
+  "total_tokens": 2412,
+  "completion_tokens": 734,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 599,
+  "completion_tokens_details": {
+   "reasoning_tokens": 599
+  }
+ },
+ "cost_usd": 0.00050124,
+ "at": "2026-11-05T11:39:38",
+ "set": "disputed_thin_34",
+ "request_sha256": "51db9689be2b8f6ac3dc226e9d60e9b44008e95d5d273bf0b99dc7ab3abd90e0",
+ "response_sha256": "afd0a9b8dff29761329f1a20c92032a9a29a58043e4c1af4d53ab5440f6c2d5c"
+}

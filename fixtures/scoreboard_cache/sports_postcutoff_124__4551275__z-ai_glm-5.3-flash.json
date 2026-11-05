@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551275,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x914ad69e1035978ba8caa8e0441c58f3f47abc3d79f5b17782c9bc3f80acaccc526072996f681e9ff230a5d1e8aa479073a10608c329b1aae7ffe2edcbe961c41c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:f64ac5622be0a4bc825e2b7de6e6653af8a19b97fec32e921c41a4fd59cca866:a730571e5d6613a19e7f9183f06165a6e2e625a6794b0792a75e19eca5278512",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the Buccaneers defeated the Panthers 43-13 in the October 25 game, which is Final/completed, so the market resolves to Buccaneers.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 960,
+  "total_tokens": 1179,
+  "completion_tokens": 219,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 51,
+  "completion_tokens_details": {
+   "reasoning_tokens": 51
+  }
+ },
+ "cost_usd": 0.0001863,
+ "at": "2026-11-05T10:17:12",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f64ac5622be0a4bc825e2b7de6e6653af8a19b97fec32e921c41a4fd59cca866",
+ "response_sha256": "a730571e5d6613a19e7f9183f06165a6e2e625a6794b0792a75e19eca5278512"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5662514,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x9d88feb2615550bda564927574c6e34bd499ef920c0108c4f9a3df4cb30cd09e09ab0bc3dc8d7e0c823629cf768596953606f475a7b5cf3f79f7632e967157801b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:953cca9652d83c2c741a4f58e999b27a4a8a664d4b8fe5f66c6556f314fb66b0:26376ded5080a85a113f1e82e84838e2a3fb075e0564b5743ed4a09748c69d63",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "OpenLigaDB's halftime result of Rot-Weiss Essen 1, RB Leipzig 0 shows Essen scored first, and ESPN's independent final score of 1-2 agrees with OpenLigaDB's final. Since RB Leipzig did not score first, the market resolves to Rot-Weiss Essen, mapping to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1222,
+  "total_tokens": 1736,
+  "completion_tokens": 514,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 315,
+  "completion_tokens_details": {
+   "reasoning_tokens": 315
+  }
+ },
+ "cost_usd": 0.00035476,
+ "at": "2026-11-05T10:23:54",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "953cca9652d83c2c741a4f58e999b27a4a8a664d4b8fe5f66c6556f314fb66b0",
+ "response_sha256": "26376ded5080a85a113f1e82e84838e2a3fb075e0564b5743ed4a09748c69d63"
+}

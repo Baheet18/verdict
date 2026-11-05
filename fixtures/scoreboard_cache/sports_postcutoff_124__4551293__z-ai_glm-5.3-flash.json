@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551293,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x99d3ae6f472533d132298c8ac4c95502a59058cdf0580db38285d7c47ab8a47533fa41b19040fb679f2f2b06e7fb9f09c208b2fe1a9c859545f3722f49d7b0661c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:d99eb45300ce9840b0b83e96942914ec16e3ea48a37dd011f4f7024225dc3f31:a095b8159a5b5e830b19c7a60763a142acbb963c40c1ffcc96aacbc6a1280bc8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Lions beat the Packers 20-17 in the final, so the market resolves to \"Lions\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 958,
+  "total_tokens": 1148,
+  "completion_tokens": 190,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 26,
+  "completion_tokens_details": {
+   "reasoning_tokens": 26
+  }
+ },
+ "cost_usd": 0.00017164,
+ "at": "2026-11-05T10:18:28",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "d99eb45300ce9840b0b83e96942914ec16e3ea48a37dd011f4f7024225dc3f31",
+ "response_sha256": "a095b8159a5b5e830b19c7a60763a142acbb963c40c1ffcc96aacbc6a1280bc8"
+}

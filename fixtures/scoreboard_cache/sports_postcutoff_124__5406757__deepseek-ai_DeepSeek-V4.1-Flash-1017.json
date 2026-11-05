@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406757,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xef7d68f7ce0373df9d1c2c5730a1908505555f3dba24ff758b45f0437ef2d5884bfb340a0819c5cc8327575b3b9a6feeee2160658ddf0a877af81284a75e9b681b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:438a062ad2d64dd5ecf1494947b018ecc220837a26fed1526277e4ac6a273897:b36ccf83ce1a7a20911d062824706f6c843750e90bcd4a30b55e8b561391732e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show the game final with the Lightning winning 4-2, so the market resolves to \"Lightning\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 996,
+  "total_tokens": 1314,
+  "completion_tokens": 318,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "created_cache_tokens": 960
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 41
+  }
+ },
+ "cost_usd": 0.0006804000000000001,
+ "at": "2026-11-05T10:13:40",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "438a062ad2d64dd5ecf1494947b018ecc220837a26fed1526277e4ac6a273897",
+ "response_sha256": "b36ccf83ce1a7a20911d062824706f6c843750e90bcd4a30b55e8b561391732e"
+}

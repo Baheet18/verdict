@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "market_id": 5648378,
+ "polymarket_id": "5648378",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xc6501b824ad619db0ca76518ba45b0cd20738e38a770628e56d9a54a97b489765b2246a24e5ce461532588d04693074ab306d98f5e29370584df792cf552eb371b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:90bb0a26eccb89cfc42ea5e490372c5b960c850b3af15b22b0288e405d344770:2777d362064db63376a036ef2953003dfa16c3fb1627b8293bdae2356b327f4d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "None of the snapshots contain Visa's reported Q4 payments volume growth (constant dollars) figure; the official source is only an investor relations homepage shell and the other sources are generic background pages. With no reported metric value in evidence, the bracket cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 11838,
+  "total_tokens": 12078,
+  "completion_tokens": 240,
+  "prompt_tokens_details": {
+   "cached_tokens": 320,
+   "created_cache_tokens": 11456
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 88
+  }
+ },
+ "cost_usd": 0.0038394,
+ "at": "2026-11-05T12:33:27",
+ "evidence_sha256": "f583808794695db0f40daff00b08ad2901ff9b4d33288a18d6da5457032ae42e",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "90bb0a26eccb89cfc42ea5e490372c5b960c850b3af15b22b0288e405d344770",
+ "response_sha256": "2777d362064db63376a036ef2953003dfa16c3fb1627b8293bdae2356b327f4d"
+}

@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 3741671,
+ "polymarket_id": "3741671",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x946e87fbaa13b150ab8038897d9938ec04f3ca36228b49d1e118b120cd6242e118aaf54e5dfcdb00dcc0a6cbcd998dfc233527172ab5fbac92e6867ca335a07c1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:1c8d403bf606a94fbdb39e393aa091a55c7538054b9feeac53e30bd8855b6c1e:5cb03d4f268e5f722179ee60cf16c32d871081f2f0be59a3683aa1d3331d6b3c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The bundle contains only the market rules/description snapshot and no external factual reporting on whether any Russia-Ukraine diplomatic meeting occurred by the deadline. With no evidence of the underlying event, the outcome cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 958,
+  "total_tokens": 1178,
+  "completion_tokens": 220,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 704
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 93
+  }
+ },
+ "cost_usd": 0.0005514000000000001,
+ "at": "2026-11-05T11:34:18",
+ "set": "disputed_thin_34",
+ "request_sha256": "1c8d403bf606a94fbdb39e393aa091a55c7538054b9feeac53e30bd8855b6c1e",
+ "response_sha256": "5cb03d4f268e5f722179ee60cf16c32d871081f2f0be59a3683aa1d3331d6b3c"
+}

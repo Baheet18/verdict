@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694391,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x27f9652390373bbfdf20644d67c88eb9f77ca81e7272972e250dc10e2cb9079a1f414cf91675b007946d1d00d3cbe4b9eb7af5284d384aa01280187a0bb9299b1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:2b04cc08a6da5abe68430a33478c0b7af2886daff6a5ced0d3278670e2d36b67:a1e9f1cd226b3807f03cb18c4e236ce2858b737c12d8f82b570f5f33504784ed",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots agree the final score was 0-2, so the combined first-half total could not have reached 3. OpenLigaDB also reports the half-time score as 0-0, confirming Under.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1424,
+  "total_tokens": 5216,
+  "completion_tokens": 3792,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 3589,
+  "completion_tokens_details": {
+   "reasoning_tokens": 3589
+  }
+ },
+ "cost_usd": 0.00517616,
+ "at": "2026-11-05T10:23:28",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "2b04cc08a6da5abe68430a33478c0b7af2886daff6a5ced0d3278670e2d36b67",
+ "response_sha256": "a1e9f1cd226b3807f03cb18c4e236ce2858b737c12d8f82b570f5f33504784ed"
+}

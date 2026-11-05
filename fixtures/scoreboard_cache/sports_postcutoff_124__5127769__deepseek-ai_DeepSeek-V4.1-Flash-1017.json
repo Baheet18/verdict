@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5127769,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xdfb5d0ce59fabcefecedeec6d278248201fe7c2c4517475bc5a1db4c5a6ddf5e1789ea6eb686b5bc0178a97cda1cffe9dd66a7258073832c48df2661995a69d11c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:808a88f911165c9cea9c6f9a280391cf71124985b6fba69724d476c5816d5476:dfbc5cee024cca6e43c1e14906083d3df766e2a9cc5c214f35d910e1748cf446",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show the Eagles scored 14 while the Panthers scored 25, so the Eagles did not win by 9 or more. The market therefore resolves to Panthers, i.e. NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 978,
+  "total_tokens": 1233,
+  "completion_tokens": 255,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 83
+  }
+ },
+ "cost_usd": 0.0005993999999999999,
+ "at": "2026-11-05T10:19:48",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "808a88f911165c9cea9c6f9a280391cf71124985b6fba69724d476c5816d5476",
+ "response_sha256": "dfbc5cee024cca6e43c1e14906083d3df766e2a9cc5c214f35d910e1748cf446"
+}

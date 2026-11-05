@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 2645614,
+ "polymarket_id": "2645614",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xd3d16be452b95df531c66f9eb4e4554de9d51e4f6d5cd53f974b1474accc689a425c5742effdb0274dd77c85c5dc23bf1c9f2d1346add0d6a609b4d83dc8dd001c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:7630f9dcc0a9f7afccf25cfe1cfd38ad247d5a7067508157237bd2494b0aca92:c14d7bc3fbac6641304e1016455125f4f0c13d4ef6c9d1e2e15bc356018d40fb",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market's own rules text (explicitly flagged as not an external fact source) and no snapshots reporting VanVleet's contract or team status as of the October 31, 2026 deadline, so whether he joined/remained with Houston cannot be determined. The window has passed (snapshot fetched 2026-11-05 vs. market_end 2026-11-01), but the factual evidence needed to resolve \u2026",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 941,
+  "total_tokens": 1791,
+  "completion_tokens": 850,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 654,
+  "completion_tokens_details": {
+   "reasoning_tokens": 654
+  }
+ },
+ "cost_usd": 0.00050028,
+ "at": "2026-11-05T11:35:46",
+ "set": "disputed_thin_34",
+ "request_sha256": "7630f9dcc0a9f7afccf25cfe1cfd38ad247d5a7067508157237bd2494b0aca92",
+ "response_sha256": "c14d7bc3fbac6641304e1016455125f4f0c13d4ef6c9d1e2e15bc356018d40fb"
+}

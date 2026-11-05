@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5126663,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xe9112a394a8c605869768c269a6cf6bed4ec5981ed7b9fd110c8e359fe612d8362e3cb63e1336c3feeb308e9b614badc49a8cd5498e84eccb5d3c8c5fad4ced91b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:f6bda32aefd2cd90a190966d57ba6763d7d338d2865485063ad79e8934c76c33:6f3b0bea95765eae118982f990973421cc9e6d78831a8981e031950a7a519b0a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent final-score snapshots show the Red Wings beating the Oilers 4-3, so the market resolves to Red Wings.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 999,
+  "total_tokens": 1625,
+  "completion_tokens": 626,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 486
+  }
+ },
+ "cost_usd": 0.0010509,
+ "at": "2026-11-05T10:14:13",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f6bda32aefd2cd90a190966d57ba6763d7d338d2865485063ad79e8934c76c33",
+ "response_sha256": "6f3b0bea95765eae118982f990973421cc9e6d78831a8981e031950a7a519b0a"
+}

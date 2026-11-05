@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551273,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x7e0f9dffa0c1c7d6abef288f21a12b461e37beb731c2b92297f300ede2914e6e3ad6abc97fcc6f47538fef4b27d4495319013a14464d6f963e1271190f509ec81b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:a9ea61ec59e9023ccba47c5b01d95a48a872598244c3d4306050216a28b728ec:60e2d21f2bde674902383382f7ec906558525bb73f48d647455f340dca5be895",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the Bengals defeated the Ravens 35-13 in the final game, so the market resolves to \"Bengals\" and the verdict maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 967,
+  "total_tokens": 1212,
+  "completion_tokens": 245,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 67,
+  "completion_tokens_details": {
+   "reasoning_tokens": 67
+  }
+ },
+ "cost_usd": 0.00019986,
+ "at": "2026-11-05T10:18:49",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "a9ea61ec59e9023ccba47c5b01d95a48a872598244c3d4306050216a28b728ec",
+ "response_sha256": "60e2d21f2bde674902383382f7ec906558525bb73f48d647455f340dca5be895"
+}

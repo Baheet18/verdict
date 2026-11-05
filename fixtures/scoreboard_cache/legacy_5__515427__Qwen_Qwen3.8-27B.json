@@ -1,0 +1,17 @@
+{
+ "market_id": "515427",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x6acc39ad4b6be542387472d32c52887157435c5898f6e258ee1494d492fc3652111c55fcbd692831ed926d5b771538d9d446604fc876e11606f545a7dcbe83181b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:eb769faacd825cc3b28aa918eb62182c0600673eee7ed11296433ae89d07a7ab:8c178e1ca610838cd0384ec3213e13ce9c7dc413aa5740fa5968138ab7078549",
+  "signing_algo": "ecdsa"
+ },
+ "label": "Signature valid \u00b7 hardware check pending",
+ "request_sha256": "eb769faacd825cc3b28aa918eb62182c0600673eee7ed11296433ae89d07a7ab",
+ "response_sha256": "8c178e1ca610838cd0384ec3213e13ce9c7dc413aa5740fa5968138ab7078549",
+ "set": "legacy_5",
+ "ok": true,
+ "outcome": "NO",
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26"
+}

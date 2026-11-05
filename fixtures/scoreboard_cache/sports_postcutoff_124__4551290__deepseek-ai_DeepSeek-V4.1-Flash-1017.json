@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551290,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x1b36c3c34e10eb43253f1946d7f0b55e67c7c46de794f96a72382d031c89727c7b90a648699e3d992937a20045bd7796dcf1fa65460c6d318b2037cc5183d1fa1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:371214b0b5ba08ed161163fbc4a2fc431fbace83bd6acd4bc236aa9610440391:b9393ebe0d0c662dfe260e4e1166ecc7714a9c0b3592989003789143f2d414f8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with Broncos 30, Cardinals 16, so Broncos won and the market resolves YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 985,
+  "total_tokens": 1314,
+  "completion_tokens": 329,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 50
+  }
+ },
+ "cost_usd": 0.0006903,
+ "at": "2026-11-05T10:19:38",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "371214b0b5ba08ed161163fbc4a2fc431fbace83bd6acd4bc236aa9610440391",
+ "response_sha256": "b9393ebe0d0c662dfe260e4e1166ecc7714a9c0b3592989003789143f2d414f8"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5658092,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x9ccd7ae05240059547bb7f5c4922105bffe3a4d85ac756749a6e18232e3920db53ff9c9a46dc6ac5c787cacf6c4b559b1c963772b438cc31d159c6f924b282061b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:deb6edf7197b11860f3c3b0a04af0b02fb1d241d7ead22443ae27fb088e49bb8:055821a9c1cf230babd8b08b9612942e7a1d24cd0ea77a92f993f1034d4f3516",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Commanders won 27-10, a margin of 17 points, which is less than the required 22-point margin for the -21.5 spread. Therefore the market resolves to Eagles, mapping to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 958,
+  "total_tokens": 1205,
+  "completion_tokens": 247,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 75,
+  "completion_tokens_details": {
+   "reasoning_tokens": 75
+  }
+ },
+ "cost_usd": 0.00020014,
+ "at": "2026-11-05T10:20:10",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "deb6edf7197b11860f3c3b0a04af0b02fb1d241d7ead22443ae27fb088e49bb8",
+ "response_sha256": "055821a9c1cf230babd8b08b9612942e7a1d24cd0ea77a92f993f1034d4f3516"
+}

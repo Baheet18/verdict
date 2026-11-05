@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5127931,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x82c52729a2af8087ba1a99be4716a15a6d72437ed7c66153ac9e2002ada2824875865ce9f53eb21eb9c736f8244919a5752031835d963db9ec663f54404daf551b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:c10690955707c329c619790af92ad58ff46a525ab51f2407fd963df0c4ebeebf:918a178bf8faa2e76ce68d47e88414d0f3b45ee3dc44bf0d52cdcfdbcd00cced",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show the game final with Panthers 25 and Eagles 14, totaling 39 points, which is under 58.5. Therefore the market resolves to Under, so the answer is NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 972,
+  "total_tokens": 1220,
+  "completion_tokens": 248,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 73
+  }
+ },
+ "cost_usd": 0.0005892,
+ "at": "2026-11-05T10:21:30",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "c10690955707c329c619790af92ad58ff46a525ab51f2407fd963df0c4ebeebf",
+ "response_sha256": "918a178bf8faa2e76ce68d47e88414d0f3b45ee3dc44bf0d52cdcfdbcd00cced"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551282,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xccf7328ce9b5f7d3dfc96a893298a4c476cdb884e626dd470dcb5e8e60b7106e523526f824fd76f3333d83653772b1aed01fdd5577cfe9623c9888dd6eb1054a1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:5bf375575f921627691d473b5effb916c8ec12f68d2115becbd80b3601078827:7cbed1741d33fd9de4803d046172fc054163b5fe6d67f5cf4ac556a1aae2409a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Vikings beat the Colts 16-10 in the final, so the market resolves to \"Vikings\", mapping to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 957,
+  "total_tokens": 1132,
+  "completion_tokens": 175,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 25,
+  "completion_tokens_details": {
+   "reasoning_tokens": 25
+  }
+ },
+ "cost_usd": 0.00016406,
+ "at": "2026-11-05T10:17:47",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5bf375575f921627691d473b5effb916c8ec12f68d2115becbd80b3601078827",
+ "response_sha256": "7cbed1741d33fd9de4803d046172fc054163b5fe6d67f5cf4ac556a1aae2409a"
+}

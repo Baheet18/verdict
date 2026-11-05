@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5156493,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x6b9ca0fdeb80403b4427d740ff677adcadab1aac459be53d4a4d3a705b63448167ed100e47bce79e386e7cadcc85ac33fdadfc209b6fbafd25a74b8f0ab4d2b31c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:f1b1dccf61e7335f16a2ca3071ad845a07ec90ba64831963166ef5f72adaa090:ce43d7eec4a9f3840642e7b5db1334f33b689b274d9d78979e0d64964b23e6b2",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Blackhawks 2, Kings 1, so the Blackhawks won and the market resolves to \"Blackhawks\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 992,
+  "total_tokens": 1323,
+  "completion_tokens": 331,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 46
+  }
+ },
+ "cost_usd": 0.0006948,
+ "at": "2026-11-05T10:13:12",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f1b1dccf61e7335f16a2ca3071ad845a07ec90ba64831963166ef5f72adaa090",
+ "response_sha256": "ce43d7eec4a9f3840642e7b5db1334f33b689b274d9d78979e0d64964b23e6b2"
+}

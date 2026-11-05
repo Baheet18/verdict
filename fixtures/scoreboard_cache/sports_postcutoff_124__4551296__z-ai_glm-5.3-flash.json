@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551296,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x53fa57701036f1d382d7dfa326869a350bdd72284ac1dc1d186c6110990b1081651b407112f81af2755635bfc9736a53b7cd15c377b82497119e65a3e2b07ec41b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:77c7470da0ee78f7e4e28f6292d151c45e22d3c6eaa984d991957f873438996a:fbc7a61485101f13ef4c0eb3832ffd89426b24fb6c3fa87d29f3de1712ef817b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Seahawks defeated the Chiefs 20-3 in the final game, so the market resolves to \"Seahawks\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 954,
+  "total_tokens": 1147,
+  "completion_tokens": 193,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 25,
+  "completion_tokens_details": {
+   "reasoning_tokens": 25
+  }
+ },
+ "cost_usd": 0.00017282000000000002,
+ "at": "2026-11-05T10:16:56",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "77c7470da0ee78f7e4e28f6292d151c45e22d3c6eaa984d991957f873438996a",
+ "response_sha256": "fbc7a61485101f13ef4c0eb3832ffd89426b24fb6c3fa87d29f3de1712ef817b"
+}

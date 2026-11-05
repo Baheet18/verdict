@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5126658,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x1988c1c0ea348509d8144b8893b3838e5f0382c46a2d27381df779a18e739b835fe063194b51ea1d3ac6be370a98890417557f3c49596a1bf3ed314ef252f80b1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:a62d6738bbe5a176c0039c6273d7d501e49ee712b34690fc6d938ebae136eb5f:b20472e222e698c0ce27b02a480bf4d13de508223bcf0767ae1f00cc331aace8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources show the game final with Flames winning 5-2 over the Maple Leafs, so the market resolves to \"Flames\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1002,
+  "total_tokens": 1223,
+  "completion_tokens": 221,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "created_cache_tokens": 960
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 29
+  }
+ },
+ "cost_usd": 0.0005658,
+ "at": "2026-11-05T10:12:35",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "a62d6738bbe5a176c0039c6273d7d501e49ee712b34690fc6d938ebae136eb5f",
+ "response_sha256": "b20472e222e698c0ce27b02a480bf4d13de508223bcf0767ae1f00cc331aace8"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4588765,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x6eb284509403f1f572ed9e105cbcd40066ce1095fa6675636dfa6431135b191071dcee344e76c86e9be940f3cd48d2a25677b965f908135ee79dc906db88aafe1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:0bf1cd48ab99f93e5f3fd6d38f43b3e6bc1f55cce07f0830bb2bb6b64f23b195:cd81d4d0489d4e749e654948211cb43e66db46908a512974250deabcbe3d36c9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "The Dolphins won 28-25, a 3-point margin, which is less than the required 5 points for Dolphins (-4.5). Therefore the market resolves to Jets, so the answer is NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 996,
+  "total_tokens": 1380,
+  "completion_tokens": 384,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 82
+  }
+ },
+ "cost_usd": 0.0007596,
+ "at": "2026-11-05T10:19:41",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "0bf1cd48ab99f93e5f3fd6d38f43b3e6bc1f55cce07f0830bb2bb6b64f23b195",
+ "response_sha256": "cd81d4d0489d4e749e654948211cb43e66db46908a512974250deabcbe3d36c9"
+}

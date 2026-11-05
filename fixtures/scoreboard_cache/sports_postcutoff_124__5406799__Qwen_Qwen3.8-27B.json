@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406799,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x0222f5308a51e4ff535e8ec2e51afa8ce198fae495abae5a9a90eec474e959d007af9c1e7cf6033a8e59e37f38abcafe846db3bd935e88d00b9258b02a8c30b31b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:8ab39c5a90fc0206c265f5b9c6ad9ff91d295b4c19aaeecbd454170f8cad6b83:79dbb51b0c89fc828148737c6fb9922f6e075503eca441636478dec7b920026b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources show the Minnesota Wild won 4-2 over the Philadelphia Flyers. Therefore the market resolves to \"Wild\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1103,
+  "total_tokens": 1623,
+  "completion_tokens": 520,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 283,
+  "completion_tokens_details": {
+   "reasoning_tokens": 283
+  }
+ },
+ "cost_usd": 0.0007461200000000001,
+ "at": "2026-11-05T10:16:42",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8ab39c5a90fc0206c265f5b9c6ad9ff91d295b4c19aaeecbd454170f8cad6b83",
+ "response_sha256": "79dbb51b0c89fc828148737c6fb9922f6e075503eca441636478dec7b920026b"
+}

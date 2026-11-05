@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5795502,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xe222cfd6c145e401f5f7fb4e55c19b06f1c079b4dda6a060acc0ae8a5b12b68c3186f59f072a19bb814b7e6ca77b871cb3eba4b5dec75d59d85d94ae059984821c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:d2c26c733e43924ccc230c3f2df9d27f10f94b06fe5c499375e046e688f44e2c:eddac9ce5d1c9a8b1df0c0b43ebe472828af7adc8895a1f4b59a2265b2c495ab",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots confirm the match was completed but do not report total corners. With no acceptable corner statistic from any source, the market cannot be resolved.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1377,
+  "total_tokens": 3779,
+  "completion_tokens": 2402,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 2091,
+  "completion_tokens_details": {
+   "reasoning_tokens": 2091
+  }
+ },
+ "cost_usd": 0.0032977799999999997,
+ "at": "2026-11-05T10:23:25",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "d2c26c733e43924ccc230c3f2df9d27f10f94b06fe5c499375e046e688f44e2c",
+ "response_sha256": "eddac9ce5d1c9a8b1df0c0b43ebe472828af7adc8895a1f4b59a2265b2c495ab"
+}

@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "market_id": 5648379,
+ "polymarket_id": "5648379",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x38c1d8e6ab997afc8ab3b48186a4499d36af9a08004a9a8221484d4d907f33bb42e3515b50a950f3886b98502b039fa5385825f6d7506f31dc4f1e37196f2b201b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:87687651ee496bf0a9c90cd550cd2ee6ce451eff63eb7d238f6dd4860a3c496a:716f0fd188fb2007b1f72223a090324fba9b790c6093525f6ce61f4f2b68d98e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Visa\u2019s official Q4 2026 earnings materials report the specified Q4 payments volume growth in constant dollars as 9% for the quarter ended September 30, 2026. The 10% figure is for a different period (three months ended June 30, 2026) and is not the specified Q4 metric.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1944,
+  "total_tokens": 3767,
+  "completion_tokens": 1823,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1621,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1621
+  }
+ },
+ "cost_usd": 0.0025388100000000003,
+ "at": "2026-11-05T13:03:51+01:00",
+ "evidence_sha256": "7f4d2d3172e91c520650d58e752443de5764f5f690d38c832c672bd5f573dcdc",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "87687651ee496bf0a9c90cd550cd2ee6ce451eff63eb7d238f6dd4860a3c496a",
+ "response_sha256": "716f0fd188fb2007b1f72223a090324fba9b790c6093525f6ce61f4f2b68d98e"
+}

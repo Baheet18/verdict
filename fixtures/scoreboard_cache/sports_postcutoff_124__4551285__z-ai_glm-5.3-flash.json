@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551285,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x56a2ac49f02035f4904fb2881fc09de7b848ad6d9bc2f4d165f71bab7dfd5d6e5ad3d09924a90f7375844a130c120267fee8f637b3402f6301d36647071c80921c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:569b86973c1734caa82c30a9ca13a34d82180427adada0ad36d90c254bd202cd:88baae2e66facee372347bd85d72ce8cbfe391f5da769babba59730faf6fb9ba",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with Cleveland winning 27-24 over Tennessee, so the market resolves to Browns, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 961,
+  "total_tokens": 1149,
+  "completion_tokens": 188,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 21,
+  "completion_tokens_details": {
+   "reasoning_tokens": 21
+  }
+ },
+ "cost_usd": 0.00017088,
+ "at": "2026-11-05T10:18:58",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "569b86973c1734caa82c30a9ca13a34d82180427adada0ad36d90c254bd202cd",
+ "response_sha256": "88baae2e66facee372347bd85d72ce8cbfe391f5da769babba59730faf6fb9ba"
+}

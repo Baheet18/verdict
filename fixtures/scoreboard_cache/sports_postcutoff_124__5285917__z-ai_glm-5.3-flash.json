@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5285917,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xeb464f94a2498b74f936fd26a32d1d696c3be0498beca0dc590aaa993d57f655682da6295cad083aa9d0d9449f0e40bd6cab3d336b6d034acc93621cb63552cd1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:373ebaff93533b3e303b5c1023b623d0607462adfe8f3829c66bc120eb269323:48f7575840f8acad1e46e4ab1ec8a7de59644739374d1740a0709541cbaafcd6",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Bruins won 5-4 in overtime, so the market resolves to \"Bruins\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 966,
+  "total_tokens": 1173,
+  "completion_tokens": 207,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 25,
+  "completion_tokens_details": {
+   "reasoning_tokens": 25
+  }
+ },
+ "cost_usd": 0.00018078000000000001,
+ "at": "2026-11-05T10:15:42",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "373ebaff93533b3e303b5c1023b623d0607462adfe8f3829c66bc120eb269323",
+ "response_sha256": "48f7575840f8acad1e46e4ab1ec8a7de59644739374d1740a0709541cbaafcd6"
+}

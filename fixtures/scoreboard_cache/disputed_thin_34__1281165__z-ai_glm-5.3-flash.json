@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 1281165,
+ "polymarket_id": "1281165",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x02bc7800162411a266a692a9c8bb5d4d0216c52d41921b7dbf3b73a618f00656611ee0b6afb3c33edad6df7afd85ec4b1cb515529b3eb799ac95fb27b9d8443c1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:c68bd33020e2ea593f8670db742b1191858986c915d7ed43058a000dd79895bb:af453927c4d9c5d35a60877c493f102f092ec675065f6c41f4a2b3a497db7622",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Although the election date (Nov 3, 2026) has passed per the timestamps, no snapshot contains any CA-34 result, candidate, or vote count; the resolutionSource snapshot is only the FEC.gov homepage with no election data. With zero reporting of the outcome in the evidence, the winner's party cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4621,
+  "total_tokens": 5567,
+  "completion_tokens": 946,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 759,
+  "completion_tokens_details": {
+   "reasoning_tokens": 759
+  }
+ },
+ "cost_usd": 0.00084268,
+ "at": "2026-11-05T11:46:49",
+ "set": "disputed_thin_34",
+ "request_sha256": "c68bd33020e2ea593f8670db742b1191858986c915d7ed43058a000dd79895bb",
+ "response_sha256": "af453927c4d9c5d35a60877c493f102f092ec675065f6c41f4a2b3a497db7622"
+}

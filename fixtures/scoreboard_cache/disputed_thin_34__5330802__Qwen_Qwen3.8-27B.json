@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5330802,
+ "polymarket_id": "5330802",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x75b18eb2034179fc8c2c870bc939d887e28ff11119d91c581be6a07ffea50b230279c216b26c9d012477832baf02688cf43b9305bca0bb37219db7ec885973cd1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:1dce051858a54540c4a5d0d5964802591aa7b8e8ec48dc83b0704dd1bf66dee2:71cf226b19ee090c5575088e943417f4a438703f4c23d4ae8cc3761cd5bb921b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description and explicitly is not an external fact source. It contains no official statement or credible reporting establishing whether a qualifying U.S. anti-cartel action occurred.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 2585,
+  "total_tokens": 4387,
+  "completion_tokens": 1802,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1678,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1678
+  }
+ },
+ "cost_usd": 0.0025361,
+ "at": "2026-11-05T11:41:22",
+ "set": "disputed_thin_34",
+ "request_sha256": "1dce051858a54540c4a5d0d5964802591aa7b8e8ec48dc83b0704dd1bf66dee2",
+ "response_sha256": "71cf226b19ee090c5575088e943417f4a438703f4c23d4ae8cc3761cd5bb921b"
+}

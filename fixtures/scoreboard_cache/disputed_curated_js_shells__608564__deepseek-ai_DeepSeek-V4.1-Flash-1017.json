@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "market_id": 608564,
+ "polymarket_id": "608564",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x78a6df4c4b9bf5e3b54ef6d0dd526a2a9d4f20a7eb47f81dedfde85c049e2fa1664c7f17e728aa11d8a5601c485440f3d9ae925414388d4212af8da15fbcfe8f1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:dd949fd40d89c53760d178a269bb897575f79392b5a012e962365eeac97c14ae:62cd7f0680263a33c3b9055689f54d392ac9095d40f9bd58bd6ae814951f10c1",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "All snapshots are generic homepage HTML with no mention of the 2026 Ballon d'Or winner or Cristiano Ronaldo, so the resolution fact is absent. With no source reporting the winner, the outcome cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 13193,
+  "total_tokens": 13587,
+  "completion_tokens": 394,
+  "prompt_tokens_details": {
+   "cached_tokens": 320,
+   "created_cache_tokens": 12864
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 271
+  }
+ },
+ "cost_usd": 0.0044307,
+ "at": "2026-11-05T12:24:37",
+ "evidence_sha256": "7193041697aa1aa462184921cc8909481d7bb955db0fe0965dda481317f24871",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "dd949fd40d89c53760d178a269bb897575f79392b5a012e962365eeac97c14ae",
+ "response_sha256": "62cd7f0680263a33c3b9055689f54d392ac9095d40f9bd58bd6ae814951f10c1"
+}

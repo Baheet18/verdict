@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5479595,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xba97155d8851c94d52094c6d2ae2b318ce12b31bde7f2edca08223ee48a298fd29626bfc20a5c36f6449bb27d1419ea6cc9afb1a9219a1792c951916d300b4501c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:5ec175ac198f604fe083aa98f19c1d468c8ffe3799704b113d6f85275128bea1:eaabe6991f46863b0f49b281e47d7991a96db02431634c892509b0aea442dc73",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources both report the match finished 0-0, so FC St. Pauli did not win.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1169,
+  "total_tokens": 1529,
+  "completion_tokens": 360,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 960
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 59
+  }
+ },
+ "cost_usd": 0.0007827,
+ "at": "2026-11-05T10:23:21",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5ec175ac198f604fe083aa98f19c1d468c8ffe3799704b113d6f85275128bea1",
+ "response_sha256": "eaabe6991f46863b0f49b281e47d7991a96db02431634c892509b0aea442dc73"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4950282,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x5715683ef2545949b3430a3b1a8fc20ba91b8138996d9d5b9cf864b8a7d106b331b618c1a941c5195b9a454c79b9aebbe0e29e038d9a45678faf056c7a283aed1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:36eb27cefb25ddae8c99cefc050e25161e11a765b5d7610d9ddad30938d30799:c81bcd6386debfb2d85b1ad529f76f5438c5f86406b40d83eeb9ef0269966fae",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources agree the Los Angeles Kings won 3-2 in overtime. Therefore the market resolves to Kings, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1122,
+  "total_tokens": 1729,
+  "completion_tokens": 607,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 360,
+  "completion_tokens_details": {
+   "reasoning_tokens": 360
+  }
+ },
+ "cost_usd": 0.00086433,
+ "at": "2026-11-05T10:14:07",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "36eb27cefb25ddae8c99cefc050e25161e11a765b5d7610d9ddad30938d30799",
+ "response_sha256": "c81bcd6386debfb2d85b1ad529f76f5438c5f86406b40d83eeb9ef0269966fae"
+}

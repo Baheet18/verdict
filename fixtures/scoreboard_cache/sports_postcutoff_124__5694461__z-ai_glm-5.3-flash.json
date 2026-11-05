@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5694461,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xcc144f5e36e3d13bfe91e5e96e5e08cbe6ffb379ae06cad3b394ba5667f1b2e62ea9d143927064c6f46e59ed70d47d994f741cdd8d6222997d9deb80c598f4eb1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:c1e718422afe80db8f3437bc153477ee1c657e697d48872db5c734dfe6da5579:33de7544e74bea72fc26721be51cc23b2cd3ee001f05f5251be70e2f6417d20a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree the match finished 2-0, a combined total of 2 goals, which is less than 6. Per the rules, the market resolves to \"Under\", mapping to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1206,
+  "total_tokens": 1491,
+  "completion_tokens": 285,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 102,
+  "completion_tokens_details": {
+   "reasoning_tokens": 102
+  }
+ },
+ "cost_usd": 0.00023898,
+ "at": "2026-11-05T10:26:03",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "c1e718422afe80db8f3437bc153477ee1c657e697d48872db5c734dfe6da5579",
+ "response_sha256": "33de7544e74bea72fc26721be51cc23b2cd3ee001f05f5251be70e2f6417d20a"
+}

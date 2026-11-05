@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5648379,
+ "polymarket_id": "5648379",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xbf240e77f2f975a36283e1fc40da74e6d8f4ddcf6c1bfb77d2be8c353d0627196d92b053504bb24ec426f5f2fa5df7c39346a9c473e98bb2eaf1ae911d89ca2c1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:a47f9869f611af4f5d69302fd575474acc22391640a369477f17ec0bf81341d8:e16bd4c2e668c305e32809327eb308a7a15996e28a953d42e5f0732ba8fe36d5",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "None of the snapshots contain Visa's reported Q4 payments volume growth (constant-dollar) figure: the 'official' snapshot is only Visa IR homepage boilerplate and both Yahoo snapshots are JavaScript/consent boilerplate with no earnings data. With zero sources reporting the needed number, the metric cannot be determined from the evidence bundle.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 11598,
+  "total_tokens": 12452,
+  "completion_tokens": 854,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 717,
+  "completion_tokens_details": {
+   "reasoning_tokens": 717
+  }
+ },
+ "cost_usd": 0.00135484,
+ "at": "2026-11-05T12:31:09",
+ "evidence_sha256": "f9c59762cb8b9ca1a0b02f4bd0f6a68086326f82ef0a93f323a283282e1f36f8",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "a47f9869f611af4f5d69302fd575474acc22391640a369477f17ec0bf81341d8",
+ "response_sha256": "e16bd4c2e668c305e32809327eb308a7a15996e28a953d42e5f0732ba8fe36d5"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4950282,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x73549398c6a49d01b5202801ef8aea63db15ff269b1bed35c3d004742ba5a2f6221b275581318f6c34a296c58242b4aa0b65dbb05e19ce7c627ffcd1d0ad65e91c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:318bd8772a26c27b91d1aac784465801575cbe106802bb7bc21c401f2e3f303c:039d6a68a88dd7f7f879fd9c544c70460f86a51cd8c0b388c3eb01cea0942c3a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Kings winning 3-2 in overtime, so the market resolves to \"Kings\" and the verdict is YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 962,
+  "total_tokens": 1223,
+  "completion_tokens": 261,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 53,
+  "completion_tokens_details": {
+   "reasoning_tokens": 53
+  }
+ },
+ "cost_usd": 0.00020746,
+ "at": "2026-11-05T10:14:00",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "318bd8772a26c27b91d1aac784465801575cbe106802bb7bc21c401f2e3f303c",
+ "response_sha256": "039d6a68a88dd7f7f879fd9c544c70460f86a51cd8c0b388c3eb01cea0942c3a"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5455706,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x2620a8ba24734340c09304f69c186c4a5a5356c598cd6d920c337037509455ea61e9a29ac0654e24dcca0f4085d973d68ca3534e3542a4f68b43c187de18a48f1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:112e00e8045df3ff7ff36e424c68eea44e2101236beb1c8fe20b780b66a2194d:3ee779602c2d139f22663ddfd42bc1c0e9e108eb4d82eb15d3232206b8e8602f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources agree the game is final with Packers 27, Panthers 19, so the market resolves to Packers (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 989,
+  "total_tokens": 1293,
+  "completion_tokens": 304,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 25
+  }
+ },
+ "cost_usd": 0.0006615,
+ "at": "2026-11-05T10:17:03",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "112e00e8045df3ff7ff36e424c68eea44e2101236beb1c8fe20b780b66a2194d",
+ "response_sha256": "3ee779602c2d139f22663ddfd42bc1c0e9e108eb4d82eb15d3232206b8e8602f"
+}

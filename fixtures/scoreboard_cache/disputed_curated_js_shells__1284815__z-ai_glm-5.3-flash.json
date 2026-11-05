@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 1284815,
+ "polymarket_id": "1284815",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x6d23ba34f3d17eae85bf659e42aabc4ba8ffe95190a003cccbd4655cf2be77b672c07709e26b19045274ce457e57565311c172a30ce9bd949f1650d0fad37a8f1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:a6a17be6981052f3a5ff8923a9377130bd8639b11a05cf334b5514cf385d5c98:218891634498a24e6f23d1d0d083c5381cbf57ff752dc1af46eae13d5096d653",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The election window has passed (Nov 3, 2026 election; snapshots fetched Nov 5), but no snapshot reports the TX-02 general election result \u2014 the Wikipedia 'Results' sections for District 2's general election and the district article's 2026 section are empty, and the FEC snapshot is only a homepage with no results. The snapshots identify only the nominees (Republican Steve Toth, Democrat Shaun Finni\u2026",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 9073,
+  "total_tokens": 10301,
+  "completion_tokens": 1228,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 950,
+  "completion_tokens_details": {
+   "reasoning_tokens": 950
+  }
+ },
+ "cost_usd": 0.00133984,
+ "at": "2026-11-05T12:37:39",
+ "evidence_sha256": "46438397c3506a47f2f8a916302d797672d46c54cc71cd4bcfc5642f84d95c13",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "a6a17be6981052f3a5ff8923a9377130bd8639b11a05cf334b5514cf385d5c98",
+ "response_sha256": "218891634498a24e6f23d1d0d083c5381cbf57ff752dc1af46eae13d5096d653"
+}

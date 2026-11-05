@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4890263,
+ "polymarket_id": "4890263",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x9c228914417d46662017dd5d2ed25a44af42ead3689923827e56cda2e01049470c950e44905fc9ff75a478aa152ab66c62afe1708f449f70b1f7531e4d1dce901c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:33cbfdc7362533bdef08eac6edfc903a866385b74c4f35dc675c070fd8d6f647:52d9ecb3c0ead6f84f217b01fb0157e677326c0372aa9b969c772ee9a1174b48",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market's own rules text (explicitly flagged as not an external fact source) and no snapshots with vote counts, candidate percentages, or even confirmation that the first round occurred. With zero independent sources reporting the needed results, the margin cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1380,
+  "total_tokens": 2494,
+  "completion_tokens": 1114,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 980,
+  "completion_tokens_details": {
+   "reasoning_tokens": 980
+  }
+ },
+ "cost_usd": 0.0006674,
+ "at": "2026-11-05T11:44:33",
+ "set": "disputed_thin_34",
+ "request_sha256": "33cbfdc7362533bdef08eac6edfc903a866385b74c4f35dc675c070fd8d6f647",
+ "response_sha256": "52d9ecb3c0ead6f84f217b01fb0157e677326c0372aa9b969c772ee9a1174b48"
+}

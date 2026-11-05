@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5180504,
+ "polymarket_id": "5180504",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x8e1f46b36ad200ce71f6f8533e43f017cb7df8da3909494a6073f25d9195c5b12b0f8bb607b911cc2ee4f0f49c1fef4cd5d86b3c8c077074f9e606264cdd560b1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:2badb2930649d1b6719bc567f09bb24d0904644ecc7568b8612b020b83450ece:ffb66948be9b8df777509f5317a0c2561cbaa098e512023555c0dfbd34b6e6e6",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market's own rules text, which explicitly notes it is 'not an external fact source'; no streaming/download evidence about any Drake album release is provided. With the window closed but zero factual evidence on release, the snapshots are insufficient to resolve.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 802,
+  "total_tokens": 1034,
+  "completion_tokens": 232,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 576
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 96
+  }
+ },
+ "cost_usd": 0.0005189999999999999,
+ "at": "2026-11-05T11:58:11",
+ "set": "disputed_thin_34",
+ "request_sha256": "2badb2930649d1b6719bc567f09bb24d0904644ecc7568b8612b020b83450ece",
+ "response_sha256": "ffb66948be9b8df777509f5317a0c2561cbaa098e512023555c0dfbd34b6e6e6"
+}

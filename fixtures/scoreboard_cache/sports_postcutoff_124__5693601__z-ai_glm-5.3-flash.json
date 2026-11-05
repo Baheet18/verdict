@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5693601,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x57e0f4a353421bc2dc997ee2f554510b9caad9850172416e095547b4cacaaaf72521594b1428f51b6d1b7c2ea39f0c1b014aea3da5851e70ce8307c6baeadcff1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:e4c102ed036a48796147bb559b3c370ffa6a1fc17e801114be8601484c0c2e50:abec873cbf653407376608a8e61e39ddc8ff7f289143fd4b419d1847023d93c9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree the match finished 0-2 with SSV Jeddeloh II scoring nothing, so Hertha BSC scored the first (and all) goals within regular play. The market therefore resolves to Hertha BSC, mapping to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1249,
+  "total_tokens": 1760,
+  "completion_tokens": 511,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 307,
+  "completion_tokens_details": {
+   "reasoning_tokens": 307
+  }
+ },
+ "cost_usd": 0.00035541999999999995,
+ "at": "2026-11-05T10:23:26",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e4c102ed036a48796147bb559b3c370ffa6a1fc17e801114be8601484c0c2e50",
+ "response_sha256": "abec873cbf653407376608a8e61e39ddc8ff7f289143fd4b419d1847023d93c9"
+}

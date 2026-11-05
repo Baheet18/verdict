@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5330802,
+ "polymarket_id": "5330802",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xb763beff84c08b4886a76911a0549c665786a08946905d3e78eafbcb2c2b4d6f293311d040157a044019aed58d2a135a125b44db932bd29e2d3cdfef6c61c4781c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:d6d4e96e7709a50c0f2886e5727aeb94f5308f8f7768d6c8f66f067a4aab8d50:20cae31390254860183b01ef328eb00500fb46f79a05f19820773d73a1d4a245",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market's own rules text, explicitly flagged as not an external fact source; the bundle contains no official statement or credible reporting on any potential anti-cartel operation. With the window closed but zero factual evidence either way, the snapshots are insufficient to resolve YES or NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 2502,
+  "total_tokens": 2918,
+  "completion_tokens": 416,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 2304
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 231
+  }
+ },
+ "cost_usd": 0.0012498000000000001,
+ "at": "2026-11-05T11:41:32",
+ "set": "disputed_thin_34",
+ "request_sha256": "d6d4e96e7709a50c0f2886e5727aeb94f5308f8f7768d6c8f66f067a4aab8d50",
+ "response_sha256": "20cae31390254860183b01ef328eb00500fb46f79a05f19820773d73a1d4a245"
+}

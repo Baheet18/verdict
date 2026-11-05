@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "market_id": 5285913,
+ "polymarket_id": "5285913",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x122ac7d29fef3d4440fbfc900b0736d744d982ceb1fc233d76ef1153d52a937f7cd027380323d14ba6015698dbe5a17d31282ddb532cac127a12ed51d2df4eb71b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:65640df9c0d23d9a37d3ee72b7e03fcd33ab6de87417ddb75ab019c5ea2556c3:ee888645feeaa680c44445a1b36caa5ee3fde3f37792fec4bee7cb1071f0a510",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (NHL gamecenter and MLive recap) agree the final was STL 5, DET 4, a combined 9 goals, which is 5 or more, so the market resolves Over per the rules.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1362,
+  "total_tokens": 1631,
+  "completion_tokens": 269,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 111,
+  "completion_tokens_details": {
+   "reasoning_tokens": 111
+  }
+ },
+ "cost_usd": 0.00024345999999999998,
+ "at": "2026-11-05T13:01:25+01:00",
+ "evidence_sha256": "3ec7117940c1e7aee44b4a7fe6296dbdee0965cfa5b057a1dfc6e059da3a4a9a",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "65640df9c0d23d9a37d3ee72b7e03fcd33ab6de87417ddb75ab019c5ea2556c3",
+ "response_sha256": "ee888645feeaa680c44445a1b36caa5ee3fde3f37792fec4bee7cb1071f0a510"
+}

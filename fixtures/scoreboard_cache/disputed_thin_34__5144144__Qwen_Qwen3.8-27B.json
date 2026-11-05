@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5144144,
+ "polymarket_id": "5144144",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xd318485b3a9f4132ba81d4a5a0fdbe34f06fd033fae7671bc8360b7796b9d3252e94bc93b4c0db585f864c7c143cdda0b8f5501944368d6c443330e5d4c798181b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:cf19776a52e55f28f072f48035ecde36e8d003afedec9b9496a2261382f5a1e8:9eec6b1f364f62c014a6016591054d3b2b7d5bbf9a31bbebd300f90c0aa0a488",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market rules, with no evidence of whether Trump said \u201cBurger\u201d in the required window. The event window is over, but the snapshots are insufficient to resolve.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 943,
+  "total_tokens": 1481,
+  "completion_tokens": 538,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 395,
+  "completion_tokens_details": {
+   "reasoning_tokens": 395
+  }
+ },
+ "cost_usd": 0.00076402,
+ "at": "2026-11-05T11:42:11",
+ "set": "disputed_thin_34",
+ "request_sha256": "cf19776a52e55f28f072f48035ecde36e8d003afedec9b9496a2261382f5a1e8",
+ "response_sha256": "9eec6b1f364f62c014a6016591054d3b2b7d5bbf9a31bbebd300f90c0aa0a488"
+}

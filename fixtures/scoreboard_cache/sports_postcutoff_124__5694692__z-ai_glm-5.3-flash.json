@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5694692,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xa7536245131b3b5b687d0322297eb245df5cdfa6465c7c14adf51c1883ccecac67553e9f6e70a4f0369c7a3ab3c91bdc8a2b10bfc84c51eb5ff2e5370625281e1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:bf06f21c5ac02027a48064e19e984b67a3a696cc4ba7c337a15809d516aeb984:324d63f01cfb0c0ebf464f73739fb9a5755287cf2535b8520d5a5c20cf6f9579",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Both sources agree on the 0-1 final score, but only OpenLigaDB reports a halftime line, and that 0-0 line is all zeros from a single source (missing data, not a real zero), while ESPN provides no first-half breakdown. With fewer than two independent sources reporting Stuttgart's first-half score, it cannot be definitively determined whether their lone goal came in the first half.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1279,
+  "total_tokens": 6897,
+  "completion_tokens": 5618,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 5421,
+  "completion_tokens_details": {
+   "reasoning_tokens": 5421
+  }
+ },
+ "cost_usd": 0.00291132,
+ "at": "2026-11-05T10:34:15",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "bf06f21c5ac02027a48064e19e984b67a3a696cc4ba7c337a15809d516aeb984",
+ "response_sha256": "324d63f01cfb0c0ebf464f73739fb9a5755287cf2535b8520d5a5c20cf6f9579"
+}

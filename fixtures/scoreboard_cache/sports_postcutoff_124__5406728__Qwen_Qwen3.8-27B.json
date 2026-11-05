@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406728,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xf4feb72d23fb6ba14d1e77de08d4a34007e184f3306b2b9c58381ffa23c1c2e373e6ecd772a9cb15e5876d1db407d3b1bc536b0fb30b23756fe1ba2489fb5d741c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:912fb43a309a00c51a8d66b678da97917e599398b619852832859d35b64b086b:2441d1da07a711de15c7e69b23931167301ad72fbddb3d3ad4d779813dc66f2c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources agree that the Dallas Stars won 6-5. Therefore the market resolves to \"Stars\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1110,
+  "total_tokens": 1851,
+  "completion_tokens": 741,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 625,
+  "completion_tokens_details": {
+   "reasoning_tokens": 625
+  }
+ },
+ "cost_usd": 0.0010447499999999999,
+ "at": "2026-11-05T10:14:27",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "912fb43a309a00c51a8d66b678da97917e599398b619852832859d35b64b086b",
+ "response_sha256": "2441d1da07a711de15c7e69b23931167301ad72fbddb3d3ad4d779813dc66f2c"
+}

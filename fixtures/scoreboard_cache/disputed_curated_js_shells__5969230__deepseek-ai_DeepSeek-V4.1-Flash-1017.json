@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "market_id": 5969230,
+ "polymarket_id": "5969230",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x3402066e9099d534b7fa3f7e7dbda21c2fdcc0324f650142b551b06d2c6aa3ed4a19c41a113fd784a2fed5650a4d40b2a8238be1bb680991070d69dfa7227d741b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:52c6455e252ad67ed41a60a8c1c64a758ff5aa1805e06dc5618a474ff4d27468:ace4cc2228de9724791f6490843e50f178cede141c2d38f31fa44dc4aa123572",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "The 2026 Japan Series was contested by exactly these two teams and the Hawks swept it 4-0, so the Hawks won the October 27 game; both Wikipedia reports corroborate the 2026 title.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 13520,
+  "total_tokens": 18883,
+  "completion_tokens": 5363,
+  "prompt_tokens_details": {
+   "cached_tokens": 320,
+   "created_cache_tokens": 13184
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 5233
+  }
+ },
+ "cost_usd": 0.0104916,
+ "at": "2026-11-05T12:42:26",
+ "evidence_sha256": "7a60c8c719b3904abf1acb57161c5ea2cdb4e15adb95e03ed898127d7ac0a24e",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "52c6455e252ad67ed41a60a8c1c64a758ff5aa1805e06dc5618a474ff4d27468",
+ "response_sha256": "ace4cc2228de9724791f6490843e50f178cede141c2d38f31fa44dc4aa123572"
+}

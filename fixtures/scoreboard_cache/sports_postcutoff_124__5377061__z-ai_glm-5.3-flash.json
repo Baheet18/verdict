@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5377061,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xdce67eecd655450beea8f2a3cb8c2171242712809467637610f22d3224f66d746213af0b64f23f6486cd70fec72f1fb3fc8991c0a96264603bcbd4fb48e9d75a1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:298b545bb4c396e0a02c437d00ec3b77ac8db8ee1cb815e9040f64d0ac988281:3cdefa5cf46ffd0b1bb3cc7bb7969288e78f8e13f1c19a734deafd123165ddcf",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Bruins won 3-2 in a shootout, so the market resolves to \"Bruins\" (NO per the verdict mapping). The shootout goal adjustment does not change the outcome since the Bruins already lead 3-2.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 969,
+  "total_tokens": 1244,
+  "completion_tokens": 275,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 83,
+  "completion_tokens_details": {
+   "reasoning_tokens": 83
+  }
+ },
+ "cost_usd": 0.00021502,
+ "at": "2026-11-05T10:13:22",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "298b545bb4c396e0a02c437d00ec3b77ac8db8ee1cb815e9040f64d0ac988281",
+ "response_sha256": "3cdefa5cf46ffd0b1bb3cc7bb7969288e78f8e13f1c19a734deafd123165ddcf"
+}

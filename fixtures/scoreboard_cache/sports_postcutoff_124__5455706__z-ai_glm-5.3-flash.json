@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5455706,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x9e05b8d385a388dd74935a87f6785a919bf8c5c030b23978a1cf72068f85d33433e60231093a62bd6f8c584278555694f2da285290e044f5a3324080d55737711b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:ec7185097dffa66559609d7b6a2351f475a2a57debd37e1c47be4ecc4d391c22:e831733340a1f2a33b386845a8e2437de131c3354e3c5f8380d72a717aaf7053",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with Green Bay winning 27-19 over Carolina, so the market resolves to \"Packers\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 950,
+  "total_tokens": 1146,
+  "completion_tokens": 196,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 29,
+  "completion_tokens_details": {
+   "reasoning_tokens": 29
+  }
+ },
+ "cost_usd": 0.000174,
+ "at": "2026-11-05T10:17:05",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ec7185097dffa66559609d7b6a2351f475a2a57debd37e1c47be4ecc4d391c22",
+ "response_sha256": "e831733340a1f2a33b386845a8e2437de131c3354e3c5f8380d72a717aaf7053"
+}

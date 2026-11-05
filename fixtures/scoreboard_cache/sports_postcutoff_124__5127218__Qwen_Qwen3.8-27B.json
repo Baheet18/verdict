@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5127218,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xc090545beea9568f29f09910e7ffdff5e6a7bdddf84b167a381b5f131bd00de648f37542ba59365bc8b3b5d0cc18dd63a478ee8df46336d541af281f9750b7de1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:4fb8047af135004d8aac6fae7e6e2250702da397729866e1fc302b932f354c61:de05893b15c8f57dbcbd28e92d5dc10a8713fb6d2914ad9f5f45247baadb52f6",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources report the final score as Texans 34, Jaguars 31. The Texans won by only 3 points, not 17 or more, so the market resolves to Jaguars.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1109,
+  "total_tokens": 1769,
+  "completion_tokens": 660,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 567,
+  "completion_tokens_details": {
+   "reasoning_tokens": 567
+  }
+ },
+ "cost_usd": 0.00093536,
+ "at": "2026-11-05T10:19:53",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4fb8047af135004d8aac6fae7e6e2250702da397729866e1fc302b932f354c61",
+ "response_sha256": "de05893b15c8f57dbcbd28e92d5dc10a8713fb6d2914ad9f5f45247baadb52f6"
+}

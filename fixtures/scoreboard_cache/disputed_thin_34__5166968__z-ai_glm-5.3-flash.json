@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5166968,
+ "polymarket_id": "5166968",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xa9c7236b13bc63a4f18fca9aad9000a9885507745670a6b844c57d2b96dcf51d46512df005c1ee04c1952402aac1c642d27b9c68819aadb860315796cf0bab021b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:55868bd49a7f6ebc56111d94eca1f064edf7d99f1f39d4b7ad4553856776b489:2975e68bafeb9625c99865e8cf6bec23eb8196dd7e3fbdb20f810f5f3de87876",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market's own rules/description (explicitly noted as not an external fact source) and no market-cap data from any credible reporting source, so Apple's rank on October 31, 2026 cannot be determined. The event window has passed (snapshot fetched 2026-11-05 after market_end), but with zero independent sources reporting the needed ranking, the required two-source \u2026",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 601,
+  "total_tokens": 1196,
+  "completion_tokens": 595,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 431,
+  "completion_tokens_details": {
+   "reasoning_tokens": 431
+  }
+ },
+ "cost_usd": 0.00034558,
+ "at": "2026-11-05T11:48:57",
+ "set": "disputed_thin_34",
+ "request_sha256": "55868bd49a7f6ebc56111d94eca1f064edf7d99f1f39d4b7ad4553856776b489",
+ "response_sha256": "2975e68bafeb9625c99865e8cf6bec23eb8196dd7e3fbdb20f810f5f3de87876"
+}

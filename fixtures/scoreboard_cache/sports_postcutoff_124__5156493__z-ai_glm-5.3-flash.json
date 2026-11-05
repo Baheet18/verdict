@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5156493,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x385d5dbec95f0d3a615ab9b414f99958314d3900280469d5974e694317771e8f49def0f8fc2dfd1348fcbbd659c9100b525bf0d74b6d981608410b4d665465b01b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:69bbc40670ec371836c22710d8488be31cf03cd0b9db611a654de4e4268d2dba:e6c9dc15bd0462197b8befa58fa4074d40d71f40353afc10dce76443c7483705",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with the Blackhawks winning 2-1 over the Kings in regulation, so the market resolves to \"Blackhawks\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 956,
+  "total_tokens": 1184,
+  "completion_tokens": 228,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 55,
+  "completion_tokens_details": {
+   "reasoning_tokens": 55
+  }
+ },
+ "cost_usd": 0.00019048,
+ "at": "2026-11-05T10:13:10",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "69bbc40670ec371836c22710d8488be31cf03cd0b9db611a654de4e4268d2dba",
+ "response_sha256": "e6c9dc15bd0462197b8befa58fa4074d40d71f40353afc10dce76443c7483705"
+}

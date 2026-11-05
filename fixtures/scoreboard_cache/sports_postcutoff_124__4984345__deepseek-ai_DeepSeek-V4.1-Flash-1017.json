@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4984345,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xbe2803aaf0a6f63fd89212a54829a0c640020f9485a055b08815a298499399a63eec7d8ef09459649aee703722c93422627d0a8089e5c09a9d10dc1e622c5c341b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:16d2565ff9e5809bd6f7d1062586083a2b4a6aa05952e1505045af31accd910b:176d027c72982aa93e8f865b363a2886b536ec3b5fce267a4572b71383a15c6b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL API) agree the game is final with Canadiens winning 4-1, so the market resolves to Canadiens.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1020,
+  "total_tokens": 1257,
+  "completion_tokens": 237,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 26
+  }
+ },
+ "cost_usd": 0.0005904,
+ "at": "2026-11-05T10:14:22",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "16d2565ff9e5809bd6f7d1062586083a2b4a6aa05952e1505045af31accd910b",
+ "response_sha256": "176d027c72982aa93e8f865b363a2886b536ec3b5fce267a4572b71383a15c6b"
+}

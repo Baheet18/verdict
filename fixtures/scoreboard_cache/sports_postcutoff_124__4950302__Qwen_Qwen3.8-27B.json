@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4950302,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xb132cc8ee171e0fe835bdd9b4f2bf1de3057e19b389c9bdd37eddb4bb2c667b171befa90822ee3a49222539e2ef8bc72198482b4237a7729628086eeb63bf9c91c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:8355f30afdc3f8bff526e8a974fdf4383f7c056bdb9f9e0e3bc313147cfa6ed2:2cd4209d410d2bce0b27b7e711460bcc9714b37cb8f6e63c74f56b6629f90114",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources agree the Calgary Flames won 2-1 in regulation. Therefore the market resolves to Flames, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1109,
+  "total_tokens": 1747,
+  "completion_tokens": 638,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 402,
+  "completion_tokens_details": {
+   "reasoning_tokens": 402
+  }
+ },
+ "cost_usd": 0.00090566,
+ "at": "2026-11-05T10:13:17",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8355f30afdc3f8bff526e8a974fdf4383f7c056bdb9f9e0e3bc313147cfa6ed2",
+ "response_sha256": "2cd4209d410d2bce0b27b7e711460bcc9714b37cb8f6e63c74f56b6629f90114"
+}

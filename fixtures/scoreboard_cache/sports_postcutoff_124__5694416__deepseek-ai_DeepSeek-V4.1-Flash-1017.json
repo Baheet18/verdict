@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694416,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xcec60d0b0e86e33ca058b71bf41e63c24a6caf499a924fe38346193791b9a3875663bcb6a9dc4d9f76b6a6e5782838b04da141271a1eeb6cab39b44e4f962c591c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:abb55368ddd3901205c1e11f1b84185800bb09b20beff7cfbc7df819e417edb5:41e713e88e479c7a925f941d1b065347c234a17987751f750fab214e96c8ae85",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "OpenLigaDB reports the halftime score as SSV Jeddeloh II 0, and ESPN's full-time SSV score of 0 corroborates that they scored fewer than 3 first-half goals. Therefore the market resolves Under.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1307,
+  "total_tokens": 2147,
+  "completion_tokens": 840,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1088
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 665
+  }
+ },
+ "cost_usd": 0.0014001,
+ "at": "2026-11-05T10:23:47",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "abb55368ddd3901205c1e11f1b84185800bb09b20beff7cfbc7df819e417edb5",
+ "response_sha256": "41e713e88e479c7a925f941d1b065347c234a17987751f750fab214e96c8ae85"
+}

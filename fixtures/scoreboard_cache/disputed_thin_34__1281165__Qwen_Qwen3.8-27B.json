@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 1281165,
+ "polymarket_id": "1281165",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xe4d3f58097b5331e2b93c78dd3ffcef8ecbbe25b040f688233c43afb0fa3858a5f13593c344e0bfc1e493b2d74788ef83e9c06490247388c07d8855e6ba0bdd61b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:3c35158ebecea975a9007782bd15396c4aaf273cc68bf6abae0488b33867fe2c:18f4d4112335690bcd11e4a0c29927c48904ed84b2a92bb68b89bca2e4f44927",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots contain only the market rules and the FEC homepage, with no report of the CA-34 winner or a conclusive call. The evidence is therefore insufficient to determine whether a Democrat won.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4894,
+  "total_tokens": 5761,
+  "completion_tokens": 867,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 734,
+  "completion_tokens_details": {
+   "reasoning_tokens": 734
+  }
+ },
+ "cost_usd": 0.00136621,
+ "at": "2026-11-05T11:46:20",
+ "set": "disputed_thin_34",
+ "request_sha256": "3c35158ebecea975a9007782bd15396c4aaf273cc68bf6abae0488b33867fe2c",
+ "response_sha256": "18f4d4112335690bcd11e4a0c29927c48904ed84b2a92bb68b89bca2e4f44927"
+}

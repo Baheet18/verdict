@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5648379,
+ "polymarket_id": "5648379",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x40acecf652838e645feaada70a25bf65f2c7f34f5ed86bdf2e64170664bcadc547eab804c02ed992d80a703531fbbb3e2cb38c3cd1d368e5f5c07b31790c68991b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:dc17cf72e76d5e6095f2d9f2c6a65b285f01d14fa772bc8070ef98e3fee79d1c:4602f50fe640bd9669203ba4583b8a3b7414004bf061bd0c94bdffcb931c1ed9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "TOO_EARLY",
+ "reasoning": "The snapshots were fetched on 2026-11-05, before the November 30, 2026 release deadline, and contain no official Q4 earnings metric. Therefore the resolution window is not over and the value cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 11925,
+  "total_tokens": 14233,
+  "completion_tokens": 2308,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 2163,
+  "completion_tokens_details": {
+   "reasoning_tokens": 2163
+  }
+ },
+ "cost_usd": 0.0035928,
+ "at": "2026-11-05T12:30:32",
+ "evidence_sha256": "f9c59762cb8b9ca1a0b02f4bd0f6a68086326f82ef0a93f323a283282e1f36f8",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "dc17cf72e76d5e6095f2d9f2c6a65b285f01d14fa772bc8070ef98e3fee79d1c",
+ "response_sha256": "4602f50fe640bd9669203ba4583b8a3b7414004bf061bd0c94bdffcb931c1ed9"
+}

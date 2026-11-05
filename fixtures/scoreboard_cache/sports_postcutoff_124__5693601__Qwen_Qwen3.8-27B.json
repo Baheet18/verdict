@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5693601,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x3497c22e5122096562fa463a19b2b2d87f96518b58adc30c031a71e913bb0849379ab5a703d566a566b1bdce8723356d641435cbd25256d81c6b17e08d4444b51c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:62bdf5ddd62bbc3d4d201dd39e267591b5ae3fd135fcebec33253431b0d75df3:276a6f675d4cc6504271795b34803c25f2b02dabe74baff2954b5345caaefcea",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots confirm a 0-2 Hertha BSC final score but do not provide goal times or identify the first scorer within the first 90 minutes plus stoppage time. Therefore the required first-to-score outcome cannot be determined from the provided sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1412,
+  "total_tokens": 2772,
+  "completion_tokens": 1360,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1053,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1053
+  }
+ },
+ "cost_usd": 0.00189248,
+ "at": "2026-11-05T10:23:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "62bdf5ddd62bbc3d4d201dd39e267591b5ae3fd135fcebec33253431b0d75df3",
+ "response_sha256": "276a6f675d4cc6504271795b34803c25f2b02dabe74baff2954b5345caaefcea"
+}

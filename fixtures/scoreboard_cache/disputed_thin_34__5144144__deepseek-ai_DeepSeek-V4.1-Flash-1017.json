@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5144144,
+ "polymarket_id": "5144144",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xcab6d65d42c346b475fb3db81000e29bf983e25fa9ab667b64622a356675a810517c0f4c252247b798fb65235e8927e3ec9334338af768e3fa1643edb6ac9ddb1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:eaa99b7755df82ab192dfb057d902197bcbc63fa6f8289dbc668333e4d13ea36:36848d9a07d3340355f1f67ca61d444a91da7bf9350a954ee622d831e1ef1928",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market's own rules/description, which provides no evidence of whether Trump uttered \"Burger\" during the October 2026 window. With no transcript or reporting evidence in the bundle, the outcome cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 820,
+  "total_tokens": 1098,
+  "completion_tokens": 278,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 576
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 119
+  }
+ },
+ "cost_usd": 0.0005796,
+ "at": "2026-11-05T11:42:20",
+ "set": "disputed_thin_34",
+ "request_sha256": "eaa99b7755df82ab192dfb057d902197bcbc63fa6f8289dbc668333e4d13ea36",
+ "response_sha256": "36848d9a07d3340355f1f67ca61d444a91da7bf9350a954ee622d831e1ef1928"
+}

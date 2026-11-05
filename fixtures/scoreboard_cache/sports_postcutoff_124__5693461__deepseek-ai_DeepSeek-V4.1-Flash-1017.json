@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5693461,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xddd95d23979b898e5d6380ad06c4e90baae2d3e59e2089b7697fb73abf3e117019b9851880268d10702601b45822e4e754fa1073de1a06bffffc5a77c909430e1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:a603bf037399c9287d9e38d3465c78f8f89580015b340498ef39c36b1bc65712:4b1c6167115e2e558631594575a4cf1b072635bc929da2cb3eede7b74dec2cbc",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent sources show the match finished 0-1 to VfB Stuttgart, so Stuttgart scored the only goal and therefore scored first.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1251,
+  "total_tokens": 1786,
+  "completion_tokens": 535,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 227
+  }
+ },
+ "cost_usd": 0.0010173,
+ "at": "2026-11-05T10:25:41",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "a603bf037399c9287d9e38d3465c78f8f89580015b340498ef39c36b1bc65712",
+ "response_sha256": "4b1c6167115e2e558631594575a4cf1b072635bc929da2cb3eede7b74dec2cbc"
+}

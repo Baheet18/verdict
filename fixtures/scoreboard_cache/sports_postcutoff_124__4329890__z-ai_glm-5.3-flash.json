@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4329890,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x947c92f4ed7fba01fb8a5310b2eff742e1160b7434f2a6f59b4e34ea6a844cc521bfd0d68823d4823c010b5c4a157c3c942682ad9eba16d92d59adb44df574261c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:ad7e2b3de9447a89c91d9ec5f356022b340dced351254f3c1ce83f60f30ff64f:57ff5a48d11c2c9a995d56ad8bc9dfe7804061c605e7ad532fd849917ff6ac4a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN scoreboard and nflverse games.csv) agree the Cardinals beat the Rams 18-16 in the final game, so the market resolves to Cardinals.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 948,
+  "total_tokens": 1139,
+  "completion_tokens": 191,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 22,
+  "completion_tokens_details": {
+   "reasoning_tokens": 22
+  }
+ },
+ "cost_usd": 0.00017134000000000002,
+ "at": "2026-11-05T10:17:31",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ad7e2b3de9447a89c91d9ec5f356022b340dced351254f3c1ce83f60f30ff64f",
+ "response_sha256": "57ff5a48d11c2c9a995d56ad8bc9dfe7804061c605e7ad532fd849917ff6ac4a"
+}

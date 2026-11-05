@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5406757,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x99ae47d98a26dc323db387c9900b599107f7d28ae8f73ae539ecfc14372dc7af5cede4f3bff6c8aea072fa2b4a1c10b9808655e8f2a9a87360beabb24ae9018b1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:9a653c2d88f34903d42acd0c4fb973bab47c308f4a458f64f49e5f2288e605cb:e0d62634a4e9d0cf15bbfc1dc3bc30fbd003bc58367fba3c79ea5c4c7ec631d5",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Lightning winning 4-2 in regulation, so the market resolves to \"Lightning\". Per the verdict mapping, that means NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 965,
+  "total_tokens": 1180,
+  "completion_tokens": 215,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 27,
+  "completion_tokens_details": {
+   "reasoning_tokens": 27
+  }
+ },
+ "cost_usd": 0.0001847,
+ "at": "2026-11-05T10:13:42",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9a653c2d88f34903d42acd0c4fb973bab47c308f4a458f64f49e5f2288e605cb",
+ "response_sha256": "e0d62634a4e9d0cf15bbfc1dc3bc30fbd003bc58367fba3c79ea5c4c7ec631d5"
+}

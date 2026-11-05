@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "market_id": 4588336,
+ "polymarket_id": "4588336",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x67f8037deea85e2c44507470c7a82cdd0ade96671012a1e547016a7124b04c7f595ec560eab5303852a769270d3f4437916a1f11151f371128e91de39fc0a37b1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:3ee8e3ae52a095d98649a27a66f3495b0f8d7b2c9679c32ffe9cc8ea56020bb6:8e5e26eae5e04dc85b75f88959a9dd5b394b211562cc7657e32fbbfcd535500c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (NFL gamecenter PDF and uponreview) agree the Broncos scored 14 vs the Cardinals' 7 in Q3, a 7-point margin that meets the 4+ point threshold, and the recap is consistent. Therefore the market resolves to \"Broncos\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1411,
+  "total_tokens": 2262,
+  "completion_tokens": 851,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 594,
+  "completion_tokens_details": {
+   "reasoning_tokens": 594
+  }
+ },
+ "cost_usd": 0.00053838,
+ "at": "2026-11-05T13:02:10+01:00",
+ "evidence_sha256": "793698f3800c864b8f0e0dde8e44d2112212e557085df395295a836da42ec742",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "3ee8e3ae52a095d98649a27a66f3495b0f8d7b2c9679c32ffe9cc8ea56020bb6",
+ "response_sha256": "8e5e26eae5e04dc85b75f88959a9dd5b394b211562cc7657e32fbbfcd535500c"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406713,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x6495065022fb3dcd943ede673a72538e1eca93386cd6a19eac9db200d7fcb86358f1fe94df1fca6d0e9a68583e51125f1638392422ff2515b8ad7c4cb189bb021c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:7580b56a425a7459564ec3284f395f51c55f0a1ec999e77ad055d220fcf9ce1e:b007e290a6c5f7fc2182125e6375cbccbe1332babe8440ea9d7301be062a85a3",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both ESPN and NHL official final scores show the Kings winning 6-5 in overtime. Therefore the market resolves to Kings, mapped to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1119,
+  "total_tokens": 2067,
+  "completion_tokens": 948,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 836,
+  "completion_tokens_details": {
+   "reasoning_tokens": 836
+  }
+ },
+ "cost_usd": 0.00132456,
+ "at": "2026-11-05T10:16:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "7580b56a425a7459564ec3284f395f51c55f0a1ec999e77ad055d220fcf9ce1e",
+ "response_sha256": "b007e290a6c5f7fc2182125e6375cbccbe1332babe8440ea9d7301be062a85a3"
+}

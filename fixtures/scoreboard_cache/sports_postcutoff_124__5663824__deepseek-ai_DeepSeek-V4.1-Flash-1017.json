@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663824,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xfbb33b32fd120019ad202ca463818ffe22c506a500c506b423d678e62f145e001714ef5ede278a661620fdeb3e8f482904e92540294af576dde40e2e5ebffeec1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:e7fa4b08b65b27d87c03a7f3a7049bf05684e38dbf165c7b32d86a0c648ea0e1:70f126285cdadd4ba8a4944fa15310f7bd01336add9a81adc50da4c7c3a73d1c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both snapshots show the completed match ended VfL Bochum 2\u20130 Mainz, for a combined total of 2 goals. Since 2 is over the 1.5 line, the market resolves to Over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1270,
+  "total_tokens": 1674,
+  "completion_tokens": 404,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 76
+  }
+ },
+ "cost_usd": 0.0008658,
+ "at": "2026-11-05T10:23:32",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e7fa4b08b65b27d87c03a7f3a7049bf05684e38dbf165c7b32d86a0c648ea0e1",
+ "response_sha256": "70f126285cdadd4ba8a4944fa15310f7bd01336add9a81adc50da4c7c3a73d1c"
+}

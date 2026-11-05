@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551269,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x02b50dac4210e0460e9c29bfedad0ecaf142d5e05c7318106943f7a0123af53b4d822e89fb606375b172f3dc31e5477404f5e6c5860ce0129601f025079d043e1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:3b42209557187724484a1ac66acb1d5ca1fc22a6702e9c6408c5fc4dc314914c:72005637e63e90e0dd15ae408466e4d1973385fe3800e37ad6ebbf772b8209cf",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with Pittsburgh winning 16-10 over New Orleans, so the market resolves to Steelers.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 960,
+  "total_tokens": 1144,
+  "completion_tokens": 184,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 21,
+  "completion_tokens_details": {
+   "reasoning_tokens": 21
+  }
+ },
+ "cost_usd": 0.00016879999999999998,
+ "at": "2026-11-05T10:18:36",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "3b42209557187724484a1ac66acb1d5ca1fc22a6702e9c6408c5fc4dc314914c",
+ "response_sha256": "72005637e63e90e0dd15ae408466e4d1973385fe3800e37ad6ebbf772b8209cf"
+}

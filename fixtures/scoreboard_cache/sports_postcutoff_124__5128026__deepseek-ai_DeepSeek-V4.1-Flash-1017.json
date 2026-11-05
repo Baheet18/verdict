@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5128026,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x629aab99ee3112201a07eccee45c9646e159af844cf4e0e9c4e6df0eb74fb75e774aa7b5fc672874b5380ef240ea24a7588e7c709c6ad2d1883aea56040500d01c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:322bb02a309c657d08d9f5e6ee1f396c84f9771981c0f1eb3648c975de7f5bd6:46e3eb8eb0eb589a376bece430aaa498b33f7a55c8a27758d52824589b204b66",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both snapshots show the Saints won 34-27, a 7-point margin, which is 5 or more points. Therefore the Saints (-4.5) spread resolves YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 989,
+  "total_tokens": 1187,
+  "completion_tokens": 198,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 75
+  }
+ },
+ "cost_usd": 0.0005343,
+ "at": "2026-11-05T10:19:56",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "322bb02a309c657d08d9f5e6ee1f396c84f9771981c0f1eb3648c975de7f5bd6",
+ "response_sha256": "46e3eb8eb0eb589a376bece430aaa498b33f7a55c8a27758d52824589b204b66"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5144144,
+ "polymarket_id": "5144144",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xc5eea8f59ae678fd808653edb37b03a5b8a1c9cc7614dbe7c70c9380822d23ed4d8a11676132007091c9e7fca5aaadb73cfb57400e3671dbded21416dcad42401b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:135b1de07914d33844fb705888508b7704301b8b49880481342a42d9ee7de97a:14750bc8658f9507875b57e9a6d133392965bd3f4475ec3e8ded49561a61d45a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market rules snapshot and no source reporting whether Trump said \"Burger\" (spoken, not written) during October 2026, so the decisive fact is entirely unverified. The window has closed (fetched 2026-11-05, after market_end 2026-11-01), but with zero event evidence a YES or NO resolution cannot be supported.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 804,
+  "total_tokens": 1530,
+  "completion_tokens": 726,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 540,
+  "completion_tokens_details": {
+   "reasoning_tokens": 540
+  }
+ },
+ "cost_usd": 0.00042731999999999997,
+ "at": "2026-11-05T11:42:39",
+ "set": "disputed_thin_34",
+ "request_sha256": "135b1de07914d33844fb705888508b7704301b8b49880481342a42d9ee7de97a",
+ "response_sha256": "14750bc8658f9507875b57e9a6d133392965bd3f4475ec3e8ded49561a61d45a"
+}

@@ -1,0 +1,40 @@
+{
+ "ok": true,
+ "market_id": 5969230,
+ "polymarket_id": "5969230",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xbce6a605cb11d33852ee91b98e8d3c3f5863e01438b1d86624bcc1cc0ec823222e0a76909e638253fcce97be7a72add097a325bf61c116f1c3952e77c4f2c0cc1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:00668766c5fa8cae7e83b04e4c4d97cab205c132638c0f87e188205f30b75dda:d534d1291541f774a88aad823fdee92462ebd2d9ce3f2102a4c1e60b8af528c9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "The NPB snapshot records Game 3 on October 27 as Yokohama DeNA 1, Fukuoka SoftBank 2, and Japan Times independently states SoftBank won Game 3 in Fukuoka. Therefore the market resolves to Fukuoka SoftBank Hawks.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1374,
+  "total_tokens": 2049,
+  "completion_tokens": 675,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 518
+  }
+ },
+ "cost_usd": 0.0012222,
+ "at": "2026-11-05T13:00:37+01:00",
+ "evidence_sha256": "bd3e5e98d5a04c1c18817d96525308c7996741c94a40dcc420dcf78f8672dff7",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "00668766c5fa8cae7e83b04e4c4d97cab205c132638c0f87e188205f30b75dda",
+ "response_sha256": "d534d1291541f774a88aad823fdee92462ebd2d9ce3f2102a4c1e60b8af528c9"
+}

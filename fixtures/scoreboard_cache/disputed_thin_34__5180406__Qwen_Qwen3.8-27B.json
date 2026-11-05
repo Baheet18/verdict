@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5180406,
+ "polymarket_id": "5180406",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x748e4fa91297bfa0b43d0ced19f6b2da6bd90fb8c7e50ae2a2bb1b8fda9d0aac7217172df4d4e1318f35ff925cebbc39027289f9b8c2efcc3424cfc3c1d176f91c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:1b260bc5e19da060067fe7285a85567d6e361d1ed600652884884489505e9190:32ba074c6fc23046662c49b1f0d17634c7d80c9b70665f0a58f2d200ab0ef30a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description, not credible reporting about Apple's market-cap rank on October 31, 2026. The snapshots are insufficient to determine whether Apple was the second-largest company.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 733,
+  "total_tokens": 1028,
+  "completion_tokens": 295,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 181,
+  "completion_tokens_details": {
+   "reasoning_tokens": 181
+  }
+ },
+ "cost_usd": 0.00042757,
+ "at": "2026-11-05T11:44:41",
+ "set": "disputed_thin_34",
+ "request_sha256": "1b260bc5e19da060067fe7285a85567d6e361d1ed600652884884489505e9190",
+ "response_sha256": "32ba074c6fc23046662c49b1f0d17634c7d80c9b70665f0a58f2d200ab0ef30a"
+}

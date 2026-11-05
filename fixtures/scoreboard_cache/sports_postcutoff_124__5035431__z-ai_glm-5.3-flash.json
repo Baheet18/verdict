@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5035431,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xddf29e12b8e912673a582b581ede49867eb1a36e8ba80ad7b5d0880498fabef23f93831b4faede370327a015f252bded92bfbb0d7beda73fcae2ec32bf222c9b1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:f939fb6cd4068a0897f824794657343c11d8e85ab8e99cf91e3eb99bb63c67bd:e168237af6f17b4538d1968339112148366080f99c7442593d1797d87d6902dd",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Wild winning 5-1 in regulation, so the market resolves to \"Wild\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 951,
+  "total_tokens": 1180,
+  "completion_tokens": 229,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 60,
+  "completion_tokens_details": {
+   "reasoning_tokens": 60
+  }
+ },
+ "cost_usd": 0.00019058,
+ "at": "2026-11-05T10:13:05",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f939fb6cd4068a0897f824794657343c11d8e85ab8e99cf91e3eb99bb63c67bd",
+ "response_sha256": "e168237af6f17b4538d1968339112148366080f99c7442593d1797d87d6902dd"
+}

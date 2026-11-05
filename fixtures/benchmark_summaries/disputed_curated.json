@@ -1,0 +1,325 @@
+{
+  "n_curated": 12,
+  "settles_with_evidence": 0,
+  "agree_uma_among_settled": 0,
+  "disagree_uma_among_settled": 0,
+  "abstains_with_evidence": 12,
+  "abstains_without_evidence_same_ids": 12,
+  "invented_answers": 0,
+  "cost_usd": 0.1055,
+  "rows": [
+    {
+      "id": "1235552",
+      "question": "Will the Cleveland Guardians win the 2026 World Series?",
+      "uma": "NO",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots contain only generic MLB/ESPN pages and no report of the 2026 World Series winner or Guardians elimination. Therefore the outcome cannot be determined from the provided evidence."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots are generic MLB.com and ESPN landing/scoreboard pages containing no 2026 World Series winner or Guardians elimination information. With no substantive result reported by any source, the evidence is insufficient to resolve YES or NO."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The MLB.com and ESPN snapshots (fetched 2026-11-05, after the 2026-10-31 market end) contain only page boilerplate/meta tags with no World Series result, champion, or Guardians elimination information, so fewer than two independent sources report the needed outcome. Without any snapshot stating whether Cleveland won or was eliminated, the market cannot be resolved YES or NO from the evidence."
+        }
+      },
+      "evidence_sha256": "27a62b4dda719e278acf6eca488def0139f1a1e73c16a1a27aa30b3d9fbdb926"
+    },
+    {
+      "id": "608558",
+      "question": "Will Raphinha win the 2026 Ballon d'Or?",
+      "uma": "NO",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots were fetched on 2026-11-05, before the rules' December 31, 2026 declaration deadline, and do not show a 2026 Ballon d'Or winner."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots are generic homepage HTML from France Football, BBC Sport, and UEFA with no mention of the 2026 Ballon d'Or winner or Raphinha. Although the market end date has passed, no source in the bundle reports the required outcome, so the result cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "No snapshot declares a 2026 Ballon d'Or winner, and the snapshots (fetched 2026-11-05) predate the rules' declaration deadline of December 31, 2026, so the event window is not yet over. The France Football homepage snapshot shows no winner announcement, so YES/NO cannot be determined at this time."
+        }
+      },
+      "evidence_sha256": "0fe8605858ae32064ba4d202b1c5f64f5569f29e1af82fd1f51ddf016cb98011"
+    },
+    {
+      "id": "608564",
+      "question": "Will Cristiano Ronaldo win the 2026 Ballon d'Or?",
+      "uma": "NO",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots were fetched on 2026-11-05, before the rules\u2019 2026-12-31 declaration deadline, and do not identify a 2026 Ballon d\u2019Or winner. Therefore the event window is not over."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "All snapshots are generic homepage HTML with no mention of the 2026 Ballon d'Or winner or Cristiano Ronaldo, so the resolution fact is absent. With no source reporting the winner, the outcome cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The resolution window runs until December 31, 2026, and none of the snapshots (fetched 2026-11-05) declare any 2026 Ballon d'Or winner, including Ronaldo. With no winner declared and the deadline not yet passed per the snapshots, the market cannot yet be resolved YES or NO."
+        }
+      },
+      "evidence_sha256": "7193041697aa1aa462184921cc8909481d7bb955db0fe0965dda481317f24871"
+    },
+    {
+      "id": "5180406",
+      "question": "Will Apple be the second-largest company in the world by market cap on October 31, 2026?",
+      "uma": "NO",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots do not provide Apple\u2019s market-cap rank on October 31, 2026, nor a consensus of credible reporting for that date. The available sources are insufficient to determine whether Apple was the second-largest company."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots do not provide the market-cap ranking as of October 31, 2026; the Wikipedia list is only current through June 30, 2026, and the other pages contain no usable ranking data. Thus the evidence is insufficient to determine whether Apple was second-largest on the resolution date."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Although fetched after October 31, 2026, none of the snapshots contain an actual market-cap ranking: the CompaniesMarketCap.com HTML is truncated before any ranking table, the Yahoo Finance AAPL page contains only page boilerplate with no market-cap figure, and Wikipedia's list is only current to 30 June 2026. With fewer than two independent sources reporting Apple's rank on the resolution date, the evidence is insufficient."
+        }
+      },
+      "evidence_sha256": "d2154c35114211029c2a80b72c5cc1960a4b39d45e7e9857a66bc086855f6677"
+    },
+    {
+      "id": "5166966",
+      "question": "Will NVIDIA be the third-largest company in the world by market cap on October 31?",
+      "uma": "NO",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots do not provide NVIDIA's market-cap rank on October 31, 2026, and the Wikipedia list is only current to June 30, 2026. No consensus of credible reporting establishes the third-largest company on the required date."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "No snapshot provides a market-cap ranking as of October 31, 2026; the Wikipedia extract is only current as of June 30, 2026, and the other pages do not show the needed ranking. Therefore the evidence is insufficient to determine whether NVIDIA was third-largest."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has closed (market_end 2026-11-01T03:59:00Z, snapshots fetched 2026-11-05), but no snapshot provides the October 31, 2026 market-cap ranking: the CompaniesMarketCap and Yahoo snapshots contain only page navigation/scripts with no company rankings or cap figures, and Wikipedia's list is only current to 30 June 2026. With no source reporting the needed October 31 ranking, resolution is impossible from this evidence."
+        }
+      },
+      "evidence_sha256": "1427b3570acc081c9ea89d5bb232bf7312eb54b7e2ac508182848296fb7437fc"
+    },
+    {
+      "id": "5166968",
+      "question": "Will Apple be the third-largest company in the world by market cap on October 31?",
+      "uma": "NO",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots do not provide Apple's market-cap rank on October 31, 2026. The Wikipedia extract is only current to June 30, 2026, and the other pages lack the needed ranking data."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots do not provide the market-cap ranking as of October 31, 2026; the Wikipedia list is only current as of June 30, 2026, and the other pages contain no usable ranking data. Therefore the evidence is insufficient to determine whether Apple was third-largest on that date."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "Although the event window has closed, no snapshot reports a market-cap ranking as of October 31, 2026: the CompaniesMarketCap and Yahoo Finance snapshots contain no company rankings or market-cap figures, and Wikipedia's 2026 list is only as of 30 June 2026. With no source (let alone two agreeing) establishing Apple's rank on the resolution date, the evidence is insufficient."
+        }
+      },
+      "evidence_sha256": "5cb37c4f78c0b046c11fc6dff2976b71347eb4dbadaafa40ecdfca302f6a5e79"
+    },
+    {
+      "id": "5648379",
+      "question": "Visa (V) Q4 payments volume growth (constant dollars) 9.5% to 10.5%?",
+      "uma": "YES",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots were fetched on 2026-11-05, before the November 30, 2026 release deadline, and contain no official Q4 earnings metric. Therefore the resolution window is not over and the value cannot be determined."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots contain only HTML boilerplate/navigation from investor.visa.com and Yahoo Finance, with no reported figure for Visa's Q4 payments volume growth (constant dollars). No usable metric value is present, so the market cannot be resolved from the evidence."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "None of the snapshots contain Visa's reported Q4 payments volume growth (constant-dollar) figure: the 'official' snapshot is only Visa IR homepage boilerplate and both Yahoo snapshots are JavaScript/consent boilerplate with no earnings data. With zero sources reporting the needed number, the metric cannot be determined from the evidence bundle."
+        }
+      },
+      "evidence_sha256": "f9c59762cb8b9ca1a0b02f4bd0f6a68086326f82ef0a93f323a283282e1f36f8"
+    },
+    {
+      "id": "5648378",
+      "question": "Visa (V) Q4 payments volume growth (constant dollars) 8.5% to 9.5%?",
+      "uma": "NO",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "TOO_EARLY",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots are dated 2026-11-05 and contain no official Visa Q4 earnings materials reporting payments volume growth (constant dollars). The rules' release deadline is November 30, 2026, so the resolution window is not over."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "None of the snapshots contain Visa's reported Q4 payments volume growth (constant dollars) figure; the official source is only an investor relations homepage shell and the other sources are generic background pages. With no reported metric value in evidence, the bracket cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "None of the source snapshots contain Visa's fiscal Q4 payments volume growth (constant dollars) figure: the official snapshot is only the investor-relations homepage shell, the Yahoo snapshot is page boilerplate, and the Wikipedia extract is general company history with no quarterly metric. With no snapshot reporting the specified metric, the bracket cannot be determined."
+        }
+      },
+      "evidence_sha256": "f583808794695db0f40daff00b08ad2901ff9b4d33288a18d6da5457032ae42e"
+    },
+    {
+      "id": "1281165",
+      "question": "Will the Democratic Party win the CA-34 House seat?",
+      "uma": "YES",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots confirm the 2026 California House election occurred but provide no CA-34 winner, party, or official result. Therefore the market cannot be resolved from the provided sources."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots confirm the election date but contain no reported result for the CA-34 2026 race; the district article's 2026 election-results section is empty and the FEC snapshot is only a homepage. With no outcome reported by any source, the result cannot be determined."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The election window has passed (held Nov 3, 2026), but no snapshot reports the 2026 CA-34 result: the district article's 2026 election-results section is empty, the California elections article contains no district-level results, and the FEC snapshot is only the homepage with no official results. With no source identifying the winning candidate or party, the outcome cannot be determined."
+        }
+      },
+      "evidence_sha256": "eb4ce6d0c1da2f7f644011bcb7c10608a0bc5ef2ac66459f084847f8849bb9e4"
+    },
+    {
+      "id": "1284815",
+      "question": "Will the Republican Party win the TX-02 House seat?",
+      "uma": "YES",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots identify the TX-02 general-election candidates but do not report a winner or official result. Therefore the Republican outcome cannot be determined from the provided sources."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "INVALID",
+          "label": "Hardware + host stack verified",
+          "reasoning": ""
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The election window has passed (Nov 3, 2026 election; snapshots fetched Nov 5), but no snapshot reports the TX-02 general election result \u2014 the Wikipedia 'Results' sections for District 2's general election and the district article's 2026 section are empty, and the FEC snapshot is only a homepage with no results. The snapshots identify only the nominees (Republican Steve Toth, Democrat Shaun Finnie), not the winner, so the outcome cannot be determined."
+        }
+      },
+      "evidence_sha256": "46438397c3506a47f2f8a916302d797672d46c54cc71cd4bcfc5642f84d95c13"
+    },
+    {
+      "id": "5969230",
+      "question": "Fukuoka SoftBank Hawks vs. Yokohama BayStars",
+      "uma": "YES",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The only result evidence is a single Wikipedia extract stating the Hawks swept the 2026 Japan Series, while the official NPB snapshot does not report the October 27 game. The required two independent sources for a sports result are missing."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The 2026 Japan Series was contested by exactly these two teams and the Hawks swept it 4-0, so the Hawks won the October 27 game; both Wikipedia reports corroborate the 2026 title."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "YES",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots show the only Hawks\u2013BayStars matchup was the 2026 Japan Series, and two agreeing report sources state the Hawks swept it 4\u20130, so the October 27 game was completed and won by the Fukuoka SoftBank Hawks."
+        }
+      },
+      "evidence_sha256": "7a60c8c719b3904abf1acb57161c5ea2cdb4e15adb95e03ed898127d7ac0a24e"
+    },
+    {
+      "id": "5285913",
+      "question": "Blues vs. Red Wings: O/U 4.5",
+      "uma": "YES",
+      "panel_with_evidence": "ESCALATE",
+      "panel_without_evidence_thin": "ESCALATE",
+      "fact_sources": 3,
+      "votes": {
+        "Qwen/Qwen3.8-27B": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots contain only page headers and no final score for the October 31 Blues-Red Wings game. Therefore the combined goal total cannot be verified from at least two independent sources."
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The snapshots do not contain the Blues-Red Wings final score or combined goal total, and the NHL page shown is for Nov 4, 2026 rather than the Oct 31 game. With no two independent sources reporting the needed score, the market cannot be resolved from the evidence."
+        },
+        "z-ai/glm-5.3-flash": {
+          "outcome": "AMBIGUOUS",
+          "label": "Hardware + host stack verified",
+          "reasoning": "The event window has passed (snapshots fetched 2026-11-05, after the Oct 31 game), but none of the report snapshots (NHL.com, ESPN, Hockey-Reference) contain any Blues-Red Wings final score or goal totals\u2014only page boilerplate. With fewer than two independent sources reporting the needed score, the market cannot be resolved from this bundle."
+        }
+      },
+      "evidence_sha256": "4c60b06e491d67f7558216b3db0c6cc8dcc37ab6553a716a6ad5eda5dbb1d761"
+    }
+  ],
+  "note": "Curated bundles require \u22651 official + \u22652 report fetches. Thin (rules-only) run abstained on all 34; this subset measures whether richer real evidence enables settle without inventing."
+}

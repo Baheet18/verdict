@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5794318,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x0dba9061dc304510109d8874c7138e02b779c98da9ceebccefd96af7c6554daa64a3171fc3766e3666e68fb9f865282343b0ac6de37a676139eef8061d3557a31b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:5827ba8cb17c8e27a7dbe6959bec97edf7bb0a413643f842d91cf951e5b37de0:323a86b2126dd6e298458e453529ed8e710d3ce5a2e103df975f6c8dfe805a34",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the completed match as Energie Cottbus 1, VfL Bochum 2. Therefore VfL Bochum won within the first 90 minutes plus stoppage time.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1294,
+  "total_tokens": 1899,
+  "completion_tokens": 605,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 289,
+  "completion_tokens_details": {
+   "reasoning_tokens": 289
+  }
+ },
+ "cost_usd": 0.00086851,
+ "at": "2026-11-05T10:26:08",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5827ba8cb17c8e27a7dbe6959bec97edf7bb0a413643f842d91cf951e5b37de0",
+ "response_sha256": "323a86b2126dd6e298458e453529ed8e710d3ce5a2e103df975f6c8dfe805a34"
+}

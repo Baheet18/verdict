@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "market_id": 5936743,
+ "polymarket_id": "5936743",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x71fd520c7d88b2a7d1ddd47633b679df664f470062f9d297181428db5ec4ce6755fd96c76ef1a6d05edbbfe4293c2bbc844dc2a283f0fef467252c5fc858538b1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:42382f44fd2de56461a4f792984f951893aa9ff2f4cbd6336bbc06fb9d7a87da:911fc4c57cf67a23ab1c4acfa194b34877a4836253e6af5f8dd22a0c12a86aed",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (laliga.com and ESPN) agree the match ended 2-2, so FC Andorra did not win by 3 or more goals. Per the rules, the market resolves to CD Tenerife.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1601,
+  "total_tokens": 1878,
+  "completion_tokens": 277,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 119,
+  "completion_tokens_details": {
+   "reasoning_tokens": 119
+  }
+ },
+ "cost_usd": 0.00026658,
+ "at": "2026-11-05T13:04:35+01:00",
+ "evidence_sha256": "2771218d608952e05315bfc8746b25ee4e903514353f8139a0acc53c050a73ba",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "42382f44fd2de56461a4f792984f951893aa9ff2f4cbd6336bbc06fb9d7a87da",
+ "response_sha256": "911fc4c57cf67a23ab1c4acfa194b34877a4836253e6af5f8dd22a0c12a86aed"
+}

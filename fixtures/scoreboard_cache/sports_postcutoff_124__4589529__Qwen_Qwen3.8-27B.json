@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4589529,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x9f389b01224ae106b087e942024e8928b2b307ceca2aaed55345ffc986a392143d268214b6195c2794f2dcd72b625fe92a8b2f34f9b1e9717b24f2bb674a88c41c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:2a506191bb1f1ea1594ace5899609d04b06b7d645196f89ca34b99cb3127d049:e0583ee9ff2fb8cde25a545a987129f0aca6d59ef8e73fdd58ec36f38356583a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as NYG 27, HOU 21, a combined total of 48. Since 48 is at least 45, the market resolves Over, mapped to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1122,
+  "total_tokens": 2039,
+  "completion_tokens": 917,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 610,
+  "completion_tokens_details": {
+   "reasoning_tokens": 610
+  }
+ },
+ "cost_usd": 0.00128283,
+ "at": "2026-11-05T10:21:07",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "2a506191bb1f1ea1594ace5899609d04b06b7d645196f89ca34b99cb3127d049",
+ "response_sha256": "e0583ee9ff2fb8cde25a545a987129f0aca6d59ef8e73fdd58ec36f38356583a"
+}

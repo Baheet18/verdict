@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663693,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xf6da66cebb7e030f3037e506cd2dfb51454e9b510c0340e7ed67efc3516d153651f80bcff0921c1930b6c925ba458d5df15173083f824dfb1fa55bd1c15fdf181c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:9cb8472ba0d528b2fe473379e94e2ca09ff3d99953f6c815b3fc7073bc30a628:6f8b28fe28886af0e642b59723d5677fa7eabd8bec4dcb72f3e4075085d144d6",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Only OpenLigaDB reports the first-half score (1-0), while ESPN reports only the final score. The required first-half total is not confirmed by two independent sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1397,
+  "total_tokens": 1960,
+  "completion_tokens": 563,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 280,
+  "completion_tokens_details": {
+   "reasoning_tokens": 280
+  }
+ },
+ "cost_usd": 0.00081593,
+ "at": "2026-11-05T10:24:33",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9cb8472ba0d528b2fe473379e94e2ca09ff3d99953f6c815b3fc7073bc30a628",
+ "response_sha256": "6f8b28fe28886af0e642b59723d5677fa7eabd8bec4dcb72f3e4075085d144d6"
+}

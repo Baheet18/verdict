@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5693601,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x648339535123072b43047f820bdfbf37b9365c0d4733bb7c8d1332c3d06b380e63baa0d98f795462a77a442efa4d003b6876e4d02679a0e8c36cf17170a59ab31c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:e649570d2c1a854b2099917139416244500fcd99d4df9925846d39706158b90f:60941b9f329241957af495eb90b1f0d95276569ed78b6e79c0c4af6fbf1e20aa",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent snapshots show SSV Jeddeloh II scored 0 and Hertha BSC scored 2, so Hertha must have been the first team to score.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1266,
+  "total_tokens": 1970,
+  "completion_tokens": 704,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 407
+  }
+ },
+ "cost_usd": 0.0012246000000000002,
+ "at": "2026-11-05T10:23:05",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e649570d2c1a854b2099917139416244500fcd99d4df9925846d39706158b90f",
+ "response_sha256": "60941b9f329241957af495eb90b1f0d95276569ed78b6e79c0c4af6fbf1e20aa"
+}

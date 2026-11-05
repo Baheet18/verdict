@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5648379,
+ "polymarket_id": "5648379",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x0abfa8df3264238a47ff78f95074b6cc83c5ae3befc7a4ab756bf1c5a17442e435d678542a26ab900cd8209d9425418da22aa0527cb9c48e6edcb45ee9c8f2471c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:b9f529fa2684d6de3761fc4de6f98ce4e5e970a2aae11e1be2648f143e3e2116:6f60b473fcb4c299d4ba6ef9218bbd524480e3e0a35402e2ad8ce79600e596ff",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "INVALID",
+ "reasoning": "",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1118,
+  "total_tokens": 1770,
+  "completion_tokens": 652,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 537,
+  "completion_tokens_details": {
+   "reasoning_tokens": 537
+  }
+ },
+ "cost_usd": 0.00041544,
+ "at": "2026-11-05T11:54:49",
+ "set": "disputed_thin_34",
+ "request_sha256": "b9f529fa2684d6de3761fc4de6f98ce4e5e970a2aae11e1be2648f143e3e2116",
+ "response_sha256": "6f60b473fcb4c299d4ba6ef9218bbd524480e3e0a35402e2ad8ce79600e596ff"
+}

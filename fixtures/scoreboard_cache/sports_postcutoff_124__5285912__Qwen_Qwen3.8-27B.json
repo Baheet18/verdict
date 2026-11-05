@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5285912,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xd734a9040922be5479ec1f4120af4ac77019f3ddb1a24925e7828a8a403535ea0b6bfc8fb128df025a26c7daf8a8a5bf4d13d90b660bcd1d71fc4436e77e11e21c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:9e6bf4237981950f8e1a3ab081d212d6b34ee66ce76afb1c0aeaeb70f217c4a4:930449ae1588dad391d5a703339033124a7bb27dd23dec315e019be1ae73d598",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both ESPN and NHL official final snapshots show the St. Louis Blues winning 5-4 in regulation. Therefore the market resolves to Blues, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1129,
+  "total_tokens": 1927,
+  "completion_tokens": 798,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 553,
+  "completion_tokens_details": {
+   "reasoning_tokens": 553
+  }
+ },
+ "cost_usd": 0.00112246,
+ "at": "2026-11-05T10:12:53",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9e6bf4237981950f8e1a3ab081d212d6b34ee66ce76afb1c0aeaeb70f217c4a4",
+ "response_sha256": "930449ae1588dad391d5a703339033124a7bb27dd23dec315e019be1ae73d598"
+}

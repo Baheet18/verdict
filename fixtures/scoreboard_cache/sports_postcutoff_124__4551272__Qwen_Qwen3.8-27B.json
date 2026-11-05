@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551272,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x7713db5e188320ab64030db81dea1a995c2c5c54f420536b5b96dff6a92dfe6279802a7f7ec62f7cb553e1aac7f72b0a4bdb726f1cb4d23b4fea54febc65a2951c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:4912bb918dcd50f6c25686cd9debb20153d981ee9568791367430ce9a1c206d6:187ec462fde6eed99bc200b4c2764ed1c72ef8cd67b0614e6c6b4e605cf20a21",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots report the final score as Atlanta Falcons 29, San Francisco 49ers 20. Therefore the market resolves to Falcons, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1138,
+  "total_tokens": 1791,
+  "completion_tokens": 653,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 389,
+  "completion_tokens_details": {
+   "reasoning_tokens": 389
+  }
+ },
+ "cost_usd": 0.00092707,
+ "at": "2026-11-05T10:18:05",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4912bb918dcd50f6c25686cd9debb20153d981ee9568791367430ce9a1c206d6",
+ "response_sha256": "187ec462fde6eed99bc200b4c2764ed1c72ef8cd67b0614e6c6b4e605cf20a21"
+}

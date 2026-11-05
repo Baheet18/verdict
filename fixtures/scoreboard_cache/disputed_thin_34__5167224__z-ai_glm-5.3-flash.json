@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5167224,
+ "polymarket_id": "5167224",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xe14cb5152cb92329a2fb1b1e2ba559f9423702915896e9b9c5387d51c0af28790034496b513c8f02de5358d3a222dd7fc1ed3e78fc152c1f77866e14c4130ffe1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:fdcfcb518c927e17785eaaafe1ed0bca92e133be7faea6fcdd521825e2e0f8e8:e8926fd55708fb082d3ca17d3174814994a540236ad9cfeaef23772638f91b2e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market's own rules text, which is explicitly noted as 'not an external fact source,' and includes no media reporting or statements from either party about a Trump\u2013von der Leyen verbal interaction. With no factual snapshots to confirm or deny a qualifying talk by October 31, 2026, the snapshots are insufficient to resolve.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1133,
+  "total_tokens": 2269,
+  "completion_tokens": 1136,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 954,
+  "completion_tokens_details": {
+   "reasoning_tokens": 954
+  }
+ },
+ "cost_usd": 0.00065864,
+ "at": "2026-11-05T11:51:02",
+ "set": "disputed_thin_34",
+ "request_sha256": "fdcfcb518c927e17785eaaafe1ed0bca92e133be7faea6fcdd521825e2e0f8e8",
+ "response_sha256": "e8926fd55708fb082d3ca17d3174814994a540236ad9cfeaef23772638f91b2e"
+}

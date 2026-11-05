@@ -1,150 +1,104 @@
 {
-  "generated_at": "2026-11-05T12:18:36+01:00",
-  "n": 12,
+  "generated_at": "2026-11-05T12:08:31Z",
+  "note": "Content-addressed evidence for testnet/demo. GitHub raw URIs work only after human-approved push.",
   "bundles": [
     {
-      "polymarket_id": "1235552",
-      "evidence_sha256": "27a62b4dda719e278acf6eca488def0139f1a1e73c16a1a27aa30b3d9fbdb926",
-      "path": "fixtures/evidence/27a62b4dda719e278acf6eca488def0139f1a1e73c16a1a27aa30b3d9fbdb926.json",
-      "source_urls": [
-        "https://www.mlb.com/news",
-        "https://www.espn.com/mlb/",
-        "https://www.espn.com/mlb/scoreboard"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Will the Cleveland Guardians win the 2026 World Series?"
-    },
-    {
-      "polymarket_id": "608558",
-      "evidence_sha256": "0fe8605858ae32064ba4d202b1c5f64f5569f29e1af82fd1f51ddf016cb98011",
       "path": "fixtures/evidence/0fe8605858ae32064ba4d202b1c5f64f5569f29e1af82fd1f51ddf016cb98011.json",
-      "source_urls": [
-        "https://www.francefootball.fr/",
-        "https://www.bbc.com/sport/football",
-        "https://www.uefa.com/"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Will Raphinha win the 2026 Ballon d'Or?"
+      "evidence_sha256": "0fe8605858ae32064ba4d202b1c5f64f5569f29e1af82fd1f51ddf016cb98011",
+      "polymarket_id": "608558",
+      "question": "Will Raphinha win the 2026 Ballon d'Or?",
+      "proposed_evidence_uri_after_push": null
     },
     {
-      "polymarket_id": "608564",
-      "evidence_sha256": "7193041697aa1aa462184921cc8909481d7bb955db0fe0965dda481317f24871",
-      "path": "fixtures/evidence/7193041697aa1aa462184921cc8909481d7bb955db0fe0965dda481317f24871.json",
-      "source_urls": [
-        "https://www.francefootball.fr/",
-        "https://www.bbc.com/sport/football",
-        "https://www.uefa.com/"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Will Cristiano Ronaldo win the 2026 Ballon d'Or?"
-    },
-    {
-      "polymarket_id": "5180406",
-      "evidence_sha256": "d2154c35114211029c2a80b72c5cc1960a4b39d45e7e9857a66bc086855f6677",
-      "path": "fixtures/evidence/d2154c35114211029c2a80b72c5cc1960a4b39d45e7e9857a66bc086855f6677.json",
-      "source_urls": [
-        "https://companiesmarketcap.com/",
-        "https://finance.yahoo.com/quote/AAPL/",
-        "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=List+of+public+corporations+by+market+capitalization&format=json&redirects=1"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Will Apple be the second-largest company in the world by market cap on October 31, 2026?"
-    },
-    {
-      "polymarket_id": "5166966",
-      "evidence_sha256": "1427b3570acc081c9ea89d5bb232bf7312eb54b7e2ac508182848296fb7437fc",
       "path": "fixtures/evidence/1427b3570acc081c9ea89d5bb232bf7312eb54b7e2ac508182848296fb7437fc.json",
-      "source_urls": [
-        "https://companiesmarketcap.com/",
-        "https://finance.yahoo.com/quote/NVDA/",
-        "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=List+of+public+corporations+by+market+capitalization&format=json&redirects=1"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Will NVIDIA be the third-largest company in the world by market cap on October 31?"
+      "evidence_sha256": "1427b3570acc081c9ea89d5bb232bf7312eb54b7e2ac508182848296fb7437fc",
+      "polymarket_id": "5166966",
+      "question": "Will NVIDIA be the third-largest company in the world by market cap on October 31?",
+      "proposed_evidence_uri_after_push": null
     },
     {
-      "polymarket_id": "5166968",
-      "evidence_sha256": "5cb37c4f78c0b046c11fc6dff2976b71347eb4dbadaafa40ecdfca302f6a5e79",
-      "path": "fixtures/evidence/5cb37c4f78c0b046c11fc6dff2976b71347eb4dbadaafa40ecdfca302f6a5e79.json",
-      "source_urls": [
-        "https://companiesmarketcap.com/",
-        "https://finance.yahoo.com/quote/AAPL/",
-        "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=List+of+public+corporations+by+market+capitalization&format=json&redirects=1"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Will Apple be the third-largest company in the world by market cap on October 31?"
+      "path": "fixtures/evidence/27a62b4dda719e278acf6eca488def0139f1a1e73c16a1a27aa30b3d9fbdb926.json",
+      "evidence_sha256": "27a62b4dda719e278acf6eca488def0139f1a1e73c16a1a27aa30b3d9fbdb926",
+      "polymarket_id": "1235552",
+      "question": "Will the Cleveland Guardians win the 2026 World Series?",
+      "proposed_evidence_uri_after_push": null
     },
     {
-      "polymarket_id": "5648379",
-      "evidence_sha256": "f9c59762cb8b9ca1a0b02f4bd0f6a68086326f82ef0a93f323a283282e1f36f8",
-      "path": "fixtures/evidence/f9c59762cb8b9ca1a0b02f4bd0f6a68086326f82ef0a93f323a283282e1f36f8.json",
-      "source_urls": [
-        "https://investor.visa.com/",
-        "https://finance.yahoo.com/quote/V/",
-        "https://finance.yahoo.com/quote/V/analysis/"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Visa (V) Q4 payments volume growth (constant dollars) 9.5% to 10.5%?"
-    },
-    {
-      "polymarket_id": "5648378",
-      "evidence_sha256": "f583808794695db0f40daff00b08ad2901ff9b4d33288a18d6da5457032ae42e",
-      "path": "fixtures/evidence/f583808794695db0f40daff00b08ad2901ff9b4d33288a18d6da5457032ae42e.json",
-      "source_urls": [
-        "https://investor.visa.com/",
-        "https://finance.yahoo.com/quote/V/",
-        "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Visa+Inc.&format=json&redirects=1"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Visa (V) Q4 payments volume growth (constant dollars) 8.5% to 9.5%?"
-    },
-    {
-      "polymarket_id": "1281165",
-      "evidence_sha256": "eb4ce6d0c1da2f7f644011bcb7c10608a0bc5ef2ac66459f084847f8849bb9e4",
-      "path": "fixtures/evidence/eb4ce6d0c1da2f7f644011bcb7c10608a0bc5ef2ac66459f084847f8849bb9e4.json",
-      "source_urls": [
-        "https://www.fec.gov/",
-        "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=2026+United+States+House+of+Representatives+elections+in+California&format=json&redirects=1",
-        "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=California%27s+34th+congressional+district&format=json&redirects=1"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Will the Democratic Party win the CA-34 House seat?"
-    },
-    {
-      "polymarket_id": "1284815",
-      "evidence_sha256": "46438397c3506a47f2f8a916302d797672d46c54cc71cd4bcfc5642f84d95c13",
       "path": "fixtures/evidence/46438397c3506a47f2f8a916302d797672d46c54cc71cd4bcfc5642f84d95c13.json",
-      "source_urls": [
-        "https://www.fec.gov/",
-        "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=2026+United+States+House+of+Representatives+elections+in+Texas&format=json&redirects=1",
-        "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Texas%27s+2nd+congressional+district&format=json&redirects=1"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Will the Republican Party win the TX-02 House seat?"
+      "evidence_sha256": "46438397c3506a47f2f8a916302d797672d46c54cc71cd4bcfc5642f84d95c13",
+      "polymarket_id": "1284815",
+      "question": "Will the Republican Party win the TX-02 House seat?",
+      "proposed_evidence_uri_after_push": null
     },
     {
-      "polymarket_id": "5969230",
-      "evidence_sha256": "7a60c8c719b3904abf1acb57161c5ea2cdb4e15adb95e03ed898127d7ac0a24e",
-      "path": "fixtures/evidence/7a60c8c719b3904abf1acb57161c5ea2cdb4e15adb95e03ed898127d7ac0a24e.json",
-      "source_urls": [
-        "https://npb.jp/",
-        "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=2026+Japan+Series&format=json&redirects=1",
-        "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Fukuoka+SoftBank+Hawks&format=json&redirects=1"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Fukuoka SoftBank Hawks vs. Yokohama BayStars"
-    },
-    {
-      "polymarket_id": "5285913",
-      "evidence_sha256": "4c60b06e491d67f7558216b3db0c6cc8dcc37ab6553a716a6ad5eda5dbb1d761",
       "path": "fixtures/evidence/4c60b06e491d67f7558216b3db0c6cc8dcc37ab6553a716a6ad5eda5dbb1d761.json",
-      "source_urls": [
-        "https://www.nhl.com/scores",
-        "https://www.espn.com/nhl/scoreboard",
-        "https://www.hockey-reference.com/"
-      ],
-      "independent_fact_sources": 3,
-      "question": "Blues vs. Red Wings: O/U 4.5"
+      "evidence_sha256": "4c60b06e491d67f7558216b3db0c6cc8dcc37ab6553a716a6ad5eda5dbb1d761",
+      "polymarket_id": "5285913",
+      "question": "Blues vs. Red Wings: O/U 4.5",
+      "proposed_evidence_uri_after_push": null
+    },
+    {
+      "path": "fixtures/evidence/5cb37c4f78c0b046c11fc6dff2976b71347eb4dbadaafa40ecdfca302f6a5e79.json",
+      "evidence_sha256": "5cb37c4f78c0b046c11fc6dff2976b71347eb4dbadaafa40ecdfca302f6a5e79",
+      "polymarket_id": "5166968",
+      "question": "Will Apple be the third-largest company in the world by market cap on October 31?",
+      "proposed_evidence_uri_after_push": null
+    },
+    {
+      "path": "fixtures/evidence/7193041697aa1aa462184921cc8909481d7bb955db0fe0965dda481317f24871.json",
+      "evidence_sha256": "7193041697aa1aa462184921cc8909481d7bb955db0fe0965dda481317f24871",
+      "polymarket_id": "608564",
+      "question": "Will Cristiano Ronaldo win the 2026 Ballon d'Or?",
+      "proposed_evidence_uri_after_push": null
+    },
+    {
+      "path": "fixtures/evidence/7a60c8c719b3904abf1acb57161c5ea2cdb4e15adb95e03ed898127d7ac0a24e.json",
+      "evidence_sha256": "7a60c8c719b3904abf1acb57161c5ea2cdb4e15adb95e03ed898127d7ac0a24e",
+      "polymarket_id": "5969230",
+      "question": "Fukuoka SoftBank Hawks vs. Yokohama BayStars",
+      "proposed_evidence_uri_after_push": null
+    },
+    {
+      "path": "fixtures/evidence/9e9bc4f0715b3fc6220790a8bf107538b1de99e26d7795a34d6a499aca925555.json",
+      "evidence_sha256": "9e9bc4f0715b3fc6220790a8bf107538b1de99e26d7795a34d6a499aca925555",
+      "polymarket_id": null,
+      "question": "Did it rain (>=1mm) at Ikeja on 2026-11-03?",
+      "proposed_evidence_uri_after_push": null
+    },
+    {
+      "path": "fixtures/evidence/ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7.json",
+      "evidence_sha256": "ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7",
+      "polymarket_id": "4329887",
+      "question": "Saints vs. Giants",
+      "proposed_evidence_uri_after_push": "https://raw.githubusercontent.com/Baheet18/verdict/master/fixtures/evidence/ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7.json"
+    },
+    {
+      "path": "fixtures/evidence/d2154c35114211029c2a80b72c5cc1960a4b39d45e7e9857a66bc086855f6677.json",
+      "evidence_sha256": "d2154c35114211029c2a80b72c5cc1960a4b39d45e7e9857a66bc086855f6677",
+      "polymarket_id": "5180406",
+      "question": "Will Apple be the second-largest company in the world by market cap on October 31, 2026?",
+      "proposed_evidence_uri_after_push": null
+    },
+    {
+      "path": "fixtures/evidence/eb4ce6d0c1da2f7f644011bcb7c10608a0bc5ef2ac66459f084847f8849bb9e4.json",
+      "evidence_sha256": "eb4ce6d0c1da2f7f644011bcb7c10608a0bc5ef2ac66459f084847f8849bb9e4",
+      "polymarket_id": "1281165",
+      "question": "Will the Democratic Party win the CA-34 House seat?",
+      "proposed_evidence_uri_after_push": null
+    },
+    {
+      "path": "fixtures/evidence/f583808794695db0f40daff00b08ad2901ff9b4d33288a18d6da5457032ae42e.json",
+      "evidence_sha256": "f583808794695db0f40daff00b08ad2901ff9b4d33288a18d6da5457032ae42e",
+      "polymarket_id": "5648378",
+      "question": "Visa (V) Q4 payments volume growth (constant dollars) 8.5% to 9.5%?",
+      "proposed_evidence_uri_after_push": null
+    },
+    {
+      "path": "fixtures/evidence/f9c59762cb8b9ca1a0b02f4bd0f6a68086326f82ef0a93f323a283282e1f36f8.json",
+      "evidence_sha256": "f9c59762cb8b9ca1a0b02f4bd0f6a68086326f82ef0a93f323a283282e1f36f8",
+      "polymarket_id": "5648379",
+      "question": "Visa (V) Q4 payments volume growth (constant dollars) 9.5% to 10.5%?",
+      "proposed_evidence_uri_after_push": null
     }
   ]
 }

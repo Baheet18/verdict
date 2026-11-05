@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5693461,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x45f8d0c4908d2cf7dce98f76f9d8fe70bed59e46baa30a28f6c1af9eba5b53f03a8c26e283c5f0be966245d2a6e5e5b26619f87e90e156af7b9b2c939b6029421c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:107d6a842256b002b4fdd63438bb46ce94745e2c3931c4f113f74a08608b4f8a:2075d67aff561a4784e7b489d972c4d54ccd4bb46e82a738ae75dabf0ac78c37",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the match finished 0-1 with a 0-0 halftime, meaning Stuttgart scored the only (and therefore first) goal within regular play, so the market resolves to VfB Stuttgart, mapping to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1239,
+  "total_tokens": 1682,
+  "completion_tokens": 443,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 250,
+  "completion_tokens_details": {
+   "reasoning_tokens": 250
+  }
+ },
+ "cost_usd": 0.00032062,
+ "at": "2026-11-05T10:25:35",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "107d6a842256b002b4fdd63438bb46ce94745e2c3931c4f113f74a08608b4f8a",
+ "response_sha256": "2075d67aff561a4784e7b489d972c4d54ccd4bb46e82a738ae75dabf0ac78c37"
+}

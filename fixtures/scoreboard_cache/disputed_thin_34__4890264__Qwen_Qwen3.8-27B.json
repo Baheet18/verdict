@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 4890264,
+ "polymarket_id": "4890264",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x95bb5d9eeb7eef015aec0f2c233ba2741fcacab03748865656845e8afa70cf217c81572e77a8e65314256fca6afc83ab25e57a4f771be19dca2349d306be63ca1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:94a622fa18f0e93ea95c44bf9a604df657d8e76fd81ef3abe6cc17e0f3eacb90:1d2731703d4754df8a89047d9d9761900fa7ff65c0e68d3f0632e7834d4e6cfe",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description and contains no official election results or credible reporting of the first-round vote percentages. Therefore the required margin cannot be determined from the provided source snapshots.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1524,
+  "total_tokens": 2096,
+  "completion_tokens": 572,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 438,
+  "completion_tokens_details": {
+   "reasoning_tokens": 438
+  }
+ },
+ "cost_usd": 0.00083316,
+ "at": "2026-11-05T11:42:52",
+ "set": "disputed_thin_34",
+ "request_sha256": "94a622fa18f0e93ea95c44bf9a604df657d8e76fd81ef3abe6cc17e0f3eacb90",
+ "response_sha256": "1d2731703d4754df8a89047d9d9761900fa7ff65c0e68d3f0632e7834d4e6cfe"
+}

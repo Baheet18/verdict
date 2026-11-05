@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4329885,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x5ad2e62d21b039d7fdd287624ff64ddd31101b0cbf8c85e944d860c8023bd2234dae3feffdd249d8a25d55e45ac27d5f1b7a8e1694b1b866df2b110254e20ef01b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:e5c06a988a659c840fd4c8606ef38780f8acf362413a93f195fe06d0d98157b7:126cfea24b74b65101361ee0e7493b28ab3c9263ec8eb7621cc595840a8cb628",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent snapshots report the final score as Tennessee 26 and Indianapolis 20, with ESPN explicitly marking Tennessee as winner. Therefore the market resolves to Titans, mapped to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1116,
+  "total_tokens": 2505,
+  "completion_tokens": 1389,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1097,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1097
+  }
+ },
+ "cost_usd": 0.00191979,
+ "at": "2026-11-05T10:19:29",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e5c06a988a659c840fd4c8606ef38780f8acf362413a93f195fe06d0d98157b7",
+ "response_sha256": "126cfea24b74b65101361ee0e7493b28ab3c9263ec8eb7621cc595840a8cb628"
+}

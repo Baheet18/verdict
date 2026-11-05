@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 1281165,
+ "polymarket_id": "1281165",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xcb9df6fdb0887617cbb9a95bce007f0ffe6422413c43f9425e556f356f58260740ce6917695ae62ddcb05ad6183ff9b26be32eb11963bab063e80c8707acd9031c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:4829242a2ba3f08146ba324a82e5fe446a8e2bf740ca306ca264065b4b8d8b3d:8c0f2c174e9e4afe5896ae6ddc3dcb4ca433c8a160f274594bd5b2efb45a95c4",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The election window has passed (held Nov 3, 2026), but no snapshot reports the 2026 CA-34 result: the district article's 2026 election-results section is empty, the California elections article contains no district-level results, and the FEC snapshot is only the homepage with no official results. With no source identifying the winning candidate or party, the outcome cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 6668,
+  "total_tokens": 7457,
+  "completion_tokens": 789,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 642,
+  "completion_tokens_details": {
+   "reasoning_tokens": 642
+  }
+ },
+ "cost_usd": 0.00092794,
+ "at": "2026-11-05T12:35:41",
+ "evidence_sha256": "eb4ce6d0c1da2f7f644011bcb7c10608a0bc5ef2ac66459f084847f8849bb9e4",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "4829242a2ba3f08146ba324a82e5fe446a8e2bf740ca306ca264065b4b8d8b3d",
+ "response_sha256": "8c0f2c174e9e4afe5896ae6ddc3dcb4ca433c8a160f274594bd5b2efb45a95c4"
+}

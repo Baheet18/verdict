@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406786,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xe462dff8988b51648ab45c38d9d689847e20f9e9de91f07c0da89203f6fe0f0d15b5578c6eaeba862a820879ed23aa04bc9fa69260f5228b9a2f626d69dcf45f1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:4ce4ed8d4feeb3dcfaf19d7833a934c2d4e2e7084bc7ce31ebe31094e70a9b02:8a9f2992885f9ab68708d3bfee9c9914473bd456205e7d6f10adbbbed61254f2",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL API) agree the game is final with Golden Knights 3, Penguins 2, so the Golden Knights won.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1009,
+  "total_tokens": 1369,
+  "completion_tokens": 360,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 76
+  }
+ },
+ "cost_usd": 0.0007347,
+ "at": "2026-11-05T10:14:28",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4ce4ed8d4feeb3dcfaf19d7833a934c2d4e2e7084bc7ce31ebe31094e70a9b02",
+ "response_sha256": "8a9f2992885f9ab68708d3bfee9c9914473bd456205e7d6f10adbbbed61254f2"
+}

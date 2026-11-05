@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5285937,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xe8ac7823f512460414cd75cb9c29b59c43b7d1381a7950f6633bde5b1ee0a1d60808d23b5a4ca37574cd2e6e3dcb71f649ec0dfaefaf0c149d7eb0b575ad2ad41b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:4cbb6fbe637fd7b1d5cbc0d54a5497cc188ed14456a661b35666b2e1de123dea:7cb7aab11a6bffc48ad7ee79cdcd247f9636c2628ae35bf7c4c0f7f11ce574d5",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Buffalo winning 3-2 in regulation, so the market resolves to \"Sabres\" = YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 969,
+  "total_tokens": 1166,
+  "completion_tokens": 197,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 23,
+  "completion_tokens_details": {
+   "reasoning_tokens": 23
+  }
+ },
+ "cost_usd": 0.00017601999999999999,
+ "at": "2026-11-05T10:13:53",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4cbb6fbe637fd7b1d5cbc0d54a5497cc188ed14456a661b35666b2e1de123dea",
+ "response_sha256": "7cb7aab11a6bffc48ad7ee79cdcd247f9636c2628ae35bf7c4c0f7f11ce574d5"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4882648,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x53750b517fcb262980339d55ccfebd77f8616635f786b95e4e45757a6acea9f45a4b905bf34d9000a0e56c699c2bb7b182613b0da1f618e6fdd705e84853eb0a1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:5b9ca30c1c444b75b5387118d0c44f190598641323fd79a345191bc6926c91b6:f151f44fd816149d60c606459ff49afb440ca998607641662c6b0a86a4e19fa6",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL API) agree the game was final with the Sharks winning 4-3 in overtime, so the market resolves to \"Sharks\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1011,
+  "total_tokens": 1402,
+  "completion_tokens": 391,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 98
+  }
+ },
+ "cost_usd": 0.0007725,
+ "at": "2026-11-05T10:16:29",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5b9ca30c1c444b75b5387118d0c44f190598641323fd79a345191bc6926c91b6",
+ "response_sha256": "f151f44fd816149d60c606459ff49afb440ca998607641662c6b0a86a4e19fa6"
+}

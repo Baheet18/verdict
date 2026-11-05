@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5332476,
+ "polymarket_id": "5332476",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x5451e5d2233e4f30eaa4d8d4f0694ee062bc5e82bbaf9f6ed27dbcf4ccc377ad7a31bc94240302ff209b863c53e5648e03f7b89a52268b5901e6ce929da1406d1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:8a9bed52d4399cd8681d6621a7d0153bd61b1927e94e71d35567c6f8ad0492c7:812cd7427f56729d14d94192efc1b8314ff843d0d5937a62de027276b54c155e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market's own rules/description, which explicitly states it is 'not an external fact source,' and no snapshot reports actual election results or seat counts for Noam or any party. With no independent sources on the outcome, the snapshots are insufficient to determine whether Noam won the second-most seats.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1132,
+  "total_tokens": 1711,
+  "completion_tokens": 579,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 427,
+  "completion_tokens_details": {
+   "reasoning_tokens": 427
+  }
+ },
+ "cost_usd": 0.00038006,
+ "at": "2026-11-05T11:57:50",
+ "set": "disputed_thin_34",
+ "request_sha256": "8a9bed52d4399cd8681d6621a7d0153bd61b1927e94e71d35567c6f8ad0492c7",
+ "response_sha256": "812cd7427f56729d14d94192efc1b8314ff843d0d5937a62de027276b54c155e"
+}

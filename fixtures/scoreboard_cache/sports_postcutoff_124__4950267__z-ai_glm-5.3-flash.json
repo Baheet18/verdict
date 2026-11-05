@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4950267,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xc31b069d8d1b56af3cb6db85dc0bc43e5a38301f937f7c27151eea9eabcc13e24339c1de1e8cbd0e48a537684e9b3b6d6c7b5e3201b7d63ff1a8959ba3d2ec831c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:779ca957f224bd543cbcea82beff5a1de4ffba06acb3cd84cc8693b4c0e38dde:f83e5f40d0a6b7c05b2321ca9cdc0c90b82609c37cb18e8c461b215b9ef45b34",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Sharks winning 6-2 in regulation, so the market resolves to \"Sharks\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 956,
+  "total_tokens": 1156,
+  "completion_tokens": 200,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 21,
+  "completion_tokens_details": {
+   "reasoning_tokens": 21
+  }
+ },
+ "cost_usd": 0.00017648000000000002,
+ "at": "2026-11-05T10:15:58",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "779ca957f224bd543cbcea82beff5a1de4ffba06acb3cd84cc8693b4c0e38dde",
+ "response_sha256": "f83e5f40d0a6b7c05b2321ca9cdc0c90b82609c37cb18e8c461b215b9ef45b34"
+}

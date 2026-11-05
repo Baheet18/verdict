@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5237633,
+ "polymarket_id": "5237633",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x3940865a75c5e7f7e89cf6aa5771efc59aa837e07e455ae25262cb17a6627d06663abf2f9efaf74e832cc4bb59682c196ebaa8648487d05a53b008704a9675011b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:b438ece6aaf81e32cd243e9158bd2ee32605e63d54657d6fb64045e2b1699e81:02aad455b1ac79debcd9d7d1ed1c012e0ebb014b5ccb857fafaa6b43fa8ff218",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The evidence bundle contains only the market rules/description and no resolution-source reporting (official Ukrainian/Russian statements or credible news) about any qualifying military action directed at Moscow on October 19, 2026, so the occurrence cannot be determined from the snapshots. The event window has passed (fetched 2026-11-05 vs. market_end 2026-10-20), but with zero factual snapshots t\u2026",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1555,
+  "total_tokens": 2342,
+  "completion_tokens": 787,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 617,
+  "completion_tokens_details": {
+   "reasoning_tokens": 617
+  }
+ },
+ "cost_usd": 0.0005179,
+ "at": "2026-11-05T11:51:46",
+ "set": "disputed_thin_34",
+ "request_sha256": "b438ece6aaf81e32cd243e9158bd2ee32605e63d54657d6fb64045e2b1699e81",
+ "response_sha256": "02aad455b1ac79debcd9d7d1ed1c012e0ebb014b5ccb857fafaa6b43fa8ff218"
+}

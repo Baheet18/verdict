@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5156478,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xf7d0e5c2caa14d84710c1a98af631e1a3b80e99aa04de96b9f2335b4acb7895227b02cb2864d6993ff6cc16427d1aa3bf50eb4a1e462526790b7a9dd8eeb0ec71b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:33f433814dd6e2f269b43ec6b3bcf57ae72a2fc1857be7a2567e8598be3630f7:a95f4ed1b2cf9acc8a0ac1fca7dcc6d3e25efa6fa988e083c745fe536bd20a89",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent final-score snapshots show the Canadiens beat the Blues 2-0. Under the rules, the market resolves to \"Canadiens\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1015,
+  "total_tokens": 1291,
+  "completion_tokens": 276,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 63
+  }
+ },
+ "cost_usd": 0.0006356999999999999,
+ "at": "2026-11-05T10:13:42",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "33f433814dd6e2f269b43ec6b3bcf57ae72a2fc1857be7a2567e8598be3630f7",
+ "response_sha256": "a95f4ed1b2cf9acc8a0ac1fca7dcc6d3e25efa6fa988e083c745fe536bd20a89"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406799,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x9d3014b47dbd718cdce9f54776d13a17315e495b86a905c12ff11b256838cec552a3ce64122d195cb52a06e79b39e962d571153d6fd0cf1234b67b1d0cfadc1e1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:516ec20d453483458dfc6630295a560afeee7a26db8afab336c838f26e7f1e36:a9373e1691f215534799b8973184bd9b4976eab4349498ef9a0b15868c2c60ad",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent sources report a final score of Wild 4, Flyers 2, so the Wild won and the market resolves to \"Wild\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 995,
+  "total_tokens": 1226,
+  "completion_tokens": 231,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 28
+  }
+ },
+ "cost_usd": 0.0005757,
+ "at": "2026-11-05T10:16:33",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "516ec20d453483458dfc6630295a560afeee7a26db8afab336c838f26e7f1e36",
+ "response_sha256": "a9373e1691f215534799b8973184bd9b4976eab4349498ef9a0b15868c2c60ad"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5179036,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xf0f89d4d4253ba20d47fe5e8cc96db1f85cb637aa1bf180d20f5a937327277623934168519dcaff336ca081467e5b92809d933e3469eb9b0641a4c7a57c064b41c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:e61f0e287ed18885914486bc467fad057b3479d849170201e1955b22cae2abc1:beae190f290b8d060da6f2723f2adcb43296f38449b3b9a0f9a444553e3d027e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources agree that the Capitals won 5-2. Therefore the market resolves to Capitals, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1127,
+  "total_tokens": 1755,
+  "completion_tokens": 628,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 474,
+  "completion_tokens_details": {
+   "reasoning_tokens": 474
+  }
+ },
+ "cost_usd": 0.00089288,
+ "at": "2026-11-05T10:13:57",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e61f0e287ed18885914486bc467fad057b3479d849170201e1955b22cae2abc1",
+ "response_sha256": "beae190f290b8d060da6f2723f2adcb43296f38449b3b9a0f9a444553e3d027e"
+}

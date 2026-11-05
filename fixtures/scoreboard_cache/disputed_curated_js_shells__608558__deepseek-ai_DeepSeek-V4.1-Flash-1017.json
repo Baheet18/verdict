@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "market_id": 608558,
+ "polymarket_id": "608558",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xdef0b8a94b18db883354e9325f2850c6759d641d0d625e24b7f3dd3cd0873a3f27f6b0bc312253d7afd9c20699bf2d4398227bc1ba8aba8b87d60f2b999d6d341b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:c7927c0ced7d3bd409762b6e156ebf657d92cab876678b99bb6f068f67066c00:3cce926fb57bc8302bfa0cc3b6036e9e957d92ad100561d8492841c14c6aa46f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots are generic homepage HTML from France Football, BBC Sport, and UEFA with no mention of the 2026 Ballon d'Or winner or Raphinha. Although the market end date has passed, no source in the bundle reports the required outcome, so the result cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 13199,
+  "total_tokens": 13579,
+  "completion_tokens": 380,
+  "prompt_tokens_details": {
+   "cached_tokens": 320,
+   "created_cache_tokens": 12864
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 244
+  }
+ },
+ "cost_usd": 0.0044157,
+ "at": "2026-11-05T12:22:50",
+ "evidence_sha256": "0fe8605858ae32064ba4d202b1c5f64f5569f29e1af82fd1f51ddf016cb98011",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "c7927c0ced7d3bd409762b6e156ebf657d92cab876678b99bb6f068f67066c00",
+ "response_sha256": "3cce926fb57bc8302bfa0cc3b6036e9e957d92ad100561d8492841c14c6aa46f"
+}

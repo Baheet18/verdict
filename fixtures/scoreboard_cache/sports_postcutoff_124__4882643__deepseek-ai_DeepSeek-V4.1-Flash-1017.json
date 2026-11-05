@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4882643,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xff6ef4f2831afb381a575d0e1cb3a05f3fe6f7ab5058f7b1c2866b41dd2cc97e5de3366d0517fafe541812ba27e4c9572d3bbd7d2a4337c044c19656dd489b3f1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:0128102797bf5e9731aa90b4d8ebb5730c63fff54fb5c11488332340cf09ed52:15e3ea08036e60a7834f44aaa42d497660dd49b5f523f7ff32530398ae2e6a6d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Devils 4, Avalanche 3, so the Avalanche did not win and the market resolves to Devils (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 997,
+  "total_tokens": 1319,
+  "completion_tokens": 322,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 44
+  }
+ },
+ "cost_usd": 0.0006855,
+ "at": "2026-11-05T10:14:47",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "0128102797bf5e9731aa90b4d8ebb5730c63fff54fb5c11488332340cf09ed52",
+ "response_sha256": "15e3ea08036e60a7834f44aaa42d497660dd49b5f523f7ff32530398ae2e6a6d"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4329893,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xde8f64a2be34ac09b2fc0f6f9e8315ce6a2363cddf42b918104a68be68db7fe965278e12ac190cee41ce6584ea384e534b19ac2334064aa2ea9fbc087b34fb8f1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:2e943c8eb89a1d47630614772f49fb8184dbac285e760cd687a99c272a71d0f8:b26a146968c07a9042e8fff75c52183bc8a716dc3edbca2ad26a96d27d9e710e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show the game final with Packers beating Cowboys 23-13, so the market resolves to Packers (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 994,
+  "total_tokens": 1274,
+  "completion_tokens": 280,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 31
+  }
+ },
+ "cost_usd": 0.0006341999999999999,
+ "at": "2026-11-05T10:17:26",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "2e943c8eb89a1d47630614772f49fb8184dbac285e760cd687a99c272a71d0f8",
+ "response_sha256": "b26a146968c07a9042e8fff75c52183bc8a716dc3edbca2ad26a96d27d9e710e"
+}

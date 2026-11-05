@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5126663,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x48e39f81d917c61c7e3be2edd658bdec7359d320ed9fe32c9524c1a177189517182b13f0b4d932e76a2dfeeccf757fe63efc6d64dd73cbefba6b3c9f54b20b701b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:f85a41a2db9347567317692b355e4df0959dc3253754fd704590583a9c9b7e0e:7cee2590fd711629f5614509ef427b439462cb4f66dd231e703b3c0676eb0ea3",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both ESPN and the NHL official feed agree the game is final with Detroit winning 4-3 (shootout), so the market resolves to \"Red Wings\". Per the verdict mapping, this answers YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 961,
+  "total_tokens": 1300,
+  "completion_tokens": 339,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 100,
+  "completion_tokens_details": {
+   "reasoning_tokens": 100
+  }
+ },
+ "cost_usd": 0.00024638,
+ "at": "2026-11-05T10:14:09",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "f85a41a2db9347567317692b355e4df0959dc3253754fd704590583a9c9b7e0e",
+ "response_sha256": "7cee2590fd711629f5614509ef427b439462cb4f66dd231e703b3c0676eb0ea3"
+}

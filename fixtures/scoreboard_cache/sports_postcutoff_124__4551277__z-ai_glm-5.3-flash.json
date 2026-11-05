@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4551277,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xbc409d7ec5d22a94c8877b436c64b131885bbe60f5d5a4b079ae51daf18a895776134948ed1011bba8a16df9184bd314535179b6d8a8e61dfb7171bb418229ae1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:1a11bbb2144f9f7a50f7705237f1783749895b9e8cc80e5b525e559832536b99:40fe076755ca4679aed5279d32e0708c1ae4f0b0ab7c78ecf7b64e9d56a5cbbb",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the game is final with the Giants winning 27-21 over the Texans, so the market resolves to \"Giants\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 958,
+  "total_tokens": 1149,
+  "completion_tokens": 191,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 21,
+  "completion_tokens_details": {
+   "reasoning_tokens": 21
+  }
+ },
+ "cost_usd": 0.00017214,
+ "at": "2026-11-05T10:18:04",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "1a11bbb2144f9f7a50f7705237f1783749895b9e8cc80e5b525e559832536b99",
+ "response_sha256": "40fe076755ca4679aed5279d32e0708c1ae4f0b0ab7c78ecf7b64e9d56a5cbbb"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 2645614,
+ "polymarket_id": "2645614",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x522632a624d91aff68b8f17c7eefa9fea70332b87faf858f632727a934aa52132efb1fea99afcb934e3c898a5de12a9782d5d9ce28447703cac5afeb4dafab881b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:1eae6e41d44b0fbfa439ea55e43f6ecb57dd8e19ab1467a100c14231a95093e4:de19e38dbb465d6e04d291b8bb7fae6d85aadc79f62f1af21e3e69fd5990f069",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description and contains no evidence about Fred VanVleet's team status. The snapshots are insufficient to determine whether he officially joined the Houston Rockets by the resolution deadline.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1085,
+  "total_tokens": 1554,
+  "completion_tokens": 469,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 360,
+  "completion_tokens_details": {
+   "reasoning_tokens": 360
+  }
+ },
+ "cost_usd": 0.0006765499999999999,
+ "at": "2026-11-05T11:35:23",
+ "set": "disputed_thin_34",
+ "request_sha256": "1eae6e41d44b0fbfa439ea55e43f6ecb57dd8e19ab1467a100c14231a95093e4",
+ "response_sha256": "de19e38dbb465d6e04d291b8bb7fae6d85aadc79f62f1af21e3e69fd5990f069"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5377061,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xd52d10cfd432beda6e22035513f3f4f5410841a5c6c2fec84cb1560a0fc9f70b6f8ddbf2620a892703e6f3237692935e0fce95cdf433a774f23075f29bd2346f1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:6397dc2cbdb178a0299a58830c0c0bdb6d77ac03a8b5391b705c9c75e7c25926:685c181b904cc79c381a6d2bfaaff0b383a26c94a63aecea99f83ba8995083e7",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources agree the Bruins won 3-2, with the NHL feed indicating a shootout. Therefore the market resolves to Bruins, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1125,
+  "total_tokens": 1707,
+  "completion_tokens": 582,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 336,
+  "completion_tokens_details": {
+   "reasoning_tokens": 336
+  }
+ },
+ "cost_usd": 0.0008307,
+ "at": "2026-11-05T10:13:25",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6397dc2cbdb178a0299a58830c0c0bdb6d77ac03a8b5391b705c9c75e7c25926",
+ "response_sha256": "685c181b904cc79c381a6d2bfaaff0b383a26c94a63aecea99f83ba8995083e7"
+}

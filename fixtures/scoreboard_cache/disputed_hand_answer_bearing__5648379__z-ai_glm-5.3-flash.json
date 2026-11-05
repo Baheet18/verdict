@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "market_id": 5648379,
+ "polymarket_id": "5648379",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x5bad832cb378523a168cf4b08bdc7f93a77676099da4d205ab001d8e005960041694bce8cdd8ea440b97c5e7e27e14e4a33f6c187dd1680b5a3b7ce4ed3d3e4e1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:4bd52b365dcc2283c34d11c6372b400dfb63295ba4a15517c955adc7e49dc1eb:a4717dcf616798306a1389b09010c9852568bcc6970e6fad0c383a3677c443e5",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Visa's official earnings materials and two independent corroborating sources report Q4 FY2026 payments volume growth (constant dollars) of 9% for the three months ended September 30, 2026, which falls below the 9.5%\u201310.5% bracket, so the market resolves No.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1708,
+  "total_tokens": 2365,
+  "completion_tokens": 657,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 473,
+  "completion_tokens_details": {
+   "reasoning_tokens": 473
+  }
+ },
+ "cost_usd": 0.00046514,
+ "at": "2026-11-05T13:04:12+01:00",
+ "evidence_sha256": "7f4d2d3172e91c520650d58e752443de5764f5f690d38c832c672bd5f573dcdc",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "4bd52b365dcc2283c34d11c6372b400dfb63295ba4a15517c955adc7e49dc1eb",
+ "response_sha256": "a4717dcf616798306a1389b09010c9852568bcc6970e6fad0c383a3677c443e5"
+}

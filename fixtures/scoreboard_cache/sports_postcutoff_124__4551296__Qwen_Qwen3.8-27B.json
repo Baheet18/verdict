@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551296,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x3dcd1048cf0e5c7633ac52b372de3c993ff917c89200330304774cac5219ef945c743b93f1e3721fd81540a1dec32412a78290268d60cb99201ce9cb2fdc3f9d1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:737b1f55c771ff3527fd24888ee69c53dd89862ef9c8adbbef2d027cdc8db006:7316b666b286cf73efc3dad90869c92e659ad8a3695b1b648d74264d29fb629b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots report the final score as Seattle Seahawks 20, Kansas City Chiefs 3. Therefore the market resolves to Seahawks, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1118,
+  "total_tokens": 1683,
+  "completion_tokens": 565,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 313,
+  "completion_tokens_details": {
+   "reasoning_tokens": 313
+  }
+ },
+ "cost_usd": 0.00080747,
+ "at": "2026-11-05T10:17:07",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "737b1f55c771ff3527fd24888ee69c53dd89862ef9c8adbbef2d027cdc8db006",
+ "response_sha256": "7316b666b286cf73efc3dad90869c92e659ad8a3695b1b648d74264d29fb629b"
+}

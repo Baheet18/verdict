@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4882663,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x058ee36c81b6846d689e9c2034880e7510f9fc1ea726420a0bd553d7730d7df838ac942c4426ec570354d40ea4217823be047110a14a2655b8fa0e53f01bff541b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:ecb06c8de707affd89690baa33e32da591d7f0ecc328825b0aa9009dc2b8631b:ffbecfad119972ba03d448032b6a65e2dafbd0290c57b4e77569dc4be78ec694",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Oilers 4, Wild 3 (in overtime), so the Oilers won and the market resolves to \"Oilers\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 991,
+  "total_tokens": 1332,
+  "completion_tokens": 341,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 50
+  }
+ },
+ "cost_usd": 0.0007065000000000001,
+ "at": "2026-11-05T10:15:42",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ecb06c8de707affd89690baa33e32da591d7f0ecc328825b0aa9009dc2b8631b",
+ "response_sha256": "ffbecfad119972ba03d448032b6a65e2dafbd0290c57b4e77569dc4be78ec694"
+}

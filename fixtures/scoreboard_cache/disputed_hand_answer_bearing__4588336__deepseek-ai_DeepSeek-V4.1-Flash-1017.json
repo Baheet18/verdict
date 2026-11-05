@@ -1,0 +1,40 @@
+{
+ "ok": true,
+ "market_id": 4588336,
+ "polymarket_id": "4588336",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xa547e1de282801d3d0b46b0671e53e4cb03ccf160756c722a974d54eea46ff1956418a0998a67b1e457348486d65d9ddc577e58e68b79d8c9f185aec1ec4a4ca1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:5c96a36e8d30689d39242c78e1d819c94e88f7b0e71335497f5bcdf85557cca2:35fd8c0a94c16830b8eadf51d244ab1357dd2d8230cdc637bc2862bac7107d8c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "The Broncos outscored the Cardinals 14-7 in the third quarter, a 7-point margin, which is greater than the -3.5 spread. Multiple snapshots agree on the Q3 scoring.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1409,
+  "total_tokens": 2010,
+  "completion_tokens": 601,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1216
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 494
+  }
+ },
+ "cost_usd": 0.0011439,
+ "at": "2026-11-05T13:01:54+01:00",
+ "evidence_sha256": "793698f3800c864b8f0e0dde8e44d2112212e557085df395295a836da42ec742",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "5c96a36e8d30689d39242c78e1d819c94e88f7b0e71335497f5bcdf85557cca2",
+ "response_sha256": "35fd8c0a94c16830b8eadf51d244ab1357dd2d8230cdc637bc2862bac7107d8c"
+}

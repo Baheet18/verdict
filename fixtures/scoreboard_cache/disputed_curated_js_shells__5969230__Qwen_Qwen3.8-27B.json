@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5969230,
+ "polymarket_id": "5969230",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xd80ae254d9416930a0733a23697f6eb4189e1eb9d13ca2883267619f3f0fffee728fa7f4d54c9a0bd014497300abb5886f1ff3457e0d8bc6f018720e449797ba1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:bcd02170c5002eee6f21145727935dfd0115c44d5b70b8b981cd47c63edd2476:dfe89866d79537e905e4967a6ee687d9a656ed83292e45ab5138de155ec01e85",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only result evidence is a single Wikipedia extract stating the Hawks swept the 2026 Japan Series, while the official NPB snapshot does not report the October 27 game. The required two independent sources for a sports result are missing.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 13749,
+  "total_tokens": 16584,
+  "completion_tokens": 2835,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 2752,
+  "completion_tokens_details": {
+   "reasoning_tokens": 2752
+  }
+ },
+ "cost_usd": 0.00437721,
+ "at": "2026-11-05T12:40:26",
+ "evidence_sha256": "7a60c8c719b3904abf1acb57161c5ea2cdb4e15adb95e03ed898127d7ac0a24e",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "bcd02170c5002eee6f21145727935dfd0115c44d5b70b8b981cd47c63edd2476",
+ "response_sha256": "dfe89866d79537e905e4967a6ee687d9a656ed83292e45ab5138de155ec01e85"
+}

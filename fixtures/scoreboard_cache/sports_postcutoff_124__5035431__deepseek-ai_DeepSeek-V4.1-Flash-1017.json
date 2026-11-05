@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5035431,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xec22d75c428630585f7c06653fb6772767eac69245caa2dbe0989305dafdd74e7de7fde8bd3af32bb735d89f41cf04ef8b7cfee7d57dda6f97ee3b9bbef86c3d1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:51562294c1f78914b7df34d8b1186e0042ef48237be9675d69fe1d7bc130347a:9863ca08b5baae6209529f148d55b9f1f45cf213150aad2b4f658537f6e5be15",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent snapshots show the game final with the Wild beating the Kraken 5-1. The market therefore resolves to \"Wild\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 988,
+  "total_tokens": 1260,
+  "completion_tokens": 272,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 66
+  }
+ },
+ "cost_usd": 0.0006228,
+ "at": "2026-11-05T10:13:06",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "51562294c1f78914b7df34d8b1186e0042ef48237be9675d69fe1d7bc130347a",
+ "response_sha256": "9863ca08b5baae6209529f148d55b9f1f45cf213150aad2b4f658537f6e5be15"
+}

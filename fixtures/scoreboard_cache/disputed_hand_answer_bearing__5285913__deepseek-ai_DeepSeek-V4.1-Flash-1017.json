@@ -1,0 +1,40 @@
+{
+ "ok": true,
+ "market_id": 5285913,
+ "polymarket_id": "5285913",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x9fe9210ad1cc84ee9b41fceeb99cec9ffd0dd16774b85aa2afcdf4b1ddbda5e271f837f6027bb97db7078386f4c7df5bd26890874edecda576faff7a5472d1891b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:b59128d00028f1b301edd4ec190732c29889d53e84fdb4e678abe557c34a88b8:5f6f8bd67a8978500d41555115cc738c9edb3021b4d55d8e3533b48bd60a1726",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "The final score was Blues 5, Red Wings 4, for a combined 9 goals, which is over 4.5. Multiple snapshots agree on the 5-4 result.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1385,
+  "total_tokens": 1689,
+  "completion_tokens": 304,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1152
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 107
+  }
+ },
+ "cost_usd": 0.0007803,
+ "at": "2026-11-05T13:01:18+01:00",
+ "evidence_sha256": "3ec7117940c1e7aee44b4a7fe6296dbdee0965cfa5b057a1dfc6e059da3a4a9a",
+ "answer_bearing_sources": 3,
+ "compose_manager_images": [
+  "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+  "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be"
+ ],
+ "set": "disputed_hand_answer_bearing",
+ "request_sha256": "b59128d00028f1b301edd4ec190732c29889d53e84fdb4e678abe557c34a88b8",
+ "response_sha256": "5f6f8bd67a8978500d41555115cc738c9edb3021b4d55d8e3533b48bd60a1726"
+}

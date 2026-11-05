@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4367393,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x58f397ca25130416d924e47e7ceb541ea80e2317e9ca06e1e4065d27045862252f3c8b44ecd16e95a73d0d055effcdf9511df5d0dbc5f34357573e61654d55eb1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:630391323f5108265788897fee012dd60495e139044fad3751b2151a98722f5c:fdb404f3fa8add0cc1ec7607c4ab74d225024fd5fb7bef6d3e117cf0723cb2f2",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "The two snapshots agree the game was final with Saints 34 and Giants 27, for a combined 61 points. Since 61 is at least 57, the market resolves Over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 982,
+  "total_tokens": 1227,
+  "completion_tokens": 245,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 86
+  }
+ },
+ "cost_usd": 0.0005886,
+ "at": "2026-11-05T10:21:09",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "630391323f5108265788897fee012dd60495e139044fad3751b2151a98722f5c",
+ "response_sha256": "fdb404f3fa8add0cc1ec7607c4ab74d225024fd5fb7bef6d3e117cf0723cb2f2"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5285942,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x1c6a1fe4fc3a707f9aca1a6f0da2e6f15a023a54c8563d9ee453a6cfcfb4767915e8ef08e0a67dc1bd9b7962525018439ec6b2cc2d3fbc8c00adf089c10b499e1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:4143ad242a17a24dd2fd34fe1182b41f5de4ef2cc465fd8d2f6474a88229aa12:e894a47170cd77d2e5252c0da7ea2a577a9d0aec0e0d41911bcbc9f7e4d291cf",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Toronto winning 4-2 in regulation, so the market resolves to \"Maple Leafs\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 962,
+  "total_tokens": 1178,
+  "completion_tokens": 216,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 35,
+  "completion_tokens_details": {
+   "reasoning_tokens": 35
+  }
+ },
+ "cost_usd": 0.00018496,
+ "at": "2026-11-05T10:16:38",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4143ad242a17a24dd2fd34fe1182b41f5de4ef2cc465fd8d2f6474a88229aa12",
+ "response_sha256": "e894a47170cd77d2e5252c0da7ea2a577a9d0aec0e0d41911bcbc9f7e4d291cf"
+}

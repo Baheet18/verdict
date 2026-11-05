@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4329892,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x714962e71dd79458ccd27752dce17f5aaee3a7f7ad5c48a7a6cd83653bafd4c7111eece330d5e6960f5e561a308673912dd230cbfd3f14eff62ecf209015357b1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:b8b1efcdf42e486a0ad98aaae085684658396065356affc75a5f9dda9c56ae65:971c34833feb1c0b2b2ec7abfd82aa241e6afa4266532563b991dc4f6c327174",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both independent snapshots report a final score of Bills 33, Raiders 30, so Buffalo won.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 989,
+  "total_tokens": 1164,
+  "completion_tokens": 175,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 50
+  }
+ },
+ "cost_usd": 0.0005067,
+ "at": "2026-11-05T10:17:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "b8b1efcdf42e486a0ad98aaae085684658396065356affc75a5f9dda9c56ae65",
+ "response_sha256": "971c34833feb1c0b2b2ec7abfd82aa241e6afa4266532563b991dc4f6c327174"
+}

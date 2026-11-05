@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5479595,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x86a482fe87759f14900513620ce3e01b3b0c14bdbf56ce4a2654180d8662fbd11217a3e0759a34bf4e371bd09a8550f9ded16fc256070fba49ad21239680e8481c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:0ad05884af1cb997ceea75c9cfe897b753acd53133ab6447910487379daf8a6c:459d2e192ff49e1ef1e9af0e4fc4104fd4f9a7365b3c74c0d7e055f60c128b32",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "INVALID",
+ "reasoning": "",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1315,
+  "total_tokens": 1947,
+  "completion_tokens": 632,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 349,
+  "completion_tokens_details": {
+   "reasoning_tokens": 349
+  }
+ },
+ "cost_usd": 0.0009058,
+ "at": "2026-11-05T10:23:24",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "0ad05884af1cb997ceea75c9cfe897b753acd53133ab6447910487379daf8a6c",
+ "response_sha256": "459d2e192ff49e1ef1e9af0e4fc4104fd4f9a7365b3c74c0d7e055f60c128b32"
+}

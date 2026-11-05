@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4588765,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x67b6e395000c7b5413309b21a93cd49ea219354ef258433b52ec775745f0fd21359473eb31717b2c0ada3691c166b942152e500270d1c11191abfc5ad047b50b1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:607d567d7b83f1a81213aa410ce818990aea17bfd99bcdffc6f0ebb7e1508437:95180d55d845863f69671b72fb628bfb1ed8fd62dbcc1a8afad2f3f498405d5c",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources agree the Dolphins won 28-25, a 3-point margin. Since the Dolphins needed to win by 5 or more points, the market resolves to \"Jets\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 958,
+  "total_tokens": 1200,
+  "completion_tokens": 242,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 79,
+  "completion_tokens_details": {
+   "reasoning_tokens": 79
+  }
+ },
+ "cost_usd": 0.00019764,
+ "at": "2026-11-05T10:19:45",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "607d567d7b83f1a81213aa410ce818990aea17bfd99bcdffc6f0ebb7e1508437",
+ "response_sha256": "95180d55d845863f69671b72fb628bfb1ed8fd62dbcc1a8afad2f3f498405d5c"
+}

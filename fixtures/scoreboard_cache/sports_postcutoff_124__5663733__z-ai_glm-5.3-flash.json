@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5663733,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xd6ded6ec9838b7a910180b74f8e9fedd18cc9273fef5c253b9bd69ffb1a0891a225b322adb585f699e3c38a6c4deae7964fdddd9a80b328bbb63e25e274968111b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:42cc4a3eba91d1e14b226c8683c68cc71b2525ea98727899f709f96ca6b8ca36:6d24bf84dd38d86d60f0e2b576a7eab78679d8ebdfceea56a441728f0a73dadf",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree the final score was 2-4, a combined total of 6 goals, which is 3 or more, so the market resolves to Over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1214,
+  "total_tokens": 1456,
+  "completion_tokens": 242,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 70,
+  "completion_tokens_details": {
+   "reasoning_tokens": 70
+  }
+ },
+ "cost_usd": 0.00021812,
+ "at": "2026-11-05T10:21:34",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "42cc4a3eba91d1e14b226c8683c68cc71b2525ea98727899f709f96ca6b8ca36",
+ "response_sha256": "6d24bf84dd38d86d60f0e2b576a7eab78679d8ebdfceea56a441728f0a73dadf"
+}

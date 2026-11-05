@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4588338,
+ "polymarket_id": "4588338",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x30144e691990594360736184432a1286ad12b64fea0f012cdbdec13cc02acc8f46a30d26f9a25a0bdc5ce4795c8980d98625545206cbefb6fefcbfa1543ae4171b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:ac06e77efa5dbd247c1d6de370450e1c3d6184a100d05b9477c4c95bfa71109f:36aaaeb65dde015cb04370572e57b46bdbf128961314ea8baa20b8ffa88e8ea1",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The external snapshot is only an NFL scores page shell and does not provide the third-quarter score for Broncos vs Cardinals. Therefore the required 3Q margin cannot be verified from the source snapshots.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4971,
+  "total_tokens": 5565,
+  "completion_tokens": 594,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 506,
+  "completion_tokens_details": {
+   "reasoning_tokens": 506
+  }
+ },
+ "cost_usd": 0.00100074,
+ "at": "2026-11-05T11:59:22",
+ "set": "disputed_thin_34",
+ "request_sha256": "ac06e77efa5dbd247c1d6de370450e1c3d6184a100d05b9477c4c95bfa71109f",
+ "response_sha256": "36aaaeb65dde015cb04370572e57b46bdbf128961314ea8baa20b8ffa88e8ea1"
+}

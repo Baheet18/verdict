@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551293,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x770d9ae949935e7152553970fc44cfabace45f53205caf010ea30964ad7926334e8e0d153420e95ee15013755a61bc8abd7068c4c1241665c6d437448fd5036e1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:c1df97116f1d5b65b47d27ed69418a87a8af812fe7a412481e2f4d8c9504d5ab:360d3f78afd9962dbd4bc633171b8bac8cfef55721dc7953d3359ccac39716bc",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with Lions 20, Packers 17, so the Lions won and the market resolves NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 995,
+  "total_tokens": 1313,
+  "completion_tokens": 318,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 69
+  }
+ },
+ "cost_usd": 0.0006801,
+ "at": "2026-11-05T10:18:28",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "c1df97116f1d5b65b47d27ed69418a87a8af812fe7a412481e2f4d8c9504d5ab",
+ "response_sha256": "360d3f78afd9962dbd4bc633171b8bac8cfef55721dc7953d3359ccac39716bc"
+}

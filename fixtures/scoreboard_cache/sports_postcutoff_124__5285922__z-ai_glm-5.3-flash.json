@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5285922,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x2251b1c58de7dca89901d6239d4e2333ef2b17fc6427f5dfdbe6fe62a3e79d3f067592c33967941a8e3122fd5040fe1cf57bea3653ad393de8a4930f461910be1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:1cf91f37410096eb040a8525c113a8dd26bc341fae4f9e673acb64371dd9b72b:44474f972569e62fd7ce16bd6dd6de374075c212c0138ba3ef3cddb1a408a748",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with Nashville winning 5-4 in a shootout; per the rules the shootout winner (Predators) gets the added goal, so the market resolves to \"Predators\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 966,
+  "total_tokens": 1259,
+  "completion_tokens": 293,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 96,
+  "completion_tokens_details": {
+   "reasoning_tokens": 96
+  }
+ },
+ "cost_usd": 0.00022378000000000003,
+ "at": "2026-11-05T10:15:04",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "1cf91f37410096eb040a8525c113a8dd26bc341fae4f9e673acb64371dd9b72b",
+ "response_sha256": "44474f972569e62fd7ce16bd6dd6de374075c212c0138ba3ef3cddb1a408a748"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4950267,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x92494c687fa40a3009b5aa6ed386f56d29af38666c5f996b3f782a62cb0e03ce46dbb321bbe38c3ed12c4097ac400d28afc1f87bd65a846384b556867475f2e41b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:9ca45168604bb35133b4719a2573426202cd07ed0eb73fd72a7f6e4ad6616ab2:5de37117338f42503c0cce23950a29c6ae869fa4617cfa0fa23a1779cf5a12e4",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final sources report the Sharks winning 6-2 over the Senators. Therefore the market resolves to \"Sharks\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1106,
+  "total_tokens": 2247,
+  "completion_tokens": 1141,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1039,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1039
+  }
+ },
+ "cost_usd": 0.00158459,
+ "at": "2026-11-05T10:16:17",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9ca45168604bb35133b4719a2573426202cd07ed0eb73fd72a7f6e4ad6616ab2",
+ "response_sha256": "5de37117338f42503c0cce23950a29c6ae869fa4617cfa0fa23a1779cf5a12e4"
+}

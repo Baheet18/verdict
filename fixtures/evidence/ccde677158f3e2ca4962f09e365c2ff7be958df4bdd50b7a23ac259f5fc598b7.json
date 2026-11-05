@@ -1,0 +1,24 @@
+{
+  "polymarket_id": "4329887",
+  "question": "Saints vs. Giants",
+  "rules": "In the upcoming NFL football game between Saints and Giants, scheduled for October 18 at 1:00PM ET:\nThis market will resolve to \"Saints\" if Saints win the game.\nThis market will resolve to \"Giants\" if Giants win the game.\nOvertime is included if played.\nIf the game ends in a tie, this market will resolve 50-50.\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Saints\"; answer NO if it resolves to \"Giants\".",
+  "market_end": "2026-10-18T17:00:00Z",
+  "evidence": "{\"market_end\": \"2026-10-18T17:00:00Z\", \"question\": \"Saints vs. Giants\", \"rules\": \"In the upcoming NFL football game between Saints and Giants, scheduled for October 18 at 1:00PM ET:\\nThis market will resolve to \\\"Saints\\\" if Saints win the game.\\nThis market will resolve to \\\"Giants\\\" if Giants win the game.\\nOvertime is included if played.\\nIf the game ends in a tie, this market will resolve 50-50.\\nIf the game is postponed, this market will remain open until the game has been completed.\\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\\n\\nVERDICT MAPPING: answer YES if this market resolves to \\\"Saints\\\"; answer NO if it resolves to \\\"Giants\\\".\", \"source_snapshots\": [{\"fetched_at\": \"2026-11-05T09:11:59Z\", \"sha256\": \"587e18eb379655f3cd112a88c65ead85275c11ab7567ecf4ca7e925df30c5d8c\", \"text\": \"ESPN scoreboard (extracted game object): {\\\"name\\\": \\\"New Orleans Saints at New York Giants\\\", \\\"date\\\": \\\"2026-10-18T17:00Z\\\", \\\"status\\\": \\\"Final\\\", \\\"completed\\\": true, \\\"competitors\\\": [{\\\"team\\\": \\\"New York Giants\\\", \\\"abbreviation\\\": \\\"NYG\\\", \\\"homeAway\\\": \\\"home\\\", \\\"score\\\": \\\"27\\\", \\\"winner\\\": false}, {\\\"team\\\": \\\"New Orleans Saints\\\", \\\"abbreviation\\\": \\\"NO\\\", \\\"homeAway\\\": \\\"away\\\", \\\"score\\\": \\\"34\\\", \\\"winner\\\": true}]}\", \"url\": \"https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018\"}, {\"fetched_at\": \"2026-11-05T09:11:59Z\", \"sha256\": \"45c7c4d26ddfe5d8dacaffd2e15e36566c62974684a8bed1d10485b8cf77e09d\", \"text\": \"nflverse/nfldata games.csv row (independent community dataset; empty score = not yet final): {\\\"game_id\\\": \\\"2026_06_NO_NYG\\\", \\\"gameday\\\": \\\"2026-10-18\\\", \\\"away_team\\\": \\\"NO\\\", \\\"away_score\\\": \\\"34\\\", \\\"home_team\\\": \\\"NYG\\\", \\\"home_score\\\": \\\"27\\\", \\\"result\\\": \\\"-7\\\", \\\"total\\\": \\\"61\\\", \\\"overtime\\\": \\\"0\\\"}\", \"url\": \"https://github.com/nflverse/nfldata/raw/master/data/games.csv\"}]}",
+  "evidence_sha256": "ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7",
+  "source_snapshots": [
+    {
+      "fetched_at": "2026-11-05T09:11:59Z",
+      "sha256": "587e18eb379655f3cd112a88c65ead85275c11ab7567ecf4ca7e925df30c5d8c",
+      "text": "ESPN scoreboard (extracted game object): {\"name\": \"New Orleans Saints at New York Giants\", \"date\": \"2026-10-18T17:00Z\", \"status\": \"Final\", \"completed\": true, \"competitors\": [{\"team\": \"New York Giants\", \"abbreviation\": \"NYG\", \"homeAway\": \"home\", \"score\": \"27\", \"winner\": false}, {\"team\": \"New Orleans Saints\", \"abbreviation\": \"NO\", \"homeAway\": \"away\", \"score\": \"34\", \"winner\": true}]}",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+    },
+    {
+      "fetched_at": "2026-11-05T09:11:59Z",
+      "sha256": "45c7c4d26ddfe5d8dacaffd2e15e36566c62974684a8bed1d10485b8cf77e09d",
+      "text": "nflverse/nfldata games.csv row (independent community dataset; empty score = not yet final): {\"game_id\": \"2026_06_NO_NYG\", \"gameday\": \"2026-10-18\", \"away_team\": \"NO\", \"away_score\": \"34\", \"home_team\": \"NYG\", \"home_score\": \"27\", \"result\": \"-7\", \"total\": \"61\", \"overtime\": \"0\"}",
+      "url": "https://github.com/nflverse/nfldata/raw/master/data/games.csv"
+    }
+  ],
+  "note": "Post-cutoff NFL moneyline from bench2. evidence_uri for testnet = GitHub raw AFTER human approves push.",
+  "proposed_evidence_uri_after_push": "https://raw.githubusercontent.com/Baheet18/verdict/master/fixtures/evidence/ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7.json"
+}

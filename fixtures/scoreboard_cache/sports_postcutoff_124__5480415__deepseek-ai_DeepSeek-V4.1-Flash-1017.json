@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5480415,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x23b0d5fab6ed62319b7c7bbbeb7e99280e87b4234dd4ac36deb6d7444f062f662d13f835255d9c4148f5596da7e33023a1f39de3e22d6391d8b3bcdae7d24f681c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:4b2d050fea2e71ffb4c474d27a5b38016e4ecaa673b74e455deae7c0d63d0bed:8d06e7e80531fe4b2f38ff0e7550e41f737875365b46c9381d7cadecb3abbeef",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The game is completed, but neither snapshot reports total corners, and the rules require corner counts to resolve Over/Under 8.5. With no corner data from any source, the snapshots are insufficient.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1227,
+  "total_tokens": 1652,
+  "completion_tokens": 425,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 94
+  }
+ },
+ "cost_usd": 0.0008781,
+ "at": "2026-11-05T10:23:37",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4b2d050fea2e71ffb4c474d27a5b38016e4ecaa673b74e455deae7c0d63d0bed",
+ "response_sha256": "8d06e7e80531fe4b2f38ff0e7550e41f737875365b46c9381d7cadecb3abbeef"
+}

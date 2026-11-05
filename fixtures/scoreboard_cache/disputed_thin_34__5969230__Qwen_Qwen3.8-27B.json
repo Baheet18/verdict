@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5969230,
+ "polymarket_id": "5969230",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x58640fa656a4955af8257ded21ba3e4966a06aa7dd6a9212ddef782a0a6d4933364fde26df2a57290435d0ae5b8b22e9518c6c505c39bc668bd8f143721059c41b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:0333351b1014c6b647688333690dbe509d12281e591745e212374c833ae4021f:0f665150a4cb919849a5c4c35a1c72d055460b5b7ce448e4a99a027199d12eef",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only external snapshot is the NPB homepage and contains no game result or winner. No independent source in the bundle reports the outcome, so the market cannot be resolved from the provided evidence.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 7507,
+  "total_tokens": 8208,
+  "completion_tokens": 701,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 605,
+  "completion_tokens_details": {
+   "reasoning_tokens": 605
+  }
+ },
+ "cost_usd": 0.0012466299999999999,
+ "at": "2026-11-05T11:47:51",
+ "set": "disputed_thin_34",
+ "request_sha256": "0333351b1014c6b647688333690dbe509d12281e591745e212374c833ae4021f",
+ "response_sha256": "0f665150a4cb919849a5c4c35a1c72d055460b5b7ce448e4a99a027199d12eef"
+}

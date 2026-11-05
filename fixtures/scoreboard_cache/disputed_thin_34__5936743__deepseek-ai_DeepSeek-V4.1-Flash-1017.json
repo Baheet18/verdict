@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5936743,
+ "polymarket_id": "5936743",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xcedafa2f52328d59e4e30aa225ace2e9c958c652805810e805a0467ec51e67272cfc0cee251b32657c49bf01444777ea79a340cc5a2bad312c4f6481fa3d963c1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:b037130d40a28fd220d1bb1acdd0b2c44562e3d14571cdae0850cc9647ad2cdd:090a9f243d406a15eea5030fc3ff8074734998816f85f45e14aa3d2c5a4487bb",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots provide the market rules and a later La Liga fixture list, but no final score for the scheduled Nov 1 FC Andorra vs CD Tenerife match. Therefore the required 3-goal margin cannot be verified from the evidence.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 5981,
+  "total_tokens": 7144,
+  "completion_tokens": 1163,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 5760
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1001
+  }
+ },
+ "cost_usd": 0.0031899,
+ "at": "2026-11-05T11:53:04",
+ "set": "disputed_thin_34",
+ "request_sha256": "b037130d40a28fd220d1bb1acdd0b2c44562e3d14571cdae0850cc9647ad2cdd",
+ "response_sha256": "090a9f243d406a15eea5030fc3ff8074734998816f85f45e14aa3d2c5a4487bb"
+}

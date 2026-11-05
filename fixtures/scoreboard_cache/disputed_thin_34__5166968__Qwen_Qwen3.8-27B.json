@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5166968,
+ "polymarket_id": "5166968",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x972d4c4a0761f61dc82cadfb518ea052e0faa952551ed5fed0df287022a342c75e43569cd3cd05064a372ffc5189faf7312cd76e8bf7bbecdd6e74fdf65dda931c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:f9206a9d611d6c6eb4193335b7d27c81afd13d3a28cb9ad52dd5f9646025e1c5:3520a8af5a84cba8fd1528ed38d25c13f98695771604cb0bf129f0ffd83dcd62",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description and contains no market-cap data or credible reporting for October 31, 2026. Therefore the snapshots are insufficient to determine whether Apple was the third-largest company.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 721,
+  "total_tokens": 992,
+  "completion_tokens": 271,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 157,
+  "completion_tokens_details": {
+   "reasoning_tokens": 157
+  }
+ },
+ "cost_usd": 0.00039468999999999995,
+ "at": "2026-11-05T11:48:36",
+ "set": "disputed_thin_34",
+ "request_sha256": "f9206a9d611d6c6eb4193335b7d27c81afd13d3a28cb9ad52dd5f9646025e1c5",
+ "response_sha256": "3520a8af5a84cba8fd1528ed38d25c13f98695771604cb0bf129f0ffd83dcd62"
+}

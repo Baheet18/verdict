@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5035399,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x7771810c3006c7a3e69d12273bc957db3c09f26e4d41b0896e6ebdd17b11f0876af6ce1acd59aa23dc7984e66fe280e4bb5185d29086a7c03aea08afc1b7e2d41b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:d8d78809683b634688cd2e61f453197a5766b038217a9abd5444b1afa587639e:1014e409d968c436efd79f8aa85d4958468ef5ff39ee4dccb74a530a051f8156",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN scoreboard and NHL official API) agree the game is final with Carolina winning 4-0 over St. Louis in regulation, so the market resolves to \"Hurricanes\" and the verdict is YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 959,
+  "total_tokens": 1252,
+  "completion_tokens": 293,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 105,
+  "completion_tokens_details": {
+   "reasoning_tokens": 105
+  }
+ },
+ "cost_usd": 0.00022322,
+ "at": "2026-11-05T10:14:58",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "d8d78809683b634688cd2e61f453197a5766b038217a9abd5444b1afa587639e",
+ "response_sha256": "1014e409d968c436efd79f8aa85d4958468ef5ff39ee4dccb74a530a051f8156"
+}

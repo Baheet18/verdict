@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 1281165,
+ "polymarket_id": "1281165",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x0f520a564d0ef1e0a87837ba07e2795981cb8307939112f9ca6a23d6684ae5b22c24f7cf878cc4d7c1714d514d14c0ac4502c29c49296a4f7f6a95b455f258801c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:0d1d1d97a869485fbaac2d1b4ed4806e05c5af0a74eabf04ac5f51e35e4a4110:51a3e20d009e24545966385857c51b0b5108796d5fd2740beaa58cf3a30a8502",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only external snapshot is the generic FEC homepage, which contains no CA-34 election results or candidate party data. No snapshot reports the winner, so the outcome cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 5102,
+  "total_tokens": 5446,
+  "completion_tokens": 344,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 4864
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 174
+  }
+ },
+ "cost_usd": 0.0019434,
+ "at": "2026-11-05T11:46:28",
+ "set": "disputed_thin_34",
+ "request_sha256": "0d1d1d97a869485fbaac2d1b4ed4806e05c5af0a74eabf04ac5f51e35e4a4110",
+ "response_sha256": "51a3e20d009e24545966385857c51b0b5108796d5fd2740beaa58cf3a30a8502"
+}

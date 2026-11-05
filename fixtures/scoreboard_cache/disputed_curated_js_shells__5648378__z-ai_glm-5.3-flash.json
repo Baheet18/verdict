@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5648378,
+ "polymarket_id": "5648378",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x4a0a8c907819dcbce083da38c2821a3c01c08a67adae0419492b5f2357de2487086737b9ccb349ea58fa0e5608e6961cc70b9226d552a97479ae4fc14f574a1b1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:d327195af7caba830008711cbf3c3f0181068ad82c2949d52417614bd24fd7b8:b92808c0839ddd2c203cc4a3af61f98d5b6fbdee8d9db9ef3f36e46a3e46ba20",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "None of the source snapshots contain Visa's fiscal Q4 payments volume growth (constant dollars) figure: the official snapshot is only the investor-relations homepage shell, the Yahoo snapshot is page boilerplate, and the Wikipedia extract is general company history with no quarterly metric. With no snapshot reporting the specified metric, the bracket cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 11018,
+  "total_tokens": 11975,
+  "completion_tokens": 957,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 795,
+  "completion_tokens_details": {
+   "reasoning_tokens": 795
+  }
+ },
+ "cost_usd": 0.00135994,
+ "at": "2026-11-05T12:33:48",
+ "evidence_sha256": "f583808794695db0f40daff00b08ad2901ff9b4d33288a18d6da5457032ae42e",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "d327195af7caba830008711cbf3c3f0181068ad82c2949d52417614bd24fd7b8",
+ "response_sha256": "b92808c0839ddd2c203cc4a3af61f98d5b6fbdee8d9db9ef3f36e46a3e46ba20"
+}

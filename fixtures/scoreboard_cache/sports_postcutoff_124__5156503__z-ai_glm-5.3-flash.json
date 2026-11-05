@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5156503,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xd38006d274a081707731a01c495f64d8ec9c4425e5ebad3bc3bd79139e6943fa43995b335576c06b4a94490cad5223401cc7513d26a5ad07ff07106d646100761c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:9137c249d04d9a73c6f3c122be4b2df6441c2895e51f55d0667a929da0c06641:2d1a4ca09bf4509b2f0d9d8e7e99cce9ff080bf7f8e18a0ae748a2b6316133a9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with the Golden Knights winning 4-1 in regulation, so the market resolves to \"Golden Knights\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 968,
+  "total_tokens": 1210,
+  "completion_tokens": 242,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 67,
+  "completion_tokens_details": {
+   "reasoning_tokens": 67
+  }
+ },
+ "cost_usd": 0.00019844,
+ "at": "2026-11-05T10:14:40",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9137c249d04d9a73c6f3c122be4b2df6441c2895e51f55d0667a929da0c06641",
+ "response_sha256": "2d1a4ca09bf4509b2f0d9d8e7e99cce9ff080bf7f8e18a0ae748a2b6316133a9"
+}

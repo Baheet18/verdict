@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 4376691,
+ "polymarket_id": "4376691",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x3fe2856bf1ef06c356753e580b64d942145684e15f7c2e055ea2623f06630b005333b2d9dca39bbc97fc0940049e198319964245ab5832766a82bad1b07bc4041c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:9ab71033d4a2ad8cc538765f4c40a7bcc5f68f7f0a9b24c3509945a2526251a6:b75b0d29559df8c10304b5a36b1eadbfbcb6be9e5b5dfa5162dde1e49a115aad",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market description and explicitly is not an external fact source. No snapshot reports a qualifying Iranian military action against Iraq, so the evidence is insufficient to resolve Yes or No.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1800,
+  "total_tokens": 2738,
+  "completion_tokens": 938,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 822,
+  "completion_tokens_details": {
+   "reasoning_tokens": 822
+  }
+ },
+ "cost_usd": 0.0013383,
+ "at": "2026-11-05T11:39:08",
+ "set": "disputed_thin_34",
+ "request_sha256": "9ab71033d4a2ad8cc538765f4c40a7bcc5f68f7f0a9b24c3509945a2526251a6",
+ "response_sha256": "b75b0d29559df8c10304b5a36b1eadbfbcb6be9e5b5dfa5162dde1e49a115aad"
+}

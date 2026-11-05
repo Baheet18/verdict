@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5156478,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x97e442019b5af21ecf66914a338106e6976721af254155f2547b8b50ebcf65bf0c0eb8b66b38cd05bcc0fdae743d863d03ad0a151d5b8a61c73408e30e5149f11c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:5ad2e155987f3092cc7b4c67482e86c6779ed655e4937210a18910091ff5c4f6:1f5f86c0ed3a27306f9d1273f840c43e6bd34543b24bfcba9bfe168cfe9f362f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources report the Canadiens winning 2-0 in regulation. Therefore the market resolves to \"Canadiens\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1119,
+  "total_tokens": 1634,
+  "completion_tokens": 515,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 323,
+  "completion_tokens_details": {
+   "reasoning_tokens": 323
+  }
+ },
+ "cost_usd": 0.00074001,
+ "at": "2026-11-05T10:13:51",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5ad2e155987f3092cc7b4c67482e86c6779ed655e4937210a18910091ff5c4f6",
+ "response_sha256": "1f5f86c0ed3a27306f9d1273f840c43e6bd34543b24bfcba9bfe168cfe9f362f"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5479595,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xd0f012f6b5b4e3ef3f2c192f822ccdd602daeea64ec8616eac44512cce921c663a840c8a53fe27ef72f5fc87bcf536478b95694f91caaea5649d9ba7f4485e7c1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:161b53aef0334eea1822eea8d1148c00e28f813827e541f6bf90b0560dcd8834:167557d06667980db144b81c2a447475d3ef958eed9590e8f4868e5d66ce8cb7",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree the match ended 0-0, a draw, so St. Pauli did not win within regular play. Per the rules, a non-win resolves the market to \"No\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1150,
+  "total_tokens": 1682,
+  "completion_tokens": 532,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 214,
+  "completion_tokens_details": {
+   "reasoning_tokens": 214
+  }
+ },
+ "cost_usd": 0.00035800000000000003,
+ "at": "2026-11-05T10:23:35",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "161b53aef0334eea1822eea8d1148c00e28f813827e541f6bf90b0560dcd8834",
+ "response_sha256": "167557d06667980db144b81c2a447475d3ef958eed9590e8f4868e5d66ce8cb7"
+}

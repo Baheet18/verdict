@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4587645,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x23758de79ed2b08a2c8fbf4b9f5837a9776916707a1af6e459795cfc6c57376978d15a2c49af978792c647288013dc8e09a655d8031a1ebffc0276ea3f9c1bcf1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:bcb14cdde6b066d6bf195f0f7c77b4fc55ae03d3e842302fa00b00b1af90024b:dae9a2cdeada925cb26e954c8546260949a28c3806f7f088d7fed56a1818450a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the Rams beat the Raiders 35-21, so the Raiders did not win by 5+ points and the market resolves to \"Rams\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 951,
+  "total_tokens": 1187,
+  "completion_tokens": 236,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 85,
+  "completion_tokens_details": {
+   "reasoning_tokens": 85
+  }
+ },
+ "cost_usd": 0.00019408,
+ "at": "2026-11-05T10:20:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "bcb14cdde6b066d6bf195f0f7c77b4fc55ae03d3e842302fa00b00b1af90024b",
+ "response_sha256": "dae9a2cdeada925cb26e954c8546260949a28c3806f7f088d7fed56a1818450a"
+}

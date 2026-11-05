@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5156503,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xcc7017a802b7551f1b63f681ebb594e22f9a143242577794713ce429531bbc6c4c0bd776423d30f01ab8109adfe8b100e72f934df66fc76d69f0cafa4bcf823b1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:701eb4aeec6d338d7a2ab41a40e2bd704fd94b3f441520b91b8997c6e54a4394:67fad66af5bfd033fb1daaa0a8911288afa239980be9726d799c5965c1b77b83",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources agree that the Golden Knights won 4-1. Therefore the market resolves to \"Golden Knights\", which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1128,
+  "total_tokens": 2590,
+  "completion_tokens": 1462,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1270,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1270
+  }
+ },
+ "cost_usd": 0.00201882,
+ "at": "2026-11-05T10:15:09",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "701eb4aeec6d338d7a2ab41a40e2bd704fd94b3f441520b91b8997c6e54a4394",
+ "response_sha256": "67fad66af5bfd033fb1daaa0a8911288afa239980be9726d799c5965c1b77b83"
+}

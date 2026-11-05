@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 608564,
+ "polymarket_id": "608564",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x13d1badd341d7a43e3ded62a848b81d8e388adb0e634316eded83ac5894630233f89cb0711bac6fdcd5f1754a82e7f6cb6bdcb198149a873748ec5f1a0993ad11c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:0aaabe20897b565e36688887bc7a12f18256ec5c4450af733c52105a22264ef2:e8ad07bc858160e97b92fa8d4956e3f74cfff7c365111069ad116d8b91efd022",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "TOO_EARLY",
+ "reasoning": "The resolution window runs until December 31, 2026, and none of the snapshots (fetched 2026-11-05) declare any 2026 Ballon d'Or winner, including Ronaldo. With no winner declared and the deadline not yet passed per the snapshots, the market cannot yet be resolved YES or NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 12102,
+  "total_tokens": 12995,
+  "completion_tokens": 893,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 738,
+  "completion_tokens_details": {
+   "reasoning_tokens": 738
+  }
+ },
+ "cost_usd": 0.00141466,
+ "at": "2026-11-05T12:24:56",
+ "evidence_sha256": "7193041697aa1aa462184921cc8909481d7bb955db0fe0965dda481317f24871",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "0aaabe20897b565e36688887bc7a12f18256ec5c4450af733c52105a22264ef2",
+ "response_sha256": "e8ad07bc858160e97b92fa8d4956e3f74cfff7c365111069ad116d8b91efd022"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5237585,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xca79473ddc18e7e5e754362f4fe3942eb7548b72d13b40ef23c853356137bece344e3f338d10e96141191ae08b59b4321e9c800c90ee062116446c53ea4e5f4a1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:244e8fdb47fcc410111f648a26f421ff8b29e4915efdb2e1bd46773edb4dfb5b:ccc126a47a915f9e7d45653cadd3271101228e00c11c28dc11c34187e2ab165b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the game is final with Panthers 5, Jets 2, so the Jets lost and the market resolves to Panthers (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 992,
+  "total_tokens": 1297,
+  "completion_tokens": 305,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 29
+  }
+ },
+ "cost_usd": 0.0006636000000000001,
+ "at": "2026-11-05T10:14:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "244e8fdb47fcc410111f648a26f421ff8b29e4915efdb2e1bd46773edb4dfb5b",
+ "response_sha256": "ccc126a47a915f9e7d45653cadd3271101228e00c11c28dc11c34187e2ab165b"
+}

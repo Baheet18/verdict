@@ -1,0 +1,17 @@
+{
+ "market_id": "515427",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xe3b598ff0e162a35c92349fd31b2a1e25f62054491a110908d72c94aa833da356410465064c9a6f8fa5c6d6a44d235e74641360e46da9fac22b9252c428c2f901c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:a1d13f97db11ac13671eda6fe01dc16169fd0e781334e044ed30bc0453bf52fe:20c1b4f761fb5ad72184d6c69a93f59dd1d92365b66535533052790cdc2be48e",
+  "signing_algo": "ecdsa"
+ },
+ "label": "Hardware + host stack verified",
+ "request_sha256": "a1d13f97db11ac13671eda6fe01dc16169fd0e781334e044ed30bc0453bf52fe",
+ "response_sha256": "20c1b4f761fb5ad72184d6c69a93f59dd1d92365b66535533052790cdc2be48e",
+ "set": "legacy_5",
+ "ok": true,
+ "outcome": "NO",
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c"
+}

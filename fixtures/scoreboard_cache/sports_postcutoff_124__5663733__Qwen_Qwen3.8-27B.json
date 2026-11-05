@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5663733,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x57a8258475cc44ff65a252c7bb9453553a92bac785e26fd831aa68b19627150e407ad100a2dce23d3912c75580af253db710066728205f64d6f717d2ccb7d98d1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:86aea1d67deafa0a1ef7e63296427abd8ee85f089ebdbdaeb3132bc27c3255ab:673fdb78c7a89776dc20e08a6c0f1ecb10b9bb296a02047d3063a2622de992cf",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the finished score as 2-4, for a combined total of 6 goals. Since 6 is at least 3, the market resolves Over/YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1371,
+  "total_tokens": 2418,
+  "completion_tokens": 1047,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 934,
+  "completion_tokens_details": {
+   "reasoning_tokens": 934
+  }
+ },
+ "cost_usd": 0.00146829,
+ "at": "2026-11-05T10:21:54",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "86aea1d67deafa0a1ef7e63296427abd8ee85f089ebdbdaeb3132bc27c3255ab",
+ "response_sha256": "673fdb78c7a89776dc20e08a6c0f1ecb10b9bb296a02047d3063a2622de992cf"
+}

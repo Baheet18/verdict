@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5329746,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x5579c5bda2a7ce4f684f07a95904964d7786d42382758f5aa5f260dbab57e5d15745b1583dee47b489e3e30284d42fd0c2535e897cabf9b1d3457399f3644e861c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:04dd4169f50fa01cd65bc45fbadb5a48a073cbd61f04ff3d8a7463ab7fe110c5:897c06e41a1e1879449f14b008ac9df19644ad0c557f5161ab420ba32c3d1951",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Hurricanes 7, Jets 0, so the Hurricanes won and the market resolves to \"Hurricanes\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 994,
+  "total_tokens": 1317,
+  "completion_tokens": 323,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 41
+  }
+ },
+ "cost_usd": 0.0006858,
+ "at": "2026-11-05T10:13:21",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "04dd4169f50fa01cd65bc45fbadb5a48a073cbd61f04ff3d8a7463ab7fe110c5",
+ "response_sha256": "897c06e41a1e1879449f14b008ac9df19644ad0c557f5161ab420ba32c3d1951"
+}

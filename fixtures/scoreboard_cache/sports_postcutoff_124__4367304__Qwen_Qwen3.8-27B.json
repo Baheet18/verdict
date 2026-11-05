@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4367304,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xed7a9fdd6d79e28f696d5b11f1ee84dfb61e9b52bb3261848a5d54c6d958ff682a0830ece4bcd5f7933697d7dba13bff0737dd3770cdcb43db19d178ec81d27b1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:1771ef2e51d491eacf6c44b86f651ddcef90d9eb5e9c9fd1831d469477b909d8:f0af62a913b0a4b4b29ac7bf4ab7a57ab0cdc05c4d20f3179f0729446da501ee",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots report the final score as Cardinals 18, Rams 16, for a combined total of 34. Since 34 is less than 38, the market resolves Under, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1097,
+  "total_tokens": 1524,
+  "completion_tokens": 427,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 157,
+  "completion_tokens_details": {
+   "reasoning_tokens": 157
+  }
+ },
+ "cost_usd": 0.0006203300000000001,
+ "at": "2026-11-05T10:21:19",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "1771ef2e51d491eacf6c44b86f651ddcef90d9eb5e9c9fd1831d469477b909d8",
+ "response_sha256": "f0af62a913b0a4b4b29ac7bf4ab7a57ab0cdc05c4d20f3179f0729446da501ee"
+}

@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 1284815,
+ "polymarket_id": "1284815",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xb8963b76727448cdc93c3c169e1264516e79b3258daa2cc2889b4d42df1f6e5c0ab7174b0dd9263f64244e6060bcbdad3c8cb4e0cf4c744b04ee1c23a5aa0d061b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:5dfc329b4a237fccfab39873bfc72f9073e300b11d4b0558a5c895dc638435fd:b5f49ca53d56aa815e86ee228c4390e6eaf4b575a480fafb0645bd6130abef0e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only external snapshot is the generic FEC homepage, which contains no TX-02 election result or candidate party data, and no other source reports the outcome. With the election window closed but zero result evidence, the snapshots are insufficient to resolve YES or NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 5105,
+  "total_tokens": 5520,
+  "completion_tokens": 415,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 4864
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 274
+  }
+ },
+ "cost_usd": 0.0020295,
+ "at": "2026-11-05T11:47:16",
+ "set": "disputed_thin_34",
+ "request_sha256": "5dfc329b4a237fccfab39873bfc72f9073e300b11d4b0558a5c895dc638435fd",
+ "response_sha256": "b5f49ca53d56aa815e86ee228c4390e6eaf4b575a480fafb0645bd6130abef0e"
+}

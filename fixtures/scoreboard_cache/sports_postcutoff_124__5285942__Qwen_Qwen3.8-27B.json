@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285942,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xb7bce075f6205e7d0166368a65beb733922c8d8c7bda72738f1dd041b47b3ad9163c47156f14ae16d824a0a98f86da825badc3cdca5b75b510fadfe7480a77db1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:49939e0275886e7a049955860d367871a634e8db85133eb6801c7143ecbd8ae6:ee9e5408f10d15a1e749ae7f786e9e22d7569c226057c4f5cdc1ac2cd5d9590e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources agree that the Maple Leafs won 4-2. Therefore the market resolves to \"Maple Leafs\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1118,
+  "total_tokens": 2037,
+  "completion_tokens": 919,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 679,
+  "completion_tokens_details": {
+   "reasoning_tokens": 679
+  }
+ },
+ "cost_usd": 0.00128537,
+ "at": "2026-11-05T10:16:58",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "49939e0275886e7a049955860d367871a634e8db85133eb6801c7143ecbd8ae6",
+ "response_sha256": "ee9e5408f10d15a1e749ae7f786e9e22d7569c226057c4f5cdc1ac2cd5d9590e"
+}

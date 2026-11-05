@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406713,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x102bc1e8ca0c67d3fe1b3a8bd8f074371142d8d009c1ad2e76feaf9e3eb8fb504691ad732afcc1c7f56c612ed41ae0d9c461f72358ae797ba728fc80f872c9e01c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:fd1189140bea652b10e54a6e4c11d9f853ebbb5a9cce4f320b857960e3d8b2af:e8c3b7e9251dec7334e54e0fad5a8a393a234c873e51b692f15c434f863d47d2",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Kings 6, Senators 5 (including OT), so the Kings won and the market resolves to \"Kings\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1002,
+  "total_tokens": 1325,
+  "completion_tokens": 323,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 37
+  }
+ },
+ "cost_usd": 0.0006881999999999999,
+ "at": "2026-11-05T10:16:00",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "fd1189140bea652b10e54a6e4c11d9f853ebbb5a9cce4f320b857960e3d8b2af",
+ "response_sha256": "e8c3b7e9251dec7334e54e0fad5a8a393a234c873e51b692f15c434f863d47d2"
+}

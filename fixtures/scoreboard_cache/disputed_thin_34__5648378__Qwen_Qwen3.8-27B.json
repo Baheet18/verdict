@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5648378,
+ "polymarket_id": "5648378",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x9a8f5bbef97410af62a04ee0bd52cb2b9613d806e766da85540324a0e0cbe1a6610c7494ce1677ae75e3bd60ebfbc3727bf929c23e1321fe882521d2768c0a061b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:063b27b0d727d897c234396cb5f394548e486a2d93207d80d40899ed73f77374:b8cd333097755388e06b9eeb6d3c8112f833166943f04c7a1e30d4fa9395c6aa",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only snapshot is the market rules and contains no Visa earnings release or reported Q4 constant-dollar payments volume growth. The Nov 5 fetch is also before the Nov 30 release deadline, so the snapshots are insufficient to resolve.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1245,
+  "total_tokens": 2748,
+  "completion_tokens": 1503,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1353,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1353
+  }
+ },
+ "cost_usd": 0.00207885,
+ "at": "2026-11-05T11:55:31",
+ "set": "disputed_thin_34",
+ "request_sha256": "063b27b0d727d897c234396cb5f394548e486a2d93207d80d40899ed73f77374",
+ "response_sha256": "b8cd333097755388e06b9eeb6d3c8112f833166943f04c7a1e30d4fa9395c6aa"
+}

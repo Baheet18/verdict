@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694595,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x5de0f5062432b49bcd1103b041c236c2024761b47fca96e1a6cc78446c5e1ed7734f4609df58b87be9c4c451784e7dee9f600efddf237a321f28d2ae9942c7aa1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:d1b6db58ed76a33d582318279f4be0e7e3d755afd85d5f20c51d62824194e142:d64859c2e9601d26d05cf9acd8f8e4def241b824923dca5e83f18d576467ced9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Only OpenLigaDB reports SC Freiburg's first-half score as 1, while ESPN reports only the final score. The required first-half statistic lacks two independent agreeing sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1411,
+  "total_tokens": 1950,
+  "completion_tokens": 539,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 260,
+  "completion_tokens_details": {
+   "reasoning_tokens": 260
+  }
+ },
+ "cost_usd": 0.0007840900000000001,
+ "at": "2026-11-05T10:26:29",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "d1b6db58ed76a33d582318279f4be0e7e3d755afd85d5f20c51d62824194e142",
+ "response_sha256": "d64859c2e9601d26d05cf9acd8f8e4def241b824923dca5e83f18d576467ced9"
+}

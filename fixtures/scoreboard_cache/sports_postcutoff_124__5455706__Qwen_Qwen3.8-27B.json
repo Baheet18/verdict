@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5455706,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x8ec6e864910a834549579a26af0e529346d250996f654536acc816ad13e480046f15a8013493de8bd49b62f4282e6efbd120207fe130e9edf7f7abd197ea938f1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:1bb9fe05bd2e83f46dc9ffafd2c6121eceaec17d08a2752eec093095162bb0e5:08f8e8d4debbcb1b5e33d6e9c0136612618ba5cad9fef7b552ed139d29f8ba3a",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent snapshots report the final score as Green Bay 27, Carolina 19, so the market resolves to Packers. The verdict mapping says answer NO when it resolves to Packers.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1107,
+  "total_tokens": 2011,
+  "completion_tokens": 904,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 644,
+  "completion_tokens_details": {
+   "reasoning_tokens": 644
+  }
+ },
+ "cost_usd": 0.00126468,
+ "at": "2026-11-05T10:17:18",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "1bb9fe05bd2e83f46dc9ffafd2c6121eceaec17d08a2752eec093095162bb0e5",
+ "response_sha256": "08f8e8d4debbcb1b5e33d6e9c0136612618ba5cad9fef7b552ed139d29f8ba3a"
+}

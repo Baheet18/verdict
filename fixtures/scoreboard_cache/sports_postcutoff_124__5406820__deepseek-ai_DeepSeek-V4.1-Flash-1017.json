@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5406820,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x2f432b98557cb95d2db416e9d38cc3e2a27826257e8faff7b5ec99fcfca0055b40b4976caaa9d95381b1102d1dacc0787406540c1fa7b5e0c40efd1ef1aa57021c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:6d4ef2937c1b3fd348a9bc0267cf0c6cb29f3252cd6159ce9ecfae89dd689ee8:a098766bf8b730a248fe19d97671ca78be0bc3f26063b5081d64f644d99a5f57",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show the game final with Devils 4 and Oilers 3 (decided in a shootout), so the Devils won and the market resolves to \"Devils\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 994,
+  "total_tokens": 1241,
+  "completion_tokens": 247,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 36
+  }
+ },
+ "cost_usd": 0.0005946,
+ "at": "2026-11-05T10:15:17",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "6d4ef2937c1b3fd348a9bc0267cf0c6cb29f3252cd6159ce9ecfae89dd689ee8",
+ "response_sha256": "a098766bf8b730a248fe19d97671ca78be0bc3f26063b5081d64f644d99a5f57"
+}

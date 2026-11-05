@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5694588,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x422750bc010307de648f112db0e9ea902a6f211322b607c589169eff9ff63a5e408ace4baaf0e5100ebe8f8b6d90a3fb0a7014340c45a8802181634648538be81c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:519b55ff2cbf201cdd7a8c5dfd0dcca1d395194608a760dd7013c47598f11fad:ea1f618743fa6ab8166dbc918770568cd74166605a65e1931671814c090caf41",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both snapshots show VfL Wolfsburg scored 2 goals in the completed match, which is under 3.5. Therefore the market resolves to Under, i.e. NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1258,
+  "total_tokens": 1544,
+  "completion_tokens": 286,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 103
+  }
+ },
+ "cost_usd": 0.0007206000000000001,
+ "at": "2026-11-05T10:24:37",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "519b55ff2cbf201cdd7a8c5dfd0dcca1d395194608a760dd7013c47598f11fad",
+ "response_sha256": "ea1f618743fa6ab8166dbc918770568cd74166605a65e1931671814c090caf41"
+}

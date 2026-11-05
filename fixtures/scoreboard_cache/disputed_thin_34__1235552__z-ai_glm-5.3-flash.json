@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 1235552,
+ "polymarket_id": "1235552",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x94f2a85360ce4fd90c69408c63963bb9c7eeab94ae77711bed973471657017e5044c01683ec36ea4a87e238b999d6578e96d2ab05d0285fe11cb445a6ff2d91f1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:5bab865a5dc448c6fa7140c611ff954218bd5457d1eb757cedebb697ae632527:8985ade5666255485d55b5363f29003b21d9344b32a5e177ed334b049de127e9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only external snapshot is the generic MLB.com homepage, which contains no information about the 2026 World Series result, the Guardians, or whether the series has concluded. With zero sources reporting the outcome (fewer than the two independent agreeing sources required), the market cannot be resolved from the evidence.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 4864,
+  "total_tokens": 6135,
+  "completion_tokens": 1271,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1144,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1144
+  }
+ },
+ "cost_usd": 0.00102462,
+ "at": "2026-11-05T11:35:07",
+ "set": "disputed_thin_34",
+ "request_sha256": "5bab865a5dc448c6fa7140c611ff954218bd5457d1eb757cedebb697ae632527",
+ "response_sha256": "8985ade5666255485d55b5363f29003b21d9344b32a5e177ed334b049de127e9"
+}

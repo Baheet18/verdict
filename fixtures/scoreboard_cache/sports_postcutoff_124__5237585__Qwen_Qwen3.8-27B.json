@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5237585,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x4255b10ff04f998ecdfc1f06b55d398e2475b18b80063a8b2859e1e7ce1ce10d6a5320c19c820221452cb2d60c3201bc4cc4806105f7e67542f4ef03fde421c91b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:5a03847f0889d1e71e7ffec00bd51d80c941d47d1e186364f6424ac0bdf41bc3:dbdeb88e618ff971d8e93fe851f7e5038d4bc476e11373e67665b5b3e46d6f24",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent final-score sources show the Panthers won 5-2. Therefore the market resolves to Panthers, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1115,
+  "total_tokens": 1444,
+  "completion_tokens": 329,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 95,
+  "completion_tokens_details": {
+   "reasoning_tokens": 95
+  }
+ },
+ "cost_usd": 0.00048875,
+ "at": "2026-11-05T10:14:24",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "5a03847f0889d1e71e7ffec00bd51d80c941d47d1e186364f6424ac0bdf41bc3",
+ "response_sha256": "dbdeb88e618ff971d8e93fe851f7e5038d4bc476e11373e67665b5b3e46d6f24"
+}

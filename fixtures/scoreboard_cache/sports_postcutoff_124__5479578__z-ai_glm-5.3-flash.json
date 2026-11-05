@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5479578,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x30ce09fd044582e48e7ab243430f92edca2bb9278a4a3592815d6cc7be17d1e12ea664a52d5e6510652bc9d54e900f472351bc9e3bcceda9def22436c6a489f51c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:3ce491d10fde74c016da478b9505353526e346bec4252aac99a71f410ad74797:fd6468ef125af59531a58b73dc709cdaae1c6e3b270cc71d8ecf01adc8cb19ab",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree the match ended 0-0 with Darmstadt not the winner, confirming a real draw rather than missing data. Since SV Darmstadt 98 did not win within regular play, the market resolves to \"No\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1148,
+  "total_tokens": 1769,
+  "completion_tokens": 621,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 313,
+  "completion_tokens_details": {
+   "reasoning_tokens": 313
+  }
+ },
+ "cost_usd": 0.00040234,
+ "at": "2026-11-05T10:25:20",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "3ce491d10fde74c016da478b9505353526e346bec4252aac99a71f410ad74797",
+ "response_sha256": "fd6468ef125af59531a58b73dc709cdaae1c6e3b270cc71d8ecf01adc8cb19ab"
+}

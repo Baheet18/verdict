@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4367279,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x0576e54f09f10a5a1c8c032f2624bd53dc99711dc758670207ef65eed0126eff18d3effab23560624b93653a13068fd7df7774328b10d177ccdcd008f2e370041b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:533a3f683690cf083272a55f3481e8f5b59897616497d8f41a18e2ad60571639:d5ad9cf4b1b5d65dfccdf26f671053f331c85c3560b73bf9e015f9f780609c04",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources report the final score as Chiefs 22, Chargers 6, for a combined total of 28. Since 28 is less than 39, the market resolves Under, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1105,
+  "total_tokens": 1488,
+  "completion_tokens": 383,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 294,
+  "completion_tokens_details": {
+   "reasoning_tokens": 294
+  }
+ },
+ "cost_usd": 0.00056125,
+ "at": "2026-11-05T10:21:01",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "533a3f683690cf083272a55f3481e8f5b59897616497d8f41a18e2ad60571639",
+ "response_sha256": "d5ad9cf4b1b5d65dfccdf26f671053f331c85c3560b73bf9e015f9f780609c04"
+}

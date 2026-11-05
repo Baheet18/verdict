@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5377056,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x7b417eb607158dbe5509d892ba0fc260e3b6db5d6feb9ed92aa2a8bfe2e3a78300dfab4e11259fc3c74ba8370d82cebdd5e977a3f0711b7d8bf1f6911a04eaa51b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:b5cf8a64e9be1651f54d89b8777509f9576fb264499970a80bea27f84e8b5360:85ce021d7b5d971393b4f83ceff5bf12212e4f90c3843f7d56074adaaef52593",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources agree that the Detroit Red Wings won 5-3 over the Florida Panthers. Therefore the market resolves to Red Wings, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1120,
+  "total_tokens": 1915,
+  "completion_tokens": 795,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 524,
+  "completion_tokens_details": {
+   "reasoning_tokens": 524
+  }
+ },
+ "cost_usd": 0.00111805,
+ "at": "2026-11-05T10:15:20",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "b5cf8a64e9be1651f54d89b8777509f9576fb264499970a80bea27f84e8b5360",
+ "response_sha256": "85ce021d7b5d971393b4f83ceff5bf12212e4f90c3843f7d56074adaaef52593"
+}

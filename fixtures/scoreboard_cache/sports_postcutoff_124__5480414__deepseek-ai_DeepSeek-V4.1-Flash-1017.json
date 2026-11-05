@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5480414,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x674294486fb07fb8beb787d6670af1f0f9baa7068aed8a3f9ec8e522d82af6be121b072a86324c8d8a4b1f8257a5b20036ea71db60abbde444ac19ab1a001a8a1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:868ca101478a47b7b357b65e37659fb40326ed07736b00fc6a9bbe601b14cfce:173eddc071fdbe32bee1aef1d5649314a037ef3c2fa516b39e372c1e2d87c879",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Both snapshots confirm the match is complete but neither reports any corner count, so the required total-corners statistic is absent from all sources. With no corner data (let alone two independent agreeing sources), the market cannot be resolved.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1231,
+  "total_tokens": 1633,
+  "completion_tokens": 402,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 66
+  }
+ },
+ "cost_usd": 0.0008516999999999999,
+ "at": "2026-11-05T10:22:41",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "868ca101478a47b7b357b65e37659fb40326ed07736b00fc6a9bbe601b14cfce",
+ "response_sha256": "173eddc071fdbe32bee1aef1d5649314a037ef3c2fa516b39e372c1e2d87c879"
+}

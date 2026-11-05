@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4584357,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x55de4c8a0eab44307a328611bccfa73e12bbb803e81f4c19feddfe3fe46280f1401f239a86340a151020bc33e454cb46a01bb2fd084422a624cd8805ec6622e81b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:45ab91ce7979285e1d4e5e18288fa7c4177eb6291e11f4283245897604f0767d:6fe2bcd8436cbb95ecb5abdfa18d988b2b8504716bd586b860a95f598e6bf4e9",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the Cowboys defeated the Eagles 38-21 in the final game, so the market resolves to \"Cowboys\" and the verdict maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 962,
+  "total_tokens": 1207,
+  "completion_tokens": 245,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 63,
+  "completion_tokens_details": {
+   "reasoning_tokens": 63
+  }
+ },
+ "cost_usd": 0.00019946,
+ "at": "2026-11-05T10:18:11",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "45ab91ce7979285e1d4e5e18288fa7c4177eb6291e11f4283245897604f0767d",
+ "response_sha256": "6fe2bcd8436cbb95ecb5abdfa18d988b2b8504716bd586b860a95f598e6bf4e9"
+}

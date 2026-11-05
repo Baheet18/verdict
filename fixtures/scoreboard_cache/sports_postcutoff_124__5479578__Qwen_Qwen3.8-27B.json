@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5479578,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x893413b040e4a5ce7157a7c2c01c3f5cc0e2a56179c1b45b6af7906c45213d74296592450f36b00e8aca8e26a6a54b9abc4aa530c3ba9041474eacff0a22172d1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:fdf28d99bd07a31baa3e8697567a15026d22c9ea2cab70b96111ae438d11dc79:cd258e9207034843dbd23386d2fc4b5fed9dc605918740a636297c63b7471840",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources report the completed match as a 0-0 draw, so SV Darmstadt 98 did not win. Therefore the market resolves No.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1312,
+  "total_tokens": 2558,
+  "completion_tokens": 1246,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 1047,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1047
+  }
+ },
+ "cost_usd": 0.0017345799999999999,
+ "at": "2026-11-05T10:25:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "fdf28d99bd07a31baa3e8697567a15026d22c9ea2cab70b96111ae438d11dc79",
+ "response_sha256": "cd258e9207034843dbd23386d2fc4b5fed9dc605918740a636297c63b7471840"
+}

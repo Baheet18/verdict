@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 1284815,
+ "polymarket_id": "1284815",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x5c8fdc2fd1821dd48bc8c23fcb135f1871223ff361867fffd969d899697d10c41f03971026ef8511266b951521ef5d6403c6416c6ffecd0a6cd4a46313cd8f931b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:4375398850286fdb292c6049af390be71b7b491eeffa0b73fdcc5a406611c129:5ec582e58cafddbded34bf29a3b36d146692712aad63f87cfa39c03eb26af650",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots identify the TX-02 general-election candidates but do not report a winner or official result. Therefore the Republican outcome cannot be determined from the provided sources.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 9607,
+  "total_tokens": 11354,
+  "completion_tokens": 1747,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1526,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1526
+  }
+ },
+ "cost_usd": 0.00274273,
+ "at": "2026-11-05T12:37:06",
+ "evidence_sha256": "46438397c3506a47f2f8a916302d797672d46c54cc71cd4bcfc5642f84d95c13",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "4375398850286fdb292c6049af390be71b7b491eeffa0b73fdcc5a406611c129",
+ "response_sha256": "5ec582e58cafddbded34bf29a3b36d146692712aad63f87cfa39c03eb26af650"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4551285,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x1878908e7085c826ba1b172501986e834f073aeebfbf6cba38605a41a12a2867093aa286919cdb770250769217406e5847fb4d69eaaa53db25518c55ba7e48461b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:a4790e704afe5ea5be666568bbf64145666e8048e27f654db45459b2f8579143:19cb56b3a17c562fc269f4440de5f3e55dab8fc4a2e8bf1c58a3fd1d8837dd36",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Cleveland Browns 27, Tennessee Titans 24. Therefore the market resolves to Browns, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1125,
+  "total_tokens": 1837,
+  "completion_tokens": 712,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 456,
+  "completion_tokens_details": {
+   "reasoning_tokens": 456
+  }
+ },
+ "cost_usd": 0.0010062,
+ "at": "2026-11-05T10:19:02",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "a4790e704afe5ea5be666568bbf64145666e8048e27f654db45459b2f8579143",
+ "response_sha256": "19cb56b3a17c562fc269f4440de5f3e55dab8fc4a2e8bf1c58a3fd1d8837dd36"
+}

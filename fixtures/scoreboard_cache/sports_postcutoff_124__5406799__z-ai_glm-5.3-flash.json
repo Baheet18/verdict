@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5406799,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xba13f369f83bb6f715a990b3bea6fff7376058dc68146026e959e94b0ee051ae6ef1e8e4c4b918db3c9b7e9dd4d93f45b9af6da49ab34344cc650a28f323c5c21c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:9956da4aca698cc0ec60e17be30a7aa90bf82064515cc9329fb640931f62d1af:0135ebe2020c8ab181fe657b845ffa7396a7b76ead7cbf8f640891c11907ca5b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources agree the Wild defeated the Flyers 4-2 in regulation on Nov 3, so the market resolves to \"Wild\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 953,
+  "total_tokens": 1181,
+  "completion_tokens": 228,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 61,
+  "completion_tokens_details": {
+   "reasoning_tokens": 61
+  }
+ },
+ "cost_usd": 0.00019024,
+ "at": "2026-11-05T10:16:40",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9956da4aca698cc0ec60e17be30a7aa90bf82064515cc9329fb640931f62d1af",
+ "response_sha256": "0135ebe2020c8ab181fe657b845ffa7396a7b76ead7cbf8f640891c11907ca5b"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4950267,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x69dc3240c0eeb03b23ec96f682ca80e9deddb2ea0754db3cf3095597711abefd17939e555789149d59bf380b911fa4bc39b4713904067fb541f91f3f23a840c81c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:3f692abb96f0a34eeb788311a848ab21fbcf02294c664f1a2f866878101a1cf0:ed5f72537c556e98831f9ed64479b6ad3dcf702bb75f129396b4146fbbd66965",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL API) agree the game was final with the Sharks winning 6-2 over the Senators, so the market resolves to \"Sharks\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 988,
+  "total_tokens": 1341,
+  "completion_tokens": 353,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 70
+  }
+ },
+ "cost_usd": 0.0007199999999999999,
+ "at": "2026-11-05T10:15:56",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "3f692abb96f0a34eeb788311a848ab21fbcf02294c664f1a2f866878101a1cf0",
+ "response_sha256": "ed5f72537c556e98831f9ed64479b6ad3dcf702bb75f129396b4146fbbd66965"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5127646,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x8050bd8a5cf0d389f1c370579a206533d2b69d1ae316461240332c6fd22878cb7f16eb80a3095c18d8fb628cd003a7924baad3a6675ef43298950f51932277fc1c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:51c3018f7f19ceb41630cd8e6ffb779fcdf982864d665a09a69703738ddd8027:ece6eb19b32cdf5b20ff919493ba7a24ea8c610dfe69bd28f1f04beba2bb3a27",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Both snapshots show Pittsburgh scored 26 and Tampa Bay scored 19, for a combined total of 45 points. Since 45 is greater than 36.5, the market resolves to Over.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 992,
+  "total_tokens": 1298,
+  "completion_tokens": 306,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 124
+  }
+ },
+ "cost_usd": 0.0006648,
+ "at": "2026-11-05T10:21:04",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "51c3018f7f19ceb41630cd8e6ffb779fcdf982864d665a09a69703738ddd8027",
+ "response_sha256": "ece6eb19b32cdf5b20ff919493ba7a24ea8c610dfe69bd28f1f04beba2bb3a27"
+}

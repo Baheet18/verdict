@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "market_id": 1281165,
+ "polymarket_id": "1281165",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x4ae1615324527138d29dd92553a8b8afdc5c51e21717cb01adc27f1d18eaec12773388039d4d86f674409d5618c4bc7e1a31261a85ba9887870321e6cacf79e11b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:64fc6e8066f10cad66569e5f70c8dc80b1586736f9e83b6f8d422fa2a2ce63a7:dca6267c7735d93e1b7721a5e8f2118ee1e48545537829ecc6c7934f262d584b",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The snapshots confirm the election date but contain no reported result for the CA-34 2026 race; the district article's 2026 election-results section is empty and the FEC snapshot is only a homepage. With no outcome reported by any source, the result cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 7143,
+  "total_tokens": 7557,
+  "completion_tokens": 414,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 6912
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 269
+  }
+ },
+ "cost_usd": 0.0026397,
+ "at": "2026-11-05T12:35:24",
+ "evidence_sha256": "eb4ce6d0c1da2f7f644011bcb7c10608a0bc5ef2ac66459f084847f8849bb9e4",
+ "set": "disputed_curated_js_shells",
+ "request_sha256": "64fc6e8066f10cad66569e5f70c8dc80b1586736f9e83b6f8d422fa2a2ce63a7",
+ "response_sha256": "dca6267c7735d93e1b7721a5e8f2118ee1e48545537829ecc6c7934f262d584b"
+}

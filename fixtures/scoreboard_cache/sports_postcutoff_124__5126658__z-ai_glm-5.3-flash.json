@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5126658,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x561d7b068d4ef97764949753f765f082d948e0a41f3e232cf4476544f56870792e58fc7ebfab5dde2c7477a884fd2ea8dd2a149080269346f4dfe8130003fcc41c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:e67a8db3f9529cc9d644da0366a9f2017f712f94018370d048300cf70ce545fb:114882215e89078147601e245fa7139bff8dc620fe5b46fb83087c89a999e648",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the game is final with Calgary winning 5-2 in regulation, so the market resolves to \"Flames\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 972,
+  "total_tokens": 1176,
+  "completion_tokens": 204,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 26,
+  "completion_tokens_details": {
+   "reasoning_tokens": 26
+  }
+ },
+ "cost_usd": 0.00017976,
+ "at": "2026-11-05T10:12:36",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e67a8db3f9529cc9d644da0366a9f2017f712f94018370d048300cf70ce545fb",
+ "response_sha256": "114882215e89078147601e245fa7139bff8dc620fe5b46fb83087c89a999e648"
+}

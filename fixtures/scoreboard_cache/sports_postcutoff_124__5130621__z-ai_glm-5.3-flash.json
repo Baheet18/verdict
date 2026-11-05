@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5130621,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xb48b7536c110caca027c4b11befa792718953e051ddc43ee6fe56613f63bedab30cf169b0e36c16af28d7ea38aad86b23e8f65053e9a1db16649e7584c5ab96b1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:8611412d3b14a25db841c31b8c4b130cbfae250671401f4ab7c1b1554c1635c2:e266ec8e0a50f7500397ccfe9102123457c9ace67b41cd91f3d36d151039cc4e",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the final score was SF 23, WAS 17, a combined total of 40 points, which is below 53. Per the rules, the market resolves to \"Under\", mapping to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 958,
+  "total_tokens": 1271,
+  "completion_tokens": 313,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 51,
+  "completion_tokens_details": {
+   "reasoning_tokens": 51
+  }
+ },
+ "cost_usd": 0.00023314,
+ "at": "2026-11-05T10:20:51",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "8611412d3b14a25db841c31b8c4b130cbfae250671401f4ab7c1b1554c1635c2",
+ "response_sha256": "e266ec8e0a50f7500397ccfe9102123457c9ace67b41cd91f3d36d151039cc4e"
+}

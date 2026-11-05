@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5332476,
+ "polymarket_id": "5332476",
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x495038d6242c0eefa907b8aa29c5c2611fc6c11aaa79c8e8bc7b4dc6b9f264b30316d27f41c3fb0490563fc47e0b5973cd09714dfdad609e976e1f38d307f6221c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:10188d93ebaa8ddb53daaf3059e18f37487983df49549083466682f7f62f0fd0:08f4648ed71b87b43f7c2038bcd706177d73208865fbed23ec84df01c474bd1d",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only source snapshot is the market description and contains no election results or seat counts. Therefore the snapshots are insufficient to determine whether Noam won the second-most seats.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1259,
+  "total_tokens": 1802,
+  "completion_tokens": 543,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 431,
+  "completion_tokens_details": {
+   "reasoning_tokens": 431
+  }
+ },
+ "cost_usd": 0.00078341,
+ "at": "2026-11-05T11:57:21",
+ "set": "disputed_thin_34",
+ "request_sha256": "10188d93ebaa8ddb53daaf3059e18f37487983df49549083466682f7f62f0fd0",
+ "response_sha256": "08f4648ed71b87b43f7c2038bcd706177d73208865fbed23ec84df01c474bd1d"
+}

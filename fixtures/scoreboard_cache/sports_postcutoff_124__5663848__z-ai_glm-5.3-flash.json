@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5663848,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x14d5c9f9a7cacf50afc2364cb84787c9a2e5e1ee24c846f7321ca8497b1f2bfb115df5219378ab0d25dea2c18fe3384efb8d7d827f3d175fe922201a235ea22e1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:aa362e0815b8f2898ae4fe0a3ab2d75bc3816625429f722e501ec091b46ba69c:36fa19e4d67f8d49a940c03d20b418f2963f3aec3b8dbaac4c73cc1b3420b702",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and OpenLigaDB) agree that Mainz scored 0 goals in the completed match, which is fewer than 4, so the market resolves to \"Under\". The zero is corroborated by both sources, so it is not missing data.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1272,
+  "total_tokens": 1565,
+  "completion_tokens": 293,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 105,
+  "completion_tokens_details": {
+   "reasoning_tokens": 105
+  }
+ },
+ "cost_usd": 0.00024826000000000004,
+ "at": "2026-11-05T10:22:31",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "aa362e0815b8f2898ae4fe0a3ab2d75bc3816625429f722e501ec091b46ba69c",
+ "response_sha256": "36fa19e4d67f8d49a940c03d20b418f2963f3aec3b8dbaac4c73cc1b3420b702"
+}

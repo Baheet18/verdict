@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5377061,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x80395865a0d410a7c3995d9711ff6b5aa86b59e390674ee42a1e7d83eac597e6259dca6b325337eeadd20cda80b738844e09ae7aededd371a5be044a8953dd751b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:e6feb42d6f0cbc5db946fbdb8238fb185fcb257c79a6f230fea7c3a382737572:41c1b087f617a60fa5204026497a07a3cacdc09da553105924832f04aaedf6ee",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources report a final score of Bruins 3, Golden Knights 2 (decided in a shootout), so the Bruins won and the market resolves to \"Bruins\" (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 996,
+  "total_tokens": 1322,
+  "completion_tokens": 326,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 36
+  }
+ },
+ "cost_usd": 0.0006900000000000001,
+ "at": "2026-11-05T10:13:16",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e6feb42d6f0cbc5db946fbdb8238fb185fcb257c79a6f230fea7c3a382737572",
+ "response_sha256": "41c1b087f617a60fa5204026497a07a3cacdc09da553105924832f04aaedf6ee"
+}

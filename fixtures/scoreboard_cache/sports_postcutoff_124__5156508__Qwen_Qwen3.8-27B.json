@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5156508,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x2b0ee32b47dc74c720fa217607039a272444d2247fabf6888a19e85e07f7021200af5524f32bb8405badd7ad28eccb411138ab236e41e79d0eaf7fe9b49fed601c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:e4e495887ebb5f935b2a592caa7191d58e16d6d6f20a705d5e5e4045af7e9acd:9eff058196f8f6aad3f8480180ed28075d8a8bc216805abb420f1f464d385d09",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final sources agree the Canucks won 6-5 in overtime. Therefore the market resolves to Canucks, which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1128,
+  "total_tokens": 1812,
+  "completion_tokens": 684,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 441,
+  "completion_tokens_details": {
+   "reasoning_tokens": 441
+  }
+ },
+ "cost_usd": 0.0009685200000000001,
+ "at": "2026-11-05T10:14:45",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "e4e495887ebb5f935b2a592caa7191d58e16d6d6f20a705d5e5e4045af7e9acd",
+ "response_sha256": "9eff058196f8f6aad3f8480180ed28075d8a8bc216805abb420f1f464d385d09"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4950272,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x6b51c565b78782af9f70351859e0737c3377340cb1fb03b3f1626e47a3bb940e037b1cfe5b0257210b4096e0703d205ce4afac1edbdcd25a456f89c605b06e881b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:fa4815e29f82286d712e084bc9c8e04a1c10ac586f721cb14a70b6516005dbbb:bf11d1b1b01493b9bccda357fbbcb1f438a32055cdb7dc59278e1a2b444dedb8",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Devils defeated the Ducks 4-1 in regulation, so the market resolves to \"Devils\" per the rules, mapping to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 965,
+  "total_tokens": 1170,
+  "completion_tokens": 205,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 23,
+  "completion_tokens_details": {
+   "reasoning_tokens": 23
+  }
+ },
+ "cost_usd": 0.0001797,
+ "at": "2026-11-05T10:16:17",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "fa4815e29f82286d712e084bc9c8e04a1c10ac586f721cb14a70b6516005dbbb",
+ "response_sha256": "bf11d1b1b01493b9bccda357fbbcb1f438a32055cdb7dc59278e1a2b444dedb8"
+}

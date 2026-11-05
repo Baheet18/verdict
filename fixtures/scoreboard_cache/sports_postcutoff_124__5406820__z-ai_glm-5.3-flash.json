@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5406820,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xe34b00c734336fa8c122b672f1e4abfd412270ab0322e68b8e12e686e4d4dd644b264d51ea2b57263465cd959297a33c63c91c333b396d193a330844e7c485aa1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:13e02456e8506dbb26d9eea6e155a56e10378d3c97e4b4a6acbe0b2bd3b1925e:ba0d69e206c384cc2ed929e0a5da5077572f0b16dabb7df155222f03e900bb05",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Devils won 4-3 in a shootout (final, including shootout goal per rules), so the market resolves to \"Devils\", mapping to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 959,
+  "total_tokens": 1324,
+  "completion_tokens": 365,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 167,
+  "completion_tokens_details": {
+   "reasoning_tokens": 167
+  }
+ },
+ "cost_usd": 0.00025922,
+ "at": "2026-11-05T10:15:23",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "13e02456e8506dbb26d9eea6e155a56e10378d3c97e4b4a6acbe0b2bd3b1925e",
+ "response_sha256": "ba0d69e206c384cc2ed929e0a5da5077572f0b16dabb7df155222f03e900bb05"
+}

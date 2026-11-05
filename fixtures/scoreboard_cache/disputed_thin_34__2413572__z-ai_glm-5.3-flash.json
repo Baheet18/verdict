@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 2413572,
+ "polymarket_id": "2413572",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x6360a05be7689298bfd6490cff13dc5071cae02b64646c88b3c5f0da4076aa79416d0855147f36a907f1d5d32b873c9ff1eb87705230766cac67005f820f76df1c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:d3538fc0d412e732ed5a3b545d8a590a94307a81f857778e55b2c11eb13fa350:84a3e667a9b1d331247563e4185160a76104dd1b12463f047bf92b3e5123481f",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The event window has closed (snapshot fetched 2026-11-05, after the 2026-10-31 deadline), but the bundle contains only the market's own rules text\u2014which is explicitly not an external fact source\u2014and no snapshots reporting whether a qualifying agreement was or was not reached. With no independent evidence of either a signed/confirmed permanent peace deal or its absence, the snapshots are insufficie\u2026",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1091,
+  "total_tokens": 2003,
+  "completion_tokens": 912,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 690,
+  "completion_tokens_details": {
+   "reasoning_tokens": 690
+  }
+ },
+ "cost_usd": 0.00054328,
+ "at": "2026-11-05T11:33:56",
+ "set": "disputed_thin_34",
+ "request_sha256": "d3538fc0d412e732ed5a3b545d8a590a94307a81f857778e55b2c11eb13fa350",
+ "response_sha256": "84a3e667a9b1d331247563e4185160a76104dd1b12463f047bf92b3e5123481f"
+}

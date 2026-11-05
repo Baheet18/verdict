@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "market_id": 5969230,
+ "polymarket_id": "5969230",
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x4646092c43a38db9a367dd20c4b96cfb72838f67ecbedb70b68c0118f31988c40ba894ea8022834f16a4c3deb236a7bc993be60c74eddcd2c983b72b6d102ff91c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:b80685b92e50bfd9a836ec99acaed80cc07acde6ebffcc0065c8d42244639b29:884cb783dab59331108f9e5195c8aa62a84e20e58aa2ed3bc94764efae4a6d84",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The only external snapshot is the npb.jp homepage shell, whose game-score (\u8a66\u5408\u901f\u5831) include section is empty and which contains no result for the October 27 Hawks\u2013BayStars game. With zero sources reporting the game outcome (fewer than the two independent agreeing sources required for scores), the result cannot be determined.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 7254,
+  "total_tokens": 8439,
+  "completion_tokens": 1185,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 1012,
+  "completion_tokens_details": {
+   "reasoning_tokens": 1012
+  }
+ },
+ "cost_usd": 0.00117282,
+ "at": "2026-11-05T11:48:28",
+ "set": "disputed_thin_34",
+ "request_sha256": "b80685b92e50bfd9a836ec99acaed80cc07acde6ebffcc0065c8d42244639b29",
+ "response_sha256": "884cb783dab59331108f9e5195c8aa62a84e20e58aa2ed3bc94764efae4a6d84"
+}

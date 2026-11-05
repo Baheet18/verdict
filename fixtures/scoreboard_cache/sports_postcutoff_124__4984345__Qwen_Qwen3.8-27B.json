@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4984345,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x0f931cb87712235a72174aa8d5b108c0904dbc196abb20fffa77d6a6d5e5c00a3b083c6326663101ece79ce72a6e76149ba6f92b94dc3985af8dfbc114733d8d1c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:9557bebdb57c2d3225fbd6b59d124d9ee5198aec0a1b6bb41c3a04c5679cdf61:184f1a947c42fe8b843c605bcf518aa9b71f56f3dca413ed6b7f355de3924a55",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent final-score sources agree that the Canadiens won 4-1. Therefore the market resolves to \"Canadiens\", which maps to YES.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1116,
+  "total_tokens": 1643,
+  "completion_tokens": 527,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 290,
+  "completion_tokens_details": {
+   "reasoning_tokens": 290
+  }
+ },
+ "cost_usd": 0.00075609,
+ "at": "2026-11-05T10:14:32",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "9557bebdb57c2d3225fbd6b59d124d9ee5198aec0a1b6bb41c3a04c5679cdf61",
+ "response_sha256": "184f1a947c42fe8b843c605bcf518aa9b71f56f3dca413ed6b7f355de3924a55"
+}

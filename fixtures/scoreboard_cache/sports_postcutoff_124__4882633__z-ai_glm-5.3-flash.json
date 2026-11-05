@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 4882633,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0x9d45de630bb10e9c25bf2822a6ce9eccb6cf38d8edab3992e19851e3f8ac5f6368541a8bc303416231c22288d97c70a5cc4e5773a7a75157ce1217c9cdf48dea1b",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:d75fa52e675f8b30cdeeb934377b939bf33d176b092eebe16fc31abe47ec8117:3c9c43b7e6136cb2e6dd7513ad7fff795abb1151ee644f6c49c5792613af0f73",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL official API) agree the Kings defeated the Capitals 5-2 in a final regulation game, so the market resolves to \"Kings\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 955,
+  "total_tokens": 1159,
+  "completion_tokens": 204,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 27,
+  "completion_tokens_details": {
+   "reasoning_tokens": 27
+  }
+ },
+ "cost_usd": 0.0001784,
+ "at": "2026-11-05T10:16:21",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "d75fa52e675f8b30cdeeb934377b939bf33d176b092eebe16fc31abe47ec8117",
+ "response_sha256": "3c9c43b7e6136cb2e6dd7513ad7fff795abb1151ee644f6c49c5792613af0f73"
+}

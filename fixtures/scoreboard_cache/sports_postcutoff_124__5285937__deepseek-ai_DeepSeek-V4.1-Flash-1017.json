@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285937,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xe0aa1e7d415694c4dec73d254e83609dc28c9615aa3c1c0c4d4fac166d8f881d38730a7521525cea33c1116bb132381da33538d2cdd1c9dbfee09675b9d030481c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:7239826798499dee190b11b294e11214ae2b0f389a6ef6d40f9bfa1da3c901a3:53beb538fbd7823a37a5400a75973609eb48f11eaef7be3f1a21ccd45a463bc6",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent sources (ESPN and NHL API) agree the game is final with the Sabres winning 3-2, so the market resolves to \"Sabres\" (YES).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 992,
+  "total_tokens": 1178,
+  "completion_tokens": 186,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 32
+  }
+ },
+ "cost_usd": 0.0005208000000000001,
+ "at": "2026-11-05T10:13:50",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "7239826798499dee190b11b294e11214ae2b0f389a6ef6d40f9bfa1da3c901a3",
+ "response_sha256": "53beb538fbd7823a37a5400a75973609eb48f11eaef7be3f1a21ccd45a463bc6"
+}

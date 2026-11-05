@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4367295,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0xfcf527db43a6b2044568c7395cd858fba463708af2a08d16a87af055100202b328bd55d180249f9bc93b9c689deb750d729718b33a16105c0e9c45b56039f8251c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:4b0426c033aacd9acc4c8b0076d6230ddad72e67e28d767649e63937416fdf72:59f67a578491e36ca5fafaa181d6802e4ae07c2613db0cdb0dba059f50badeeb",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent sources show the Rams lost 16-18 to the Cardinals, so they did not win by 14 or more. The market therefore resolves to Cardinals (NO).",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 975,
+  "total_tokens": 1169,
+  "completion_tokens": 194,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 768
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 27
+  }
+ },
+ "cost_usd": 0.0005253,
+ "at": "2026-11-05T10:20:22",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4b0426c033aacd9acc4c8b0076d6230ddad72e67e28d767649e63937416fdf72",
+ "response_sha256": "59f67a578491e36ca5fafaa181d6802e4ae07c2613db0cdb0dba059f50badeeb"
+}

@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "market_id": 5377321,
+ "model": "z-ai/glm-5.3-flash",
+ "signature": {
+  "signature": "0xf57d602c5948af4450ba2b7e709a3fbf4544bb1c313e9018179077189a2445817a60de3e2bb716c8c0fbd1a4d34c984a723cb9d1751ab0fc7308e2e5eec235461c",
+  "signing_address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+  "text": "z-ai/glm-5.3-flash:18cacba557e01f9bae412480f60ffa63a78362595eeebd708f78f223f5010c3c:c852cf5c23de542d5a024cb616f0b790922bc8909d0d2ca42717e03791a4e5d0",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x3b753b4406613c5e70ae640508632b600424fa0c",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Two independent sources agree the final score was Bears 30, Patriots 24, a Bears win margin of 6 points. Since 6 is less than the required 11-point margin, the market resolves to \"Patriots\".",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 945,
+  "total_tokens": 1327,
+  "completion_tokens": 382,
+  "prompt_tokens_details": null,
+  "reasoning_tokens": 99,
+  "completion_tokens_details": {
+   "reasoning_tokens": 99
+  }
+ },
+ "cost_usd": 0.0002666,
+ "at": "2026-11-05T10:20:06",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "18cacba557e01f9bae412480f60ffa63a78362595eeebd708f78f223f5010c3c",
+ "response_sha256": "c852cf5c23de542d5a024cb616f0b790922bc8909d0d2ca42717e03791a4e5d0"
+}

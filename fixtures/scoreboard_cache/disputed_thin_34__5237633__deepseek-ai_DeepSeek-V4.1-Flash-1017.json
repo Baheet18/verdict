@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "market_id": 5237633,
+ "polymarket_id": "5237633",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x39f69f7bf51146d88b88fbe2258d4732fc5eb40c991ef70959c355a1d5d886b27541fbee3919775009ecd8e4ff9147ebbaf81f03c82ae31882f97213716695141c",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:2490d447fbe3770c96b7061aa07664f8385cf62dedc3297c728cc890ae431813:4782ea9b89613093701a61a0ae7aad0bdfd8bcb9761cfdcfa3064036d526a630",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "The bundle contains only the market rules/description snapshot and no reporting or official statements about any strike on Moscow on October 19, 2026, so the occurrence, attribution, timing, and target cannot be established.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1553,
+  "total_tokens": 1837,
+  "completion_tokens": 284,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1344
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 150
+  }
+ },
+ "cost_usd": 0.0008067,
+ "at": "2026-11-05T11:51:32",
+ "set": "disputed_thin_34",
+ "request_sha256": "2490d447fbe3770c96b7061aa07664f8385cf62dedc3297c728cc890ae431813",
+ "response_sha256": "4782ea9b89613093701a61a0ae7aad0bdfd8bcb9761cfdcfa3064036d526a630"
+}

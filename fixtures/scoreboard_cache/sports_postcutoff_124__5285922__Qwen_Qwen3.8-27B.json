@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5285922,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0x5fefb97f27b41dcbbbbc8dddc7dab75e893306bf396f7e7ff71ba4fe4b97554655bf6d89e787f0ba14a772b7f3992d99c85cc4546a12a94d2a4cfd141eb9051f1b",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:75e0d0f25903da265a07f33c218a1de1f1cdf3d181637c55f520d0f6ad3141a4:2ca46b464dbd6d2e046cea7f3336fc4d8bf48b703b7dc7160f8567e8414e1885",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "NO",
+ "reasoning": "Both independent snapshots show the final score as Predators 5, Lightning 4, with the Predators marked as the winner. Therefore the market resolves to Predators, which maps to NO.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1125,
+  "total_tokens": 1958,
+  "completion_tokens": 833,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 580,
+  "completion_tokens_details": {
+   "reasoning_tokens": 580
+  }
+ },
+ "cost_usd": 0.0011695499999999999,
+ "at": "2026-11-05T10:15:12",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "75e0d0f25903da265a07f33c218a1de1f1cdf3d181637c55f520d0f6ad3141a4",
+ "response_sha256": "2ca46b464dbd6d2e046cea7f3336fc4d8bf48b703b7dc7160f8567e8414e1885"
+}

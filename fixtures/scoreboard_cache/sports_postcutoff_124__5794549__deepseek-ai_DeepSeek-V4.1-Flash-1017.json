@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 5794549,
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "signature": {
+  "signature": "0x5851f0b471ba568a9ea18a58b3b96ab1dc394168d82e08370dce93c3b238bf5f62e8c6375486158fc115a7c2d9e8db4f2b793b943889fb73de31b69c53832c6a1b",
+  "signing_address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+  "text": "deepseek-ai/DeepSeek-V4.1-Flash-1017:ddc597094f4ef584199510d56954731f1669668cd3c5bb43ca8042d1e3c039cf:d1e5a71e56758d3994d59f10cb254bcf0329cb710ca1c47430159e00a1937cfe",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
+ "label": "Hardware + host stack verified",
+ "outcome": "AMBIGUOUS",
+ "reasoning": "Final scores agree Elversberg won 4-1, but only OpenLigaDB reports the halftime 3-0 score and no snapshot explicitly identifies the first scorer. The needed first-scorer fact is not corroborated by two independent sources, so the snapshots are insufficient under the data-quality rules.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1268,
+  "total_tokens": 2410,
+  "completion_tokens": 1142,
+  "prompt_tokens_details": {
+   "cached_tokens": 192,
+   "created_cache_tokens": 1024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 801
+  }
+ },
+ "cost_usd": 0.0017507999999999998,
+ "at": "2026-11-05T10:24:13",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "ddc597094f4ef584199510d56954731f1669668cd3c5bb43ca8042d1e3c039cf",
+ "response_sha256": "d1e5a71e56758d3994d59f10cb254bcf0329cb710ca1c47430159e00a1937cfe"
+}

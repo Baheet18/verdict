@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "market_id": 4584357,
+ "model": "Qwen/Qwen3.8-27B",
+ "signature": {
+  "signature": "0xe3892984c19c2232ed0eb32963a5f59f5f553056e80e9a3647fd725f645f5c7a4141f80b83cec51e4570918b163cc658a10dce230f7b355b831750796e459c951c",
+  "signing_address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+  "text": "Qwen/Qwen3.8-27B:4cf9f5d773c29a2b59c1fd8fbf7dd3bffa684caa6ac66bcb39681fb1de3c7098:e50a95ccda3d381b85719f0ef08d4e34f68f61565d561743a1941b6c8a8d4146",
+  "signing_algo": "ecdsa"
+ },
+ "signer": "0x835ab53d20294ef795906dff21ae4c045336aa26",
+ "label": "Hardware + host stack verified",
+ "outcome": "YES",
+ "reasoning": "Two independent snapshots report the final score as Dallas 38, Philadelphia 21, so the market resolves to Cowboys.",
+ "finish_reason": "stop",
+ "usage": {
+  "prompt_tokens": 1122,
+  "total_tokens": 2064,
+  "completion_tokens": 942,
+  "prompt_tokens_details": {
+   "cached_tokens": 192
+  },
+  "reasoning_tokens": 768,
+  "completion_tokens_details": {
+   "reasoning_tokens": 768
+  }
+ },
+ "cost_usd": 0.00131658,
+ "at": "2026-11-05T10:18:28",
+ "set": "sports_postcutoff_124",
+ "request_sha256": "4cf9f5d773c29a2b59c1fd8fbf7dd3bffa684caa6ac66bcb39681fb1de3c7098",
+ "response_sha256": "e50a95ccda3d381b85719f0ef08d4e34f68f61565d561743a1941b6c8a8d4146"
+}
