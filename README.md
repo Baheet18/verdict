@@ -7,7 +7,7 @@ Bloomberg (2026-05-26) reported that about nine wallets accounted for roughly ha
 **Clear markets:** auto-settled at ~$0.002/market, **107/107** agreed with UMA (post-cutoff sports), hardware-attested. Request parameters are allowlisted on-chain (no `logit_bias` / guided decoding); a registered relayer still chooses and commits evidence — that remaining trust is listed under Limits, so “unsteerable” here means *request-parameter* steering is blocked, not that the relayer is trustless.
 **Unclear markets:** escalated to humans, **0 invented answers**.
 **TOO_EARLY** is first-class (Bitquery: **243 of 470** Polymarket/UMA disputes in 9 Sep–7 Oct 2026 ended “too early” — https://bitquery.io/investigations/who-decides-polymarket-disputes).
-**Hand-curated disputed (answer-bearing sources):** 8 markets · settled 8 · agree UMA 7 · disagree UMA 1 (Visa growth band; panel + curator (AI) NO vs UMA YES; see docs/VISA_CASE.md) · escalated 0 · invented 0. Same IDs with thin rules-only evidence: 8/8 escalated. See `docs/BENCHMARK_DISPUTED_HAND.md`.
+**Hand-curated disputed (answer-bearing sources):** 8 markets · settled 8 · agree UMA 7 · disagree UMA 1 (Visa 5648379: under review — a more precise 9.5% figure may support UMA's YES; see docs/VISA_CASE.md) · escalated 0 · invented 0. Same IDs with thin rules-only evidence: 8/8 escalated. See `docs/BENCHMARK_DISPUTED_HAND.md`.
 
 
 ## Trust labels
@@ -43,7 +43,7 @@ Sources are fetched OUTSIDE the TEE, snapshotted (url, fetched_at, sha256, text)
 
 ## Disputed-market evidence
 - **Thin / JS-shell fetches** (34 markets, and an earlier “curated” attempt): panel abstained — expected when snapshots lack the resolution fact. See `docs/BENCHMARK_DISPUTED.md` / `docs/BENCHMARK_DISPUTED_CURATED.md`.
-- **Hand-curated answer-bearing set (round 6):** 8 markets with curator-(AI)-extracted official/Wikipedia + 2 report texts, `answer_present:true` checked by curator (AI) **before** the panel (Baheet has not personally verified each row), archive.org noted only when reachable. Panel: **8 settled / 7 agree UMA / 1 disagree UMA / 0 escalate / 0 invented**. Same IDs on thin evidence: 8/8 escalate. Column name: **answer-bearing sources**. Details: `docs/BENCHMARK_DISPUTED_HAND.md` + `fixtures/evidence_hand/`. Visa disagreement: `docs/VISA_CASE.md`. Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
+- **Hand-curated answer-bearing set (round 6):** 8 markets with curator-(AI)-extracted official/Wikipedia + 2 report texts, `answer_present:true` checked by curator (AI) **before** the panel (Baheet has not personally verified each row), archive.org noted only when reachable. Panel: **8 settled / 7 agree UMA / 1 disagree UMA / 0 escalate / 0 invented**. Same IDs on thin evidence: 8/8 escalate. Column name: **answer-bearing sources**. Details: `docs/BENCHMARK_DISPUTED_HAND.md` + `fixtures/evidence_hand/`. Visa 5648379: under review — a more precise 9.5% figure may support UMA's YES (`docs/VISA_CASE.md`). Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
 
 ## Rule authoring checklist (optional)
 `scripts/rule_linter.py` is an **optional rule-authoring checklist** (regex/heuristics, no model). It surfaces vague wording, missing sources, and deadline gaps while drafting rules.

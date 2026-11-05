@@ -8,7 +8,7 @@
 |---|---|
 | **projectName** | Verdict |
 | **leadName** | Baheet Adeniji |
-| **email** | adenijibaheet@gmail.com |
+| **email** | TODO — Baheet fills email |
 | **size** | TODO — Baheet fills team size as the form requires (solo / N) |
 | **tracks** | `["privacy", "defi", "security", "open"]` |
 | **nearAddress** | TODO — Baheet fills **his own NEAR mainnet account**. Do **not** invent or guess. |
@@ -29,7 +29,7 @@ Verdict settles markets with three attested models (Qwen3.8-27B, DeepSeek-V4.1-F
 3. Binds header fields: market_id, round, rules_hash, prompt_template_hash, evidence_bundle_hash.
 4. Maps each signer → one model; rejects replayed signed texts.
 
-**Headline**: Clear markets auto-settled at ~$0.002, **107/107** agreed with UMA, hardware-attested; request-parameter steering blocked (relayer evidence choice remains — see Limits). Unclear markets escalate to humans, **0 invented answers**. TOO_EARLY is first-class (Bitquery **243/470**). Hand-curated answer-bearing disputed set: **8 settled / 7 agree UMA / 1 disagree / 0 invent**; same IDs thin evidence **8/8 escalate**. Visa disagreement documented in `docs/VISA_CASE.md` (neutral; never “UMA wrong”). Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
+**Headline**: Clear markets auto-settled at ~$0.002, **107/107** agreed with UMA, hardware-attested; request-parameter steering blocked (relayer evidence choice remains — see Limits). Unclear markets escalate to humans, **0 invented answers**. TOO_EARLY is first-class (Bitquery **243/470**). Hand-curated answer-bearing disputed set: **8 settled / 7 agree UMA / 1 disagree / 0 invent**; same IDs thin evidence **8/8 escalate**. Visa 5648379: under review — a more precise 9.5% figure may support UMA's YES (`docs/VISA_CASE.md`). Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
 
 Offline screener mode (`python scripts/offline_demo.py`) needs no API key.
 

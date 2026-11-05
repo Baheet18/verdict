@@ -13,7 +13,7 @@ A 3-model AI panel runs in NEAR AI Cloud TEEs, signs every vote (EIP-191), and o
 Clear markets: auto-settled at ~$0.002, 107/107 agreed with UMA (post-cutoff sports), hardware-attested. Request params allowlisted on-chain.
 Unclear markets: escalated to humans — 0 invented answers. TOO_EARLY is first-class (Bitquery: 243/470 UMA disputes were "too early").
 
-Hand-checked answer-bearing sources on 8 disputed markets (curator: AI; Baheet has not personally verified each row): 8 settled, 7 agree UMA, 1 disagree, 0 invent. Same IDs with thin evidence: all escalated. Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
+Hand-checked answer-bearing sources on 8 disputed markets (curator: AI; Baheet has not personally verified each row): 8 settled, 7 agree UMA, 1 disagree, 0 invent. Visa 5648379: under review — a more precise 9.5% figure may support UMA's YES. Same IDs with thin evidence: all escalated. Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
 
 Repo: https://github.com/Baheet18/verdict
 

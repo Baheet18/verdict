@@ -1,4 +1,4 @@
-# Visa 5648379 — panel vs UMA disagreement (case study)
+# Visa 5648379 — under review — a more precise 9.5% figure may support UMA's YES
 
 **Market**: Polymarket `5648379` — *Visa (V) Q4 payments volume growth (constant dollars) 9.5% to 10.5%?*  
 **Sibling**: `5648378` — same metric, band *8.5% to 9.5%* (UMA resolved **NO**).  
@@ -7,7 +7,7 @@
 **Curator (AI) read of the same bundle**: **NO** (9% is below 9.5–10.5).  
 **Baheet has not personally verified this row.**
 
-This note quotes the market’s exact rules and the named release lines. It does **not** say UMA was wrong.
+This note quotes the market’s exact rules and the named release lines. **Status**: under review — a more precise 9.5% figure may support UMA's YES.
 
 ## Exact market rules (from Polymarket description / hand bundle)
 
@@ -52,11 +52,11 @@ Quoted lines committed in `fixtures/evidence_hand/7f4d2d3172e91c520650d58e752443
 
 ## Classification
 
-UMA’s YES on 9.5–10.5 does **not** clearly follow from the Key Business Drivers **Payments Volume** line or the Sept 30 payments-volume narrative in the Oct 27, 2026 release (both **9%**). A 10% reading appears to rest on either the June-30 lag sentence or another metric (e.g. processed transactions), which the rules’ “specified metric only” language does not clearly authorize for this market.
+Panel votes and curator (AI) used the Key Business Drivers **Payments Volume 9%** / Sept 30 narrative **9%** lines → **NO** on 9.5–10.5. UMA resolved **YES**. OPD / a more precise Payments Volume decimal was not successfully fetched for this write-up (HTTP 403 / captcha).
 
-Therefore this is **not** labeled a panel error.
+**Status**: under review — a more precise 9.5% figure may support UMA's YES.
 
-**Report**: panel and UMA disagreed; evidence is in the hand bundle and this note. **Never**: “UMA was wrong.”
+Evidence: hand bundle + this note.
 
 ## Artifacts
 

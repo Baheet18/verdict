@@ -6,7 +6,7 @@ Generated 2026-11-05 13:51 WAT. Local commit only; **no push / deploy / X / form
 
 | # | Item | Status |
 |---|---|---|
-| 1 | Visa 5648379 case (`docs/VISA_CASE.md`) | Done — **neutral disagreement** (not panel error; never “UMA wrong”) |
+| 1 | Visa 5648379 case (`docs/VISA_CASE.md`) | Done — **under review — a more precise 9.5% figure may support UMA's YES** |
 | 2 | Rename human → **curator (AI)** | Done (Baheet has **not** personally verified) |
 | 3 | Selection rule + dropped Ballon d'Or×2 + Apple/NVIDIA cap + exact relayer line | Done in `docs/BENCHMARK_DISPUTED_HAND.md` |
 | 4 | WHY (Bloomberg / WSJ / Protocol V2) atop README, SUBMISSION, X, video 0:00–0:15 | Done; primary citations verified via Bloomberg date + secondary reports / WSJ coverage / V2 Oct 5 announce |
@@ -19,7 +19,7 @@ Generated 2026-11-05 13:51 WAT. Local commit only; **no push / deploy / X / form
 
 ## Visa (5648379)
 
-See full `docs/VISA_CASE.md` (embedded below). Summary: Key Business Drivers **Payments Volume Q4 = 9%** and Sept 30 narrative **9%**; June-30 lag **10%** is a different period; processed transactions **10%** is a different metric. UMA YES on 9.5–10.5 + NO on sibling 8.5–9.5 implies ~10%. UMA reading does **not** clearly fit the named Q4 Payments Volume line → **neutral panel/UMA disagreement**, not a panel error. Never “UMA wrong.”
+See full `docs/VISA_CASE.md` (embedded below). Summary: Key Business Drivers **Payments Volume Q4 = 9%** and Sept 30 narrative **9%**; June-30 lag **10%** is a different period; processed transactions **10%** is a different metric. Panel/curator (AI) **NO**; UMA **YES**. OPD more-precise decimal not fetched. **Status**: under review — a more precise 9.5% figure may support UMA's YES.
 
 ## Tests
 
@@ -505,7 +505,7 @@ if __name__ == "__main__":
 
 ### docs/VISA_CASE.md
 
-# Visa 5648379 — panel vs UMA disagreement (case study)
+# Visa 5648379 — under review — a more precise 9.5% figure may support UMA's YES
 
 **Market**: Polymarket `5648379` — *Visa (V) Q4 payments volume growth (constant dollars) 9.5% to 10.5%?*  
 **Sibling**: `5648378` — same metric, band *8.5% to 9.5%* (UMA resolved **NO**).  
@@ -514,7 +514,7 @@ if __name__ == "__main__":
 **Curator (AI) read of the same bundle**: **NO** (9% is below 9.5–10.5).  
 **Baheet has not personally verified this row.**
 
-This note quotes the market’s exact rules and the named release lines. It does **not** say UMA was wrong.
+This note quotes the market’s exact rules and the named release lines. **Status**: under review — a more precise 9.5% figure may support UMA's YES.
 
 ## Exact market rules (from Polymarket description / hand bundle)
 
@@ -559,11 +559,11 @@ Quoted lines committed in `fixtures/evidence_hand/7f4d2d3172e91c520650d58e752443
 
 ## Classification
 
-UMA’s YES on 9.5–10.5 does **not** clearly follow from the Key Business Drivers **Payments Volume** line or the Sept 30 payments-volume narrative in the Oct 27, 2026 release (both **9%**). A 10% reading appears to rest on either the June-30 lag sentence or another metric (e.g. processed transactions), which the rules’ “specified metric only” language does not clearly authorize for this market.
+Panel votes and curator (AI) used the Key Business Drivers **Payments Volume 9%** / Sept 30 narrative **9%** lines → **NO** on 9.5–10.5. UMA resolved **YES**. OPD / a more precise Payments Volume decimal was not successfully fetched for this write-up (HTTP 403 / captcha).
 
-Therefore this is **not** labeled a panel error.
+**Status**: under review — a more precise 9.5% figure may support UMA's YES.
 
-**Report**: panel and UMA disagreed; evidence is in the hand bundle and this note. **Never**: “UMA was wrong.”
+Evidence: hand bundle + this note.
 
 ## Artifacts
 
@@ -595,7 +595,7 @@ From the 34 UMA-disputed Polymarket markets settled after the panel’s 2026-10-
 1. Prefer markets where an **official result page or Wikipedia** plus **two reputable reports** could be hand-extracted as plain text (not a JS shell) inside a half-day curation budget.
 2. Require `answer_present: true` on every snapshot **before** any panel call.
 3. Prefer a single named resolution metric (final score, seat winner, Key Business Drivers line) over intraday rankings or long-horizon award odds.
-4. Do **not** retune selection after seeing panel votes; the Visa disagreement was kept in the set.
+4. Do **not** retune selection after seeing panel votes; Visa 5648379 was kept in the set.
 
 ## Dropped from the earlier JS-shell curated attempt (not in hand-8)
 
@@ -622,7 +622,7 @@ From the 34 UMA-disputed Polymarket markets settled after the panel’s 2026-10-
 
 ## Disagree note
 
-**5648379 Visa Q4 payments volume growth 9.5%–10.5%**: panel unanimous **NO**; curator (AI) **NO**; UMA **YES**. Full source-line analysis: **`docs/VISA_CASE.md`**. Reported as a panel–UMA disagreement with evidence linked there — not as UMA being wrong, and not as a panel error (UMA’s reading does not clearly fit the named Q4 Payments Volume 9% line).
+**5648379 Visa Q4 payments volume growth 9.5%–10.5%**: panel unanimous **NO**; curator (AI) **NO**; UMA **YES**. Full source-line analysis: **`docs/VISA_CASE.md`**. **Status**: under review — a more precise 9.5% figure may support UMA's YES.
 
 ## Contrast
 
@@ -652,7 +652,7 @@ Offline mode first (judge-reproducible), then optional live attest.
 
 ## B-roll checklist
 - `scoreboard/index.html` (filters + answer-bearing sources column; curator (AI) label)
-- `docs/VISA_CASE.md` (neutral disagreement)
+- `docs/VISA_CASE.md` (under review — a more precise 9.5% figure may support UMA's YES)
 - `fixtures/evidence_hand/MANIFEST.json`
 - `scripts/expected_measurements.json`
 - Contract snippet: `check_request` allowlist + `reject_duplicate_json_keys` + `commit_evidence`
@@ -687,7 +687,7 @@ A 3-model AI panel runs in NEAR AI Cloud TEEs, signs every vote (EIP-191), and o
 Clear markets: auto-settled at ~$0.002, 107/107 agreed with UMA (post-cutoff sports), hardware-attested. Request params allowlisted on-chain.
 Unclear markets: escalated to humans — 0 invented answers. TOO_EARLY is first-class (Bitquery: 243/470 UMA disputes were "too early").
 
-Hand-checked answer-bearing sources on 8 disputed markets (curator: AI; Baheet has not personally verified each row): 8 settled, 7 agree UMA, 1 disagree, 0 invent. Same IDs with thin evidence: all escalated. Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
+Hand-checked answer-bearing sources on 8 disputed markets (curator: AI; Baheet has not personally verified each row): 8 settled, 7 agree UMA, 1 disagree, 0 invent. Visa 5648379: under review — a more precise 9.5% figure may support UMA's YES. Same IDs with thin evidence: all escalated. Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
 
 Repo: https://github.com/Baheet18/verdict
 
@@ -716,7 +716,7 @@ Notes for Baheet:
 |---|---|
 | **projectName** | Verdict |
 | **leadName** | Baheet Adeniji |
-| **email** | adenijibaheet@gmail.com |
+| **email** | TODO — Baheet fills email |
 | **size** | TODO — Baheet fills team size as the form requires (solo / N) |
 | **tracks** | `["privacy", "defi", "security", "open"]` |
 | **nearAddress** | TODO — Baheet fills **his own NEAR mainnet account**. Do **not** invent or guess. |
@@ -737,7 +737,7 @@ Verdict settles markets with three attested models (Qwen3.8-27B, DeepSeek-V4.1-F
 3. Binds header fields: market_id, round, rules_hash, prompt_template_hash, evidence_bundle_hash.
 4. Maps each signer → one model; rejects replayed signed texts.
 
-**Headline**: Clear markets auto-settled at ~$0.002, **107/107** agreed with UMA, hardware-attested; request-parameter steering blocked (relayer evidence choice remains — see Limits). Unclear markets escalate to humans, **0 invented answers**. TOO_EARLY is first-class (Bitquery **243/470**). Hand-curated answer-bearing disputed set: **8 settled / 7 agree UMA / 1 disagree / 0 invent**; same IDs thin evidence **8/8 escalate**. Visa disagreement documented in `docs/VISA_CASE.md` (neutral; never “UMA wrong”). Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
+**Headline**: Clear markets auto-settled at ~$0.002, **107/107** agreed with UMA, hardware-attested; request-parameter steering blocked (relayer evidence choice remains — see Limits). Unclear markets escalate to humans, **0 invented answers**. TOO_EARLY is first-class (Bitquery **243/470**). Hand-curated answer-bearing disputed set: **8 settled / 7 agree UMA / 1 disagree / 0 invent**; same IDs thin evidence **8/8 escalate**. Visa 5648379: under review — a more precise 9.5% figure may support UMA's YES (`docs/VISA_CASE.md`). Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
 
 Offline screener mode (`python scripts/offline_demo.py`) needs no API key.
 
@@ -791,4 +791,4 @@ Offline screener mode (`python scripts/offline_demo.py`) needs no API key.
 
 ## Headline (final)
 
-Clear markets: auto-settled at ~$0.002, 107/107 agreed with UMA, hardware-attested; request-parameter steering blocked on-chain. Unclear markets: escalated to humans, 0 invented answers. TOO_EARLY is first-class (Bitquery 243/470). Hand-curated answer-bearing disputed: 8 settled / 7 agree UMA / 1 disagree (Visa — docs/VISA_CASE.md) / 0 invent; thin same IDs 8/8 escalate. Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.
+Clear markets: auto-settled at ~$0.002, 107/107 agreed with UMA, hardware-attested; request-parameter steering blocked on-chain. Unclear markets: escalated to humans, 0 invented answers. TOO_EARLY is first-class (Bitquery 243/470). Hand-curated answer-bearing disputed: 8 settled / 7 agree UMA / 1 disagree (Visa 5648379: under review — a more precise 9.5% figure may support UMA's YES; docs/VISA_CASE.md) / 0 invent; thin same IDs 8/8 escalate. Settles correctly when answer-bearing evidence is committed; gathering that evidence is the relayer's job.

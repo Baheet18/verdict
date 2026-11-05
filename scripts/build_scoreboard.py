@@ -128,7 +128,7 @@ code {{ font-size: .9em; }}
   <strong>TOO_EARLY</strong> is first-class
   (Bitquery: 243 of 470 Polymarket/UMA disputes in 9 Sep–7 Oct 2026 ended “too early” —
   <a href="https://bitquery.io/investigations/who-decides-polymarket-disputes">source</a>).
-  Visa disagreement: <a href="../docs/VISA_CASE.md">docs/VISA_CASE.md</a> (neutral).</p>
+  Visa 5648379: under review — a more precise 9.5% figure may support UMA's YES (<a href="../docs/VISA_CASE.md">docs/VISA_CASE.md</a>).</p>
 </section>
 
 <section>

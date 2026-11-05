@@ -19,7 +19,7 @@ From the 34 UMA-disputed Polymarket markets settled after the panel’s 2026-10-
 1. Prefer markets where an **official result page or Wikipedia** plus **two reputable reports** could be hand-extracted as plain text (not a JS shell) inside a half-day curation budget.
 2. Require `answer_present: true` on every snapshot **before** any panel call.
 3. Prefer a single named resolution metric (final score, seat winner, Key Business Drivers line) over intraday rankings or long-horizon award odds.
-4. Do **not** retune selection after seeing panel votes; the Visa disagreement was kept in the set.
+4. Do **not** retune selection after seeing panel votes; Visa 5648379 was kept in the set.
 
 ## Dropped from the earlier JS-shell curated attempt (not in hand-8)
 
@@ -46,7 +46,7 @@ From the 34 UMA-disputed Polymarket markets settled after the panel’s 2026-10-
 
 ## Disagree note
 
-**5648379 Visa Q4 payments volume growth 9.5%–10.5%**: panel unanimous **NO**; curator (AI) **NO**; UMA **YES**. Full source-line analysis: **`docs/VISA_CASE.md`**. Reported as a panel–UMA disagreement with evidence linked there — not as UMA being wrong, and not as a panel error (UMA’s reading does not clearly fit the named Q4 Payments Volume 9% line).
+**5648379 Visa Q4 payments volume growth 9.5%–10.5%**: panel unanimous **NO**; curator (AI) **NO**; UMA **YES**. Full source-line analysis: **`docs/VISA_CASE.md`**. **Status**: under review — a more precise 9.5% figure may support UMA's YES.
 
 ## Contrast
 

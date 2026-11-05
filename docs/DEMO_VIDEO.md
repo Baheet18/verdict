@@ -17,7 +17,7 @@ Offline mode first (judge-reproducible), then optional live attest.
 
 ## B-roll checklist
 - `scoreboard/index.html` (filters + answer-bearing sources column; curator (AI) label)
-- `docs/VISA_CASE.md` (neutral disagreement)
+- `docs/VISA_CASE.md` (under review — a more precise 9.5% figure may support UMA's YES)
 - `fixtures/evidence_hand/MANIFEST.json`
 - `scripts/expected_measurements.json`
 - Contract snippet: `check_request` allowlist + `reject_duplicate_json_keys` + `commit_evidence`
