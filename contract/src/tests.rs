@@ -180,11 +180,21 @@ fn signer_model_stored() {
 fn unregistered_key_rejected() { let (mut c, id) = setup(); ctx(0, DAY, near(0)); vote(&mut c, id, &v("yes_3")); }
 
 #[test]
-fn removed_signer_does_not_change_live_market_snapshot() {
-    // remove_signer after creation must not alter an existing market's resolver binding.
+#[should_panic(expected = "signer not attested/registered")]
+fn removed_signer_rejected_on_open_market() {
+    // Revocation applies to live markets: key 0 removed after creation cannot vote.
     let (mut c, id) = setup();
     ctx(0, 0, near(0)); c.remove_signer(s(&vec_file()["signers"][0], "address"));
-    ctx(0, DAY, near(0)); unanimous_yes(&mut c, id);
+    ctx(0, DAY, near(0)); commit_for(&mut c, id, &v("yes_0")); vote(&mut c, id, &v("yes_0"));
+}
+
+#[test]
+fn removed_signer_does_not_block_other_resolvers_votes() {
+    let (mut c, id) = setup();
+    ctx(0, 0, near(0)); c.remove_signer(s(&vec_file()["signers"][0], "address"));
+    ctx(0, DAY, near(0)); commit_for(&mut c, id, &v("yes_1"));
+    vote(&mut c, id, &v("yes_1")); vote(&mut c, id, &v("yes_2"));
+    assert_eq!(c.get_market(id).unwrap().status, Status::Open);
 }
 
 #[test]
@@ -625,4 +635,51 @@ fn escaped_json_object_key_rejected() {
     // "\u0074emperature" decodes to "temperature" in serde_json; raw walk must reject
     // the backslash so an attacker cannot smuggle a second allowlisted key.
     forbidden("escaped_json_key_temperature");
+}
+
+// ---------- escalate_stale (liveness) ----------
+fn stuck_market() -> (Verdict, u32) {
+    // escalation_owner = accounts(5); key 0 revoked so the panel can never complete.
+    let (mut c, id) = setup_with_escalation(accounts(5));
+    ctx(0, 0, near(0)); c.remove_signer(s(&vec_file()["signers"][0], "address"));
+    (c, id)
+}
+
+#[test]
+#[should_panic(expected = "grace period not elapsed")]
+fn escalate_stale_fails_before_grace() {
+    let (mut c, id) = stuck_market();
+    ctx(5, DAY + STALE_GRACE_NS - 1, near(0)); c.escalate_stale(id);
+}
+
+#[test]
+#[should_panic(expected = "escalation owner only")]
+fn escalate_stale_rejects_protocol_owner_when_not_selected() {
+    let (mut c, id) = stuck_market();
+    ctx(0, DAY + STALE_GRACE_NS, near(0)); c.escalate_stale(id);
+}
+
+#[test]
+#[should_panic(expected = "escalation owner only")]
+fn escalate_stale_rejects_unrelated_account() {
+    let (mut c, id) = stuck_market();
+    ctx(3, DAY + STALE_GRACE_NS, near(0)); c.escalate_stale(id);
+}
+
+#[test]
+#[should_panic(expected = "market not open")]
+fn escalate_stale_rejects_non_open_market() {
+    let (mut c, id) = setup_with_escalation(accounts(5));
+    ctx(0, DAY, near(0)); unanimous_yes(&mut c, id);
+    ctx(5, DAY + STALE_GRACE_NS, near(0)); c.escalate_stale(id);
+}
+
+#[test]
+fn escalate_stale_by_escalation_owner_after_grace_then_resolve_dispute_finalizes() {
+    let (mut c, id) = stuck_market();
+    ctx(5, DAY + STALE_GRACE_NS, near(0)); c.escalate_stale(id);
+    assert_eq!(c.get_market(id).unwrap().status, Status::Escalated);
+    ctx(5, DAY + STALE_GRACE_NS + 1, near(0));
+    assert!(c.resolve_dispute(id, Outcome::No).is_none());
+    assert_eq!(c.get_market(id).unwrap().status, Status::Final { outcome: Outcome::No });
 }

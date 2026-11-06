@@ -6,6 +6,9 @@ use near_sdk::borsh::BorshSerialize;
 use near_sdk::store::{IterableMap, LookupMap, LookupSet, Vector};
 use near_sdk::{env, near, require, AccountId, BorshStorageKey, NearToken, PanicOnDefault, Promise};
 
+/// Grace after `deadline_ns` before a still-Open market may be escalated by its escalation owner (3 days).
+pub const STALE_GRACE_NS: u64 = 3 * 24 * 60 * 60 * 1_000_000_000;
+
 #[near(serializers=[borsh, json])]
 #[derive(Clone, Copy, PartialEq, Eq, Debug)]
 pub enum Outcome { Yes, No, TooEarly, Ambiguous }
@@ -465,6 +468,9 @@ impl Verdict {
             None if self.signers.contains_key(&signer) => env::panic_str("signer not in market resolver set"),
             None => env::panic_str("signer not attested/registered"),
         };
+        // Revocation applies to live markets: the key must still be registered globally...
+        require!(self.signers.contains_key(&signer), "signer not attested/registered (revoked)");
+        // ...but the model binding comes only from this market's creation-time snapshot.
         require!(m.resolver_models[idx] == req_model, "signer is registered for a different model");
         let text_h = env::sha256(text.as_bytes());
         require!(!self.used_signed.contains(&text_h), "signed response already used");
@@ -485,6 +491,17 @@ impl Verdict {
             };
         }
         outcome
+    }
+
+    /// Liveness: if a market is still Open `STALE_GRACE_NS` after its deadline (e.g. a resolver was
+    /// revoked or the relayer failed), its `escalation_owner` — and only it — may move it to
+    /// Escalated, after which `resolve_dispute` settles it as usual. Protocol owner gets no new power.
+    pub fn escalate_stale(&mut self, market_id: u32) {
+        let m = self.markets.get_mut(market_id).expect("no market");
+        require!(env::predecessor_account_id() == m.escalation_owner, "escalation owner only");
+        require!(m.status == Status::Open, "market not open");
+        require!(env::block_timestamp() >= m.deadline_ns.saturating_add(STALE_GRACE_NS), "grace period not elapsed");
+        m.status = Status::Escalated;
     }
 
     #[payable]
