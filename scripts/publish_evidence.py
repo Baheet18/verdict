@@ -6,10 +6,31 @@ bundle whose sha256 equals that hash. This script writes the published file and 
 the hash to commit on-chain.
 """
 from __future__ import annotations
-import argparse, hashlib, json, pathlib, shutil
+import argparse, hashlib, json, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DEST = ROOT / "fixtures" / "evidence"
+
+
+def publish_evidence_body(body: bytes, dest: pathlib.Path, meta: dict | None = None, *, ensure_ascii: bool = True) -> tuple[str, pathlib.Path]:
+    """Write ``dest/<sha256(body)>.json``.
+
+    The content address is sha256 of ``body`` (the evidence string the request hashes),
+    not sha256 of the wrapper file.
+    """
+    if not isinstance(body, bytes):
+        raise TypeError("body must be bytes")
+    digest = hashlib.sha256(body).hexdigest()
+    dest.mkdir(parents=True, exist_ok=True)
+    out = dest / f"{digest}.json"
+    if meta is None:
+        out.write_bytes(body)
+        return digest, out
+    pub = dict(meta)
+    pub["evidence_bundle_hash"] = digest
+    out.write_text(json.dumps(pub, indent=1, ensure_ascii=ensure_ascii))
+    return digest, out
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -28,15 +49,7 @@ def main():
             body, meta = raw, None
     except Exception:
         body, meta = raw, None
-    h = hashlib.sha256(body).hexdigest()
-    DEST.mkdir(parents=True, exist_ok=True)
-    out = DEST / f"{h}.json"
-    if meta is not None:
-        pub = dict(meta)
-        pub["evidence_bundle_hash"] = h
-        out.write_text(json.dumps(pub, indent=1))
-    else:
-        out.write_bytes(body)
+    h, out = publish_evidence_body(body, DEST, meta)
     print(h)
     print(f"published {out}")
 

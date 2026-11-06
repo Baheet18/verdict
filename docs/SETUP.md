@@ -22,6 +22,13 @@ python scripts/offline_demo.py
 
 Open `scoreboard/index.html` in a browser. No `NEARAI_API_KEY` needed.
 
+## Relayer API (mock, no NEAR and no API key)
+```bash
+python scripts/test_relayer_api.py
+python scripts/api.py --data-dir out/relayer-api --port 8787
+```
+The HTTP process is a mock chain and a scripted panel. It does not deploy a contract and it does not call NEAR AI. See `docs/INTEGRATION.md`.
+
 ## Live mode (optional)
 ```bash
 export NEARAI_API_KEY=...   # from cloud.near.ai; never commit
