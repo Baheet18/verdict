@@ -19,6 +19,11 @@ class ConfigError(RuntimeError):
     pass
 
 
+TOO_EARLY_RETRY_S_DEFAULT = 6 * 60 * 60
+TOO_EARLY_RETRY_S_MIN = 60 * 60
+MAX_ROUNDS_DEFAULT = 5
+
+
 @dataclass
 class Config:
     mode: str = "dry-run"
@@ -36,7 +41,9 @@ class Config:
     market_ids: list[int] | None = None
     poll_interval_s: int = 60
     max_markets: int = 500
-    max_rounds_per_pass: int = 2
+    max_rounds_per_pass: int = 1
+    max_rounds: int = MAX_ROUNDS_DEFAULT
+    too_early_retry_s: int = TOO_EARLY_RETRY_S_DEFAULT
     fixture_dir: str = ""
     git_name: str = "verdict-relayer"
     git_email: str = "verdict-relayer@localhost"
@@ -85,7 +92,9 @@ def load_config(path: str | None = None) -> Config:
         market_ids=_market_ids(os.environ.get("VERDICT_MARKET_IDS", data.get("market_ids"))),
         poll_interval_s=int(os.environ.get("VERDICT_POLL_INTERVAL_S", data.get("poll_interval_s", 60))),
         max_markets=int(os.environ.get("VERDICT_MAX_MARKETS", data.get("max_markets", 500))),
-        max_rounds_per_pass=int(os.environ.get("VERDICT_MAX_ROUNDS_PER_PASS", data.get("max_rounds_per_pass", 2))),
+        max_rounds_per_pass=int(os.environ.get("VERDICT_MAX_ROUNDS_PER_PASS", data.get("max_rounds_per_pass", 1))),
+        max_rounds=int(os.environ.get("VERDICT_MAX_ROUNDS", data.get("max_rounds", MAX_ROUNDS_DEFAULT))),
+        too_early_retry_s=int(os.environ.get("VERDICT_TOO_EARLY_RETRY_S", data.get("too_early_retry_s", TOO_EARLY_RETRY_S_DEFAULT))),
         fixture_dir=os.environ.get("VERDICT_FIXTURE_DIR", data.get("fixture_dir", str(ROOT / "fixtures" / "relayer_cache"))),
         git_name=os.environ.get("VERDICT_GIT_USER_NAME", data.get("git_name", "verdict-relayer")),
         git_email=os.environ.get("VERDICT_GIT_USER_EMAIL", data.get("git_email", "verdict-relayer@localhost")),
@@ -96,6 +105,10 @@ def load_config(path: str | None = None) -> Config:
         cfg.poll_interval_s = 5
     if cfg.max_rounds_per_pass < 1:
         cfg.max_rounds_per_pass = 1
+    if cfg.max_rounds < 1:
+        cfg.max_rounds = 1
+    if cfg.too_early_retry_s < TOO_EARLY_RETRY_S_MIN:
+        cfg.too_early_retry_s = TOO_EARLY_RETRY_S_MIN
     cfg.verify_http = cfg.mode == "live" and cfg.evidence_push
     return cfg
 

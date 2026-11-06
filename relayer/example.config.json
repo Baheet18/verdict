@@ -8,5 +8,8 @@
   "evidence_remote": "origin",
   "evidence_push": false,
   "poll_interval_s": 60,
-  "max_markets": 500
+  "max_markets": 500,
+  "max_rounds_per_pass": 1,
+  "max_rounds": 5,
+  "too_early_retry_s": 21600
 }

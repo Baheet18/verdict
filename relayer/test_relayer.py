@@ -190,7 +190,7 @@ def env_for(chain: ApplyingChain, publish, panel, fetch, dry_run=False) -> Relay
         fetch=fetch,
         publish=None if publish is None else publish.publish,
         panel=panel,
-        max_rounds=2,
+        max_rounds=1,
     )
 
 
@@ -254,6 +254,15 @@ class DecideTests(unittest.TestCase):
             cfg = load_config(str(path))
             self.assertEqual(cfg.mode, "dry-run")
             self.assertEqual(cfg.contract, "verdict-v2-baheet.testnet")
+            self.assertEqual(cfg.max_rounds_per_pass, 1)
+            self.assertEqual(cfg.max_rounds, 5)
+            self.assertEqual(cfg.too_early_retry_s, 6 * 60 * 60)
+            path.write_text('{"too_early_retry_s": 60, "max_rounds_per_pass": 1}', encoding="utf-8")
+            floored = load_config(str(path))
+            self.assertEqual(floored.too_early_retry_s, 60 * 60)
+            path.write_text('{"too_early_retry_s": 3600}', encoding="utf-8")
+            demo = load_config(str(path))
+            self.assertEqual(demo.too_early_retry_s, 3600)
 
 
 class EvidenceTests(unittest.TestCase):
@@ -391,12 +400,12 @@ class PassTests(unittest.TestCase):
         publisher = GitPublisher(work, remote="origin", push=True, verify_http=False)
         early = ApplyingChain({0: base_market()})
         early_reports = run_pass(env_for(early, publisher, ScriptedPanel({0: "TOO_EARLY", 1: "YES"}), sports_fetch))
-        self.assertEqual(early_reports[0]["level"], "ok")
+        self.assertEqual(early_reports[0]["level"], "info")
         self.assertNotEqual(early_reports[0]["level"], "error")
         self.assertTrue(any("TOO_EARLY" in note for note in early_reports[0]["notes"]))
-        self.assertEqual(early.get(0)["status"]["Proposed"]["outcome"], "Yes")
+        self.assertEqual(early.get(0)["status"], "Open")
         self.assertEqual(early.get(0)["round"], 1)
-        self.assertGreaterEqual(sum(1 for method, _ in early.sent if method == "commit_evidence"), 2)
+        self.assertEqual(sum(1 for method, _ in early.sent if method == "commit_evidence"), 1)
 
         split = ApplyingChain({0: base_market()})
         panel = ScriptedPanel({0: {
@@ -414,6 +423,50 @@ class PassTests(unittest.TestCase):
         self.assertEqual(amb_reports[0]["level"], "stop")
         self.assertEqual(ambiguous.get(0)["status"], "Escalated")
         self.assertNotIn("resolve_dispute", [method for method, _ in ambiguous.sent])
+
+    def test_too_early_second_pass_does_not_recommit(self):
+        work = init_repo()
+        publisher = GitPublisher(work, remote="origin", push=True, verify_http=False)
+        publishes = []
+
+        class RecordingPublisher:
+            def publish(self, relpath, content):
+                publishes.append(relpath)
+                return publisher.publish(relpath, content)
+
+        model_calls = {"n": 0}
+        inner = ScriptedPanel({0: "TOO_EARLY", 1: "YES"})
+
+        class CountingPanel:
+            def sign(self, *args, **kwargs):
+                model_calls["n"] += 1
+                return inner.sign(*args, **kwargs)
+
+        chain = ApplyingChain({0: base_market()})
+        env = env_for(chain, RecordingPublisher(), CountingPanel(), sports_fetch)
+        first = run_pass(env)
+        self.assertEqual(first[0]["level"], "info")
+        self.assertEqual(chain.get(0)["status"], "Open")
+        self.assertEqual(chain.get(0)["round"], 1)
+        self.assertEqual(sum(1 for method, _ in chain.sent if method == "commit_evidence"), 1)
+        self.assertGreater(model_calls["n"], 0)
+        self.assertEqual(len(publishes), 1)
+        sent_after_first = len(chain.sent)
+        models_after_first = model_calls["n"]
+        second = run_pass(env)
+        self.assertEqual(len(chain.sent), sent_after_first)
+        self.assertEqual(model_calls["n"], models_after_first)
+        self.assertEqual(len(publishes), 1)
+        self.assertEqual(second[0]["action"], "wait")
+        self.assertFalse(any(c.get("method") == "commit_evidence" for c in second[0]["calls"]))
+        self.assertFalse(any(c.get("method") == "submit_verdict" for c in second[0]["calls"]))
+
+    def test_round_cap_leaves_the_market_for_escalate_stale(self):
+        chain = ApplyingChain({0: base_market(round=5)})
+        report = run_pass(env_for(chain, None, ScriptedPanel({0: "YES"}), sports_fetch))[0]
+        self.assertEqual(report["action"], "stop")
+        self.assertIn("escalate_stale", report["detail"])
+        self.assertEqual(chain.sent, [])
 
     def test_a_failed_market_does_not_block_the_next(self):
         class Boom:

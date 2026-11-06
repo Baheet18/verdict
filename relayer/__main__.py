@@ -13,7 +13,7 @@ from relayer.chain import NearCli, RpcClient, dump_args, urllib_request
 from relayer.config import ConfigError, load_config, materialize_credentials
 from relayer.panel import PanelClient
 from relayer.publish import GitPublisher
-from relayer.service import RelayEnv, load_markets_file, run_pass
+from relayer.service import RelayEnv, TooEarlyWaits, load_markets_file, run_pass
 
 
 def _refuse_network(url: str):
@@ -58,7 +58,7 @@ def _emit(report: dict) -> None:
     print(json.dumps(report, ensure_ascii=False, sort_keys=True), flush=True)
 
 
-def _build_env(cfg, *, markets_file: str | None, now_ns: int | None, creds_path: str | None):
+def _build_env(cfg, *, markets_file: str | None, now_ns: int | None, creds_path: str | None, waits: TooEarlyWaits):
     fixture_paths = []
     fixture_dir = Path(cfg.fixture_dir)
     if fixture_dir.exists():
@@ -94,6 +94,9 @@ def _build_env(cfg, *, markets_file: str | None, now_ns: int | None, creds_path:
             publish=None,
             panel=panel,
             max_rounds=cfg.max_rounds_per_pass,
+            round_cap=cfg.max_rounds,
+            too_early_retry_s=cfg.too_early_retry_s,
+            too_early=waits,
         )
 
     rpc = RpcClient(cfg.rpc_url, cfg.contract)
@@ -113,6 +116,9 @@ def _build_env(cfg, *, markets_file: str | None, now_ns: int | None, creds_path:
             publish=None,
             panel=panel,
             max_rounds=cfg.max_rounds_per_pass,
+            round_cap=cfg.max_rounds,
+            too_early_retry_s=cfg.too_early_retry_s,
+            too_early=waits,
         )
 
     if not cfg.signer_account:
@@ -150,6 +156,9 @@ def _build_env(cfg, *, markets_file: str | None, now_ns: int | None, creds_path:
         publish=publisher.publish,
         panel=panel,
         max_rounds=cfg.max_rounds_per_pass,
+        round_cap=cfg.max_rounds,
+        too_early_retry_s=cfg.too_early_retry_s,
+        too_early=waits,
     )
 
 
@@ -199,9 +208,10 @@ def main(argv: list[str] | None = None) -> int:
                 print(str(exc), file=sys.stderr)
                 return 2
             creds_path = str(creds)
+        waits = TooEarlyWaits(ROOT / "out" / "relayer" / "too_early.json")
         while True:
             try:
-                env = _build_env(cfg, markets_file=args.markets_file, now_ns=args.now_ns, creds_path=creds_path)
+                env = _build_env(cfg, markets_file=args.markets_file, now_ns=args.now_ns, creds_path=creds_path, waits=waits)
                 reports = run_pass(env)
             except (ConfigError, RuntimeError) as exc:
                 print(str(exc), file=sys.stderr)

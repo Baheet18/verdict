@@ -32,7 +32,7 @@ Then read `get_market`. Status moves through `Open`, `Proposed`, and `Final`, or
 | `Proposed`, window closed, still not disputed | `finalize` |
 | `Final` | Skip |
 | `Disputed` or `Escalated` | Stop and report `escalation_owner`. Do not call `resolve_dispute` |
-| Unanimous `TOO_EARLY` | The contract clears the votes, increments `round`, and stays `Open`. That is the next round, not a failed job. The relayer commits again, up to `VERDICT_MAX_ROUNDS_PER_PASS` (default 2) per pass |
+| Unanimous `TOO_EARLY` | The contract clears the votes, increments `round`, and stays `Open`. That is the next round, not a failed job. The relayer does not commit again until `too_early_retry_s` has passed (default 6 hours, minimum 1 hour). One pass commits at most `max_rounds_per_pass` rounds (default 1). At round `max_rounds` (default 5) it stops and leaves the market for `escalate_stale` |
 | Split vote, or unanimous `AMBIGUOUS` | The contract sets `Escalated`. The relayer stops |
 
 Sports statistics are committed only after two successful snapshots from different hosts. A single ESPN line is not enough. The pass reports `wait` and tries again later.
@@ -94,6 +94,9 @@ Live. Set the names below in the shell or in a gitignored file. Do not commit th
 | `VERDICT_EVIDENCE_WORKDIR` | no | git clone used for evidence commits; default is this repo. A separate clone keeps evidence refs away from day-to-day branches |
 | `VERDICT_MARKET_IDS` | no | comma-separated ids. Empty means scan from 0 until `get_market` returns null |
 | `VERDICT_POLL_INTERVAL_S` | no | default 60, minimum 5 |
+| `VERDICT_TOO_EARLY_RETRY_S` | no | `too_early_retry_s`: seconds to wait after unanimous TOO_EARLY before the next `commit_evidence`. Default 21600 (6 hours). Values below 3600 are raised to 1 hour so a demo can use 1 hour and cannot go lower |
+| `VERDICT_MAX_ROUNDS_PER_PASS` | no | `max_rounds_per_pass`: evidence rounds committed in one pass. Default 1 |
+| `VERDICT_MAX_ROUNDS` | no | `max_rounds`: total round cap. Default 5. At that round the relayer stops and logs that the market is left for `escalate_stale` |
 | `VERDICT_FIXTURE_DIR` | no | default `fixtures/relayer_cache` |
 | `VERDICT_NEAR_BIN` | no | default `near` (near-cli-rs) |
 | `VERDICT_GIT_USER_NAME`, `VERDICT_GIT_USER_EMAIL` | no | author on evidence commits; default `verdict-relayer` / `verdict-relayer@localhost` |

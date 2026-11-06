@@ -99,7 +99,7 @@ The app creates the market and reads the result. The relayer runs the steps that
 
 1. Call `create_market` on `verdict-v2-baheet.testnet` with the question, rules, source URLs, `prompt_template_hash` from `scripts/verdict_request.py`, the registered resolver addresses, a future `deadline_ns`, that market's `dispute_window_ns`, `dispute_bond`, and the app's `escalation_owner`.
 2. Read `get_market`. Deposits and claims stay in the app. A challenge during the window is `dispute` with the bond attached.
-3. The relayer, after one `register_relayer` by the protocol owner, commits evidence, collects the three panel votes, and calls `finalize` when the dispute window closes with no dispute. `Disputed` and `Escalated` stay with that market's `escalation_owner` (`resolve_dispute`). A unanimous `TOO_EARLY` advances the round and stays `Open`.
+3. The relayer, after one `register_relayer` by the protocol owner, commits evidence, collects the three panel votes, and calls `finalize` when the dispute window closes with no dispute. `Disputed` and `Escalated` stay with that market's `escalation_owner` (`resolve_dispute`). A unanimous `TOO_EARLY` advances the round and stays `Open`. The relayer waits `too_early_retry_s` (default 6 hours, minimum 1 hour) before committing the next round, and after 5 rounds it leaves the market for `escalate_stale`.
 
 Dry-run (no key, no NEAR AI, no transaction):
 

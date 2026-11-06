@@ -1,9 +1,11 @@
 """One pass over markets: commit evidence, collect votes, finalize when the window is shut.
 
 Markets are handled independently. A failure on one id does not stop the others.
-Unanimous TOO_EARLY is reported and the next round is attempted, up to a cap.
-Split or unanimous AMBIGUOUS becomes Escalated on chain; this process stops and
-does not call resolve_dispute.
+Unanimous TOO_EARLY is reported. The next evidence commit waits ``too_early_retry_s``
+(default 6 hours, minimum 1 hour). One pass commits at most ``max_rounds_per_pass``
+rounds (default 1). After ``max_rounds`` (default 5) the market is left for
+``escalate_stale``. Split or unanimous AMBIGUOUS becomes Escalated on chain; this
+process stops and does not call resolve_dispute.
 """
 from __future__ import annotations
 
@@ -184,6 +186,26 @@ def _skeleton(market_id: int, market: dict | None, env, decision=None) -> dict:
     return report
 
 
+def _blocked_new_round(env, market_id: int, market: dict, now_ns: int) -> dict | None:
+    """Refuse a fresh evidence commit while a TOO_EARLY wait is open, or once the round cap is hit."""
+    rnd = int(market.get("round") or 0)
+    if rnd >= env.round_cap:
+        return {
+            "level": "stop",
+            "action": "stop",
+            "detail": f"round {rnd} has reached the cap of {env.round_cap}; left for escalate_stale",
+        }
+    remaining = env.too_early.waiting(market_id, rnd, now_ns, env.too_early_retry_s)
+    if remaining is None or market.get("round_evidence_hash"):
+        return None
+    seconds = max(1, remaining // 1_000_000_000)
+    return {
+        "level": "wait",
+        "action": "wait",
+        "detail": f"TOO_EARLY; next evidence commit waits {seconds}s",
+    }
+
+
 def run_market(env, market_id: int, now_ns: int) -> dict:
     market = env.get_market(market_id)
     if market is None:
@@ -200,6 +222,13 @@ def run_market(env, market_id: int, now_ns: int) -> dict:
         report["calls"] = [_send(env, "finalize", {"market_id": market_id})]
         report["level"] = "ok"
         return report
+    if decision.action == "commit_and_vote":
+        blocked = _blocked_new_round(env, market_id, market, now_ns)
+        if blocked:
+            report["level"] = blocked["level"]
+            report["action"] = blocked["action"]
+            report["detail"] = blocked["detail"]
+            return report
     if env.dry_run:
         report["calls"] = _dry_calls(market_id, market, decision)
         report["level"] = "ok"
@@ -253,18 +282,21 @@ def run_market(env, market_id: int, now_ns: int) -> dict:
         round_out = after.get("round")
         advanced = status_out == "Open" and int(after.get("round") or 0) > before_round and not after.get("round_evidence_hash")
         if advanced:
+            new_round = int(after.get("round") or 0)
+            env.too_early.note(market_id, new_round, now_ns)
             notes.append("TOO_EARLY unanimous; next round")
             level = "info"
-            detail = "TOO_EARLY unanimous; the contract opened the next round. Not an error."
-            continue
+            detail = (
+                "TOO_EARLY unanimous; the contract opened the next round. Not an error. "
+                f"Next evidence commit waits {env.too_early_retry_s}s."
+            )
+            break
         if status_out == "Escalated":
             level = "stop"
             detail = f"Escalated after the panel; left for escalation_owner {after.get('escalation_owner')}. resolve_dispute is not called."
         elif status_out == "Proposed":
             level = "ok"
             detail = "panel agreed; Proposed until the dispute window closes"
-            if notes:
-                detail = "TOO_EARLY on an earlier round (not an error); a later round is Proposed"
         elif status_out == "Final":
             level = "ok"
             detail = "Final"
@@ -304,6 +336,37 @@ def run_pass(env) -> list[dict]:
     return reports
 
 
+class TooEarlyWaits:
+    """Per-market clock for the pause after unanimous TOO_EARLY. Optional JSON file under out/."""
+
+    def __init__(self, path: Path | None = None):
+        self.path = Path(path) if path else None
+        self._rows: dict[str, dict] = {}
+        if self.path and self.path.is_file():
+            loaded = json.loads(self.path.read_text(encoding="utf-8"))
+            if isinstance(loaded, dict):
+                self._rows = loaded
+
+    def note(self, market_id: int, round_n: int, at_ns: int) -> None:
+        self._rows[str(int(market_id))] = {"round": int(round_n), "at_ns": int(at_ns)}
+        self._save()
+
+    def waiting(self, market_id: int, round_n: int, now_ns: int, retry_s: int) -> int | None:
+        row = self._rows.get(str(int(market_id)))
+        if not row or int(row.get("round", -1)) != int(round_n):
+            return None
+        ready_at = int(row["at_ns"]) + int(retry_s) * 1_000_000_000
+        if int(now_ns) >= ready_at:
+            return None
+        return ready_at - int(now_ns)
+
+    def _save(self) -> None:
+        if self.path is None:
+            return
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.write_text(json.dumps(self._rows, sort_keys=True), encoding="utf-8")
+
+
 class Memory:
     def __init__(self):
         self._items: dict[int, tuple[str, str]] = {}
@@ -319,7 +382,7 @@ class Memory:
 
 
 class RelayEnv(Memory):
-    def __init__(self, *, dry_run: bool, now_ns, get_market, market_ids, send, fetch, publish, panel, max_rounds: int = 2):
+    def __init__(self, *, dry_run: bool, now_ns, get_market, market_ids, send, fetch, publish, panel, max_rounds: int = 1, round_cap: int = 5, too_early_retry_s: int = 6 * 60 * 60, too_early: TooEarlyWaits | None = None):
         super().__init__()
         self.dry_run = dry_run
         self._now_ns = now_ns
@@ -330,6 +393,9 @@ class RelayEnv(Memory):
         self.publish = publish
         self.panel = panel
         self.max_rounds = max_rounds
+        self.round_cap = round_cap
+        self.too_early_retry_s = too_early_retry_s
+        self.too_early = too_early if too_early is not None else TooEarlyWaits()
 
     def now_ns(self) -> int:
         value = self._now_ns() if callable(self._now_ns) else self._now_ns
