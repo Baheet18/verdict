@@ -1,5 +1,7 @@
 # Minimal NEAR testnet deploy (manual wallet signing)
 
+**Live v2 account:** `verdict-v2-baheet.testnet`. Market 0 (Saints vs. Giants) is already Final YES; the hand-run finalize is https://explorer.testnet.near.org/transactions/C4ZQabkbLzSVzDCJFsxUEWEn18gVLmi4h2ANKGBXUsXx. For markets after that, an integrator calls `create_market` and reads `get_market`. The relayer in `docs/RELAYER.md` runs `commit_evidence`, `submit_verdict`, and `finalize`. The steps below remain the manual path.
+
 This repo has **no NEAR private keys or seed phrases**. Deploy requires YOU to sign
 with your own testnet wallet. Do not paste a private key into chat or into any
 script in this repo.

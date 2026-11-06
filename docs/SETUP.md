@@ -37,6 +37,13 @@ cd contract && cargo test
 cargo near build non-reproducible-wasm   # → target/near/verdict.wasm
 ```
 
+## Relayer
+```bash
+python scripts/relayer.py --once
+python -m unittest relayer.test_relayer
+```
+Dry-run needs no API key and sends no transaction. Live env vars are listed in `docs/RELAYER.md` (names only; do not commit values).
+
 ## What is tracked vs ignored
 - Tracked fixtures: `contract/testdata/`, `fixtures/scoreboard_cache/` (sanitized), `fixtures/evidence/` (content-addressed bundles), `scoreboard/index.html`
 - Ignored: `.env`, `*.jsonl`, `out/` (live logs, large raw responses)

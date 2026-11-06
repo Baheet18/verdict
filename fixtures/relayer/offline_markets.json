@@ -1,0 +1,190 @@
+{
+  "now_ns": 10000,
+  "note": "Synthetic clock and markets for an offline dry-run. These are not chain records and contain no signatures.",
+  "markets": [
+    {
+      "id": 0,
+      "market": {
+        "question": "Saints vs. Giants",
+        "rules": "demo",
+        "rules_hash": "00",
+        "prompt_template_hash": "00",
+        "sources": ["https://example.com/a", "https://example.net/b"],
+        "resolver_models": ["Qwen/Qwen3.8-27B", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "z-ai/glm-5.3-flash"],
+        "threshold": 3,
+        "deadline_ns": 20000,
+        "dispute_window_ns": 1000,
+        "escalation_owner": "app.testnet",
+        "round": 0,
+        "round_evidence_hash": null,
+        "round_evidence_uri": null,
+        "votes": [],
+        "status": "Open"
+      }
+    },
+    {
+      "id": 1,
+      "market": {
+        "question": "Saints vs. Giants",
+        "rules": "demo",
+        "rules_hash": "00",
+        "prompt_template_hash": "00",
+        "sources": ["https://example.com/a", "https://example.net/b"],
+        "resolver_models": ["Qwen/Qwen3.8-27B", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "z-ai/glm-5.3-flash"],
+        "threshold": 3,
+        "deadline_ns": 5000,
+        "dispute_window_ns": 1000,
+        "escalation_owner": "app.testnet",
+        "round": 0,
+        "round_evidence_hash": null,
+        "round_evidence_uri": null,
+        "votes": [],
+        "status": "Open"
+      }
+    },
+    {
+      "id": 2,
+      "market": {
+        "question": "Already proposed",
+        "rules": "demo",
+        "rules_hash": "00",
+        "prompt_template_hash": "00",
+        "sources": ["https://example.com/a"],
+        "resolver_models": ["Qwen/Qwen3.8-27B", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "z-ai/glm-5.3-flash"],
+        "threshold": 3,
+        "deadline_ns": 1000,
+        "dispute_window_ns": 2000,
+        "escalation_owner": "app.testnet",
+        "round": 0,
+        "round_evidence_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "round_evidence_uri": "https://example.test/open-window.json",
+        "votes": [],
+        "status": {"Proposed": {"outcome": "Yes", "at_ns": 9000}}
+      }
+    },
+    {
+      "id": 3,
+      "market": {
+        "question": "Window closed",
+        "rules": "demo",
+        "rules_hash": "00",
+        "prompt_template_hash": "00",
+        "sources": ["https://example.com/a"],
+        "resolver_models": ["Qwen/Qwen3.8-27B", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "z-ai/glm-5.3-flash"],
+        "threshold": 3,
+        "deadline_ns": 1000,
+        "dispute_window_ns": 2000,
+        "escalation_owner": "app.testnet",
+        "round": 0,
+        "round_evidence_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "round_evidence_uri": "https://example.test/closed-window.json",
+        "votes": [],
+        "status": {"Proposed": {"outcome": "Yes", "at_ns": 1000}}
+      }
+    },
+    {
+      "id": 4,
+      "market": {
+        "question": "Done",
+        "rules": "demo",
+        "rules_hash": "00",
+        "prompt_template_hash": "00",
+        "sources": ["https://example.com/a"],
+        "resolver_models": ["Qwen/Qwen3.8-27B", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "z-ai/glm-5.3-flash"],
+        "threshold": 3,
+        "deadline_ns": 1000,
+        "dispute_window_ns": 1000,
+        "escalation_owner": "app.testnet",
+        "round": 0,
+        "round_evidence_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "round_evidence_uri": "https://example.test/final.json",
+        "votes": [],
+        "status": {"Final": {"outcome": "Yes"}}
+      }
+    },
+    {
+      "id": 5,
+      "market": {
+        "question": "Disputed",
+        "rules": "demo",
+        "rules_hash": "00",
+        "prompt_template_hash": "00",
+        "sources": ["https://example.com/a"],
+        "resolver_models": ["Qwen/Qwen3.8-27B", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "z-ai/glm-5.3-flash"],
+        "threshold": 3,
+        "deadline_ns": 1000,
+        "dispute_window_ns": 1000,
+        "escalation_owner": "app.testnet",
+        "round": 0,
+        "round_evidence_hash": null,
+        "round_evidence_uri": null,
+        "votes": [],
+        "status": {"Disputed": {"proposed": "Yes", "disputer": "alice.testnet", "bond": "1"}}
+      }
+    },
+    {
+      "id": 6,
+      "market": {
+        "question": "Escalated",
+        "rules": "demo",
+        "rules_hash": "00",
+        "prompt_template_hash": "00",
+        "sources": ["https://example.com/a"],
+        "resolver_models": ["Qwen/Qwen3.8-27B", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "z-ai/glm-5.3-flash"],
+        "threshold": 3,
+        "deadline_ns": 1000,
+        "dispute_window_ns": 1000,
+        "escalation_owner": "app.testnet",
+        "round": 0,
+        "round_evidence_hash": null,
+        "round_evidence_uri": null,
+        "votes": [],
+        "status": "Escalated"
+      }
+    },
+    {
+      "id": 7,
+      "market": {
+        "question": "Needs two votes",
+        "rules": "demo",
+        "rules_hash": "00",
+        "prompt_template_hash": "00",
+        "sources": ["https://example.com/a"],
+        "resolver_models": ["Qwen/Qwen3.8-27B", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "z-ai/glm-5.3-flash"],
+        "threshold": 3,
+        "deadline_ns": 5000,
+        "dispute_window_ns": 1000,
+        "escalation_owner": "app.testnet",
+        "round": 0,
+        "round_evidence_hash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "round_evidence_uri": "https://example.test/partial.json",
+        "votes": [{"model": "Qwen/Qwen3.8-27B", "outcome": "Yes"}],
+        "status": "Open"
+      }
+    },
+    {
+      "id": 8,
+      "market": {
+        "question": "Votes already in",
+        "rules": "demo",
+        "rules_hash": "00",
+        "prompt_template_hash": "00",
+        "sources": ["https://example.com/a"],
+        "resolver_models": ["Qwen/Qwen3.8-27B", "deepseek-ai/DeepSeek-V4.1-Flash-1017", "z-ai/glm-5.3-flash"],
+        "threshold": 3,
+        "deadline_ns": 5000,
+        "dispute_window_ns": 1000,
+        "escalation_owner": "app.testnet",
+        "round": 0,
+        "round_evidence_hash": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "round_evidence_uri": "https://example.test/voted.json",
+        "votes": [
+          {"model": "Qwen/Qwen3.8-27B", "outcome": "Yes"},
+          {"model": "deepseek-ai/DeepSeek-V4.1-Flash-1017", "outcome": "Yes"},
+          {"model": "z-ai/glm-5.3-flash", "outcome": "Yes"}
+        ],
+        "status": "Open"
+      }
+    }
+  ]
+}
