@@ -582,6 +582,11 @@ class ApiTests(unittest.TestCase):
         self.assertIn("does not predict disputes", joined)
         self.assertIn("not authoritative", joined)
         self.assertIn(MOCK_VOTE_LABEL, joined)
+        self.assertIn("rebinding", joined)
+        integration = (ROOT / "docs" / "INTEGRATION.md").read_text()
+        self.assertIn("DNS-rebinding gap", integration)
+        self.assertIn("pinned to the IP that was checked", integration)
+        self.assertIn("acceptable only while the server is bound to `127.0.0.1`", integration)
         listed_resolvers = self.req("GET", "/v1/resolvers")[1]
         self.assertNotIn("resolvers", listed_resolvers)
         for item in listed_resolvers["mock_resolvers"]:

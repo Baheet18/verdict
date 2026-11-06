@@ -14,7 +14,7 @@ pip install -r requirements.txt
 python scripts/api.py --data-dir out/relayer-api --port 8787
 ```
 
-Bind is `127.0.0.1` by default. There is no authentication. Do not expose this process on a public network.
+Bind is `127.0.0.1` by default. There is no authentication. Do not expose this process on a public network. `--fetch` has a DNS-rebinding gap, described under Limitations, that is acceptable only while the process stays on this bind.
 
 Offline check, with no NEAR account and no NEAR AI key:
 
@@ -154,7 +154,7 @@ Signing a real `commit_evidence` or `submit_verdict` on NEAR still needs your ow
 - The mock chain is not authoritative. `contract/src/lib.rs` is. Restarting the process drops markets and generates new `mock_signer` values. Nothing here talks to `baheet.testnet`. `dispute` and `resolve_dispute` are absent, so this API cannot show a contract dispute.
 - The scripted panel does not run the models. If you omit `mock_script`, every model returns `AMBIGUOUS` and the market escalates. That default is intentional: the mock does not invent `YES` or `NO`.
 - Every vote object is labeled `MOCK: not a real model signature`. `mock_signer` is a process-local key. It is not a Qwen, DeepSeek, or GLM TEE signing key. Hardware attestation stays an owner step on the real contract (`scripts/hw_verify.py`, then `register_signer`) and is not performed here.
-- `--fetch` resolves each source and refuses private, loopback, link-local, and metadata addresses, including a redirect onto one of those. It follows at most two redirects. The server has no authentication; leave it on `127.0.0.1`.
+- `--fetch` resolves each source and refuses private, loopback, link-local, and metadata addresses, including a redirect onto one of those. It follows at most two redirects. After that check, the HTTP client resolves the name again and connects to whatever address it gets. That is a DNS-rebinding gap: a name can look public during the check and private or metadata on the later lookup. The connection is not pinned to the IP that was checked. This gap is acceptable only while the server is bound to `127.0.0.1`. Before any public bind, the connection must be pinned to the IP that was checked (connect to that resolved address, not a later re-resolved name). Do not move the default bind off `127.0.0.1` until that pin exists. The server also has no authentication.
 - Evidence is gathered outside the TEE. The relayer chooses the snapshots. The contract rejects steered request parameters. That does not make the relayer's evidence choice trustless.
 - `evidence_uri` is a pending placeholder until a person pushes the file and chooses a commit SHA with `scripts/evidence_uri.py`. This service will not pick one. `GET /v1/evidence/{hash}` serves the bytes for this process.
 - The owner-only evidence replacement on the contract is not exposed. After the first vote of a round the commitment is frozen.

@@ -45,7 +45,7 @@ LIMITATIONS = [
     "The relayer chooses the evidence snapshots. Rejecting request-parameter steering does not make that choice trustless.",
     "A split panel or a unanimous AMBIGUOUS escalates. This API does not invent an outcome and it does not predict disputes.",
     "Restarting the process drops markets, mock signers, and the in-memory clock. Files under the data dir are not a NEAR commitment.",
-    "Source fetches reject private, loopback, link-local, and metadata addresses. The server has no authentication; keep it on 127.0.0.1.",
+    "Source fetches reject private, loopback, link-local, and metadata addresses, then DNS is resolved again. That rebinding gap is acceptable only on 127.0.0.1; a public bind must connect to the checked IP. The server has no authentication.",
 ]
 
 # Follow at most this many redirects, and re-check the target of each one.
@@ -116,6 +116,9 @@ def _reject_nonpublic(url: str, resolver) -> None:
     Private, loopback, link-local, and cloud metadata addresses are refused.
     A name that resolves to any blocked address is refused, even if it also
     has a public address. This is a pre-fetch check, not a kernel egress filter.
+    The HTTP client resolves the name again when it connects, so this does not
+    pin the socket to the address that was checked. See docs/INTEGRATION.md.
+    That DNS-rebinding gap is acceptable only while the server is on 127.0.0.1.
     """
     if not isinstance(url, str) or not (url.startswith("https://") or url.startswith("http://")):
         raise ValueError("refusing non-http source fetch")
