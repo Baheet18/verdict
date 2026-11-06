@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import pathlib
+import socket
 import sys
 import tempfile
 import threading
@@ -15,11 +16,11 @@ import urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from api import LIMITATIONS, http_fetch, serve
+from api import LIMITATIONS, MAX_REDIRECTS, http_fetch, serve
 from evidence_uri import github_raw_permalink
 from mock_chain import ChainError, MockChain
 from panel import PANEL_MODELS, LivePanel, MockPanel, PanelError, signed_text
-from relayer import ONE_NEAR, RelayerError, build_mock, run_demo
+from relayer import MOCK_VOTE_LABEL, ONE_NEAR, RelayerError, build_mock, run_demo
 from verdict_request import PROMPT_TEMPLATE_HASH, build_request, check_request, evidence_bundle, sha
 
 DAY = 86_400 * 1_000_000_000
@@ -348,10 +349,17 @@ class RelayerTests(unittest.TestCase):
         self.assertNotIn("/master/", view["evidence_uri"])
         self.assertNotIn("/main/", view["evidence_uri"])
         self.assertNotIn("Hardware + host stack verified", json.dumps(view))
+        self.assertNotIn("Signature valid", json.dumps(view))
+        self.assertTrue(all(item["label"] == MOCK_VOTE_LABEL and item["tee_signer"] is False for item in view["mock_resolvers"]))
+        self.assertNotIn("resolvers", view)
         evidence_parts = []
         request_hashes = []
         for row in view["votes"]:
-            self.assertEqual(row["label"], "Signature valid · hardware check pending")
+            self.assertEqual(row["label"], MOCK_VOTE_LABEL)
+            self.assertNotIn("signer", row)
+            self.assertFalse(row["tee_signer"])
+            self.assertTrue(row["mock_signer"].startswith("0x"))
+            self.assertEqual(row["script_slot"], row["model"])
             self.assertTrue(row["signature_ok"] and row["model_binding_ok"])
             body, fields, evidence = header_fields(row["request_raw"])
             self.assertEqual(set(body), {"model", "messages", "temperature", "seed"})
@@ -509,6 +517,10 @@ class LivePanelTests(unittest.TestCase):
         view = relayer.relay(0)
         self.assertEqual(view["panel_execution"], "near-ai")
         self.assertEqual(view["final_outcome"], "YES")
+        for vote in view["votes"]:
+            self.assertEqual(vote["label"], MOCK_VOTE_LABEL)
+            self.assertFalse(vote["tee_signer"])
+            self.assertNotIn("signer", vote)
         self.assertEqual(panel.calls, PANEL_MODELS)
         rendered = json.dumps(view)
         self.assertNotIn(token, rendered)
@@ -566,9 +578,17 @@ class ApiTests(unittest.TestCase):
         self.assertEqual(health["limitations"], LIMITATIONS)
         joined = " ".join(health["limitations"])
         self.assertIn("does not call Qwen, DeepSeek, or GLM", joined)
-        self.assertIn("Hardware attestation is not re-checked", joined)
         self.assertIn("PENDING_COMMIT_SHA", joined)
         self.assertIn("does not predict disputes", joined)
+        self.assertIn("not authoritative", joined)
+        self.assertIn(MOCK_VOTE_LABEL, joined)
+        listed_resolvers = self.req("GET", "/v1/resolvers")[1]
+        self.assertNotIn("resolvers", listed_resolvers)
+        for item in listed_resolvers["mock_resolvers"]:
+            self.assertEqual(item["label"], MOCK_VOTE_LABEL)
+            self.assertFalse(item["tee_signer"])
+            self.assertNotIn("address", item)
+            self.assertNotIn("model", item)
         self.assertEqual(self.req("POST", "/v1/testing/clock", {"now_ns": 1_000_000_000})[0], 200)
         spec = {
             "question": "Did the example snapshots agree?",
@@ -605,6 +625,11 @@ class ApiTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertEqual(view["final_outcome"], "YES")
         self.assertTrue(view["votes_verified"])
+        for vote in view["votes"]:
+            self.assertEqual(vote["label"], MOCK_VOTE_LABEL)
+            self.assertNotIn("signer", vote)
+            self.assertFalse(vote["tee_signer"])
+            self.assertNotIn('"signer"', json.dumps(vote))
         self.assertEqual(self.req("GET", "/v1/markets/0")[1]["final_outcome"], "YES")
         evidence = self.req("GET", view["evidence_api_path"])
         self.assertEqual(evidence[0], 200)
@@ -676,9 +701,95 @@ class HygieneTests(unittest.TestCase):
 
     def test_http_fetch_refuses_local_and_credentialed_urls(self):
         with self.assertRaises(ValueError):
-            http_fetch("file:///etc/passwd")
+            http_fetch("file:///etc/passwd", get=self._fail_get)
         with self.assertRaises(ValueError):
-            http_fetch("https://user:pw@example.com/a")
+            http_fetch("https://user:pw@example.com/a", get=self._fail_get)
+
+    def test_http_fetch_rejects_private_loopback_link_local_and_metadata(self):
+        blocked = [
+            "http://127.0.0.1/",
+            "http://127.0.0.1:80/latest",
+            "http://10.1.2.3/x",
+            "http://192.168.1.1/",
+            "http://172.16.0.1/",
+            "http://169.254.169.254/latest/meta-data",
+            "http://169.254.170.2/",
+            "http://169.254.1.1/",
+            "http://0.0.0.0/",
+            "http://[::1]/",
+            "http://[fe80::1]/",
+            "http://[::ffff:127.0.0.1]/",
+            "http://2130706433/",
+            "http://0x7f000001/",
+            "http://localhost/",
+        ]
+        for url in blocked:
+            with self.subTest(url=url):
+                with self.assertRaises(ValueError) as caught:
+                    http_fetch(url, get=self._fail_get)
+                self.assertIn("refusing", str(caught.exception).lower())
+
+        def metadata_resolver(host, _port):
+            self.assertEqual(host, "metadata.example")
+            return [(socket.AF_INET, socket.SOCK_STREAM, 6, "", ("169.254.169.254", 80))]
+
+        with self.assertRaises(ValueError) as caught:
+            http_fetch("http://metadata.example/latest", resolver=metadata_resolver, get=self._fail_get)
+        self.assertIn("metadata", str(caught.exception))
+
+        def mixed_resolver(_host, _port):
+            return [
+                (socket.AF_INET, socket.SOCK_STREAM, 6, "", ("1.1.1.1", 80)),
+                (socket.AF_INET, socket.SOCK_STREAM, 6, "", ("10.0.0.1", 80)),
+            ]
+
+        with self.assertRaises(ValueError):
+            http_fetch("http://mixed.example/", resolver=mixed_resolver, get=self._fail_get)
+
+    def test_http_fetch_limits_redirects_and_rechecks_each_target(self):
+        calls = []
+
+        def getter(url, **kwargs):
+            self.assertIs(kwargs["allow_redirects"], False)
+            calls.append(url)
+            class Response:
+                def __init__(self, status, location=None, text="ok"):
+                    self.status_code = status
+                    self.headers = {"Location": location} if location else {}
+                    self.text = text
+                def raise_for_status(self):
+                    if self.status_code >= 400:
+                        raise RuntimeError("status")
+            if url == "http://1.1.1.1/start":
+                return Response(302, "http://127.0.0.1/secret")
+            if url.startswith("http://1.0.0.1/"):
+                hop = url.rsplit("/", 1)[-1]
+                nxt = str(int(hop) + 1)
+                return Response(302, f"http://8.8.8.8/{nxt}")
+            if url.startswith("http://8.8.8.8/"):
+                hop = url.rsplit("/", 1)[-1]
+                return Response(302, f"http://1.0.0.1/{hop}")
+            return Response(200, text="public-body")
+
+        with self.assertRaises(ValueError):
+            http_fetch("http://1.1.1.1/start", get=getter)
+        self.assertEqual(calls, ["http://1.1.1.1/start"])
+
+        calls.clear()
+        with self.assertRaises(ValueError) as caught:
+            http_fetch("http://1.0.0.1/0", get=getter)
+        self.assertIn("too many redirects", str(caught.exception))
+        self.assertEqual(len(calls), MAX_REDIRECTS + 1)
+        self.assertNotIn("http://8.8.8.8/2", calls)
+
+        calls.clear()
+        body = http_fetch("http://1.1.1.1/ok", get=getter)
+        self.assertEqual(body, "public-body")
+        self.assertEqual(calls, ["http://1.1.1.1/ok"])
+
+    @staticmethod
+    def _fail_get(*_args, **_kwargs):
+        raise AssertionError("fetch was attempted")
 
 
 if __name__ == "__main__":

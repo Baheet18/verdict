@@ -1,8 +1,18 @@
-"""In-process chain that enforces the Verdict contract checks the relayer depends on.
+"""In-process stand-in for a few Verdict calls. Not the contract.
 
-This is not a NEAR node. It mirrors the panic strings and the order of checks in
-``commit_evidence``, ``submit_verdict``, and ``finalize`` so a mock run cannot skip
-evidence locking, signature recovery, model binding, or replay protection.
+``contract/src/lib.rs`` is the source of truth. This module is a test double so the
+relayer can exercise evidence locking, signature recovery, model binding, and replay
+without NEAR. It is not authoritative and it is already a partial copy:
+
+- It does not run the WASM.
+- It does not implement ``deposit``, ``dispute``, ``resolve_dispute``, ``claim``,
+  ``remove_signer``, or ``remove_relayer``.
+- Predecessors are local labels (``owner.local``, ``relayer.local``), not NEAR
+  account ids. There is no attached deposit and no ``Promise`` transfer.
+- ``used_signed`` is an in-memory set of hex digests, not the contract's ``LookupSet``.
+
+A mock ``Final`` is not contract finality. Do not treat a passing mock run as proof
+that the WASM would accept the same bytes.
 """
 from __future__ import annotations
 

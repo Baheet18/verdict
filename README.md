@@ -95,7 +95,7 @@ python scripts/attest_demo.py Qwen/Qwen3.8-27B   # expect PASS then tamper FAIL
 
 
 ## Integration
-`python scripts/api.py` is a local mock chain plus a relayer. Another app can create a market and poll the result without the manual JSON-and-CLI loop. Mock mode does not contact NEAR or NEAR AI. It does not claim a hardware-verified or final outcome until the votes re-check and the dispute window has elapsed. See [docs/INTEGRATION.md](docs/INTEGRATION.md).
+`python scripts/api.py` is a local mock chain plus a relayer. Another app can create a market and poll the result without the manual JSON-and-CLI loop. Mock mode does not contact NEAR or NEAR AI. Each mock vote is labeled `MOCK: not a real model signature`; those addresses are process-local keys, not TEE keys. The mock chain is not authoritative — `contract/src/lib.rs` is. See [docs/INTEGRATION.md](docs/INTEGRATION.md).
 
 ## Testnet deploy
 Wasm builds locally (`cargo near build non-reproducible-wasm` → `contract/target/near/verdict.wasm`, ~246 KB).

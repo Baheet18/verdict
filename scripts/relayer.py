@@ -31,6 +31,8 @@ from verdict_request import (
 
 ONE_NEAR = "1000000000000000000000000"
 DEFAULT_DISPUTE_WINDOW_NS = 3_600_000_000_000
+# On every mock vote object. Not a README trust label and not a TEE result.
+MOCK_VOTE_LABEL = "MOCK: not a real model signature"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 _CREATE_FIELDS = {
@@ -212,21 +214,21 @@ class Relayer:
         if supplied is None:
             return want
         if not isinstance(supplied, list) or not supplied:
-            raise RelayerError("resolvers must be the three signers from GET /v1/resolvers")
+            raise RelayerError("resolvers must be the three mock_signer values from GET /v1/resolvers")
         try:
             got = []
             for addr in supplied:
                 raw = addr[2:] if isinstance(addr, str) and addr.startswith("0x") else addr
                 if not isinstance(raw, str):
-                    raise RelayerError("resolvers must be the three signers from GET /v1/resolvers")
+                    raise RelayerError("resolvers must be the three mock_signer values from GET /v1/resolvers")
                 raw = raw.lower()
                 if len(raw) != 40 or any(c not in "0123456789abcdef" for c in raw):
-                    raise RelayerError("resolvers must be the three signers from GET /v1/resolvers")
+                    raise RelayerError("resolvers must be the three mock_signer values from GET /v1/resolvers")
                 got.append("0x" + raw)
         except RelayerError:
             raise
         if sorted(got) != sorted(want):
-            raise RelayerError("resolvers must be exactly the three signers from GET /v1/resolvers")
+            raise RelayerError("resolvers must be exactly the three mock_signer values from GET /v1/resolvers")
         return want
 
     def _parse_script(self, script) -> dict:
@@ -459,17 +461,20 @@ class Relayer:
             checked = self._recheck(market_id, market, vote, stored) if stored else None
             signature_ok = bool(checked and checked["signature_ok"])
             model_ok = bool(checked and checked["model_binding_ok"])
-            label = "Signature valid · hardware check pending" if signature_ok and model_ok else "UNVERIFIED"
             row = {
+                # ``model`` is the script slot id written into the canonical request.
+                # It is not a claim that a TEE for that model produced the signature.
                 "model": vote["model"],
-                "signer": vote["signer"],
+                "script_slot": vote["model"],
+                "mock_signer": vote["signer"],
+                "tee_signer": False,
                 "outcome": CHAIN_TO_API_OUTCOME[vote["outcome"]],
                 "request_sha256": vote["request_sha256"],
                 "response_sha256": vote["response_sha256"],
                 "evidence_bundle_hash": checked["evidence_bundle_hash"] if checked else None,
                 "signature_ok": signature_ok,
                 "model_binding_ok": model_ok,
-                "label": label,
+                "label": MOCK_VOTE_LABEL,
             }
             if include_raw and stored:
                 row["request_raw"] = stored["request_raw"]
@@ -494,8 +499,8 @@ class Relayer:
             proposed_out = proposed
             final_out = final
         notes = [
-            "EIP-191 signatures were checked against the registered signer for each model.",
-            "Hardware attestation is not re-checked on this path.",
+            "The mock chain is not authoritative. contract/src/lib.rs is the source of truth.",
+            MOCK_VOTE_LABEL + " Each mock_signer is a process-local key, not a Qwen, DeepSeek, or GLM TEE key.",
             "The relayer chooses and commits the evidence. Request-parameter steering is rejected; that does not make evidence selection trustless.",
         ]
         if self.panel.execution == "scripted":
@@ -513,7 +518,7 @@ class Relayer:
             "rules_hash": market["rules_hash"],
             "prompt_template_hash": market["prompt_template_hash"],
             "sources": market["sources"],
-            "resolvers": [{"address": addr, "model": self.chain.signers.get(addr)} for addr in market["resolvers"]],
+            "mock_resolvers": [self._public_resolver(addr) for addr in market["resolvers"]],
             "deadline_ns": market["deadline_ns"],
             "dispute_window_ns": market["dispute_window_ns"],
             "dispute_bond_yocto": market["dispute_bond"],
@@ -539,6 +544,16 @@ class Relayer:
         if include_rules:
             body["rules"] = market["rules"]
         return body
+
+    def _public_resolver(self, address: str) -> dict:
+        # This process has no TEE attestation to attach. The address is a
+        # process-local mock key even when a test injects LivePanel.
+        return {
+            "mock_signer": address,
+            "script_slot": self.chain.signers.get(address),
+            "tee_signer": False,
+            "label": MOCK_VOTE_LABEL,
+        }
 
     def _stored_for(self, record: dict, rnd: int, vote: dict):
         for stored in record.get("signed", []):

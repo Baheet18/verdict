@@ -2,7 +2,9 @@
 
 This is the local integration surface for another prediction-market app. It replaces the manual loop of JSON files and hand-run commands (`deploy_prepare.py`, `publish_evidence.py`, then `commit_evidence` and three `submit_verdict` calls).
 
-The server you start with `python scripts/api.py` is a **mock**. It keeps an in-process chain and a scripted panel. It does not submit NEAR transactions, it does not deploy a contract, and it does not call Qwen, DeepSeek, or GLM. `GET /v1/health` repeats the limits below.
+The server you start with `python scripts/api.py` is a **mock**. It keeps an in-process chain and a scripted panel. It does not submit NEAR transactions, it does not deploy a contract, and it does not call Qwen, DeepSeek, or GLM.
+
+The mock chain is **not authoritative**. `contract/src/lib.rs` is the source of truth. This copy does not run the WASM, and it does not implement `deposit`, `dispute`, `resolve_dispute`, or `claim`. A mock `Final` is not contract finality. `GET /v1/health` repeats that, and the other limits below.
 
 ## Run
 
@@ -30,7 +32,7 @@ python scripts/test_relayer_api.py
 | `rules` | yes | Resolution rules. `rules_hash` is sha256 of these exact bytes. |
 | `sources` | yes | One or more `http://` or `https://` URLs, no userinfo. This is the locked source list. |
 | `deadline_ns` | yes | Integer nanoseconds. Must be greater than the mock clock (`GET /v1/health` field `now_ns`). Betting is not part of this API; the deadline is when the relayer may lock evidence. |
-| `resolvers` | no | Omit it to bind the three signers from `GET /v1/resolvers`. If you send it, it must be exactly those three addresses. Any other set is rejected. This process cannot sign for accounts it did not generate. |
+| `resolvers` | no | Omit it to bind the three `mock_signer` values from `GET /v1/resolvers`. If you send it, it must be exactly those three. Any other set is rejected. These are process-local keys, not TEE signing keys. |
 | `source_snapshots` | no | `[{url, text, fetched_at?, sha256?}]`. `url` must be one of `sources`. `sha256` is recomputed from `text` and rejected if it does not match. If a source has no snapshot, the relayer fetches it only when the server was started with `--fetch`. The default does not fetch. |
 | `market_end` | no | Short string copied into the evidence bundle. It is not a second deadline. |
 | `dispute_window_ns` | no | Default `3600000000000` (one hour). A unanimous YES/NO stays `Proposed` until this window has elapsed and relay runs again. Returned as `dispute_window_ns`. |
@@ -46,18 +48,18 @@ The three model ids are `Qwen/Qwen3.8-27B`, `deepseek-ai/DeepSeek-V4.1-Flash-101
 
 | Field | Meaning |
 | --- | --- |
-| `status` | `Open`, `Proposed`, `Escalated`, `Final`, or `Disputed`. |
-| `proposed_outcome` | `YES` or `NO` when the three votes agree and re-check, and the dispute window is still open. Otherwise `null`. |
-| `final_outcome` | `YES` or `NO` only when the chain status is `Final` and every vote re-checked. Otherwise `null`. |
-| `escalated` | `true` when the panel split, or all three returned `AMBIGUOUS`. `final_outcome` stays `null`. No outcome is filled in. |
-| `votes` | One entry per submitted vote: model, signer, outcome, both sha256 values, `signature_ok`, `model_binding_ok`, and `label`. The single-market GET also includes `request_raw`, `response_raw`, and `signature` so you can recompute the signature. The list endpoint omits those bodies. |
-| `label` | `Signature valid · hardware check pending` when the signature recovered to the registered signer for that model. This path does not re-check TDX or NRAS. It will not say `Hardware + host stack verified`. |
+| `status` | `Open`, `Proposed`, `Escalated`, or `Final`. The Rust contract also has `Disputed`. This mock never returns it, because `dispute` and `resolve_dispute` are not implemented. |
+| `proposed_outcome` | `YES` or `NO` when the three scripted votes agree and re-check, and the dispute window is still open. Otherwise `null`. This is a mock status, not a contract proposal. |
+| `final_outcome` | `YES` or `NO` only when the mock status is `Final` and every vote re-checked. Otherwise `null`. Not contract finality. |
+| `escalated` | `true` when the scripted panel split, or all three returned `AMBIGUOUS`. `final_outcome` stays `null`. No outcome is filled in. |
+| `votes` | One entry per scripted vote. `model` / `script_slot` is the request's model id. `mock_signer` is the process-local key. `tee_signer` is `false`. `label` is `MOCK: not a real model signature`. There is no `signer` field. The single-market GET also includes `request_raw`, `response_raw`, and `signature` so you can recompute the mock signature. The list endpoint omits those bodies. |
+| `mock_resolvers` | The same process-local keys, each with `script_slot`, `tee_signer: false`, and the mock label. Not TEE registrations. |
 | `evidence_bundle_hash` | sha256 of the evidence string (the user-message body after the header newline), once `commit_evidence` has run. |
 | `evidence_uri` | Always a `PENDING_COMMIT_SHA://…` placeholder. This API does not invent a commit SHA and does not emit `/master/`, `/main/`, or a `raw.githubusercontent.com` URL. |
 | `evidence_api_path` | `GET /v1/evidence/{hash}` returns the wrapper JSON. Hash the `evidence` field and compare it to `evidence_bundle_hash`. |
 | `chain_calls` | The contract methods this market has already run: `create_market`, `commit_evidence`, `submit_verdict`, `finalize`. |
 | `panel_execution` | `scripted` on this server. |
-| `chain` | `mock`. |
+| `chain` | `mock`. Not the WASM contract. |
 
 `votes_verified` is true only when all three current votes re-checked and name the committed evidence hash.
 
@@ -66,7 +68,7 @@ The three model ids are `Qwen/Qwen3.8-27B`, `deepseek-ai/DeepSeek-V4.1-Flash-101
 | Method and path | Effect |
 | --- | --- |
 | `GET /v1/health` | Mode, mock clock, panel ids, limitations. |
-| `GET /v1/resolvers` | The three in-memory signer addresses for this process. They change when the process restarts. |
+| `GET /v1/resolvers` | The three `mock_signer` values for this process, each labeled `MOCK: not a real model signature`. They are not TEE keys. They change when the process restarts. |
 | `POST /v1/markets` | Create a market. |
 | `GET /v1/markets` | Short list. |
 | `GET /v1/markets/{id}` | Status and, when final, the verified outcome. |
@@ -97,7 +99,7 @@ Same order as the contract, using `scripts/verdict_request.py` for the request b
 
 Calling relay again after `Final` or `Escalated` does not submit more votes.
 
-The in-process chain rejects the same classes of bad input as `contract/src/lib.rs`: evidence before the deadline, a vote before `commit_evidence`, a second commit by the relayer, a vote whose evidence hash is not the committed hash, an extra request key, a duplicate or backslash-escaped JSON key, a signature that recovers to a signer registered for a different model, and a reused signature.
+The mock tries to reject evidence before the deadline, a vote before `commit_evidence`, a second commit by the relayer, a mismatched evidence hash, an extra request key, a duplicate or backslash-escaped JSON key, a signature that recovers to a different script slot, and a reused signature. That behavior is a convenience for local tests. It is not a substitute for `contract/src/lib.rs`, and it has already drifted: there is no `deposit`, `dispute`, `resolve_dispute`, or `claim`, no NEAR account or attached deposit, and `used_signed` is an in-memory set rather than the contract's storage.
 
 ## Example
 
@@ -137,7 +139,7 @@ curl -s -X POST localhost:8787/v1/markets/0/relay
 curl -s localhost:8787/v1/markets/0
 ```
 
-A successful mock run has `status` `Final`, `final_outcome` `YES`, `votes_verified` true, and `evidence_uri` starting with `PENDING_COMMIT_SHA://`. Set one model to `NO` in `mock_script` and the same flow returns `Escalated` with `final_outcome` null.
+A successful mock run has `status` `Final`, `final_outcome` `YES`, `votes_verified` true, and `evidence_uri` starting with `PENDING_COMMIT_SHA://`. Every vote's `label` is `MOCK: not a real model signature`, and `mock_signer` is not a TEE key. Set one model to `NO` in `mock_script` and the same flow returns `Escalated` with `final_outcome` null.
 
 Leave `dispute_window_ns` at the default and the first relay stops at `Proposed`. `final_outcome` is null until you advance `now_ns` past `status_raw.Proposed.at_ns + dispute_window_ns` and call relay again.
 
@@ -149,9 +151,10 @@ Signing a real `commit_evidence` or `submit_verdict` on NEAR still needs your ow
 
 ## Limitations
 
-- Mock chain only. Restarting the process drops markets and generates new signer addresses. Nothing here talks to `baheet.testnet`.
+- The mock chain is not authoritative. `contract/src/lib.rs` is. Restarting the process drops markets and generates new `mock_signer` values. Nothing here talks to `baheet.testnet`. `dispute` and `resolve_dispute` are absent, so this API cannot show a contract dispute.
 - The scripted panel does not run the models. If you omit `mock_script`, every model returns `AMBIGUOUS` and the market escalates. That default is intentional: the mock does not invent `YES` or `NO`.
-- Hardware attestation stays an owner step (`scripts/hw_verify.py`, then `register_signer`). Vote labels from this API stay `Signature valid · hardware check pending`.
+- Every vote object is labeled `MOCK: not a real model signature`. `mock_signer` is a process-local key. It is not a Qwen, DeepSeek, or GLM TEE signing key. Hardware attestation stays an owner step on the real contract (`scripts/hw_verify.py`, then `register_signer`) and is not performed here.
+- `--fetch` resolves each source and refuses private, loopback, link-local, and metadata addresses, including a redirect onto one of those. It follows at most two redirects. The server has no authentication; leave it on `127.0.0.1`.
 - Evidence is gathered outside the TEE. The relayer chooses the snapshots. The contract rejects steered request parameters. That does not make the relayer's evidence choice trustless.
 - `evidence_uri` is a pending placeholder until a person pushes the file and chooses a commit SHA with `scripts/evidence_uri.py`. This service will not pick one. `GET /v1/evidence/{hash}` serves the bytes for this process.
 - The owner-only evidence replacement on the contract is not exposed. After the first vote of a round the commitment is frozen.

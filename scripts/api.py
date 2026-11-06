@@ -21,28 +21,41 @@ Mock-only endpoints:
 from __future__ import annotations
 
 import argparse
+import ipaddress
 import json
 import pathlib
 import re
+import socket
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import urlsplit
+from urllib.parse import urljoin, urlsplit
 
 from mock_chain import ChainError
 from panel import PANEL_MODELS
-from relayer import RelayerError, build_mock
+from relayer import MOCK_VOTE_LABEL, RelayerError, build_mock
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MAX_BODY = 1_000_000
 
 LIMITATIONS = [
     "This process is a mock chain. It does not submit transactions to NEAR and it does not deploy a contract.",
+    "The mock chain is not authoritative. contract/src/lib.rs is the source of truth. This mock does not implement deposit, dispute, resolve_dispute, or claim.",
     "The panel is scripted. It does not call Qwen, DeepSeek, or GLM.",
-    "EIP-191 signatures and the signer-to-model binding are checked. Hardware attestation is not re-checked.",
+    MOCK_VOTE_LABEL + " mock_signer values are process-local keys, not Qwen, DeepSeek, or GLM TEE signing keys.",
     "evidence_uri stays PENDING_COMMIT_SHA. This API does not invent a commit SHA.",
     "The relayer chooses the evidence snapshots. Rejecting request-parameter steering does not make that choice trustless.",
     "A split panel or a unanimous AMBIGUOUS escalates. This API does not invent an outcome and it does not predict disputes.",
-    "Restarting the process drops markets, signers, and the in-memory clock. Files under the data dir are not a NEAR commitment.",
+    "Restarting the process drops markets, mock signers, and the in-memory clock. Files under the data dir are not a NEAR commitment.",
+    "Source fetches reject private, loopback, link-local, and metadata addresses. The server has no authentication; keep it on 127.0.0.1.",
 ]
+
+# Follow at most this many redirects, and re-check the target of each one.
+MAX_REDIRECTS = 2
+_REDIRECT_STATUSES = {301, 302, 303, 307, 308}
+_METADATA_IPS = {
+    ipaddress.ip_address("169.254.169.254"),
+    ipaddress.ip_address("169.254.170.2"),
+    ipaddress.ip_address("fd00:ec2::254"),
+}
 
 _MARKET = re.compile(r"^/v1/markets/(\d+)$")
 _RELAY = re.compile(r"^/v1/markets/(\d+)/relay$")
@@ -58,16 +71,106 @@ def chain_http_status(message: str) -> int:
     return 400
 
 
-def http_fetch(url: str) -> str:
+def _default_resolver(host: str, port: int):
+    return socket.getaddrinfo(host, port or 0, type=socket.SOCK_STREAM)
+
+
+def _literal_ip(host: str):
+    try:
+        return ipaddress.ip_address(host)
+    except ValueError:
+        pass
+    # Dotted-decimal bypasses such as 2130706433 or 0x7f000001.
+    number = None
+    try:
+        if host.isdigit():
+            number = int(host, 10)
+        elif host.lower().startswith("0x"):
+            number = int(host, 16)
+    except ValueError:
+        return None
+    if number is not None and 0 <= number <= 0xFFFFFFFF:
+        return ipaddress.IPv4Address(number)
+    return None
+
+
+def _ip_blocked(addr: ipaddress.IPv4Address | ipaddress.IPv6Address) -> bool:
+    mapped = getattr(addr, "ipv4_mapped", None)
+    if mapped is not None:
+        return _ip_blocked(mapped)
+    if addr in _METADATA_IPS:
+        return True
+    return bool(
+        addr.is_private
+        or addr.is_loopback
+        or addr.is_link_local
+        or addr.is_multicast
+        or addr.is_reserved
+        or addr.is_unspecified
+    )
+
+
+def _reject_nonpublic(url: str, resolver) -> None:
+    """Reject a source URL before any socket is opened.
+
+    Private, loopback, link-local, and cloud metadata addresses are refused.
+    A name that resolves to any blocked address is refused, even if it also
+    has a public address. This is a pre-fetch check, not a kernel egress filter.
+    """
     if not isinstance(url, str) or not (url.startswith("https://") or url.startswith("http://")):
         raise ValueError("refusing non-http source fetch")
-    host = url.split("://", 1)[1].split("/", 1)[0]
-    if not host or "@" in host:
+    parsed = urlsplit(url)
+    if parsed.username or parsed.password:
         raise ValueError("refusing source URL with userinfo")
+    host = parsed.hostname
+    if not host:
+        raise ValueError("refusing source URL")
+    literal = _literal_ip(host)
+    if literal is not None:
+        addresses = [literal]
+    else:
+        try:
+            infos = resolver(host, parsed.port or 0)
+        except socket.gaierror:
+            raise ValueError("source host did not resolve") from None
+        addresses = []
+        for info in infos:
+            ip_text = info[4][0].split("%", 1)[0]
+            addresses.append(ipaddress.ip_address(ip_text))
+        if not addresses:
+            raise ValueError("source host did not resolve")
+    if any(_ip_blocked(addr) for addr in addresses):
+        raise ValueError("refusing source URL that resolves to a private, loopback, link-local, or metadata address")
+
+
+def _requests_get(url, **kwargs):
     import requests
-    response = requests.get(url, timeout=30, headers={"User-Agent": "VerdictRelayer/0.1"})
-    response.raise_for_status()
-    return response.text[:200_000]
+    return requests.get(url, **kwargs)
+
+
+def http_fetch(url: str, *, resolver=None, get=None) -> str:
+    resolver = resolver or _default_resolver
+    get = get or _requests_get
+    current = url
+    for hop in range(MAX_REDIRECTS + 1):
+        _reject_nonpublic(current, resolver)
+        response = get(
+            current,
+            timeout=30,
+            allow_redirects=False,
+            headers={"User-Agent": "VerdictRelayer/0.1"},
+        )
+        if response.status_code in _REDIRECT_STATUSES:
+            if hop == MAX_REDIRECTS:
+                raise ValueError("too many redirects")
+            location = response.headers.get("Location") or response.headers.get("location")
+            if not location:
+                raise ValueError("redirect missing location")
+            current = urljoin(current, location)
+            continue
+        response.raise_for_status()
+        return response.text[:200_000]
+    raise ValueError("too many redirects")
 
 
 def _market_id(text: str) -> int:
@@ -112,8 +215,17 @@ def serve(relayer, host: str, port: int) -> ThreadingHTTPServer:
                 return
             if method == "GET" and path == "/v1/resolvers":
                 self._send(200, {
-                    "resolvers": relayer.panel.resolvers(),
-                    "note": "Mock mode generates these signers in memory for this process. They are not NEAR AI TEE keys.",
+                    "mock_resolvers": [
+                        {
+                            "mock_signer": row["address"],
+                            "script_slot": row["model"],
+                            "tee_signer": False,
+                            "label": MOCK_VOTE_LABEL,
+                        }
+                        for row in relayer.panel.resolvers()
+                    ],
+                    "note": "mock_signer values are process-local keys for this process, not Qwen, DeepSeek, or GLM TEE signing keys. "
+                    + MOCK_VOTE_LABEL,
                 })
                 return
             if method == "GET" and path == "/v1/markets":
