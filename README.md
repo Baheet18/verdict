@@ -93,6 +93,8 @@ source .venv/bin/activate
 python scripts/attest_demo.py Qwen/Qwen3.8-27B   # expect PASS then tamper FAIL
 ```
 
+The public landing page is [`site/index.html`](site/index.html). Open that file, or serve the `site/` directory (`python -m http.server -d site 8080`). Publishing that directory on GitHub Pages or any static host needs no build. Live testnet markets are recorded under [Testnet deploy](#testnet-deploy).
+
 ## Integrating an app
 
 The app creates the market and reads the result. The relayer runs the steps that used to be typed into near-cli.
@@ -126,6 +128,30 @@ Wasm builds locally (`cargo near build non-reproducible-wasm` → `contract/targ
 **Old prototype (do not treat as current trust model):** `baheet.testnet`, initialized with owner `baheet.testnet` on 2026-11-05 (universal owner dispute fallback).
 [Deploy + init transaction](https://explorer.testnet.near.org/transactions/4koasWRtwm9F3ZTh9dN86qSu2oTgA8iDHg5rs7uVRLFT)
 
-**Live v2 contract:** `verdict-v2-baheet.testnet` (owner `baheet.testnet`). Market 0, Saints vs. Giants, was walked by hand through create → `commit_evidence` → three votes → Proposed YES → Final YES. Finalize: [C4ZQabkbLzSVzDCJFsxUEWEn18gVLmi4h2ANKGBXUsXx](https://explorer.testnet.near.org/transactions/C4ZQabkbLzSVzDCJFsxUEWEn18gVLmi4h2ANKGBXUsXx). Evidence permalink is commit `7d4149cfff493fdc3cbe932ac1d4c7406c605f40` (not `/master/`). `escalation_owner` on that market is `baheet.testnet`. The relayer skips a Final market and does the same steps for later ids (`docs/RELAYER.md`).
+**Live v2 contract:** `verdict-v2-baheet.testnet` (owner `baheet.testnet`). Market 0, Saints vs. Giants, was walked by hand through create → `commit_evidence` → three votes → Proposed YES → Final YES. Dispute window: 1 hour. Finalize: [C4ZQabkbLzSVzDCJFsxUEWEn18gVLmi4h2ANKGBXUsXx](https://explorer.testnet.near.org/transactions/C4ZQabkbLzSVzDCJFsxUEWEn18gVLmi4h2ANKGBXUsXx). Evidence permalink is commit `7d4149cfff493fdc3cbe932ac1d4c7406c605f40` (not `/master/`). `escalation_owner` on that market is `baheet.testnet`. The relayer skips a Final market and does the same steps for later ids (`docs/RELAYER.md`). Market 0 remains the earlier hand-walked proof.
+
+### Testnet / Demo — market 1 automatic-relayer proof
+
+Market 1 on the same contract is the automatic-relayer proof. The landing page [`site/index.html`](site/index.html) restates both markets and the plug-in path. It links the explorer transactions below. It does not verify signatures or hardware attestation.
+
+| Field | Value |
+| --- | --- |
+| Contract | `verdict-v2-baheet.testnet` (owner `baheet.testnet`) |
+| Question | Cowboys vs Eagles (NFL, Oct 26 2026). YES = Cowboys (won 38-21). NO = Eagles. |
+| Dispute window | 10 minutes |
+| `escalation_owner` | `baheet.testnet` |
+| `prompt_template_hash` | `fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f` |
+| Evidence bundle hash | `02f77d634d5a5073c312dddabc551bb4b631b82df74bacd141e291fcec288a84` |
+| Evidence permalink (commit SHA, not `/master/`) | https://raw.githubusercontent.com/Baheet18/verdict/abb0be396544438e8d5640f91cf639685e7b9836/fixtures/evidence/02f77d634d5a5073c312dddabc551bb4b631b82df74bacd141e291fcec288a84.json |
+| Create | https://explorer.testnet.near.org/transactions/J3Rdax14BmGSUTj6bodUhwCzRYf8uvQ8VmQbH4aSjMHX |
+| `commit_evidence` | https://explorer.testnet.near.org/transactions/Gfvgy1SZmdfobqgTkkdhLiLdnnPmgv3coP3Q7Qh9ot1 |
+| GLM `submit_verdict` YES | https://explorer.testnet.near.org/transactions/5wjYC2s7aanwyBejtxHuKe9sdfB8BPtoB3cJm5F5w9Ko |
+| Qwen `submit_verdict` YES | https://explorer.testnet.near.org/transactions/4EsvXjnLKKhkc28LZYuDygRyHgG2ibQuDXE9zG3Tybfj |
+| DeepSeek `submit_verdict` YES | https://explorer.testnet.near.org/transactions/EWDhb83wMJAATgU2g6NKzdabzj4qukuFzQtwh62cczd9 |
+| `finalize` | https://explorer.testnet.near.org/transactions/yxv3YqJtiumdCWhDCgNJ7pVtJzrcXveSEduFViVwwBy |
+
+Outcome: **Final YES**. The automatic relayer (`python scripts/relayer.py --once` in live mode) ran commit + three live NEAR AI votes + finalize after the window.
+
+Post-cutoff sports: 107 of 124 settled and matched UMA; 17 escalated. Unclear markets: 0 invented answers. `baheet.testnet` stays the old prototype.
 
 Manual signed steps, if you are not running the relayer: register signers → `register_relayer` once → `create_market` (with `escalation_owner`) → `commit_evidence` → three `submit_verdict` → `finalize` after the window, or `resolve_dispute` by that market’s escalation owner. Steps: `deploy/TESTNET.md`. Args: `python scripts/deploy_prepare.py`.
