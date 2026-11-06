@@ -94,6 +94,9 @@ python scripts/attest_demo.py Qwen/Qwen3.8-27B   # expect PASS then tamper FAIL
 ```
 
 
+## Integration
+`python scripts/api.py` is a local mock chain plus a relayer. Another app can create a market and poll the result without the manual JSON-and-CLI loop. Mock mode does not contact NEAR or NEAR AI. Each mock vote is labeled `MOCK: not a real model signature`; those addresses are process-local keys, not TEE keys. The mock chain is not authoritative — `contract/src/lib.rs` is. See [docs/INTEGRATION.md](docs/INTEGRATION.md).
+
 ## Testnet deploy
 Wasm builds locally (`cargo near build non-reproducible-wasm` → `contract/target/near/verdict.wasm`, ~246 KB).
 **Demo market (round 6):** post-cutoff NFL *Saints vs. Giants* (Polymarket 4329887) with live panel votes in `contract/testdata/real_panel.json` (unanimous YES, hardware-verified). `dispute_bond` = **1 NEAR**. Evidence file prepared at `fixtures/evidence/<sha>.json`; `evidence_uri` is the GitHub raw URL and **404s until a human-approved push**.
