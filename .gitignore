@@ -4,3 +4,6 @@
 out/
 target/
 __pycache__/
+relayer.local.json
+access-key.json
+register_relayer.json

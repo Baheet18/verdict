@@ -80,12 +80,12 @@ Illia Polosukhin (NEAR) listed "AI benchmarking with private test sets. Submit h
 
 ## Limits
 - **GPU ↔ TDX binding** is only the shared client nonce; no cryptographic binding of GPU attestation to the TDX VM measurement.
-- **Owner / relayer / escalation trust**: the protocol owner registers/removes signers and relayers; a registered relayer (or owner) must `commit_evidence` before votes; each market’s `escalation_owner` (chosen at creation) settles that market’s disputes/escalations. Hardware verification is an off-chain precondition for registration.
+- **Owner / relayer / escalation trust**: the protocol owner registers/removes signers and relayers; a registered relayer (or owner) must `commit_evidence` before votes; each market’s `escalation_owner` (chosen at creation) settles that market’s disputes/escalations. Hardware verification is an off-chain precondition for registration. The automatic relayer (`docs/RELAYER.md`) can delay a market by withholding a transaction. It cannot edit a vote the contract has already accepted. It is not a trustless oracle.
 - **Key-management service (dstack KMS)**: RTMR3 `mr-kms` and `key-provider` events are pinned, but signing keys are issued by this KMS and may be shared across replicas. A signature proves "one of the attested replicas holding this key", not a specific VM. See shared-signer policy in `scripts/hw_verify.py::verify_signer_replicas`.
 - **MRTD / RTMR0-2 pins are observed**, not a published constant (they encode VM shape).
 - **Model container not measured** (see above).
 - **NRAS + Intel PCCS** need network access.
-- **Testnet deploy**: `baheet.testnet` is the **old prototype** (universal protocol-owner dispute fallback). The per-market `escalation_owner` API is a breaking change — deploy to a **fresh** contract account after review; do not expect in-place upgrade of the prototype. No keys in this repo. See `deploy/TESTNET.md`.
+- **Testnet deploy**: `baheet.testnet` is the **old prototype** (universal protocol-owner dispute fallback). The per-market `escalation_owner` API is on `verdict-v2-baheet.testnet` (not an in-place upgrade of the prototype). No keys in this repo. See `deploy/TESTNET.md` and `docs/RELAYER.md`.
 
 ## Demo
 ```bash
@@ -93,12 +93,39 @@ source .venv/bin/activate
 python scripts/attest_demo.py Qwen/Qwen3.8-27B   # expect PASS then tamper FAIL
 ```
 
+## Integrating an app
+
+The app creates the market and reads the result. The relayer runs the steps that used to be typed into near-cli.
+
+1. Call `create_market` on `verdict-v2-baheet.testnet` with the question, rules, source URLs, `prompt_template_hash` from `scripts/verdict_request.py`, the registered resolver addresses, a future `deadline_ns`, that market's `dispute_window_ns`, `dispute_bond`, and the app's `escalation_owner`.
+2. Read `get_market`. Deposits and claims stay in the app. A challenge during the window is `dispute` with the bond attached.
+3. The relayer, after one `register_relayer` by the protocol owner, commits evidence, collects the three panel votes, and calls `finalize` when the dispute window closes with no dispute. `Disputed` and `Escalated` stay with that market's `escalation_owner` (`resolve_dispute`). A unanimous `TOO_EARLY` advances the round and stays `Open`. The relayer waits `too_early_retry_s` (default 6 hours, minimum 1 hour) before committing the next round, and after 5 rounds it leaves the market for `escalate_stale`.
+
+Dry-run (no key, no NEAR AI, no transaction):
+
+```bash
+python scripts/relayer.py --once
+```
+
+Live env names, values left empty here on purpose: `VERDICT_RELAYER_MODE`, `VERDICT_SIGNER_ACCOUNT`, `NEAR_CREDENTIALS_FILE`, `VERDICT_EVIDENCE_PUSH`, `NEARAI_API_KEY`. Full table, the one-time `register_relayer` command, and the PowerShell BOM warning: `docs/RELAYER.md`.
+
+```bash
+export VERDICT_RELAYER_MODE=live
+export VERDICT_SIGNER_ACCOUNT=YOUR_RELAYER.testnet
+export NEAR_CREDENTIALS_FILE=/path/outside/the/repo/access-key.json
+export VERDICT_EVIDENCE_PUSH=1
+# NEARAI_API_KEY — set in the shell from cloud.near.ai; do not write it into a file in this repo
+python scripts/relayer.py --loop
+```
+
+Offline decisions, no RPC: `python scripts/relayer.py --once --markets-file fixtures/relayer/offline_markets.json`. Tests: `python -m unittest relayer.test_relayer`.
 
 ## Testnet deploy
 Wasm builds locally (`cargo near build non-reproducible-wasm` → `contract/target/near/verdict.wasm`, ~246 KB).
-**Demo market (round 6):** post-cutoff NFL *Saints vs. Giants* (Polymarket 4329887) with live panel votes in `contract/testdata/real_panel.json` (unanimous YES, hardware-verified). `dispute_bond` = **1 NEAR**. Evidence file prepared at `fixtures/evidence/<sha>.json`; `evidence_uri` is the GitHub raw URL and **404s until a human-approved push**.
+**Demo market (round 6):** post-cutoff NFL *Saints vs. Giants* (Polymarket 4329887) with live panel votes in `contract/testdata/real_panel.json` (unanimous YES, hardware-verified). `dispute_bond` = **1 NEAR**. The bundle is `fixtures/evidence/ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7.json`. On chain, `evidence_uri` is the commit-SHA permalink for `7d4149cfff493fdc3cbe932ac1d4c7406c605f40` (a `/master/` URL is not used).
 **Old prototype (do not treat as current trust model):** `baheet.testnet`, initialized with owner `baheet.testnet` on 2026-11-05 (universal owner dispute fallback).
 [Deploy + init transaction](https://explorer.testnet.near.org/transactions/4koasWRtwm9F3ZTh9dN86qSu2oTgA8iDHg5rs7uVRLFT)
 
-**Next deploy:** use a **fresh** contract account for the per-market `escalation_owner` API (storage/ABI break vs the prototype). Pass `escalation_owner` in `create_market`. No redeploy until after review.
-Next signed steps: register signers → create market (with `escalation_owner`) → commit_evidence → three submit_verdict → optional dispute resolved by that market’s escalation owner. Steps: `deploy/TESTNET.md`. Args: `python scripts/deploy_prepare.py`.
+**Live v2 contract:** `verdict-v2-baheet.testnet` (owner `baheet.testnet`). Market 0, Saints vs. Giants, was walked by hand through create → `commit_evidence` → three votes → Proposed YES → Final YES. Finalize: [C4ZQabkbLzSVzDCJFsxUEWEn18gVLmi4h2ANKGBXUsXx](https://explorer.testnet.near.org/transactions/C4ZQabkbLzSVzDCJFsxUEWEn18gVLmi4h2ANKGBXUsXx). Evidence permalink is commit `7d4149cfff493fdc3cbe932ac1d4c7406c605f40` (not `/master/`). `escalation_owner` on that market is `baheet.testnet`. The relayer skips a Final market and does the same steps for later ids (`docs/RELAYER.md`).
+
+Manual signed steps, if you are not running the relayer: register signers → `register_relayer` once → `create_market` (with `escalation_owner`) → `commit_evidence` → three `submit_verdict` → `finalize` after the window, or `resolve_dispute` by that market’s escalation owner. Steps: `deploy/TESTNET.md`. Args: `python scripts/deploy_prepare.py`.

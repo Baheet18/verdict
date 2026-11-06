@@ -1,0 +1,15 @@
+{
+  "contract": "verdict-v2-baheet.testnet",
+  "network": "testnet",
+  "rpc_url": "https://rpc.testnet.near.org",
+  "signer_account": "YOUR_RELAYER.testnet",
+  "mode": "dry-run",
+  "evidence_repo": "Baheet18/verdict",
+  "evidence_remote": "origin",
+  "evidence_push": false,
+  "poll_interval_s": 60,
+  "max_markets": 500,
+  "max_rounds_per_pass": 1,
+  "max_rounds": 5,
+  "too_early_retry_s": 21600
+}
