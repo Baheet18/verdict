@@ -1,24 +1,26 @@
 === Verdict deploy_prepare (NO KEYS — human signs) ===
 Wasm (build locally): contract/target/near/verdict.wasm
 See deploy/TESTNET.md for near CLI steps.
+IMPORTANT: deploy to a FRESH contract account so the first create_market yields market_id=0
+           (headers in real_panel.json are signed with market_id=0).
 
 === 1) register_signer (owner) — one per panel model ===
 {
   "address": "0x835ab53d20294ef795906dff21ae4c045336aa26",
   "model": "Qwen/Qwen3.8-27B",
-  "attestation_report_sha256": "5a4bf929b5075e5c5fff05e0df4485497477eead03da7b8133d5a70c1a34bffd"
+  "attestation_report_sha256": "61a3af46d7d8b57970567500758440afca5b2f3054121af34269cdb038f91119"
 }
 ---
 {
   "address": "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
   "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
-  "attestation_report_sha256": "de901b505c741c12fde485af41a3e772eb10f1bf885923dd5637ef18eb3e9006"
+  "attestation_report_sha256": "60280a6a261ea1a3c1fbdb0ad6d621cc9795ca2ef0c147ba16892b338cda8543"
 }
 ---
 {
   "address": "0x3b753b4406613c5e70ae640508632b600424fa0c",
   "model": "z-ai/glm-5.3-flash",
-  "attestation_report_sha256": "94e77677879e5da8f0cf1f3d96664334042797431edd40481b88c31d0b94f87d"
+  "attestation_report_sha256": "3574b82fe33daddd37f839677b4e7fef680f95510bc5f149c19ee16eaf8d8fe6"
 }
 ---
 === 2) register_relayer (owner) — use the account that will commit_evidence + submit_verdict ===
@@ -27,10 +29,11 @@ See deploy/TESTNET.md for near CLI steps.
 
 === 3) create_market args (owner or anyone) ===
 {
-  "question": "Did it rain (>=1mm) at Ikeja on 2026-11-03?",
-  "rules": "Resolves YES if the source snapshot reports >=1mm rainfall at Ikeja for 2026-11-03, NO if it reports <1mm. Otherwise AMBIGUOUS.",
+  "question": "Saints vs. Giants",
+  "rules": "In the upcoming NFL football game between Saints and Giants, scheduled for October 18 at 1:00PM ET:\nThis market will resolve to \"Saints\" if Saints win the game.\nThis market will resolve to \"Giants\" if Giants win the game.\nOvertime is included if played.\nIf the game ends in a tie, this market will resolve 50-50.\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\n\nVERDICT MAPPING: answer YES if this market resolves to \"Saints\"; answer NO if it resolves to \"Giants\".",
   "sources": [
-    "fixture://real_panel"
+    "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018",
+    "https://github.com/nflverse/nfldata"
   ],
   "prompt_template_hash": "fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f",
   "resolvers": [
@@ -38,20 +41,26 @@ See deploy/TESTNET.md for near CLI steps.
     "0xfe0071895500a9755c18044948ab4f4e1a7f337e",
     "0x3b753b4406613c5e70ae640508632b600424fa0c"
   ],
-  "deadline_ns": "<now_ns + small delta; then wait>",
+  "deadline_ns": "<set to ~now_ns, then WAIT until block_timestamp >= deadline before commit_evidence>",
   "dispute_window_ns": 3600000000000,
-  "dispute_bond": "100000000000000000000000"
+  "dispute_bond": "1000000000000000000000000",
+  "escalation_owner": "<APP_ESCALATION_ACCOUNT.testnet — NOT the protocol owner unless you explicitly choose them>"
 }
-prompt_template_hash (from fixture): fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f
-evidence_bundle_hash (from fixture header): 9e9bc4f0715b3fc6220790a8bf107538b1de99e26d7795a34d6a499aca925555
+NOTE: only escalation_owner may resolve_dispute for this market; protocol owner cannot unless selected.
+prompt_template_hash: fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f
+evidence_bundle_hash: ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7
+polymarket_id (off-chain reference): 4329887
+dispute_bond: 1 NEAR (1000000000000000000000000 yocto)
 
 === 4) commit_evidence (relayer/owner) AFTER deadline, BEFORE votes ===
 {
   "market_id": 0,
   "round": 0,
-  "evidence_bundle_hash": "9e9bc4f0715b3fc6220790a8bf107538b1de99e26d7795a34d6a499aca925555",
-  "evidence_uri": "fixture://evidence/9e9bc4f0715b3fc6220790a8bf107538b1de99e26d7795a34d6a499aca925555"
+  "evidence_bundle_hash": "ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7",
+  "evidence_uri": "PENDING_COMMIT_SHA://fixtures/evidence/ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7.json"
 }
+NOTE: evidence_uri points at GitHub raw. It 404s until YOU approve a push that includes
+      fixtures/evidence/ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7.json (already prepared locally). Do not invent fixture:// URIs.
 
 === 5) submit_verdict x3 (relayer/owner) — byte-exact request_raw/response_raw/signature ===
 # model=Qwen/Qwen3.8-27B signer=0x835ab53d20294ef795906dff21ae4c045336aa26 outcome=YES
@@ -64,8 +73,13 @@ evidence_bundle_hash (from fixture header): 9e9bc4f0715b3fc6220790a8bf107538b1de
 {"market_id": 0, "request_raw": "{\"model\": \"z-ai/glm-5.3-flash\", \"temperature\": 0, \"seed\": 1114, \"messages\": [{\"role\": \"system\", \"content\": \"You resolve prediction markets strictly from the SOURCE SNAPSHOTS in the evidence bundle, applying the market RULES literally. Do not use outs …(truncated; use full fields from contract/testdata/real_panel.json)
 ---
 
+=== 6) optional dispute (after Proposed) ===
+near contract call-function as-transaction <contract> dispute json-args '{"market_id":0}' \
+  prepaid-gas '50.0 Tgas' attached-deposit '1 NEAR' sign-as <your>.testnet ...
+(Only after human wallet signing; agent never holds keys.)
+
 === NOTE ===
 No private keys in this repo. Sign deploy/init/calls with your own testnet keychain.
 After txs confirm, paste explorer links under README 'Testnet deploy'.
 
-wrote out/deploy_prepare/output.txt
+wrote out/deploy_prepare/output.txt and args.json

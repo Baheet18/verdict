@@ -43,15 +43,17 @@ near contract call-function as-transaction <contract> new \
 
 # register_signer for each panel address (address, model, attestation_report_sha256)
 # register_relayer <your>.testnet
-# create_market ...
+# create_market ... (must include escalation_owner AccountId)
 # commit_evidence ...
 # submit_verdict x3 ...
+# resolve_dispute ... (ONLY the market's escalation_owner — not protocol owner unless selected)
 ```
 
 Exact helper args are printed by `python scripts/deploy_prepare.py` (reads
 `contract/testdata/real_panel.json` — round 6: Saints vs. Giants sports market,
-`dispute_bond` = 1 NEAR, evidence_uri = GitHub raw after push; does NOT sign).
+`dispute_bond` = 1 NEAR, `escalation_owner` required, evidence_uri = GitHub raw after push; does NOT sign).
 Deploy to a **fresh** contract so market_id=0 matches the signed headers.
+`baheet.testnet` is the old prototype (owner-controlled dispute fallback) and is **not** upgraded in place.
 
 ## 5. Put explorer links in README
 After each successful tx, paste the NearBlocks / Near Explorer URL into README

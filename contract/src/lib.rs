@@ -1,10 +1,14 @@
 //! Verdict: prediction markets settled by TEE-attested AI resolvers.
 //! A verdict is accepted only if its ECDSA signature (EIP-191 over
-//! "<model>:<sha256(request_raw)>:<sha256(response_raw)>") recovers to a registered,
-//! hardware-attested signer registered for that model, and ALL resolvers agree.
+//! "<model>:<sha256(request_raw)>:<sha256(response_raw)>") recovers to a still-registered,
+//! hardware-attested signer whose model matches this market's creation-time snapshot,
+//! and ALL resolvers agree.
 use near_sdk::borsh::BorshSerialize;
 use near_sdk::store::{IterableMap, LookupMap, LookupSet, Vector};
 use near_sdk::{env, near, require, AccountId, BorshStorageKey, NearToken, PanicOnDefault, Promise};
+
+/// Grace after `deadline_ns` before a still-Open market may be escalated by its escalation owner (3 days).
+pub const STALE_GRACE_NS: u64 = 3 * 24 * 60 * 60 * 1_000_000_000;
 
 #[near(serializers=[borsh, json])]
 #[derive(Clone, Copy, PartialEq, Eq, Debug)]
@@ -41,11 +45,21 @@ pub struct Market {
     /// sha256 of the exact system prompt (resolver instructions), committed at creation.
     pub prompt_template_hash: String,
     pub sources: Vec<String>,
-    pub resolvers: Vec<String>, // lowercase 0x-addresses; each maps to exactly one model in `signers`
+    pub resolvers: Vec<String>, // lowercase 0x-addresses, sorted
+    /// Snapshot taken at create_market: resolver_models[i] is the model `resolvers[i]` was registered
+    /// for at creation. submit_verdict checks the request model against THIS snapshot (so later
+    /// register_signer cannot change a live market's model binding) and also requires the signer
+    /// to still be in `signers` (so remove_signer revokes the key on live markets).
+    pub resolver_models: Vec<String>,
     pub threshold: u32,
     pub deadline_ns: u64,
     pub dispute_window_ns: u64,
     pub dispute_bond: NearToken,
+    /// Account authorized to resolve Escalated/Disputed status for THIS market only.
+    /// Set at creation by the integrating app (team, multisig, DAO, or jury). Immutable.
+    /// The protocol `owner` cannot settle escalations/disputes unless selected here, but is still trusted
+    /// for signer registration and evidence commitment (via relayers / evidence replacement).
+    pub escalation_owner: AccountId,
     pub yes_pool: NearToken,
     pub no_pool: NearToken,
     /// Incremented when a unanimous TOO_EARLY clears the votes; requests must name the current round.
@@ -390,20 +404,28 @@ impl Verdict {
 
     /// Commits market_id (the returned index), sha256(rules) and the prompt template hash.
     /// Auto-verdict requires ALL resolvers to agree (threshold == resolver count).
+    /// `escalation_owner` is the ONLY account that may call `resolve_dispute` for this market
+    /// (app team / multisig / DAO / jury). Protocol owner cannot settle escalations/disputes unless selected (still trusted for signers/evidence).
     #[allow(clippy::too_many_arguments)]
     pub fn create_market(&mut self, question: String, rules: String, sources: Vec<String>, prompt_template_hash: String,
-                         resolvers: Vec<String>, deadline_ns: u64, dispute_window_ns: u64, dispute_bond: NearToken) -> u32 {
+                         resolvers: Vec<String>, deadline_ns: u64, dispute_window_ns: u64, dispute_bond: NearToken,
+                         escalation_owner: AccountId) -> u32 {
         let mut rs: Vec<String> = resolvers.iter().map(|a| hex20(a)).collect();
         rs.sort(); rs.dedup();
         require!(!rs.is_empty(), "bad resolver set");
-        for r in &rs { require!(self.signers.contains_key(r), "resolver not registered"); }
+        let resolver_models: Vec<String> = rs.iter().map(|r| {
+            let m = self.signers.get(r).cloned().unwrap_or_else(|| env::panic_str("resolver not registered"));
+            require!(!m.is_empty(), "resolver has no model");
+            m
+        }).collect();
         require!(deadline_ns > env::block_timestamp(), "deadline in the past");
         require!(!sources.is_empty(), "lock at least one source");
         let rules_hash = sha_hex(rules.as_bytes());
         let pth = hex32(&prompt_template_hash, "prompt_template_hash");
         let threshold = rs.len() as u32;
-        self.markets.push(Market { question, rules, rules_hash, prompt_template_hash: pth, sources, resolvers: rs, threshold,
-            deadline_ns, dispute_window_ns, dispute_bond, yes_pool: NearToken::from_yoctonear(0), no_pool: NearToken::from_yoctonear(0),
+        self.markets.push(Market { question, rules, rules_hash, prompt_template_hash: pth, sources, resolvers: rs, resolver_models, threshold,
+            deadline_ns, dispute_window_ns, dispute_bond, escalation_owner,
+            yes_pool: NearToken::from_yoctonear(0), no_pool: NearToken::from_yoctonear(0),
             round: 0, round_evidence_hash: None, round_evidence_uri: None, votes: vec![], status: Status::Open });
         self.markets.len() - 1
     }
@@ -440,12 +462,18 @@ impl Verdict {
         let req_h = sha_hex(request_raw.as_bytes());
         let resp_h = sha_hex(response_raw.as_bytes());
         // Build the text with the model named in the request, recover, then require that the
-        // recovered key is registered for exactly that model (signer -> model).
+        // recovered key was bound to exactly that model in THIS market's creation-time snapshot.
         let text = format!("{req_model}:{req_h}:{resp_h}");
         let signer = recover_signer(&text, &signature).unwrap_or_else(|| env::panic_str("bad signature"));
-        let reg_model = self.signers.get(&signer).cloned().unwrap_or_else(|| env::panic_str("signer not attested/registered"));
-        require!(reg_model == req_model, "signer is registered for a different model");
-        require!(m.resolvers.contains(&signer), "signer not in market resolver set");
+        let idx = match m.resolvers.iter().position(|r| *r == signer) {
+            Some(i) => i,
+            None if self.signers.contains_key(&signer) => env::panic_str("signer not in market resolver set"),
+            None => env::panic_str("signer not attested/registered"),
+        };
+        // Revocation applies to live markets: the key must still be registered globally...
+        require!(self.signers.contains_key(&signer), "signer not attested/registered (revoked)");
+        // ...but the model binding comes only from this market's creation-time snapshot.
+        require!(m.resolver_models[idx] == req_model, "signer is registered for a different model");
         let text_h = env::sha256(text.as_bytes());
         require!(!self.used_signed.contains(&text_h), "signed response already used");
         require!(!m.votes.iter().any(|v| v.signer == signer), "signer already voted");
@@ -467,6 +495,17 @@ impl Verdict {
         outcome
     }
 
+    /// Liveness: if a market is still Open `STALE_GRACE_NS` after its deadline (e.g. a resolver was
+    /// revoked or the relayer failed), its `escalation_owner` — and only it — may move it to
+    /// Escalated, after which `resolve_dispute` settles it as usual. Protocol owner gets no new power.
+    pub fn escalate_stale(&mut self, market_id: u32) {
+        let m = self.markets.get_mut(market_id).expect("no market");
+        require!(env::predecessor_account_id() == m.escalation_owner, "escalation owner only");
+        require!(m.status == Status::Open, "market not open");
+        require!(env::block_timestamp() >= m.deadline_ns.saturating_add(STALE_GRACE_NS), "grace period not elapsed");
+        m.status = Status::Escalated;
+    }
+
     #[payable]
     pub fn dispute(&mut self, market_id: u32) {
         let m = self.markets.get_mut(market_id).expect("no market");
@@ -476,12 +515,14 @@ impl Verdict {
         m.status = Status::Disputed { proposed: outcome, disputer: env::predecessor_account_id(), bond: env::attached_deposit() };
     }
 
-    /// Post-dispute / escalation policy: owner re-runs a bigger attested panel off-chain (e.g. 5 models,
-    /// evidence bundle published), then posts the result here. AMBIGUOUS => everyone is refunded.
-    /// Human fallback. Disputer gets bond back if right; else bond goes to the winning pool.
+    /// Post-dispute / escalation policy: the market's `escalation_owner` re-runs a bigger attested
+    /// panel off-chain (e.g. 5 models, evidence bundle published), then posts the result here.
+    /// AMBIGUOUS => everyone is refunded. Disputer gets bond back if right; else bond goes to the
+    /// winning pool. Protocol `owner` cannot call this unless it was selected as escalation_owner
+    /// for this specific market.
     pub fn resolve_dispute(&mut self, market_id: u32, outcome: Outcome) -> Option<Promise> {
-        self.only_owner();
         let m = self.markets.get_mut(market_id).expect("no market");
+        require!(env::predecessor_account_id() == m.escalation_owner, "escalation owner only");
         if m.status == Status::Escalated { m.status = Status::Final { outcome }; return None; }
         let Status::Disputed { proposed, disputer, bond } = m.status.clone() else { env::panic_str("not disputed/escalated") };
         m.status = Status::Final { outcome };
