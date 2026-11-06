@@ -1,7 +1,8 @@
 //! Verdict: prediction markets settled by TEE-attested AI resolvers.
 //! A verdict is accepted only if its ECDSA signature (EIP-191 over
-//! "<model>:<sha256(request_raw)>:<sha256(response_raw)>") recovers to a registered,
-//! hardware-attested signer registered for that model, and ALL resolvers agree.
+//! "<model>:<sha256(request_raw)>:<sha256(response_raw)>") recovers to a still-registered,
+//! hardware-attested signer whose model matches this market's creation-time snapshot,
+//! and ALL resolvers agree.
 use near_sdk::borsh::BorshSerialize;
 use near_sdk::store::{IterableMap, LookupMap, LookupSet, Vector};
 use near_sdk::{env, near, require, AccountId, BorshStorageKey, NearToken, PanicOnDefault, Promise};
@@ -46,8 +47,9 @@ pub struct Market {
     pub sources: Vec<String>,
     pub resolvers: Vec<String>, // lowercase 0x-addresses, sorted
     /// Snapshot taken at create_market: resolver_models[i] is the model `resolvers[i]` was registered
-    /// for at creation. submit_verdict checks against THIS snapshot, so later register_signer /
-    /// remove_signer calls cannot change a live market's resolver -> model binding.
+    /// for at creation. submit_verdict checks the request model against THIS snapshot (so later
+    /// register_signer cannot change a live market's model binding) and also requires the signer
+    /// to still be in `signers` (so remove_signer revokes the key on live markets).
     pub resolver_models: Vec<String>,
     pub threshold: u32,
     pub deadline_ns: u64,
