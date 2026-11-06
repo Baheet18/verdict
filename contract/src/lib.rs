@@ -41,14 +41,19 @@ pub struct Market {
     /// sha256 of the exact system prompt (resolver instructions), committed at creation.
     pub prompt_template_hash: String,
     pub sources: Vec<String>,
-    pub resolvers: Vec<String>, // lowercase 0x-addresses; each maps to exactly one model in `signers`
+    pub resolvers: Vec<String>, // lowercase 0x-addresses, sorted
+    /// Snapshot taken at create_market: resolver_models[i] is the model `resolvers[i]` was registered
+    /// for at creation. submit_verdict checks against THIS snapshot, so later register_signer /
+    /// remove_signer calls cannot change a live market's resolver -> model binding.
+    pub resolver_models: Vec<String>,
     pub threshold: u32,
     pub deadline_ns: u64,
     pub dispute_window_ns: u64,
     pub dispute_bond: NearToken,
     /// Account authorized to resolve Escalated/Disputed status for THIS market only.
     /// Set at creation by the integrating app (team, multisig, DAO, or jury). Immutable.
-    /// The protocol `owner` has no outcome authority unless explicitly selected here.
+    /// The protocol `owner` cannot settle escalations/disputes unless selected here, but is still trusted
+    /// for signer registration and evidence commitment (via relayers / evidence replacement).
     pub escalation_owner: AccountId,
     pub yes_pool: NearToken,
     pub no_pool: NearToken,
@@ -395,7 +400,7 @@ impl Verdict {
     /// Commits market_id (the returned index), sha256(rules) and the prompt template hash.
     /// Auto-verdict requires ALL resolvers to agree (threshold == resolver count).
     /// `escalation_owner` is the ONLY account that may call `resolve_dispute` for this market
-    /// (app team / multisig / DAO / jury). Protocol owner has no outcome authority unless selected.
+    /// (app team / multisig / DAO / jury). Protocol owner cannot settle escalations/disputes unless selected (still trusted for signers/evidence).
     #[allow(clippy::too_many_arguments)]
     pub fn create_market(&mut self, question: String, rules: String, sources: Vec<String>, prompt_template_hash: String,
                          resolvers: Vec<String>, deadline_ns: u64, dispute_window_ns: u64, dispute_bond: NearToken,
@@ -403,13 +408,17 @@ impl Verdict {
         let mut rs: Vec<String> = resolvers.iter().map(|a| hex20(a)).collect();
         rs.sort(); rs.dedup();
         require!(!rs.is_empty(), "bad resolver set");
-        for r in &rs { require!(self.signers.contains_key(r), "resolver not registered"); }
+        let resolver_models: Vec<String> = rs.iter().map(|r| {
+            let m = self.signers.get(r).cloned().unwrap_or_else(|| env::panic_str("resolver not registered"));
+            require!(!m.is_empty(), "resolver has no model");
+            m
+        }).collect();
         require!(deadline_ns > env::block_timestamp(), "deadline in the past");
         require!(!sources.is_empty(), "lock at least one source");
         let rules_hash = sha_hex(rules.as_bytes());
         let pth = hex32(&prompt_template_hash, "prompt_template_hash");
         let threshold = rs.len() as u32;
-        self.markets.push(Market { question, rules, rules_hash, prompt_template_hash: pth, sources, resolvers: rs, threshold,
+        self.markets.push(Market { question, rules, rules_hash, prompt_template_hash: pth, sources, resolvers: rs, resolver_models, threshold,
             deadline_ns, dispute_window_ns, dispute_bond, escalation_owner,
             yes_pool: NearToken::from_yoctonear(0), no_pool: NearToken::from_yoctonear(0),
             round: 0, round_evidence_hash: None, round_evidence_uri: None, votes: vec![], status: Status::Open });
@@ -448,12 +457,15 @@ impl Verdict {
         let req_h = sha_hex(request_raw.as_bytes());
         let resp_h = sha_hex(response_raw.as_bytes());
         // Build the text with the model named in the request, recover, then require that the
-        // recovered key is registered for exactly that model (signer -> model).
+        // recovered key was bound to exactly that model in THIS market's creation-time snapshot.
         let text = format!("{req_model}:{req_h}:{resp_h}");
         let signer = recover_signer(&text, &signature).unwrap_or_else(|| env::panic_str("bad signature"));
-        let reg_model = self.signers.get(&signer).cloned().unwrap_or_else(|| env::panic_str("signer not attested/registered"));
-        require!(reg_model == req_model, "signer is registered for a different model");
-        require!(m.resolvers.contains(&signer), "signer not in market resolver set");
+        let idx = match m.resolvers.iter().position(|r| *r == signer) {
+            Some(i) => i,
+            None if self.signers.contains_key(&signer) => env::panic_str("signer not in market resolver set"),
+            None => env::panic_str("signer not attested/registered"),
+        };
+        require!(m.resolver_models[idx] == req_model, "signer is registered for a different model");
         let text_h = env::sha256(text.as_bytes());
         require!(!self.used_signed.contains(&text_h), "signed response already used");
         require!(!m.votes.iter().any(|v| v.signer == signer), "signer already voted");

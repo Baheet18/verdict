@@ -180,11 +180,43 @@ fn signer_model_stored() {
 fn unregistered_key_rejected() { let (mut c, id) = setup(); ctx(0, DAY, near(0)); vote(&mut c, id, &v("yes_3")); }
 
 #[test]
-#[should_panic(expected = "signer not attested/registered")]
-fn removed_signer_rejected() {
+fn removed_signer_does_not_change_live_market_snapshot() {
+    // remove_signer after creation must not alter an existing market's resolver binding.
     let (mut c, id) = setup();
     ctx(0, 0, near(0)); c.remove_signer(s(&vec_file()["signers"][0], "address"));
-    ctx(0, DAY, near(0)); vote(&mut c, id, &v("yes_0"));
+    ctx(0, DAY, near(0)); unanimous_yes(&mut c, id);
+}
+
+#[test]
+#[should_panic(expected = "resolver not registered")]
+fn removed_signer_cannot_join_new_market() {
+    let (mut c, _) = setup();
+    let f = vec_file(); let sg = f["signers"].as_array().unwrap();
+    ctx(0, 0, near(0)); c.remove_signer(s(&sg[0], "address"));
+    let rs = sg[..3].iter().map(|x| s(x, "address")).collect();
+    c.create_market(s(&f, "question"), s(&f, "rules"), vec!["src".into()], s(&f, "prompt_template_hash"), rs, DAY, DAY, near(1), accounts(0));
+}
+
+#[test]
+fn reregistering_resolver_model_after_creation_does_not_change_market() {
+    let (mut c, id) = setup();
+    let f = vec_file(); let sg = f["signers"].as_array().unwrap();
+    // Re-bind key 0 (Qwen) to DeepSeek's model after the market exists.
+    ctx(0, 0, near(0)); c.register_signer(s(&sg[0], "address"), s(&sg[1], "model"), "cd".repeat(32));
+    assert_eq!(c.get_signer_model(s(&sg[0], "address")), Some(s(&sg[1], "model")));
+    // Votes still validate against the creation-time snapshot and settle the market.
+    ctx(0, DAY, near(0)); unanimous_yes(&mut c, id);
+}
+
+#[test]
+#[should_panic(expected = "signer is registered for a different model")]
+fn reregistered_model_binding_not_accepted_for_existing_market() {
+    let (mut c, id) = setup();
+    let f = vec_file(); let sg = f["signers"].as_array().unwrap();
+    // Re-bind key 1 (DeepSeek) to Qwen; "model_swap_1" is key 1 signing as Qwen. Global map now allows
+    // it, but the market snapshot says key 1 = DeepSeek, so it must be rejected.
+    ctx(0, 0, near(0)); c.register_signer(s(&sg[1], "address"), s(&sg[0], "model"), "cd".repeat(32));
+    ctx(0, DAY, near(0)); commit_for(&mut c, id, &v("model_swap_1")); vote(&mut c, id, &v("model_swap_1"));
 }
 
 // ---------- replay (item 3) ----------
