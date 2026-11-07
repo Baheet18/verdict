@@ -1,405 +1,1004 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<title>Verdict — AI resolution layer</title>
-<meta name="description" content="Verdict is an AI resolution layer other prediction-market apps plug into. They keep market creation and trading; Verdict only resolves.">
-<!--
-  Static page. Open this file, or serve the site/ directory
-  (GitHub Pages or any static host). No build. No wallet. No keys.
--->
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#faf8f4">
+<title>Verdict — Resolution layer for prediction markets</title>
+<meta name="description" content="Verdict settles a prediction market when three models agree on locked evidence. When they don't, it escalates to the app's arbiter instead of guessing.">
+<meta property="og:title" content="Verdict — Resolution layer for prediction markets">
+<meta property="og:description" content="Verdict settles a prediction market when three models agree on locked evidence. When they don't, it escalates to the app's arbiter instead of guessing.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Verdict">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Verdict settles a market when three models agree, and escalates instead of guessing.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Verdict — Resolution layer for prediction markets">
+<meta name="twitter:description" content="Verdict settles a prediction market when three models agree on locked evidence. When they don't, it escalates to the app's arbiter instead of guessing.">
+<meta name="twitter:image" content="og-image.png">
+<meta name="twitter:image:alt" content="Verdict settles a market when three models agree, and escalates instead of guessing.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+document.documentElement.classList.add("js");
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.documentElement.classList.add("reduced");
+}
+</script>
 <style>
-  :root {
-    --bg: #101214;
-    --raise: #181b1f;
-    --raise-2: #1e2228;
-    --line: #31363d;
-    --text: #e7e4dc;
-    --muted: #a8a399;
-    --link: #e0d3bc;
-    --mark: #cbbfa6;
-    --danger-quiet: #c4b4a4;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: ui-sans-serif, system-ui, "Segoe UI", sans-serif;
-    font-size: 1.02rem;
-    line-height: 1.55;
-  }
-  a { color: var(--link); text-underline-offset: 0.18em; }
-  a:hover { color: #f3eadc; }
-  a:focus-visible, button:focus-visible {
-    outline: 2px solid var(--link);
-    outline-offset: 3px;
-  }
-  code, .mono {
-    font-family: ui-monospace, "SFMono-Regular", "Cascadia Code", Menlo, Consolas, monospace;
-    font-size: 0.86em;
-  }
-  code {
-    overflow-wrap: anywhere;
-    color: var(--text);
-  }
-  .skip {
+:root {
+  --bg: #faf8f4;
+  --ink: #1a1714;
+  --soft: #3d3832;
+  --mute: #6f675e;
+  --line: #e6e0d6;
+  --red: #a3261d;
+  --green: #2f6b3a;
+  --card: #fff;
+  --shadow: 0 24px 50px -32px rgba(40, 30, 20, .45);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 Inter, system-ui, sans-serif;
+}
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.skip {
+  position: absolute;
+  left: 12px;
+  top: -48px;
+  background: var(--ink);
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 60;
+}
+.skip:focus { top: 12px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+.mono { font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; }
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--mute);
+  font-weight: 600;
+}
+h1, h2, h3, .logo, .num, .stat .big, .answer h3 {
+  font-family: Fraunces, Georgia, "Times New Roman", serif;
+}
+h1, h2, h3 { font-weight: 600; line-height: 1.05; margin: 0; }
+h1 { font-size: clamp(40px, 5.5vw, 74px); letter-spacing: -.03em; }
+h2 { font-size: clamp(32px, 4vw, 52px); margin: 12px 0 18px; letter-spacing: -.02em; }
+h3 { font-size: 28px; letter-spacing: -.02em; }
+em { color: var(--red); font-style: italic; font-weight: 500; }
+header.top {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(250, 248, 244, .92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  position: relative;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+.logo span {
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+.links { display: flex; gap: 22px; font-size: 14px; }
+.links a { text-decoration: none; color: var(--mute); }
+.links a:hover { color: var(--ink); }
+.nav-tools { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+.pill {
+  font-size: 13px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 99px;
+  padding: 6px 12px;
+  white-space: nowrap;
+}
+.pill:before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  margin-right: 8px;
+}
+.menu-btn {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.menu-btn i { display: block; width: 16px; height: 1.5px; background: var(--ink); position: relative; }
+.menu-btn i:before, .menu-btn i:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 1.5px;
+  background: var(--ink);
+}
+.menu-btn i:before { top: -5px; }
+.menu-btn i:after { top: 5px; }
+.menu-btn[aria-expanded="true"] i { background: transparent; }
+.menu-btn[aria-expanded="true"] i:before { top: 0; transform: rotate(45deg); }
+.menu-btn[aria-expanded="true"] i:after { top: 0; transform: rotate(-45deg); }
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 64px;
+  align-items: center;
+  padding: 72px 0 96px;
+}
+.sub { font-size: 18px; color: var(--soft); max-width: 540px; margin: 22px 0 28px; }
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0 10px 10px 0;
+  border: 1px solid var(--ink);
+  background: #fff;
+}
+.btn:hover { background: #fffdf9; }
+.dark { background: var(--ink); color: #fff; }
+.dark:hover { background: #2c2622; }
+.player {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 22px 22px 18px;
+}
+.player-top, .market-head, .answer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.tag {
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--red);
+  border: 1px solid #ead8d4;
+  background: #fbf6f4;
+  border-radius: 99px;
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+.tabs { display: none; gap: 8px; margin: 16px 0 8px; }
+.js .tabs { display: flex; }
+.tabs button {
+  font: inherit;
+  font-size: 14px;
+  border: 1px solid var(--line);
+  background: transparent;
+  border-radius: 99px;
+  padding: 7px 12px;
+  cursor: pointer;
+  color: var(--mute);
+}
+.tabs button[aria-selected="true"] {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+.ex-label { font-size: 15px; margin: 22px 0 8px; }
+.js .ex-label { display: none; }
+.js #ex-split { display: none; }
+.js #ex-split.is-on { display: block; }
+.js #ex-agree.is-off { display: none; }
+.steps-ex { list-style: none; margin: 8px 0 0; padding: 0; min-height: 360px; }
+.steps-ex li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 8px;
+  padding: 9px 0;
+  border-top: 1px solid var(--line);
+  color: var(--mute);
+}
+.steps-ex li:first-child { border-top: 0; }
+.num { color: var(--red); font-style: italic; font-size: 18px; }
+.steps-ex strong { display: block; color: var(--ink); font-weight: 600; font-size: 15px; }
+.steps-ex p { margin: 4px 0 0; font-size: 14px; color: var(--soft); }
+.js .steps-ex li p, .js .steps-ex .chips, .js .steps-ex .bar { display: none; }
+.js .steps-ex li.is-now { color: var(--ink); }
+.js .steps-ex li.is-now p, .js .steps-ex li.is-now .chips { display: block; }
+.js .steps-ex li.is-done strong { color: var(--soft); }
+.js.reduced .steps-ex li p, .js.reduced .steps-ex .chips { display: block; }
+.js.reduced .steps-ex { min-height: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chips span {
+  font-size: 12px;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 3px 8px;
+  color: var(--soft);
+  background: var(--bg);
+}
+.chips b { font-weight: 600; color: var(--green); }
+.chips b.no { color: var(--red); }
+.chips b.amb { color: var(--ink); }
+.bar { height: 2px; background: var(--red); margin-top: 10px; transform-origin: left center; }
+.js .steps-ex li.is-now .bar { display: block; animation: grow 1.7s linear; }
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+section { padding: 104px 0; border-top: 1px solid var(--line); scroll-margin-top: 84px; }
+.lead { font-size: 19px; max-width: 720px; color: var(--soft); margin: 0; }
+.answers, .steps, .stats, .two { display: grid; gap: 18px; margin-top: 36px; }
+.answers, .steps { grid-template-columns: repeat(3, 1fr); }
+.stats { grid-template-columns: repeat(4, 1fr); }
+.two { grid-template-columns: 1fr 1fr; }
+.card, .answer, .step {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+}
+.answer h3, .step strong { display: block; margin: 8px 0; }
+.answer p, .step span, .small { color: var(--mute); }
+.answer p, .step span { margin: 0; font-size: 15px; }
+.kicker { color: var(--red); font-family: Fraunces, Georgia, serif; font-style: italic; font-size: 18px; }
+.chain { margin: 22px 0 0; color: var(--soft); font-size: 15px; }
+.honest {
+  border-left: 3px solid var(--red);
+  padding: 12px 16px;
+  background: #fff;
+  font-size: 15px;
+  margin: 28px 0 0;
+}
+.market-head { margin-bottom: 8px; }
+.q { margin: 8px 0 4px; font-size: 26px; }
+.stamp {
+  flex: 0 0 auto;
+  border: 2px solid var(--green);
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: .12em;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transform: rotate(-6deg);
+}
+.stamp[data-kind="escalated"], .stamp[data-kind="disputed"] { color: var(--red); border-color: var(--red); }
+.stamp[data-kind="open"], .stamp[data-kind="proposed"] { color: var(--ink); border-color: var(--ink); }
+dl { display: grid; grid-template-columns: 116px 1fr; gap: 8px 14px; font-size: 14px; margin: 16px 0 0; }
+dt { color: var(--mute); }
+dd { margin: 0; min-width: 0; }
+.hash { font-size: 12px; word-break: break-all; }
+.votes { list-style: none; margin: 0; padding: 0; }
+.votes li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 10px;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+}
+.votes li:first-child { border-top: 0; padding-top: 0; }
+.votes .out { font-weight: 600; font-size: 13px; }
+.votes .out.yes { color: var(--green); }
+.votes .out.no { color: var(--red); }
+.votes .sig { grid-column: 1 / -1; color: var(--mute); font-size: 12px; }
+.txs a { display: inline-block; margin: 0 12px 4px 0; color: var(--red); }
+.stat .big { font-size: 40px; line-height: 1; margin-bottom: 8px; }
+pre {
+  background: #1a1714;
+  color: #f1ece4;
+  border-radius: 14px;
+  padding: 22px;
+  overflow: auto;
+  font: 13.5px/1.7 "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+pre i { color: #c9a27a; font-style: normal; }
+footer {
+  border-top: 1px solid var(--line);
+  padding: 36px 0 48px;
+  color: var(--mute);
+  font-size: 14px;
+}
+.footer-row { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; align-items: end; }
+footer a { color: var(--soft); }
+footer p { margin: 6px 0 0; max-width: 520px; }
+@media (max-width: 980px) {
+  .js .menu-btn { display: inline-flex; }
+  .js .links {
+    display: none;
     position: absolute;
-    left: 0.75rem;
-    top: -3rem;
-    background: var(--text);
-    color: var(--bg);
-    padding: 0.4rem 0.7rem;
-  }
-  .skip:focus { top: 0.75rem; z-index: 2; }
-  .wrap {
-    width: min(68rem, calc(100% - 2rem));
-    margin: 0 auto;
-  }
-  header.top {
-    border-bottom: 1px solid var(--line);
-    position: sticky;
-    top: 0;
-    background: rgba(16, 18, 20, 0.92);
-    backdrop-filter: blur(8px);
-  }
-  .top-inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 0.75rem 1.5rem;
-    padding: 0.85rem 0;
-  }
-  .mark {
-    color: var(--text);
-    text-decoration: none;
-    letter-spacing: 0.14em;
-    font-size: 0.82rem;
-    font-weight: 650;
-  }
-  nav { display: flex; flex-wrap: wrap; gap: 0.85rem 1.15rem; }
-  nav a { color: var(--muted); text-decoration: none; font-size: 0.92rem; }
-  nav a:hover { color: var(--text); text-decoration: underline; }
-  main { padding-bottom: 4rem; }
-  .hero { padding: 2.75rem 0 1.5rem; max-width: 44rem; }
-  h1 {
-    font-family: Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, serif;
-    font-weight: 500;
-    font-size: clamp(1.55rem, 2.7vw, 2.15rem);
-    line-height: 1.32;
-    letter-spacing: -0.015em;
-    margin: 0 0 1rem;
-  }
-  .lede {
-    margin: 0;
-    color: var(--muted);
-  }
-  h2 {
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-weight: 650;
-    color: var(--mark);
-    margin: 0 0 0.9rem;
-  }
-  section { padding: 1.6rem 0; border-top: 1px solid var(--line); scroll-margin-top: 4.25rem; }
-  .strip {
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    z-index: 40;
+    flex-direction: column;
+    gap: 0;
+    padding: 4px 16px 8px;
+    background: #faf8f4;
     border: 1px solid var(--line);
-    background: var(--raise);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
   }
-  .contract-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem 1.25rem;
-    padding: 0.85rem 1rem;
-    border-bottom: 1px solid var(--line);
-    color: var(--muted);
-    margin: 0;
-  }
-  .markets {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .market {
-    padding: 1rem 1rem 1.1rem;
-    margin: 0;
-  }
-  .market + .market { border-left: 1px solid var(--line); }
-  .market h3 {
-    margin: 0 0 0.35rem;
-    font-size: 1.15rem;
-    font-weight: 600;
-  }
-  .meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem 0.55rem;
-    align-items: center;
-    margin: 0 0 0.7rem;
-    color: var(--muted);
-    font-size: 0.92rem;
-  }
-  .tag {
-    border: 1px solid var(--line);
-    padding: 0.05rem 0.4rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--text);
-  }
-  .detail {
-    margin: 0.9rem 0 0;
-    display: grid;
-    grid-template-columns: minmax(9.5rem, 14.5rem) 1fr;
-    gap: 0.45rem 0.9rem;
-    font-size: 0.95rem;
-  }
-  .detail dt { color: var(--muted); margin: 0; }
-  .detail dd { margin: 0; overflow-wrap: anywhere; }
-  .detail .note { display: block; margin-top: 0.2rem; }
-  .market .detail { grid-template-columns: 1fr; gap: 0.12rem; }
-  .market .detail dt {
-    margin-top: 0.5rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-  .market .detail a {
-    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-    font-size: 0.78rem;
-  }
-  .record .lead { margin: 0; color: var(--muted); }
-  .record {
-    margin-top: 0.9rem;
-    border: 1px solid var(--line);
-    background: var(--raise);
-    padding: 1rem 1rem 1.1rem;
-  }
-  .record h3 { margin: 0 0 0.7rem; font-size: 1.05rem; font-weight: 600; }
-  .record p { margin: 0.8rem 0 0; color: var(--muted); }
-  .steps, .plain {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: grid;
-    gap: 0.7rem;
-  }
-  .steps { grid-template-columns: repeat(3, 1fr); }
-  .steps li, .plain li {
-    border: 1px solid var(--line);
-    background: var(--raise);
-    padding: 0.8rem 0.9rem 0.9rem;
-  }
-  .steps li { min-height: 100%; }
-  .n {
-    display: block;
-    color: var(--mark);
-    font-family: ui-monospace, Menlo, Consolas, monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
-    margin-bottom: 0.3rem;
-  }
-  .steps strong, .plain strong { display: block; margin-bottom: 0.25rem; }
-  .steps span, .plain span, .note { color: var(--muted); }
-  .docs { margin: 0.9rem 0 0; padding: 0; list-style: none; }
-  .docs li { margin: 0.3rem 0; }
-  .limits { margin: 0; padding: 0; list-style: none; }
-  .limits li {
-    padding: 0.65rem 0;
-    border-bottom: 1px solid var(--line);
-    color: var(--muted);
-  }
-  .limits strong { color: var(--text); font-weight: 600; }
-  footer {
-    border-top: 1px solid var(--line);
-    padding: 1.25rem 0 2rem;
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-  footer p { margin: 0.3rem 0; }
-  @media (max-width: 860px) {
-    .markets, .steps { grid-template-columns: 1fr; }
-    .market + .market { border-left: 0; border-top: 1px solid var(--line); }
-    .detail { grid-template-columns: 1fr; gap: 0.15rem 0; }
-    .detail dd { margin-bottom: 0.7rem; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
+  .js .links.open { display: flex; }
+  .js .links a { padding: 13px 0; border-top: 1px solid var(--line); color: var(--ink); font-size: 16px; }
+  .js .links a:first-child { border-top: 0; }
+  .hero, .two, .answers, .steps { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .hero { padding: 48px 0 72px; gap: 36px; }
+  .steps-ex { min-height: 0; }
+  section { padding: 80px 0; }
+}
+@media (max-width: 560px) {
+  .wrap { padding: 0 18px; }
+  .stats, dl { grid-template-columns: 1fr; }
+  .pill { font-size: 11px; padding: 5px 9px; }
+  .logo { font-size: 20px; }
+  .stamp { transform: none; }
+  .q { font-size: 24px; }
+  .hero .btn { display: block; text-align: center; margin: 0 0 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .bar { display: none !important; }
+}
 </style>
 </head>
 <body>
-<a class="skip" href="#proof">Skip to live proof</a>
+<a class="skip" href="#live">Skip to live markets</a>
 <header class="top">
-  <div class="wrap top-inner">
-    <a class="mark" href="#top">Verdict</a>
-    <nav aria-label="Page">
-      <a href="#proof">Live proof</a>
-      <a href="#how">How it works</a>
-      <a href="#apps">For apps</a>
-      <a href="#limits">Limits</a>
-      <a href="https://github.com/Baheet18/verdict">GitHub</a>
+  <div class="wrap">
+    <nav aria-label="Primary">
+      <a class="logo" href="#top"><span aria-hidden="true">✓</span>Verdict</a>
+      <div class="links" id="site-nav">
+        <a href="#why">Why</a>
+        <a href="#answers">Answers</a>
+        <a href="#how">How it works</a>
+        <a href="#live">Live record</a>
+        <a href="#trust">Trust</a>
+        <a href="#builders">For builders</a>
+      </div>
+      <div class="nav-tools">
+        <div class="pill">Live on NEAR testnet</div>
+        <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><i></i></button>
+      </div>
     </nav>
   </div>
 </header>
+
 <main id="top">
   <div class="wrap">
     <div class="hero">
-      <h1>Verdict is an AI resolution layer other prediction-market apps plug into. They keep market creation and trading; Verdict only resolves.</h1>
-      <p class="lede">Two markets on NEAR testnet are already Final YES. Market 0 was walked by hand. Market 1 was settled by the automatic relayer. This page records those transactions. Trading stays in the integrating app. There is no wallet connect.</p>
+      <div>
+        <div class="eyebrow">Resolution layer for prediction markets</div>
+        <h1 style="margin-top:18px">Settle every market on <em>evidence anyone can check.</em></h1>
+        <p class="sub">Three models read the same locked evidence inside sealed hardware and sign their answers. When all three agree, the market settles. When they don't, Verdict refuses to guess and hands the market to the arbiter the app chose.</p>
+        <a class="btn dark" href="#live">See a market settle on-chain</a>
+        <a class="btn" href="#builders">Plug it into your market</a>
+      </div>
+
+      <div class="player" id="player">
+        <div class="player-top">
+          <div class="eyebrow">Example</div>
+          <div class="tag">Not a live market</div>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Examples">
+          <button type="button" role="tab" id="tab-agree" aria-controls="ex-agree" aria-selected="true">They agree</button>
+          <button type="button" role="tab" id="tab-split" aria-controls="ex-split" aria-selected="false">They split</button>
+        </div>
+        <p class="sr" id="player-live" aria-live="polite"></p>
+
+        <h3 class="ex-label">They agree</h3>
+        <ol class="steps-ex" id="ex-agree">
+          <li>
+            <span class="num">01</span>
+            <div>
+              <strong>Evidence locked</strong>
+              <p>The relayer commits one bundle hash. Later votes have to match it.</p>
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <div>
+              <strong>Three models vote, signed</strong>
+              <p>Qwen, DeepSeek, and GLM each sign the same answer. The contract checks those signatures. This page does not.</p>
+              <div class="chips" aria-hidden="true"><span>Qwen <b>YES</b></span><span>DeepSeek <b>YES</b></span><span>GLM <b>YES</b></span></div>
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <div>
+              <strong>Unanimous</strong>
+              <p>All three say YES. A split would stop here.</p>
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li>
+            <span class="num">04</span>
+            <div>
+              <strong>Proposed</strong>
+              <p>The contract proposes YES and opens the dispute window.</p>
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li>
+            <span class="num">05</span>
+            <div>
+              <strong>Dispute window</strong>
+              <p>Anyone can challenge, with a bond. In this example, nobody does.</p>
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li>
+            <span class="num">06</span>
+            <div>
+              <strong>Final</strong>
+              <p>The window closes. The outcome is final.</p>
+              <div class="bar"></div>
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="ex-label">They split</h3>
+        <ol class="steps-ex" id="ex-split">
+          <li>
+            <span class="num">01</span>
+            <div>
+              <strong>Evidence locked</strong>
+              <p>Same lock. The models still have to read that bundle.</p>
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <div>
+              <strong>Three models vote, and split</strong>
+              <p>The signed answers do not match, so there is nothing to propose.</p>
+              <div class="chips" aria-hidden="true"><span>Qwen <b>YES</b></span><span>DeepSeek <b class="no">NO</b></span><span>GLM <b class="amb">AMBIGUOUS</b></span></div>
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <div>
+              <strong>Escalated</strong>
+              <p>Verdict does not guess. The market goes to the app's escalation_owner.</p>
+              <div class="bar"></div>
+            </div>
+          </li>
+        </ol>
+      </div>
     </div>
 
-    <section id="proof" aria-labelledby="proof-title">
-      <h2 id="proof-title">Live proof</h2>
-      <div class="strip">
-        <p class="contract-bar">
-          <span>Contract <a href="https://explorer.testnet.near.org/accounts/verdict-v2-baheet.testnet"><code>verdict-v2-baheet.testnet</code></a></span>
-          <span>Owner <code>baheet.testnet</code></span>
-        </p>
-        <div class="markets">
-          <article class="market">
-            <h3>Market 0 · Saints vs Giants</h3>
-            <p class="meta">
-              <span class="tag">Final YES</span>
-              <span class="tag">Hand-walked</span>
-              <span>Dispute window 1 hour</span>
-            </p>
-            <dl class="detail">
-              <dt>Path</dt>
-              <dd>create → commit_evidence → three votes → Proposed YES → Final YES</dd>
-              <dt>escalation_owner</dt>
-              <dd><code>baheet.testnet</code></dd>
-              <dt>Finalize</dt>
-              <dd><a href="https://explorer.testnet.near.org/transactions/C4ZQabkbLzSVzDCJFsxUEWEn18gVLmi4h2ANKGBXUsXx">C4ZQabkbLzSVzDCJFsxUEWEn18gVLmi4h2ANKGBXUsXx</a></dd>
-            </dl>
-          </article>
-          <article class="market">
-            <h3>Market 1 · Cowboys vs Eagles</h3>
-            <p class="meta">
-              <span class="tag">Final YES</span>
-              <span class="tag">Automatic relayer</span>
-              <span>Dispute window 10 minutes</span>
-            </p>
-            <dl class="detail">
-              <dt>Question</dt>
-              <dd>NFL, Oct 26 2026. YES = Cowboys (won 38-21). NO = Eagles.</dd>
-              <dt>escalation_owner</dt>
-              <dd><code>baheet.testnet</code></dd>
-              <dt>Finalize</dt>
-              <dd><a href="https://explorer.testnet.near.org/transactions/yxv3YqJtiumdCWhDCgNJ7pVtJzrcXveSEduFViVwwBy">yxv3YqJtiumdCWhDCgNJ7pVtJzrcXveSEduFViVwwBy</a></dd>
-            </dl>
-          </article>
-        </div>
-      </div>
+    <section id="why">
+      <div class="eyebrow">Why</div>
+      <h2>Resolution is the part <em>nobody should own.</em></h2>
+      <p class="lead">Apps keep what they're good at: market creation and trading. Verdict only resolves. There is no single human resolver to trust or pressure, just three independent models, locked evidence, and signatures the contract checks.</p>
+    </section>
 
-      <div class="record">
-        <h3>Market 1 record</h3>
-        <p class="lead">The automatic relayer (<code>python scripts/relayer.py --once</code> in live mode) ran commit + three live NEAR AI votes + finalize after the window. Market 0 remains the earlier hand-walked proof.</p>
-        <dl class="detail">
-          <dt>prompt_template_hash</dt>
-          <dd><code>fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f</code></dd>
-          <dt>Evidence bundle hash</dt>
-          <dd><code>02f77d634d5a5073c312dddabc551bb4b631b82df74bacd141e291fcec288a84</code></dd>
-          <dt>Evidence permalink</dt>
-          <dd><a href="https://raw.githubusercontent.com/Baheet18/verdict/abb0be396544438e8d5640f91cf639685e7b9836/fixtures/evidence/02f77d634d5a5073c312dddabc551bb4b631b82df74bacd141e291fcec288a84.json">https://raw.githubusercontent.com/Baheet18/verdict/abb0be396544438e8d5640f91cf639685e7b9836/fixtures/evidence/02f77d634d5a5073c312dddabc551bb4b631b82df74bacd141e291fcec288a84.json</a> <span class="note">Commit SHA, not /master/.</span></dd>
-          <dt>Create</dt>
-          <dd><a href="https://explorer.testnet.near.org/transactions/J3Rdax14BmGSUTj6bodUhwCzRYf8uvQ8VmQbH4aSjMHX">J3Rdax14BmGSUTj6bodUhwCzRYf8uvQ8VmQbH4aSjMHX</a></dd>
-          <dt>commit_evidence</dt>
-          <dd><a href="https://explorer.testnet.near.org/transactions/Gfvgy1SZmdfobqgTkkdhLiLdnnPmgv3coP3Q7Qh9ot1">Gfvgy1SZmdfobqgTkkdhLiLdnnPmgv3coP3Q7Qh9ot1</a></dd>
-          <dt>GLM submit_verdict YES</dt>
-          <dd><a href="https://explorer.testnet.near.org/transactions/5wjYC2s7aanwyBejtxHuKe9sdfB8BPtoB3cJm5F5w9Ko">5wjYC2s7aanwyBejtxHuKe9sdfB8BPtoB3cJm5F5w9Ko</a></dd>
-          <dt>Qwen submit_verdict YES</dt>
-          <dd><a href="https://explorer.testnet.near.org/transactions/4EsvXjnLKKhkc28LZYuDygRyHgG2ibQuDXE9zG3Tybfj">4EsvXjnLKKhkc28LZYuDygRyHgG2ibQuDXE9zG3Tybfj</a></dd>
-          <dt>DeepSeek submit_verdict YES</dt>
-          <dd><a href="https://explorer.testnet.near.org/transactions/EWDhb83wMJAATgU2g6NKzdabzj4qukuFzQtwh62cczd9">EWDhb83wMJAATgU2g6NKzdabzj4qukuFzQtwh62cczd9</a></dd>
-          <dt>finalize</dt>
-          <dd><a href="https://explorer.testnet.near.org/transactions/yxv3YqJtiumdCWhDCgNJ7pVtJzrcXveSEduFViVwwBy">yxv3YqJtiumdCWhDCgNJ7pVtJzrcXveSEduFViVwwBy</a></dd>
-        </dl>
+    <section id="answers">
+      <div class="eyebrow">Answers</div>
+      <h2>Every market gets <em>one of three.</em></h2>
+      <p class="lead">The contract does not average the models. It settles, hands the market back, or waits for the app's arbiter.</p>
+      <div class="answers">
+        <article class="answer">
+          <div class="kicker">Final</div>
+          <h3>Unanimous, then quiet.</h3>
+          <p>All three models sign the same YES or NO, and nobody disputes before the window closes.</p>
+        </article>
+        <article class="answer">
+          <div class="kicker">Escalated</div>
+          <h3>Split, or ambiguous.</h3>
+          <p>The models disagree, or they all answer AMBIGUOUS. Verdict does not fill in an outcome. The app's escalation_owner decides.</p>
+        </article>
+        <article class="answer">
+          <div class="kicker">Disputed</div>
+          <h3>The app's arbiter.</h3>
+          <p>During the window, anyone can challenge the proposed outcome with a bond. That challenge goes to the same escalation_owner.</p>
+        </article>
       </div>
     </section>
 
-    <section id="how" aria-labelledby="how-title">
-      <h2 id="how-title">How it works</h2>
-      <ol class="steps">
-        <li>
-          <span class="n">01</span>
-          <strong>Create market</strong>
-          <span>The integrating app calls <code>create_market</code> on <code>verdict-v2-baheet.testnet</code> and passes its own <code>escalation_owner</code>.</span>
-        </li>
-        <li>
-          <span class="n">02</span>
-          <strong>Lock evidence</strong>
-          <span>After the deadline, a registered relayer calls <code>commit_evidence</code>. The bundle is pinned to a commit SHA, not <code>/master/</code>.</span>
-        </li>
-        <li>
-          <span class="n">03</span>
-          <strong>Three TEE-bound models vote</strong>
-          <span>Qwen3.8-27B, DeepSeek-V4.1-Flash-1017, and GLM-5.3-flash. Each vote is <code>submit_verdict</code>.</span>
-        </li>
-        <li>
-          <span class="n">04</span>
-          <strong>Proposed</strong>
-          <span>The contract proposes an outcome only when all three agree. A split, or unanimous AMBIGUOUS, becomes Escalated.</span>
-        </li>
-        <li>
-          <span class="n">05</span>
-          <strong>Dispute window</strong>
-          <span>1 hour on market 0. 10 minutes on market 1. A challenge in the window is <code>dispute</code> with the bond attached.</span>
-        </li>
-        <li>
-          <span class="n">06</span>
-          <strong>Final, or escalate</strong>
-          <span>With no dispute, <code>finalize</code> closes the market. Otherwise the integrating app’s <code>escalation_owner</code> settles that market.</span>
-        </li>
-      </ol>
+    <section id="how">
+      <div class="eyebrow">How it works</div>
+      <h2>Six steps, <em>all on-chain.</em></h2>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><strong>Create</strong><span>The app creates a market with its sources and its escalation_owner.</span></div>
+        <div class="step"><div class="num">02</div><strong>Lock</strong><span>A relayer fetches the sources and commits the evidence hash.</span></div>
+        <div class="step"><div class="num">03</div><strong>Vote</strong><span>Three models vote on NEAR AI Cloud sealed hardware and sign.</span></div>
+        <div class="step"><div class="num">04</div><strong>Check</strong><span>The contract checks each signature against the registered signers.</span></div>
+        <div class="step"><div class="num">05</div><strong>Propose</strong><span>A unanimous, clear outcome is proposed and the dispute window opens.</span></div>
+        <div class="step"><div class="num">06</div><strong>Finish</strong><span>No dispute, and it is final. A split, an ambiguous panel, or a dispute goes to the app's escalation_owner.</span></div>
+      </div>
     </section>
 
-    <section id="apps" aria-labelledby="apps-title">
-      <h2 id="apps-title">For apps</h2>
-      <ol class="plain">
-        <li>
-          <strong>Pass <code>escalation_owner</code> at <code>create_market</code></strong>
-          <span>That account is the only one that may call <code>resolve_dispute</code> for this market. It can be your team, a multisig, a DAO, or a jury contract. The protocol owner settles a dispute only when you pass that account as <code>escalation_owner</code>.</span>
-        </li>
-        <li>
-          <strong>Wait for Proposed or Final</strong>
-          <span>Read <code>get_market</code>. Deposits and claims stay in your app. The relayer commits evidence, collects the three votes, and calls <code>finalize</code> when the window closes with no dispute.</span>
-        </li>
-        <li>
-          <strong>Handle dispute</strong>
-          <span>During the window, a challenger calls <code>dispute</code> with the bond. <code>Disputed</code> and <code>Escalated</code> stay with that market’s <code>escalation_owner</code>.</span>
-        </li>
-      </ol>
-      <p class="note">Argument lists, <code>register_relayer</code>, and the live loop are in the existing docs.</p>
-      <ul class="docs">
-        <li><a href="https://github.com/Baheet18/verdict/blob/master/README.md#integrating-an-app">README — Integrating an app</a></li>
-        <li><a href="https://github.com/Baheet18/verdict/blob/master/docs/RELAYER.md">docs/RELAYER.md</a></li>
-        <li><a href="https://github.com/Baheet18/verdict">github.com/Baheet18/verdict</a></li>
-      </ul>
+    <section id="live">
+      <div class="eyebrow">Live record</div>
+      <h2>Two markets, <em>settled for real.</em></h2>
+      <p class="lead">Market 0 was walked by hand. Market 1 was settled by the automatic relayer. Both are on <a href="https://explorer.testnet.near.org/accounts/verdict-v2-baheet.testnet" target="_blank" rel="noopener noreferrer"><span class="mono">verdict-v2-baheet.testnet</span></a>.</p>
+      <p class="chain" id="chain-note">Recorded result for verdict-v2-baheet.testnet. This page reads get_market again when it can.</p>
+      <div class="two">
+        <article class="card" data-market="0">
+          <div class="market-head">
+            <div>
+              <div class="eyebrow">Market 0</div>
+              <h3 class="q" data-field="question">Saints vs. Giants</h3>
+              <p class="small">Hand-walked proof · evidence bundle records Saints 34–27</p>
+            </div>
+            <div class="stamp" data-field="stamp" data-kind="final">FINAL · YES</div>
+          </div>
+          <p class="small" data-field="origin">Recorded result</p>
+          <dl>
+            <dt>Outcome</dt><dd data-field="outcome">Final YES</dd>
+            <dt>Window</dt><dd data-field="window">1 hour</dd>
+            <dt>Arbiter</dt><dd class="mono" data-field="owner">baheet.testnet</dd>
+            <dt>Sources</dt><dd data-field="sources">2 sources (ESPN, nflverse)</dd>
+            <dt>Votes</dt>
+            <dd>
+              <ul class="votes" data-field="votes">
+                <li><span>Qwen3.8-27B</span><span class="out yes">YES</span><span class="sig mono" title="0x835ab53d20294ef795906dff21ae4c045336aa26">0x835a…36aa26</span></li>
+                <li><span>DeepSeek-V4.1-Flash</span><span class="out yes">YES</span><span class="sig mono" title="0xfe0071895500a9755c18044948ab4f4e1a7f337e">0xfe00…7f337e</span></li>
+                <li><span>GLM-5.3-Flash</span><span class="out yes">YES</span><span class="sig mono" title="0x3b753b4406613c5e70ae640508632b600424fa0c">0x3b75…24fa0c</span></li>
+              </ul>
+            </dd>
+            <dt>Evidence hash</dt><dd class="mono hash" data-field="hash">ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7</dd>
+            <dt>Evidence</dt>
+            <dd data-field="uri"><a href="https://raw.githubusercontent.com/Baheet18/verdict/7d4149cfff493fdc3cbe932ac1d4c7406c605f40/fixtures/evidence/ccde677158f3e2ca4962f09e365c2ff7be958df4bdd50b7a23ac259f5fc598b7.json" target="_blank" rel="noopener noreferrer">permalink ↗</a></dd>
+            <dt>Transactions</dt>
+            <dd class="txs"><a href="https://explorer.testnet.near.org/transactions/C4ZQabkbLzSVzDCJFsxUEWEn18gVLmi4h2ANKGBXUsXx" target="_blank" rel="noopener noreferrer">finalize ↗</a></dd>
+          </dl>
+        </article>
+
+        <article class="card" data-market="1">
+          <div class="market-head">
+            <div>
+              <div class="eyebrow">Market 1</div>
+              <h3 class="q" data-field="question">Cowboys vs. Eagles</h3>
+              <p class="small">Automatic relayer · evidence bundle records Cowboys 38–21</p>
+            </div>
+            <div class="stamp" data-field="stamp" data-kind="final">FINAL · YES</div>
+          </div>
+          <p class="small" data-field="origin">Recorded result</p>
+          <dl>
+            <dt>Outcome</dt><dd data-field="outcome">Final YES</dd>
+            <dt>Window</dt><dd data-field="window">10 minutes</dd>
+            <dt>Arbiter</dt><dd class="mono" data-field="owner">baheet.testnet</dd>
+            <dt>Sources</dt><dd data-field="sources">2 sources (ESPN, nflverse)</dd>
+            <dt>Votes</dt>
+            <dd>
+              <ul class="votes" data-field="votes">
+                <li><span>GLM-5.3-Flash</span><span class="out yes">YES</span><span class="sig mono" title="0x3b753b4406613c5e70ae640508632b600424fa0c">0x3b75…24fa0c</span></li>
+                <li><span>Qwen3.8-27B</span><span class="out yes">YES</span><span class="sig mono" title="0x835ab53d20294ef795906dff21ae4c045336aa26">0x835a…36aa26</span></li>
+                <li><span>DeepSeek-V4.1-Flash</span><span class="out yes">YES</span><span class="sig mono" title="0xfe0071895500a9755c18044948ab4f4e1a7f337e">0xfe00…7f337e</span></li>
+              </ul>
+            </dd>
+            <dt>Evidence hash</dt><dd class="mono hash" data-field="hash">02f77d634d5a5073c312dddabc551bb4b631b82df74bacd141e291fcec288a84</dd>
+            <dt>Evidence</dt>
+            <dd data-field="uri"><a href="https://raw.githubusercontent.com/Baheet18/verdict/abb0be396544438e8d5640f91cf639685e7b9836/fixtures/evidence/02f77d634d5a5073c312dddabc551bb4b631b82df74bacd141e291fcec288a84.json" target="_blank" rel="noopener noreferrer">permalink ↗</a></dd>
+            <dt>Transactions</dt>
+            <dd class="txs">
+              <a href="https://explorer.testnet.near.org/transactions/J3Rdax14BmGSUTj6bodUhwCzRYf8uvQ8VmQbH4aSjMHX" target="_blank" rel="noopener noreferrer">create ↗</a>
+              <a href="https://explorer.testnet.near.org/transactions/Gfvgy1SZmdfobqgTkkdhLiLdnnPmgv3coP3Q7Qh9ot1" target="_blank" rel="noopener noreferrer">commit ↗</a>
+              <a href="https://explorer.testnet.near.org/transactions/5wjYC2s7aanwyBejtxHuKe9sdfB8BPtoB3cJm5F5w9Ko" target="_blank" rel="noopener noreferrer">GLM vote ↗</a>
+              <a href="https://explorer.testnet.near.org/transactions/4EsvXjnLKKhkc28LZYuDygRyHgG2ibQuDXE9zG3Tybfj" target="_blank" rel="noopener noreferrer">Qwen vote ↗</a>
+              <a href="https://explorer.testnet.near.org/transactions/EWDhb83wMJAATgU2g6NKzdabzj4qukuFzQtwh62cczd9" target="_blank" rel="noopener noreferrer">DeepSeek vote ↗</a>
+              <a href="https://explorer.testnet.near.org/transactions/yxv3YqJtiumdCWhDCgNJ7pVtJzrcXveSEduFViVwwBy" target="_blank" rel="noopener noreferrer">finalize ↗</a>
+            </dd>
+          </dl>
+        </article>
+      </div>
+      <p class="honest">Verdict is an unaudited hackathon prototype on NEAR testnet. This page links on-chain proof; it does not verify signatures or hardware attestation in your browser.</p>
     </section>
 
-    <section id="limits" aria-labelledby="limits-title">
-      <h2 id="limits-title">Limits</h2>
-      <ul class="limits">
-        <li><strong>107 of 124</strong> post-cutoff sports settled and matched UMA. <strong>17 escalated.</strong> <strong>0 invented answers</strong> on unclear markets. The set is easy final-score markets. <a href="https://github.com/Baheet18/verdict/blob/master/docs/BENCHMARK.md">docs/BENCHMARK.md</a></li>
-        <li>Demo dispute window: <strong>1 hour on market 0</strong>, <strong>10 minutes on market 1</strong>.</li>
-        <li><code>prompt_template_hash</code> on market 1 is <code>fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f</code>, the sha256 of the versioned prompt in <code>scripts/verdict_request.py</code>.</li>
-        <li>A registered relayer chooses and commits the evidence snapshot. It cannot edit a vote the contract has already accepted. This is not a trustless oracle.</li>
-        <li>Explorer links are the on-chain record. <strong>This page does not verify signatures or hardware attestation.</strong> Hardware checks are an off-chain precondition for signer registration.</li>
-        <li><code>baheet.testnet</code> is the old prototype (universal protocol-owner dispute fallback). The current contract is <code>verdict-v2-baheet.testnet</code>.</li>
-      </ul>
+    <section id="trust">
+      <div class="eyebrow">Trust · track record</div>
+      <h2>It would rather escalate <em>than guess.</em></h2>
+      <div class="stats">
+        <div class="card stat"><div class="big">107/124</div>settled post-cutoff sports markets matched UMA</div>
+        <div class="card stat"><div class="big">17</div>escalated instead of guessed</div>
+        <div class="card stat"><div class="big">0</div>invented outcomes on 34 thin-evidence markets</div>
+        <div class="card stat"><div class="big">~$0.002</div>per market</div>
+      </div>
+      <p class="small">Prompt template hash <span class="mono hash">fe85745ffa51fc2ac8a80b61fff3e13c3e680f4c2cf71f6142f10b5bd97f7d8f</span></p>
+      <p class="small">Post-cutoff sports run in <a href="https://github.com/Baheet18/verdict/blob/master/docs/BENCHMARK.md" target="_blank" rel="noopener noreferrer">docs/BENCHMARK.md</a>. The 34 thin markets abstained. About $0.0022 a market, from $0.274 across 372 calls.</p>
+    </section>
+
+    <section id="builders">
+      <div class="eyebrow">For builders</div>
+      <h2>Three calls to <em>plug it in.</em></h2>
+<pre><i>// create a market and name who decides if Verdict escalates</i>
+create_market({ question, sources, ..., escalation_owner: "your-dao.near" })
+
+<i>// read status, votes and the final outcome</i>
+get_market(id)
+
+<i>// anyone can challenge during the window, with a bond</i>
+dispute(id)  <i>// attach bond</i></pre>
+      <a class="btn dark" href="https://github.com/Baheet18/verdict#readme" target="_blank" rel="noopener noreferrer">Read the README</a>
+      <a class="btn" href="https://github.com/Baheet18/verdict/blob/master/docs/RELAYER.md" target="_blank" rel="noopener noreferrer">Relayer docs</a>
     </section>
   </div>
 </main>
+
 <footer>
-  <div class="wrap">
-    <p><a href="https://github.com/Baheet18/verdict">github.com/Baheet18/verdict</a> · contract <a href="https://explorer.testnet.near.org/accounts/verdict-v2-baheet.testnet"><code>verdict-v2-baheet.testnet</code></a></p>
-    <p>Open <code>site/index.html</code>, or publish the <code>site/</code> directory. No build step. No secrets in this repo.</p>
+  <div class="wrap footer-row">
+    <div>
+      <a class="logo" href="#top"><span aria-hidden="true">✓</span>Verdict</a>
+      <p>Unaudited hackathon prototype on NEAR testnet. This page does not verify signatures or hardware attestation.</p>
+    </div>
+    <div>
+      <a href="https://github.com/Baheet18/verdict" target="_blank" rel="noopener noreferrer">GitHub</a>
+      ·
+      <a href="https://explorer.testnet.near.org/accounts/verdict-v2-baheet.testnet" target="_blank" rel="noopener noreferrer"><span class="mono">verdict-v2-baheet.testnet</span></a>
+      <p>Built for the NEAR Hackathon</p>
+    </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  var btn = document.getElementById("menu-btn");
+  var menu = document.getElementById("site-nav");
+  function setOpen(open) {
+    menu.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+  btn.addEventListener("click", function () {
+    setOpen(btn.getAttribute("aria-expanded") !== "true");
+  });
+  menu.addEventListener("click", function (event) {
+    if (event.target.closest("a")) setOpen(false);
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") setOpen(false);
+  });
+  document.addEventListener("click", function (event) {
+    if (!menu.classList.contains("open")) return;
+    if (event.target.closest("#site-nav") || event.target.closest("#menu-btn")) return;
+    setOpen(false);
+  });
+
+  var reduced = document.documentElement.classList.contains("reduced");
+  var scenario = "agree";
+  var step = 0;
+  var timer = 0;
+  var hovering = false;
+  var DURATION = 1700;
+  var agreePanel = document.getElementById("ex-agree");
+  var splitPanel = document.getElementById("ex-split");
+  var tabAgree = document.getElementById("tab-agree");
+  var tabSplit = document.getElementById("tab-split");
+  var player = document.getElementById("player");
+  var live = document.getElementById("player-live");
+
+  function panel() { return scenario === "agree" ? agreePanel : splitPanel; }
+
+  function paint() {
+    agreePanel.classList.toggle("is-off", scenario !== "agree");
+    splitPanel.classList.toggle("is-on", scenario === "split");
+    tabAgree.setAttribute("aria-selected", scenario === "agree" ? "true" : "false");
+    tabSplit.setAttribute("aria-selected", scenario === "split" ? "true" : "false");
+    var items = panel().querySelectorAll("li");
+    for (var i = 0; i < items.length; i++) {
+      items[i].classList.toggle("is-now", !reduced && i === step);
+      items[i].classList.toggle("is-done", !reduced && i < step);
+    }
+    var current = items[reduced ? items.length - 1 : step];
+    var title = current ? current.querySelector("strong") : null;
+    live.textContent = (scenario === "agree" ? "Example, they agree. " : "Example, they split. ") + (title ? title.textContent : "");
+  }
+
+  function stop() {
+    if (timer) window.clearInterval(timer);
+    timer = 0;
+  }
+
+  function start() {
+    stop();
+    if (reduced || hovering) return;
+    timer = window.setInterval(function () {
+      var items = panel().querySelectorAll("li");
+      if (step < items.length - 1) step += 1;
+      else {
+        scenario = scenario === "agree" ? "split" : "agree";
+        step = 0;
+      }
+      paint();
+    }, DURATION);
+  }
+
+  function select(name) {
+    scenario = name;
+    step = 0;
+    paint();
+    start();
+  }
+
+  tabAgree.addEventListener("click", function () { select("agree"); });
+  tabSplit.addEventListener("click", function () { select("split"); });
+  [tabAgree, tabSplit].forEach(function (tab, index, tabs) {
+    tab.addEventListener("keydown", function (event) {
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+      event.preventDefault();
+      var next = tabs[(index + (event.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length];
+      next.focus();
+      next.click();
+    });
+  });
+  player.addEventListener("mouseenter", function () { hovering = true; stop(); });
+  player.addEventListener("mouseleave", function () { hovering = false; start(); });
+  player.addEventListener("focusin", function () { hovering = true; stop(); });
+  player.addEventListener("focusout", function (event) {
+    if (player.contains(event.relatedTarget)) return;
+    hovering = false;
+    start();
+  });
+  paint();
+  start();
+
+  var OUTCOMES = { Yes: "YES", No: "NO", TooEarly: "TOO EARLY", Ambiguous: "AMBIGUOUS" };
+
+  function labelOutcome(value) {
+    return Object.prototype.hasOwnProperty.call(OUTCOMES, value) ? OUTCOMES[value] : null;
+  }
+
+  function safeText(value, max) {
+    if (typeof value !== "string") return null;
+    var text = value.trim();
+    if (!text || text.length > max || /[<>]/.test(text)) return null;
+    return text;
+  }
+
+  function shortModel(model) {
+    var name = safeText(model, 80);
+    if (!name) return null;
+    var leaf = name.split("/").pop();
+    if (leaf === "DeepSeek-V4.1-Flash-1017") return "DeepSeek-V4.1-Flash";
+    if (leaf === "glm-5.3-flash") return "GLM-5.3-Flash";
+    return leaf;
+  }
+
+  function shortSigner(addr) {
+    if (typeof addr !== "string" || !/^0x[0-9a-fA-F]{40}$/.test(addr)) return null;
+    return "0x" + addr.slice(2, 6).toLowerCase() + "…" + addr.slice(-6).toLowerCase();
+  }
+
+  function formatWindow(ns) {
+    if (typeof ns !== "number" || !isFinite(ns) || ns < 0) return null;
+    var sec = Math.round(ns / 1e9);
+    if (sec <= 0) return null;
+    if (sec % 3600 === 0) {
+      var hours = sec / 3600;
+      return hours + (hours === 1 ? " hour" : " hours");
+    }
+    if (sec % 60 === 0) {
+      var minutes = sec / 60;
+      return minutes + (minutes === 1 ? " minute" : " minutes");
+    }
+    return sec + (sec === 1 ? " second" : " seconds");
+  }
+
+  function statusView(status) {
+    if (status === "Open") return { stamp: "OPEN", kind: "open", outcome: "Open" };
+    if (status === "Escalated") return { stamp: "ESCALATED", kind: "escalated", outcome: "Escalated" };
+    if (status && status.Final) {
+      var finalOutcome = labelOutcome(status.Final.outcome);
+      if (!finalOutcome) return null;
+      return { stamp: "FINAL · " + finalOutcome, kind: "final", outcome: "Final " + finalOutcome };
+    }
+    if (status && status.Proposed) {
+      var proposed = labelOutcome(status.Proposed.outcome);
+      if (!proposed) return null;
+      return { stamp: "PROPOSED · " + proposed, kind: "proposed", outcome: "Proposed " + proposed };
+    }
+    if (status && status.Disputed) return { stamp: "DISPUTED", kind: "disputed", outcome: "Disputed" };
+    return null;
+  }
+
+  function sourceLine(sources) {
+    if (!Array.isArray(sources) || !sources.length) return null;
+    var labels = [];
+    sources.forEach(function (url) {
+      if (typeof url !== "string") return;
+      var label = null;
+      if (/espn\.com/i.test(url)) label = "ESPN";
+      else if (/nflverse/i.test(url)) label = "nflverse";
+      else {
+        try { label = new URL(url).host; } catch (error) { label = null; }
+      }
+      if (label && labels.indexOf(label) === -1) labels.push(label);
+    });
+    if (!labels.length) return sources.length + (sources.length === 1 ? " source" : " sources");
+    return sources.length + (sources.length === 1 ? " source" : " sources") + " (" + labels.join(", ") + ")";
+  }
+
+  function setText(card, field, value) {
+    if (value == null) return;
+    var node = card.querySelector('[data-field="' + field + '"]');
+    if (node) node.textContent = value;
+  }
+
+  function applyMarket(card, market) {
+    var view = statusView(market.status);
+    if (!view) return false;
+    var stamp = card.querySelector('[data-field="stamp"]');
+    stamp.textContent = view.stamp;
+    stamp.setAttribute("data-kind", view.kind);
+    setText(card, "outcome", view.outcome);
+    setText(card, "question", safeText(market.question, 240));
+    setText(card, "window", formatWindow(market.dispute_window_ns));
+    setText(card, "owner", safeText(market.escalation_owner, 64));
+    setText(card, "sources", sourceLine(market.sources));
+    if (typeof market.round_evidence_hash === "string" && /^[0-9a-f]{64}$/.test(market.round_evidence_hash)) {
+      setText(card, "hash", market.round_evidence_hash);
+    }
+    if (typeof market.round_evidence_uri === "string" && /^https:\/\/[^\s]+$/.test(market.round_evidence_uri)) {
+      var slot = card.querySelector('[data-field="uri"]');
+      var link = document.createElement("a");
+      link.href = market.round_evidence_uri;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "permalink ↗";
+      slot.replaceChildren(link);
+    }
+    if (Array.isArray(market.votes)) {
+      var rows = [];
+      market.votes.forEach(function (vote) {
+        var model = shortModel(vote && vote.model);
+        var outcome = labelOutcome(vote && vote.outcome);
+        if (!model || !outcome) return;
+        var li = document.createElement("li");
+        var who = document.createElement("span");
+        who.textContent = model;
+        var out = document.createElement("span");
+        out.className = "out " + (outcome === "YES" ? "yes" : outcome === "NO" ? "no" : "");
+        out.textContent = outcome;
+        li.appendChild(who);
+        li.appendChild(out);
+        var signer = shortSigner(vote.signer);
+        if (signer) {
+          var sig = document.createElement("span");
+          sig.className = "sig mono";
+          sig.title = vote.signer;
+          sig.textContent = signer;
+          li.appendChild(sig);
+        }
+        rows.push(li);
+      });
+      if (rows.length) {
+        var list = card.querySelector('[data-field="votes"]');
+        list.replaceChildren.apply(list, rows);
+      }
+    }
+    setText(card, "origin", "Read from the contract just now");
+    return true;
+  }
+
+  function decodeCall(result) {
+    var raw = result && result.result;
+    var bytes;
+    if (Array.isArray(raw)) bytes = Uint8Array.from(raw);
+    else if (typeof raw === "string") {
+      var binary = atob(raw);
+      bytes = new Uint8Array(binary.length);
+      for (var i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    } else {
+      throw new Error("empty result");
+    }
+    var text = new TextDecoder().decode(bytes);
+    var market = JSON.parse(text);
+    if (!market || typeof market !== "object") throw new Error("no market");
+    return { market: market, block: result.block_height };
+  }
+
+  function signal() {
+    if (typeof AbortSignal !== "undefined" && AbortSignal.timeout) return AbortSignal.timeout(8000);
+    var controller = new AbortController();
+    setTimeout(function () { controller.abort(); }, 8000);
+    return controller.signal;
+  }
+
+  function readMarket(id) {
+    return fetch("https://rpc.testnet.near.org", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: "verdict-market-" + id,
+        method: "query",
+        params: {
+          request_type: "call_function",
+          finality: "final",
+          account_id: "verdict-v2-baheet.testnet",
+          method_name: "get_market",
+          args_base64: btoa(JSON.stringify({ market_id: id }))
+        }
+      }),
+      signal: signal()
+    }).then(function (response) {
+      if (!response.ok) throw new Error("http");
+      return response.json();
+    }).then(function (body) {
+      if (!body || body.error) throw new Error("rpc");
+      return decodeCall(body.result);
+    });
+  }
+
+  var note = document.getElementById("chain-note");
+  note.textContent = "Reading get_market on verdict-v2-baheet.testnet…";
+  Promise.allSettled([readMarket(0), readMarket(1)]).then(function (results) {
+    var ok = [false, false];
+    var blocks = [];
+    results.forEach(function (result, index) {
+      if (result.status !== "fulfilled") return;
+      var card = document.querySelector('[data-market="' + index + '"]');
+      if (applyMarket(card, result.value.market)) {
+        ok[index] = true;
+        if (typeof result.value.block === "number") blocks.push(result.value.block);
+      }
+    });
+    if (ok[0] && ok[1]) {
+      var line = "Read straight from NEAR testnet when you opened this page.";
+      if (blocks.length === 2 && blocks[0] === blocks[1]) line += " Block " + blocks[0].toLocaleString("en-US") + ".";
+      note.textContent = line;
+    } else if (ok[0] || ok[1]) {
+      note.textContent = "Read market " + (ok[0] ? "0" : "1") + " from NEAR testnet when you opened this page. The other card is the recorded result.";
+    } else {
+      note.textContent = "Could not read NEAR testnet. Showing the recorded result.";
+    }
+  });
+})();
+</script>
 </body>
 </html>

@@ -93,7 +93,7 @@ source .venv/bin/activate
 python scripts/attest_demo.py Qwen/Qwen3.8-27B   # expect PASS then tamper FAIL
 ```
 
-The public landing page is [`site/index.html`](site/index.html). Open that file, or serve the `site/` directory (`python -m http.server -d site 8080`). Publishing that directory on GitHub Pages or any static host needs no build. Live testnet markets are recorded under [Testnet deploy](#testnet-deploy).
+The public landing page is [`site/index.html`](site/index.html). Open that file, or serve the `site/` directory (`python -m http.server -d site 8080`). Deploy it on Vercel with the project root set to `site` (no build; `site/vercel.json` marks it static). On load the page calls `get_market` for market ids 0 and 1 on `verdict-v2-baheet.testnet` through `https://rpc.testnet.near.org`. If that call fails, the recorded result stays on the page. It does not verify signatures or hardware attestation in the browser. Verdict is an unaudited hackathon prototype on testnet. Live testnet markets are recorded under [Testnet deploy](#testnet-deploy).
 
 ## Integrating an app
 
@@ -132,7 +132,7 @@ Wasm builds locally (`cargo near build non-reproducible-wasm` → `contract/targ
 
 ### Testnet / Demo — market 1 automatic-relayer proof
 
-Market 1 on the same contract is the automatic-relayer proof. The landing page [`site/index.html`](site/index.html) restates both markets and the plug-in path. It links the explorer transactions below. It does not verify signatures or hardware attestation.
+Market 1 on the same contract is the automatic-relayer proof. The landing page [`site/index.html`](site/index.html) restates both markets, reads them with `get_market` when you open it, and links the explorer transactions below. It does not verify signatures or hardware attestation in the browser.
 
 | Field | Value |
 | --- | --- |
