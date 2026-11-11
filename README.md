@@ -155,3 +155,5 @@ Outcome: **Final YES**. The automatic relayer (`python scripts/relayer.py --once
 Post-cutoff sports: 107 of 124 settled and matched UMA; 17 escalated. Unclear markets: 0 invented answers. `baheet.testnet` stays the old prototype.
 
 Manual signed steps, if you are not running the relayer: register signers → `register_relayer` once → `create_market` (with `escalation_owner`) → `commit_evidence` → three `submit_verdict` → `finalize` after the window, or `resolve_dispute` by that market’s escalation owner. Steps: `deploy/TESTNET.md`. Args: `python scripts/deploy_prepare.py`.
+
+Licensed under the MIT License. See [LICENSE](LICENSE).
