@@ -4,12 +4,13 @@
 The NEAR AI key and the Solana keypair path come from the environment only.
 This script never prints those secrets.
 
-  NEARAI_API_KEY          bearer token for https://cloud-api.near.ai
-  SOLANA_KEYPAIR          path to a Solana keypair JSON file outside this repo
-  SOLANA_ESCALATION_KEYPAIR
-                          optional path to the escalation owner's keypair
-  SOLANA_RPC              default https://api.devnet.solana.com
-  VERDICT_PROGRAM_ID      default 6nbXLUgehsnFqUTvg3EUCtP8mDHodBXFv6NhdJwBt3AW
+  NEARAI_API_KEY   bearer token for https://cloud-api.near.ai
+  SOLANA_KEYPAIR   path to a Solana keypair JSON file outside this repo
+  SOLANA_RPC       cluster URL, default https://api.devnet.solana.com
+
+The keypair pays fees, creates the two markets, and is their escalation owner.
+It does not need a second key. If it is also the protocol owner it refreshes
+the three model signers when NEAR AI returns different addresses.
 """
 from __future__ import annotations
 
@@ -166,18 +167,62 @@ def ix(name: str, data: bytes, accounts: list[AccountMeta]) -> Instruction:
     return Instruction(program_id(), disc(name) + data, accounts)
 
 
-def ensure_config(owner: Keypair, addresses: list[str]) -> str | None:
-    if rpc("getAccountInfo", [str(config_pda()), {"encoding": "base64"}])["value"]:
-        return None
+def signer_data(addresses: list[str]) -> bytes:
     data = b""
     for model, address in zip(MODELS, addresses, strict=True):
-        data += bytes.fromhex(address.removeprefix("0x")) + borsh_str(model)
-    data += i64(WINDOW) + u64(BOND)
+        raw = bytes.fromhex(address.removeprefix("0x").removeprefix("0X"))
+        if len(raw) != 20:
+            raise RelayerError("a model signer address must be 20 bytes")
+        data += raw + borsh_str(model)
+    return data + i64(WINDOW) + u64(BOND)
+
+
+def read_config() -> tuple[Pubkey, list[str]] | None:
+    info = rpc("getAccountInfo", [str(config_pda()), {"encoding": "base64"}])["value"]
+    if not info:
+        return None
+    raw = base64.b64decode(info["data"][0])
+    owner = Pubkey.from_bytes(raw[8:40])
+    addresses = []
+    cursor = 40
+    for _ in MODELS:
+        addresses.append("0x" + raw[cursor : cursor + 20].hex())
+        cursor += 85
+    return owner, addresses
+
+
+def ensure_config(payer: Keypair, addresses: list[str]) -> str | None:
+    """Create config, or replace signers when this key is the protocol owner."""
+    data = signer_data(addresses)
+    current = read_config()
+    if current is None:
+        return send(
+            [ix("initialize_config", data, [
+                meta(config_pda(), True),
+                meta(payer.pubkey(), True, True),
+                meta(SYSTEM, False),
+            ])],
+            [payer],
+        )
+    owner, existing = current
+    if [item.lower() for item in existing] == [item.lower() for item in addresses]:
+        return None
+    if owner != payer.pubkey():
+        raise RelayerError("model signer addresses differ from config, and this key is not the protocol owner")
     return send(
-        [ix("initialize_config", data, [
+        [ix("update_config", data, [
+            meta(config_pda(), True),
+            meta(payer.pubkey(), True, True),
+        ])],
+        [payer],
+    )
+
+
+def transfer_owner(owner: Keypair, new_owner: Pubkey) -> str:
+    return send(
+        [ix("transfer_owner", bytes(new_owner), [
             meta(config_pda(), True),
             meta(owner.pubkey(), True, True),
-            meta(SYSTEM, False),
         ])],
         [owner],
     )
@@ -306,19 +351,8 @@ def demo() -> dict:
     if not os.environ.get("NEARAI_API_KEY"):
         raise RelayerError("NEARAI_API_KEY is unset")
     owner = load_keypair(key_path)
-    esc_path = os.environ.get("SOLANA_ESCALATION_KEYPAIR", "")
-    if esc_path:
-        escalation = load_keypair(esc_path)
-    else:
-        escalation = Keypair()
-        outside = Path("/tmp/verdict-keys/escalation.json")
-        outside.parent.mkdir(parents=True, exist_ok=True)
-        outside.write_text(json.dumps(list(bytes(escalation))))
-        outside.chmod(0o600)
-    from solders.system_program import TransferParams, transfer
-
-    # Fund the escalation owner from the protocol owner. The private key stays in /tmp.
-    send([transfer(TransferParams(from_pubkey=owner.pubkey(), to_pubkey=escalation.pubkey(), lamports=50_000_000))], [owner])
+    # One key pays, creates both markets, and settles the escalated one.
+    escalation = owner
     clear_rules = (
         "YES if both snapshots say Cody Schwab won GENESIS X3 Melee singles. "
         "NO if both say someone else won. If the snapshots disagree or the event is unfinished, AMBIGUOUS."

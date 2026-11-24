@@ -76,12 +76,14 @@ From the repository root, with the keypair file **outside** the repo:
 
 ```bash
 export NEARAI_API_KEY=...          # do not write this into a file in the repo
-export SOLANA_KEYPAIR=/path/outside/the/repo/deployer.json
+export SOLANA_KEYPAIR=/path/outside/the/repo/id.json
 export SOLANA_RPC=https://api.devnet.solana.com
 python3 solana/relayer.py --demo
 ```
 
-The demo asks the three models the same way `relayer/panel.py` does (`POST /v1/chat/completions`, then `GET /v1/signature/{id}?signing_algo=ecdsa`), registers the `signing_address` values those responses carry, and submits the raw bytes. Market 1 is GENESIS X3 Melee singles (Cody Schwab won, 13–15 February 2026) with two agreeing snapshots. Market 2 uses the same question with contradictory snapshots, which the prompt tells the models to treat as ambiguous, and then the escalation owner records Ambiguous. A 60 second dispute window applies. The script writes `site/solana-markets.json` with transaction signatures and public keys only.
+Those three variables are enough. The keypair pays the fees, creates both markets, and is their escalation owner, so it can finalise the clear market and settle the escalated one. Market creation is open to any funded account. The protocol owner is only needed to change the three model signers. If this key is that owner and NEAR AI returns different addresses, the script calls `update_config` before creating the markets.
+
+The demo asks the three models the same way `relayer/panel.py` does (`POST /v1/chat/completions`, then `GET /v1/signature/{id}?signing_algo=ecdsa`) and submits the raw bytes. Market 1 is GENESIS X3 Melee singles (Cody Schwab won, 13–15 February 2026) with two agreeing snapshots. Market 2 uses the same question with contradictory snapshots, which the prompt tells the models to treat as ambiguous, and then this key records Ambiguous. A 60 second dispute window applies. The script writes `site/solana-markets.json` with transaction signatures and public keys only.
 
 ## Devnet
 

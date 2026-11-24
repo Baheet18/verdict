@@ -83,6 +83,20 @@ pub mod verdict {
         Ok(())
     }
 
+    /// Hands protocol settings to another key. Market escalation owners are unchanged.
+    pub fn transfer_owner(ctx: Context<TransferOwner>, new_owner: Pubkey) -> Result<()> {
+        require!(new_owner != Pubkey::default(), VerdictError::BadEscalationOwner);
+        let config = &mut ctx.accounts.config;
+        config.owner = new_owner;
+        emit!(ConfigUpdated {
+            owner: new_owner,
+            signers: config.signers,
+            dispute_window_seconds: config.dispute_window_seconds,
+            dispute_bond_lamports: config.dispute_bond_lamports,
+        });
+        Ok(())
+    }
+
     pub fn create_market(
         ctx: Context<CreateMarket>,
         market_id: u64,
@@ -446,6 +460,13 @@ pub struct InitializeConfig<'info> {
 
 #[derive(Accounts)]
 pub struct UpdateConfig<'info> {
+    #[account(mut, seeds = [b"config"], bump = config.bump, has_one = owner)]
+    pub config: Account<'info, Config>,
+    pub owner: Signer<'info>,
+}
+
+#[derive(Accounts)]
+pub struct TransferOwner<'info> {
     #[account(mut, seeds = [b"config"], bump = config.bump, has_one = owner)]
     pub config: Account<'info, Config>,
     pub owner: Signer<'info>,
