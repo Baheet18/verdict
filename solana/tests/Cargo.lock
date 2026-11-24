@@ -1627,6 +1627,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e17592d60ebacc7d5e169f4663c5f84f9161cc90328abcfe8456f41e4dfcb284"
 
 [[package]]
+name = "hex"
+version = "0.4.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
+
+[[package]]
 name = "hkdf"
 version = "0.12.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1903,7 +1909,7 @@ dependencies = [
  "indexmap",
  "itertools 0.15.0",
  "log",
- "solana-account",
+ "solana-account 4.7.0",
  "solana-address 2.7.0",
  "solana-address-lookup-table-interface",
  "solana-builtins",
@@ -2686,6 +2692,19 @@ checksum = "3244542535d5de959d90ec55d1b5ff0fd2bb7b1310223907d5f11932847f7b59"
 
 [[package]]
 name = "solana-account"
+version = "3.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "efc0ed36decb689413b9da5d57f2be49eea5bebb3cf7897015167b0c4336e731"
+dependencies = [
+ "solana-account-info",
+ "solana-clock 3.2.1",
+ "solana-instruction-error",
+ "solana-pubkey 4.3.0",
+ "solana-sdk-ids",
+]
+
+[[package]]
+name = "solana-account"
 version = "4.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "981155967c57428348ca75b2296e079688d09bf16c5751502eaa49f65da83cb1"
@@ -2873,7 +2892,7 @@ checksum = "bcb78ed7a639359ebc07d0a765d33e9b61e81dbc6790399e1ef68e2869305890"
 dependencies = [
  "bincode",
  "qualifier_attr",
- "solana-account",
+ "solana-account 4.7.0",
  "solana-bincode",
  "solana-clock 3.2.1",
  "solana-instruction 3.5.1",
@@ -3136,7 +3155,7 @@ dependencies = [
  "bincode",
  "serde",
  "serde_derive",
- "solana-account",
+ "solana-account 4.7.0",
  "solana-account-info",
  "solana-instruction 3.5.1",
  "solana-program-error",
@@ -3436,7 +3455,7 @@ version = "4.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "337cf70e23d7e33d61e5020106ae9894fe10434b3de943e8bc57eb5d7207c1bf"
 dependencies = [
- "solana-account",
+ "solana-account 4.7.0",
  "solana-hash",
  "solana-nonce",
  "solana-sdk-ids",
@@ -3539,7 +3558,7 @@ dependencies = [
  "log",
  "rand 0.9.5",
  "serde",
- "solana-account",
+ "solana-account 4.7.0",
  "solana-account-info",
  "solana-clock 3.2.1",
  "solana-epoch-rewards",
@@ -3899,7 +3918,7 @@ version = "4.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "73c7516287cbd47f2990f82cf5d5afd3fc7cf3c56a1397d1397d238ce6042415"
 dependencies = [
- "solana-account",
+ "solana-account 4.7.0",
  "solana-clock 3.2.1",
  "solana-precompile-error",
  "solana-pubkey 4.3.0",
@@ -3969,7 +3988,7 @@ dependencies = [
  "bincode",
  "libsecp256k1",
  "num-traits",
- "solana-account",
+ "solana-account 4.7.0",
  "solana-account-info",
  "solana-big-mod-exp",
  "solana-blake3-hasher",
@@ -4042,7 +4061,7 @@ checksum = "5c93fc4ebe7aa9ec71ebea68c8cad95cff8ef332e8353a35a536a9e2e3774c93"
 dependencies = [
  "bincode",
  "log",
- "solana-account",
+ "solana-account 4.7.0",
  "solana-bincode",
  "solana-fee-calculator",
  "solana-instruction 3.5.1",
@@ -4163,7 +4182,7 @@ checksum = "90ba8f4584068bd24a2ccb2a41a737f7e5c8ee752dc8dee2a7b1d0ee3e34d55b"
 dependencies = [
  "bincode",
  "serde",
- "solana-account",
+ "solana-account 4.7.0",
  "solana-instruction 3.5.1",
  "solana-instructions-sysvar 4.0.0",
  "solana-pubkey 4.3.0",
@@ -4220,7 +4239,7 @@ dependencies = [
  "agave-feature-set",
  "bincode",
  "log",
- "solana-account",
+ "solana-account 4.7.0",
  "solana-bincode",
  "solana-bls-signatures",
  "solana-clock 3.2.1",
@@ -4548,7 +4567,10 @@ name = "verdict"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
- "solana-sdk-ids",
+ "solana-keccak-hasher",
+ "solana-program-entrypoint",
+ "solana-secp256k1-recover",
+ "solana-sha256-hasher",
 ]
 
 [[package]]
@@ -4557,8 +4579,13 @@ version = "0.1.0"
 dependencies = [
  "anchor-lang",
  "base64 0.22.1",
- "ed25519-dalek 2.2.0",
+ "hex",
+ "k256 0.13.4",
  "litesvm",
+ "serde_json",
+ "sha2 0.10.9",
+ "sha3",
+ "solana-account 3.4.0",
  "solana-address 2.7.0",
  "solana-clock 3.2.1",
  "solana-instruction 3.5.1",

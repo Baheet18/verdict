@@ -1,102 +1,111 @@
-# Verdict on Solana — resolver, step 1
+# Verdict on Solana
 
-This folder is a Solana port of the resolution rules in `contract/src/lib.rs`. It does not change the NEAR contract or the site.
+This folder is the Solana port of the resolver in `contract/src/lib.rs`. It does not change how the NEAR contract or the existing site pages behave. The devnet page is [`site/solana.html`](../site/solana.html).
 
-The program id is `6nbXLUgehsnFqUTvg3EUCtP8mDHodBXFv6NhdJwBt3AW`. Devnet status is at the bottom.
+Program id compiled into the binary: `6nbXLUgehsnFqUTvg3EUCtP8mDHodBXFv6NhdJwBt3AW`.
 
-Anchor 1.2.2, Agave CLI 4.1.2, Rust 1.100.0. The on-chain program is `programs/verdict`. Tests run in LiteSVM against the compiled `.so`.
+Anchor 1.2.2, Agave CLI 4.1.2, Rust 1.100.0.
 
-## What the program does
+## What a vote proves
 
-The protocol owner sets three ed25519 public keys (GLM, then Qwen, then DeepSeek), the dispute window in seconds, and the dispute bond in lamports. Only that owner can change them, and a change applies to markets created afterwards.
+NEAR AI Cloud returns an EIP-191 secp256k1 signature, the same one the NEAR contract checks. The signed text is exactly
 
-`create_market` locks a numeric market id, the question (1–200 bytes), `rules_hash`, `evidence_hash`, a future deadline (unix seconds), and an `escalation_owner`. The escalation owner cannot be changed. The market also copies the three signer keys, the window, and the bond from config at that moment.
+```text
+<model>:<sha256(request_raw)>:<sha256(response_raw)>
+```
 
-`submit_verdict` reads the ed25519 instruction placed immediately before it. That instruction must carry exactly three signatures, in GLM / Qwen / DeepSeek order, with every offset pointing at the ed25519 instruction itself (`u16::MAX`). The native ed25519 program checks the signatures. This program checks that the public key and the message bytes are the ones for this market.
+with both hashes as lowercase hex. The program rebuilds that text from the uploaded request and response bytes, hashes it as
 
-Each model signs a 119-byte message:
+```text
+keccak256("\x19Ethereum Signed Message:\n" || decimal_length || text)
+```
 
-| offset | length | contents |
-| -----: | -----: | --- |
-| 0 | 13 | ASCII `VERDICT-SOL/1` |
-| 13 | 8 | market id, `u64` little-endian |
-| 21 | 32 | evidence hash |
-| 53 | 32 | rules hash |
-| 85 | 1 | outcome: `0` yes, `1` no, `2` unclear |
-| 86 | 1 | confidence, `0..=100` |
-| 87 | 32 | hash of the cited rule id or rule text |
+and calls the `secp256k1_recover` syscall. The Ethereum address is the last 20 bytes of `keccak256` of the recovered 64-byte public key. It must equal the signer the owner registered for that slot, and the model name in the request must equal the registered model name.
 
-A yes or no at confidence 70 or above is clear. 70 is a program constant; the owner cannot lower it. If all three votes are clear and the same outcome, the market becomes Proposed and the dispute window opens. A split, an unclear vote, or any vote below 70 moves the market to Escalated. The three votes are stored either way: signer, outcome, confidence, and cited-rule hash, plus the question and both hashes, so a viewer can see what was voted on.
+The request is the chat-completions JSON. After JSON string unescaping, the user message is
 
-`dispute` can be called by anyone during the window. They pay the snapshotted bond. The lamports are transferred onto the market account and the market becomes Escalated. This step does not pay the bond back. Do not use a bond you need returned until a later instruction defines that.
+```text
+VERDICT/1 market_id=<id> round=<round> rules_hash=<hex> prompt_template_hash=<hex> evidence_bundle_hash=<hex>
+<evidence bytes>
+```
 
-`finalize`, after the window and with no dispute, marks the market Final with the proposed outcome. Anyone may call it.
+The program checks that this header is canonical, that `sha256(evidence bytes)` equals `evidence_bundle_hash`, and that the market id, round, rules hash, prompt-template hash and evidence hash match the market account. That is the same chain the NEAR contract verifies in `recover_signer` and `check_request`. The full request-key allowlist from the NEAR contract (rejecting `logit_bias` and similar) is not reimplemented here; the signature still covers the exact request bytes, so a different request is a different hash and will not verify.
 
-`escalation_resolve` is the only way to settle an Escalated market, and only that market's escalation owner may call it. The outcome may be yes, no, or unclear. The protocol owner has no settle instruction. If the integrating app set the protocol owner as that market's escalation owner, the same key can settle that market, which is the same rule as on NEAR.
+Ed25519 was removed. NEAR AI Cloud does not sign with those keys, so an ed25519 path could not check these votes. The syscall is used instead of the secp256k1 precompile because the program has to hash the request and response itself and then recover against that digest.
 
-Accounts:
+What this does **not** prove: the program does not check a TEE quote. On NEAR, `register_signer` stores an address only after the owner has run `scripts/hw_verify.py` off chain (TDX quote, `report_data` bound to the signing address, measurement allowlist, GPU attestation). The relayer never holds that private key; it fetches the signature from `GET /v1/signature/{id}?signing_algo=ecdsa`. The Solana owner registers the same kind of address. A signature shows that the registered key signed that request and response. The link from the key to a model binary and to a machine is still the off-chain attestation, not a check inside this program.
 
-| instruction | accounts, in order |
-| --- | --- |
-| `initialize_config` | config PDA, owner (signer, payer), system program |
-| `update_config` | config PDA, owner (signer) |
-| `create_market` | market PDA, config PDA, payer (signer), system program, clock sysvar |
-| `submit_verdict` | market PDA, config PDA, instructions sysvar, clock sysvar |
-| `dispute` | market PDA, disputer (signer), clock sysvar, system program |
-| `finalize` | market PDA, clock sysvar |
-| `escalation_resolve` | market PDA, escalation owner (signer) |
+## Accounts and instructions
 
-PDA seeds: config is `[b"config"]`. A market is `[b"market", market_id.to_le_bytes()]`.
+Config, set only by the protocol owner: three `(ethereum address, model name)` slots, dispute window in seconds, dispute bond in lamports. A change applies to markets created afterwards. Each market copies the signers, window and bond at creation.
 
-Events: `ConfigUpdated`, `MarketCreated`, `VerdictSubmitted`, `MarketDisputed`, `MarketFinalized`, `EscalationResolved`.
+`create_market` locks the question (1–200 bytes), rules hash, evidence hash, prompt-template hash, a future deadline, and an `escalation_owner`. The escalation owner cannot be changed. The protocol owner has no instruction that settles a market. If a market was created with the protocol owner as its escalation owner, that same key can settle that market, which is the same rule as on NEAR.
 
-## What proves a vote came from a model
+`init_payload` / `write_payload` upload the raw request and response for one signer. The two bodies together must be at most 9600 bytes. `submit_vote` checks the signature and header. When all three slots have voted:
 
-On NEAR, a vote is an EIP-191 signature over the text `model:sha256(request_raw):sha256(response_raw)`. `submit_verdict` recovers the secp256k1 address and accepts it only when that address is in the market's resolver list, is still registered, and the model name in the request matches the name snapshotted for that address at `create_market`.
+- unanimous yes or no, each with confidence at least 0.70 in the signed response, becomes Proposed and opens the dispute window
+- unanimous `TOO_EARLY` clears the votes and increments `round` (the round is inside the signed header, so the old signatures do not replay)
+- a split, `AMBIGUOUS`, or a yes/no below 0.70 becomes Escalated
 
-The contract does not check a TEE quote. `register_signer` is owner-only. It stores the address, one model name, and `sha256` of an attestation-report JSON. The owner is expected to register a key only after `scripts/hw_verify.py` has passed. That script, off chain, checks the Intel TDX quote, that `report_data` begins with the signing address and then the caller's nonce, that the signing public key hashes to that address, the RTMR measurements against `scripts/expected_measurements.json`, and an NVIDIA GPU attestation. The relayer does not hold the private key. `relayer/panel.py` asks NEAR AI Cloud for the chat completion and then `GET /v1/signature/{id}?signing_algo=ecdsa`. The signing key is issued inside the TEE by dstack's key service. A signature shows that a key the owner registered produced it. The link from that key to a model and to a machine is the off-chain attestation check, which anyone can repeat against a fresh report. It does not show which replica signed when several replicas share a key, and it does not measure the model container.
+Confidence is a Solana gate on top of the NEAR signature check. The NEAR contract records the outcome and does not read the confidence field. Missing confidence does not count as clear.
 
-The Solana program only checks that three ed25519 signatures verify under the three public keys in the market's snapshot. The owner writes those keys into config. Nothing on chain, and nothing in this step, ties a key to GLM, Qwen, DeepSeek, or to a TEE. NEAR AI's live signatures are secp256k1 over a different message, so they do not verify here. Whoever holds the three ed25519 secret keys can sign any outcome the program will accept. That is a weaker proof than the NEAR deployment. Saying otherwise would be false.
+`dispute` can be called by anyone during the window. They pay the snapshotted bond onto the market account. This program does not pay the bond back. `finalize`, after the window, marks the proposed outcome Final. `escalation_resolve` is only for an Escalated market, and only that market's escalation owner may call it.
 
-## How to build and test
+Every transaction that calls the program must request a 256 KB heap frame and enough compute units (the relayer asks for 1.4 million). The default 32 KB heap is too small for a real panel body.
 
-From this directory, with Agave 4.1.2 on `PATH` and Rust 1.100 (the `rust-toolchain.toml` here selects it):
+Events: `ConfigUpdated`, `MarketCreated`, `VoteAccepted`, `VerdictSubmitted`, `RoundAdvanced`, `MarketDisputed`, `MarketFinalized`, `EscalationResolved`.
+
+PDA seeds: config `[b"config"]`, market `[b"market", market_id le]`, payload `[b"payload", market_id le, slot]`.
+
+## Tests
 
 ```bash
 cargo-build-sbf --manifest-path programs/verdict/Cargo.toml --sbf-out-dir target/deploy
 cargo test --manifest-path programs/verdict/Cargo.toml --lib
 cargo test --manifest-path tests/Cargo.toml
+python3 -m unittest solana/test_relayer.py
 ```
 
-`cargo-build-sbf` writes `target/deploy/verdict.so`. The lifecycle tests load that file. They cover a unanimous yes through to Final, a dispute that posts the bond and is settled by the escalation owner, a split, an unclear vote, a low-confidence vote, a bad signature rejected by the ed25519 program, a valid signature from the wrong key, a signature replayed onto another market, a stranger failing to resolve, and the protocol owner failing to resolve. One more test checks that `update_config` does not retarget a market that already exists, and that a non-owner cannot update config.
+Run the Python test from the repository root. The LiteSVM file includes the cached Saints-vs-Giants panel in `contract/testdata/real_panel.json`: three real NEAR AI signatures, unanimous yes, confidence 0.99, and the program moves that market to Proposed. The other tests cover a finalised yes, a dispute, a split, an ambiguous panel, low confidence, a bad recovery id, a wrong signer, a signature replayed onto another market, and both a stranger and the protocol owner failing to resolve.
 
-`target/` is gitignored. `cargo-build-sbf` also writes a program keypair there. Do not commit it. Keypair JSON is gitignored. No API key belongs in this folder.
+`target/` is gitignored. Do not commit keypair JSON. The program keypair `cargo-build-sbf` writes under `target/deploy/` is not a secret to publish; it is still a keypair, so it stays out of git.
+
+## Relayer
+
+From the repository root, with the keypair file **outside** the repo:
+
+```bash
+export NEARAI_API_KEY=...          # do not write this into a file in the repo
+export SOLANA_KEYPAIR=/path/outside/the/repo/deployer.json
+export SOLANA_RPC=https://api.devnet.solana.com
+python3 solana/relayer.py --demo
+```
+
+The demo asks the three models the same way `relayer/panel.py` does (`POST /v1/chat/completions`, then `GET /v1/signature/{id}?signing_algo=ecdsa`), registers the `signing_address` values those responses carry, and submits the raw bytes. Market 1 is GENESIS X3 Melee singles (Cody Schwab won, 13–15 February 2026) with two agreeing snapshots. Market 2 uses the same question with contradictory snapshots, which the prompt tells the models to treat as ambiguous, and then the escalation owner records Ambiguous. A 60 second dispute window applies. The script writes `site/solana-markets.json` with transaction signatures and public keys only.
 
 ## Devnet
 
-Declared program id: `6nbXLUgehsnFqUTvg3EUCtP8mDHodBXFv6NhdJwBt3AW`.
+Not deployed in this change. A deployer key was generated outside the repo. Its public key is `Y3tvBjJMS9X4wVCdXyi6jQpbqpVSjrGRKQ7C3Brxcs1`. Its balance stayed 0 SOL. `solana airdrop` on `https://api.devnet.solana.com` returned "airdrop request failed. This can happen when the rate limit is reached" on both attempts in this step. `solana program deploy` was not sent.
 
-Deploy, once the `.so` exists and you have a keypair whose public key is that id (the file is not in git):
+Deploy needs about **5 SOL** on that address: the program binary is about 240 KB, and the deploy holds a second copy as a buffer until it is closed. Two markets and their payload accounts are small beside that, and payload rent is returned when a vote is accepted.
 
 ```bash
-solana program deploy target/deploy/verdict.so \
-  --program-id target/deploy/verdict-keypair.json \
+solana program deploy solana/target/deploy/verdict.so \
+  --program-id /path/outside/the/repo/program-keypair.json \
   --keypair /path/outside/the/repo/deployer.json \
   --url devnet
 ```
 
-Devnet deploy was not completed. A fresh deployer key (`solana-keygen`, kept outside the repo) had a balance of 0 SOL. `solana airdrop` against `https://api.devnet.solana.com` and `https://solana-devnet.api.onfinality.io/public` returned "airdrop request failed. This can happen when the rate limit is reached." `https://rpc.ankr.com/solana_devnet` refused the request without an API key. `https://devnet.solana.rpcpool.com` did not accept a connection. `https://faucet.solana.com/api/request` answered "Missing wallet address" and did not fund the account. A second airdrop on `api.devnet.solana.com` hit the same rate limit. With no SOL, `solana program deploy` was not sent. The id above is the id compiled into the program, not a devnet account.
+The program keypair's public key must be `6nbXLUgehsnFqUTvg3EUCtP8mDHodBXFv6NhdJwBt3AW`.
 
-## What step 2 needs
+## For a filmed demo
 
-The relayer has to build the 119-byte message above and one ed25519 instruction with three signatures, immediately before `submit_verdict`. Order is GLM, Qwen, DeepSeek. Header byte 0 is `3`, byte 1 is `0`, then three 14-byte offset structs (`signature_offset`, `signature_instruction_index`, `public_key_offset`, `public_key_instruction_index`, `message_data_offset`, `message_data_size`, `message_instruction_index`), all three instruction indexes `65535`. The tests pack pubkey, signature, then message for each signer after that header. The program follows the offsets; it does not require that packing, but the offsets must land past the header and inside this instruction.
+Honest claims:
 
-NEAR signatures cannot be submitted as they are. Step 2 needs ed25519 keys, registered with `update_config` before `create_market`, and a stated holder for the secrets. If the relayer holds them, the vote proof is the weaker one described above. Do not describe it as the NEAR TEE check.
+- The Solana program verifies NEAR AI Cloud's EIP-191 secp256k1 signatures and the header binding described above. A cached real panel (Saints vs Giants, three hardware-attested votes) is accepted in the LiteSVM test.
+- The owner chooses the signer addresses. The TEE quote is still checked off chain, as on NEAR, and is not checked inside this program.
+- Clear unanimous yes/no votes with confidence at least 0.70 open a dispute window. Splits, ambiguous votes, low confidence and disputes go to that market's escalation owner. The protocol owner cannot settle a market unless it was created with them as that owner.
+- The dispute bond stays on the market account. Do not describe a refund that this program does not perform.
+- Do not describe the result as hardware-checked on Solana. Say the signature matches a registered NEAR AI signing address, and point at `scripts/hw_verify.py` for the off-chain quote check.
 
-`evidence_hash` and `rules_hash` are fixed at `create_market` by whoever creates the market. There is no later `commit_evidence`. On NEAR the relayer commits evidence after the deadline. Here, the account that creates the market chooses the hashes. The integrating app should create the market, because that is also how `escalation_owner` is set.
-
-There is no `TOO_EARLY` round. An unclear or low-confidence panel escalates and stays there. There is no `escalate_stale`. If the owner rotates signers, markets already created keep the old keys; a market that never receives three valid signatures stays Open. A later step can add a grace-period escalation for the escalation owner, matching NEAR, if that liveness hole matters.
-
-The dispute bond stays on the market account. Step 2 should not collect a real bond until there is an explicit release rule.
-
-`submit_verdict` and `finalize` are permissionless. The signatures are the gate, not a relayer allowlist.
+`NEARAI_API_KEY` was unset in this environment, so the live model calls were not run.
