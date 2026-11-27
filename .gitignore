@@ -7,3 +7,10 @@ __pycache__/
 relayer.local.json
 access-key.json
 register_relayer.json
+
+# Solana keypairs. Never commit these.
+*-keypair.json
+**/*-keypair.json
+id.json
+solana/.anchor/
+solana/test-ledger/
